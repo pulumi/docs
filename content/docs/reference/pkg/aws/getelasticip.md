@@ -14,9 +14,9 @@ block_external_search_index: true
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const byAllocationId = aws.getElasticIp({
+const byAllocationId = pulumi.output(aws.getElasticIp({
     id: "eipalloc-12345678",
-});
+}, { async: true }));
 ```
 
 ### Search By Filters (EC2-Classic or VPC)
@@ -25,12 +25,12 @@ const byAllocationId = aws.getElasticIp({
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const byFilter = aws.getElasticIp({
+const byFilter = pulumi.output(aws.getElasticIp({
     filters: [{
         name: "tag:Name",
         values: ["exampleNameTagValue"],
     }],
-});
+}, { async: true }));
 ```
 
 ### Search By Public IP (EC2-Classic or VPC)
@@ -39,9 +39,9 @@ const byFilter = aws.getElasticIp({
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const byPublicIp = aws.getElasticIp({
+const byPublicIp = pulumi.output(aws.getElasticIp({
     publicIp: "1.2.3.4",
-});
+}, { async: true }));
 ```
 
 ### Search By Tags (EC2-Classic or VPC)
@@ -50,11 +50,11 @@ const byPublicIp = aws.getElasticIp({
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const byTags = aws.getElasticIp({
+const byTags = pulumi.output(aws.getElasticIp({
     tags: {
         Name: "exampleNameTagValue",
     },
-});
+}, { async: true }));
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/eip.html.markdown.
@@ -69,7 +69,7 @@ const byTags = aws.getElasticIp({
 
 
 {{% choosable language typescript %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getElasticIp<span class="p">(</span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/#GetElasticIpArgs">GetElasticIpArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">pulumi.InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/#GetElasticIpResult">GetElasticIpResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getElasticIp<span class="p">(</span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/#GetElasticIpArgs">GetElasticIpArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/#GetElasticIpResult">GetElasticIpResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -79,13 +79,13 @@ const byTags = aws.getElasticIp({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupElasticIp<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/?tab=doc#GetElasticIpArgs">GetElasticIpArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/?tab=doc#LookupElasticIpResult">LookupElasticIpResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupElasticIp<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/?tab=doc#GetElasticIpArgs">GetElasticIpArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/?tab=doc#LookupElasticIpResult">LookupElasticIpResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetElasticIp </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.GetElasticIpResult.html">GetElasticIpResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Inputs.GetElasticIpArgs.html">GetElasticIpArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">Pulumi.InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.GetElasticIpResult.html">GetElasticIpResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.GetElasticIpArgs.html">GetElasticIpArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -102,7 +102,7 @@ The following arguments are supported:
             title="Optional">
         <span>Filters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getelasticipfilter">List&lt;Pulumi.<wbr>Aws.<wbr>Inputs.<wbr>Get<wbr>Elastic<wbr>Ip<wbr>Filter<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#getelasticipfilter">List&lt;Get<wbr>Elastic<wbr>Ip<wbr>Filter<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}One or more name/value pairs to use as filters. There are several valid keys, for a full reference, check out the [EC2 API Reference](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeAddresses.html).
 {{% /md %}}</dd>
@@ -305,7 +305,7 @@ The following output properties are available:
             title="">
         <span>Filters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getelasticipfilter">List&lt;Pulumi.<wbr>Aws.<wbr>Outputs.<wbr>Get<wbr>Elastic<wbr>Ip<wbr>Filter&gt;?</a></span>
+        <span class="property-type"><a href="#getelasticipfilter">List&lt;Get<wbr>Elastic<wbr>Ip<wbr>Filter&gt;?</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

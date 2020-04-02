@@ -17,7 +17,7 @@ import * as aws from "@pulumi/aws";
 const example = pulumi.all([aws_ec2_transit_gateway_example.id, aws_vpn_connection_example.id]).apply(([aws_ec2_transit_gateway_exampleId, aws_vpn_connection_exampleId]) => aws.ec2transitgateway.getVpnAttachment({
     transitGatewayId: aws_ec2_transit_gateway_exampleId,
     vpnConnectionId: aws_vpn_connection_exampleId,
-}));
+}, { async: true }));
 ```
 
 ### Filter
@@ -26,12 +26,12 @@ const example = pulumi.all([aws_ec2_transit_gateway_example.id, aws_vpn_connecti
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const test = aws.ec2transitgateway.getVpnAttachment({
-    filters: [{
+const test = pulumi.output(aws.ec2transitgateway.getVpnAttachment({
+    filter: [{
         name: "resource-id",
         values: ["some-resource"],
     }],
-});
+}, { async: true }));
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ec2_transit_gateway_vpn_attachment.html.markdown.
@@ -46,7 +46,7 @@ const test = aws.ec2transitgateway.getVpnAttachment({
 
 
 {{% choosable language typescript %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getVpnAttachment<span class="p">(</span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2transitgateway/#GetVpnAttachmentArgs">GetVpnAttachmentArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">pulumi.InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2transitgateway/#GetVpnAttachmentResult">GetVpnAttachmentResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getVpnAttachment<span class="p">(</span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2transitgateway/#GetVpnAttachmentArgs">GetVpnAttachmentArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2transitgateway/#GetVpnAttachmentResult">GetVpnAttachmentResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -56,13 +56,13 @@ const test = aws.ec2transitgateway.getVpnAttachment({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupVpnAttachment<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2transitgateway?tab=doc#LookupVpnAttachmentArgs">LookupVpnAttachmentArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2transitgateway?tab=doc#LookupVpnAttachmentResult">LookupVpnAttachmentResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupVpnAttachment<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2transitgateway?tab=doc#LookupVpnAttachmentArgs">LookupVpnAttachmentArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2transitgateway?tab=doc#LookupVpnAttachmentResult">LookupVpnAttachmentResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetVpnAttachment </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2transitgateway.GetVpnAttachmentResult.html">GetVpnAttachmentResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2TransitGateway.Inputs.GetVpnAttachmentArgs.html">GetVpnAttachmentArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">Pulumi.InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2transitgateway.GetVpnAttachmentResult.html">GetVpnAttachmentResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2TransitGateway.GetVpnAttachmentArgs.html">GetVpnAttachmentArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -79,7 +79,7 @@ The following arguments are supported:
             title="Optional">
         <span>Filters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getvpnattachmentfilter">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2Transit<wbr>Gateway.<wbr>Inputs.<wbr>Get<wbr>Vpn<wbr>Attachment<wbr>Filter<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#getvpnattachmentfilter">List&lt;Get<wbr>Vpn<wbr>Attachment<wbr>Filter<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) for filtering. Detailed below.
 {{% /md %}}</dd>
@@ -264,7 +264,7 @@ The following output properties are available:
             title="">
         <span>Filters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getvpnattachmentfilter">List&lt;Pulumi.<wbr>Aws.<wbr>Ec2Transit<wbr>Gateway.<wbr>Outputs.<wbr>Get<wbr>Vpn<wbr>Attachment<wbr>Filter&gt;?</a></span>
+        <span class="property-type"><a href="#getvpnattachmentfilter">List&lt;Get<wbr>Vpn<wbr>Attachment<wbr>Filter&gt;?</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

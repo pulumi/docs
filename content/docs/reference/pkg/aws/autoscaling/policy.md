@@ -56,7 +56,7 @@ const bat = new aws.autoscaling.Policy("bat", {
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Autoscaling.Policy.html">Policy</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.Inputs.PolicyArgs.html">PolicyArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Autoscaling.Policy.html">Policy</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.PolicyArgs.html">PolicyArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -234,7 +234,7 @@ up. A negative value scales down.
             title="Optional">
         <span>Step<wbr>Adjustments</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policystepadjustment">List&lt;Pulumi.<wbr>Aws.<wbr>Auto<wbr>Scaling.<wbr>Inputs.<wbr>Policy<wbr>Step<wbr>Adjustment<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#policystepadjustment">List&lt;Policy<wbr>Step<wbr>Adjustment<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}A set of adjustments that manage
 group scaling. These have the following structure:
@@ -244,7 +244,7 @@ group scaling. These have the following structure:
             title="Optional">
         <span>Target<wbr>Tracking<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policytargettrackingconfiguration">Pulumi.<wbr>Aws.<wbr>Auto<wbr>Scaling.<wbr>Inputs.<wbr>Policy<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Args?</a></span>
+        <span class="property-type"><a href="#policytargettrackingconfiguration">Policy<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A target tracking policy. These have the following structure:
 {{% /md %}}</dd>
@@ -687,7 +687,7 @@ up. A negative value scales down.
             title="">
         <span>Step<wbr>Adjustments</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policystepadjustment">List&lt;Pulumi.<wbr>Aws.<wbr>Auto<wbr>Scaling.<wbr>Outputs.<wbr>Policy<wbr>Step<wbr>Adjustment&gt;?</a></span>
+        <span class="property-type"><a href="#policystepadjustment">List&lt;Policy<wbr>Step<wbr>Adjustment&gt;?</a></span>
     </dt>
     <dd>{{% md %}}A set of adjustments that manage
 group scaling. These have the following structure:
@@ -697,7 +697,7 @@ group scaling. These have the following structure:
             title="">
         <span>Target<wbr>Tracking<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policytargettrackingconfiguration">Pulumi.<wbr>Aws.<wbr>Auto<wbr>Scaling.<wbr>Outputs.<wbr>Policy<wbr>Target<wbr>Tracking<wbr>Configuration?</a></span>
+        <span class="property-type"><a href="#policytargettrackingconfiguration">Policy<wbr>Target<wbr>Tracking<wbr>Configuration?</a></span>
     </dt>
     <dd>{{% md %}}A target tracking policy. These have the following structure:
 {{% /md %}}</dd>
@@ -1070,7 +1070,7 @@ Get an existing Policy resource's state with the given name, ID, and optional ex
 {{< chooser language "javascript,typescript,python,go,csharp  " / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">pulumi.Input&lt;pulumi.ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/autoscaling/#PolicyState">PolicyState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/autoscaling/#Policy">Policy</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/autoscaling/#PolicyState">PolicyState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/autoscaling/#Policy">Policy</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1078,11 +1078,11 @@ Get an existing Policy resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPolicy<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">pulumi.IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/autoscaling?tab=doc#PolicyState">PolicyState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/autoscaling?tab=doc#Policy">Policy</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPolicy<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/autoscaling?tab=doc#PolicyState">PolicyState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/autoscaling?tab=doc#Policy">Policy</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Autoscaling.Policy.html">Policy</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Pulumi.Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Autoscaling.PolicyState.html">PolicyState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Autoscaling.Policy.html">Policy</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Autoscaling.PolicyState.html">PolicyState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1283,7 +1283,7 @@ up. A negative value scales down.
             title="Optional">
         <span>Step<wbr>Adjustments</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policystepadjustment">List&lt;Pulumi.<wbr>Aws.<wbr>Auto<wbr>Scaling.<wbr>Inputs.<wbr>Policy<wbr>Step<wbr>Adjustment<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#policystepadjustment">List&lt;Policy<wbr>Step<wbr>Adjustment<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}A set of adjustments that manage
 group scaling. These have the following structure:
@@ -1293,7 +1293,7 @@ group scaling. These have the following structure:
             title="Optional">
         <span>Target<wbr>Tracking<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policytargettrackingconfiguration">Pulumi.<wbr>Aws.<wbr>Auto<wbr>Scaling.<wbr>Inputs.<wbr>Policy<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Args?</a></span>
+        <span class="property-type"><a href="#policytargettrackingconfiguration">Policy<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A target tracking policy. These have the following structure:
 {{% /md %}}</dd>
@@ -1861,7 +1861,7 @@ up. A negative value scales down.
             title="Optional">
         <span>Customized<wbr>Metric<wbr>Specification</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policytargettrackingconfigurationcustomizedmetricspecification">Pulumi.<wbr>Aws.<wbr>Auto<wbr>Scaling.<wbr>Inputs.<wbr>Policy<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification<wbr>Args?</a></span>
+        <span class="property-type"><a href="#policytargettrackingconfigurationcustomizedmetricspecification">Policy<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A customized metric. Conflicts with `predefined_metric_specification`.
 {{% /md %}}</dd>
@@ -1879,7 +1879,7 @@ up. A negative value scales down.
             title="Optional">
         <span>Predefined<wbr>Metric<wbr>Specification</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policytargettrackingconfigurationpredefinedmetricspecification">Pulumi.<wbr>Aws.<wbr>Auto<wbr>Scaling.<wbr>Inputs.<wbr>Policy<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Predefined<wbr>Metric<wbr>Specification<wbr>Args?</a></span>
+        <span class="property-type"><a href="#policytargettrackingconfigurationpredefinedmetricspecification">Policy<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Predefined<wbr>Metric<wbr>Specification<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}A predefined metric. Conflicts with `customized_metric_specification`.
 {{% /md %}}</dd>
@@ -2048,7 +2048,7 @@ up. A negative value scales down.
             title="Optional">
         <span>Metric<wbr>Dimensions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policytargettrackingconfigurationcustomizedmetricspecificationmetricdimension">List&lt;Pulumi.<wbr>Aws.<wbr>Auto<wbr>Scaling.<wbr>Inputs.<wbr>Policy<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification<wbr>Metric<wbr>Dimension<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#policytargettrackingconfigurationcustomizedmetricspecificationmetricdimension">List&lt;Policy<wbr>Target<wbr>Tracking<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification<wbr>Metric<wbr>Dimension<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}The dimensions of the metric.
 {{% /md %}}</dd>
@@ -2484,3 +2484,10 @@ up. A negative value scales down.
 
 
 
+
+<h3>Package Details</h3>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd></dl>

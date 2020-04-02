@@ -21,16 +21,16 @@ import * as aws from "@pulumi/aws";
 const config = new pulumi.Config();
 const listenerArn = config.require("listenerArn");
 
-const listener = aws.lb.getListener({
+const listener = pulumi.output(aws.lb.getListener({
     arn: listenerArn,
-});
-const selected = aws.lb.getLoadBalancer({
+}, { async: true }));
+const selected = pulumi.output(aws.lb.getLoadBalancer({
     name: "default-public",
-});
-const selected443 = aws.lb.getListener({
+}, { async: true }));
+const selected443 = selected.apply(selected => aws.lb.getListener({
     loadBalancerArn: selected.arn!,
     port: 443,
-});
+}, { async: true }));
 ```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/lb_listener.html.markdown.
@@ -45,7 +45,7 @@ const selected443 = aws.lb.getListener({
 
 
 {{% choosable language typescript %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getListener<span class="p">(</span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/elasticloadbalancingv2/#GetListenerArgs">GetListenerArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">pulumi.InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/elasticloadbalancingv2/#GetListenerResult">GetListenerResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getListener<span class="p">(</span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/elasticloadbalancingv2/#GetListenerArgs">GetListenerArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/elasticloadbalancingv2/#GetListenerResult">GetListenerResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -55,13 +55,13 @@ const selected443 = aws.lb.getListener({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupListener<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/elasticloadbalancingv2?tab=doc#LookupListenerArgs">LookupListenerArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/elasticloadbalancingv2?tab=doc#LookupListenerResult">LookupListenerResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupListener<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/elasticloadbalancingv2?tab=doc#LookupListenerArgs">LookupListenerArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/elasticloadbalancingv2?tab=doc#LookupListenerResult">LookupListenerResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetListener </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Elasticloadbalancingv2.GetListenerResult.html">GetListenerResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticLoadBalancingV2.Inputs.GetListenerArgs.html">GetListenerArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">Pulumi.InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Elasticloadbalancingv2.GetListenerResult.html">GetListenerResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticLoadBalancingV2.GetListenerArgs.html">GetListenerArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -243,7 +243,7 @@ The following output properties are available:
             title="">
         <span>Default<wbr>Actions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getlistenerdefaultaction">List&lt;Pulumi.<wbr>Aws.<wbr>Elastic<wbr>Load<wbr>Balancing<wbr>V2.<wbr>Outputs.<wbr>Get<wbr>Listener<wbr>Default<wbr>Action&gt;</a></span>
+        <span class="property-type"><a href="#getlistenerdefaultaction">List&lt;Get<wbr>Listener<wbr>Default<wbr>Action&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -535,7 +535,7 @@ The following output properties are available:
             title="Required">
         <span>Authenticate<wbr>Cognitos</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getlistenerdefaultactionauthenticatecognito">List&lt;Pulumi.<wbr>Aws.<wbr>Elastic<wbr>Load<wbr>Balancing<wbr>V2.<wbr>Inputs.<wbr>Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Cognito<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getlistenerdefaultactionauthenticatecognito">List&lt;Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Cognito<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -543,7 +543,7 @@ The following output properties are available:
             title="Required">
         <span>Authenticate<wbr>Oidcs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getlistenerdefaultactionauthenticateoidc">List&lt;Pulumi.<wbr>Aws.<wbr>Elastic<wbr>Load<wbr>Balancing<wbr>V2.<wbr>Inputs.<wbr>Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Oidc<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getlistenerdefaultactionauthenticateoidc">List&lt;Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Oidc<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -551,7 +551,7 @@ The following output properties are available:
             title="Required">
         <span>Fixed<wbr>Responses</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getlistenerdefaultactionfixedresponse">List&lt;Pulumi.<wbr>Aws.<wbr>Elastic<wbr>Load<wbr>Balancing<wbr>V2.<wbr>Inputs.<wbr>Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Fixed<wbr>Response<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getlistenerdefaultactionfixedresponse">List&lt;Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Fixed<wbr>Response<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -567,7 +567,7 @@ The following output properties are available:
             title="Required">
         <span>Redirects</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getlistenerdefaultactionredirect">List&lt;Pulumi.<wbr>Aws.<wbr>Elastic<wbr>Load<wbr>Balancing<wbr>V2.<wbr>Inputs.<wbr>Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Redirect<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getlistenerdefaultactionredirect">List&lt;Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Redirect<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

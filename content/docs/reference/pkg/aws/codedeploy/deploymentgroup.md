@@ -179,7 +179,7 @@ const exampleDeploymentGroup = new aws.codedeploy.DeploymentGroup("example", {
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Codedeploy.DeploymentGroup.html">DeploymentGroup</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.Inputs.DeploymentGroupArgs.html">DeploymentGroupArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Codedeploy.DeploymentGroup.html">DeploymentGroup</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.DeploymentGroupArgs.html">DeploymentGroupArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -275,7 +275,7 @@ const exampleDeploymentGroup = new aws.codedeploy.DeploymentGroup("example", {
             title="Optional">
         <span>Alarm<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupalarmconfiguration">Pulumi.<wbr>Aws.<wbr>Code<wbr>Deploy.<wbr>Inputs.<wbr>Deployment<wbr>Group<wbr>Alarm<wbr>Configuration<wbr>Args?</a></span>
+        <span class="property-type"><a href="#deploymentgroupalarmconfiguration">Deployment<wbr>Group<wbr>Alarm<wbr>Configuration<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of alarms associated with the deployment group (documented below).
 {{% /md %}}</dd>
@@ -293,7 +293,7 @@ const exampleDeploymentGroup = new aws.codedeploy.DeploymentGroup("example", {
             title="Optional">
         <span>Auto<wbr>Rollback<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupautorollbackconfiguration">Pulumi.<wbr>Aws.<wbr>Code<wbr>Deploy.<wbr>Inputs.<wbr>Deployment<wbr>Group<wbr>Auto<wbr>Rollback<wbr>Configuration<wbr>Args?</a></span>
+        <span class="property-type"><a href="#deploymentgroupautorollbackconfiguration">Deployment<wbr>Group<wbr>Auto<wbr>Rollback<wbr>Configuration<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of the automatic rollback configuration associated with the deployment group (documented below).
 {{% /md %}}</dd>
@@ -311,7 +311,7 @@ const exampleDeploymentGroup = new aws.codedeploy.DeploymentGroup("example", {
             title="Optional">
         <span>Blue<wbr>Green<wbr>Deployment<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfig">Pulumi.<wbr>Aws.<wbr>Code<wbr>Deploy.<wbr>Inputs.<wbr>Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfig">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of the blue/green deployment options for a deployment group (documented below).
 {{% /md %}}</dd>
@@ -338,7 +338,7 @@ const exampleDeploymentGroup = new aws.codedeploy.DeploymentGroup("example", {
             title="Optional">
         <span>Deployment<wbr>Style</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupdeploymentstyle">Pulumi.<wbr>Aws.<wbr>Code<wbr>Deploy.<wbr>Inputs.<wbr>Deployment<wbr>Group<wbr>Deployment<wbr>Style<wbr>Args?</a></span>
+        <span class="property-type"><a href="#deploymentgroupdeploymentstyle">Deployment<wbr>Group<wbr>Deployment<wbr>Style<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of the type of deployment, either in-place or blue/green, you want to run and whether to route deployment traffic behind a load balancer (documented below).
 {{% /md %}}</dd>
@@ -347,7 +347,7 @@ const exampleDeploymentGroup = new aws.codedeploy.DeploymentGroup("example", {
             title="Optional">
         <span>Ec2Tag<wbr>Filters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupec2tagfilter">List&lt;Pulumi.<wbr>Aws.<wbr>Code<wbr>Deploy.<wbr>Inputs.<wbr>Deployment<wbr>Group<wbr>Ec2Tag<wbr>Filter<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#deploymentgroupec2tagfilter">List&lt;Deployment<wbr>Group<wbr>Ec2Tag<wbr>Filter<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}Tag filters associated with the deployment group. See the AWS docs for details.
 {{% /md %}}</dd>
@@ -356,7 +356,7 @@ const exampleDeploymentGroup = new aws.codedeploy.DeploymentGroup("example", {
             title="Optional">
         <span>Ec2Tag<wbr>Sets</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupec2tagset">List&lt;Pulumi.<wbr>Aws.<wbr>Code<wbr>Deploy.<wbr>Inputs.<wbr>Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#deploymentgroupec2tagset">List&lt;Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) of Tag filters associated with the deployment group, which are also referred to as tag groups (documented below). See the AWS docs for details.
 {{% /md %}}</dd>
@@ -365,7 +365,7 @@ const exampleDeploymentGroup = new aws.codedeploy.DeploymentGroup("example", {
             title="Optional">
         <span>Ecs<wbr>Service</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupecsservice">Pulumi.<wbr>Aws.<wbr>Code<wbr>Deploy.<wbr>Inputs.<wbr>Deployment<wbr>Group<wbr>Ecs<wbr>Service<wbr>Args?</a></span>
+        <span class="property-type"><a href="#deploymentgroupecsservice">Deployment<wbr>Group<wbr>Ecs<wbr>Service<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) of the ECS services for a deployment group (documented below).
 {{% /md %}}</dd>
@@ -374,7 +374,7 @@ const exampleDeploymentGroup = new aws.codedeploy.DeploymentGroup("example", {
             title="Optional">
         <span>Load<wbr>Balancer<wbr>Info</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouploadbalancerinfo">Pulumi.<wbr>Aws.<wbr>Code<wbr>Deploy.<wbr>Inputs.<wbr>Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Args?</a></span>
+        <span class="property-type"><a href="#deploymentgrouploadbalancerinfo">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Single configuration block of the load balancer to use in a blue/green deployment (documented below).
 {{% /md %}}</dd>
@@ -383,7 +383,7 @@ const exampleDeploymentGroup = new aws.codedeploy.DeploymentGroup("example", {
             title="Optional">
         <span>On<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouponpremisesinstancetagfilter">List&lt;Pulumi.<wbr>Aws.<wbr>Code<wbr>Deploy.<wbr>Inputs.<wbr>Deployment<wbr>Group<wbr>On<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filter<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#deploymentgrouponpremisesinstancetagfilter">List&lt;Deployment<wbr>Group<wbr>On<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filter<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}On premise tag filters associated with the group. See the AWS docs for details.
 {{% /md %}}</dd>
@@ -401,7 +401,7 @@ const exampleDeploymentGroup = new aws.codedeploy.DeploymentGroup("example", {
             title="Optional">
         <span>Trigger<wbr>Configurations</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouptriggerconfiguration">List&lt;Pulumi.<wbr>Aws.<wbr>Code<wbr>Deploy.<wbr>Inputs.<wbr>Deployment<wbr>Group<wbr>Trigger<wbr>Configuration<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#deploymentgrouptriggerconfiguration">List&lt;Deployment<wbr>Group<wbr>Trigger<wbr>Configuration<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) of the triggers for the deployment group (documented below).
 {{% /md %}}</dd>
@@ -855,7 +855,7 @@ The following output properties are available:
             title="">
         <span>Alarm<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupalarmconfiguration">Pulumi.<wbr>Aws.<wbr>Code<wbr>Deploy.<wbr>Outputs.<wbr>Deployment<wbr>Group<wbr>Alarm<wbr>Configuration?</a></span>
+        <span class="property-type"><a href="#deploymentgroupalarmconfiguration">Deployment<wbr>Group<wbr>Alarm<wbr>Configuration?</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of alarms associated with the deployment group (documented below).
 {{% /md %}}</dd>
@@ -873,7 +873,7 @@ The following output properties are available:
             title="">
         <span>Auto<wbr>Rollback<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupautorollbackconfiguration">Pulumi.<wbr>Aws.<wbr>Code<wbr>Deploy.<wbr>Outputs.<wbr>Deployment<wbr>Group<wbr>Auto<wbr>Rollback<wbr>Configuration?</a></span>
+        <span class="property-type"><a href="#deploymentgroupautorollbackconfiguration">Deployment<wbr>Group<wbr>Auto<wbr>Rollback<wbr>Configuration?</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of the automatic rollback configuration associated with the deployment group (documented below).
 {{% /md %}}</dd>
@@ -891,7 +891,7 @@ The following output properties are available:
             title="">
         <span>Blue<wbr>Green<wbr>Deployment<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfig">Pulumi.<wbr>Aws.<wbr>Code<wbr>Deploy.<wbr>Outputs.<wbr>Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config</a></span>
+        <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfig">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of the blue/green deployment options for a deployment group (documented below).
 {{% /md %}}</dd>
@@ -918,7 +918,7 @@ The following output properties are available:
             title="">
         <span>Deployment<wbr>Style</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupdeploymentstyle">Pulumi.<wbr>Aws.<wbr>Code<wbr>Deploy.<wbr>Outputs.<wbr>Deployment<wbr>Group<wbr>Deployment<wbr>Style?</a></span>
+        <span class="property-type"><a href="#deploymentgroupdeploymentstyle">Deployment<wbr>Group<wbr>Deployment<wbr>Style?</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of the type of deployment, either in-place or blue/green, you want to run and whether to route deployment traffic behind a load balancer (documented below).
 {{% /md %}}</dd>
@@ -927,7 +927,7 @@ The following output properties are available:
             title="">
         <span>Ec2Tag<wbr>Filters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupec2tagfilter">List&lt;Pulumi.<wbr>Aws.<wbr>Code<wbr>Deploy.<wbr>Outputs.<wbr>Deployment<wbr>Group<wbr>Ec2Tag<wbr>Filter&gt;?</a></span>
+        <span class="property-type"><a href="#deploymentgroupec2tagfilter">List&lt;Deployment<wbr>Group<wbr>Ec2Tag<wbr>Filter&gt;?</a></span>
     </dt>
     <dd>{{% md %}}Tag filters associated with the deployment group. See the AWS docs for details.
 {{% /md %}}</dd>
@@ -936,7 +936,7 @@ The following output properties are available:
             title="">
         <span>Ec2Tag<wbr>Sets</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupec2tagset">List&lt;Pulumi.<wbr>Aws.<wbr>Code<wbr>Deploy.<wbr>Outputs.<wbr>Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set&gt;?</a></span>
+        <span class="property-type"><a href="#deploymentgroupec2tagset">List&lt;Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set&gt;?</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) of Tag filters associated with the deployment group, which are also referred to as tag groups (documented below). See the AWS docs for details.
 {{% /md %}}</dd>
@@ -945,7 +945,7 @@ The following output properties are available:
             title="">
         <span>Ecs<wbr>Service</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupecsservice">Pulumi.<wbr>Aws.<wbr>Code<wbr>Deploy.<wbr>Outputs.<wbr>Deployment<wbr>Group<wbr>Ecs<wbr>Service?</a></span>
+        <span class="property-type"><a href="#deploymentgroupecsservice">Deployment<wbr>Group<wbr>Ecs<wbr>Service?</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) of the ECS services for a deployment group (documented below).
 {{% /md %}}</dd>
@@ -954,7 +954,7 @@ The following output properties are available:
             title="">
         <span>Load<wbr>Balancer<wbr>Info</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouploadbalancerinfo">Pulumi.<wbr>Aws.<wbr>Code<wbr>Deploy.<wbr>Outputs.<wbr>Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info?</a></span>
+        <span class="property-type"><a href="#deploymentgrouploadbalancerinfo">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info?</a></span>
     </dt>
     <dd>{{% md %}}Single configuration block of the load balancer to use in a blue/green deployment (documented below).
 {{% /md %}}</dd>
@@ -963,7 +963,7 @@ The following output properties are available:
             title="">
         <span>On<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouponpremisesinstancetagfilter">List&lt;Pulumi.<wbr>Aws.<wbr>Code<wbr>Deploy.<wbr>Outputs.<wbr>Deployment<wbr>Group<wbr>On<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filter&gt;?</a></span>
+        <span class="property-type"><a href="#deploymentgrouponpremisesinstancetagfilter">List&lt;Deployment<wbr>Group<wbr>On<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filter&gt;?</a></span>
     </dt>
     <dd>{{% md %}}On premise tag filters associated with the group. See the AWS docs for details.
 {{% /md %}}</dd>
@@ -981,7 +981,7 @@ The following output properties are available:
             title="">
         <span>Trigger<wbr>Configurations</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouptriggerconfiguration">List&lt;Pulumi.<wbr>Aws.<wbr>Code<wbr>Deploy.<wbr>Outputs.<wbr>Deployment<wbr>Group<wbr>Trigger<wbr>Configuration&gt;?</a></span>
+        <span class="property-type"><a href="#deploymentgrouptriggerconfiguration">List&lt;Deployment<wbr>Group<wbr>Trigger<wbr>Configuration&gt;?</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) of the triggers for the deployment group (documented below).
 {{% /md %}}</dd>
@@ -1429,7 +1429,7 @@ Get an existing DeploymentGroup resource's state with the given name, ID, and op
 {{< chooser language "javascript,typescript,python,go,csharp  " / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">pulumi.Input&lt;pulumi.ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/codedeploy/#DeploymentGroupState">DeploymentGroupState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/codedeploy/#DeploymentGroup">DeploymentGroup</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/codedeploy/#DeploymentGroupState">DeploymentGroupState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/codedeploy/#DeploymentGroup">DeploymentGroup</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1437,11 +1437,11 @@ Get an existing DeploymentGroup resource's state with the given name, ID, and op
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDeploymentGroup<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">pulumi.IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codedeploy?tab=doc#DeploymentGroupState">DeploymentGroupState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codedeploy?tab=doc#DeploymentGroup">DeploymentGroup</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDeploymentGroup<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codedeploy?tab=doc#DeploymentGroupState">DeploymentGroupState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codedeploy?tab=doc#DeploymentGroup">DeploymentGroup</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Codedeploy.DeploymentGroup.html">DeploymentGroup</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Pulumi.Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Codedeploy.DeploymentGroupState.html">DeploymentGroupState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Codedeploy.DeploymentGroup.html">DeploymentGroup</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Codedeploy.DeploymentGroupState.html">DeploymentGroupState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1551,7 +1551,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Alarm<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupalarmconfiguration">Pulumi.<wbr>Aws.<wbr>Code<wbr>Deploy.<wbr>Inputs.<wbr>Deployment<wbr>Group<wbr>Alarm<wbr>Configuration<wbr>Args?</a></span>
+        <span class="property-type"><a href="#deploymentgroupalarmconfiguration">Deployment<wbr>Group<wbr>Alarm<wbr>Configuration<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of alarms associated with the deployment group (documented below).
 {{% /md %}}</dd>
@@ -1569,7 +1569,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Auto<wbr>Rollback<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupautorollbackconfiguration">Pulumi.<wbr>Aws.<wbr>Code<wbr>Deploy.<wbr>Inputs.<wbr>Deployment<wbr>Group<wbr>Auto<wbr>Rollback<wbr>Configuration<wbr>Args?</a></span>
+        <span class="property-type"><a href="#deploymentgroupautorollbackconfiguration">Deployment<wbr>Group<wbr>Auto<wbr>Rollback<wbr>Configuration<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of the automatic rollback configuration associated with the deployment group (documented below).
 {{% /md %}}</dd>
@@ -1587,7 +1587,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Blue<wbr>Green<wbr>Deployment<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfig">Pulumi.<wbr>Aws.<wbr>Code<wbr>Deploy.<wbr>Inputs.<wbr>Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfig">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of the blue/green deployment options for a deployment group (documented below).
 {{% /md %}}</dd>
@@ -1614,7 +1614,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Deployment<wbr>Style</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupdeploymentstyle">Pulumi.<wbr>Aws.<wbr>Code<wbr>Deploy.<wbr>Inputs.<wbr>Deployment<wbr>Group<wbr>Deployment<wbr>Style<wbr>Args?</a></span>
+        <span class="property-type"><a href="#deploymentgroupdeploymentstyle">Deployment<wbr>Group<wbr>Deployment<wbr>Style<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Configuration block of the type of deployment, either in-place or blue/green, you want to run and whether to route deployment traffic behind a load balancer (documented below).
 {{% /md %}}</dd>
@@ -1623,7 +1623,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ec2Tag<wbr>Filters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupec2tagfilter">List&lt;Pulumi.<wbr>Aws.<wbr>Code<wbr>Deploy.<wbr>Inputs.<wbr>Deployment<wbr>Group<wbr>Ec2Tag<wbr>Filter<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#deploymentgroupec2tagfilter">List&lt;Deployment<wbr>Group<wbr>Ec2Tag<wbr>Filter<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}Tag filters associated with the deployment group. See the AWS docs for details.
 {{% /md %}}</dd>
@@ -1632,7 +1632,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ec2Tag<wbr>Sets</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupec2tagset">List&lt;Pulumi.<wbr>Aws.<wbr>Code<wbr>Deploy.<wbr>Inputs.<wbr>Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#deploymentgroupec2tagset">List&lt;Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) of Tag filters associated with the deployment group, which are also referred to as tag groups (documented below). See the AWS docs for details.
 {{% /md %}}</dd>
@@ -1641,7 +1641,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ecs<wbr>Service</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupecsservice">Pulumi.<wbr>Aws.<wbr>Code<wbr>Deploy.<wbr>Inputs.<wbr>Deployment<wbr>Group<wbr>Ecs<wbr>Service<wbr>Args?</a></span>
+        <span class="property-type"><a href="#deploymentgroupecsservice">Deployment<wbr>Group<wbr>Ecs<wbr>Service<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) of the ECS services for a deployment group (documented below).
 {{% /md %}}</dd>
@@ -1650,7 +1650,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Load<wbr>Balancer<wbr>Info</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouploadbalancerinfo">Pulumi.<wbr>Aws.<wbr>Code<wbr>Deploy.<wbr>Inputs.<wbr>Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Args?</a></span>
+        <span class="property-type"><a href="#deploymentgrouploadbalancerinfo">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Single configuration block of the load balancer to use in a blue/green deployment (documented below).
 {{% /md %}}</dd>
@@ -1659,7 +1659,7 @@ The following state arguments are supported:
             title="Optional">
         <span>On<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouponpremisesinstancetagfilter">List&lt;Pulumi.<wbr>Aws.<wbr>Code<wbr>Deploy.<wbr>Inputs.<wbr>Deployment<wbr>Group<wbr>On<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filter<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#deploymentgrouponpremisesinstancetagfilter">List&lt;Deployment<wbr>Group<wbr>On<wbr>Premises<wbr>Instance<wbr>Tag<wbr>Filter<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}On premise tag filters associated with the group. See the AWS docs for details.
 {{% /md %}}</dd>
@@ -1677,7 +1677,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Trigger<wbr>Configurations</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouptriggerconfiguration">List&lt;Pulumi.<wbr>Aws.<wbr>Code<wbr>Deploy.<wbr>Inputs.<wbr>Deployment<wbr>Group<wbr>Trigger<wbr>Configuration<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#deploymentgrouptriggerconfiguration">List&lt;Deployment<wbr>Group<wbr>Trigger<wbr>Configuration<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) of the triggers for the deployment group (documented below).
 {{% /md %}}</dd>
@@ -2415,7 +2415,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Deployment<wbr>Ready<wbr>Option</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfigdeploymentreadyoption">Pulumi.<wbr>Aws.<wbr>Code<wbr>Deploy.<wbr>Inputs.<wbr>Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Deployment<wbr>Ready<wbr>Option<wbr>Args?</a></span>
+        <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfigdeploymentreadyoption">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Deployment<wbr>Ready<wbr>Option<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Information about the action to take when newly provisioned instances are ready to receive traffic in a blue/green deployment (documented below).
 {{% /md %}}</dd>
@@ -2424,7 +2424,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Green<wbr>Fleet<wbr>Provisioning<wbr>Option</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfiggreenfleetprovisioningoption">Pulumi.<wbr>Aws.<wbr>Code<wbr>Deploy.<wbr>Inputs.<wbr>Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Green<wbr>Fleet<wbr>Provisioning<wbr>Option<wbr>Args?</a></span>
+        <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfiggreenfleetprovisioningoption">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Green<wbr>Fleet<wbr>Provisioning<wbr>Option<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Information about how instances are provisioned for a replacement environment in a blue/green deployment (documented below).
 {{% /md %}}</dd>
@@ -2433,7 +2433,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Terminate<wbr>Blue<wbr>Instances<wbr>On<wbr>Deployment<wbr>Success</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfigterminateblueinstancesondeploymentsuccess">Pulumi.<wbr>Aws.<wbr>Code<wbr>Deploy.<wbr>Inputs.<wbr>Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Terminate<wbr>Blue<wbr>Instances<wbr>On<wbr>Deployment<wbr>Success<wbr>Args?</a></span>
+        <span class="property-type"><a href="#deploymentgroupbluegreendeploymentconfigterminateblueinstancesondeploymentsuccess">Deployment<wbr>Group<wbr>Blue<wbr>Green<wbr>Deployment<wbr>Config<wbr>Terminate<wbr>Blue<wbr>Instances<wbr>On<wbr>Deployment<wbr>Success<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Information about whether to terminate instances in the original fleet during a blue/green deployment (documented below).
 {{% /md %}}</dd>
@@ -3165,7 +3165,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ec2Tag<wbr>Filters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgroupec2tagsetec2tagfilter">List&lt;Pulumi.<wbr>Aws.<wbr>Code<wbr>Deploy.<wbr>Inputs.<wbr>Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set<wbr>Ec2Tag<wbr>Filter<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#deploymentgroupec2tagsetec2tagfilter">List&lt;Deployment<wbr>Group<wbr>Ec2Tag<wbr>Set<wbr>Ec2Tag<wbr>Filter<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}Tag filters associated with the deployment group. See the AWS docs for details.
 {{% /md %}}</dd>
@@ -3510,7 +3510,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Elb<wbr>Infos</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouploadbalancerinfoelbinfo">List&lt;Pulumi.<wbr>Aws.<wbr>Code<wbr>Deploy.<wbr>Inputs.<wbr>Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Elb<wbr>Info<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#deploymentgrouploadbalancerinfoelbinfo">List&lt;Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Elb<wbr>Info<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}The Classic Elastic Load Balancer to use in a deployment. Conflicts with `target_group_info` and `target_group_pair_info`.
 {{% /md %}}</dd>
@@ -3519,7 +3519,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Target<wbr>Group<wbr>Infos</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgroupinfo">List&lt;Pulumi.<wbr>Aws.<wbr>Code<wbr>Deploy.<wbr>Inputs.<wbr>Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Info<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgroupinfo">List&lt;Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Info<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}The (Application/Network Load Balancer) target group to use in a deployment. Conflicts with `elb_info` and `target_group_pair_info`.
 {{% /md %}}</dd>
@@ -3528,7 +3528,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Target<wbr>Group<wbr>Pair<wbr>Info</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfo">Pulumi.<wbr>Aws.<wbr>Code<wbr>Deploy.<wbr>Inputs.<wbr>Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Args?</a></span>
+        <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfo">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}The (Application/Network Load Balancer) target group pair to use in a deployment. Conflicts with `elb_info` and `target_group_info`.
 {{% /md %}}</dd>
@@ -3819,7 +3819,7 @@ The following state arguments are supported:
             title="Required">
         <span>Prod<wbr>Traffic<wbr>Route</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfoprodtrafficroute">Pulumi.<wbr>Aws.<wbr>Code<wbr>Deploy.<wbr>Inputs.<wbr>Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Prod<wbr>Traffic<wbr>Route<wbr>Args</a></span>
+        <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfoprodtrafficroute">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Prod<wbr>Traffic<wbr>Route<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the production traffic route (documented below).
 {{% /md %}}</dd>
@@ -3828,7 +3828,7 @@ The following state arguments are supported:
             title="Required">
         <span>Target<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfotargetgroup">List&lt;Pulumi.<wbr>Aws.<wbr>Code<wbr>Deploy.<wbr>Inputs.<wbr>Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Target<wbr>Group<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfotargetgroup">List&lt;Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Target<wbr>Group<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Configuration blocks for a target group within a target group pair (documented below).
 {{% /md %}}</dd>
@@ -3837,7 +3837,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Test<wbr>Traffic<wbr>Route</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfotesttrafficroute">Pulumi.<wbr>Aws.<wbr>Code<wbr>Deploy.<wbr>Inputs.<wbr>Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Test<wbr>Traffic<wbr>Route<wbr>Args?</a></span>
+        <span class="property-type"><a href="#deploymentgrouploadbalancerinfotargetgrouppairinfotesttrafficroute">Deployment<wbr>Group<wbr>Load<wbr>Balancer<wbr>Info<wbr>Target<wbr>Group<wbr>Pair<wbr>Info<wbr>Test<wbr>Traffic<wbr>Route<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Configuration block for the test traffic route (documented below).
 {{% /md %}}</dd>
@@ -4492,3 +4492,10 @@ The following state arguments are supported:
 
 
 
+
+<h3>Package Details</h3>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd></dl>

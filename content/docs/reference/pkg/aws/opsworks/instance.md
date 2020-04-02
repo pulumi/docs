@@ -96,7 +96,7 @@ using the [`up` command with the --replace argument](https://www.pulumi.com/docs
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Opsworks.Instance.html">Instance</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.OpsWorks.Inputs.InstanceArgs.html">InstanceArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Opsworks.Instance.html">Instance</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.OpsWorks.InstanceArgs.html">InstanceArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -262,7 +262,7 @@ by default.
             title="Optional">
         <span>Ebs<wbr>Block<wbr>Devices</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceebsblockdevice">List&lt;Pulumi.<wbr>Aws.<wbr>Ops<wbr>Works.<wbr>Inputs.<wbr>Instance<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#instanceebsblockdevice">List&lt;Instance<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}Additional EBS block devices to attach to the
 instance.  See Block Devices below for details.
@@ -297,7 +297,7 @@ instance.  See Block Devices below for details.
             title="Optional">
         <span>Ephemeral<wbr>Block<wbr>Devices</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceephemeralblockdevice">List&lt;Pulumi.<wbr>Aws.<wbr>Ops<wbr>Works.<wbr>Inputs.<wbr>Instance<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#instanceephemeralblockdevice">List&lt;Instance<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}Customize Ephemeral (also known as
 "Instance Store") volumes on the instance. See Block Devices below for details.
@@ -463,7 +463,7 @@ is only available if you've enabled DNS hostnames for your VPC
             title="Optional">
         <span>Root<wbr>Block<wbr>Devices</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancerootblockdevice">List&lt;Pulumi.<wbr>Aws.<wbr>Ops<wbr>Works.<wbr>Inputs.<wbr>Instance<wbr>Root<wbr>Block<wbr>Device<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#instancerootblockdevice">List&lt;Instance<wbr>Root<wbr>Block<wbr>Device<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}Customize details about the root block
 device of the instance. See Block Devices below for details.
@@ -1846,7 +1846,7 @@ by default.
             title="">
         <span>Ebs<wbr>Block<wbr>Devices</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceebsblockdevice">List&lt;Pulumi.<wbr>Aws.<wbr>Ops<wbr>Works.<wbr>Outputs.<wbr>Instance<wbr>Ebs<wbr>Block<wbr>Device&gt;</a></span>
+        <span class="property-type"><a href="#instanceebsblockdevice">List&lt;Instance<wbr>Ebs<wbr>Block<wbr>Device&gt;</a></span>
     </dt>
     <dd>{{% md %}}Additional EBS block devices to attach to the
 instance.  See Block Devices below for details.
@@ -1890,7 +1890,7 @@ instance.  See Block Devices below for details.
             title="">
         <span>Ephemeral<wbr>Block<wbr>Devices</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceephemeralblockdevice">List&lt;Pulumi.<wbr>Aws.<wbr>Ops<wbr>Works.<wbr>Outputs.<wbr>Instance<wbr>Ephemeral<wbr>Block<wbr>Device&gt;</a></span>
+        <span class="property-type"><a href="#instanceephemeralblockdevice">List&lt;Instance<wbr>Ephemeral<wbr>Block<wbr>Device&gt;</a></span>
     </dt>
     <dd>{{% md %}}Customize Ephemeral (also known as
 "Instance Store") volumes on the instance. See Block Devices below for details.
@@ -2056,7 +2056,7 @@ is only available if you've enabled DNS hostnames for your VPC
             title="">
         <span>Root<wbr>Block<wbr>Devices</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancerootblockdevice">List&lt;Pulumi.<wbr>Aws.<wbr>Ops<wbr>Works.<wbr>Outputs.<wbr>Instance<wbr>Root<wbr>Block<wbr>Device&gt;</a></span>
+        <span class="property-type"><a href="#instancerootblockdevice">List&lt;Instance<wbr>Root<wbr>Block<wbr>Device&gt;</a></span>
     </dt>
     <dd>{{% md %}}Customize details about the root block
 device of the instance. See Block Devices below for details.
@@ -3390,7 +3390,7 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 {{< chooser language "javascript,typescript,python,go,csharp  " / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">pulumi.Input&lt;pulumi.ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/opsworks/#InstanceState">InstanceState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/opsworks/#Instance">Instance</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/opsworks/#InstanceState">InstanceState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/opsworks/#Instance">Instance</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -3398,11 +3398,11 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInstance<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">pulumi.IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/opsworks?tab=doc#InstanceState">InstanceState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/opsworks?tab=doc#Instance">Instance</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInstance<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/opsworks?tab=doc#InstanceState">InstanceState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/opsworks?tab=doc#Instance">Instance</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Opsworks.Instance.html">Instance</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Pulumi.Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Opsworks.InstanceState.html">InstanceState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Opsworks.Instance.html">Instance</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Opsworks.InstanceState.html">InstanceState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3582,7 +3582,7 @@ by default.
             title="Optional">
         <span>Ebs<wbr>Block<wbr>Devices</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceebsblockdevice">List&lt;Pulumi.<wbr>Aws.<wbr>Ops<wbr>Works.<wbr>Inputs.<wbr>Instance<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#instanceebsblockdevice">List&lt;Instance<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}Additional EBS block devices to attach to the
 instance.  See Block Devices below for details.
@@ -3626,7 +3626,7 @@ instance.  See Block Devices below for details.
             title="Optional">
         <span>Ephemeral<wbr>Block<wbr>Devices</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceephemeralblockdevice">List&lt;Pulumi.<wbr>Aws.<wbr>Ops<wbr>Works.<wbr>Inputs.<wbr>Instance<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#instanceephemeralblockdevice">List&lt;Instance<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}Customize Ephemeral (also known as
 "Instance Store") volumes on the instance. See Block Devices below for details.
@@ -3792,7 +3792,7 @@ is only available if you've enabled DNS hostnames for your VPC
             title="Optional">
         <span>Root<wbr>Block<wbr>Devices</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancerootblockdevice">List&lt;Pulumi.<wbr>Aws.<wbr>Ops<wbr>Works.<wbr>Inputs.<wbr>Instance<wbr>Root<wbr>Block<wbr>Device<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#instancerootblockdevice">List&lt;Instance<wbr>Root<wbr>Block<wbr>Device<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}Customize details about the root block
 device of the instance. See Block Devices below for details.
@@ -5638,3 +5638,10 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 
 
 
+
+<h3>Package Details</h3>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd></dl>

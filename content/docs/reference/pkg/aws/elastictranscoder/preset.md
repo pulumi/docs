@@ -89,7 +89,7 @@ const bar = new aws.elastictranscoder.Preset("bar", {
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Elastictranscoder.Preset.html">Preset</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticTranscoder.Inputs.PresetArgs.html">PresetArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Elastictranscoder.Preset.html">Preset</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticTranscoder.PresetArgs.html">PresetArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -185,7 +185,7 @@ const bar = new aws.elastictranscoder.Preset("bar", {
             title="Optional">
         <span>Audio</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#presetaudio">Pulumi.<wbr>Aws.<wbr>Elastic<wbr>Transcoder.<wbr>Inputs.<wbr>Preset<wbr>Audio<wbr>Args?</a></span>
+        <span class="property-type"><a href="#presetaudio">Preset<wbr>Audio<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Audio parameters object (documented below).
 {{% /md %}}</dd>
@@ -194,7 +194,7 @@ const bar = new aws.elastictranscoder.Preset("bar", {
             title="Optional">
         <span>Audio<wbr>Codec<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#presetaudiocodecoptions">Pulumi.<wbr>Aws.<wbr>Elastic<wbr>Transcoder.<wbr>Inputs.<wbr>Preset<wbr>Audio<wbr>Codec<wbr>Options<wbr>Args?</a></span>
+        <span class="property-type"><a href="#presetaudiocodecoptions">Preset<wbr>Audio<wbr>Codec<wbr>Options<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Codec options for the audio parameters (documented below)
 {{% /md %}}</dd>
@@ -230,7 +230,7 @@ const bar = new aws.elastictranscoder.Preset("bar", {
             title="Optional">
         <span>Thumbnails</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#presetthumbnails">Pulumi.<wbr>Aws.<wbr>Elastic<wbr>Transcoder.<wbr>Inputs.<wbr>Preset<wbr>Thumbnails<wbr>Args?</a></span>
+        <span class="property-type"><a href="#presetthumbnails">Preset<wbr>Thumbnails<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Thumbnail parameters object (documented below)
 {{% /md %}}</dd>
@@ -247,7 +247,7 @@ const bar = new aws.elastictranscoder.Preset("bar", {
             title="Optional">
         <span>Video</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#presetvideo">Pulumi.<wbr>Aws.<wbr>Elastic<wbr>Transcoder.<wbr>Inputs.<wbr>Preset<wbr>Video<wbr>Args?</a></span>
+        <span class="property-type"><a href="#presetvideo">Preset<wbr>Video<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Video parameters object (documented below)
 {{% /md %}}</dd>
@@ -264,7 +264,7 @@ const bar = new aws.elastictranscoder.Preset("bar", {
             title="Optional">
         <span>Video<wbr>Watermarks</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#presetvideowatermark">List&lt;Pulumi.<wbr>Aws.<wbr>Elastic<wbr>Transcoder.<wbr>Inputs.<wbr>Preset<wbr>Video<wbr>Watermark<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#presetvideowatermark">List&lt;Preset<wbr>Video<wbr>Watermark<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}Watermark parameters for the video parameters (documented below)
 * `video_codec_options` (Optional, Forces new resource) Codec options for the video parameters
@@ -589,7 +589,7 @@ The following output properties are available:
             title="">
         <span>Audio</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#presetaudio">Pulumi.<wbr>Aws.<wbr>Elastic<wbr>Transcoder.<wbr>Outputs.<wbr>Preset<wbr>Audio?</a></span>
+        <span class="property-type"><a href="#presetaudio">Preset<wbr>Audio?</a></span>
     </dt>
     <dd>{{% md %}}Audio parameters object (documented below).
 {{% /md %}}</dd>
@@ -598,7 +598,7 @@ The following output properties are available:
             title="">
         <span>Audio<wbr>Codec<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#presetaudiocodecoptions">Pulumi.<wbr>Aws.<wbr>Elastic<wbr>Transcoder.<wbr>Outputs.<wbr>Preset<wbr>Audio<wbr>Codec<wbr>Options?</a></span>
+        <span class="property-type"><a href="#presetaudiocodecoptions">Preset<wbr>Audio<wbr>Codec<wbr>Options?</a></span>
     </dt>
     <dd>{{% md %}}Codec options for the audio parameters (documented below)
 {{% /md %}}</dd>
@@ -634,7 +634,7 @@ The following output properties are available:
             title="">
         <span>Thumbnails</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#presetthumbnails">Pulumi.<wbr>Aws.<wbr>Elastic<wbr>Transcoder.<wbr>Outputs.<wbr>Preset<wbr>Thumbnails?</a></span>
+        <span class="property-type"><a href="#presetthumbnails">Preset<wbr>Thumbnails?</a></span>
     </dt>
     <dd>{{% md %}}Thumbnail parameters object (documented below)
 {{% /md %}}</dd>
@@ -651,7 +651,7 @@ The following output properties are available:
             title="">
         <span>Video</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#presetvideo">Pulumi.<wbr>Aws.<wbr>Elastic<wbr>Transcoder.<wbr>Outputs.<wbr>Preset<wbr>Video?</a></span>
+        <span class="property-type"><a href="#presetvideo">Preset<wbr>Video?</a></span>
     </dt>
     <dd>{{% md %}}Video parameters object (documented below)
 {{% /md %}}</dd>
@@ -668,7 +668,7 @@ The following output properties are available:
             title="">
         <span>Video<wbr>Watermarks</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#presetvideowatermark">List&lt;Pulumi.<wbr>Aws.<wbr>Elastic<wbr>Transcoder.<wbr>Outputs.<wbr>Preset<wbr>Video<wbr>Watermark&gt;?</a></span>
+        <span class="property-type"><a href="#presetvideowatermark">List&lt;Preset<wbr>Video<wbr>Watermark&gt;?</a></span>
     </dt>
     <dd>{{% md %}}Watermark parameters for the video parameters (documented below)
 * `video_codec_options` (Optional, Forces new resource) Codec options for the video parameters
@@ -1003,7 +1003,7 @@ Get an existing Preset resource's state with the given name, ID, and optional ex
 {{< chooser language "javascript,typescript,python,go,csharp  " / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">pulumi.Input&lt;pulumi.ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/elastictranscoder/#PresetState">PresetState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/elastictranscoder/#Preset">Preset</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/elastictranscoder/#PresetState">PresetState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/elastictranscoder/#Preset">Preset</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1011,11 +1011,11 @@ Get an existing Preset resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPreset<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">pulumi.IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/elastictranscoder?tab=doc#PresetState">PresetState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/elastictranscoder?tab=doc#Preset">Preset</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPreset<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/elastictranscoder?tab=doc#PresetState">PresetState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/elastictranscoder?tab=doc#Preset">Preset</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Elastictranscoder.Preset.html">Preset</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Pulumi.Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Elastictranscoder.PresetState.html">PresetState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Elastictranscoder.Preset.html">Preset</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Elastictranscoder.PresetState.html">PresetState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1133,7 +1133,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Audio</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#presetaudio">Pulumi.<wbr>Aws.<wbr>Elastic<wbr>Transcoder.<wbr>Inputs.<wbr>Preset<wbr>Audio<wbr>Args?</a></span>
+        <span class="property-type"><a href="#presetaudio">Preset<wbr>Audio<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Audio parameters object (documented below).
 {{% /md %}}</dd>
@@ -1142,7 +1142,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Audio<wbr>Codec<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#presetaudiocodecoptions">Pulumi.<wbr>Aws.<wbr>Elastic<wbr>Transcoder.<wbr>Inputs.<wbr>Preset<wbr>Audio<wbr>Codec<wbr>Options<wbr>Args?</a></span>
+        <span class="property-type"><a href="#presetaudiocodecoptions">Preset<wbr>Audio<wbr>Codec<wbr>Options<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Codec options for the audio parameters (documented below)
 {{% /md %}}</dd>
@@ -1178,7 +1178,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Thumbnails</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#presetthumbnails">Pulumi.<wbr>Aws.<wbr>Elastic<wbr>Transcoder.<wbr>Inputs.<wbr>Preset<wbr>Thumbnails<wbr>Args?</a></span>
+        <span class="property-type"><a href="#presetthumbnails">Preset<wbr>Thumbnails<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Thumbnail parameters object (documented below)
 {{% /md %}}</dd>
@@ -1195,7 +1195,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Video</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#presetvideo">Pulumi.<wbr>Aws.<wbr>Elastic<wbr>Transcoder.<wbr>Inputs.<wbr>Preset<wbr>Video<wbr>Args?</a></span>
+        <span class="property-type"><a href="#presetvideo">Preset<wbr>Video<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Video parameters object (documented below)
 {{% /md %}}</dd>
@@ -1212,7 +1212,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Video<wbr>Watermarks</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#presetvideowatermark">List&lt;Pulumi.<wbr>Aws.<wbr>Elastic<wbr>Transcoder.<wbr>Inputs.<wbr>Preset<wbr>Video<wbr>Watermark<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#presetvideowatermark">List&lt;Preset<wbr>Video<wbr>Watermark<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}Watermark parameters for the video parameters (documented below)
 * `video_codec_options` (Optional, Forces new resource) Codec options for the video parameters
@@ -3201,3 +3201,10 @@ The following state arguments are supported:
 
 
 
+
+<h3>Package Details</h3>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd></dl>

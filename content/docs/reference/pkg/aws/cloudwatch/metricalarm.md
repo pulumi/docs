@@ -158,7 +158,7 @@ const xxAnomalyDetection = new aws.cloudwatch.MetricAlarm("xx_anomaly_detection"
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cloudwatch.MetricAlarm.html">MetricAlarm</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudWatch.Inputs.MetricAlarmArgs.html">MetricAlarmArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cloudwatch.MetricAlarm.html">MetricAlarm</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CloudWatch.MetricAlarmArgs.html">MetricAlarmArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -359,7 +359,7 @@ See docs for [supported metrics](https://docs.aws.amazon.com/AmazonCloudWatch/la
             title="Optional">
         <span>Metric<wbr>Queries</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricalarmmetricquery">List&lt;Pulumi.<wbr>Aws.<wbr>Cloud<wbr>Watch.<wbr>Inputs.<wbr>Metric<wbr>Alarm<wbr>Metric<wbr>Query<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#metricalarmmetricquery">List&lt;Metric<wbr>Alarm<wbr>Metric<wbr>Query<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}Enables you to create an alarm based on a metric math expression. You may specify at most 20.
 {{% /md %}}</dd>
@@ -1232,7 +1232,7 @@ See docs for [supported metrics](https://docs.aws.amazon.com/AmazonCloudWatch/la
             title="">
         <span>Metric<wbr>Queries</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricalarmmetricquery">List&lt;Pulumi.<wbr>Aws.<wbr>Cloud<wbr>Watch.<wbr>Outputs.<wbr>Metric<wbr>Alarm<wbr>Metric<wbr>Query&gt;?</a></span>
+        <span class="property-type"><a href="#metricalarmmetricquery">List&lt;Metric<wbr>Alarm<wbr>Metric<wbr>Query&gt;?</a></span>
     </dt>
     <dd>{{% md %}}Enables you to create an alarm based on a metric math expression. You may specify at most 20.
 {{% /md %}}</dd>
@@ -2012,7 +2012,7 @@ Get an existing MetricAlarm resource's state with the given name, ID, and option
 {{< chooser language "javascript,typescript,python,go,csharp  " / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">pulumi.Input&lt;pulumi.ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cloudwatch/#MetricAlarmState">MetricAlarmState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cloudwatch/#MetricAlarm">MetricAlarm</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cloudwatch/#MetricAlarmState">MetricAlarmState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cloudwatch/#MetricAlarm">MetricAlarm</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -2020,11 +2020,11 @@ Get an existing MetricAlarm resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetMetricAlarm<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">pulumi.IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloudwatch?tab=doc#MetricAlarmState">MetricAlarmState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloudwatch?tab=doc#MetricAlarm">MetricAlarm</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetMetricAlarm<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloudwatch?tab=doc#MetricAlarmState">MetricAlarmState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cloudwatch?tab=doc#MetricAlarm">MetricAlarm</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cloudwatch.MetricAlarm.html">MetricAlarm</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Pulumi.Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cloudwatch.MetricAlarmState.html">MetricAlarmState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cloudwatch.MetricAlarm.html">MetricAlarm</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cloudwatch.MetricAlarmState.html">MetricAlarmState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2248,7 +2248,7 @@ See docs for [supported metrics](https://docs.aws.amazon.com/AmazonCloudWatch/la
             title="Optional">
         <span>Metric<wbr>Queries</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricalarmmetricquery">List&lt;Pulumi.<wbr>Aws.<wbr>Cloud<wbr>Watch.<wbr>Inputs.<wbr>Metric<wbr>Alarm<wbr>Metric<wbr>Query<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#metricalarmmetricquery">List&lt;Metric<wbr>Alarm<wbr>Metric<wbr>Query<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}Enables you to create an alarm based on a metric math expression. You may specify at most 20.
 {{% /md %}}</dd>
@@ -3071,7 +3071,7 @@ Either of the following is supported: `SampleCount`, `Average`, `Sum`, `Minimum`
             title="Optional">
         <span>Metric</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#metricalarmmetricquerymetric">Pulumi.<wbr>Aws.<wbr>Cloud<wbr>Watch.<wbr>Inputs.<wbr>Metric<wbr>Alarm<wbr>Metric<wbr>Query<wbr>Metric<wbr>Args?</a></span>
+        <span class="property-type"><a href="#metricalarmmetricquerymetric">Metric<wbr>Alarm<wbr>Metric<wbr>Query<wbr>Metric<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}The metric to be returned, along with statistics, period, and units. Use this parameter only if this object is retrieving a metric and not performing a math expression on returned data.
 {{% /md %}}</dd>
@@ -3521,3 +3521,10 @@ Either of the following is supported: `SampleCount`, `Average`, `Sum`, `Minimum`
 
 
 
+
+<h3>Package Details</h3>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd></dl>

@@ -47,7 +47,7 @@ const bar = new aws.elastictranscoder.Pipeline("bar", {
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Elastictranscoder.Pipeline.html">Pipeline</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticTranscoder.Inputs.PipelineArgs.html">PipelineArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Elastictranscoder.Pipeline.html">Pipeline</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticTranscoder.PipelineArgs.html">PipelineArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -152,7 +152,7 @@ const bar = new aws.elastictranscoder.Pipeline("bar", {
             title="Optional">
         <span>Content<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinecontentconfig">Pulumi.<wbr>Aws.<wbr>Elastic<wbr>Transcoder.<wbr>Inputs.<wbr>Pipeline<wbr>Content<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#pipelinecontentconfig">Pipeline<wbr>Content<wbr>Config<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}The ContentConfig object specifies information about the Amazon S3 bucket in which you want Elastic Transcoder to save transcoded files and playlists. (documented below)
 {{% /md %}}</dd>
@@ -161,7 +161,7 @@ const bar = new aws.elastictranscoder.Pipeline("bar", {
             title="Optional">
         <span>Content<wbr>Config<wbr>Permissions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinecontentconfigpermission">List&lt;Pulumi.<wbr>Aws.<wbr>Elastic<wbr>Transcoder.<wbr>Inputs.<wbr>Pipeline<wbr>Content<wbr>Config<wbr>Permission<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#pipelinecontentconfigpermission">List&lt;Pipeline<wbr>Content<wbr>Config<wbr>Permission<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}The permissions for the `content_config` object. (documented below)
 {{% /md %}}</dd>
@@ -188,7 +188,7 @@ const bar = new aws.elastictranscoder.Pipeline("bar", {
             title="Optional">
         <span>Notifications</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinenotifications">Pulumi.<wbr>Aws.<wbr>Elastic<wbr>Transcoder.<wbr>Inputs.<wbr>Pipeline<wbr>Notifications<wbr>Args?</a></span>
+        <span class="property-type"><a href="#pipelinenotifications">Pipeline<wbr>Notifications<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Simple Notification Service (Amazon SNS) topic that you want to notify to report job status. (documented below)
 {{% /md %}}</dd>
@@ -215,7 +215,7 @@ const bar = new aws.elastictranscoder.Pipeline("bar", {
             title="Optional">
         <span>Thumbnail<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinethumbnailconfig">Pulumi.<wbr>Aws.<wbr>Elastic<wbr>Transcoder.<wbr>Inputs.<wbr>Pipeline<wbr>Thumbnail<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#pipelinethumbnailconfig">Pipeline<wbr>Thumbnail<wbr>Config<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}The ThumbnailConfig object specifies information about the Amazon S3 bucket in which you want Elastic Transcoder to save thumbnail files. (documented below)
 {{% /md %}}</dd>
@@ -224,7 +224,7 @@ const bar = new aws.elastictranscoder.Pipeline("bar", {
             title="Optional">
         <span>Thumbnail<wbr>Config<wbr>Permissions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinethumbnailconfigpermission">List&lt;Pulumi.<wbr>Aws.<wbr>Elastic<wbr>Transcoder.<wbr>Inputs.<wbr>Pipeline<wbr>Thumbnail<wbr>Config<wbr>Permission<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#pipelinethumbnailconfigpermission">List&lt;Pipeline<wbr>Thumbnail<wbr>Config<wbr>Permission<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}The permissions for the `thumbnail_config` object. (documented below)
 {{% /md %}}</dd>
@@ -560,7 +560,7 @@ The following output properties are available:
             title="">
         <span>Content<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinecontentconfig">Pulumi.<wbr>Aws.<wbr>Elastic<wbr>Transcoder.<wbr>Outputs.<wbr>Pipeline<wbr>Content<wbr>Config</a></span>
+        <span class="property-type"><a href="#pipelinecontentconfig">Pipeline<wbr>Content<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The ContentConfig object specifies information about the Amazon S3 bucket in which you want Elastic Transcoder to save transcoded files and playlists. (documented below)
 {{% /md %}}</dd>
@@ -569,7 +569,7 @@ The following output properties are available:
             title="">
         <span>Content<wbr>Config<wbr>Permissions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinecontentconfigpermission">List&lt;Pulumi.<wbr>Aws.<wbr>Elastic<wbr>Transcoder.<wbr>Outputs.<wbr>Pipeline<wbr>Content<wbr>Config<wbr>Permission&gt;?</a></span>
+        <span class="property-type"><a href="#pipelinecontentconfigpermission">List&lt;Pipeline<wbr>Content<wbr>Config<wbr>Permission&gt;?</a></span>
     </dt>
     <dd>{{% md %}}The permissions for the `content_config` object. (documented below)
 {{% /md %}}</dd>
@@ -596,7 +596,7 @@ The following output properties are available:
             title="">
         <span>Notifications</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinenotifications">Pulumi.<wbr>Aws.<wbr>Elastic<wbr>Transcoder.<wbr>Outputs.<wbr>Pipeline<wbr>Notifications?</a></span>
+        <span class="property-type"><a href="#pipelinenotifications">Pipeline<wbr>Notifications?</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Simple Notification Service (Amazon SNS) topic that you want to notify to report job status. (documented below)
 {{% /md %}}</dd>
@@ -623,7 +623,7 @@ The following output properties are available:
             title="">
         <span>Thumbnail<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinethumbnailconfig">Pulumi.<wbr>Aws.<wbr>Elastic<wbr>Transcoder.<wbr>Outputs.<wbr>Pipeline<wbr>Thumbnail<wbr>Config</a></span>
+        <span class="property-type"><a href="#pipelinethumbnailconfig">Pipeline<wbr>Thumbnail<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The ThumbnailConfig object specifies information about the Amazon S3 bucket in which you want Elastic Transcoder to save thumbnail files. (documented below)
 {{% /md %}}</dd>
@@ -632,7 +632,7 @@ The following output properties are available:
             title="">
         <span>Thumbnail<wbr>Config<wbr>Permissions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinethumbnailconfigpermission">List&lt;Pulumi.<wbr>Aws.<wbr>Elastic<wbr>Transcoder.<wbr>Outputs.<wbr>Pipeline<wbr>Thumbnail<wbr>Config<wbr>Permission&gt;?</a></span>
+        <span class="property-type"><a href="#pipelinethumbnailconfigpermission">List&lt;Pipeline<wbr>Thumbnail<wbr>Config<wbr>Permission&gt;?</a></span>
     </dt>
     <dd>{{% md %}}The permissions for the `thumbnail_config` object. (documented below)
 {{% /md %}}</dd>
@@ -969,7 +969,7 @@ Get an existing Pipeline resource's state with the given name, ID, and optional 
 {{< chooser language "javascript,typescript,python,go,csharp  " / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">pulumi.Input&lt;pulumi.ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/elastictranscoder/#PipelineState">PipelineState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/elastictranscoder/#Pipeline">Pipeline</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/elastictranscoder/#PipelineState">PipelineState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/elastictranscoder/#Pipeline">Pipeline</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -977,11 +977,11 @@ Get an existing Pipeline resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPipeline<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">pulumi.IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/elastictranscoder?tab=doc#PipelineState">PipelineState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/elastictranscoder?tab=doc#Pipeline">Pipeline</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPipeline<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/elastictranscoder?tab=doc#PipelineState">PipelineState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/elastictranscoder?tab=doc#Pipeline">Pipeline</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Elastictranscoder.Pipeline.html">Pipeline</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Pulumi.Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Elastictranscoder.PipelineState.html">PipelineState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Elastictranscoder.Pipeline.html">Pipeline</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Elastictranscoder.PipelineState.html">PipelineState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1108,7 +1108,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Content<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinecontentconfig">Pulumi.<wbr>Aws.<wbr>Elastic<wbr>Transcoder.<wbr>Inputs.<wbr>Pipeline<wbr>Content<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#pipelinecontentconfig">Pipeline<wbr>Content<wbr>Config<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}The ContentConfig object specifies information about the Amazon S3 bucket in which you want Elastic Transcoder to save transcoded files and playlists. (documented below)
 {{% /md %}}</dd>
@@ -1117,7 +1117,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Content<wbr>Config<wbr>Permissions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinecontentconfigpermission">List&lt;Pulumi.<wbr>Aws.<wbr>Elastic<wbr>Transcoder.<wbr>Inputs.<wbr>Pipeline<wbr>Content<wbr>Config<wbr>Permission<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#pipelinecontentconfigpermission">List&lt;Pipeline<wbr>Content<wbr>Config<wbr>Permission<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}The permissions for the `content_config` object. (documented below)
 {{% /md %}}</dd>
@@ -1144,7 +1144,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Notifications</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinenotifications">Pulumi.<wbr>Aws.<wbr>Elastic<wbr>Transcoder.<wbr>Inputs.<wbr>Pipeline<wbr>Notifications<wbr>Args?</a></span>
+        <span class="property-type"><a href="#pipelinenotifications">Pipeline<wbr>Notifications<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Simple Notification Service (Amazon SNS) topic that you want to notify to report job status. (documented below)
 {{% /md %}}</dd>
@@ -1171,7 +1171,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Thumbnail<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinethumbnailconfig">Pulumi.<wbr>Aws.<wbr>Elastic<wbr>Transcoder.<wbr>Inputs.<wbr>Pipeline<wbr>Thumbnail<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#pipelinethumbnailconfig">Pipeline<wbr>Thumbnail<wbr>Config<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}The ThumbnailConfig object specifies information about the Amazon S3 bucket in which you want Elastic Transcoder to save thumbnail files. (documented below)
 {{% /md %}}</dd>
@@ -1180,7 +1180,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Thumbnail<wbr>Config<wbr>Permissions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#pipelinethumbnailconfigpermission">List&lt;Pulumi.<wbr>Aws.<wbr>Elastic<wbr>Transcoder.<wbr>Inputs.<wbr>Pipeline<wbr>Thumbnail<wbr>Config<wbr>Permission<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#pipelinethumbnailconfigpermission">List&lt;Pipeline<wbr>Thumbnail<wbr>Config<wbr>Permission<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}The permissions for the `thumbnail_config` object. (documented below)
 {{% /md %}}</dd>
@@ -2235,3 +2235,10 @@ The following state arguments are supported:
 
 
 
+
+<h3>Package Details</h3>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd></dl>

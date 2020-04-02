@@ -160,7 +160,7 @@ const frontEndListener = new aws.lb.Listener("front_end", {
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Applicationloadbalancing.Listener.html">Listener</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ApplicationLoadBalancing.Inputs.ListenerArgs.html">ListenerArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Applicationloadbalancing.Listener.html">Listener</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ApplicationLoadBalancing.ListenerArgs.html">ListenerArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -265,7 +265,7 @@ const frontEndListener = new aws.lb.Listener("front_end", {
             title="Required">
         <span>Default<wbr>Actions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerdefaultaction">List&lt;Pulumi.<wbr>Aws.<wbr>Application<wbr>Load<wbr>Balancing.<wbr>Inputs.<wbr>Listener<wbr>Default<wbr>Action<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#listenerdefaultaction">List&lt;Listener<wbr>Default<wbr>Action<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An Action block. Action blocks are documented below.
 {{% /md %}}</dd>
@@ -530,7 +530,7 @@ The following output properties are available:
             title="">
         <span>Default<wbr>Actions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerdefaultaction">List&lt;Pulumi.<wbr>Aws.<wbr>Application<wbr>Load<wbr>Balancing.<wbr>Outputs.<wbr>Listener<wbr>Default<wbr>Action&gt;</a></span>
+        <span class="property-type"><a href="#listenerdefaultaction">List&lt;Listener<wbr>Default<wbr>Action&gt;</a></span>
     </dt>
     <dd>{{% md %}}An Action block. Action blocks are documented below.
 {{% /md %}}</dd>
@@ -798,7 +798,7 @@ Get an existing Listener resource's state with the given name, ID, and optional 
 {{< chooser language "javascript,typescript,python,go,csharp  " / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">pulumi.Input&lt;pulumi.ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/applicationloadbalancing/#ListenerState">ListenerState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/applicationloadbalancing/#Listener">Listener</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/applicationloadbalancing/#ListenerState">ListenerState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/applicationloadbalancing/#Listener">Listener</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -806,11 +806,11 @@ Get an existing Listener resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetListener<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">pulumi.IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/applicationloadbalancing?tab=doc#ListenerState">ListenerState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/applicationloadbalancing?tab=doc#Listener">Listener</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetListener<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/applicationloadbalancing?tab=doc#ListenerState">ListenerState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/applicationloadbalancing?tab=doc#Listener">Listener</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Applicationloadbalancing.Listener.html">Listener</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Pulumi.Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Applicationloadbalancing.ListenerState.html">ListenerState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Applicationloadbalancing.Listener.html">Listener</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Applicationloadbalancing.ListenerState.html">ListenerState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -938,7 +938,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Default<wbr>Actions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerdefaultaction">List&lt;Pulumi.<wbr>Aws.<wbr>Application<wbr>Load<wbr>Balancing.<wbr>Inputs.<wbr>Listener<wbr>Default<wbr>Action<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#listenerdefaultaction">List&lt;Listener<wbr>Default<wbr>Action<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}An Action block. Action blocks are documented below.
 {{% /md %}}</dd>
@@ -1222,7 +1222,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Authenticate<wbr>Cognito</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerdefaultactionauthenticatecognito">Pulumi.<wbr>Aws.<wbr>Application<wbr>Load<wbr>Balancing.<wbr>Inputs.<wbr>Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Cognito<wbr>Args?</a></span>
+        <span class="property-type"><a href="#listenerdefaultactionauthenticatecognito">Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Cognito<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1230,7 +1230,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Authenticate<wbr>Oidc</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerdefaultactionauthenticateoidc">Pulumi.<wbr>Aws.<wbr>Application<wbr>Load<wbr>Balancing.<wbr>Inputs.<wbr>Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Oidc<wbr>Args?</a></span>
+        <span class="property-type"><a href="#listenerdefaultactionauthenticateoidc">Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Oidc<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1238,7 +1238,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Fixed<wbr>Response</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerdefaultactionfixedresponse">Pulumi.<wbr>Aws.<wbr>Application<wbr>Load<wbr>Balancing.<wbr>Inputs.<wbr>Listener<wbr>Default<wbr>Action<wbr>Fixed<wbr>Response<wbr>Args?</a></span>
+        <span class="property-type"><a href="#listenerdefaultactionfixedresponse">Listener<wbr>Default<wbr>Action<wbr>Fixed<wbr>Response<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Information for creating an action that returns a custom HTTP response. Required if `type` is `fixed-response`.
 {{% /md %}}</dd>
@@ -1255,7 +1255,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Redirect</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listenerdefaultactionredirect">Pulumi.<wbr>Aws.<wbr>Application<wbr>Load<wbr>Balancing.<wbr>Inputs.<wbr>Listener<wbr>Default<wbr>Action<wbr>Redirect<wbr>Args?</a></span>
+        <span class="property-type"><a href="#listenerdefaultactionredirect">Listener<wbr>Default<wbr>Action<wbr>Redirect<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Information for creating a redirect action. Required if `type` is `redirect`.
 {{% /md %}}</dd>
@@ -2668,3 +2668,10 @@ The following state arguments are supported:
 
 
 
+
+<h3>Package Details</h3>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd></dl>

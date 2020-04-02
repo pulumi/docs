@@ -46,7 +46,7 @@ const defaultCluster = new aws.redshift.Cluster("default", {
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Redshift.Cluster.html">Cluster</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.RedShift.Inputs.ClusterArgs.html">ClusterArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Redshift.Cluster.html">Cluster</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.RedShift.ClusterArgs.html">ClusterArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -316,7 +316,7 @@ If you do not provide a name, Amazon Redshift will create a default database cal
             title="Optional">
         <span>Logging</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterlogging">Pulumi.<wbr>Aws.<wbr>Red<wbr>Shift.<wbr>Inputs.<wbr>Cluster<wbr>Logging<wbr>Args?</a></span>
+        <span class="property-type"><a href="#clusterlogging">Cluster<wbr>Logging<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Logging, documented below.
 {{% /md %}}</dd>
@@ -419,7 +419,7 @@ Format: ddd:hh24:mi-ddd:hh24:mi
             title="Optional">
         <span>Snapshot<wbr>Copy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustersnapshotcopy">Pulumi.<wbr>Aws.<wbr>Red<wbr>Shift.<wbr>Inputs.<wbr>Cluster<wbr>Snapshot<wbr>Copy<wbr>Args?</a></span>
+        <span class="property-type"><a href="#clustersnapshotcopy">Cluster<wbr>Snapshot<wbr>Copy<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Configuration of automatic copy of snapshots from one region to another. Documented below.
 {{% /md %}}</dd>
@@ -1626,7 +1626,7 @@ If you do not provide a name, Amazon Redshift will create a default database cal
             title="">
         <span>Logging</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterlogging">Pulumi.<wbr>Aws.<wbr>Red<wbr>Shift.<wbr>Outputs.<wbr>Cluster<wbr>Logging?</a></span>
+        <span class="property-type"><a href="#clusterlogging">Cluster<wbr>Logging?</a></span>
     </dt>
     <dd>{{% md %}}Logging, documented below.
 {{% /md %}}</dd>
@@ -1729,7 +1729,7 @@ Format: ddd:hh24:mi-ddd:hh24:mi
             title="">
         <span>Snapshot<wbr>Copy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustersnapshotcopy">Pulumi.<wbr>Aws.<wbr>Red<wbr>Shift.<wbr>Outputs.<wbr>Cluster<wbr>Snapshot<wbr>Copy?</a></span>
+        <span class="property-type"><a href="#clustersnapshotcopy">Cluster<wbr>Snapshot<wbr>Copy?</a></span>
     </dt>
     <dd>{{% md %}}Configuration of automatic copy of snapshots from one region to another. Documented below.
 {{% /md %}}</dd>
@@ -2792,7 +2792,7 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
 {{< chooser language "javascript,typescript,python,go,csharp  " / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">pulumi.Input&lt;pulumi.ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/redshift/#ClusterState">ClusterState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/redshift/#Cluster">Cluster</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/redshift/#ClusterState">ClusterState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/redshift/#Cluster">Cluster</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -2800,11 +2800,11 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCluster<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">pulumi.IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/redshift?tab=doc#ClusterState">ClusterState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/redshift?tab=doc#Cluster">Cluster</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCluster<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/redshift?tab=doc#ClusterState">ClusterState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/redshift?tab=doc#Cluster">Cluster</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Redshift.Cluster.html">Cluster</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Pulumi.Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Redshift.ClusterState.html">ClusterState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Redshift.Cluster.html">Cluster</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Redshift.ClusterState.html">ClusterState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3106,7 +3106,7 @@ If you do not provide a name, Amazon Redshift will create a default database cal
             title="Optional">
         <span>Logging</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterlogging">Pulumi.<wbr>Aws.<wbr>Red<wbr>Shift.<wbr>Inputs.<wbr>Cluster<wbr>Logging<wbr>Args?</a></span>
+        <span class="property-type"><a href="#clusterlogging">Cluster<wbr>Logging<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Logging, documented below.
 {{% /md %}}</dd>
@@ -3209,7 +3209,7 @@ Format: ddd:hh24:mi-ddd:hh24:mi
             title="Optional">
         <span>Snapshot<wbr>Copy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustersnapshotcopy">Pulumi.<wbr>Aws.<wbr>Red<wbr>Shift.<wbr>Inputs.<wbr>Cluster<wbr>Snapshot<wbr>Copy<wbr>Args?</a></span>
+        <span class="property-type"><a href="#clustersnapshotcopy">Cluster<wbr>Snapshot<wbr>Copy<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Configuration of automatic copy of snapshots from one region to another. Documented below.
 {{% /md %}}</dd>
@@ -4577,3 +4577,10 @@ For more information on the permissions required for the bucket, please read the
 
 
 
+
+<h3>Package Details</h3>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd></dl>
