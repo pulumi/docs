@@ -4,7 +4,7 @@ title: "API Gateway for an AWS Lambda"
 meta_desc: "In this week's edition of Modern Infrastructure as Code Wednesday, we’ll show you how to set up an API Gateway for an AWS Lambda function in 30 minutes."
 
 # A featured webinar will display first in the list.
-featured: false
+featured: true
 
 # If the video is pre-recorded or live.
 pre_recorded: true

@@ -35,11 +35,13 @@ $(function() {
                 var listIds = Object.keys(tabMap);
                 for (var i = 0; i < listIds.length; i++) {
                     var idKey = listIds[i];
+                    $("#" + idKey).removeClass("text-blue-700").addClass("text-gray-500").addClass("hover:text-blue-800");
                     $("#" + tabMap[idKey]).addClass("hidden");
                 }
 
                 var listId = tabMap[tab];
                 $("#" + listId).removeClass("hidden");
+                $(this).removeClass("text-gray-500").removeClass("hover:text-blue-800").addClass("text-blue-700");
             });
         });
     }
