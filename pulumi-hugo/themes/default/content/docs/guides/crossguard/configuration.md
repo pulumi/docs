@@ -10,7 +10,6 @@ menu:
 ---
 
 <!-- markdownlint-disable ul code -->
-{{% crossguard-preview %}}
 
 ## Overview
 

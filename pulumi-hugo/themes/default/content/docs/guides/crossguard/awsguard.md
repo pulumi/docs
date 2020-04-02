@@ -10,7 +10,6 @@ menu:
     parent: crossguard
 ---
 <!-- markdownlint-disable ul code -->
-{{% crossguard-preview %}}
 
 ## Overview
 
