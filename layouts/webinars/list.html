@@ -19,7 +19,7 @@
     {{ $webinars := (where $.Pages "Type" "webinars") }}
     {{ $listed_webinars := (where $webinars ".Params.unlisted" false) }}
     {{ $non_pulumi_tv_webinars := (where $listed_webinars ".Params.pulumi_tv" false)}}
-    <div class="container mx-auto">
+    <div id="webinarListings" class="container mx-auto">
         <div class="my-10">
             <ul class="flex">
                 <li class="-mb-px mr-1 list-none">

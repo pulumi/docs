@@ -20,16 +20,17 @@
 {{ end }}
 
 {{ define "main" }}
-    <section class="px-4">
+    <section id="webinarLandingPage" class="px-4">
         <div class="container mx-auto max-w-6xl py-16 md:flex">
             {{ if .Params.gated }}
                 <div class="md:w-1/2 md:mx-8">
                     {{ with .Params.main }}
                         <h2>{{ .title }}</h2>
                         <p><a href="#webinarRegistrationForm" class="btn md:hidden">REGISTER NOW</a></p>
-                        <time class="uppercase text-orange text-sm font-bold" datetime="{{ .datetime }}">
-                            {{ .datetime }}
+                        <time class="webinar-datetime uppercase text-orange text-sm font-bold">
+                            <span data-datetime="{{ .sortable_date }}">{{ .datetime }}</span>
                         </time>
+                        <p class="uppercase text-orange text-sm font-bold mt-3">DURATION: {{ .duration }}</p>
                         <div class="text-gray-600">
                             {{ .description | markdownify }}
                         </div>
