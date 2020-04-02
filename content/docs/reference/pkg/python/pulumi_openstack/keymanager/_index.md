@@ -38,8 +38,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><strong>acl</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Allows to control an access to a container. Currently only
 the <code class="docutils literal notranslate"><span class="pre">read</span></code> operation is supported. If not specified, the container is
 accessible project wide. The <code class="docutils literal notranslate"><span class="pre">read</span></code> structure is described below.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human-readable name for the Container. Does not have
-to be unique.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the secret reference. The reference names must correspond the container type, more details are available <a class="reference external" href="https://docs.openstack.org/barbican/stein/api/reference/containers.html">here</a>.</p></li>
 <li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V1 KeyManager client.
 A KeyManager client is needed to create a container. If omitted, the
 <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
@@ -54,18 +53,19 @@ below.</p></li>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">read</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">created_at</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The date the container was created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">projectAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">updated_at</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The date the container was last updated.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">users</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">created_at</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The date the container ACL was created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">projectAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether the container is accessible project wide.
+Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">updated_at</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The date the container ACL was last updated.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">users</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The list of user IDs, which are allowed to access the
+container, when <code class="docutils literal notranslate"><span class="pre">project_access</span></code> is set to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
 </li>
 </ul>
 <p>The <strong>secret_refs</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Human-readable name for the Container. Does not have
-to be unique.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">secret_ref</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the secret reference. The reference names must correspond the container type, more details are available <a class="reference external" href="https://docs.openstack.org/barbican/stein/api/reference/containers.html">here</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">secret_ref</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The secret reference / where to find the secret, URL.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_openstack.keymanager.ContainerV1.acl">
@@ -76,10 +76,12 @@ accessible project wide. The <code class="docutils literal notranslate"><span cl
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">read</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">created_at</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The date the container was created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">projectAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">updated_at</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The date the container was last updated.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">users</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">created_at</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The date the container ACL was created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">projectAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether the container is accessible project wide.
+Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">updated_at</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The date the container ACL was last updated.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">users</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The list of user IDs, which are allowed to access the
+container, when <code class="docutils literal notranslate"><span class="pre">project_access</span></code> is set to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
 </li>
 </ul>
@@ -90,8 +92,7 @@ accessible project wide. The <code class="docutils literal notranslate"><span cl
 <code class="sig-name descname">consumers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.keymanager.ContainerV1.consumers" title="Permalink to this definition">¶</a></dt>
 <dd><p>The list of the container consumers. The structure is described below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Human-readable name for the Container. Does not have
-to be unique.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the secret reference. The reference names must correspond the container type, more details are available <a class="reference external" href="https://docs.openstack.org/barbican/stein/api/reference/containers.html">here</a>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The consumer URL.</p></li>
 </ul>
 </dd></dl>
@@ -105,7 +106,7 @@ to be unique.</p></li>
 <dl class="attribute">
 <dt id="pulumi_openstack.keymanager.ContainerV1.created_at">
 <code class="sig-name descname">created_at</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.keymanager.ContainerV1.created_at" title="Permalink to this definition">¶</a></dt>
-<dd><p>The date the container was created.</p>
+<dd><p>The date the container ACL was created.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -117,8 +118,7 @@ to be unique.</p></li>
 <dl class="attribute">
 <dt id="pulumi_openstack.keymanager.ContainerV1.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.keymanager.ContainerV1.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>Human-readable name for the Container. Does not have
-to be unique.</p>
+<dd><p>The name of the secret reference. The reference names must correspond the container type, more details are available <a class="reference external" href="https://docs.openstack.org/barbican/stein/api/reference/containers.html">here</a>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -136,9 +136,8 @@ V1 container.</p>
 <dd><p>A set of dictionaries containing references to secrets. The structure is described
 below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Human-readable name for the Container. Does not have
-to be unique.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">secret_ref</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the secret reference. The reference names must correspond the container type, more details are available <a class="reference external" href="https://docs.openstack.org/barbican/stein/api/reference/containers.html">here</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">secret_ref</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The secret reference / where to find the secret, URL.</p></li>
 </ul>
 </dd></dl>
 
@@ -157,7 +156,7 @@ to be unique.</p></li>
 <dl class="attribute">
 <dt id="pulumi_openstack.keymanager.ContainerV1.updated_at">
 <code class="sig-name descname">updated_at</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.keymanager.ContainerV1.updated_at" title="Permalink to this definition">¶</a></dt>
-<dd><p>The date the container was last updated.</p>
+<dd><p>The date the container ACL was last updated.</p>
 </dd></dl>
 
 <dl class="method">
@@ -176,10 +175,10 @@ the <code class="docutils literal notranslate"><span class="pre">read</span></co
 accessible project wide. The <code class="docutils literal notranslate"><span class="pre">read</span></code> structure is described below.</p></li>
 <li><p><strong>consumers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of the container consumers. The structure is described below.</p></li>
 <li><p><strong>container_ref</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The container reference / where to find the container.</p></li>
-<li><p><strong>created_at</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The date the container was created.</p></li>
+<li><p><strong>created_at</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The date the container ACL was created.</p></li>
 <li><p><strong>creator_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The creator of the container.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human-readable name for the Container. Does not have
-to be unique.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The name of the secret reference. The reference names must correspond the container type, more details are available <a class="reference external" href="https://docs.openstack.org/barbican/stein/api/reference/containers.html">here</a>.</p>
+</p></li>
 <li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V1 KeyManager client.
 A KeyManager client is needed to create a container. If omitted, the
 <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
@@ -188,7 +187,7 @@ V1 container.</p></li>
 below.</p></li>
 <li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The status of the container.</p></li>
 <li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Used to indicate the type of container. Must be one of <code class="docutils literal notranslate"><span class="pre">generic</span></code>, <code class="docutils literal notranslate"><span class="pre">rsa</span></code> or <code class="docutils literal notranslate"><span class="pre">certificate</span></code>.</p></li>
-<li><p><strong>updated_at</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The date the container was last updated.</p></li>
+<li><p><strong>updated_at</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The date the container ACL was last updated.</p></li>
 </ul>
 </dd>
 </dl>
@@ -196,24 +195,24 @@ below.</p></li>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">read</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">created_at</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The date the container was created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">projectAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">updated_at</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The date the container was last updated.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">users</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">created_at</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The date the container ACL was created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">projectAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether the container is accessible project wide.
+Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">updated_at</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The date the container ACL was last updated.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">users</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The list of user IDs, which are allowed to access the
+container, when <code class="docutils literal notranslate"><span class="pre">project_access</span></code> is set to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
 </li>
 </ul>
 <p>The <strong>consumers</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Human-readable name for the Container. Does not have
-to be unique.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the secret reference. The reference names must correspond the container type, more details are available <a class="reference external" href="https://docs.openstack.org/barbican/stein/api/reference/containers.html">here</a>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The consumer URL.</p></li>
 </ul>
 <p>The <strong>secret_refs</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Human-readable name for the Container. Does not have
-to be unique.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">secret_ref</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the secret reference. The reference names must correspond the container type, more details are available <a class="reference external" href="https://docs.openstack.org/barbican/stein/api/reference/containers.html">here</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">secret_ref</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The secret reference / where to find the secret, URL.</p></li>
 </ul>
 </dd></dl>
 
@@ -517,10 +516,12 @@ V1 secret.</p></li>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">read</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">created_at</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The date the secret was created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">projectAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">updated_at</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The date the secret was last updated.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">users</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">created_at</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The date the secret ACL was created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">projectAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether the secret is accessible project wide.
+Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">updated_at</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The date the secret ACL was last updated.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">users</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The list of user IDs, which are allowed to access the
+secret, when <code class="docutils literal notranslate"><span class="pre">project_access</span></code> is set to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
 </li>
 </ul>
@@ -533,10 +534,12 @@ project wide.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">read</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">created_at</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The date the secret was created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">projectAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">updated_at</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The date the secret was last updated.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">users</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">created_at</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The date the secret ACL was created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">projectAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether the secret is accessible project wide.
+Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">updated_at</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The date the secret ACL was last updated.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">users</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The list of user IDs, which are allowed to access the
+secret, when <code class="docutils literal notranslate"><span class="pre">project_access</span></code> is set to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
 </li>
 </ul>
@@ -570,7 +573,7 @@ explicitly and implicitly added.</p>
 <dl class="attribute">
 <dt id="pulumi_openstack.keymanager.SecretV1.created_at">
 <code class="sig-name descname">created_at</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.keymanager.SecretV1.created_at" title="Permalink to this definition">¶</a></dt>
-<dd><p>The date the secret was created.</p>
+<dd><p>The date the secret ACL was created.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -652,7 +655,7 @@ V1 secret.</p>
 <dl class="attribute">
 <dt id="pulumi_openstack.keymanager.SecretV1.updated_at">
 <code class="sig-name descname">updated_at</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.keymanager.SecretV1.updated_at" title="Permalink to this definition">¶</a></dt>
-<dd><p>The date the secret was last updated.</p>
+<dd><p>The date the secret ACL was last updated.</p>
 </dd></dl>
 
 <dl class="method">
@@ -674,7 +677,7 @@ project wide.</p></li>
 explicitly and implicitly added.</p></li>
 <li><p><strong>bit_length</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Metadata provided by a user or system for informational purposes.</p></li>
 <li><p><strong>content_types</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The map of the content types, assigned on the secret.</p></li>
-<li><p><strong>created_at</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The date the secret was created.</p></li>
+<li><p><strong>created_at</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The date the secret ACL was created.</p></li>
 <li><p><strong>creator_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The creator of the secret.</p></li>
 <li><p><strong>expiration</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The expiration time of the secret in the RFC3339 timestamp format (e.g. <code class="docutils literal notranslate"><span class="pre">2019-03-09T12:58:49Z</span></code>). If omitted, a secret will never expire. Changing this creates a new secret.</p></li>
 <li><p><strong>metadata</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Additional Metadata for the secret.</p></li>
@@ -692,7 +695,7 @@ V1 secret.</p></li>
 <li><p><strong>secret_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Used to indicate the type of secret being stored. For more information see <a class="reference external" href="https://docs.openstack.org/barbican/latest/api/reference/secret_types.html">Secret types</a>.</p>
 </p></li>
 <li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The status of the secret.</p></li>
-<li><p><strong>updated_at</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The date the secret was last updated.</p></li>
+<li><p><strong>updated_at</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The date the secret ACL was last updated.</p></li>
 </ul>
 </dd>
 </dl>
@@ -700,10 +703,12 @@ V1 secret.</p></li>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">read</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">created_at</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The date the secret was created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">projectAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">updated_at</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The date the secret was last updated.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">users</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">created_at</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The date the secret ACL was created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">projectAccess</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether the secret is accessible project wide.
+Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">updated_at</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The date the secret ACL was last updated.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">users</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The list of user IDs, which are allowed to access the
+secret, when <code class="docutils literal notranslate"><span class="pre">project_access</span></code> is set to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
 </li>
 </ul>

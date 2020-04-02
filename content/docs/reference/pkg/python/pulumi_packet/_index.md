@@ -208,9 +208,9 @@ information is in the
 </dl>
 <p>The <strong>ip_addresses</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">cidr</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - bit length of the network mask of the address</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cidr</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - CIDR suffix for IP address block to be assigned, i.e. amount of addresses.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">reservationIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Type of the port (e.g. <code class="docutils literal notranslate"><span class="pre">NetworkPort</span></code> or <code class="docutils literal notranslate"><span class="pre">NetworkBondPort</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - One of [<code class="docutils literal notranslate"><span class="pre">private_ipv4</span></code>, <code class="docutils literal notranslate"><span class="pre">public_ipv4</span></code>, <code class="docutils literal notranslate"><span class="pre">public_ipv6</span></code>]</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_packet.Device.access_private_ipv4">
@@ -293,9 +293,9 @@ continue to boot via iPXE on reboots.</p>
 <code class="sig-name descname">ip_addresses</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.Device.ip_addresses" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of IP address types for the device (structure is documented below).</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">cidr</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - bit length of the network mask of the address</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cidr</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - CIDR suffix for IP address block to be assigned, i.e. amount of addresses.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">reservationIds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Type of the port (e.g. <code class="docutils literal notranslate"><span class="pre">NetworkPort</span></code> or <code class="docutils literal notranslate"><span class="pre">NetworkBondPort</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - One of [<code class="docutils literal notranslate"><span class="pre">private_ipv4</span></code>, <code class="docutils literal notranslate"><span class="pre">public_ipv4</span></code>, <code class="docutils literal notranslate"><span class="pre">public_ipv6</span></code>]</p></li>
 </ul>
 </dd></dl>
 
@@ -326,7 +326,7 @@ Elastic addresses then stack by type - an assigned public IPv4 will go after the
 The fields of the network attributes are:</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">address</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - IPv4 or IPv6 address string</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">cidr</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - bit length of the network mask of the address</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cidr</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - CIDR suffix for IP address block to be assigned, i.e. amount of addresses.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">family</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - IP version - “4” or “6”</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">gateway</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - address of router</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">public</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - whether the address is routable from the Internet</p></li>
@@ -360,7 +360,7 @@ The fields of the network attributes are:</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - ID of the port</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">mac</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - MAC address assigned to the port</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Name of the port (e.g. <code class="docutils literal notranslate"><span class="pre">eth0</span></code>, or <code class="docutils literal notranslate"><span class="pre">bond0</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Type of the port (e.g. <code class="docutils literal notranslate"><span class="pre">NetworkPort</span></code> or <code class="docutils literal notranslate"><span class="pre">NetworkBondPort</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - One of [<code class="docutils literal notranslate"><span class="pre">private_ipv4</span></code>, <code class="docutils literal notranslate"><span class="pre">public_ipv4</span></code>, <code class="docutils literal notranslate"><span class="pre">public_ipv6</span></code>]</p></li>
 </ul>
 </dd></dl>
 
@@ -505,14 +505,14 @@ information is in the
 </dl>
 <p>The <strong>ip_addresses</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">cidr</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - bit length of the network mask of the address</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cidr</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - CIDR suffix for IP address block to be assigned, i.e. amount of addresses.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">reservationIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Type of the port (e.g. <code class="docutils literal notranslate"><span class="pre">NetworkPort</span></code> or <code class="docutils literal notranslate"><span class="pre">NetworkBondPort</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - One of [<code class="docutils literal notranslate"><span class="pre">private_ipv4</span></code>, <code class="docutils literal notranslate"><span class="pre">public_ipv4</span></code>, <code class="docutils literal notranslate"><span class="pre">public_ipv6</span></code>]</p></li>
 </ul>
 <p>The <strong>networks</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - IPv4 or IPv6 address string</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">cidr</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - bit length of the network mask of the address</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cidr</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - CIDR suffix for IP address block to be assigned, i.e. amount of addresses.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">family</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - IP version - “4” or “6”</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">gateway</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - address of router</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">public</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - whether the address is routable from the Internet</p></li>
@@ -527,7 +527,7 @@ information is in the
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - ID of the port</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">mac</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - MAC address assigned to the port</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the port (e.g. <code class="docutils literal notranslate"><span class="pre">eth0</span></code>, or <code class="docutils literal notranslate"><span class="pre">bond0</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Type of the port (e.g. <code class="docutils literal notranslate"><span class="pre">NetworkPort</span></code> or <code class="docutils literal notranslate"><span class="pre">NetworkBondPort</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - One of [<code class="docutils literal notranslate"><span class="pre">private_ipv4</span></code>, <code class="docutils literal notranslate"><span class="pre">public_ipv4</span></code>, <code class="docutils literal notranslate"><span class="pre">public_ipv6</span></code>]</p></li>
 </ul>
 </dd></dl>
 
@@ -1341,10 +1341,10 @@ in your projects.</p>
 </dl>
 <p>The <strong>bgp_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">asn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">deploymentType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">asn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Autonomous System Numer for local BGP deployment</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deploymentType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - <code class="docutils literal notranslate"><span class="pre">private</span></code> or <code class="docutils literal notranslate"><span class="pre">public</span></code>, the <code class="docutils literal notranslate"><span class="pre">private</span></code> is likely to be usable immediately, the <code class="docutils literal notranslate"><span class="pre">public</span></code> will need to be review by Packet engineers</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxPrefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum number of route filters allowed per server</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">md5</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">md5</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Password for BGP session in plaintext (not a checksum)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">status</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - status of BGP configuration in the project</p></li>
 </ul>
 <dl class="attribute">
@@ -1358,10 +1358,10 @@ in your projects.</p>
 <code class="sig-name descname">bgp_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.Project.bgp_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>Optional BGP settings. Refer to <a class="reference external" href="https://www.packet.com/developers/docs/network/advanced/local-and-global-bgp/">Packet guide for BGP</a>.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">asn</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">deploymentType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">asn</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Autonomous System Numer for local BGP deployment</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deploymentType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - <code class="docutils literal notranslate"><span class="pre">private</span></code> or <code class="docutils literal notranslate"><span class="pre">public</span></code>, the <code class="docutils literal notranslate"><span class="pre">private</span></code> is likely to be usable immediately, the <code class="docutils literal notranslate"><span class="pre">public</span></code> will need to be review by Packet engineers</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxPrefix</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The maximum number of route filters allowed per server</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">md5</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">md5</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Password for BGP session in plaintext (not a checksum)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">status</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - status of BGP configuration in the project</p></li>
 </ul>
 </dd></dl>
@@ -1421,10 +1421,10 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>bgp_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">asn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">deploymentType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">asn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Autonomous System Numer for local BGP deployment</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deploymentType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - <code class="docutils literal notranslate"><span class="pre">private</span></code> or <code class="docutils literal notranslate"><span class="pre">public</span></code>, the <code class="docutils literal notranslate"><span class="pre">private</span></code> is likely to be usable immediately, the <code class="docutils literal notranslate"><span class="pre">public</span></code> will need to be review by Packet engineers</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxPrefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum number of route filters allowed per server</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">md5</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">md5</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Password for BGP session in plaintext (not a checksum)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">status</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - status of BGP configuration in the project</p></li>
 </ul>
 </dd></dl>
