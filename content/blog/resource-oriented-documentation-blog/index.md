@@ -17,7 +17,7 @@ Documentation in any product is super important, and an area where folks have sh
 
 In short, our docs are now resource-oriented.  Each resource is presented on a single page for better viewing, discovery, and navigation. All content now supports switching between different languages, so that Pythonistas, Gophers, and .NET aficionados can now easily find code examples in their favorite language.
 
-{{< figure src="DocsSite_small.gif" caption="Pick your favorite language!" >}}
+{{< figure src="newdocs.gif" caption="Pick your favorite language!" >}}
 
 API docs for each language are still available and are deep-linked. In general, we will lead with this resource-oriented format throughout our content as a canonical, language-agnostic reference for all Pulumi resources.
 
