@@ -19,9 +19,6 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>Provides a Kinesis Analytics Application resource. Kinesis Analytics is a managed service that
 allows processing and analyzing streaming data using standard SQL.</p>
 <p>For more details, see the [Amazon Kinesis Analytics Documentation][1].</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kinesis_analytics_application.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kinesis_analytics_application.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -43,68 +40,77 @@ See Reference Data Sources below for more details.</p></li>
 <p>The <strong>cloudwatch_logging_options</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the Kinesis Analytics Application.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">logStreamArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logStreamArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the CloudWatch Log Stream.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the IAM Role used to send application messages.</p></li>
 </ul>
 <p>The <strong>inputs</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the Kinesis Analytics Application.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">kinesisFirehose</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">kinesisFirehose</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The Kinesis Firehose configuration for the streaming source. Conflicts with <code class="docutils literal notranslate"><span class="pre">kinesis_stream</span></code>.
+See Kinesis Firehose below for more details.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">resource_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resource_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the Kinesis Firehose delivery stream.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the IAM Role used to access the stream.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">kinesisStream</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">kinesisStream</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The Kinesis Stream configuration for the streaming source. Conflicts with <code class="docutils literal notranslate"><span class="pre">kinesis_firehose</span></code>.
+See Kinesis Stream below for more details.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">resource_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resource_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the Kinesis Stream.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the IAM Role used to access the stream.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name_prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">parallelism</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">name_prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name Prefix to use when creating an in-application stream.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">parallelism</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The number of Parallel in-application streams to create.
+See Parallelism below for more details.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">count</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">count</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The Count of streams.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">processingConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">processingConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The Processing Configuration to transform records as they are received from the stream.
+See Processing Configuration below for more details.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">lambda_</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">lambda_</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The Lambda function configuration. See Lambda below for more details.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">resource_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">schema</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">recordColumns</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">mapping</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the Kinesis Analytics Application.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sqlType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">recordEncoding</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">recordFormat</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">mappingParameters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">csv</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">recordColumnDelimiter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">recordRowDelimiter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">json</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">recordRowPath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resource_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the Lambda function.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the IAM Role used to access the Lambda function.</p></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">recordFormatType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">schema</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The Schema format of the data in the streaming source. See Source Schema below for more details.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">recordColumns</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The Record Column mapping for the streaming source data element.
+See Record Columns below for more details.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">mapping</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Mapping reference to the data element.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the column.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sqlType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The SQL Type of the column.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">recordEncoding</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Encoding of the record in the streaming source.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">recordFormat</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The Record Format and mapping information to schematize a record.
+See Record Format below for more details.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">mappingParameters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The Mapping Information for the record format.
+See Mapping Parameters below for more details.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">csv</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Mapping information when the record format uses delimiters.
+See CSV Mapping Parameters below for more details.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">recordColumnDelimiter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Column Delimiter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">recordRowDelimiter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Row Delimiter.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">json</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Mapping information when JSON is the record format on the streaming source.
+See JSON Mapping Parameters below for more details.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">recordRowPath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Path to the top-level parent that contains the records.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">recordFormatType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of Record Format. Can be <code class="docutils literal notranslate"><span class="pre">CSV</span></code> or <code class="docutils literal notranslate"><span class="pre">JSON</span></code>.</p></li>
 </ul>
 </li>
 </ul>
@@ -119,74 +125,81 @@ See Reference Data Sources below for more details.</p></li>
 <p>The <strong>outputs</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the Kinesis Analytics Application.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">kinesisFirehose</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">kinesisFirehose</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The Kinesis Firehose configuration for the destination stream. Conflicts with <code class="docutils literal notranslate"><span class="pre">kinesis_stream</span></code>.
+See Kinesis Firehose below for more details.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">resource_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resource_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the Kinesis Firehose delivery stream.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the IAM Role used to access the stream.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">kinesisStream</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">kinesisStream</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The Kinesis Stream configuration for the destination stream. Conflicts with <code class="docutils literal notranslate"><span class="pre">kinesis_firehose</span></code>.
+See Kinesis Stream below for more details.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">resource_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resource_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the Kinesis Stream.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the IAM Role used to access the stream.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">lambda_</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">lambda_</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The Lambda function destination. See Lambda below for more details.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">resource_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resource_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the Lambda function.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the IAM Role used to access the Lambda function.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the Kinesis Analytics Application.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">schema</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of the in-application stream.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">schema</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The Schema format of the data written to the destination. See Destination Schema below for more details.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">recordFormatType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">recordFormatType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Format Type of the records on the output stream. Can be <code class="docutils literal notranslate"><span class="pre">CSV</span></code> or <code class="docutils literal notranslate"><span class="pre">JSON</span></code>.</p></li>
 </ul>
 </li>
 </ul>
 <p>The <strong>reference_data_sources</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the Kinesis Analytics Application.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">s3</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">s3</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The S3 configuration for the reference data source. See S3 Reference below for more details.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bucketArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">fileKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bucketArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The S3 Bucket ARN.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fileKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The File Key name containing reference data.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the IAM Role used to send application messages.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">schema</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">schema</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The Schema format of the data in the streaming source. See Source Schema below for more details.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">recordColumns</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">recordColumns</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The Record Column mapping for the streaming source data element.
+See Record Columns below for more details.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">mapping</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the Kinesis Analytics Application.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sqlType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mapping</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Mapping reference to the data element.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the column.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sqlType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The SQL Type of the column.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">recordEncoding</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">recordFormat</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">recordEncoding</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Encoding of the record in the streaming source.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">recordFormat</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The Record Format and mapping information to schematize a record.
+See Record Format below for more details.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">mappingParameters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">mappingParameters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The Mapping Information for the record format.
+See Mapping Parameters below for more details.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">csv</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">csv</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Mapping information when the record format uses delimiters.
+See CSV Mapping Parameters below for more details.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">recordColumnDelimiter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">recordRowDelimiter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">recordColumnDelimiter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Column Delimiter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">recordRowDelimiter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Row Delimiter.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">json</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">json</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Mapping information when JSON is the record format on the streaming source.
+See JSON Mapping Parameters below for more details.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">recordRowPath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">recordRowPath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Path to the top-level parent that contains the records.</p></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">recordFormatType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">recordFormatType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of Record Format. Can be <code class="docutils literal notranslate"><span class="pre">CSV</span></code> or <code class="docutils literal notranslate"><span class="pre">JSON</span></code>.</p></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">table_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">table_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The in-application Table Name.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_aws.kinesis.AnalyticsApplication.arn">
@@ -201,8 +214,8 @@ See Reference Data Sources below for more details.</p></li>
 See CloudWatch Logging Options below for more details.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ARN of the Kinesis Analytics Application.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">logStreamArn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logStreamArn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ARN of the CloudWatch Log Stream.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ARN of the IAM Role used to send application messages.</p></li>
 </ul>
 </dd></dl>
 
@@ -230,62 +243,71 @@ See CloudWatch Logging Options below for more details.</p>
 <dd><p>Input configuration of the application. See Inputs below for more details.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ARN of the Kinesis Analytics Application.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">kinesisFirehose</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">kinesisFirehose</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The Kinesis Firehose configuration for the streaming source. Conflicts with <code class="docutils literal notranslate"><span class="pre">kinesis_stream</span></code>.
+See Kinesis Firehose below for more details.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">resource_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resource_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ARN of the Kinesis Firehose delivery stream.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ARN of the IAM Role used to access the stream.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">kinesisStream</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">kinesisStream</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The Kinesis Stream configuration for the streaming source. Conflicts with <code class="docutils literal notranslate"><span class="pre">kinesis_firehose</span></code>.
+See Kinesis Stream below for more details.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">resource_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resource_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ARN of the Kinesis Stream.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ARN of the IAM Role used to access the stream.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name_prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">parallelism</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">name_prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Name Prefix to use when creating an in-application stream.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">parallelism</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The number of Parallel in-application streams to create.
+See Parallelism below for more details.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">count</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">count</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The Count of streams.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">processingConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">processingConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The Processing Configuration to transform records as they are received from the stream.
+See Processing Configuration below for more details.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">lambda_</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">lambda_</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The Lambda function configuration. See Lambda below for more details.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">resource_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">schema</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">recordColumns</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">mapping</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Name of the Kinesis Analytics Application.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sqlType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">recordEncoding</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">recordFormat</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">mappingParameters</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">csv</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">recordColumnDelimiter</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">recordRowDelimiter</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">json</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">recordRowPath</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resource_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ARN of the Lambda function.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ARN of the IAM Role used to access the Lambda function.</p></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">recordFormatType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">schema</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The Schema format of the data in the streaming source. See Source Schema below for more details.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">recordColumns</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The Record Column mapping for the streaming source data element.
+See Record Columns below for more details.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">mapping</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Mapping reference to the data element.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Name of the column.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sqlType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The SQL Type of the column.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">recordEncoding</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Encoding of the record in the streaming source.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">recordFormat</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The Record Format and mapping information to schematize a record.
+See Record Format below for more details.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">mappingParameters</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The Mapping Information for the record format.
+See Mapping Parameters below for more details.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">csv</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Mapping information when the record format uses delimiters.
+See CSV Mapping Parameters below for more details.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">recordColumnDelimiter</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Column Delimiter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">recordRowDelimiter</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Row Delimiter.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">json</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Mapping information when JSON is the record format on the streaming source.
+See JSON Mapping Parameters below for more details.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">recordRowPath</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Path to the top-level parent that contains the records.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">recordFormatType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The type of Record Format. Can be <code class="docutils literal notranslate"><span class="pre">CSV</span></code> or <code class="docutils literal notranslate"><span class="pre">JSON</span></code>.</p></li>
 </ul>
 </li>
 </ul>
@@ -317,28 +339,30 @@ See CloudWatch Logging Options below for more details.</p>
 <dd><p>Output destination configuration of the application. See Outputs below for more details.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ARN of the Kinesis Analytics Application.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">kinesisFirehose</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">kinesisFirehose</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The Kinesis Firehose configuration for the destination stream. Conflicts with <code class="docutils literal notranslate"><span class="pre">kinesis_stream</span></code>.
+See Kinesis Firehose below for more details.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">resource_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resource_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ARN of the Kinesis Firehose delivery stream.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ARN of the IAM Role used to access the stream.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">kinesisStream</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">kinesisStream</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The Kinesis Stream configuration for the destination stream. Conflicts with <code class="docutils literal notranslate"><span class="pre">kinesis_firehose</span></code>.
+See Kinesis Stream below for more details.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">resource_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resource_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ARN of the Kinesis Stream.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ARN of the IAM Role used to access the stream.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">lambda_</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">lambda_</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The Lambda function destination. See Lambda below for more details.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">resource_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resource_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ARN of the Lambda function.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ARN of the IAM Role used to access the Lambda function.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Name of the Kinesis Analytics Application.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">schema</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Name of the in-application stream.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">schema</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The Schema format of the data written to the destination. See Destination Schema below for more details.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">recordFormatType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">recordFormatType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Format Type of the records on the output stream. Can be <code class="docutils literal notranslate"><span class="pre">CSV</span></code> or <code class="docutils literal notranslate"><span class="pre">JSON</span></code>.</p></li>
 </ul>
 </li>
 </ul>
@@ -351,46 +375,51 @@ See CloudWatch Logging Options below for more details.</p>
 See Reference Data Sources below for more details.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ARN of the Kinesis Analytics Application.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">s3</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">s3</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The S3 configuration for the reference data source. See S3 Reference below for more details.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bucketArn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">fileKey</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bucketArn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The S3 Bucket ARN.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fileKey</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The File Key name containing reference data.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ARN of the IAM Role used to send application messages.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">schema</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">schema</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The Schema format of the data in the streaming source. See Source Schema below for more details.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">recordColumns</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">recordColumns</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The Record Column mapping for the streaming source data element.
+See Record Columns below for more details.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">mapping</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Name of the Kinesis Analytics Application.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sqlType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mapping</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Mapping reference to the data element.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Name of the column.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sqlType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The SQL Type of the column.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">recordEncoding</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">recordFormat</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">recordEncoding</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Encoding of the record in the streaming source.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">recordFormat</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The Record Format and mapping information to schematize a record.
+See Record Format below for more details.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">mappingParameters</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">mappingParameters</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The Mapping Information for the record format.
+See Mapping Parameters below for more details.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">csv</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">csv</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Mapping information when the record format uses delimiters.
+See CSV Mapping Parameters below for more details.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">recordColumnDelimiter</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">recordRowDelimiter</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">recordColumnDelimiter</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Column Delimiter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">recordRowDelimiter</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Row Delimiter.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">json</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">json</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Mapping information when JSON is the record format on the streaming source.
+See JSON Mapping Parameters below for more details.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">recordRowPath</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">recordRowPath</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Path to the top-level parent that contains the records.</p></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">recordFormatType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">recordFormatType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The type of Record Format. Can be <code class="docutils literal notranslate"><span class="pre">CSV</span></code> or <code class="docutils literal notranslate"><span class="pre">JSON</span></code>.</p></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">table_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">table_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The in-application Table Name.</p></li>
 </ul>
 </dd></dl>
 
@@ -444,68 +473,77 @@ See Reference Data Sources below for more details.</p></li>
 <p>The <strong>cloudwatch_logging_options</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the Kinesis Analytics Application.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">logStreamArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logStreamArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the CloudWatch Log Stream.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the IAM Role used to send application messages.</p></li>
 </ul>
 <p>The <strong>inputs</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the Kinesis Analytics Application.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">kinesisFirehose</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">kinesisFirehose</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The Kinesis Firehose configuration for the streaming source. Conflicts with <code class="docutils literal notranslate"><span class="pre">kinesis_stream</span></code>.
+See Kinesis Firehose below for more details.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">resource_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resource_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the Kinesis Firehose delivery stream.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the IAM Role used to access the stream.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">kinesisStream</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">kinesisStream</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The Kinesis Stream configuration for the streaming source. Conflicts with <code class="docutils literal notranslate"><span class="pre">kinesis_firehose</span></code>.
+See Kinesis Stream below for more details.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">resource_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resource_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the Kinesis Stream.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the IAM Role used to access the stream.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name_prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">parallelism</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">name_prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name Prefix to use when creating an in-application stream.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">parallelism</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The number of Parallel in-application streams to create.
+See Parallelism below for more details.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">count</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">count</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The Count of streams.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">processingConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">processingConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The Processing Configuration to transform records as they are received from the stream.
+See Processing Configuration below for more details.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">lambda_</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">lambda_</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The Lambda function configuration. See Lambda below for more details.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">resource_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">schema</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">recordColumns</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">mapping</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the Kinesis Analytics Application.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sqlType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">recordEncoding</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">recordFormat</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">mappingParameters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">csv</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">recordColumnDelimiter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">recordRowDelimiter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">json</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">recordRowPath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resource_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the Lambda function.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the IAM Role used to access the Lambda function.</p></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">recordFormatType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">schema</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The Schema format of the data in the streaming source. See Source Schema below for more details.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">recordColumns</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The Record Column mapping for the streaming source data element.
+See Record Columns below for more details.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">mapping</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Mapping reference to the data element.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the column.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sqlType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The SQL Type of the column.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">recordEncoding</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Encoding of the record in the streaming source.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">recordFormat</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The Record Format and mapping information to schematize a record.
+See Record Format below for more details.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">mappingParameters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The Mapping Information for the record format.
+See Mapping Parameters below for more details.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">csv</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Mapping information when the record format uses delimiters.
+See CSV Mapping Parameters below for more details.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">recordColumnDelimiter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Column Delimiter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">recordRowDelimiter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Row Delimiter.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">json</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Mapping information when JSON is the record format on the streaming source.
+See JSON Mapping Parameters below for more details.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">recordRowPath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Path to the top-level parent that contains the records.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">recordFormatType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of Record Format. Can be <code class="docutils literal notranslate"><span class="pre">CSV</span></code> or <code class="docutils literal notranslate"><span class="pre">JSON</span></code>.</p></li>
 </ul>
 </li>
 </ul>
@@ -520,74 +558,81 @@ See Reference Data Sources below for more details.</p></li>
 <p>The <strong>outputs</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the Kinesis Analytics Application.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">kinesisFirehose</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">kinesisFirehose</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The Kinesis Firehose configuration for the destination stream. Conflicts with <code class="docutils literal notranslate"><span class="pre">kinesis_stream</span></code>.
+See Kinesis Firehose below for more details.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">resource_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resource_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the Kinesis Firehose delivery stream.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the IAM Role used to access the stream.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">kinesisStream</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">kinesisStream</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The Kinesis Stream configuration for the destination stream. Conflicts with <code class="docutils literal notranslate"><span class="pre">kinesis_firehose</span></code>.
+See Kinesis Stream below for more details.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">resource_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resource_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the Kinesis Stream.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the IAM Role used to access the stream.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">lambda_</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">lambda_</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The Lambda function destination. See Lambda below for more details.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">resource_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resource_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the Lambda function.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the IAM Role used to access the Lambda function.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the Kinesis Analytics Application.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">schema</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of the in-application stream.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">schema</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The Schema format of the data written to the destination. See Destination Schema below for more details.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">recordFormatType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">recordFormatType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Format Type of the records on the output stream. Can be <code class="docutils literal notranslate"><span class="pre">CSV</span></code> or <code class="docutils literal notranslate"><span class="pre">JSON</span></code>.</p></li>
 </ul>
 </li>
 </ul>
 <p>The <strong>reference_data_sources</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the Kinesis Analytics Application.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">s3</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">s3</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The S3 configuration for the reference data source. See S3 Reference below for more details.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">bucketArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">fileKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bucketArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The S3 Bucket ARN.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fileKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The File Key name containing reference data.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the IAM Role used to send application messages.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">schema</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">schema</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The Schema format of the data in the streaming source. See Source Schema below for more details.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">recordColumns</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">recordColumns</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The Record Column mapping for the streaming source data element.
+See Record Columns below for more details.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">mapping</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the Kinesis Analytics Application.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sqlType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mapping</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Mapping reference to the data element.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the column.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sqlType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The SQL Type of the column.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">recordEncoding</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">recordFormat</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">recordEncoding</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Encoding of the record in the streaming source.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">recordFormat</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The Record Format and mapping information to schematize a record.
+See Record Format below for more details.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">mappingParameters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">mappingParameters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The Mapping Information for the record format.
+See Mapping Parameters below for more details.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">csv</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">csv</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Mapping information when the record format uses delimiters.
+See CSV Mapping Parameters below for more details.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">recordColumnDelimiter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">recordRowDelimiter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">recordColumnDelimiter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Column Delimiter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">recordRowDelimiter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Row Delimiter.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">json</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">json</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Mapping information when JSON is the record format on the streaming source.
+See JSON Mapping Parameters below for more details.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">recordRowPath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">recordRowPath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Path to the top-level parent that contains the records.</p></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">recordFormatType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">recordFormatType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of Record Format. Can be <code class="docutils literal notranslate"><span class="pre">CSV</span></code> or <code class="docutils literal notranslate"><span class="pre">JSON</span></code>.</p></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">table_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">table_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The in-application Table Name.</p></li>
 </ul>
 </dd></dl>
 
@@ -639,9 +684,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.kinesis.</code><code class="sig-name descname">FirehoseDeliveryStream</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">destination=None</em>, <em class="sig-param">destination_id=None</em>, <em class="sig-param">elasticsearch_configuration=None</em>, <em class="sig-param">extended_s3_configuration=None</em>, <em class="sig-param">kinesis_source_configuration=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">redshift_configuration=None</em>, <em class="sig-param">s3_configuration=None</em>, <em class="sig-param">server_side_encryption=None</em>, <em class="sig-param">splunk_configuration=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">version_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kinesis.FirehoseDeliveryStream" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Kinesis Firehose Delivery Stream resource. Amazon Kinesis Firehose is a fully managed, elastic service to easily deliver real-time data streams to destinations such as Amazon S3 and Amazon Redshift.</p>
 <p>For more details, see the [Amazon Kinesis Firehose Documentation][1].</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kinesis_firehose_delivery_stream.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kinesis_firehose_delivery_stream.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -670,9 +712,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">bufferingInterval</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Buffer incoming data for the specified period of time, in seconds between 60 to 900, before delivering it to the destination.  The default value is 300s.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">bufferingSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Buffer incoming data to the specified size, in MBs between 1 to 100, before delivering it to the destination.  The default value is 5MB.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">cloudwatch_logging_options</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The CloudWatch Logging Options for the delivery stream. More details are given below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">cloudwatch_logging_options</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The CloudWatch Logging Options for the delivery stream. More details are given below</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Set it to <code class="docutils literal notranslate"><span class="pre">false</span></code> if you want to disable format conversion while preserving the configuration details.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enables or disables the logging. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">log_group_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The CloudWatch group name for logging. This value is required if <code class="docutils literal notranslate"><span class="pre">enabled</span></code> is true.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">logStreamName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The CloudWatch log stream name for logging. This value is required if <code class="docutils literal notranslate"><span class="pre">enabled</span></code> is true.</p></li>
 </ul>
@@ -682,7 +724,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <li><p><code class="docutils literal notranslate"><span class="pre">indexRotationPeriod</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Elasticsearch index rotation period.  Index rotation appends a timestamp to the IndexName to facilitate expiration of old data.  Valid values are <code class="docutils literal notranslate"><span class="pre">NoRotation</span></code>, <code class="docutils literal notranslate"><span class="pre">OneHour</span></code>, <code class="docutils literal notranslate"><span class="pre">OneDay</span></code>, <code class="docutils literal notranslate"><span class="pre">OneWeek</span></code>, and <code class="docutils literal notranslate"><span class="pre">OneMonth</span></code>.  The default value is <code class="docutils literal notranslate"><span class="pre">OneDay</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">processingConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The data processing configuration.  More details are given below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Set it to <code class="docutils literal notranslate"><span class="pre">false</span></code> if you want to disable format conversion while preserving the configuration details.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enables or disables data processing.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">processors</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Array of data processors. More details are given below</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">parameters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Array of processor parameters. More details are given below</p>
@@ -696,9 +738,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 </li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">retryDuration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - After an initial failure to deliver to Splunk, the total amount of time, in seconds between 0 to 7200, during which Firehose re-attempts delivery (including the first attempt).  After this time has elapsed, the failed documents are written to Amazon S3.  The default value is 300s.  There will be no retry if the value is 0.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you use for Kinesis Data Firehose. Cross-account roles aren’t allowed.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">s3BackupMode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Defines how documents should be delivered to Amazon S3.  Valid values are <code class="docutils literal notranslate"><span class="pre">FailedEventsOnly</span></code> and <code class="docutils literal notranslate"><span class="pre">AllEvents</span></code>.  Default value is <code class="docutils literal notranslate"><span class="pre">FailedEventsOnly</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">retryDuration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - After an initial failure to deliver to Amazon Elasticsearch, the total amount of time, in seconds between 0 to 7200, during which Firehose re-attempts delivery (including the first attempt).  After this time has elapsed, the failed documents are written to Amazon S3.  The default value is 300s.  There will be no retry if the value is 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the IAM role to be assumed by Firehose for calling the Amazon ES Configuration API and for indexing documents.  The pattern needs to be <code class="docutils literal notranslate"><span class="pre">arn:.*</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">s3BackupMode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Defines how documents should be delivered to Amazon S3.  Valid values are <code class="docutils literal notranslate"><span class="pre">FailedDocumentsOnly</span></code> and <code class="docutils literal notranslate"><span class="pre">AllDocuments</span></code>.  Default value is <code class="docutils literal notranslate"><span class="pre">FailedDocumentsOnly</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">typeName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Elasticsearch type name with maximum length of 100 characters.</p></li>
 </ul>
 <p>The <strong>extended_s3_configuration</strong> object supports the following:</p>
@@ -707,9 +749,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <li><p><code class="docutils literal notranslate"><span class="pre">bufferInterval</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Buffer incoming data for the specified period of time, in seconds, before delivering it to the destination. The default value is 300.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">bufferSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Buffer incoming data to the specified size, in MBs, before delivering it to the destination. The default value is 5.
 We recommend setting SizeInMBs to a value greater than the amount of data you typically ingest into the delivery stream in 10 seconds. For example, if you typically ingest data at 1 MB/sec set SizeInMBs to be 10 MB or higher.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">cloudwatch_logging_options</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The CloudWatch Logging Options for the delivery stream. More details are given below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">cloudwatch_logging_options</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The CloudWatch Logging Options for the delivery stream. More details are given below</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Set it to <code class="docutils literal notranslate"><span class="pre">false</span></code> if you want to disable format conversion while preserving the configuration details.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enables or disables the logging. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">log_group_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The CloudWatch group name for logging. This value is required if <code class="docutils literal notranslate"><span class="pre">enabled</span></code> is true.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">logStreamName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The CloudWatch log stream name for logging. This value is required if <code class="docutils literal notranslate"><span class="pre">enabled</span></code> is true.</p></li>
 </ul>
@@ -788,7 +830,7 @@ be used.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The “YYYY/MM/DD/HH” time format prefix is automatically used for delivered S3 files. You can specify an extra prefix to be added in front of the time format prefix. Note that if the prefix ends with a slash, it appears as a folder in the S3 bucket</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">processingConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The data processing configuration.  More details are given below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Set it to <code class="docutils literal notranslate"><span class="pre">false</span></code> if you want to disable format conversion while preserving the configuration details.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enables or disables data processing.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">processors</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Array of data processors. More details are given below</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">parameters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Array of processor parameters. More details are given below</p>
@@ -809,9 +851,9 @@ be used.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">bufferInterval</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Buffer incoming data for the specified period of time, in seconds, before delivering it to the destination. The default value is 300.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">bufferSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Buffer incoming data to the specified size, in MBs, before delivering it to the destination. The default value is 5.
 We recommend setting SizeInMBs to a value greater than the amount of data you typically ingest into the delivery stream in 10 seconds. For example, if you typically ingest data at 1 MB/sec set SizeInMBs to be 10 MB or higher.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">cloudwatch_logging_options</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The CloudWatch Logging Options for the delivery stream. More details are given below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">cloudwatch_logging_options</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The CloudWatch Logging Options for the delivery stream. More details are given below</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Set it to <code class="docutils literal notranslate"><span class="pre">false</span></code> if you want to disable format conversion while preserving the configuration details.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enables or disables the logging. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">log_group_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The CloudWatch group name for logging. This value is required if <code class="docutils literal notranslate"><span class="pre">enabled</span></code> is true.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">logStreamName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The CloudWatch log stream name for logging. This value is required if <code class="docutils literal notranslate"><span class="pre">enabled</span></code> is true.</p></li>
 </ul>
@@ -823,18 +865,18 @@ be used.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you use for Kinesis Data Firehose. Cross-account roles aren’t allowed.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">s3BackupMode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Defines how documents should be delivered to Amazon S3.  Valid values are <code class="docutils literal notranslate"><span class="pre">FailedEventsOnly</span></code> and <code class="docutils literal notranslate"><span class="pre">AllEvents</span></code>.  Default value is <code class="docutils literal notranslate"><span class="pre">FailedEventsOnly</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">s3BackupMode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Amazon S3 backup mode.  Valid values are <code class="docutils literal notranslate"><span class="pre">Disabled</span></code> and <code class="docutils literal notranslate"><span class="pre">Enabled</span></code>.  Default value is <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>.</p></li>
 </ul>
 <p>The <strong>kinesis_source_configuration</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">kinesisStreamArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The kinesis stream used as the source of the firehose delivery stream.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you use for Kinesis Data Firehose. Cross-account roles aren’t allowed.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the role that provides access to the source Kinesis stream.</p></li>
 </ul>
 <p>The <strong>redshift_configuration</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">cloudwatch_logging_options</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The CloudWatch Logging Options for the delivery stream. More details are given below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">cloudwatch_logging_options</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The CloudWatch Logging Options for the delivery stream. More details are given below</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Set it to <code class="docutils literal notranslate"><span class="pre">false</span></code> if you want to disable format conversion while preserving the configuration details.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enables or disables the logging. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">log_group_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The CloudWatch group name for logging. This value is required if <code class="docutils literal notranslate"><span class="pre">enabled</span></code> is true.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">logStreamName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The CloudWatch log stream name for logging. This value is required if <code class="docutils literal notranslate"><span class="pre">enabled</span></code> is true.</p></li>
 </ul>
@@ -846,7 +888,7 @@ be used.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The password for the username above.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">processingConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The data processing configuration.  More details are given below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Set it to <code class="docutils literal notranslate"><span class="pre">false</span></code> if you want to disable format conversion while preserving the configuration details.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enables or disables data processing.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">processors</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Array of data processors. More details are given below</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">parameters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Array of processor parameters. More details are given below</p>
@@ -860,17 +902,17 @@ be used.</p></li>
 </li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">retryDuration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - After an initial failure to deliver to Splunk, the total amount of time, in seconds between 0 to 7200, during which Firehose re-attempts delivery (including the first attempt).  After this time has elapsed, the failed documents are written to Amazon S3.  The default value is 300s.  There will be no retry if the value is 0.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you use for Kinesis Data Firehose. Cross-account roles aren’t allowed.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">retryDuration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The length of time during which Firehose retries delivery after a failure, starting from the initial request and including the first attempt. The default value is 3600 seconds (60 minutes). Firehose does not retry if the value of DurationInSeconds is 0 (zero) or if the first delivery attempt takes longer than the current value.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The arn of the role the stream assumes.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">s3BackupConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The configuration for backup in Amazon S3. Required if <code class="docutils literal notranslate"><span class="pre">s3_backup_mode</span></code> is <code class="docutils literal notranslate"><span class="pre">Enabled</span></code>. Supports the same fields as <code class="docutils literal notranslate"><span class="pre">s3_configuration</span></code> object.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">bucketArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the S3 bucket</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">bufferInterval</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Buffer incoming data for the specified period of time, in seconds, before delivering it to the destination. The default value is 300.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">bufferSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Buffer incoming data to the specified size, in MBs, before delivering it to the destination. The default value is 5.
 We recommend setting SizeInMBs to a value greater than the amount of data you typically ingest into the delivery stream in 10 seconds. For example, if you typically ingest data at 1 MB/sec set SizeInMBs to be 10 MB or higher.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">cloudwatch_logging_options</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The CloudWatch Logging Options for the delivery stream. More details are given below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">cloudwatch_logging_options</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The CloudWatch Logging Options for the delivery stream. More details are given below</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Set it to <code class="docutils literal notranslate"><span class="pre">false</span></code> if you want to disable format conversion while preserving the configuration details.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enables or disables the logging. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">log_group_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The CloudWatch group name for logging. This value is required if <code class="docutils literal notranslate"><span class="pre">enabled</span></code> is true.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">logStreamName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The CloudWatch log stream name for logging. This value is required if <code class="docutils literal notranslate"><span class="pre">enabled</span></code> is true.</p></li>
 </ul>
@@ -882,7 +924,7 @@ be used.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you use for Kinesis Data Firehose. Cross-account roles aren’t allowed.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">s3BackupMode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Defines how documents should be delivered to Amazon S3.  Valid values are <code class="docutils literal notranslate"><span class="pre">FailedEventsOnly</span></code> and <code class="docutils literal notranslate"><span class="pre">AllEvents</span></code>.  Default value is <code class="docutils literal notranslate"><span class="pre">FailedEventsOnly</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">s3BackupMode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Amazon S3 backup mode.  Valid values are <code class="docutils literal notranslate"><span class="pre">Disabled</span></code> and <code class="docutils literal notranslate"><span class="pre">Enabled</span></code>.  Default value is <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The username that the firehose delivery stream will assume. It is strongly recommended that the username and password provided is used exclusively for Amazon Kinesis Firehose purposes, and that the permissions for the account are restricted for Amazon Redshift INSERT permissions.</p></li>
 </ul>
 <p>The <strong>s3_configuration</strong> object supports the following:</p>
@@ -891,9 +933,9 @@ be used.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">bufferInterval</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Buffer incoming data for the specified period of time, in seconds, before delivering it to the destination. The default value is 300.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">bufferSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Buffer incoming data to the specified size, in MBs, before delivering it to the destination. The default value is 5.
 We recommend setting SizeInMBs to a value greater than the amount of data you typically ingest into the delivery stream in 10 seconds. For example, if you typically ingest data at 1 MB/sec set SizeInMBs to be 10 MB or higher.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">cloudwatch_logging_options</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The CloudWatch Logging Options for the delivery stream. More details are given below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">cloudwatch_logging_options</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The CloudWatch Logging Options for the delivery stream. More details are given below</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Set it to <code class="docutils literal notranslate"><span class="pre">false</span></code> if you want to disable format conversion while preserving the configuration details.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enables or disables the logging. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">log_group_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The CloudWatch group name for logging. This value is required if <code class="docutils literal notranslate"><span class="pre">enabled</span></code> is true.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">logStreamName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The CloudWatch log stream name for logging. This value is required if <code class="docutils literal notranslate"><span class="pre">enabled</span></code> is true.</p></li>
 </ul>
@@ -906,13 +948,13 @@ be used.</p></li>
 </ul>
 <p>The <strong>server_side_encryption</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Set it to <code class="docutils literal notranslate"><span class="pre">false</span></code> if you want to disable format conversion while preserving the configuration details.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether to enable encryption at rest. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
 <p>The <strong>splunk_configuration</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">cloudwatch_logging_options</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The CloudWatch Logging Options for the delivery stream. More details are given below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Set it to <code class="docutils literal notranslate"><span class="pre">false</span></code> if you want to disable format conversion while preserving the configuration details.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enables or disables the logging. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">log_group_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The CloudWatch group name for logging. This value is required if <code class="docutils literal notranslate"><span class="pre">enabled</span></code> is true.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">logStreamName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The CloudWatch log stream name for logging. This value is required if <code class="docutils literal notranslate"><span class="pre">enabled</span></code> is true.</p></li>
 </ul>
@@ -923,7 +965,7 @@ be used.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">hecToken</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The GUID that you obtain from your Splunk cluster when you create a new HEC endpoint.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">processingConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The data processing configuration.  More details are given below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Set it to <code class="docutils literal notranslate"><span class="pre">false</span></code> if you want to disable format conversion while preserving the configuration details.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enables or disables data processing.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">processors</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Array of data processors. More details are given below</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">parameters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Array of processor parameters. More details are given below</p>
@@ -959,9 +1001,9 @@ be used.</p></li>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">bufferingInterval</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Buffer incoming data for the specified period of time, in seconds between 60 to 900, before delivering it to the destination.  The default value is 300s.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">bufferingSize</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Buffer incoming data to the specified size, in MBs between 1 to 100, before delivering it to the destination.  The default value is 5MB.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">cloudwatch_logging_options</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The CloudWatch Logging Options for the delivery stream. More details are given below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">cloudwatch_logging_options</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The CloudWatch Logging Options for the delivery stream. More details are given below</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Set it to <code class="docutils literal notranslate"><span class="pre">false</span></code> if you want to disable format conversion while preserving the configuration details.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Enables or disables the logging. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">log_group_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The CloudWatch group name for logging. This value is required if <code class="docutils literal notranslate"><span class="pre">enabled</span></code> is true.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">logStreamName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The CloudWatch log stream name for logging. This value is required if <code class="docutils literal notranslate"><span class="pre">enabled</span></code> is true.</p></li>
 </ul>
@@ -971,7 +1013,7 @@ be used.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">indexRotationPeriod</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Elasticsearch index rotation period.  Index rotation appends a timestamp to the IndexName to facilitate expiration of old data.  Valid values are <code class="docutils literal notranslate"><span class="pre">NoRotation</span></code>, <code class="docutils literal notranslate"><span class="pre">OneHour</span></code>, <code class="docutils literal notranslate"><span class="pre">OneDay</span></code>, <code class="docutils literal notranslate"><span class="pre">OneWeek</span></code>, and <code class="docutils literal notranslate"><span class="pre">OneMonth</span></code>.  The default value is <code class="docutils literal notranslate"><span class="pre">OneDay</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">processingConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The data processing configuration.  More details are given below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Set it to <code class="docutils literal notranslate"><span class="pre">false</span></code> if you want to disable format conversion while preserving the configuration details.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Enables or disables data processing.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">processors</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Array of data processors. More details are given below</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">parameters</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Array of processor parameters. More details are given below</p>
@@ -985,9 +1027,9 @@ be used.</p></li>
 </li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">retryDuration</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - After an initial failure to deliver to Splunk, the total amount of time, in seconds between 0 to 7200, during which Firehose re-attempts delivery (including the first attempt).  After this time has elapsed, the failed documents are written to Amazon S3.  The default value is 300s.  There will be no retry if the value is 0.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you use for Kinesis Data Firehose. Cross-account roles aren’t allowed.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">s3BackupMode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Defines how documents should be delivered to Amazon S3.  Valid values are <code class="docutils literal notranslate"><span class="pre">FailedEventsOnly</span></code> and <code class="docutils literal notranslate"><span class="pre">AllEvents</span></code>.  Default value is <code class="docutils literal notranslate"><span class="pre">FailedEventsOnly</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">retryDuration</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - After an initial failure to deliver to Amazon Elasticsearch, the total amount of time, in seconds between 0 to 7200, during which Firehose re-attempts delivery (including the first attempt).  After this time has elapsed, the failed documents are written to Amazon S3.  The default value is 300s.  There will be no retry if the value is 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ARN of the IAM role to be assumed by Firehose for calling the Amazon ES Configuration API and for indexing documents.  The pattern needs to be <code class="docutils literal notranslate"><span class="pre">arn:.*</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">s3BackupMode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Defines how documents should be delivered to Amazon S3.  Valid values are <code class="docutils literal notranslate"><span class="pre">FailedDocumentsOnly</span></code> and <code class="docutils literal notranslate"><span class="pre">AllDocuments</span></code>.  Default value is <code class="docutils literal notranslate"><span class="pre">FailedDocumentsOnly</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">typeName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Elasticsearch type name with maximum length of 100 characters.</p></li>
 </ul>
 </dd></dl>
@@ -1001,9 +1043,9 @@ be used.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">bufferInterval</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Buffer incoming data for the specified period of time, in seconds, before delivering it to the destination. The default value is 300.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">bufferSize</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Buffer incoming data to the specified size, in MBs, before delivering it to the destination. The default value is 5.
 We recommend setting SizeInMBs to a value greater than the amount of data you typically ingest into the delivery stream in 10 seconds. For example, if you typically ingest data at 1 MB/sec set SizeInMBs to be 10 MB or higher.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">cloudwatch_logging_options</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The CloudWatch Logging Options for the delivery stream. More details are given below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">cloudwatch_logging_options</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The CloudWatch Logging Options for the delivery stream. More details are given below</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Set it to <code class="docutils literal notranslate"><span class="pre">false</span></code> if you want to disable format conversion while preserving the configuration details.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Enables or disables the logging. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">log_group_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The CloudWatch group name for logging. This value is required if <code class="docutils literal notranslate"><span class="pre">enabled</span></code> is true.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">logStreamName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The CloudWatch log stream name for logging. This value is required if <code class="docutils literal notranslate"><span class="pre">enabled</span></code> is true.</p></li>
 </ul>
@@ -1082,7 +1124,7 @@ be used.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The “YYYY/MM/DD/HH” time format prefix is automatically used for delivered S3 files. You can specify an extra prefix to be added in front of the time format prefix. Note that if the prefix ends with a slash, it appears as a folder in the S3 bucket</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">processingConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The data processing configuration.  More details are given below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Set it to <code class="docutils literal notranslate"><span class="pre">false</span></code> if you want to disable format conversion while preserving the configuration details.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Enables or disables data processing.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">processors</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Array of data processors. More details are given below</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">parameters</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Array of processor parameters. More details are given below</p>
@@ -1103,9 +1145,9 @@ be used.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">bufferInterval</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Buffer incoming data for the specified period of time, in seconds, before delivering it to the destination. The default value is 300.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">bufferSize</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Buffer incoming data to the specified size, in MBs, before delivering it to the destination. The default value is 5.
 We recommend setting SizeInMBs to a value greater than the amount of data you typically ingest into the delivery stream in 10 seconds. For example, if you typically ingest data at 1 MB/sec set SizeInMBs to be 10 MB or higher.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">cloudwatch_logging_options</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The CloudWatch Logging Options for the delivery stream. More details are given below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">cloudwatch_logging_options</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The CloudWatch Logging Options for the delivery stream. More details are given below</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Set it to <code class="docutils literal notranslate"><span class="pre">false</span></code> if you want to disable format conversion while preserving the configuration details.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Enables or disables the logging. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">log_group_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The CloudWatch group name for logging. This value is required if <code class="docutils literal notranslate"><span class="pre">enabled</span></code> is true.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">logStreamName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The CloudWatch log stream name for logging. This value is required if <code class="docutils literal notranslate"><span class="pre">enabled</span></code> is true.</p></li>
 </ul>
@@ -1117,7 +1159,7 @@ be used.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you use for Kinesis Data Firehose. Cross-account roles aren’t allowed.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">s3BackupMode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Defines how documents should be delivered to Amazon S3.  Valid values are <code class="docutils literal notranslate"><span class="pre">FailedEventsOnly</span></code> and <code class="docutils literal notranslate"><span class="pre">AllEvents</span></code>.  Default value is <code class="docutils literal notranslate"><span class="pre">FailedEventsOnly</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">s3BackupMode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Amazon S3 backup mode.  Valid values are <code class="docutils literal notranslate"><span class="pre">Disabled</span></code> and <code class="docutils literal notranslate"><span class="pre">Enabled</span></code>.  Default value is <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -1127,7 +1169,7 @@ be used.</p></li>
 <dd><p>Allows the ability to specify the kinesis stream that is used as the source of the firehose delivery stream.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">kinesisStreamArn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The kinesis stream used as the source of the firehose delivery stream.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you use for Kinesis Data Firehose. Cross-account roles aren’t allowed.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ARN of the role that provides access to the source Kinesis stream.</p></li>
 </ul>
 </dd></dl>
 
@@ -1145,9 +1187,9 @@ AWS account and region the Stream is created in.</p>
 Using <code class="docutils literal notranslate"><span class="pre">redshift_configuration</span></code> requires the user to also specify a
 <code class="docutils literal notranslate"><span class="pre">s3_configuration</span></code> block. More details are given below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">cloudwatch_logging_options</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The CloudWatch Logging Options for the delivery stream. More details are given below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">cloudwatch_logging_options</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The CloudWatch Logging Options for the delivery stream. More details are given below</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Set it to <code class="docutils literal notranslate"><span class="pre">false</span></code> if you want to disable format conversion while preserving the configuration details.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Enables or disables the logging. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">log_group_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The CloudWatch group name for logging. This value is required if <code class="docutils literal notranslate"><span class="pre">enabled</span></code> is true.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">logStreamName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The CloudWatch log stream name for logging. This value is required if <code class="docutils literal notranslate"><span class="pre">enabled</span></code> is true.</p></li>
 </ul>
@@ -1159,7 +1201,7 @@ Using <code class="docutils literal notranslate"><span class="pre">redshift_conf
 <li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The password for the username above.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">processingConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The data processing configuration.  More details are given below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Set it to <code class="docutils literal notranslate"><span class="pre">false</span></code> if you want to disable format conversion while preserving the configuration details.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Enables or disables data processing.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">processors</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Array of data processors. More details are given below</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">parameters</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Array of processor parameters. More details are given below</p>
@@ -1173,17 +1215,17 @@ Using <code class="docutils literal notranslate"><span class="pre">redshift_conf
 </li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">retryDuration</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - After an initial failure to deliver to Splunk, the total amount of time, in seconds between 0 to 7200, during which Firehose re-attempts delivery (including the first attempt).  After this time has elapsed, the failed documents are written to Amazon S3.  The default value is 300s.  There will be no retry if the value is 0.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you use for Kinesis Data Firehose. Cross-account roles aren’t allowed.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">retryDuration</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The length of time during which Firehose retries delivery after a failure, starting from the initial request and including the first attempt. The default value is 3600 seconds (60 minutes). Firehose does not retry if the value of DurationInSeconds is 0 (zero) or if the first delivery attempt takes longer than the current value.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The arn of the role the stream assumes.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">s3BackupConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The configuration for backup in Amazon S3. Required if <code class="docutils literal notranslate"><span class="pre">s3_backup_mode</span></code> is <code class="docutils literal notranslate"><span class="pre">Enabled</span></code>. Supports the same fields as <code class="docutils literal notranslate"><span class="pre">s3_configuration</span></code> object.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">bucketArn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ARN of the S3 bucket</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">bufferInterval</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Buffer incoming data for the specified period of time, in seconds, before delivering it to the destination. The default value is 300.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">bufferSize</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Buffer incoming data to the specified size, in MBs, before delivering it to the destination. The default value is 5.
 We recommend setting SizeInMBs to a value greater than the amount of data you typically ingest into the delivery stream in 10 seconds. For example, if you typically ingest data at 1 MB/sec set SizeInMBs to be 10 MB or higher.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">cloudwatch_logging_options</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The CloudWatch Logging Options for the delivery stream. More details are given below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">cloudwatch_logging_options</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The CloudWatch Logging Options for the delivery stream. More details are given below</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Set it to <code class="docutils literal notranslate"><span class="pre">false</span></code> if you want to disable format conversion while preserving the configuration details.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Enables or disables the logging. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">log_group_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The CloudWatch group name for logging. This value is required if <code class="docutils literal notranslate"><span class="pre">enabled</span></code> is true.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">logStreamName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The CloudWatch log stream name for logging. This value is required if <code class="docutils literal notranslate"><span class="pre">enabled</span></code> is true.</p></li>
 </ul>
@@ -1195,7 +1237,7 @@ be used.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you use for Kinesis Data Firehose. Cross-account roles aren’t allowed.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">s3BackupMode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Defines how documents should be delivered to Amazon S3.  Valid values are <code class="docutils literal notranslate"><span class="pre">FailedEventsOnly</span></code> and <code class="docutils literal notranslate"><span class="pre">AllEvents</span></code>.  Default value is <code class="docutils literal notranslate"><span class="pre">FailedEventsOnly</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">s3BackupMode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Amazon S3 backup mode.  Valid values are <code class="docutils literal notranslate"><span class="pre">Disabled</span></code> and <code class="docutils literal notranslate"><span class="pre">Enabled</span></code>.  Default value is <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The username that the firehose delivery stream will assume. It is strongly recommended that the username and password provided is used exclusively for Amazon Kinesis Firehose purposes, and that the permissions for the account are restricted for Amazon Redshift INSERT permissions.</p></li>
 </ul>
 </dd></dl>
@@ -1210,9 +1252,9 @@ is redshift). More details are given below.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">bufferInterval</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Buffer incoming data for the specified period of time, in seconds, before delivering it to the destination. The default value is 300.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">bufferSize</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Buffer incoming data to the specified size, in MBs, before delivering it to the destination. The default value is 5.
 We recommend setting SizeInMBs to a value greater than the amount of data you typically ingest into the delivery stream in 10 seconds. For example, if you typically ingest data at 1 MB/sec set SizeInMBs to be 10 MB or higher.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">cloudwatch_logging_options</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The CloudWatch Logging Options for the delivery stream. More details are given below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">cloudwatch_logging_options</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The CloudWatch Logging Options for the delivery stream. More details are given below</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Set it to <code class="docutils literal notranslate"><span class="pre">false</span></code> if you want to disable format conversion while preserving the configuration details.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Enables or disables the logging. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">log_group_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The CloudWatch group name for logging. This value is required if <code class="docutils literal notranslate"><span class="pre">enabled</span></code> is true.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">logStreamName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The CloudWatch log stream name for logging. This value is required if <code class="docutils literal notranslate"><span class="pre">enabled</span></code> is true.</p></li>
 </ul>
@@ -1231,7 +1273,7 @@ be used.</p></li>
 <dd><p>Encrypt at rest options.
 Server-side encryption should not be enabled when a kinesis stream is configured as the source of the firehose delivery stream.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Set it to <code class="docutils literal notranslate"><span class="pre">false</span></code> if you want to disable format conversion while preserving the configuration details.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether to enable encryption at rest. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -1281,9 +1323,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">bufferingInterval</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Buffer incoming data for the specified period of time, in seconds between 60 to 900, before delivering it to the destination.  The default value is 300s.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">bufferingSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Buffer incoming data to the specified size, in MBs between 1 to 100, before delivering it to the destination.  The default value is 5MB.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">cloudwatch_logging_options</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The CloudWatch Logging Options for the delivery stream. More details are given below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">cloudwatch_logging_options</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The CloudWatch Logging Options for the delivery stream. More details are given below</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Set it to <code class="docutils literal notranslate"><span class="pre">false</span></code> if you want to disable format conversion while preserving the configuration details.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enables or disables the logging. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">log_group_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The CloudWatch group name for logging. This value is required if <code class="docutils literal notranslate"><span class="pre">enabled</span></code> is true.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">logStreamName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The CloudWatch log stream name for logging. This value is required if <code class="docutils literal notranslate"><span class="pre">enabled</span></code> is true.</p></li>
 </ul>
@@ -1293,7 +1335,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <li><p><code class="docutils literal notranslate"><span class="pre">indexRotationPeriod</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Elasticsearch index rotation period.  Index rotation appends a timestamp to the IndexName to facilitate expiration of old data.  Valid values are <code class="docutils literal notranslate"><span class="pre">NoRotation</span></code>, <code class="docutils literal notranslate"><span class="pre">OneHour</span></code>, <code class="docutils literal notranslate"><span class="pre">OneDay</span></code>, <code class="docutils literal notranslate"><span class="pre">OneWeek</span></code>, and <code class="docutils literal notranslate"><span class="pre">OneMonth</span></code>.  The default value is <code class="docutils literal notranslate"><span class="pre">OneDay</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">processingConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The data processing configuration.  More details are given below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Set it to <code class="docutils literal notranslate"><span class="pre">false</span></code> if you want to disable format conversion while preserving the configuration details.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enables or disables data processing.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">processors</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Array of data processors. More details are given below</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">parameters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Array of processor parameters. More details are given below</p>
@@ -1307,9 +1349,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 </li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">retryDuration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - After an initial failure to deliver to Splunk, the total amount of time, in seconds between 0 to 7200, during which Firehose re-attempts delivery (including the first attempt).  After this time has elapsed, the failed documents are written to Amazon S3.  The default value is 300s.  There will be no retry if the value is 0.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you use for Kinesis Data Firehose. Cross-account roles aren’t allowed.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">s3BackupMode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Defines how documents should be delivered to Amazon S3.  Valid values are <code class="docutils literal notranslate"><span class="pre">FailedEventsOnly</span></code> and <code class="docutils literal notranslate"><span class="pre">AllEvents</span></code>.  Default value is <code class="docutils literal notranslate"><span class="pre">FailedEventsOnly</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">retryDuration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - After an initial failure to deliver to Amazon Elasticsearch, the total amount of time, in seconds between 0 to 7200, during which Firehose re-attempts delivery (including the first attempt).  After this time has elapsed, the failed documents are written to Amazon S3.  The default value is 300s.  There will be no retry if the value is 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the IAM role to be assumed by Firehose for calling the Amazon ES Configuration API and for indexing documents.  The pattern needs to be <code class="docutils literal notranslate"><span class="pre">arn:.*</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">s3BackupMode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Defines how documents should be delivered to Amazon S3.  Valid values are <code class="docutils literal notranslate"><span class="pre">FailedDocumentsOnly</span></code> and <code class="docutils literal notranslate"><span class="pre">AllDocuments</span></code>.  Default value is <code class="docutils literal notranslate"><span class="pre">FailedDocumentsOnly</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">typeName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Elasticsearch type name with maximum length of 100 characters.</p></li>
 </ul>
 <p>The <strong>extended_s3_configuration</strong> object supports the following:</p>
@@ -1318,9 +1360,9 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 <li><p><code class="docutils literal notranslate"><span class="pre">bufferInterval</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Buffer incoming data for the specified period of time, in seconds, before delivering it to the destination. The default value is 300.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">bufferSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Buffer incoming data to the specified size, in MBs, before delivering it to the destination. The default value is 5.
 We recommend setting SizeInMBs to a value greater than the amount of data you typically ingest into the delivery stream in 10 seconds. For example, if you typically ingest data at 1 MB/sec set SizeInMBs to be 10 MB or higher.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">cloudwatch_logging_options</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The CloudWatch Logging Options for the delivery stream. More details are given below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">cloudwatch_logging_options</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The CloudWatch Logging Options for the delivery stream. More details are given below</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Set it to <code class="docutils literal notranslate"><span class="pre">false</span></code> if you want to disable format conversion while preserving the configuration details.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enables or disables the logging. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">log_group_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The CloudWatch group name for logging. This value is required if <code class="docutils literal notranslate"><span class="pre">enabled</span></code> is true.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">logStreamName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The CloudWatch log stream name for logging. This value is required if <code class="docutils literal notranslate"><span class="pre">enabled</span></code> is true.</p></li>
 </ul>
@@ -1399,7 +1441,7 @@ be used.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The “YYYY/MM/DD/HH” time format prefix is automatically used for delivered S3 files. You can specify an extra prefix to be added in front of the time format prefix. Note that if the prefix ends with a slash, it appears as a folder in the S3 bucket</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">processingConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The data processing configuration.  More details are given below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Set it to <code class="docutils literal notranslate"><span class="pre">false</span></code> if you want to disable format conversion while preserving the configuration details.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enables or disables data processing.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">processors</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Array of data processors. More details are given below</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">parameters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Array of processor parameters. More details are given below</p>
@@ -1420,9 +1462,9 @@ be used.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">bufferInterval</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Buffer incoming data for the specified period of time, in seconds, before delivering it to the destination. The default value is 300.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">bufferSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Buffer incoming data to the specified size, in MBs, before delivering it to the destination. The default value is 5.
 We recommend setting SizeInMBs to a value greater than the amount of data you typically ingest into the delivery stream in 10 seconds. For example, if you typically ingest data at 1 MB/sec set SizeInMBs to be 10 MB or higher.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">cloudwatch_logging_options</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The CloudWatch Logging Options for the delivery stream. More details are given below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">cloudwatch_logging_options</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The CloudWatch Logging Options for the delivery stream. More details are given below</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Set it to <code class="docutils literal notranslate"><span class="pre">false</span></code> if you want to disable format conversion while preserving the configuration details.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enables or disables the logging. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">log_group_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The CloudWatch group name for logging. This value is required if <code class="docutils literal notranslate"><span class="pre">enabled</span></code> is true.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">logStreamName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The CloudWatch log stream name for logging. This value is required if <code class="docutils literal notranslate"><span class="pre">enabled</span></code> is true.</p></li>
 </ul>
@@ -1434,18 +1476,18 @@ be used.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you use for Kinesis Data Firehose. Cross-account roles aren’t allowed.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">s3BackupMode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Defines how documents should be delivered to Amazon S3.  Valid values are <code class="docutils literal notranslate"><span class="pre">FailedEventsOnly</span></code> and <code class="docutils literal notranslate"><span class="pre">AllEvents</span></code>.  Default value is <code class="docutils literal notranslate"><span class="pre">FailedEventsOnly</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">s3BackupMode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Amazon S3 backup mode.  Valid values are <code class="docutils literal notranslate"><span class="pre">Disabled</span></code> and <code class="docutils literal notranslate"><span class="pre">Enabled</span></code>.  Default value is <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>.</p></li>
 </ul>
 <p>The <strong>kinesis_source_configuration</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">kinesisStreamArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The kinesis stream used as the source of the firehose delivery stream.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you use for Kinesis Data Firehose. Cross-account roles aren’t allowed.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the role that provides access to the source Kinesis stream.</p></li>
 </ul>
 <p>The <strong>redshift_configuration</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">cloudwatch_logging_options</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The CloudWatch Logging Options for the delivery stream. More details are given below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">cloudwatch_logging_options</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The CloudWatch Logging Options for the delivery stream. More details are given below</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Set it to <code class="docutils literal notranslate"><span class="pre">false</span></code> if you want to disable format conversion while preserving the configuration details.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enables or disables the logging. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">log_group_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The CloudWatch group name for logging. This value is required if <code class="docutils literal notranslate"><span class="pre">enabled</span></code> is true.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">logStreamName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The CloudWatch log stream name for logging. This value is required if <code class="docutils literal notranslate"><span class="pre">enabled</span></code> is true.</p></li>
 </ul>
@@ -1457,7 +1499,7 @@ be used.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The password for the username above.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">processingConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The data processing configuration.  More details are given below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Set it to <code class="docutils literal notranslate"><span class="pre">false</span></code> if you want to disable format conversion while preserving the configuration details.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enables or disables data processing.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">processors</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Array of data processors. More details are given below</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">parameters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Array of processor parameters. More details are given below</p>
@@ -1471,17 +1513,17 @@ be used.</p></li>
 </li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">retryDuration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - After an initial failure to deliver to Splunk, the total amount of time, in seconds between 0 to 7200, during which Firehose re-attempts delivery (including the first attempt).  After this time has elapsed, the failed documents are written to Amazon S3.  The default value is 300s.  There will be no retry if the value is 0.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you use for Kinesis Data Firehose. Cross-account roles aren’t allowed.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">retryDuration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The length of time during which Firehose retries delivery after a failure, starting from the initial request and including the first attempt. The default value is 3600 seconds (60 minutes). Firehose does not retry if the value of DurationInSeconds is 0 (zero) or if the first delivery attempt takes longer than the current value.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The arn of the role the stream assumes.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">s3BackupConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The configuration for backup in Amazon S3. Required if <code class="docutils literal notranslate"><span class="pre">s3_backup_mode</span></code> is <code class="docutils literal notranslate"><span class="pre">Enabled</span></code>. Supports the same fields as <code class="docutils literal notranslate"><span class="pre">s3_configuration</span></code> object.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">bucketArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the S3 bucket</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">bufferInterval</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Buffer incoming data for the specified period of time, in seconds, before delivering it to the destination. The default value is 300.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">bufferSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Buffer incoming data to the specified size, in MBs, before delivering it to the destination. The default value is 5.
 We recommend setting SizeInMBs to a value greater than the amount of data you typically ingest into the delivery stream in 10 seconds. For example, if you typically ingest data at 1 MB/sec set SizeInMBs to be 10 MB or higher.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">cloudwatch_logging_options</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The CloudWatch Logging Options for the delivery stream. More details are given below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">cloudwatch_logging_options</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The CloudWatch Logging Options for the delivery stream. More details are given below</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Set it to <code class="docutils literal notranslate"><span class="pre">false</span></code> if you want to disable format conversion while preserving the configuration details.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enables or disables the logging. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">log_group_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The CloudWatch group name for logging. This value is required if <code class="docutils literal notranslate"><span class="pre">enabled</span></code> is true.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">logStreamName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The CloudWatch log stream name for logging. This value is required if <code class="docutils literal notranslate"><span class="pre">enabled</span></code> is true.</p></li>
 </ul>
@@ -1493,7 +1535,7 @@ be used.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you use for Kinesis Data Firehose. Cross-account roles aren’t allowed.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">s3BackupMode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Defines how documents should be delivered to Amazon S3.  Valid values are <code class="docutils literal notranslate"><span class="pre">FailedEventsOnly</span></code> and <code class="docutils literal notranslate"><span class="pre">AllEvents</span></code>.  Default value is <code class="docutils literal notranslate"><span class="pre">FailedEventsOnly</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">s3BackupMode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Amazon S3 backup mode.  Valid values are <code class="docutils literal notranslate"><span class="pre">Disabled</span></code> and <code class="docutils literal notranslate"><span class="pre">Enabled</span></code>.  Default value is <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The username that the firehose delivery stream will assume. It is strongly recommended that the username and password provided is used exclusively for Amazon Kinesis Firehose purposes, and that the permissions for the account are restricted for Amazon Redshift INSERT permissions.</p></li>
 </ul>
 <p>The <strong>s3_configuration</strong> object supports the following:</p>
@@ -1502,9 +1544,9 @@ be used.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">bufferInterval</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Buffer incoming data for the specified period of time, in seconds, before delivering it to the destination. The default value is 300.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">bufferSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Buffer incoming data to the specified size, in MBs, before delivering it to the destination. The default value is 5.
 We recommend setting SizeInMBs to a value greater than the amount of data you typically ingest into the delivery stream in 10 seconds. For example, if you typically ingest data at 1 MB/sec set SizeInMBs to be 10 MB or higher.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">cloudwatch_logging_options</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The CloudWatch Logging Options for the delivery stream. More details are given below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">cloudwatch_logging_options</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The CloudWatch Logging Options for the delivery stream. More details are given below</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Set it to <code class="docutils literal notranslate"><span class="pre">false</span></code> if you want to disable format conversion while preserving the configuration details.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enables or disables the logging. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">log_group_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The CloudWatch group name for logging. This value is required if <code class="docutils literal notranslate"><span class="pre">enabled</span></code> is true.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">logStreamName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The CloudWatch log stream name for logging. This value is required if <code class="docutils literal notranslate"><span class="pre">enabled</span></code> is true.</p></li>
 </ul>
@@ -1517,13 +1559,13 @@ be used.</p></li>
 </ul>
 <p>The <strong>server_side_encryption</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Set it to <code class="docutils literal notranslate"><span class="pre">false</span></code> if you want to disable format conversion while preserving the configuration details.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether to enable encryption at rest. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
 <p>The <strong>splunk_configuration</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">cloudwatch_logging_options</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The CloudWatch Logging Options for the delivery stream. More details are given below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Set it to <code class="docutils literal notranslate"><span class="pre">false</span></code> if you want to disable format conversion while preserving the configuration details.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enables or disables the logging. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">log_group_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The CloudWatch group name for logging. This value is required if <code class="docutils literal notranslate"><span class="pre">enabled</span></code> is true.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">logStreamName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The CloudWatch log stream name for logging. This value is required if <code class="docutils literal notranslate"><span class="pre">enabled</span></code> is true.</p></li>
 </ul>
@@ -1534,7 +1576,7 @@ be used.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">hecToken</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The GUID that you obtain from your Splunk cluster when you create a new HEC endpoint.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">processingConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The data processing configuration.  More details are given below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Set it to <code class="docutils literal notranslate"><span class="pre">false</span></code> if you want to disable format conversion while preserving the configuration details.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enables or disables data processing.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">processors</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Array of data processors. More details are given below</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">parameters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Array of processor parameters. More details are given below</p>
@@ -1663,9 +1705,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Provides a Kinesis Stream resource. Amazon Kinesis is a managed service that
 scales elastically for real-time processing of streaming big data.</p>
 <p>For more details, see the [Amazon Kinesis Documentation][1].</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kinesis_stream.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kinesis_stream.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1803,18 +1842,157 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
+<dl class="class">
+<dt id="pulumi_aws.kinesis.VideoStream">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.kinesis.</code><code class="sig-name descname">VideoStream</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">data_retention_in_hours=None</em>, <em class="sig-param">device_name=None</em>, <em class="sig-param">kms_key_id=None</em>, <em class="sig-param">media_type=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kinesis.VideoStream" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a Kinesis Video Stream resource. Amazon Kinesis Video Streams makes it easy to securely stream video from connected devices to AWS for analytics, machine learning (ML), playback, and other processing.</p>
+<p>For more details, see the [Amazon Kinesis Documentation][1].</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>data_retention_in_hours</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of hours that you want to retain the data in the stream. Kinesis Video Streams retains the data in a data store that is associated with the stream. The default value is <code class="docutils literal notranslate"><span class="pre">0</span></code>, indicating that the stream does not persist data.</p></li>
+<li><p><strong>device_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the device that is writing to the stream. <strong>In the current implementation, Kinesis Video Streams does not use this name.</strong></p></li>
+<li><p><strong>kms_key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the AWS Key Management Service (AWS KMS) key that you want Kinesis Video Streams to use to encrypt stream data. If no key ID is specified, the default, Kinesis Video-managed key (<code class="docutils literal notranslate"><span class="pre">aws/kinesisvideo</span></code>) is used.</p></li>
+<li><p><strong>media_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The media type of the stream. Consumers of the stream can use this information when processing the stream. For more information about media types, see [Media Types][2]. If you choose to specify the MediaType, see [Naming Requirements][3] for guidelines.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A name to identify the stream. This is unique to the
+AWS account and region the Stream is created in.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="pulumi_aws.kinesis.VideoStream.arn">
+<code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.VideoStream.arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Amazon Resource Name (ARN) specifying the Stream (same as <code class="docutils literal notranslate"><span class="pre">id</span></code>)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.kinesis.VideoStream.creation_time">
+<code class="sig-name descname">creation_time</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.VideoStream.creation_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>A time stamp that indicates when the stream was created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.kinesis.VideoStream.data_retention_in_hours">
+<code class="sig-name descname">data_retention_in_hours</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.VideoStream.data_retention_in_hours" title="Permalink to this definition">¶</a></dt>
+<dd><p>The number of hours that you want to retain the data in the stream. Kinesis Video Streams retains the data in a data store that is associated with the stream. The default value is <code class="docutils literal notranslate"><span class="pre">0</span></code>, indicating that the stream does not persist data.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.kinesis.VideoStream.device_name">
+<code class="sig-name descname">device_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.VideoStream.device_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the device that is writing to the stream. <strong>In the current implementation, Kinesis Video Streams does not use this name.</strong></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.kinesis.VideoStream.kms_key_id">
+<code class="sig-name descname">kms_key_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.VideoStream.kms_key_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the AWS Key Management Service (AWS KMS) key that you want Kinesis Video Streams to use to encrypt stream data. If no key ID is specified, the default, Kinesis Video-managed key (<code class="docutils literal notranslate"><span class="pre">aws/kinesisvideo</span></code>) is used.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.kinesis.VideoStream.media_type">
+<code class="sig-name descname">media_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.VideoStream.media_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>The media type of the stream. Consumers of the stream can use this information when processing the stream. For more information about media types, see [Media Types][2]. If you choose to specify the MediaType, see [Naming Requirements][3] for guidelines.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.kinesis.VideoStream.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.VideoStream.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>A name to identify the stream. This is unique to the
+AWS account and region the Stream is created in.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.kinesis.VideoStream.tags">
+<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.VideoStream.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of tags to assign to the resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.kinesis.VideoStream.version">
+<code class="sig-name descname">version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.VideoStream.version" title="Permalink to this definition">¶</a></dt>
+<dd><p>The version of the stream.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.kinesis.VideoStream.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">creation_time=None</em>, <em class="sig-param">data_retention_in_hours=None</em>, <em class="sig-param">device_name=None</em>, <em class="sig-param">kms_key_id=None</em>, <em class="sig-param">media_type=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">version=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kinesis.VideoStream.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing VideoStream resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) specifying the Stream (same as <code class="docutils literal notranslate"><span class="pre">id</span></code>)</p></li>
+<li><p><strong>creation_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A time stamp that indicates when the stream was created.</p></li>
+<li><p><strong>data_retention_in_hours</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of hours that you want to retain the data in the stream. Kinesis Video Streams retains the data in a data store that is associated with the stream. The default value is <code class="docutils literal notranslate"><span class="pre">0</span></code>, indicating that the stream does not persist data.</p></li>
+<li><p><strong>device_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the device that is writing to the stream. <strong>In the current implementation, Kinesis Video Streams does not use this name.</strong></p></li>
+<li><p><strong>kms_key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the AWS Key Management Service (AWS KMS) key that you want Kinesis Video Streams to use to encrypt stream data. If no key ID is specified, the default, Kinesis Video-managed key (<code class="docutils literal notranslate"><span class="pre">aws/kinesisvideo</span></code>) is used.</p></li>
+<li><p><strong>media_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The media type of the stream. Consumers of the stream can use this information when processing the stream. For more information about media types, see [Media Types][2]. If you choose to specify the MediaType, see [Naming Requirements][3] for guidelines.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A name to identify the stream. This is unique to the
+AWS account and region the Stream is created in.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The version of the stream.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.kinesis.VideoStream.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kinesis.VideoStream.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.kinesis.VideoStream.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kinesis.VideoStream.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 <dl class="function">
 <dt id="pulumi_aws.kinesis.get_stream">
 <code class="sig-prename descclassname">pulumi_aws.kinesis.</code><code class="sig-name descname">get_stream</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kinesis.get_stream" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information about a Kinesis Stream for use in other
 resources.</p>
 <p>For more details, see the [Amazon Kinesis Documentation][1].</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/kinesis_stream.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/kinesis_stream.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the Kinesis Stream.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – The name of the Kinesis Stream.</p></li>
+<li><p><strong>tags</strong> (<em>dict</em>) – A mapping of tags to assigned to the stream.</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>

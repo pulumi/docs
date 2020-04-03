@@ -22,9 +22,6 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.elasticsearch.Domain">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.elasticsearch.</code><code class="sig-name descname">Domain</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_policies=None</em>, <em class="sig-param">advanced_options=None</em>, <em class="sig-param">cluster_config=None</em>, <em class="sig-param">cognito_options=None</em>, <em class="sig-param">domain_endpoint_options=None</em>, <em class="sig-param">domain_name=None</em>, <em class="sig-param">ebs_options=None</em>, <em class="sig-param">elasticsearch_version=None</em>, <em class="sig-param">encrypt_at_rest=None</em>, <em class="sig-param">log_publishing_options=None</em>, <em class="sig-param">node_to_node_encryption=None</em>, <em class="sig-param">snapshot_options=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_options=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticsearch.Domain" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an AWS Elasticsearch Domain.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticsearch_domain.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticsearch_domain.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -61,7 +58,7 @@ domain on every apply.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">availabilityZoneCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Number of Availability Zones for the domain to use with <code class="docutils literal notranslate"><span class="pre">zone_awareness_enabled</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">2</span></code>. Valid values: <code class="docutils literal notranslate"><span class="pre">2</span></code> or <code class="docutils literal notranslate"><span class="pre">3</span></code>.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">zoneAwarenessEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether zone awareness is enabled. To enable awareness with three Availability Zones, the <code class="docutils literal notranslate"><span class="pre">availability_zone_count</span></code> within the <code class="docutils literal notranslate"><span class="pre">zone_awareness_config</span></code> must be set to <code class="docutils literal notranslate"><span class="pre">3</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">zoneAwarenessEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether zone awareness is enabled, set to <code class="docutils literal notranslate"><span class="pre">true</span></code> for multi-az deployment. To enable awareness with three Availability Zones, the <code class="docutils literal notranslate"><span class="pre">availability_zone_count</span></code> within the <code class="docutils literal notranslate"><span class="pre">zone_awareness_config</span></code> must be set to <code class="docutils literal notranslate"><span class="pre">3</span></code>.</p></li>
 </ul>
 <p>The <strong>cognito_options</strong> object supports the following:</p>
 <ul class="simple">
@@ -73,7 +70,7 @@ domain on every apply.</p></li>
 <p>The <strong>domain_endpoint_options</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">enforceHttps</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether or not to require HTTPS</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tlsSecurityPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tlsSecurityPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the TLS security policy that needs to be applied to the HTTPS endpoint. Valid values:  <code class="docutils literal notranslate"><span class="pre">Policy-Min-TLS-1-0-2019-07</span></code> and <code class="docutils literal notranslate"><span class="pre">Policy-Min-TLS-1-2-2019-07</span></code>. This provider will only perform drift detection if a configuration value is provided.</p></li>
 </ul>
 <p>The <strong>ebs_options</strong> object supports the following:</p>
 <ul class="simple">
@@ -147,7 +144,7 @@ domain on every apply.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">availabilityZoneCount</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Number of Availability Zones for the domain to use with <code class="docutils literal notranslate"><span class="pre">zone_awareness_enabled</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">2</span></code>. Valid values: <code class="docutils literal notranslate"><span class="pre">2</span></code> or <code class="docutils literal notranslate"><span class="pre">3</span></code>.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">zoneAwarenessEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Indicates whether zone awareness is enabled. To enable awareness with three Availability Zones, the <code class="docutils literal notranslate"><span class="pre">availability_zone_count</span></code> within the <code class="docutils literal notranslate"><span class="pre">zone_awareness_config</span></code> must be set to <code class="docutils literal notranslate"><span class="pre">3</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">zoneAwarenessEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Indicates whether zone awareness is enabled, set to <code class="docutils literal notranslate"><span class="pre">true</span></code> for multi-az deployment. To enable awareness with three Availability Zones, the <code class="docutils literal notranslate"><span class="pre">availability_zone_count</span></code> within the <code class="docutils literal notranslate"><span class="pre">zone_awareness_config</span></code> must be set to <code class="docutils literal notranslate"><span class="pre">3</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -157,7 +154,7 @@ domain on every apply.</p>
 <dd><p>Domain endpoint HTTP(S) related options. See below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">enforceHttps</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether or not to require HTTPS</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tlsSecurityPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tlsSecurityPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the TLS security policy that needs to be applied to the HTTPS endpoint. Valid values:  <code class="docutils literal notranslate"><span class="pre">Policy-Min-TLS-1-0-2019-07</span></code> and <code class="docutils literal notranslate"><span class="pre">Policy-Min-TLS-1-2-2019-07</span></code>. This provider will only perform drift detection if a configuration value is provided.</p></li>
 </ul>
 </dd></dl>
 
@@ -326,7 +323,7 @@ domain on every apply.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">availabilityZoneCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Number of Availability Zones for the domain to use with <code class="docutils literal notranslate"><span class="pre">zone_awareness_enabled</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">2</span></code>. Valid values: <code class="docutils literal notranslate"><span class="pre">2</span></code> or <code class="docutils literal notranslate"><span class="pre">3</span></code>.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">zoneAwarenessEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether zone awareness is enabled. To enable awareness with three Availability Zones, the <code class="docutils literal notranslate"><span class="pre">availability_zone_count</span></code> within the <code class="docutils literal notranslate"><span class="pre">zone_awareness_config</span></code> must be set to <code class="docutils literal notranslate"><span class="pre">3</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">zoneAwarenessEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether zone awareness is enabled, set to <code class="docutils literal notranslate"><span class="pre">true</span></code> for multi-az deployment. To enable awareness with three Availability Zones, the <code class="docutils literal notranslate"><span class="pre">availability_zone_count</span></code> within the <code class="docutils literal notranslate"><span class="pre">zone_awareness_config</span></code> must be set to <code class="docutils literal notranslate"><span class="pre">3</span></code>.</p></li>
 </ul>
 <p>The <strong>cognito_options</strong> object supports the following:</p>
 <ul class="simple">
@@ -338,7 +335,7 @@ domain on every apply.</p></li>
 <p>The <strong>domain_endpoint_options</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">enforceHttps</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether or not to require HTTPS</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tlsSecurityPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tlsSecurityPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the TLS security policy that needs to be applied to the HTTPS endpoint. Valid values:  <code class="docutils literal notranslate"><span class="pre">Policy-Min-TLS-1-0-2019-07</span></code> and <code class="docutils literal notranslate"><span class="pre">Policy-Min-TLS-1-2-2019-07</span></code>. This provider will only perform drift detection if a configuration value is provided.</p></li>
 </ul>
 <p>The <strong>ebs_options</strong> object supports the following:</p>
 <ul class="simple">
@@ -420,9 +417,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.elasticsearch.DomainPolicy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.elasticsearch.</code><code class="sig-name descname">DomainPolicy</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_policies=None</em>, <em class="sig-param">domain_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticsearch.DomainPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows setting policy to an Elasticsearch domain while referencing domain attributes (e.g. ARN)</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticsearch_domain_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticsearch_domain_policy.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -628,12 +622,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.elasticsearch.get_domain">
 <code class="sig-prename descclassname">pulumi_aws.elasticsearch.</code><code class="sig-name descname">get_domain</code><span class="sig-paren">(</span><em class="sig-param">domain_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticsearch.get_domain" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information about an Elasticsearch Domain</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/elasticsearch_domain.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/elasticsearch_domain.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>domain_name</strong> (<em>str</em>) – Name of the domain.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>domain_name</strong> (<em>str</em>) – Name of the domain.</p></li>
+<li><p><strong>tags</strong> (<em>dict</em>) – The tags assigned to the domain.</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>

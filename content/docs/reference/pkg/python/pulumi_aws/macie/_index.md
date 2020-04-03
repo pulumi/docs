@@ -19,7 +19,6 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>Associates an AWS account with Amazon Macie as a member account.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Before using Amazon Macie for the first time it must be enabled manually. Instructions are <a class="reference external" href="https://docs.aws.amazon.com/macie/latest/userguide/macie-setting-up.html#macie-setting-up-enable">here</a>.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/macie_member_account_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/macie_member_account_association.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -97,7 +96,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Associates an S3 resource with Amazon Macie for monitoring and data classification.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Before using Amazon Macie for the first time it must be enabled manually. Instructions are <a class="reference external" href="https://docs.aws.amazon.com/macie/latest/userguide/macie-setting-up.html#macie-setting-up-enable">here</a>.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/macie_s3_bucket_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/macie_s3_bucket_association.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

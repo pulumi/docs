@@ -15,11 +15,8 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_aws.globalaccelerator"></span><dl class="class">
 <dt id="pulumi_aws.globalaccelerator.Accelerator">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.globalaccelerator.</code><code class="sig-name descname">Accelerator</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">attributes=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">ip_address_type=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.globalaccelerator.Accelerator" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.globalaccelerator.</code><code class="sig-name descname">Accelerator</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">attributes=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">ip_address_type=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.globalaccelerator.Accelerator" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a Global Accelerator accelerator.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/globalaccelerator_accelerator.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/globalaccelerator_accelerator.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -29,6 +26,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether the accelerator is enabled. The value is true or false. The default value is true.</p></li>
 <li><p><strong>ip_address_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The value for the address type must be <code class="docutils literal notranslate"><span class="pre">IPV4</span></code>.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the accelerator.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 </ul>
 </dd>
 </dl>
@@ -88,9 +86,15 @@ is simply an alias for the zone ID <code class="docutils literal notranslate"><s
 <dd><p>The name of the accelerator.</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pulumi_aws.globalaccelerator.Accelerator.tags">
+<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.globalaccelerator.Accelerator.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of tags to assign to the resource.</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_aws.globalaccelerator.Accelerator.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">attributes=None</em>, <em class="sig-param">dns_name=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">hosted_zone_id=None</em>, <em class="sig-param">ip_address_type=None</em>, <em class="sig-param">ip_sets=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.globalaccelerator.Accelerator.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">attributes=None</em>, <em class="sig-param">dns_name=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">hosted_zone_id=None</em>, <em class="sig-param">ip_address_type=None</em>, <em class="sig-param">ip_sets=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.globalaccelerator.Accelerator.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Accelerator resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -116,6 +120,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
 <li><p><strong>ip_address_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The value for the address type must be <code class="docutils literal notranslate"><span class="pre">IPV4</span></code>.</p></li>
 <li><p><strong>ip_sets</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – IP address set associated with the accelerator.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the accelerator.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 </ul>
 </dd>
 </dl>
@@ -174,9 +179,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.globalaccelerator.EndpointGroup">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.globalaccelerator.</code><code class="sig-name descname">EndpointGroup</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">endpoint_configurations=None</em>, <em class="sig-param">endpoint_group_region=None</em>, <em class="sig-param">health_check_interval_seconds=None</em>, <em class="sig-param">health_check_path=None</em>, <em class="sig-param">health_check_port=None</em>, <em class="sig-param">health_check_protocol=None</em>, <em class="sig-param">listener_arn=None</em>, <em class="sig-param">threshold_count=None</em>, <em class="sig-param">traffic_dial_percentage=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.globalaccelerator.EndpointGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Global Accelerator endpoint group.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/globalaccelerator_endpoint_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/globalaccelerator_endpoint_group.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -329,9 +331,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.globalaccelerator.Listener">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.globalaccelerator.</code><code class="sig-name descname">Listener</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">accelerator_arn=None</em>, <em class="sig-param">client_affinity=None</em>, <em class="sig-param">port_ranges=None</em>, <em class="sig-param">protocol=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.globalaccelerator.Listener" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Global Accelerator listener.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/globalaccelerator_listener.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/globalaccelerator_listener.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

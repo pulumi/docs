@@ -24,7 +24,6 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>Provides a resource to manage AWS Certificate Manager Private Certificate Authorities (ACM PCA Certificate Authorities).</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Creating this resource will leave the certificate authority in a <code class="docutils literal notranslate"><span class="pre">PENDING_CERTIFICATE</span></code> status, which means it cannot yet issue certificates. To complete this setup, you must fully sign the certificate authority CSR available in the <code class="docutils literal notranslate"><span class="pre">certificate_signing_request</span></code> attribute and import the signed certificate using the AWS SDK, CLI or Console. This provider can support another resource to manage that workflow automatically in the future.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/acmpca_certificate_authority.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/acmpca_certificate_authority.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -372,12 +371,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.acmpca.get_certificate_authority">
 <code class="sig-prename descclassname">pulumi_aws.acmpca.</code><code class="sig-name descname">get_certificate_authority</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">revocation_configurations=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.acmpca.get_certificate_authority" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get information on a AWS Certificate Manager Private Certificate Authority (ACM PCA Certificate Authority).</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/acmpca_certificate_authority.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/acmpca_certificate_authority.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>arn</strong> (<em>str</em>) – Amazon Resource Name (ARN) of the certificate authority.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>arn</strong> (<em>str</em>) – Amazon Resource Name (ARN) of the certificate authority.</p></li>
+<li><p><strong>revocation_configurations</strong> (<em>list</em>) – Nested attribute containing revocation configuration.</p></li>
+</ul>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* `revocation_configuration.0.crl_configuration` - Nested attribute containing configuration of the certificate revocation list (CRL), if any, maintained by the certificate authority.
+* `revocation_configuration.0.crl_configuration.0.custom_cname` - Name inserted into the certificate CRL Distribution Points extension that enables the use of an alias for the CRL distribution point.
+* `revocation_configuration.0.crl_configuration.0.enabled` - Boolean value that specifies whether certificate revocation lists (CRLs) are enabled.
+* `revocation_configuration.0.crl_configuration.0.expiration_in_days` - Number of days until a certificate expires.
+* `revocation_configuration.0.crl_configuration.0.s3_bucket_name` - Name of the S3 bucket that contains the CRL.
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>tags</strong> (<em>dict</em>) – Specifies a key-value map of user-defined tags that are attached to the certificate authority.</p>
 </dd>
 </dl>
 <p>The <strong>revocation_configurations</strong> object supports the following:</p>

@@ -25,11 +25,8 @@ anything, please consult the source <a class="reference external" href="https://
 
 <dl class="class">
 <dt id="pulumi_aws.msk.Cluster">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.msk.</code><code class="sig-name descname">Cluster</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">broker_node_group_info=None</em>, <em class="sig-param">client_authentication=None</em>, <em class="sig-param">cluster_name=None</em>, <em class="sig-param">configuration_info=None</em>, <em class="sig-param">encryption_info=None</em>, <em class="sig-param">enhanced_monitoring=None</em>, <em class="sig-param">kafka_version=None</em>, <em class="sig-param">number_of_broker_nodes=None</em>, <em class="sig-param">open_monitoring=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.msk.Cluster" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.msk.</code><code class="sig-name descname">Cluster</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">broker_node_group_info=None</em>, <em class="sig-param">client_authentication=None</em>, <em class="sig-param">cluster_name=None</em>, <em class="sig-param">configuration_info=None</em>, <em class="sig-param">encryption_info=None</em>, <em class="sig-param">enhanced_monitoring=None</em>, <em class="sig-param">kafka_version=None</em>, <em class="sig-param">logging_info=None</em>, <em class="sig-param">number_of_broker_nodes=None</em>, <em class="sig-param">open_monitoring=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.msk.Cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages AWS Managed Streaming for Kafka cluster</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/msk_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/msk_cluster.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -42,6 +39,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><strong>encryption_info</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration block for specifying encryption. See below.</p></li>
 <li><p><strong>enhanced_monitoring</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specify the desired enhanced MSK CloudWatch monitoring level.  See <a class="reference external" href="https://docs.aws.amazon.com/msk/latest/developerguide/monitoring.html">Monitoring Amazon MSK with Amazon CloudWatch</a></p></li>
 <li><p><strong>kafka_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specify the desired Kafka software version.</p></li>
+<li><p><strong>logging_info</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration block for streaming broker logs to Cloudwatch/S3/Kinesis Firehose. See below.</p></li>
 <li><p><strong>number_of_broker_nodes</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The desired total number of broker nodes in the kafka cluster.  It must be a multiple of the number of specified client subnets.</p></li>
 <li><p><strong>open_monitoring</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration block for JMX and Node monitoring for the MSK cluster. See below.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource</p></li>
@@ -79,18 +77,44 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </li>
 </ul>
+<p>The <strong>logging_info</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">brokerLogs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Configuration block for Broker Logs settings for logging info. See below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">cloudwatchLogs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether you want to enable or disable streaming broker logs to Cloudwatch Logs.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">log_group</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the Cloudwatch Log Group to deliver logs to.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">firehose</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">deliveryStream</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the Kinesis Data Firehose delivery stream to deliver logs to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether you want to enable or disable streaming broker logs to Cloudwatch Logs.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">s3</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">bucket</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the S3 bucket to deliver logs to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether you want to enable or disable streaming broker logs to Cloudwatch Logs.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Prefix to append to the folder name.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 <p>The <strong>open_monitoring</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">prometheus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Configuration block for Prometheus settings for open monitoring. See below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">jmxExporter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Configuration block for JMX Exporter. See below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabledInBroker</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether you want to enable or disable the Node Exporter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabledInBroker</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether you want to enable or disable the JMX Exporter.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">nodeExporter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Configuration block for Node Exporter. See below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabledInBroker</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether you want to enable or disable the Node Exporter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabledInBroker</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether you want to enable or disable the JMX Exporter.</p></li>
 </ul>
 </li>
 </ul>
@@ -193,6 +217,37 @@ anything, please consult the source <a class="reference external" href="https://
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.msk.Cluster.logging_info">
+<code class="sig-name descname">logging_info</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.Cluster.logging_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configuration block for streaming broker logs to Cloudwatch/S3/Kinesis Firehose. See below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">brokerLogs</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Configuration block for Broker Logs settings for logging info. See below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">cloudwatchLogs</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Indicates whether you want to enable or disable streaming broker logs to Cloudwatch Logs.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">log_group</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Name of the Cloudwatch Log Group to deliver logs to.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">firehose</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">deliveryStream</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Name of the Kinesis Data Firehose delivery stream to deliver logs to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Indicates whether you want to enable or disable streaming broker logs to Cloudwatch Logs.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">s3</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">bucket</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Name of the S3 bucket to deliver logs to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Indicates whether you want to enable or disable streaming broker logs to Cloudwatch Logs.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Prefix to append to the folder name.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.msk.Cluster.number_of_broker_nodes">
 <code class="sig-name descname">number_of_broker_nodes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.msk.Cluster.number_of_broker_nodes" title="Permalink to this definition">¶</a></dt>
 <dd><p>The desired total number of broker nodes in the kafka cluster.  It must be a multiple of the number of specified client subnets.</p>
@@ -207,12 +262,12 @@ anything, please consult the source <a class="reference external" href="https://
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">jmxExporter</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Configuration block for JMX Exporter. See below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabledInBroker</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Indicates whether you want to enable or disable the Node Exporter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabledInBroker</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Indicates whether you want to enable or disable the JMX Exporter.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">nodeExporter</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Configuration block for Node Exporter. See below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabledInBroker</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Indicates whether you want to enable or disable the Node Exporter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabledInBroker</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Indicates whether you want to enable or disable the JMX Exporter.</p></li>
 </ul>
 </li>
 </ul>
@@ -234,7 +289,7 @@ anything, please consult the source <a class="reference external" href="https://
 
 <dl class="method">
 <dt id="pulumi_aws.msk.Cluster.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">bootstrap_brokers=None</em>, <em class="sig-param">bootstrap_brokers_tls=None</em>, <em class="sig-param">broker_node_group_info=None</em>, <em class="sig-param">client_authentication=None</em>, <em class="sig-param">cluster_name=None</em>, <em class="sig-param">configuration_info=None</em>, <em class="sig-param">current_version=None</em>, <em class="sig-param">encryption_info=None</em>, <em class="sig-param">enhanced_monitoring=None</em>, <em class="sig-param">kafka_version=None</em>, <em class="sig-param">number_of_broker_nodes=None</em>, <em class="sig-param">open_monitoring=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">zookeeper_connect_string=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.msk.Cluster.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">bootstrap_brokers=None</em>, <em class="sig-param">bootstrap_brokers_tls=None</em>, <em class="sig-param">broker_node_group_info=None</em>, <em class="sig-param">client_authentication=None</em>, <em class="sig-param">cluster_name=None</em>, <em class="sig-param">configuration_info=None</em>, <em class="sig-param">current_version=None</em>, <em class="sig-param">encryption_info=None</em>, <em class="sig-param">enhanced_monitoring=None</em>, <em class="sig-param">kafka_version=None</em>, <em class="sig-param">logging_info=None</em>, <em class="sig-param">number_of_broker_nodes=None</em>, <em class="sig-param">open_monitoring=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">zookeeper_connect_string=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.msk.Cluster.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Cluster resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -264,6 +319,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>enhanced_monitoring</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Specify the desired enhanced MSK CloudWatch monitoring level.  See <a class="reference external" href="https://docs.aws.amazon.com/msk/latest/developerguide/monitoring.html">Monitoring Amazon MSK with Amazon CloudWatch</a></p>
 </p></li>
 <li><p><strong>kafka_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specify the desired Kafka software version.</p></li>
+<li><p><strong>logging_info</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration block for streaming broker logs to Cloudwatch/S3/Kinesis Firehose. See below.</p></li>
 <li><p><strong>number_of_broker_nodes</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The desired total number of broker nodes in the kafka cluster.  It must be a multiple of the number of specified client subnets.</p></li>
 <li><p><strong>open_monitoring</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration block for JMX and Node monitoring for the MSK cluster. See below.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource</p></li>
@@ -302,18 +358,44 @@ properties used to qualify the lookup.</p>
 </ul>
 </li>
 </ul>
+<p>The <strong>logging_info</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">brokerLogs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Configuration block for Broker Logs settings for logging info. See below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">cloudwatchLogs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether you want to enable or disable streaming broker logs to Cloudwatch Logs.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">log_group</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the Cloudwatch Log Group to deliver logs to.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">firehose</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">deliveryStream</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the Kinesis Data Firehose delivery stream to deliver logs to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether you want to enable or disable streaming broker logs to Cloudwatch Logs.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">s3</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">bucket</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the S3 bucket to deliver logs to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether you want to enable or disable streaming broker logs to Cloudwatch Logs.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Prefix to append to the folder name.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 <p>The <strong>open_monitoring</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">prometheus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Configuration block for Prometheus settings for open monitoring. See below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">jmxExporter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Configuration block for JMX Exporter. See below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabledInBroker</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether you want to enable or disable the Node Exporter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabledInBroker</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether you want to enable or disable the JMX Exporter.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">nodeExporter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Configuration block for Node Exporter. See below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabledInBroker</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether you want to enable or disable the Node Exporter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabledInBroker</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether you want to enable or disable the JMX Exporter.</p></li>
 </ul>
 </li>
 </ul>
@@ -365,7 +447,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Manages an Amazon Managed Streaming for Kafka configuration. More information can be found on the <a class="reference external" href="https://docs.aws.amazon.com/msk/latest/developerguide/msk-configuration.html">MSK Developer Guide</a>.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> The API does not support deleting MSK configurations. Removing this resource will only remove the this provider state for it.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/msk_configuration.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/msk_configuration.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -577,12 +658,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.msk.get_cluster">
 <code class="sig-prename descclassname">pulumi_aws.msk.</code><code class="sig-name descname">get_cluster</code><span class="sig-paren">(</span><em class="sig-param">cluster_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.msk.get_cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get information on an Amazon MSK Cluster.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/msk_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/msk_cluster.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>cluster_name</strong> (<em>str</em>) – Name of the cluster.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cluster_name</strong> (<em>str</em>) – Name of the cluster.</p></li>
+<li><p><strong>tags</strong> (<em>dict</em>) – Map of key-value pairs assigned to the cluster.</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
@@ -591,9 +672,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.msk.get_configuration">
 <code class="sig-prename descclassname">pulumi_aws.msk.</code><code class="sig-name descname">get_configuration</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.msk.get_configuration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get information on an Amazon MSK Configuration.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/msk_configuration.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/msk_configuration.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – Name of the configuration.</p>

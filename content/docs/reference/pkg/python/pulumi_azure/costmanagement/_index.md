@@ -38,14 +38,14 @@ anything, please consult the source <a class="reference external" href="https://
 </dl>
 <p>The <strong>delivery_info</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">container_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">rootFolderPath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">container_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the container where exports will be uploaded.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rootFolderPath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path of the directory where exports will be uploaded.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The storage account id where exports will be delivered.</p></li>
 </ul>
 <p>The <strong>query</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">timeFrame</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeFrame</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The time frame for pulling data for the query. If custom, then a specific time period must be provided. Possible values include: <code class="docutils literal notranslate"><span class="pre">WeekToDate</span></code>, <code class="docutils literal notranslate"><span class="pre">MonthToDate</span></code>, <code class="docutils literal notranslate"><span class="pre">YearToDate</span></code>, <code class="docutils literal notranslate"><span class="pre">TheLastWeek</span></code>, <code class="docutils literal notranslate"><span class="pre">TheLastMonth</span></code>, <code class="docutils literal notranslate"><span class="pre">TheLastYear</span></code>, <code class="docutils literal notranslate"><span class="pre">Custom</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of the query.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_azure.costmanagement.ResourceGroupExport.active">
@@ -58,9 +58,9 @@ anything, please consult the source <a class="reference external" href="https://
 <code class="sig-name descname">delivery_info</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.costmanagement.ResourceGroupExport.delivery_info" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">delivery_info</span></code> block as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">container_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">rootFolderPath</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">container_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the container where exports will be uploaded.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rootFolderPath</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The path of the directory where exports will be uploaded.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The storage account id where exports will be delivered.</p></li>
 </ul>
 </dd></dl>
 
@@ -75,8 +75,8 @@ anything, please consult the source <a class="reference external" href="https://
 <code class="sig-name descname">query</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.costmanagement.ResourceGroupExport.query" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">query</span></code> block as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">timeFrame</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeFrame</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The time frame for pulling data for the query. If custom, then a specific time period must be provided. Possible values include: <code class="docutils literal notranslate"><span class="pre">WeekToDate</span></code>, <code class="docutils literal notranslate"><span class="pre">MonthToDate</span></code>, <code class="docutils literal notranslate"><span class="pre">YearToDate</span></code>, <code class="docutils literal notranslate"><span class="pre">TheLastWeek</span></code>, <code class="docutils literal notranslate"><span class="pre">TheLastMonth</span></code>, <code class="docutils literal notranslate"><span class="pre">TheLastYear</span></code>, <code class="docutils literal notranslate"><span class="pre">Custom</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The type of the query.</p></li>
 </ul>
 </dd></dl>
 
@@ -128,14 +128,14 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>delivery_info</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">container_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">rootFolderPath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">container_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the container where exports will be uploaded.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rootFolderPath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path of the directory where exports will be uploaded.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The storage account id where exports will be delivered.</p></li>
 </ul>
 <p>The <strong>query</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">timeFrame</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeFrame</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The time frame for pulling data for the query. If custom, then a specific time period must be provided. Possible values include: <code class="docutils literal notranslate"><span class="pre">WeekToDate</span></code>, <code class="docutils literal notranslate"><span class="pre">MonthToDate</span></code>, <code class="docutils literal notranslate"><span class="pre">YearToDate</span></code>, <code class="docutils literal notranslate"><span class="pre">TheLastWeek</span></code>, <code class="docutils literal notranslate"><span class="pre">TheLastMonth</span></code>, <code class="docutils literal notranslate"><span class="pre">TheLastYear</span></code>, <code class="docutils literal notranslate"><span class="pre">Custom</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of the query.</p></li>
 </ul>
 </dd></dl>
 

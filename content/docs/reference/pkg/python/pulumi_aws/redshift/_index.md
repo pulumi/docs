@@ -30,7 +30,6 @@ anything, please consult the source <a class="reference external" href="https://
 <blockquote>
 <div><p><strong>Note:</strong> All arguments including the username and password will be stored in the raw state as plain-text.
 <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/redshift_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/redshift_cluster.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -448,9 +447,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> - The name of the Redshift event notification subscription</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">customer_aws_id</span></code> - The AWS customer account associated with the Redshift event notification subscription</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/redshift_event_subscription.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/redshift_event_subscription.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -785,9 +781,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.redshift.ParameterGroup">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.redshift.</code><code class="sig-name descname">ParameterGroup</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">family=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.redshift.ParameterGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Redshift Cluster parameter group resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/redshift_parameter_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/redshift_parameter_group.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -915,9 +908,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.redshift.SecurityGroup">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.redshift.</code><code class="sig-name descname">SecurityGroup</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">ingress=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.redshift.SecurityGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a new Amazon Redshift security group. You use security groups to control access to non-VPC clusters</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/redshift_security_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/redshift_security_group.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1029,9 +1019,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.redshift.</code><code class="sig-name descname">SnapshotCopyGrant</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">kms_key_id=None</em>, <em class="sig-param">snapshot_copy_grant_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.redshift.SnapshotCopyGrant" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a snapshot copy grant that allows AWS Redshift to encrypt copied snapshots with a customer master key from AWS KMS in a destination region.</p>
 <p>Note that the grant must exist in the destination region, and not in the region of the cluster.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/redshift_snapshot_copy_grant.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/redshift_snapshot_copy_grant.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1128,19 +1115,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_aws.redshift.SnapshotSchedule">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.redshift.</code><code class="sig-name descname">SnapshotSchedule</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">definitions=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">force_destroy=None</em>, <em class="sig-param">identifier=None</em>, <em class="sig-param">identifier_prefix=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.redshift.SnapshotSchedule" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a SnapshotSchedule resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[list] definitions: The definition of the snapshot schedule. The definition is made up of schedule expressions, for example <code class="docutils literal notranslate"><span class="pre">cron(30</span> <span class="pre">12</span> <span class="pre">*)</span></code> or <code class="docutils literal notranslate"><span class="pre">rate(12</span> <span class="pre">hours)</span></code>.
-:param pulumi.Input[str] description: The description of the snapshot schedule.
-:param pulumi.Input[bool] force_destroy: Whether to destroy all associated clusters with this snapshot schedule on deletion. Must be enabled and applied before attempting deletion.
-:param pulumi.Input[str] identifier_prefix: Creates a unique</p>
-<blockquote>
-<div><p>identifier beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">identifier</span></code>.</p>
-</div></blockquote>
-<dl class="field-list simple">
+<dd><dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>definitions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The definition of the snapshot schedule. The definition is made up of schedule expressions, for example <code class="docutils literal notranslate"><span class="pre">cron(30</span> <span class="pre">12</span> <span class="pre">*)</span></code> or <code class="docutils literal notranslate"><span class="pre">rate(12</span> <span class="pre">hours)</span></code>.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the snapshot schedule.</p></li>
+<li><p><strong>force_destroy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to destroy all associated clusters with this snapshot schedule on deletion. Must be enabled and applied before attempting deletion.</p></li>
+<li><p><strong>identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The snapshot schedule identifier. If omitted, this provider will assign a random, unique identifier.</p></li>
+<li><p><strong>identifier_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique
+identifier beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">identifier</span></code>.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+</ul>
 </dd>
 </dl>
 <dl class="attribute">
@@ -1159,6 +1146,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.redshift.SnapshotSchedule.force_destroy">
 <code class="sig-name descname">force_destroy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.redshift.SnapshotSchedule.force_destroy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether to destroy all associated clusters with this snapshot schedule on deletion. Must be enabled and applied before attempting deletion.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.redshift.SnapshotSchedule.identifier">
+<code class="sig-name descname">identifier</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.redshift.SnapshotSchedule.identifier" title="Permalink to this definition">¶</a></dt>
+<dd><p>The snapshot schedule identifier. If omitted, this provider will assign a random, unique identifier.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1188,6 +1181,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>definitions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The definition of the snapshot schedule. The definition is made up of schedule expressions, for example <code class="docutils literal notranslate"><span class="pre">cron(30</span> <span class="pre">12</span> <span class="pre">*)</span></code> or <code class="docutils literal notranslate"><span class="pre">rate(12</span> <span class="pre">hours)</span></code>.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the snapshot schedule.</p></li>
 <li><p><strong>force_destroy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to destroy all associated clusters with this snapshot schedule on deletion. Must be enabled and applied before attempting deletion.</p></li>
+<li><p><strong>identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The snapshot schedule identifier. If omitted, this provider will assign a random, unique identifier.</p></li>
 <li><p><strong>identifier_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique
 identifier beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">identifier</span></code>.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
@@ -1237,11 +1231,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_aws.redshift.SnapshotScheduleAssociation">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.redshift.</code><code class="sig-name descname">SnapshotScheduleAssociation</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cluster_identifier=None</em>, <em class="sig-param">schedule_identifier=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.redshift.SnapshotScheduleAssociation" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a SnapshotScheduleAssociation resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] cluster_identifier: The cluster identifier.
-:param pulumi.Input[str] schedule_identifier: The snapshot schedule identifier.</p>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>cluster_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The cluster identifier.</p></li>
+<li><p><strong>schedule_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The snapshot schedule identifier.</p></li>
+</ul>
+</dd>
+</dl>
 <dl class="attribute">
 <dt id="pulumi_aws.redshift.SnapshotScheduleAssociation.cluster_identifier">
 <code class="sig-name descname">cluster_identifier</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.redshift.SnapshotScheduleAssociation.cluster_identifier" title="Permalink to this definition">¶</a></dt>
@@ -1314,9 +1313,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.redshift.SubnetGroup">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.redshift.</code><code class="sig-name descname">SubnetGroup</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">subnet_ids=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.redshift.SubnetGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a new Amazon Redshift subnet group. You must provide a list of one or more subnets in your existing Amazon Virtual Private Cloud (Amazon VPC) when creating Amazon Redshift subnet group.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/redshift_subnet_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/redshift_subnet_group.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1422,12 +1418,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.redshift.get_cluster">
 <code class="sig-prename descclassname">pulumi_aws.redshift.</code><code class="sig-name descname">get_cluster</code><span class="sig-paren">(</span><em class="sig-param">cluster_identifier=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.redshift.get_cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides details about a specific redshift cluster.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/redshift_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/redshift_cluster.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>cluster_identifier</strong> (<em>str</em>) – The cluster identifier</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cluster_identifier</strong> (<em>str</em>) – The cluster identifier</p></li>
+<li><p><strong>tags</strong> (<em>dict</em>) – The tags associated to the cluster</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
@@ -1437,9 +1433,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-prename descclassname">pulumi_aws.redshift.</code><code class="sig-name descname">get_service_account</code><span class="sig-paren">(</span><em class="sig-param">region=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.redshift.get_service_account" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the Account ID of the <a class="reference external" href="http://docs.aws.amazon.com/redshift/latest/mgmt/db-auditing.html#db-auditing-enable-logging">AWS Redshift Service Account</a>
 in a given region for the purpose of allowing Redshift to store audit data in S3.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/redshift_service_account.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/redshift_service_account.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>region</strong> (<em>str</em>) – Name of the region whose AWS Redshift account ID is desired.

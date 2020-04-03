@@ -36,24 +36,24 @@ anything, please consult the source <a class="reference external" href="https://
 </dl>
 <p>The <strong>active_directory</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">dns_servers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">domain</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">organizationalUnit</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">smbServerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dns_servers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of DNS server IP addresses for the Active Directory domain. Only allows <code class="docutils literal notranslate"><span class="pre">IPv4</span></code> address.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">domain</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Active Directory domain.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">organizationalUnit</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Organizational Unit (OU) within the Active Directory Domain.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The password associated with the <code class="docutils literal notranslate"><span class="pre">username</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">smbServerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The NetBIOS name which should be used for the NetApp SMB Server, which will be registered as a computer account in the AD and used to mount volumes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Username of Active Directory Domain Administrator.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_azure.netapp.Account.active_directory">
 <code class="sig-name descname">active_directory</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.netapp.Account.active_directory" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">active_directory</span></code> block as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">dns_servers</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">domain</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">organizationalUnit</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">smbServerName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dns_servers</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of DNS server IP addresses for the Active Directory domain. Only allows <code class="docutils literal notranslate"><span class="pre">IPv4</span></code> address.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">domain</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the Active Directory domain.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">organizationalUnit</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Organizational Unit (OU) within the Active Directory Domain.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The password associated with the <code class="docutils literal notranslate"><span class="pre">username</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">smbServerName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The NetBIOS name which should be used for the NetApp SMB Server, which will be registered as a computer account in the AD and used to mount volumes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Username of Active Directory Domain Administrator.</p></li>
 </ul>
 </dd></dl>
 
@@ -102,12 +102,12 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>active_directory</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">dns_servers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">domain</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">organizationalUnit</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">smbServerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dns_servers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of DNS server IP addresses for the Active Directory domain. Only allows <code class="docutils literal notranslate"><span class="pre">IPv4</span></code> address.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">domain</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Active Directory domain.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">organizationalUnit</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Organizational Unit (OU) within the Active Directory Domain.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The password associated with the <code class="docutils literal notranslate"><span class="pre">username</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">smbServerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The NetBIOS name which should be used for the NetApp SMB Server, which will be registered as a computer account in the AD and used to mount volumes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Username of Active Directory Domain Administrator.</p></li>
 </ul>
 </dd></dl>
 
@@ -556,14 +556,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <p>The <strong>export_policy_rules</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">allowedClients</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">cifsEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">nfsv3Enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">nfsv4Enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">protocolsEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ruleIndex</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">unixReadOnly</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">unixReadWrite</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedClients</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of allowed clients IPv4 addresses.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cifsEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is the CIFS protocol allowed?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nfsv3Enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is the NFSv3 protocol allowed?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nfsv4Enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is the NFSv4 protocol allowed?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocolsEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A list of allowed protocols. Valid values include <code class="docutils literal notranslate"><span class="pre">CIFS</span></code>, <code class="docutils literal notranslate"><span class="pre">NFSv3</span></code>, or <code class="docutils literal notranslate"><span class="pre">NFSv4.1</span></code>. Only one value is supported at this time. This replaces the previous arguments: <code class="docutils literal notranslate"><span class="pre">cifs_enabled</span></code>, <code class="docutils literal notranslate"><span class="pre">nfsv3_enabled</span></code> and <code class="docutils literal notranslate"><span class="pre">nfsv4_enabled</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ruleIndex</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The index number of the rule.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">unixReadOnly</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is the file system on unix read only?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">unixReadWrite</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is the file system on unix read and write?</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_azure.netapp.Volume.account_name">
@@ -576,14 +576,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">export_policy_rules</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.netapp.Volume.export_policy_rules" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">export_policy_rule</span></code> block defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">allowedClients</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">cifsEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">nfsv3Enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">nfsv4Enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">protocolsEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ruleIndex</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">unixReadOnly</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">unixReadWrite</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedClients</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of allowed clients IPv4 addresses.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cifsEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Is the CIFS protocol allowed?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nfsv3Enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Is the NFSv3 protocol allowed?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nfsv4Enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Is the NFSv4 protocol allowed?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocolsEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A list of allowed protocols. Valid values include <code class="docutils literal notranslate"><span class="pre">CIFS</span></code>, <code class="docutils literal notranslate"><span class="pre">NFSv3</span></code>, or <code class="docutils literal notranslate"><span class="pre">NFSv4.1</span></code>. Only one value is supported at this time. This replaces the previous arguments: <code class="docutils literal notranslate"><span class="pre">cifs_enabled</span></code>, <code class="docutils literal notranslate"><span class="pre">nfsv3_enabled</span></code> and <code class="docutils literal notranslate"><span class="pre">nfsv4_enabled</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ruleIndex</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The index number of the rule.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">unixReadOnly</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Is the file system on unix read only?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">unixReadWrite</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Is the file system on unix read and write?</p></li>
 </ul>
 </dd></dl>
 
@@ -675,14 +675,14 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>export_policy_rules</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">allowedClients</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">cifsEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">nfsv3Enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">nfsv4Enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">protocolsEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ruleIndex</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">unixReadOnly</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">unixReadWrite</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedClients</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of allowed clients IPv4 addresses.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cifsEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is the CIFS protocol allowed?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nfsv3Enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is the NFSv3 protocol allowed?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nfsv4Enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is the NFSv4 protocol allowed?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocolsEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A list of allowed protocols. Valid values include <code class="docutils literal notranslate"><span class="pre">CIFS</span></code>, <code class="docutils literal notranslate"><span class="pre">NFSv3</span></code>, or <code class="docutils literal notranslate"><span class="pre">NFSv4.1</span></code>. Only one value is supported at this time. This replaces the previous arguments: <code class="docutils literal notranslate"><span class="pre">cifs_enabled</span></code>, <code class="docutils literal notranslate"><span class="pre">nfsv3_enabled</span></code> and <code class="docutils literal notranslate"><span class="pre">nfsv4_enabled</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ruleIndex</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The index number of the rule.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">unixReadOnly</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is the file system on unix read only?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">unixReadWrite</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is the file system on unix read and write?</p></li>
 </ul>
 </dd></dl>
 

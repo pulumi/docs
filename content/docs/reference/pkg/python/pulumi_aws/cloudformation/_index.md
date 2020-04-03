@@ -123,9 +123,6 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.cloudformation.Stack">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.cloudformation.</code><code class="sig-name descname">Stack</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">capabilities=None</em>, <em class="sig-param">disable_rollback=None</em>, <em class="sig-param">iam_role_arn=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">notification_arns=None</em>, <em class="sig-param">on_failure=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">policy_body=None</em>, <em class="sig-param">policy_url=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">template_body=None</em>, <em class="sig-param">template_url=None</em>, <em class="sig-param">timeout_in_minutes=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudformation.Stack" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a CloudFormation Stack resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudformation_stack.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudformation_stack.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -321,7 +318,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> All template parameters, including those with a <code class="docutils literal notranslate"><span class="pre">Default</span></code>, must be configured or ignored with the <code class="docutils literal notranslate"><span class="pre">lifecycle</span></code> configuration block <code class="docutils literal notranslate"><span class="pre">ignore_changes</span></code> argument.</p>
 <p><strong>NOTE:</strong> All <code class="docutils literal notranslate"><span class="pre">NoEcho</span></code> template parameters must be ignored with the <code class="docutils literal notranslate"><span class="pre">lifecycle</span></code> configuration block <code class="docutils literal notranslate"><span class="pre">ignore_changes</span></code> argument.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudformation_stack_set.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudformation_stack_set.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -478,7 +474,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> All target accounts must have an IAM Role created that matches the name of the execution role configured in the StackSet (the <code class="docutils literal notranslate"><span class="pre">execution_role_name</span></code> argument in the <code class="docutils literal notranslate"><span class="pre">cloudformation.StackSet</span></code> resource) in a trust relationship with the administrative account or administration IAM Role. The execution role must have appropriate permissions to manage resources defined in the template along with those required for StackSets to operate. See the <a class="reference external" href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs.html">AWS CloudFormation User Guide</a> for more details.</p>
 <p><strong>NOTE:</strong> To retain the Stack during resource destroy, ensure <code class="docutils literal notranslate"><span class="pre">retain_stack</span></code> has been set to <code class="docutils literal notranslate"><span class="pre">true</span></code> in the state first. This must be completed <em>before</em> a deployment that would destroy the resource.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudformation_stack_set_instance.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudformation_stack_set_instance.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -596,7 +591,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 exports specified in the <a class="reference external" href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/outputs-section-structure.html">Output</a> section of the Cloudformation Template using the optional Export Property.</p>
 <blockquote>
 <div><p>Note: If you are trying to use a value from a Cloudformation Stack in the same deployment please use normal interpolation or Cloudformation Outputs.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/cloudformation_export.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/cloudformation_export.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -611,12 +605,12 @@ exports specified in the <a class="reference external" href="http://docs.aws.ama
 <code class="sig-prename descclassname">pulumi_aws.cloudformation.</code><code class="sig-name descname">get_stack</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudformation.get_stack" title="Permalink to this definition">¶</a></dt>
 <dd><p>The CloudFormation Stack data source allows access to stack
 outputs and other useful data including the template body.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/cloudformation_stack.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/cloudformation_stack.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the stack</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – The name of the stack</p></li>
+<li><p><strong>tags</strong> (<em>dict</em>) – A map of tags associated with this stack.</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>

@@ -22,9 +22,6 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.iot.Certificate">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.iot.</code><code class="sig-name descname">Certificate</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">active=None</em>, <em class="sig-param">csr=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iot.Certificate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates and manages an AWS IoT certificate.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iot_certificate.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iot_certificate.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -173,16 +170,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.iot.Policy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.iot.</code><code class="sig-name descname">Policy</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">policy=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iot.Policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an IoT policy.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iot_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iot_policy.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the policy.</p></li>
-<li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy document.</p></li>
+<li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy document. This is a JSON formatted string. Use the <a class="reference external" href="http://docs.aws.amazon.com/iot/latest/developerguide/iot-policies.html">IoT Developer Guide</a> for more information on IoT Policies.</p></li>
 </ul>
 </dd>
 </dl>
@@ -207,7 +201,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.iot.Policy.policy">
 <code class="sig-name descname">policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.iot.Policy.policy" title="Permalink to this definition">¶</a></dt>
-<dd><p>The policy document.</p>
+<dd><p>The policy document. This is a JSON formatted string. Use the <a class="reference external" href="http://docs.aws.amazon.com/iot/latest/developerguide/iot-policies.html">IoT Developer Guide</a> for more information on IoT Policies.</p>
 </dd></dl>
 
 <dl class="method">
@@ -224,7 +218,8 @@ properties used to qualify the lookup.</p>
 <li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN assigned by AWS to this policy.</p></li>
 <li><p><strong>default_version_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The default version of this policy.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the policy.</p></li>
-<li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy document.</p></li>
+<li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The policy document. This is a JSON formatted string. Use the <a class="reference external" href="http://docs.aws.amazon.com/iot/latest/developerguide/iot-policies.html">IoT Developer Guide</a> for more information on IoT Policies.</p>
+</p></li>
 </ul>
 </dd>
 </dl>
@@ -272,9 +267,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.iot.PolicyAttachment">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.iot.</code><code class="sig-name descname">PolicyAttachment</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">policy=None</em>, <em class="sig-param">target=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iot.PolicyAttachment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an IoT policy attachment.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iot_policy_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iot_policy_attachment.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -357,9 +349,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.iot.RoleAlias">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.iot.</code><code class="sig-name descname">RoleAlias</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">alias=None</em>, <em class="sig-param">credential_duration=None</em>, <em class="sig-param">role_arn=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iot.RoleAlias" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an IoT role alias.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iot_role_alias.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iot_role_alias.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -457,9 +446,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.iot.Thing">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.iot.</code><code class="sig-name descname">Thing</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">attributes=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">thing_type_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iot.Thing" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates and manages an AWS IoT Thing.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iot_thing.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iot_thing.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -571,9 +557,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.iot.ThingPrincipalAttachment">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.iot.</code><code class="sig-name descname">ThingPrincipalAttachment</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">principal=None</em>, <em class="sig-param">thing=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iot.ThingPrincipalAttachment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Attaches Principal to AWS IoT Thing.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iot_thing_principal_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iot_thing_principal_attachment.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -656,9 +639,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.iot.ThingType">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.iot.</code><code class="sig-name descname">ThingType</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">deprecated=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">properties=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iot.ThingType" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates and manages an AWS IoT Thing Type.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iot_thing_type.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iot_thing_type.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -769,8 +749,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_aws.iot.TopicRule">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.iot.</code><code class="sig-name descname">TopicRule</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cloudwatch_alarm=None</em>, <em class="sig-param">cloudwatch_metric=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">dynamodb=None</em>, <em class="sig-param">elasticsearch=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">firehose=None</em>, <em class="sig-param">kinesis=None</em>, <em class="sig-param">lambda_=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">republish=None</em>, <em class="sig-param">s3=None</em>, <em class="sig-param">sns=None</em>, <em class="sig-param">sql=None</em>, <em class="sig-param">sql_version=None</em>, <em class="sig-param">sqs=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iot.TopicRule" title="Permalink to this definition">¶</a></dt>
-<dd><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Create a TopicRule resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
+<dd><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>:param str resource_name: The name of the resource.
 :param pulumi.ResourceOptions opts: Options for the resource.
 :param pulumi.Input[str] description: The description of the rule.
 :param pulumi.Input[bool] enabled: Specifies whether the rule is enabled.
@@ -781,7 +760,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 The **cloudwatch_alarm** object supports the following:
 
   * `alarmName` (`pulumi.Input[str]`) - The CloudWatch alarm name.
-  * `role_arn` (`pulumi.Input[str]`) - The ARN of the IAM role that grants access.
+  * `role_arn` (`pulumi.Input[str]`) - The IAM role ARN that allows access to the CloudWatch alarm.
   * `stateReason` (`pulumi.Input[str]`) - The reason for the alarm change.
   * `stateValue` (`pulumi.Input[str]`) - The value of the alarm state. Acceptable values are: OK, ALARM, INSUFFICIENT_DATA.
 
@@ -792,7 +771,7 @@ The **cloudwatch_metric** object supports the following:
   * `metricTimestamp` (`pulumi.Input[str]`) - An optional Unix timestamp (http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/cloudwatch_concepts.html#about_timestamp).
   * `metricUnit` (`pulumi.Input[str]`) - The metric unit (supported units can be found here: http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/cloudwatch_concepts.html#Unit)
   * `metricValue` (`pulumi.Input[str]`) - The CloudWatch metric value.
-  * `role_arn` (`pulumi.Input[str]`) - The ARN of the IAM role that grants access.
+  * `role_arn` (`pulumi.Input[str]`) - The IAM role ARN that allows access to the CloudWatch metric.
 
 The **dynamodb** object supports the following:
 
@@ -803,7 +782,7 @@ The **dynamodb** object supports the following:
   * `rangeKeyField` (`pulumi.Input[str]`) - The range key name.
   * `rangeKeyType` (`pulumi.Input[str]`) - The range key type. Valid values are &quot;STRING&quot; or &quot;NUMBER&quot;.
   * `rangeKeyValue` (`pulumi.Input[str]`) - The range key value.
-  * `role_arn` (`pulumi.Input[str]`) - The ARN of the IAM role that grants access.
+  * `role_arn` (`pulumi.Input[str]`) - The ARN of the IAM role that grants access to the DynamoDB table.
   * `table_name` (`pulumi.Input[str]`) - The name of the DynamoDB table.
 
 The **elasticsearch** object supports the following:
@@ -811,13 +790,13 @@ The **elasticsearch** object supports the following:
   * `endpoint` (`pulumi.Input[str]`) - The endpoint of your Elasticsearch domain.
   * `id` (`pulumi.Input[str]`) - The unique identifier for the document you are storing.
   * `index` (`pulumi.Input[str]`) - The Elasticsearch index where you want to store your data.
-  * `role_arn` (`pulumi.Input[str]`) - The ARN of the IAM role that grants access.
+  * `role_arn` (`pulumi.Input[str]`) - The IAM role ARN that has access to Elasticsearch.
   * `type` (`pulumi.Input[str]`) - The type of document you are storing.
 
 The **firehose** object supports the following:
 
   * `deliveryStreamName` (`pulumi.Input[str]`) - The delivery stream name.
-  * `role_arn` (`pulumi.Input[str]`) - The ARN of the IAM role that grants access.
+  * `role_arn` (`pulumi.Input[str]`) - The IAM role ARN that grants access to the Amazon Kinesis Firehose stream.
   * `separator` (`pulumi.Input[str]`) - A character separator that is used to separate records written to the Firehose stream. Valid values are: &#39;
 </pre></div>
 </div>
@@ -826,7 +805,7 @@ The **firehose** object supports the following:
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>The **kinesis** object supports the following:
 
   * `partitionKey` (`pulumi.Input[str]`) - The partition key.
-  * `role_arn` (`pulumi.Input[str]`) - The ARN of the IAM role that grants access.
+  * `role_arn` (`pulumi.Input[str]`) - The ARN of the IAM role that grants access to the Amazon Kinesis stream.
   * `streamName` (`pulumi.Input[str]`) - The name of the Amazon Kinesis stream.
 
 The **lambda_** object supports the following:
@@ -842,7 +821,7 @@ The **s3** object supports the following:
 
   * `bucket_name` (`pulumi.Input[str]`) - The Amazon S3 bucket name.
   * `key` (`pulumi.Input[str]`) - The object key.
-  * `role_arn` (`pulumi.Input[str]`) - The ARN of the IAM role that grants access.
+  * `role_arn` (`pulumi.Input[str]`) - The IAM role ARN that allows access to the CloudWatch alarm.
 
 The **sns** object supports the following:
 
@@ -912,7 +891,7 @@ properties used to qualify the lookup.
 The **cloudwatch_alarm** object supports the following:
 
   * `alarmName` (`pulumi.Input[str]`) - The CloudWatch alarm name.
-  * `role_arn` (`pulumi.Input[str]`) - The ARN of the IAM role that grants access.
+  * `role_arn` (`pulumi.Input[str]`) - The IAM role ARN that allows access to the CloudWatch alarm.
   * `stateReason` (`pulumi.Input[str]`) - The reason for the alarm change.
   * `stateValue` (`pulumi.Input[str]`) - The value of the alarm state. Acceptable values are: OK, ALARM, INSUFFICIENT_DATA.
 
@@ -923,7 +902,7 @@ The **cloudwatch_metric** object supports the following:
   * `metricTimestamp` (`pulumi.Input[str]`) - An optional Unix timestamp (http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/cloudwatch_concepts.html#about_timestamp).
   * `metricUnit` (`pulumi.Input[str]`) - The metric unit (supported units can be found here: http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/cloudwatch_concepts.html#Unit)
   * `metricValue` (`pulumi.Input[str]`) - The CloudWatch metric value.
-  * `role_arn` (`pulumi.Input[str]`) - The ARN of the IAM role that grants access.
+  * `role_arn` (`pulumi.Input[str]`) - The IAM role ARN that allows access to the CloudWatch metric.
 
 The **dynamodb** object supports the following:
 
@@ -934,7 +913,7 @@ The **dynamodb** object supports the following:
   * `rangeKeyField` (`pulumi.Input[str]`) - The range key name.
   * `rangeKeyType` (`pulumi.Input[str]`) - The range key type. Valid values are &quot;STRING&quot; or &quot;NUMBER&quot;.
   * `rangeKeyValue` (`pulumi.Input[str]`) - The range key value.
-  * `role_arn` (`pulumi.Input[str]`) - The ARN of the IAM role that grants access.
+  * `role_arn` (`pulumi.Input[str]`) - The ARN of the IAM role that grants access to the DynamoDB table.
   * `table_name` (`pulumi.Input[str]`) - The name of the DynamoDB table.
 
 The **elasticsearch** object supports the following:
@@ -942,13 +921,13 @@ The **elasticsearch** object supports the following:
   * `endpoint` (`pulumi.Input[str]`) - The endpoint of your Elasticsearch domain.
   * `id` (`pulumi.Input[str]`) - The unique identifier for the document you are storing.
   * `index` (`pulumi.Input[str]`) - The Elasticsearch index where you want to store your data.
-  * `role_arn` (`pulumi.Input[str]`) - The ARN of the IAM role that grants access.
+  * `role_arn` (`pulumi.Input[str]`) - The IAM role ARN that has access to Elasticsearch.
   * `type` (`pulumi.Input[str]`) - The type of document you are storing.
 
 The **firehose** object supports the following:
 
   * `deliveryStreamName` (`pulumi.Input[str]`) - The delivery stream name.
-  * `role_arn` (`pulumi.Input[str]`) - The ARN of the IAM role that grants access.
+  * `role_arn` (`pulumi.Input[str]`) - The IAM role ARN that grants access to the Amazon Kinesis Firehose stream.
   * `separator` (`pulumi.Input[str]`) - A character separator that is used to separate records written to the Firehose stream. Valid values are: &#39;
 </pre></div>
 </div>
@@ -957,7 +936,7 @@ The **firehose** object supports the following:
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>The **kinesis** object supports the following:
 
   * `partitionKey` (`pulumi.Input[str]`) - The partition key.
-  * `role_arn` (`pulumi.Input[str]`) - The ARN of the IAM role that grants access.
+  * `role_arn` (`pulumi.Input[str]`) - The ARN of the IAM role that grants access to the Amazon Kinesis stream.
   * `streamName` (`pulumi.Input[str]`) - The name of the Amazon Kinesis stream.
 
 The **lambda_** object supports the following:
@@ -973,7 +952,7 @@ The **s3** object supports the following:
 
   * `bucket_name` (`pulumi.Input[str]`) - The Amazon S3 bucket name.
   * `key` (`pulumi.Input[str]`) - The object key.
-  * `role_arn` (`pulumi.Input[str]`) - The ARN of the IAM role that grants access.
+  * `role_arn` (`pulumi.Input[str]`) - The IAM role ARN that allows access to the CloudWatch alarm.
 
 The **sns** object supports the following:
 
@@ -1032,9 +1011,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.iot.get_endpoint">
 <code class="sig-prename descclassname">pulumi_aws.iot.</code><code class="sig-name descname">get_endpoint</code><span class="sig-paren">(</span><em class="sig-param">endpoint_type=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.iot.get_endpoint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a unique endpoint specific to the AWS account making the call.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/iot_endpoint.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/iot_endpoint.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>endpoint_type</strong> (<em>str</em>) – Endpoint type. Valid values: <code class="docutils literal notranslate"><span class="pre">iot:CredentialProvider</span></code>, <code class="docutils literal notranslate"><span class="pre">iot:Data</span></code>, <code class="docutils literal notranslate"><span class="pre">iot:Data-ATS</span></code>, <code class="docutils literal notranslate"><span class="pre">iot:Job</span></code>.</p>

@@ -30,7 +30,6 @@ CloudHSM API Reference][2].</p>
 Practically no single attribute can be updated except TAGS.
 If you need to delete a cluster, you have to remove its HSM modules first.
 To initialize cluster, you have to add an hsm instance to the cluster then sign CSR and upload it.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudhsm_v2_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudhsm_v2_cluster.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -124,7 +123,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>cluster_certificates</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The list of cluster certificates.</p></li>
+<li><p><strong>cluster_certificates</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of cluster certificates.</p></li>
 </ul>
 </dd>
 </dl>
@@ -245,9 +244,6 @@ The number of available cluster certificates may vary depending on state of the 
 <dt id="pulumi_aws.cloudhsmv2.Hsm">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.cloudhsmv2.</code><code class="sig-name descname">Hsm</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">availability_zone=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">ip_address=None</em>, <em class="sig-param">subnet_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudhsmv2.Hsm" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an HSM module in Amazon CloudHSM v2 cluster.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudhsm_v2_hsm.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudhsm_v2_hsm.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -367,9 +363,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.cloudhsmv2.get_cluster">
 <code class="sig-prename descclassname">pulumi_aws.cloudhsmv2.</code><code class="sig-name descname">get_cluster</code><span class="sig-paren">(</span><em class="sig-param">cluster_id=None</em>, <em class="sig-param">cluster_state=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudhsmv2.get_cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information about a CloudHSM v2 cluster</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/cloudhsm_v2_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/cloudhsm_v2_cluster.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

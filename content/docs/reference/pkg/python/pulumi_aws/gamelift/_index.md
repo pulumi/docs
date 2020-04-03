@@ -17,9 +17,6 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.gamelift.Alias">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.gamelift.</code><code class="sig-name descname">Alias</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">routing_strategy=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.gamelift.Alias" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Gamelift Alias resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/gamelift_alias.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/gamelift_alias.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -142,9 +139,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.gamelift.Build">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.gamelift.</code><code class="sig-name descname">Build</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">operating_system=None</em>, <em class="sig-param">storage_location=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.gamelift.Build" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an Gamelift Build resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/gamelift_build.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/gamelift_build.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -275,9 +269,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.gamelift.Fleet">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.gamelift.</code><code class="sig-name descname">Fleet</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">build_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">ec2_inbound_permissions=None</em>, <em class="sig-param">ec2_instance_type=None</em>, <em class="sig-param">fleet_type=None</em>, <em class="sig-param">instance_role_arn=None</em>, <em class="sig-param">metric_groups=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">new_game_session_protection_policy=None</em>, <em class="sig-param">resource_creation_limit_policy=None</em>, <em class="sig-param">runtime_configuration=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.gamelift.Fleet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Gamelift Fleet resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/gamelift_fleet.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/gamelift_fleet.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -523,9 +514,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.gamelift.GameSessionQueue">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.gamelift.</code><code class="sig-name descname">GameSessionQueue</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">destinations=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">player_latency_policies=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">timeout_in_seconds=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.gamelift.GameSessionQueue" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an Gamelift Game Session Queue resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/gamelift_game_session_queue.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/gamelift_game_session_queue.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

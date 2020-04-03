@@ -1602,8 +1602,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <p>The <strong>monthly_occurrences</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">day</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">occurrence</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">day</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Day of the occurrence. Must be one of <code class="docutils literal notranslate"><span class="pre">Monday</span></code>, <code class="docutils literal notranslate"><span class="pre">Tuesday</span></code>, <code class="docutils literal notranslate"><span class="pre">Wednesday</span></code>, <code class="docutils literal notranslate"><span class="pre">Thursday</span></code>, <code class="docutils literal notranslate"><span class="pre">Friday</span></code>, <code class="docutils literal notranslate"><span class="pre">Saturday</span></code>, <code class="docutils literal notranslate"><span class="pre">Sunday</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">occurrence</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Occurrence of the week within the month. Must be between <code class="docutils literal notranslate"><span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">5</span></code>. <code class="docutils literal notranslate"><span class="pre">-1</span></code> for last week within the month.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_azure.automation.Schedule.automation_account_name">
@@ -1646,8 +1646,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">monthly_occurrences</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.automation.Schedule.monthly_occurrences" title="Permalink to this definition">¶</a></dt>
 <dd><p>List of occurrences of days within a month. Only valid when frequency is <code class="docutils literal notranslate"><span class="pre">Month</span></code>. The <code class="docutils literal notranslate"><span class="pre">monthly_occurrence</span></code> block supports fields documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">day</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">occurrence</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">day</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Day of the occurrence. Must be one of <code class="docutils literal notranslate"><span class="pre">Monday</span></code>, <code class="docutils literal notranslate"><span class="pre">Tuesday</span></code>, <code class="docutils literal notranslate"><span class="pre">Wednesday</span></code>, <code class="docutils literal notranslate"><span class="pre">Thursday</span></code>, <code class="docutils literal notranslate"><span class="pre">Friday</span></code>, <code class="docutils literal notranslate"><span class="pre">Saturday</span></code>, <code class="docutils literal notranslate"><span class="pre">Sunday</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">occurrence</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Occurrence of the week within the month. Must be between <code class="docutils literal notranslate"><span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">5</span></code>. <code class="docutils literal notranslate"><span class="pre">-1</span></code> for last week within the month.</p></li>
 </ul>
 </dd></dl>
 
@@ -1709,8 +1709,8 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>monthly_occurrences</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">day</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">occurrence</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">day</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Day of the occurrence. Must be one of <code class="docutils literal notranslate"><span class="pre">Monday</span></code>, <code class="docutils literal notranslate"><span class="pre">Tuesday</span></code>, <code class="docutils literal notranslate"><span class="pre">Wednesday</span></code>, <code class="docutils literal notranslate"><span class="pre">Thursday</span></code>, <code class="docutils literal notranslate"><span class="pre">Friday</span></code>, <code class="docutils literal notranslate"><span class="pre">Saturday</span></code>, <code class="docutils literal notranslate"><span class="pre">Sunday</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">occurrence</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Occurrence of the week within the month. Must be between <code class="docutils literal notranslate"><span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">5</span></code>. <code class="docutils literal notranslate"><span class="pre">-1</span></code> for last week within the month.</p></li>
 </ul>
 </dd></dl>
 

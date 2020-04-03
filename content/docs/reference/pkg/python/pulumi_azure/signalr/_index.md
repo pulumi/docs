@@ -108,24 +108,24 @@ anything, please consult the source <a class="reference external" href="https://
 </dl>
 <p>The <strong>cors</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">allowedOrigins</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedOrigins</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of origins which should be able to make cross-origin calls. <code class="docutils literal notranslate"><span class="pre">*</span></code> can be used to allow all calls.</p></li>
 </ul>
 <p>The <strong>features</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">flag</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">flag</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The kind of Feature. Possible values are <code class="docutils literal notranslate"><span class="pre">EnableConnectivityLogs</span></code> and <code class="docutils literal notranslate"><span class="pre">ServiceMode</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A value of a feature flag. Possible values are <code class="docutils literal notranslate"><span class="pre">Classic</span></code>, <code class="docutils literal notranslate"><span class="pre">Default</span></code> and <code class="docutils literal notranslate"><span class="pre">Serverless</span></code>.</p></li>
 </ul>
 <p>The <strong>sku</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">capacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the SignalR service. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">capacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the number of units associated with this SignalR service. Valid values are <code class="docutils literal notranslate"><span class="pre">1</span></code>, <code class="docutils literal notranslate"><span class="pre">2</span></code>, <code class="docutils literal notranslate"><span class="pre">5</span></code>, <code class="docutils literal notranslate"><span class="pre">10</span></code>, <code class="docutils literal notranslate"><span class="pre">20</span></code>, <code class="docutils literal notranslate"><span class="pre">50</span></code> and <code class="docutils literal notranslate"><span class="pre">100</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies which tier to use. Valid values are <code class="docutils literal notranslate"><span class="pre">Free_F1</span></code> and <code class="docutils literal notranslate"><span class="pre">Standard_S1</span></code>.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_azure.signalr.Service.cors">
 <code class="sig-name descname">cors</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.signalr.Service.cors" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">cors</span></code> block as documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">allowedOrigins</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedOrigins</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of origins which should be able to make cross-origin calls. <code class="docutils literal notranslate"><span class="pre">*</span></code> can be used to allow all calls.</p></li>
 </ul>
 </dd></dl>
 
@@ -134,8 +134,8 @@ anything, please consult the source <a class="reference external" href="https://
 <code class="sig-name descname">features</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.signalr.Service.features" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">features</span></code> block as documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">flag</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">flag</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The kind of Feature. Possible values are <code class="docutils literal notranslate"><span class="pre">EnableConnectivityLogs</span></code> and <code class="docutils literal notranslate"><span class="pre">ServiceMode</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A value of a feature flag. Possible values are <code class="docutils literal notranslate"><span class="pre">Classic</span></code>, <code class="docutils literal notranslate"><span class="pre">Default</span></code> and <code class="docutils literal notranslate"><span class="pre">Serverless</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -210,8 +210,8 @@ anything, please consult the source <a class="reference external" href="https://
 <code class="sig-name descname">sku</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.signalr.Service.sku" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">sku</span></code> block as documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">capacity</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the SignalR service. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">capacity</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Specifies the number of units associated with this SignalR service. Valid values are <code class="docutils literal notranslate"><span class="pre">1</span></code>, <code class="docutils literal notranslate"><span class="pre">2</span></code>, <code class="docutils literal notranslate"><span class="pre">5</span></code>, <code class="docutils literal notranslate"><span class="pre">10</span></code>, <code class="docutils literal notranslate"><span class="pre">20</span></code>, <code class="docutils literal notranslate"><span class="pre">50</span></code> and <code class="docutils literal notranslate"><span class="pre">100</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies which tier to use. Valid values are <code class="docutils literal notranslate"><span class="pre">Free_F1</span></code> and <code class="docutils literal notranslate"><span class="pre">Standard_S1</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -252,17 +252,17 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>cors</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">allowedOrigins</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedOrigins</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of origins which should be able to make cross-origin calls. <code class="docutils literal notranslate"><span class="pre">*</span></code> can be used to allow all calls.</p></li>
 </ul>
 <p>The <strong>features</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">flag</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">flag</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The kind of Feature. Possible values are <code class="docutils literal notranslate"><span class="pre">EnableConnectivityLogs</span></code> and <code class="docutils literal notranslate"><span class="pre">ServiceMode</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A value of a feature flag. Possible values are <code class="docutils literal notranslate"><span class="pre">Classic</span></code>, <code class="docutils literal notranslate"><span class="pre">Default</span></code> and <code class="docutils literal notranslate"><span class="pre">Serverless</span></code>.</p></li>
 </ul>
 <p>The <strong>sku</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">capacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the SignalR service. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">capacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the number of units associated with this SignalR service. Valid values are <code class="docutils literal notranslate"><span class="pre">1</span></code>, <code class="docutils literal notranslate"><span class="pre">2</span></code>, <code class="docutils literal notranslate"><span class="pre">5</span></code>, <code class="docutils literal notranslate"><span class="pre">10</span></code>, <code class="docutils literal notranslate"><span class="pre">20</span></code>, <code class="docutils literal notranslate"><span class="pre">50</span></code> and <code class="docutils literal notranslate"><span class="pre">100</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies which tier to use. Valid values are <code class="docutils literal notranslate"><span class="pre">Free_F1</span></code> and <code class="docutils literal notranslate"><span class="pre">Standard_S1</span></code>.</p></li>
 </ul>
 </dd></dl>
 

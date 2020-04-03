@@ -17,9 +17,6 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.dax.Cluster">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.dax.</code><code class="sig-name descname">Cluster</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">availability_zones=None</em>, <em class="sig-param">cluster_name=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">iam_role_arn=None</em>, <em class="sig-param">maintenance_window=None</em>, <em class="sig-param">node_type=None</em>, <em class="sig-param">notification_topic_arn=None</em>, <em class="sig-param">parameter_group_name=None</em>, <em class="sig-param">replication_factor=None</em>, <em class="sig-param">security_group_ids=None</em>, <em class="sig-param">server_side_encryption=None</em>, <em class="sig-param">subnet_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.dax.Cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a DAX Cluster resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dax_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dax_cluster.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -305,9 +302,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> - (Required) The name of the parameter.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> - (Required) The value for the parameter.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dax_parameter_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dax_parameter_group.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -412,9 +406,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.dax.SubnetGroup">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.dax.</code><code class="sig-name descname">SubnetGroup</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">subnet_ids=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.dax.SubnetGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a DAX Subnet Group resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dax_subnet_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dax_subnet_group.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

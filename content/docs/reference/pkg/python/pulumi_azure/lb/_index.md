@@ -223,7 +223,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>frontend_ip_configurations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or multiple <code class="docutils literal notranslate"><span class="pre">frontend_ip_configuration</span></code> blocks as documented below.</p></li>
 <li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure Region where the Load Balancer should be created.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the frontend ip configuration.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Load Balancer.</p></li>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Resource Group in which to create the Load Balancer.</p></li>
 <li><p><strong>sku</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The SKU of the Azure Load Balancer. Accepted values are <code class="docutils literal notranslate"><span class="pre">Basic</span></code> and <code class="docutils literal notranslate"><span class="pre">Standard</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Basic</span></code>.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
@@ -233,10 +233,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>The <strong>frontend_ip_configurations</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The id of the Frontend IP Configuration.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">inbound_nat_rules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">load_balancer_rules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">inbound_nat_rules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The list of IDs of inbound rules that use this frontend IP.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">load_balancer_rules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The list of IDs of load balancing rules that use this frontend IP.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the frontend ip configuration.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">outboundRules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">outboundRules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The list of IDs outbound rules that use this frontend IP.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">private_ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Private IP Address to assign to the Load Balancer. The last one and first four IPs in any range are reserved and cannot be manually assigned.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">privateIpAddressAllocation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The allocation method for the Private IP Address used by this Load Balancer. Possible values as <code class="docutils literal notranslate"><span class="pre">Dynamic</span></code> and <code class="docutils literal notranslate"><span class="pre">Static</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">privateIpAddressVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The version of IP that the Private IP Address is. Possible values are <code class="docutils literal notranslate"><span class="pre">IPv4</span></code> or <code class="docutils literal notranslate"><span class="pre">IPv6</span></code>.</p></li>
@@ -251,10 +251,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>One or multiple <code class="docutils literal notranslate"><span class="pre">frontend_ip_configuration</span></code> blocks as documented below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The id of the Frontend IP Configuration.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">inbound_nat_rules</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">load_balancer_rules</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">inbound_nat_rules</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The list of IDs of inbound rules that use this frontend IP.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">load_balancer_rules</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The list of IDs of load balancing rules that use this frontend IP.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the name of the frontend ip configuration.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">outboundRules</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">outboundRules</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The list of IDs outbound rules that use this frontend IP.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">private_ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Private IP Address to assign to the Load Balancer. The last one and first four IPs in any range are reserved and cannot be manually assigned.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">privateIpAddressAllocation</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The allocation method for the Private IP Address used by this Load Balancer. Possible values as <code class="docutils literal notranslate"><span class="pre">Dynamic</span></code> and <code class="docutils literal notranslate"><span class="pre">Static</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">privateIpAddressVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The version of IP that the Private IP Address is. Possible values are <code class="docutils literal notranslate"><span class="pre">IPv4</span></code> or <code class="docutils literal notranslate"><span class="pre">IPv6</span></code>.</p></li>
@@ -274,7 +274,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.lb.LoadBalancer.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.lb.LoadBalancer.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies the name of the frontend ip configuration.</p>
+<dd><p>Specifies the name of the Load Balancer.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -320,7 +320,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>frontend_ip_configurations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or multiple <code class="docutils literal notranslate"><span class="pre">frontend_ip_configuration</span></code> blocks as documented below.</p></li>
 <li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure Region where the Load Balancer should be created.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the frontend ip configuration.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Load Balancer.</p></li>
 <li><p><strong>private_ip_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Private IP Address to assign to the Load Balancer. The last one and first four IPs in any range are reserved and cannot be manually assigned.</p></li>
 <li><p><strong>private_ip_addresses</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of private IP address assigned to the load balancer in <code class="docutils literal notranslate"><span class="pre">frontend_ip_configuration</span></code> blocks, if any.</p></li>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Resource Group in which to create the Load Balancer.</p></li>
@@ -332,10 +332,10 @@ properties used to qualify the lookup.</p>
 <p>The <strong>frontend_ip_configurations</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The id of the Frontend IP Configuration.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">inbound_nat_rules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">load_balancer_rules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">inbound_nat_rules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The list of IDs of inbound rules that use this frontend IP.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">load_balancer_rules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The list of IDs of load balancing rules that use this frontend IP.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the frontend ip configuration.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">outboundRules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">outboundRules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The list of IDs outbound rules that use this frontend IP.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">private_ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Private IP Address to assign to the Load Balancer. The last one and first four IPs in any range are reserved and cannot be manually assigned.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">privateIpAddressAllocation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The allocation method for the Private IP Address used by this Load Balancer. Possible values as <code class="docutils literal notranslate"><span class="pre">Dynamic</span></code> and <code class="docutils literal notranslate"><span class="pre">Static</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">privateIpAddressVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The version of IP that the Private IP Address is. Possible values are <code class="docutils literal notranslate"><span class="pre">IPv4</span></code> or <code class="docutils literal notranslate"><span class="pre">IPv6</span></code>.</p></li>
@@ -698,7 +698,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>The <strong>frontend_ip_configurations</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Load Balancer Outbound Rule.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the Outbound Rule. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Frontend IP Configuration.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_azure.lb.OutboundRule.allocated_outbound_ports">
@@ -724,7 +724,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">frontend_ip_configuration</span></code> blocks as defined below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the Load Balancer Outbound Rule.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the name of the Outbound Rule. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the Frontend IP Configuration.</p></li>
 </ul>
 </dd></dl>
 
@@ -784,7 +784,7 @@ properties used to qualify the lookup.</p>
 <p>The <strong>frontend_ip_configurations</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Load Balancer Outbound Rule.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the Outbound Rule. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Frontend IP Configuration.</p></li>
 </ul>
 </dd></dl>
 

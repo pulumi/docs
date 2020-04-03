@@ -17,9 +17,6 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.athena.Database">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.athena.</code><code class="sig-name descname">Database</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">bucket=None</em>, <em class="sig-param">encryption_configuration=None</em>, <em class="sig-param">force_destroy=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.athena.Database" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an Athena database.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/athena_database.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/athena_database.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -34,8 +31,8 @@ anything, please consult the source <a class="reference external" href="https://
 </dl>
 <p>The <strong>encryption_configuration</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">encryptionOption</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">kmsKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">encryptionOption</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of key; one of <code class="docutils literal notranslate"><span class="pre">SSE_S3</span></code>, <code class="docutils literal notranslate"><span class="pre">SSE_KMS</span></code>, <code class="docutils literal notranslate"><span class="pre">CSE_KMS</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kmsKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The KMS key ARN or ID; required for key types <code class="docutils literal notranslate"><span class="pre">SSE_KMS</span></code> and <code class="docutils literal notranslate"><span class="pre">CSE_KMS</span></code>.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_aws.athena.Database.bucket">
@@ -48,8 +45,8 @@ anything, please consult the source <a class="reference external" href="https://
 <code class="sig-name descname">encryption_configuration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.athena.Database.encryption_configuration" title="Permalink to this definition">¶</a></dt>
 <dd><p>The encryption key block AWS Athena uses to decrypt the data in S3, such as an AWS Key Management Service (AWS KMS) key. An <code class="docutils literal notranslate"><span class="pre">encryption_configuration</span></code> block is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">encryptionOption</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">kmsKey</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">encryptionOption</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The type of key; one of <code class="docutils literal notranslate"><span class="pre">SSE_S3</span></code>, <code class="docutils literal notranslate"><span class="pre">SSE_KMS</span></code>, <code class="docutils literal notranslate"><span class="pre">CSE_KMS</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kmsKey</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The KMS key ARN or ID; required for key types <code class="docutils literal notranslate"><span class="pre">SSE_KMS</span></code> and <code class="docutils literal notranslate"><span class="pre">CSE_KMS</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -85,8 +82,8 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>encryption_configuration</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">encryptionOption</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">kmsKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">encryptionOption</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of key; one of <code class="docutils literal notranslate"><span class="pre">SSE_S3</span></code>, <code class="docutils literal notranslate"><span class="pre">SSE_KMS</span></code>, <code class="docutils literal notranslate"><span class="pre">CSE_KMS</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kmsKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The KMS key ARN or ID; required for key types <code class="docutils literal notranslate"><span class="pre">SSE_KMS</span></code> and <code class="docutils literal notranslate"><span class="pre">CSE_KMS</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -132,9 +129,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.athena.NamedQuery">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.athena.</code><code class="sig-name descname">NamedQuery</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">database=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">query=None</em>, <em class="sig-param">workgroup=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.athena.NamedQuery" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an Athena Named Query resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/athena_named_query.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/athena_named_query.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -239,11 +233,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.athena.Workgroup">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.athena.</code><code class="sig-name descname">Workgroup</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">configuration=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.athena.Workgroup" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.athena.</code><code class="sig-name descname">Workgroup</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">configuration=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">force_destroy=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.athena.Workgroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an Athena Workgroup.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/athena_workgroup.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/athena_workgroup.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -251,6 +242,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration block with various settings for the workgroup. Documented below.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the workgroup.</p></li>
+<li><p><strong>force_destroy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – The option to delete the workgroup and its contents even if the workgroup contains any named queries.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the workgroup.</p></li>
 <li><p><strong>state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – State of the workgroup. Valid values are <code class="docutils literal notranslate"><span class="pre">DISABLED</span></code> or <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code>.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags for the workgroup.</p></li>
@@ -266,8 +258,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">encryption_configuration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Configuration block with encryption settings. Documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">encryptionOption</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Indicates whether Amazon S3 server-side encryption with Amazon S3-managed keys (SSE-S3), server-side encryption with KMS-managed keys (SSE-KMS), or client-side encryption with KMS-managed keys (CSE-KMS) is used. If a query runs in a workgroup and the workgroup overrides client-side settings, then the workgroup’s setting for encryption is used. It specifies whether query results must be encrypted, for all queries that run in this workgroup.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - For SSE-KMS and CSE-KMS, this is the KMS key Amazon Resource Name (ARN).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">encryptionOption</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Indicates whether Amazon S3 server-side encryption with Amazon S3-managed keys (<code class="docutils literal notranslate"><span class="pre">SSE_S3</span></code>), server-side encryption with KMS-managed keys (<code class="docutils literal notranslate"><span class="pre">SSE_KMS</span></code>), or client-side encryption with KMS-managed keys (<code class="docutils literal notranslate"><span class="pre">CSE_KMS</span></code>) is used. If a query runs in a workgroup and the workgroup overrides client-side settings, then the workgroup’s setting for encryption is used. It specifies whether query results must be encrypted, for all queries that run in this workgroup.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - For <code class="docutils literal notranslate"><span class="pre">SSE_KMS</span></code> and <code class="docutils literal notranslate"><span class="pre">CSE_KMS</span></code>, this is the KMS key Amazon Resource Name (ARN).</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">output_location</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The location in Amazon S3 where your query results are stored, such as <code class="docutils literal notranslate"><span class="pre">s3://path/to/query/bucket/</span></code>. For more information, see <a class="reference external" href="https://docs.aws.amazon.com/athena/latest/ug/querying.html">Queries and Query Result Files</a>.</p></li>
@@ -292,8 +284,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">encryption_configuration</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Configuration block with encryption settings. Documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">encryptionOption</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Indicates whether Amazon S3 server-side encryption with Amazon S3-managed keys (SSE-S3), server-side encryption with KMS-managed keys (SSE-KMS), or client-side encryption with KMS-managed keys (CSE-KMS) is used. If a query runs in a workgroup and the workgroup overrides client-side settings, then the workgroup’s setting for encryption is used. It specifies whether query results must be encrypted, for all queries that run in this workgroup.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - For SSE-KMS and CSE-KMS, this is the KMS key Amazon Resource Name (ARN).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">encryptionOption</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Indicates whether Amazon S3 server-side encryption with Amazon S3-managed keys (<code class="docutils literal notranslate"><span class="pre">SSE_S3</span></code>), server-side encryption with KMS-managed keys (<code class="docutils literal notranslate"><span class="pre">SSE_KMS</span></code>), or client-side encryption with KMS-managed keys (<code class="docutils literal notranslate"><span class="pre">CSE_KMS</span></code>) is used. If a query runs in a workgroup and the workgroup overrides client-side settings, then the workgroup’s setting for encryption is used. It specifies whether query results must be encrypted, for all queries that run in this workgroup.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - For <code class="docutils literal notranslate"><span class="pre">SSE_KMS</span></code> and <code class="docutils literal notranslate"><span class="pre">CSE_KMS</span></code>, this is the KMS key Amazon Resource Name (ARN).</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">output_location</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The location in Amazon S3 where your query results are stored, such as <code class="docutils literal notranslate"><span class="pre">s3://path/to/query/bucket/</span></code>. For more information, see <a class="reference external" href="https://docs.aws.amazon.com/athena/latest/ug/querying.html">Queries and Query Result Files</a>.</p></li>
@@ -306,6 +298,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.athena.Workgroup.description">
 <code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.athena.Workgroup.description" title="Permalink to this definition">¶</a></dt>
 <dd><p>Description of the workgroup.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.athena.Workgroup.force_destroy">
+<code class="sig-name descname">force_destroy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.athena.Workgroup.force_destroy" title="Permalink to this definition">¶</a></dt>
+<dd><p>The option to delete the workgroup and its contents even if the workgroup contains any named queries.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -328,7 +326,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="method">
 <dt id="pulumi_aws.athena.Workgroup.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">configuration=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.athena.Workgroup.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">configuration=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">force_destroy=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.athena.Workgroup.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Workgroup resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -340,6 +338,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Amazon Resource Name (ARN) of the workgroup</p></li>
 <li><p><strong>configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration block with various settings for the workgroup. Documented below.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the workgroup.</p></li>
+<li><p><strong>force_destroy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – The option to delete the workgroup and its contents even if the workgroup contains any named queries.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the workgroup.</p></li>
 <li><p><strong>state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – State of the workgroup. Valid values are <code class="docutils literal notranslate"><span class="pre">DISABLED</span></code> or <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code>.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags for the workgroup.</p></li>
@@ -355,8 +354,8 @@ properties used to qualify the lookup.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">encryption_configuration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Configuration block with encryption settings. Documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">encryptionOption</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Indicates whether Amazon S3 server-side encryption with Amazon S3-managed keys (SSE-S3), server-side encryption with KMS-managed keys (SSE-KMS), or client-side encryption with KMS-managed keys (CSE-KMS) is used. If a query runs in a workgroup and the workgroup overrides client-side settings, then the workgroup’s setting for encryption is used. It specifies whether query results must be encrypted, for all queries that run in this workgroup.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - For SSE-KMS and CSE-KMS, this is the KMS key Amazon Resource Name (ARN).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">encryptionOption</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Indicates whether Amazon S3 server-side encryption with Amazon S3-managed keys (<code class="docutils literal notranslate"><span class="pre">SSE_S3</span></code>), server-side encryption with KMS-managed keys (<code class="docutils literal notranslate"><span class="pre">SSE_KMS</span></code>), or client-side encryption with KMS-managed keys (<code class="docutils literal notranslate"><span class="pre">CSE_KMS</span></code>) is used. If a query runs in a workgroup and the workgroup overrides client-side settings, then the workgroup’s setting for encryption is used. It specifies whether query results must be encrypted, for all queries that run in this workgroup.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - For <code class="docutils literal notranslate"><span class="pre">SSE_KMS</span></code> and <code class="docutils literal notranslate"><span class="pre">CSE_KMS</span></code>, this is the KMS key Amazon Resource Name (ARN).</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">output_location</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The location in Amazon S3 where your query results are stored, such as <code class="docutils literal notranslate"><span class="pre">s3://path/to/query/bucket/</span></code>. For more information, see <a class="reference external" href="https://docs.aws.amazon.com/athena/latest/ug/querying.html">Queries and Query Result Files</a>.</p></li>
