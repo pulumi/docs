@@ -5029,8 +5029,9 @@ The <code class="docutils literal notranslate"><span class="pre">sort</span></co
 </dl>
 <p>The <strong>filters</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Sort the images by this key. This may be one of <code class="docutils literal notranslate"><span class="pre">distribution</span></code>, <code class="docutils literal notranslate"><span class="pre">error_message</span></code>, <code class="docutils literal notranslate"><span class="pre">id</span></code>,
-<code class="docutils literal notranslate"><span class="pre">image</span></code>, <code class="docutils literal notranslate"><span class="pre">min_disk_size</span></code>, <code class="docutils literal notranslate"><span class="pre">name</span></code>, <code class="docutils literal notranslate"><span class="pre">private</span></code>, <code class="docutils literal notranslate"><span class="pre">size_gigabytes</span></code>, <code class="docutils literal notranslate"><span class="pre">slug</span></code>, <code class="docutils literal notranslate"><span class="pre">status</span></code>, or <code class="docutils literal notranslate"><span class="pre">type</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Filter the images by this key. This may be one of <code class="docutils literal notranslate"><span class="pre">distribution</span></code>, <code class="docutils literal notranslate"><span class="pre">error_message</span></code>,
+<code class="docutils literal notranslate"><span class="pre">id</span></code>, <code class="docutils literal notranslate"><span class="pre">image</span></code>, <code class="docutils literal notranslate"><span class="pre">min_disk_size</span></code>, <code class="docutils literal notranslate"><span class="pre">name</span></code>, <code class="docutils literal notranslate"><span class="pre">private</span></code>, <code class="docutils literal notranslate"><span class="pre">regions</span></code>, <code class="docutils literal notranslate"><span class="pre">size_gigabytes</span></code>, <code class="docutils literal notranslate"><span class="pre">slug</span></code>, <code class="docutils literal notranslate"><span class="pre">status</span></code>,
+<code class="docutils literal notranslate"><span class="pre">tags</span></code>, or <code class="docutils literal notranslate"><span class="pre">type</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of values to match against the <code class="docutils literal notranslate"><span class="pre">key</span></code> field. Only retrieves images
 where the <code class="docutils literal notranslate"><span class="pre">key</span></code> field takes on one or more of the values provided here.</p></li>
 </ul>
@@ -5048,7 +5049,10 @@ where the <code class="docutils literal notranslate"><span class="pre">key</span
 <dd><p>Use this data source to access information about an existing resource.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of Kubernetes cluster.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – The name of Kubernetes cluster.</p></li>
+<li><p><strong>tags</strong> (<em>list</em>) – A list of tag names to be applied to the Kubernetes cluster.</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
@@ -5116,8 +5120,8 @@ The <code class="docutils literal notranslate"><span class="pre">sort</span></co
 </dl>
 <p>The <strong>filters</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Sort the projects by this key. This may be one of <code class="docutils literal notranslate"><span class="pre">name</span></code>,
-<code class="docutils literal notranslate"><span class="pre">purpose</span></code>, <code class="docutils literal notranslate"><span class="pre">description</span></code>, or <code class="docutils literal notranslate"><span class="pre">environment</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Filter the projects by this key. This may be one of <code class="docutils literal notranslate"><span class="pre">name</span></code>,
+<code class="docutils literal notranslate"><span class="pre">purpose</span></code>, <code class="docutils literal notranslate"><span class="pre">description</span></code>, <code class="docutils literal notranslate"><span class="pre">environment</span></code>, or <code class="docutils literal notranslate"><span class="pre">is_default</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of values to match against the <code class="docutils literal notranslate"><span class="pre">key</span></code> field. Only retrieves projects
 where the <code class="docutils literal notranslate"><span class="pre">key</span></code> field takes on one or more of the values provided here.</p></li>
 </ul>
@@ -5180,8 +5184,8 @@ The <code class="docutils literal notranslate"><span class="pre">sort</span></co
 </dl>
 <p>The <strong>filters</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Sort the regions by this key. This may be one of <code class="docutils literal notranslate"><span class="pre">slug</span></code>,
-<code class="docutils literal notranslate"><span class="pre">name</span></code>, or <code class="docutils literal notranslate"><span class="pre">available</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Filter the regions by this key. This may be one of <code class="docutils literal notranslate"><span class="pre">slug</span></code>,
+<code class="docutils literal notranslate"><span class="pre">name</span></code>, <code class="docutils literal notranslate"><span class="pre">available</span></code>, <code class="docutils literal notranslate"><span class="pre">features</span></code>, or <code class="docutils literal notranslate"><span class="pre">sizes</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of values to match against the <code class="docutils literal notranslate"><span class="pre">key</span></code> field. Only retrieves regions
 where the <code class="docutils literal notranslate"><span class="pre">key</span></code> field takes on one or more of the values provided here.</p></li>
 </ul>
@@ -5214,8 +5218,9 @@ The <code class="docutils literal notranslate"><span class="pre">sort</span></co
 </dl>
 <p>The <strong>filters</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Sort the sizes by this key. This may be one of <code class="docutils literal notranslate"><span class="pre">slug</span></code>,
-<code class="docutils literal notranslate"><span class="pre">memory</span></code>, <code class="docutils literal notranslate"><span class="pre">vcpus</span></code>, <code class="docutils literal notranslate"><span class="pre">disk</span></code>, <code class="docutils literal notranslate"><span class="pre">transfer</span></code>, <code class="docutils literal notranslate"><span class="pre">price_monthly</span></code>, or <code class="docutils literal notranslate"><span class="pre">price_hourly</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Filter the sizes by this key. This may be one of <code class="docutils literal notranslate"><span class="pre">slug</span></code>,
+<code class="docutils literal notranslate"><span class="pre">regions</span></code>, <code class="docutils literal notranslate"><span class="pre">memory</span></code>, <code class="docutils literal notranslate"><span class="pre">vcpus</span></code>, <code class="docutils literal notranslate"><span class="pre">disk</span></code>, <code class="docutils literal notranslate"><span class="pre">transfer</span></code>, <code class="docutils literal notranslate"><span class="pre">price_monthly</span></code>,
+<code class="docutils literal notranslate"><span class="pre">price_hourly</span></code>, or <code class="docutils literal notranslate"><span class="pre">available</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Only retrieves images which keys has value that matches
 one of the values provided here.</p></li>
 </ul>
@@ -5256,6 +5261,7 @@ one of the values provided here.</p></li>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>description</strong> (<em>str</em>) – Text describing a block storage volume.</p></li>
 <li><p><strong>name</strong> (<em>str</em>) – The name of block storage volume.</p></li>
 <li><p><strong>region</strong> (<em>str</em>) – The region the block storage volume is provisioned in.</p></li>
 </ul>
