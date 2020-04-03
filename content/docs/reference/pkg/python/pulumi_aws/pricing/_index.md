@@ -41,9 +41,6 @@ anything, please consult the source <a class="reference external" href="https://
 <code class="sig-prename descclassname">pulumi_aws.pricing.</code><code class="sig-name descname">get_product</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">service_code=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.pricing.get_product" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the pricing information of all products in AWS.
 This data source is only available in a us-east-1 or ap-south-1 provider.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/pricing_product.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/pricing_product.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

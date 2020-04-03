@@ -20,6 +20,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li class="toctree-l1"><a class="reference internal" href="acmpca/">acmpca</a></li>
 <li class="toctree-l1"><a class="reference internal" href="alb/">alb</a></li>
 <li class="toctree-l1"><a class="reference internal" href="apigateway/">apigateway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apigatewayv2/">apigatewayv2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="appautoscaling/">appautoscaling</a></li>
 <li class="toctree-l1"><a class="reference internal" href="applicationloadbalancing/">applicationloadbalancing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="appmesh/">appmesh</a></li>

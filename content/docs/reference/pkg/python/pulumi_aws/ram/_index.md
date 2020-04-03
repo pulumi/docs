@@ -62,9 +62,6 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p>Organization and Organizational Unit principals cannot be used.</p></li>
 <li><p>For AWS Account ID principals, a resource share invitation is sent and must be accepted before resources become available. See the <cite>``ram.ResourceShareAccepter`</cite> resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/ram_resource_share_accepter.html">https://www.terraform.io/docs/providers/aws/r/ram_resource_share_accepter.html</a>&gt;`_ to accept these invitations.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ram_principal_association.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ram_principal_association.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -149,7 +146,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Manages a Resource Access Manager (RAM) Resource Association.</p>
 <blockquote>
 <div><p><em>NOTE:</em> Certain AWS resources (e.g. EC2 Subnets) can only be shared in an AWS account that is a member of an AWS Organizations organization with organization-wide Resource Access Manager functionality enabled. See the <a class="reference external" href="https://docs.aws.amazon.com/ram/latest/userguide/what-is.html">Resource Access Manager User Guide</a> and AWS service specific documentation for additional information.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ram_resource_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ram_resource_association.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -233,9 +229,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ram.ResourceShare">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ram.</code><code class="sig-name descname">ResourceShare</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allow_external_principals=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ram.ResourceShare" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Resource Access Manager (RAM) Resource Share. To association principals with the share, see the <cite>``ram.PrincipalAssociation`</cite> resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/ram_principal_association.html">https://www.terraform.io/docs/providers/aws/r/ram_principal_association.html</a>&gt;`_. To associate resources with the share, see the <cite>``ram.ResourceAssociation`</cite> resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/ram_resource_association.html">https://www.terraform.io/docs/providers/aws/r/ram_resource_association.html</a>&gt;`_.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ram_resource_share.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ram_resource_share.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -335,7 +328,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Manage accepting a Resource Access Manager (RAM) Resource Share invitation. From a <em>receiver</em> AWS account, accept an invitation to share resources that were shared by a <em>sender</em> AWS account. To create a resource share in the <em>sender</em>, see the <cite>``ram.ResourceShare`</cite> resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/ram_resource_share.html">https://www.terraform.io/docs/providers/aws/r/ram_resource_share.html</a>&gt;`_.</p>
 <blockquote>
 <div><p><strong>Note:</strong> If both AWS accounts are in the same Organization and <a class="reference external" href="https://docs.aws.amazon.com/ram/latest/userguide/getting-started-sharing.html#getting-started-sharing-orgs">RAM Sharing with AWS Organizations is enabled</a>, this resource is not necessary as RAM Resource Share invitations are not used.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ram_resource_share_accepter.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ram_resource_share_accepter.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -460,15 +452,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.ram.get_resource_share">
 <code class="sig-prename descclassname">pulumi_aws.ram.</code><code class="sig-name descname">get_resource_share</code><span class="sig-paren">(</span><em class="sig-param">filters=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_owner=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ram.get_resource_share" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">ram.ResourceShare</span></code> Retrieve information about a RAM Resource Share.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ram_resource_share.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ram_resource_share.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>filters</strong> (<em>list</em>) – A filter used to scope the list e.g. by tags. See [related docs] (<a class="reference external" href="https://docs.aws.amazon.com/ram/latest/APIReference/API_TagFilter.html">https://docs.aws.amazon.com/ram/latest/APIReference/API_TagFilter.html</a>).</p></li>
 <li><p><strong>name</strong> (<em>str</em>) – The name of the tag key to filter on.</p></li>
 <li><p><strong>resource_owner</strong> (<em>str</em>) – The owner of the resource share. Valid values are SELF or OTHER-ACCOUNTS</p></li>
+<li><p><strong>tags</strong> (<em>dict</em>) – The Tags attached to the RAM share</p></li>
 </ul>
 </dd>
 </dl>

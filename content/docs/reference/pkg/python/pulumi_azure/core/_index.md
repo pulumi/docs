@@ -44,6 +44,173 @@ anything, please consult the source <a class="reference external" href="https://
 <dd></dd></dl>
 
 <dl class="class">
+<dt id="pulumi_azure.core.CustomProvider">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.core.</code><code class="sig-name descname">CustomProvider</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">actions=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">resource_types=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">validations=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.core.CustomProvider" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages an Azure Custom Provider.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/custom_provider.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/custom_provider.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>actions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Any number of <code class="docutils literal notranslate"><span class="pre">action</span></code> block as defined below. One of <code class="docutils literal notranslate"><span class="pre">resource_type</span></code> or <code class="docutils literal notranslate"><span class="pre">action</span></code> must be specified.</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Custom Provider. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the Custom Provider.</p></li>
+<li><p><strong>resource_types</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Any number of <code class="docutils literal notranslate"><span class="pre">resource_type</span></code> block as defined below. One of <code class="docutils literal notranslate"><span class="pre">resource_type</span></code> or <code class="docutils literal notranslate"><span class="pre">action</span></code> must be specified.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>validations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Any number of <code class="docutils literal notranslate"><span class="pre">validation</span></code> block as defined below.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>actions</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">endpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the endpoint of the action.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the action.</p></li>
+</ul>
+<p>The <strong>resource_types</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">endpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the endpoint of the route definition.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the route definition.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">routingType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The routing type that is supported for the resource request. Valid values are <code class="docutils literal notranslate"><span class="pre">ResourceTypeRoutingProxy</span></code> or <code class="docutils literal notranslate"><span class="pre">ResourceTypeRoutingProxyCache</span></code>. This value defaults to <code class="docutils literal notranslate"><span class="pre">ResourceTypeRoutingProxy</span></code>.</p></li>
+</ul>
+<p>The <strong>validations</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">specification</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The endpoint where the validation specification is located.</p></li>
+</ul>
+<dl class="attribute">
+<dt id="pulumi_azure.core.CustomProvider.actions">
+<code class="sig-name descname">actions</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.core.CustomProvider.actions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Any number of <code class="docutils literal notranslate"><span class="pre">action</span></code> block as defined below. One of <code class="docutils literal notranslate"><span class="pre">resource_type</span></code> or <code class="docutils literal notranslate"><span class="pre">action</span></code> must be specified.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">endpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the endpoint of the action.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the name of the action.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.core.CustomProvider.location">
+<code class="sig-name descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.core.CustomProvider.location" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.core.CustomProvider.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.core.CustomProvider.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the name of the Custom Provider. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.core.CustomProvider.resource_group_name">
+<code class="sig-name descname">resource_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.core.CustomProvider.resource_group_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the resource group in which to create the Custom Provider.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.core.CustomProvider.resource_types">
+<code class="sig-name descname">resource_types</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.core.CustomProvider.resource_types" title="Permalink to this definition">¶</a></dt>
+<dd><p>Any number of <code class="docutils literal notranslate"><span class="pre">resource_type</span></code> block as defined below. One of <code class="docutils literal notranslate"><span class="pre">resource_type</span></code> or <code class="docutils literal notranslate"><span class="pre">action</span></code> must be specified.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">endpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the endpoint of the route definition.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the name of the route definition.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">routingType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The routing type that is supported for the resource request. Valid values are <code class="docutils literal notranslate"><span class="pre">ResourceTypeRoutingProxy</span></code> or <code class="docutils literal notranslate"><span class="pre">ResourceTypeRoutingProxyCache</span></code>. This value defaults to <code class="docutils literal notranslate"><span class="pre">ResourceTypeRoutingProxy</span></code>.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.core.CustomProvider.tags">
+<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.core.CustomProvider.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of tags to assign to the resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.core.CustomProvider.validations">
+<code class="sig-name descname">validations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.core.CustomProvider.validations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Any number of <code class="docutils literal notranslate"><span class="pre">validation</span></code> block as defined below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">specification</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The endpoint where the validation specification is located.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.core.CustomProvider.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">actions=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">resource_types=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">validations=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.core.CustomProvider.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing CustomProvider resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>actions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Any number of <code class="docutils literal notranslate"><span class="pre">action</span></code> block as defined below. One of <code class="docutils literal notranslate"><span class="pre">resource_type</span></code> or <code class="docutils literal notranslate"><span class="pre">action</span></code> must be specified.</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Custom Provider. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the Custom Provider.</p></li>
+<li><p><strong>resource_types</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Any number of <code class="docutils literal notranslate"><span class="pre">resource_type</span></code> block as defined below. One of <code class="docutils literal notranslate"><span class="pre">resource_type</span></code> or <code class="docutils literal notranslate"><span class="pre">action</span></code> must be specified.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>validations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Any number of <code class="docutils literal notranslate"><span class="pre">validation</span></code> block as defined below.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>actions</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">endpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the endpoint of the action.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the action.</p></li>
+</ul>
+<p>The <strong>resource_types</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">endpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the endpoint of the route definition.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the route definition.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">routingType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The routing type that is supported for the resource request. Valid values are <code class="docutils literal notranslate"><span class="pre">ResourceTypeRoutingProxy</span></code> or <code class="docutils literal notranslate"><span class="pre">ResourceTypeRoutingProxyCache</span></code>. This value defaults to <code class="docutils literal notranslate"><span class="pre">ResourceTypeRoutingProxy</span></code>.</p></li>
+</ul>
+<p>The <strong>validations</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">specification</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The endpoint where the validation specification is located.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.core.CustomProvider.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.core.CustomProvider.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.core.CustomProvider.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.core.CustomProvider.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_azure.core.GetClientConfigResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.core.</code><code class="sig-name descname">GetClientConfigResult</code><span class="sig-paren">(</span><em class="sig-param">client_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">object_id=None</em>, <em class="sig-param">subscription_id=None</em>, <em class="sig-param">tenant_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.core.GetClientConfigResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getClientConfig.</p>

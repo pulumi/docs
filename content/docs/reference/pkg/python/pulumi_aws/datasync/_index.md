@@ -19,7 +19,6 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>Manages an AWS DataSync Agent deployed on premises.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> One of <code class="docutils literal notranslate"><span class="pre">activation_key</span></code> or <code class="docutils literal notranslate"><span class="pre">ip_address</span></code> must be provided for resource creation (agent activation). Neither is required for resource import. If using <code class="docutils literal notranslate"><span class="pre">ip_address</span></code>, this provider must be able to make an HTTP (port 80) GET request to the specified IP address from where it is running. The agent will turn off that HTTP server after activation.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_agent.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_agent.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -128,7 +127,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Manages an AWS DataSync EFS Location.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> The EFS File System must have a mounted EFS Mount Target before creating this resource.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_location_efs.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_location_efs.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -251,7 +249,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Manages a SMB Location within AWS DataSync.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> The DataSync Agents must be available before creating this resource.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_location_smb.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_location_smb.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -403,7 +400,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Manages an NFS Location within AWS DataSync.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> The DataSync Agents must be available before creating this resource.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_location_nfs.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_location_nfs.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -521,9 +517,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.datasync.S3Location">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.datasync.</code><code class="sig-name descname">S3Location</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">s3_bucket_arn=None</em>, <em class="sig-param">s3_config=None</em>, <em class="sig-param">subdirectory=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.datasync.S3Location" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an S3 Location within AWS DataSync.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_location_s3.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_location_s3.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -640,9 +633,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.datasync.Task">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.datasync.</code><code class="sig-name descname">Task</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cloudwatch_log_group_arn=None</em>, <em class="sig-param">destination_location_arn=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">options=None</em>, <em class="sig-param">source_location_arn=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.datasync.Task" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an AWS DataSync Task, which represents a configuration for synchronization. Starting an execution of these DataSync Tasks (actually synchronizing files) is performed outside of this resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_task.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_task.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

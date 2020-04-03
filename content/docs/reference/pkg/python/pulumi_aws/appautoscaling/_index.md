@@ -36,9 +36,6 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><code class="docutils literal notranslate"><span class="pre">predefined_metric_type</span></code> - (Required) The metric type.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">resource_label</span></code> - (Optional) Reserved for future use.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appautoscaling_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appautoscaling_policy.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -294,9 +291,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.appautoscaling.ScheduledAction">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.appautoscaling.</code><code class="sig-name descname">ScheduledAction</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">end_time=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_id=None</em>, <em class="sig-param">scalable_dimension=None</em>, <em class="sig-param">scalable_target_action=None</em>, <em class="sig-param">schedule=None</em>, <em class="sig-param">service_namespace=None</em>, <em class="sig-param">start_time=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.appautoscaling.ScheduledAction" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an Application AutoScaling ScheduledAction resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appautoscaling_scheduled_action.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appautoscaling_scheduled_action.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -456,9 +450,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.appautoscaling.Target">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.appautoscaling.</code><code class="sig-name descname">Target</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">max_capacity=None</em>, <em class="sig-param">min_capacity=None</em>, <em class="sig-param">resource_id=None</em>, <em class="sig-param">role_arn=None</em>, <em class="sig-param">scalable_dimension=None</em>, <em class="sig-param">service_namespace=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.appautoscaling.Target" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an Application AutoScaling ScalableTarget resource. To manage policies which get attached to the target, see the <cite>``appautoscaling.Policy`</cite> resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/appautoscaling_policy.html">https://www.terraform.io/docs/providers/aws/r/appautoscaling_policy.html</a>&gt;`_.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appautoscaling_target.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appautoscaling_target.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

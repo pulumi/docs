@@ -16,16 +16,21 @@ anything, please consult the source <a class="reference external" href="https://
 <span class="target" id="module-pulumi_aws.worklink"></span><dl class="class">
 <dt id="pulumi_aws.worklink.Fleet">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.worklink.</code><code class="sig-name descname">Fleet</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">audit_stream_arn=None</em>, <em class="sig-param">device_ca_certificate=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">identity_provider=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network=None</em>, <em class="sig-param">optimize_for_end_user_location=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.worklink.Fleet" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Fleet resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] audit_stream_arn: The ARN of the Amazon Kinesis data stream that receives the audit events.
-:param pulumi.Input[str] device_ca_certificate: The certificate chain, including intermediate certificates and the root certificate authority certificate used to issue device certificates.
-:param pulumi.Input[str] display_name: The name of the fleet.
-:param pulumi.Input[dict] identity_provider: Provide this to allow manage the identity provider configuration for the fleet. Fields documented below.
-:param pulumi.Input[str] name: A region-unique name for the AMI.
-:param pulumi.Input[dict] network: Provide this to allow manage the company network configuration for the fleet. Fields documented below.
-:param pulumi.Input[bool] optimize_for_end_user_location: The option to optimize for better performance by routing traffic through the closest AWS Region to users, which may be outside of your home Region. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>audit_stream_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the Amazon Kinesis data stream that receives the audit events.</p></li>
+<li><p><strong>device_ca_certificate</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The certificate chain, including intermediate certificates and the root certificate authority certificate used to issue device certificates.</p></li>
+<li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the fleet.</p></li>
+<li><p><strong>identity_provider</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Provide this to allow manage the identity provider configuration for the fleet. Fields documented below.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A region-unique name for the AMI.</p></li>
+<li><p><strong>network</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Provide this to allow manage the company network configuration for the fleet. Fields documented below.</p></li>
+<li><p><strong>optimize_for_end_user_location</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – The option to optimize for better performance by routing traffic through the closest AWS Region to users, which may be outside of your home Region. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
 <p>The <strong>identity_provider</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">samlMetadata</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The SAML metadata document provided by the customer’s identity provider.</p></li>
@@ -191,12 +196,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_aws.worklink.WebsiteCertificateAuthorityAssociation">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.worklink.</code><code class="sig-name descname">WebsiteCertificateAuthorityAssociation</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">certificate=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">fleet_arn=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.worklink.WebsiteCertificateAuthorityAssociation" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a WebsiteCertificateAuthorityAssociation resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] certificate: The root certificate of the Certificate Authority.
-:param pulumi.Input[str] display_name: The certificate name to display.
-:param pulumi.Input[str] fleet_arn: The ARN of the fleet.</p>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>certificate</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The root certificate of the Certificate Authority.</p></li>
+<li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The certificate name to display.</p></li>
+<li><p><strong>fleet_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the fleet.</p></li>
+</ul>
+</dd>
+</dl>
 <dl class="attribute">
 <dt id="pulumi_aws.worklink.WebsiteCertificateAuthorityAssociation.certificate">
 <code class="sig-name descname">certificate</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.worklink.WebsiteCertificateAuthorityAssociation.certificate" title="Permalink to this definition">¶</a></dt>

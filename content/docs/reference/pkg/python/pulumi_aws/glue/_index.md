@@ -22,9 +22,6 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.glue.CatalogDatabase">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.glue.</code><code class="sig-name descname">CatalogDatabase</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">catalog_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">location_uri=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.CatalogDatabase" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Glue Catalog Database Resource. You can refer to the <a class="reference external" href="http://docs.aws.amazon.com/glue/latest/dg/populate-data-catalog.html">Glue Developer Guide</a> for a full explanation of the Glue Data Catalog functionality</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_catalog_database.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_catalog_database.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -131,9 +128,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.glue.CatalogTable">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.glue.</code><code class="sig-name descname">CatalogTable</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">catalog_id=None</em>, <em class="sig-param">database_name=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">owner=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">partition_keys=None</em>, <em class="sig-param">retention=None</em>, <em class="sig-param">storage_descriptor=None</em>, <em class="sig-param">table_type=None</em>, <em class="sig-param">view_expanded_text=None</em>, <em class="sig-param">view_original_text=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.CatalogTable" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Glue Catalog Table Resource. You can refer to the <a class="reference external" href="http://docs.aws.amazon.com/glue/latest/dg/populate-data-catalog.html">Glue Developer Guide</a> for a full explanation of the Glue Data Catalog functionality.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_catalog_table.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_catalog_table.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -430,7 +424,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Provides a Glue Classifier resource.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> It is only valid to create one type of classifier (csv, grok, JSON, or XML). Changing classifier types will recreate the classifier.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_classifier.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_classifier.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -606,9 +599,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.glue.Connection">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.glue.</code><code class="sig-name descname">Connection</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">catalog_id=None</em>, <em class="sig-param">connection_properties=None</em>, <em class="sig-param">connection_type=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">match_criterias=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">physical_connection_requirements=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.Connection" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Glue Connection resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_connection.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_connection.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -748,9 +738,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.glue.Crawler">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.glue.</code><code class="sig-name descname">Crawler</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">catalog_targets=None</em>, <em class="sig-param">classifiers=None</em>, <em class="sig-param">configuration=None</em>, <em class="sig-param">database_name=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">dynamodb_targets=None</em>, <em class="sig-param">jdbc_targets=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">s3_targets=None</em>, <em class="sig-param">schedule=None</em>, <em class="sig-param">schema_change_policy=None</em>, <em class="sig-param">security_configuration=None</em>, <em class="sig-param">table_prefix=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.Crawler" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Glue Crawler. More information can be found in the <a class="reference external" href="https://docs.aws.amazon.com/glue/latest/dg/add-crawler.html">AWS Glue Developer Guide</a></p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_crawler.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_crawler.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -758,7 +745,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>classifiers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of custom classifiers. By default, all AWS classifiers are included in a crawl, but these custom classifiers always override the default classifiers for a given classification.</p></li>
 <li><p><strong>configuration</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – JSON string of configuration information.</p></li>
-<li><p><strong>database_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Glue database to be synchronized.</p></li>
+<li><p><strong>database_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Glue database where results are written.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the crawler.</p></li>
 <li><p><strong>dynamodb_targets</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of nested DynamoDB target arguments. See below.</p></li>
 <li><p><strong>jdbc_targets</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of nested JBDC target arguments. See below.</p></li>
@@ -780,18 +767,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 <p>The <strong>dynamodb_targets</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path to the Amazon S3 target.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the DynamoDB table to crawl.</p></li>
 </ul>
 <p>The <strong>jdbc_targets</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">connectionName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the connection to use to connect to the JDBC target.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">exclusions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of glob patterns used to exclude from the crawl.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path to the Amazon S3 target.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path of the JDBC target.</p></li>
 </ul>
 <p>The <strong>s3_targets</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">exclusions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of glob patterns used to exclude from the crawl.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path to the Amazon S3 target.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the DynamoDB table to crawl.</p></li>
 </ul>
 <p>The <strong>schema_change_policy</strong> object supports the following:</p>
 <ul class="simple">
@@ -819,7 +806,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.glue.Crawler.database_name">
 <code class="sig-name descname">database_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.glue.Crawler.database_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the Glue database to be synchronized.</p>
+<dd><p>Glue database where results are written.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -833,7 +820,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">dynamodb_targets</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.glue.Crawler.dynamodb_targets" title="Permalink to this definition">¶</a></dt>
 <dd><p>List of nested DynamoDB target arguments. See below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The path to the Amazon S3 target.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the DynamoDB table to crawl.</p></li>
 </ul>
 </dd></dl>
 
@@ -844,7 +831,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">connectionName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the connection to use to connect to the JDBC target.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">exclusions</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of glob patterns used to exclude from the crawl.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The path to the Amazon S3 target.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The path of the JDBC target.</p></li>
 </ul>
 </dd></dl>
 
@@ -866,7 +853,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>List nested Amazon S3 target arguments. See below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">exclusions</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of glob patterns used to exclude from the crawl.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The path to the Amazon S3 target.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the DynamoDB table to crawl.</p></li>
 </ul>
 </dd></dl>
 
@@ -918,7 +905,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the crawler</p></li>
 <li><p><strong>classifiers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of custom classifiers. By default, all AWS classifiers are included in a crawl, but these custom classifiers always override the default classifiers for a given classification.</p></li>
 <li><p><strong>configuration</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – JSON string of configuration information.</p></li>
-<li><p><strong>database_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Glue database to be synchronized.</p></li>
+<li><p><strong>database_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Glue database where results are written.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the crawler.</p></li>
 <li><p><strong>dynamodb_targets</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of nested DynamoDB target arguments. See below.</p></li>
 <li><p><strong>jdbc_targets</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of nested JBDC target arguments. See below.</p></li>
@@ -941,18 +928,18 @@ properties used to qualify the lookup.</p>
 </ul>
 <p>The <strong>dynamodb_targets</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path to the Amazon S3 target.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the DynamoDB table to crawl.</p></li>
 </ul>
 <p>The <strong>jdbc_targets</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">connectionName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the connection to use to connect to the JDBC target.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">exclusions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of glob patterns used to exclude from the crawl.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path to the Amazon S3 target.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path of the JDBC target.</p></li>
 </ul>
 <p>The <strong>s3_targets</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">exclusions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of glob patterns used to exclude from the crawl.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path to the Amazon S3 target.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the DynamoDB table to crawl.</p></li>
 </ul>
 <p>The <strong>schema_change_policy</strong> object supports the following:</p>
 <ul class="simple">
@@ -1029,7 +1016,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Provides a Glue Job resource.</p>
 <blockquote>
 <div><p>Glue functionality, such as monitoring and logging of jobs, is typically managed with the <code class="docutils literal notranslate"><span class="pre">default_arguments</span></code> argument. See the <a class="reference external" href="https://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-etl-glue-arguments.html">Special Parameters Used by AWS Glue</a> topic in the Glue developer guide for additional information.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_job.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_job.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1046,7 +1032,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>glue_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The version of glue to use, for example “1.0”. For information about available versions, see the <a class="reference external" href="https://docs.aws.amazon.com/glue/latest/dg/release-notes.html">AWS Glue Release Notes</a>.</p></li>
 <li><p><strong>max_capacity</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum number of AWS Glue data processing units (DPUs) that can be allocated when this job runs. <code class="docutils literal notranslate"><span class="pre">Required</span></code> when <code class="docutils literal notranslate"><span class="pre">pythonshell</span></code> is set, accept either <code class="docutils literal notranslate"><span class="pre">0.0625</span></code> or <code class="docutils literal notranslate"><span class="pre">1.0</span></code>.</p></li>
 <li><p><strong>max_retries</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum number of times to retry this job if it fails.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the job command. Defaults to <code class="docutils literal notranslate"><span class="pre">glueetl</span></code>. Use <code class="docutils literal notranslate"><span class="pre">pythonshell</span></code> for Python Shell Job Type, <code class="docutils literal notranslate"><span class="pre">max_capacity</span></code> needs to be set if <code class="docutils literal notranslate"><span class="pre">pythonshell</span></code> is chosen.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name you assign to this job. It must be unique in your account.</p></li>
 <li><p><strong>notification_property</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Notification property of the job. Defined below.</p></li>
 <li><p><strong>number_of_workers</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of workers of a defined workerType that are allocated when a job runs.</p></li>
 <li><p><strong>role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the IAM role associated with this job.</p></li>
@@ -1142,7 +1128,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.glue.Job.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.glue.Job.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the job command. Defaults to <code class="docutils literal notranslate"><span class="pre">glueetl</span></code>. Use <code class="docutils literal notranslate"><span class="pre">pythonshell</span></code> for Python Shell Job Type, <code class="docutils literal notranslate"><span class="pre">max_capacity</span></code> needs to be set if <code class="docutils literal notranslate"><span class="pre">pythonshell</span></code> is chosen.</p>
+<dd><p>The name you assign to this job. It must be unique in your account.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1213,7 +1199,7 @@ properties used to qualify the lookup.</p>
 </p></li>
 <li><p><strong>max_capacity</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum number of AWS Glue data processing units (DPUs) that can be allocated when this job runs. <code class="docutils literal notranslate"><span class="pre">Required</span></code> when <code class="docutils literal notranslate"><span class="pre">pythonshell</span></code> is set, accept either <code class="docutils literal notranslate"><span class="pre">0.0625</span></code> or <code class="docutils literal notranslate"><span class="pre">1.0</span></code>.</p></li>
 <li><p><strong>max_retries</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum number of times to retry this job if it fails.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the job command. Defaults to <code class="docutils literal notranslate"><span class="pre">glueetl</span></code>. Use <code class="docutils literal notranslate"><span class="pre">pythonshell</span></code> for Python Shell Job Type, <code class="docutils literal notranslate"><span class="pre">max_capacity</span></code> needs to be set if <code class="docutils literal notranslate"><span class="pre">pythonshell</span></code> is chosen.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name you assign to this job. It must be unique in your account.</p></li>
 <li><p><strong>notification_property</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Notification property of the job. Defined below.</p></li>
 <li><p><strong>number_of_workers</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of workers of a defined workerType that are allocated when a job runs.</p></li>
 <li><p><strong>role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the IAM role associated with this job.</p></li>
@@ -1282,9 +1268,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.glue.SecurityConfiguration">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.glue.</code><code class="sig-name descname">SecurityConfiguration</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">encryption_configuration=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.SecurityConfiguration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Glue Security Configuration.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_security_configuration.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_security_configuration.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1429,9 +1412,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.glue.Trigger">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.glue.</code><code class="sig-name descname">Trigger</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">actions=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">predicate=None</em>, <em class="sig-param">schedule=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">workflow_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.Trigger" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Glue Trigger resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_trigger.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_trigger.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1453,8 +1433,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>The <strong>actions</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">arguments</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Arguments to be passed to the job. You can specify arguments here that your own job-execution script consumes, as well as arguments that AWS Glue itself consumes.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">crawlerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the crawler to watch. If this is specified, <code class="docutils literal notranslate"><span class="pre">crawl_state</span></code> must also be specified. Conflicts with <code class="docutils literal notranslate"><span class="pre">job_name</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">jobName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the job to watch. If this is specified, <code class="docutils literal notranslate"><span class="pre">state</span></code> must also be specified. Conflicts with <code class="docutils literal notranslate"><span class="pre">crawler_name</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">crawlerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the crawler to be executed. Conflicts with <code class="docutils literal notranslate"><span class="pre">job_name</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">jobName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of a job to be executed. Conflicts with <code class="docutils literal notranslate"><span class="pre">crawler_name</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">timeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The job run timeout in minutes. It overrides the timeout value of the job.</p></li>
 </ul>
 <p>The <strong>predicate</strong> object supports the following:</p>
@@ -1476,8 +1456,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>List of actions initiated by this trigger when it fires. Defined below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">arguments</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Arguments to be passed to the job. You can specify arguments here that your own job-execution script consumes, as well as arguments that AWS Glue itself consumes.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">crawlerName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the crawler to watch. If this is specified, <code class="docutils literal notranslate"><span class="pre">crawl_state</span></code> must also be specified. Conflicts with <code class="docutils literal notranslate"><span class="pre">job_name</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">jobName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the job to watch. If this is specified, <code class="docutils literal notranslate"><span class="pre">state</span></code> must also be specified. Conflicts with <code class="docutils literal notranslate"><span class="pre">crawler_name</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">crawlerName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the crawler to be executed. Conflicts with <code class="docutils literal notranslate"><span class="pre">job_name</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">jobName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of a job to be executed. Conflicts with <code class="docutils literal notranslate"><span class="pre">crawler_name</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">timeout</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The job run timeout in minutes. It overrides the timeout value of the job.</p></li>
 </ul>
 </dd></dl>
@@ -1576,8 +1556,8 @@ properties used to qualify the lookup.</p>
 <p>The <strong>actions</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">arguments</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Arguments to be passed to the job. You can specify arguments here that your own job-execution script consumes, as well as arguments that AWS Glue itself consumes.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">crawlerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the crawler to watch. If this is specified, <code class="docutils literal notranslate"><span class="pre">crawl_state</span></code> must also be specified. Conflicts with <code class="docutils literal notranslate"><span class="pre">job_name</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">jobName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the job to watch. If this is specified, <code class="docutils literal notranslate"><span class="pre">state</span></code> must also be specified. Conflicts with <code class="docutils literal notranslate"><span class="pre">crawler_name</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">crawlerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the crawler to be executed. Conflicts with <code class="docutils literal notranslate"><span class="pre">job_name</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">jobName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of a job to be executed. Conflicts with <code class="docutils literal notranslate"><span class="pre">crawler_name</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">timeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The job run timeout in minutes. It overrides the timeout value of the job.</p></li>
 </ul>
 <p>The <strong>predicate</strong> object supports the following:</p>
@@ -1639,9 +1619,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Provides a Glue Workflow resource.
 The workflow graph (DAG) can be build using the <code class="docutils literal notranslate"><span class="pre">glue.Trigger</span></code> resource. 
 See the example below for creating a graph with four nodes (two triggers and two jobs).</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_workflow.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_workflow.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1732,9 +1709,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.glue.get_script">
 <code class="sig-prename descclassname">pulumi_aws.glue.</code><code class="sig-name descname">get_script</code><span class="sig-paren">(</span><em class="sig-param">dag_edges=None</em>, <em class="sig-param">dag_nodes=None</em>, <em class="sig-param">language=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.glue.get_script" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to generate a Glue script from a Directed Acyclic Graph (DAG).</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/glue_script.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/glue_script.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

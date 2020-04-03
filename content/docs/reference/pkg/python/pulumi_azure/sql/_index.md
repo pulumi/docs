@@ -660,7 +660,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>The <strong>read_write_endpoint_failover_policy</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">graceMinutes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Applies only if <code class="docutils literal notranslate"><span class="pre">mode</span></code> is <code class="docutils literal notranslate"><span class="pre">Automatic</span></code>. The grace period in minutes before failover with data loss is attempted</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">mode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Failover policy for the read-only endpoint. Possible values are <code class="docutils literal notranslate"><span class="pre">Enabled</span></code>, and <code class="docutils literal notranslate"><span class="pre">Disabled</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - the failover mode. Possible values are <code class="docutils literal notranslate"><span class="pre">Manual</span></code>, <code class="docutils literal notranslate"><span class="pre">Automatic</span></code></p></li>
 </ul>
 <p>The <strong>readonly_endpoint_failover_policy</strong> object supports the following:</p>
 <ul class="simple">
@@ -701,7 +701,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>A read/write policy as documented below</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">graceMinutes</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Applies only if <code class="docutils literal notranslate"><span class="pre">mode</span></code> is <code class="docutils literal notranslate"><span class="pre">Automatic</span></code>. The grace period in minutes before failover with data loss is attempted</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">mode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Failover policy for the read-only endpoint. Possible values are <code class="docutils literal notranslate"><span class="pre">Enabled</span></code>, and <code class="docutils literal notranslate"><span class="pre">Disabled</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - the failover mode. Possible values are <code class="docutils literal notranslate"><span class="pre">Manual</span></code>, <code class="docutils literal notranslate"><span class="pre">Automatic</span></code></p></li>
 </ul>
 </dd></dl>
 
@@ -771,7 +771,7 @@ properties used to qualify the lookup.</p>
 <p>The <strong>read_write_endpoint_failover_policy</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">graceMinutes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Applies only if <code class="docutils literal notranslate"><span class="pre">mode</span></code> is <code class="docutils literal notranslate"><span class="pre">Automatic</span></code>. The grace period in minutes before failover with data loss is attempted</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">mode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Failover policy for the read-only endpoint. Possible values are <code class="docutils literal notranslate"><span class="pre">Enabled</span></code>, and <code class="docutils literal notranslate"><span class="pre">Disabled</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - the failover mode. Possible values are <code class="docutils literal notranslate"><span class="pre">Manual</span></code>, <code class="docutils literal notranslate"><span class="pre">Automatic</span></code></p></li>
 </ul>
 <p>The <strong>readonly_endpoint_failover_policy</strong> object supports the following:</p>
 <ul class="simple">
@@ -1090,7 +1090,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">principal_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Principal ID for the Service Principal associated with the Identity of this SQL Server.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">tenant_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Tenant ID for the Service Principal associated with the Identity of this SQL Server.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the identity type of the SQL Server. At this time the only allowed value is <code class="docutils literal notranslate"><span class="pre">SystemAssigned</span></code>.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_azure.sql.SqlServer.administrator_login">
@@ -1129,7 +1129,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">principal_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Principal ID for the Service Principal associated with the Identity of this SQL Server.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">tenant_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Tenant ID for the Service Principal associated with the Identity of this SQL Server.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the identity type of the SQL Server. At this time the only allowed value is <code class="docutils literal notranslate"><span class="pre">SystemAssigned</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -1199,7 +1199,7 @@ properties used to qualify the lookup.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">principal_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Principal ID for the Service Principal associated with the Identity of this SQL Server.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">tenant_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Tenant ID for the Service Principal associated with the Identity of this SQL Server.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the identity type of the SQL Server. At this time the only allowed value is <code class="docutils literal notranslate"><span class="pre">SystemAssigned</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -1363,6 +1363,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>name</strong> (<em>str</em>) – The name of the SQL Database.</p></li>
 <li><p><strong>resource_group_name</strong> (<em>str</em>) – Specifies the name of the Resource Group where the Azure SQL Database exists.</p></li>
 <li><p><strong>server_name</strong> (<em>str</em>) – The name of the SQL Server.</p></li>
+<li><p><strong>tags</strong> (<em>dict</em>) – A mapping of tags assigned to the resource.</p></li>
 </ul>
 </dd>
 </dl>

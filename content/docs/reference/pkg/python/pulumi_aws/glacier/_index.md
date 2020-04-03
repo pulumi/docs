@@ -19,7 +19,6 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>Provides a Glacier Vault Resource. You can refer to the <a class="reference external" href="https://docs.aws.amazon.com/amazonglacier/latest/dev/working-with-vaults.html">Glacier Developer Guide</a> for a full explanation of the Glacier Vault functionality</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> When removing a Glacier Vault, the Vault must be empty.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glacier_vault.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glacier_vault.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -156,9 +155,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>NOTE:</strong> This resource allows you to test Glacier Vault Lock policies by setting the <code class="docutils literal notranslate"><span class="pre">complete_lock</span></code> argument to <code class="docutils literal notranslate"><span class="pre">false</span></code>. When testing policies in this manner, the Glacier Vault Lock automatically expires after 24 hours and this provider will show this resource as needing recreation after that time. To permanently apply the policy, set the <code class="docutils literal notranslate"><span class="pre">complete_lock</span></code> argument to <code class="docutils literal notranslate"><span class="pre">true</span></code>. When changing <code class="docutils literal notranslate"><span class="pre">complete_lock</span></code> to <code class="docutils literal notranslate"><span class="pre">true</span></code>, it is expected the resource will show as recreating.</p>
 </div></blockquote>
 <p>!&gt; <strong>WARNING:</strong> Once a Glacier Vault Lock is completed, it is immutable. The deletion of the Glacier Vault Lock is not be possible and attempting to remove it from this provider will return an error. Set the <code class="docutils literal notranslate"><span class="pre">ignore_deletion_error</span></code> argument to <code class="docutils literal notranslate"><span class="pre">true</span></code> and apply this configuration before attempting to delete this resource via this provider or remove this resource from this provider’s management.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glacier_vault_lock.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glacier_vault_lock.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

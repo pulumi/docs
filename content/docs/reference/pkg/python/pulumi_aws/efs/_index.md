@@ -27,9 +27,6 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.efs.FileSystem">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.efs.</code><code class="sig-name descname">FileSystem</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">creation_token=None</em>, <em class="sig-param">encrypted=None</em>, <em class="sig-param">kms_key_id=None</em>, <em class="sig-param">lifecycle_policy=None</em>, <em class="sig-param">performance_mode=None</em>, <em class="sig-param">provisioned_throughput_in_mibps=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">throughput_mode=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.efs.FileSystem" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an Elastic File System (EFS) resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/efs_file_system.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/efs_file_system.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -313,9 +310,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.efs.MountTarget">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.efs.</code><code class="sig-name descname">MountTarget</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">file_system_id=None</em>, <em class="sig-param">ip_address=None</em>, <em class="sig-param">security_groups=None</em>, <em class="sig-param">subnet_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.efs.MountTarget" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an Elastic File System (EFS) mount target.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/efs_mount_target.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/efs_mount_target.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -442,9 +436,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.efs.get_file_system">
 <code class="sig-prename descclassname">pulumi_aws.efs.</code><code class="sig-name descname">get_file_system</code><span class="sig-paren">(</span><em class="sig-param">creation_token=None</em>, <em class="sig-param">file_system_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.efs.get_file_system" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides information about an Elastic File System (EFS).</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/efs_file_system.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/efs_file_system.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -459,9 +450,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.efs.get_mount_target">
 <code class="sig-prename descclassname">pulumi_aws.efs.</code><code class="sig-name descname">get_mount_target</code><span class="sig-paren">(</span><em class="sig-param">mount_target_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.efs.get_mount_target" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides information about an Elastic File System Mount Target (EFS).</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/efs_mount_target.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/efs_mount_target.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>mount_target_id</strong> (<em>str</em>) – ID of the mount target that you want to have described</p>
