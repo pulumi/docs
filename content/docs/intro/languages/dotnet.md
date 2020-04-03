@@ -22,16 +22,27 @@ Pulumi supports infrastructure as code using any .NET Core language. You can use
 
 The fastest way to get up and running is to choose from one of the following Getting Started guides:
 
-<div class="flex md:flex-row flex-col my-6">
-    <a class="block flex-1 btn bg-transparent border border-solid border-gray-300 hover:bg-gray-200 p-4 mb-4 mr-0 md:mb-0 md:mr-4 flex justify-center" href="{{< relref "../../get-started/aws" >}}">
-        <img class="h-5" src="/logos/tech/aws.svg" alt="AWS">
-    </a>
-    <a class="block flex-1 btn bg-transparent border border-solid border-gray-300 hover:bg-gray-200 p-4 mb-4 mr-0 md:mb-0 md:mr-4 flex justify-center" href="{{< relref "../../get-started/azure" >}}">
-        <img class="h-5" src="/logos/tech/azure.svg" alt="Azure">
-    </a>
-    <a class="block flex-1 btn bg-transparent border border-solid border-gray-300 hover:bg-gray-200 p-4 flex justify-center" href="{{< relref "../../get-started/gcp" >}}">
-        <img class="h-5" src="/logos/tech/gcp.svg" alt="Google Cloud">
-    </a>
+<div class="tiles mt-4">
+    <div class="flex-1 pb-4 md:mr-4">
+        <a class="tile p-4" href="{{< relref "/docs/get-started/aws" >}}">
+            <img class="h-8 mx-auto" src="/logos/tech/aws.svg" alt="AWS">
+        </a>
+    </div>
+    <div class="flex-1 pb-4 md:mr-4">
+        <a class="tile p-4" href="{{< relref "/docs/get-started/azure" >}}">
+            <img class="h-8 mx-auto" src="/logos/tech/azure.svg" alt="Azure">
+        </a>
+    </div>
+    <div class="flex-1 pb-4 md:mr-4">
+        <a class="tile p-4" href="{{< relref "/docs/get-started/gcp" >}}">
+            <img class="h-8 mx-auto" src="/logos/tech/gcp.svg" alt="Google Cloud">
+        </a>
+    </div>
+    <div class="flex-1 pb-4">
+        <a class="tile p-4" href="{{< relref "/docs/get-started/kubernetes" >}}">
+            <img class="h-8 mx-auto" src="/logos/tech/k8s.svg" alt="Kubernetes">
+        </a>
+    </div>
 </div>
 
 > The Getting Started guides currently only demonstrate C#. For F# and Visual Basic, please refer to the
