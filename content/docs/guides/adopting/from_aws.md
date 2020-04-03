@@ -32,7 +32,7 @@ let aws = require("@pulumi/aws");
 
 let network = aws.cloudformation.getStack({
     name: "my-network-stack",
-}, { async: true });
+});
 
 let subnetId = network.then(n => n.outputs["SubnetId"]);
 
@@ -51,7 +51,7 @@ import * as aws from "@pulumi/aws";
 
 const network = aws.cloudformation.getStack({
     name: "my-network-stack",
-}, { async: true });
+});
 
 const subnetId = network.then(n => n.outputs["SubnetId"]);
 
@@ -136,7 +136,7 @@ class Program
     {
         return Deployment.RunAsync(async () =>
         {
-            var network = await CloudFormation.Invokes.GetStack(new CloudFormation.GetStackArgs
+            var network = await CloudFormation.GetStack.InvokeAsync(new CloudFormation.GetStackArgs
             {
                 Name = "my-network-stack",
             });
