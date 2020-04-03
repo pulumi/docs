@@ -493,22 +493,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <p>The <strong>managed_disks</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">diskId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">stagingStorageAccountId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">targetDiskType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">targetReplicaDiskType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">target_resource_group_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Id of resource group where the VM should be created when a failover is done.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">diskId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Id of disk that should be replicated.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stagingStorageAccountId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Storage account that should be used for caching.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">targetDiskType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - What type should the disk be when a failover is done.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">targetReplicaDiskType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - What type should the disk be that holds the replication data.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">target_resource_group_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Resource group disk should belong to when a failover is done.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_azure.siterecovery.ReplicatedVM.managed_disks">
 <code class="sig-name descname">managed_disks</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.siterecovery.ReplicatedVM.managed_disks" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">managed_disk</span></code> block.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">diskId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">stagingStorageAccountId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">targetDiskType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">targetReplicaDiskType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">target_resource_group_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Id of resource group where the VM should be created when a failover is done.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">diskId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Id of disk that should be replicated.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stagingStorageAccountId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Storage account that should be used for caching.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">targetDiskType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - What type should the disk be when a failover is done.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">targetReplicaDiskType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - What type should the disk be that holds the replication data.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">target_resource_group_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Resource group disk should belong to when a failover is done.</p></li>
 </ul>
 </dd></dl>
 
@@ -599,11 +599,11 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>managed_disks</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">diskId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">stagingStorageAccountId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">targetDiskType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">targetReplicaDiskType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">target_resource_group_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Id of resource group where the VM should be created when a failover is done.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">diskId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Id of disk that should be replicated.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stagingStorageAccountId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Storage account that should be used for caching.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">targetDiskType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - What type should the disk be when a failover is done.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">targetReplicaDiskType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - What type should the disk be that holds the replication data.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">target_resource_group_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Resource group disk should belong to when a failover is done.</p></li>
 </ul>
 </dd></dl>
 

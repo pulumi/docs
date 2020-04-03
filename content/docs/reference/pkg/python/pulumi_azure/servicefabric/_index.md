@@ -15,7 +15,7 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_azure.servicefabric"></span><dl class="class">
 <dt id="pulumi_azure.servicefabric.Cluster">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.servicefabric.</code><code class="sig-name descname">Cluster</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">add_on_features=None</em>, <em class="sig-param">azure_active_directory=None</em>, <em class="sig-param">certificate=None</em>, <em class="sig-param">certificate_common_names=None</em>, <em class="sig-param">client_certificate_thumbprints=None</em>, <em class="sig-param">cluster_code_version=None</em>, <em class="sig-param">diagnostics_config=None</em>, <em class="sig-param">fabric_settings=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">management_endpoint=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">node_types=None</em>, <em class="sig-param">reliability_level=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">reverse_proxy_certificate=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">upgrade_mode=None</em>, <em class="sig-param">vm_image=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.servicefabric.Cluster" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.servicefabric.</code><code class="sig-name descname">Cluster</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">add_on_features=None</em>, <em class="sig-param">azure_active_directory=None</em>, <em class="sig-param">certificate=None</em>, <em class="sig-param">certificate_common_names=None</em>, <em class="sig-param">client_certificate_common_names=None</em>, <em class="sig-param">client_certificate_thumbprints=None</em>, <em class="sig-param">cluster_code_version=None</em>, <em class="sig-param">diagnostics_config=None</em>, <em class="sig-param">fabric_settings=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">management_endpoint=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">node_types=None</em>, <em class="sig-param">reliability_level=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">reverse_proxy_certificate=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">upgrade_mode=None</em>, <em class="sig-param">vm_image=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.servicefabric.Cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Service Fabric Cluster.</p>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/service_fabric_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/service_fabric_cluster.html.markdown</a>.</p>
@@ -29,6 +29,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><strong>azure_active_directory</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – An <code class="docutils literal notranslate"><span class="pre">azure_active_directory</span></code> block as defined below.</p></li>
 <li><p><strong>certificate</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">certificate</span></code> block as defined below. Conflicts with <code class="docutils literal notranslate"><span class="pre">certificate_common_names</span></code>.</p></li>
 <li><p><strong>certificate_common_names</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">certificate_common_names</span></code> block as defined below. Conflicts with <code class="docutils literal notranslate"><span class="pre">certificate</span></code>.</p></li>
+<li><p><strong>client_certificate_common_names</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">client_certificate_common_name</span></code> block as defined below.</p></li>
 <li><p><strong>client_certificate_thumbprints</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or two <code class="docutils literal notranslate"><span class="pre">client_certificate_thumbprint</span></code> blocks as defined below.</p></li>
 <li><p><strong>cluster_code_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Required if Upgrade Mode set to <code class="docutils literal notranslate"><span class="pre">Manual</span></code>, Specifies the Version of the Cluster Code of the cluster.</p></li>
 <li><p><strong>diagnostics_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">diagnostics_config</span></code> block as defined below. Changing this forces a new resource to be created.</p></li>
@@ -48,73 +49,79 @@ anything, please consult the source <a class="reference external" href="https://
 </dl>
 <p>The <strong>azure_active_directory</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">clientApplicationId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">clusterApplicationId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tenant_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clientApplicationId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Azure Active Directory Client ID which should be used for the Client Application.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clusterApplicationId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Azure Active Directory Cluster Application ID.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tenant_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Azure Active Directory Tenant ID.</p></li>
 </ul>
 <p>The <strong>certificate</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">thumbprint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">thumbprintSecondary</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">x509StoreName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">thumbprint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Thumbprint of the Certificate.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">thumbprintSecondary</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Secondary Thumbprint of the Certificate.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">x509StoreName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The X509 Store where the Certificate Exists, such as <code class="docutils literal notranslate"><span class="pre">My</span></code>.</p></li>
 </ul>
 <p>The <strong>certificate_common_names</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">commonNames</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">commonNames</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">common_names</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">certificateCommonName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">certificateIssuerThumbprint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificateCommonName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The common or subject name of the certificate.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificateIssuerThumbprint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Issuer Thumbprint of the Certificate.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">x509StoreName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">x509StoreName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The X509 Store where the Certificate Exists, such as <code class="docutils literal notranslate"><span class="pre">My</span></code>.</p></li>
+</ul>
+<p>The <strong>client_certificate_common_names</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">commonName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">isAdmin</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Does the Client Certificate have Admin Access to the cluster? Non-admin clients can only perform read only operations on the cluster.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">issuerThumbprint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 <p>The <strong>client_certificate_thumbprints</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">isAdmin</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">thumbprint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">isAdmin</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Does the Client Certificate have Admin Access to the cluster? Non-admin clients can only perform read only operations on the cluster.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">thumbprint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Thumbprint associated with the Client Certificate.</p></li>
 </ul>
 <p>The <strong>diagnostics_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">blobEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">protectedAccountKeyName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">queueEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tableEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">blobEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Blob Endpoint of the Storage Account.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protectedAccountKeyName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The protected diagnostics storage key name, such as <code class="docutils literal notranslate"><span class="pre">StorageAccountKey1</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">queueEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Queue Endpoint of the Storage Account.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Storage Account where the Diagnostics should be sent to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tableEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Table Endpoint of the Storage Account.</p></li>
 </ul>
 <p>The <strong>fabric_settings</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Service Fabric Cluster. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">parameters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Fabric Setting, such as <code class="docutils literal notranslate"><span class="pre">Security</span></code> or <code class="docutils literal notranslate"><span class="pre">Federation</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">parameters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A map containing settings for the specified Fabric Setting.</p></li>
 </ul>
 <p>The <strong>node_types</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">applicationPorts</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">applicationPorts</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">application_ports</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">endPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">startPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">endPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The end of the Application Port Range on this Node Type.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">startPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The start of the Application Port Range on this Node Type.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">capacities</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">clientEndpointPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">durabilityLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ephemeralPorts</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">capacities</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The capacity tags applied to the nodes in the node type, the cluster resource manager uses these tags to understand how much resource a node has.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clientEndpointPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The Port used for the Client Endpoint for this Node Type. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">durabilityLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Durability Level for this Node Type. Possible values include <code class="docutils literal notranslate"><span class="pre">Bronze</span></code>, <code class="docutils literal notranslate"><span class="pre">Gold</span></code> and <code class="docutils literal notranslate"><span class="pre">Silver</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Bronze</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ephemeralPorts</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">ephemeral_ports</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">endPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">startPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">endPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The end of the Ephemeral Port Range on this Node Type.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">startPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The start of the Ephemeral Port Range on this Node Type.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">httpEndpointPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">instanceCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">isPrimary</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Service Fabric Cluster. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">placementProperties</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">reverseProxyEndpointPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpEndpointPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The Port used for the HTTP Endpoint for this Node Type. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instanceCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of nodes for this Node Type.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">isPrimary</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is this the Primary Node Type? Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Node Type. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">placementProperties</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The placement tags applied to nodes in the node type, which can be used to indicate where certain services (workload) should run.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">reverseProxyEndpointPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The Port used for the Reverse Proxy Endpoint  for this Node Type. Changing this will upgrade the cluster.</p></li>
 </ul>
 <p>The <strong>reverse_proxy_certificate</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">thumbprint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">thumbprintSecondary</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">x509StoreName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">thumbprint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Thumbprint of the Certificate.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">thumbprintSecondary</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Secondary Thumbprint of the Certificate.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">x509StoreName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The X509 Store where the Certificate Exists, such as <code class="docutils literal notranslate"><span class="pre">My</span></code>.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_azure.servicefabric.Cluster.add_on_features">
@@ -127,9 +134,9 @@ anything, please consult the source <a class="reference external" href="https://
 <code class="sig-name descname">azure_active_directory</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.servicefabric.Cluster.azure_active_directory" title="Permalink to this definition">¶</a></dt>
 <dd><p>An <code class="docutils literal notranslate"><span class="pre">azure_active_directory</span></code> block as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">clientApplicationId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">clusterApplicationId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tenant_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clientApplicationId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Azure Active Directory Client ID which should be used for the Client Application.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clusterApplicationId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Azure Active Directory Cluster Application ID.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tenant_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Azure Active Directory Tenant ID.</p></li>
 </ul>
 </dd></dl>
 
@@ -138,9 +145,9 @@ anything, please consult the source <a class="reference external" href="https://
 <code class="sig-name descname">certificate</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.servicefabric.Cluster.certificate" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">certificate</span></code> block as defined below. Conflicts with <code class="docutils literal notranslate"><span class="pre">certificate_common_names</span></code>.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">thumbprint</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">thumbprintSecondary</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">x509StoreName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">thumbprint</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Thumbprint of the Certificate.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">thumbprintSecondary</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Secondary Thumbprint of the Certificate.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">x509StoreName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The X509 Store where the Certificate Exists, such as <code class="docutils literal notranslate"><span class="pre">My</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -149,13 +156,24 @@ anything, please consult the source <a class="reference external" href="https://
 <code class="sig-name descname">certificate_common_names</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.servicefabric.Cluster.certificate_common_names" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">certificate_common_names</span></code> block as defined below. Conflicts with <code class="docutils literal notranslate"><span class="pre">certificate</span></code>.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">commonNames</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">commonNames</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A <code class="docutils literal notranslate"><span class="pre">common_names</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">certificateCommonName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">certificateIssuerThumbprint</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificateCommonName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The common or subject name of the certificate.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificateIssuerThumbprint</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Issuer Thumbprint of the Certificate.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">x509StoreName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">x509StoreName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The X509 Store where the Certificate Exists, such as <code class="docutils literal notranslate"><span class="pre">My</span></code>.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.servicefabric.Cluster.client_certificate_common_names">
+<code class="sig-name descname">client_certificate_common_names</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.servicefabric.Cluster.client_certificate_common_names" title="Permalink to this definition">¶</a></dt>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">client_certificate_common_name</span></code> block as defined below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">commonName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">isAdmin</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Does the Client Certificate have Admin Access to the cluster? Non-admin clients can only perform read only operations on the cluster.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">issuerThumbprint</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 </ul>
 </dd></dl>
 
@@ -164,8 +182,8 @@ anything, please consult the source <a class="reference external" href="https://
 <code class="sig-name descname">client_certificate_thumbprints</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.servicefabric.Cluster.client_certificate_thumbprints" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or two <code class="docutils literal notranslate"><span class="pre">client_certificate_thumbprint</span></code> blocks as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">isAdmin</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">thumbprint</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">isAdmin</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Does the Client Certificate have Admin Access to the cluster? Non-admin clients can only perform read only operations on the cluster.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">thumbprint</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Thumbprint associated with the Client Certificate.</p></li>
 </ul>
 </dd></dl>
 
@@ -186,11 +204,11 @@ anything, please consult the source <a class="reference external" href="https://
 <code class="sig-name descname">diagnostics_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.servicefabric.Cluster.diagnostics_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">diagnostics_config</span></code> block as defined below. Changing this forces a new resource to be created.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">blobEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">protectedAccountKeyName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">queueEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tableEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">blobEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Blob Endpoint of the Storage Account.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protectedAccountKeyName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The protected diagnostics storage key name, such as <code class="docutils literal notranslate"><span class="pre">StorageAccountKey1</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">queueEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Queue Endpoint of the Storage Account.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the Storage Account where the Diagnostics should be sent to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tableEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Table Endpoint of the Storage Account.</p></li>
 </ul>
 </dd></dl>
 
@@ -199,8 +217,8 @@ anything, please consult the source <a class="reference external" href="https://
 <code class="sig-name descname">fabric_settings</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.servicefabric.Cluster.fabric_settings" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">fabric_settings</span></code> blocks as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the Service Fabric Cluster. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">parameters</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the Fabric Setting, such as <code class="docutils literal notranslate"><span class="pre">Security</span></code> or <code class="docutils literal notranslate"><span class="pre">Federation</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">parameters</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A map containing settings for the specified Fabric Setting.</p></li>
 </ul>
 </dd></dl>
 
@@ -227,27 +245,27 @@ anything, please consult the source <a class="reference external" href="https://
 <code class="sig-name descname">node_types</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.servicefabric.Cluster.node_types" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">node_type</span></code> blocks as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">applicationPorts</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">applicationPorts</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A <code class="docutils literal notranslate"><span class="pre">application_ports</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">endPort</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">startPort</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">endPort</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The end of the Application Port Range on this Node Type.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">startPort</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The start of the Application Port Range on this Node Type.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">capacities</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">clientEndpointPort</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">durabilityLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ephemeralPorts</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">capacities</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The capacity tags applied to the nodes in the node type, the cluster resource manager uses these tags to understand how much resource a node has.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clientEndpointPort</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The Port used for the Client Endpoint for this Node Type. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">durabilityLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Durability Level for this Node Type. Possible values include <code class="docutils literal notranslate"><span class="pre">Bronze</span></code>, <code class="docutils literal notranslate"><span class="pre">Gold</span></code> and <code class="docutils literal notranslate"><span class="pre">Silver</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Bronze</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ephemeralPorts</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A <code class="docutils literal notranslate"><span class="pre">ephemeral_ports</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">endPort</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">startPort</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">endPort</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The end of the Ephemeral Port Range on this Node Type.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">startPort</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The start of the Ephemeral Port Range on this Node Type.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">httpEndpointPort</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">instanceCount</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">isPrimary</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the Service Fabric Cluster. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">placementProperties</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">reverseProxyEndpointPort</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpEndpointPort</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The Port used for the HTTP Endpoint for this Node Type. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instanceCount</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of nodes for this Node Type.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">isPrimary</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Is this the Primary Node Type? Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the Node Type. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">placementProperties</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The placement tags applied to nodes in the node type, which can be used to indicate where certain services (workload) should run.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">reverseProxyEndpointPort</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The Port used for the Reverse Proxy Endpoint  for this Node Type. Changing this will upgrade the cluster.</p></li>
 </ul>
 </dd></dl>
 
@@ -268,9 +286,9 @@ anything, please consult the source <a class="reference external" href="https://
 <code class="sig-name descname">reverse_proxy_certificate</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.servicefabric.Cluster.reverse_proxy_certificate" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">reverse_proxy_certificate</span></code> block as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">thumbprint</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">thumbprintSecondary</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">x509StoreName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">thumbprint</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Thumbprint of the Certificate.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">thumbprintSecondary</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Secondary Thumbprint of the Certificate.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">x509StoreName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The X509 Store where the Certificate Exists, such as <code class="docutils literal notranslate"><span class="pre">My</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -294,7 +312,7 @@ anything, please consult the source <a class="reference external" href="https://
 
 <dl class="method">
 <dt id="pulumi_azure.servicefabric.Cluster.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">add_on_features=None</em>, <em class="sig-param">azure_active_directory=None</em>, <em class="sig-param">certificate=None</em>, <em class="sig-param">certificate_common_names=None</em>, <em class="sig-param">client_certificate_thumbprints=None</em>, <em class="sig-param">cluster_code_version=None</em>, <em class="sig-param">cluster_endpoint=None</em>, <em class="sig-param">diagnostics_config=None</em>, <em class="sig-param">fabric_settings=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">management_endpoint=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">node_types=None</em>, <em class="sig-param">reliability_level=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">reverse_proxy_certificate=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">upgrade_mode=None</em>, <em class="sig-param">vm_image=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.servicefabric.Cluster.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">add_on_features=None</em>, <em class="sig-param">azure_active_directory=None</em>, <em class="sig-param">certificate=None</em>, <em class="sig-param">certificate_common_names=None</em>, <em class="sig-param">client_certificate_common_names=None</em>, <em class="sig-param">client_certificate_thumbprints=None</em>, <em class="sig-param">cluster_code_version=None</em>, <em class="sig-param">cluster_endpoint=None</em>, <em class="sig-param">diagnostics_config=None</em>, <em class="sig-param">fabric_settings=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">management_endpoint=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">node_types=None</em>, <em class="sig-param">reliability_level=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">reverse_proxy_certificate=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">upgrade_mode=None</em>, <em class="sig-param">vm_image=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.servicefabric.Cluster.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Cluster resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -307,6 +325,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>azure_active_directory</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – An <code class="docutils literal notranslate"><span class="pre">azure_active_directory</span></code> block as defined below.</p></li>
 <li><p><strong>certificate</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">certificate</span></code> block as defined below. Conflicts with <code class="docutils literal notranslate"><span class="pre">certificate_common_names</span></code>.</p></li>
 <li><p><strong>certificate_common_names</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">certificate_common_names</span></code> block as defined below. Conflicts with <code class="docutils literal notranslate"><span class="pre">certificate</span></code>.</p></li>
+<li><p><strong>client_certificate_common_names</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">client_certificate_common_name</span></code> block as defined below.</p></li>
 <li><p><strong>client_certificate_thumbprints</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or two <code class="docutils literal notranslate"><span class="pre">client_certificate_thumbprint</span></code> blocks as defined below.</p></li>
 <li><p><strong>cluster_code_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Required if Upgrade Mode set to <code class="docutils literal notranslate"><span class="pre">Manual</span></code>, Specifies the Version of the Cluster Code of the cluster.</p></li>
 <li><p><strong>cluster_endpoint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Cluster Endpoint for this Service Fabric Cluster.</p></li>
@@ -327,73 +346,79 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>azure_active_directory</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">clientApplicationId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">clusterApplicationId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tenant_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clientApplicationId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Azure Active Directory Client ID which should be used for the Client Application.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clusterApplicationId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Azure Active Directory Cluster Application ID.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tenant_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Azure Active Directory Tenant ID.</p></li>
 </ul>
 <p>The <strong>certificate</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">thumbprint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">thumbprintSecondary</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">x509StoreName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">thumbprint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Thumbprint of the Certificate.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">thumbprintSecondary</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Secondary Thumbprint of the Certificate.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">x509StoreName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The X509 Store where the Certificate Exists, such as <code class="docutils literal notranslate"><span class="pre">My</span></code>.</p></li>
 </ul>
 <p>The <strong>certificate_common_names</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">commonNames</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">commonNames</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">common_names</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">certificateCommonName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">certificateIssuerThumbprint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificateCommonName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The common or subject name of the certificate.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificateIssuerThumbprint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Issuer Thumbprint of the Certificate.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">x509StoreName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">x509StoreName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The X509 Store where the Certificate Exists, such as <code class="docutils literal notranslate"><span class="pre">My</span></code>.</p></li>
+</ul>
+<p>The <strong>client_certificate_common_names</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">commonName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">isAdmin</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Does the Client Certificate have Admin Access to the cluster? Non-admin clients can only perform read only operations on the cluster.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">issuerThumbprint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 <p>The <strong>client_certificate_thumbprints</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">isAdmin</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">thumbprint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">isAdmin</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Does the Client Certificate have Admin Access to the cluster? Non-admin clients can only perform read only operations on the cluster.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">thumbprint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Thumbprint associated with the Client Certificate.</p></li>
 </ul>
 <p>The <strong>diagnostics_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">blobEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">protectedAccountKeyName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">queueEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tableEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">blobEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Blob Endpoint of the Storage Account.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protectedAccountKeyName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The protected diagnostics storage key name, such as <code class="docutils literal notranslate"><span class="pre">StorageAccountKey1</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">queueEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Queue Endpoint of the Storage Account.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Storage Account where the Diagnostics should be sent to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tableEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Table Endpoint of the Storage Account.</p></li>
 </ul>
 <p>The <strong>fabric_settings</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Service Fabric Cluster. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">parameters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Fabric Setting, such as <code class="docutils literal notranslate"><span class="pre">Security</span></code> or <code class="docutils literal notranslate"><span class="pre">Federation</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">parameters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A map containing settings for the specified Fabric Setting.</p></li>
 </ul>
 <p>The <strong>node_types</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">applicationPorts</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">applicationPorts</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">application_ports</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">endPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">startPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">endPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The end of the Application Port Range on this Node Type.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">startPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The start of the Application Port Range on this Node Type.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">capacities</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">clientEndpointPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">durabilityLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ephemeralPorts</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">capacities</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The capacity tags applied to the nodes in the node type, the cluster resource manager uses these tags to understand how much resource a node has.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clientEndpointPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The Port used for the Client Endpoint for this Node Type. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">durabilityLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Durability Level for this Node Type. Possible values include <code class="docutils literal notranslate"><span class="pre">Bronze</span></code>, <code class="docutils literal notranslate"><span class="pre">Gold</span></code> and <code class="docutils literal notranslate"><span class="pre">Silver</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Bronze</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ephemeralPorts</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">ephemeral_ports</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">endPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">startPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">endPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The end of the Ephemeral Port Range on this Node Type.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">startPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The start of the Ephemeral Port Range on this Node Type.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">httpEndpointPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">instanceCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">isPrimary</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Service Fabric Cluster. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">placementProperties</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">reverseProxyEndpointPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpEndpointPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The Port used for the HTTP Endpoint for this Node Type. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instanceCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of nodes for this Node Type.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">isPrimary</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is this the Primary Node Type? Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Node Type. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">placementProperties</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The placement tags applied to nodes in the node type, which can be used to indicate where certain services (workload) should run.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">reverseProxyEndpointPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The Port used for the Reverse Proxy Endpoint  for this Node Type. Changing this will upgrade the cluster.</p></li>
 </ul>
 <p>The <strong>reverse_proxy_certificate</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">thumbprint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">thumbprintSecondary</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">x509StoreName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">thumbprint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Thumbprint of the Certificate.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">thumbprintSecondary</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Secondary Thumbprint of the Certificate.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">x509StoreName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The X509 Store where the Certificate Exists, such as <code class="docutils literal notranslate"><span class="pre">My</span></code>.</p></li>
 </ul>
 </dd></dl>
 

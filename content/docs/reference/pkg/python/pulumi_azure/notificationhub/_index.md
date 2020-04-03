@@ -257,26 +257,26 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <p>The <strong>apns_credential</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">applicationMode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">bundleId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">keyId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">teamId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">token</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">applicationMode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Application Mode which defines which server the APNS Messages should be sent to. Possible values are <code class="docutils literal notranslate"><span class="pre">Production</span></code> and <code class="docutils literal notranslate"><span class="pre">Sandbox</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bundleId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Bundle ID of the iOS/macOS application to send push notifications for, such as <code class="docutils literal notranslate"><span class="pre">com.org.example</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">keyId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Apple Push Notifications Service (APNS) Key.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">teamId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the team the Token.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">token</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Push Token associated with the Apple Developer Account. This is the contents of the <code class="docutils literal notranslate"><span class="pre">key</span></code> downloaded from <a class="reference external" href="https://developer.apple.com/account/ios/authkey/">the Apple Developer Portal</a> between the <code class="docutils literal notranslate"><span class="pre">-----BEGIN</span> <span class="pre">PRIVATE</span> <span class="pre">KEY-----</span></code> and <code class="docutils literal notranslate"><span class="pre">-----END</span> <span class="pre">PRIVATE</span> <span class="pre">KEY-----</span></code> blocks.</p></li>
 </ul>
 <p>The <strong>gcm_credential</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">api_key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">api_key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The API Key associated with the Google Cloud Messaging service.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_azure.notificationhub.Hub.apns_credential">
 <code class="sig-name descname">apns_credential</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.notificationhub.Hub.apns_credential" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">apns_credential</span></code> block as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">applicationMode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">bundleId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">keyId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">teamId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">token</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">applicationMode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Application Mode which defines which server the APNS Messages should be sent to. Possible values are <code class="docutils literal notranslate"><span class="pre">Production</span></code> and <code class="docutils literal notranslate"><span class="pre">Sandbox</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bundleId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Bundle ID of the iOS/macOS application to send push notifications for, such as <code class="docutils literal notranslate"><span class="pre">com.org.example</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">keyId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Apple Push Notifications Service (APNS) Key.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">teamId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the team the Token.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">token</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Push Token associated with the Apple Developer Account. This is the contents of the <code class="docutils literal notranslate"><span class="pre">key</span></code> downloaded from <a class="reference external" href="https://developer.apple.com/account/ios/authkey/">the Apple Developer Portal</a> between the <code class="docutils literal notranslate"><span class="pre">-----BEGIN</span> <span class="pre">PRIVATE</span> <span class="pre">KEY-----</span></code> and <code class="docutils literal notranslate"><span class="pre">-----END</span> <span class="pre">PRIVATE</span> <span class="pre">KEY-----</span></code> blocks.</p></li>
 </ul>
 </dd></dl>
 
@@ -285,7 +285,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">gcm_credential</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.notificationhub.Hub.gcm_credential" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">gcm_credential</span></code> block as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">api_key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">api_key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The API Key associated with the Google Cloud Messaging service.</p></li>
 </ul>
 </dd></dl>
 
@@ -335,15 +335,15 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>apns_credential</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">applicationMode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">bundleId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">keyId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">teamId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">token</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">applicationMode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Application Mode which defines which server the APNS Messages should be sent to. Possible values are <code class="docutils literal notranslate"><span class="pre">Production</span></code> and <code class="docutils literal notranslate"><span class="pre">Sandbox</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bundleId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Bundle ID of the iOS/macOS application to send push notifications for, such as <code class="docutils literal notranslate"><span class="pre">com.org.example</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">keyId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Apple Push Notifications Service (APNS) Key.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">teamId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the team the Token.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">token</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Push Token associated with the Apple Developer Account. This is the contents of the <code class="docutils literal notranslate"><span class="pre">key</span></code> downloaded from <a class="reference external" href="https://developer.apple.com/account/ios/authkey/">the Apple Developer Portal</a> between the <code class="docutils literal notranslate"><span class="pre">-----BEGIN</span> <span class="pre">PRIVATE</span> <span class="pre">KEY-----</span></code> and <code class="docutils literal notranslate"><span class="pre">-----END</span> <span class="pre">PRIVATE</span> <span class="pre">KEY-----</span></code> blocks.</p></li>
 </ul>
 <p>The <strong>gcm_credential</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">api_key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">api_key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The API Key associated with the Google Cloud Messaging service.</p></li>
 </ul>
 </dd></dl>
 
