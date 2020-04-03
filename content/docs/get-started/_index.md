@@ -24,23 +24,23 @@ aliases:
 
 <div class="tiles flex-wrap mt-4">
     <div class="pb-4 md:pr-4 md:w-1/2">
-        <a class="tile p-4" href="{{< relref "aws" >}}">
-            <img class="h-8 mx-auto" src="/logos/tech/aws.svg" alt="AWS">
+        <a class="tile p-8" href="{{< relref "aws" >}}">
+            <img class="h-10 mx-auto" src="/logos/tech/aws.svg" alt="AWS">
         </a>
     </div>
     <div class="pb-4 md:w-1/2">
-        <a class="tile p-4" href="{{< relref "azure" >}}">
-            <img class="h-8 mx-auto" src="/logos/tech/azure.svg" alt="Azure">
+        <a class="tile p-8" href="{{< relref "azure" >}}">
+            <img class="h-10 mx-auto" src="/logos/tech/azure.svg" alt="Azure">
         </a>
     </div>
     <div class="pb-4 md:pr-4 md:w-1/2">
-        <a class="tile p-4" href="{{< relref "gcp" >}}">
-            <img class="h-8 mx-auto" src="/logos/tech/gcp.svg" alt="Google Cloud">
+        <a class="tile p-8" href="{{< relref "gcp" >}}">
+            <img class="h-10 mx-auto" src="/logos/tech/gcp.svg" alt="Google Cloud">
         </a>
     </div>
     <div class="pb-4 md:w-1/2">
-        <a class="tile p-4" href="{{< relref "kubernetes" >}}">
-            <img class="h-8 mx-auto" src="/logos/tech/k8s.svg" alt="Kubernetes">
+        <a class="tile p-8" href="{{< relref "kubernetes" >}}">
+            <img class="h-10 mx-auto" src="/logos/tech/k8s.svg" alt="Kubernetes">
         </a>
     </div>
 </div>
