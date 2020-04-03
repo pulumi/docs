@@ -17,7 +17,7 @@ process that you have today. For example, doing code reviews via Pull Requests, 
 analysis tools, and running unit and integration tests as appropriate. It all "just works" for your cloud
 infrastructure the same way it would for your application code.
 
-Pulumi can easily integrate into any continuous integration/continuous deliver (CI/CD) system. If your software isn't listed below or you are testing something new, see our guide for using Pulumi
+Pulumi can easily integrate into any continuous integration/continuous deliver (CI/CD) system. If your CI/CD system isn't listed below or you are testing something new, see our guide for using Pulumi
 within a [generic CI/CD system]({{< relref "other" >}}).
 
 <div class="supported-cicd-platforms">
