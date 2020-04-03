@@ -56,270 +56,271 @@ anything, please consult the source <a class="reference external" href="https://
 </dl>
 <p>The <strong>authentication_certificates</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">data</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">data</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The contents of the Authentication Certificate which should be used.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Rewrite Rule Set</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Application Gateway. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Authentication Certificate.</p></li>
 </ul>
 <p>The <strong>autoscale_configuration</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">maxCapacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">minCapacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxCapacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Maximum capacity for autoscaling. Accepted values are in the range <code class="docutils literal notranslate"><span class="pre">2</span></code> to <code class="docutils literal notranslate"><span class="pre">125</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">min_capacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Minimum capacity for autoscaling. Accepted values are in the range <code class="docutils literal notranslate"><span class="pre">0</span></code> to <code class="docutils literal notranslate"><span class="pre">100</span></code>.</p></li>
 </ul>
 <p>The <strong>backend_address_pools</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">fqdns</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fqdns</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of FQDN’s which should be part of the Backend Address Pool.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Rewrite Rule Set</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ipAddresses</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Application Gateway. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipAddresses</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of IP Addresses which should be part of the Backend Address Pool.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Backend Address Pool.</p></li>
 </ul>
 <p>The <strong>backend_http_settings</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">affinityCookieName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">authentication_certificates</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">authentication_certificate</span></code> blocks as defined below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">affinityCookieName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the affinity cookie.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">authentication_certificates</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">authentication_certificate</span></code> blocks.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Rewrite Rule Set</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Application Gateway. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Authentication Certificate.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">connectionDraining</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">connectionDraining</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">connection_draining</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">drainTimeoutSec</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">drainTimeoutSec</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of seconds connection draining is active. Acceptable values are from <code class="docutils literal notranslate"><span class="pre">1</span></code> second to <code class="docutils literal notranslate"><span class="pre">3600</span></code> seconds.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If connection draining is enabled or not.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">cookieBasedAffinity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">host_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cookieBasedAffinity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Is Cookie-Based Affinity enabled? Possible values are <code class="docutils literal notranslate"><span class="pre">Enabled</span></code> and <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">host_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Host header to be sent to the backend servers. Cannot be set if <code class="docutils literal notranslate"><span class="pre">pick_host_name_from_backend_address</span></code> is set to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Rewrite Rule Set</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Application Gateway. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">pickHostNameFromBackendAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Backend HTTP Settings Collection.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Path which should be used as a prefix for all HTTP requests.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pickHostNameFromBackendAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether host header should be picked from the host name of the backend server. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The port used for this Frontend Port.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">probe_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the associated Probe.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">probeName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">requestTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">trustedRootCertificateNames</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">probeName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of an associated HTTP Probe.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Protocol to use for this HTTP Listener. Possible values are <code class="docutils literal notranslate"><span class="pre">Http</span></code> and <code class="docutils literal notranslate"><span class="pre">Https</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requestTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The request timeout in seconds, which must be between 1 and 86400 seconds.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">trustedRootCertificateNames</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of <code class="docutils literal notranslate"><span class="pre">trusted_root_certificate</span></code> names.</p></li>
 </ul>
 <p>The <strong>custom_error_configurations</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">customErrorPageUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">customErrorPageUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Error page URL of the application gateway customer error.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Rewrite Rule Set</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">statusCode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">statusCode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Status code of the application gateway customer error. Possible values are <code class="docutils literal notranslate"><span class="pre">HttpStatus403</span></code> and <code class="docutils literal notranslate"><span class="pre">HttpStatus502</span></code></p></li>
 </ul>
 <p>The <strong>frontend_ip_configurations</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Rewrite Rule Set</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Application Gateway. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">private_ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">privateIpAddressAllocation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">publicIpAddressId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Frontend IP Configuration.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">private_ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Private IP Address to use for the Application Gateway.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">privateIpAddressAllocation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Allocation Method for the Private IP Address. Possible values are <code class="docutils literal notranslate"><span class="pre">Dynamic</span></code> and <code class="docutils literal notranslate"><span class="pre">Static</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publicIpAddressId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of a Public IP Address which the Application Gateway should use.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Subnet which the Application Gateway should be connected to.</p></li>
 </ul>
 <p>The <strong>frontend_ports</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Rewrite Rule Set</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Application Gateway. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Frontend Port.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The port used for this Frontend Port.</p></li>
 </ul>
 <p>The <strong>gateway_ip_configurations</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Rewrite Rule Set</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Application Gateway. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of this Gateway IP Configuration.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of a Subnet.</p></li>
 </ul>
 <p>The <strong>http_listeners</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">custom_error_configurations</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">custom_error_configuration</span></code> blocks as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">customErrorPageUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">customErrorPageUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Error page URL of the application gateway customer error.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Rewrite Rule Set</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">statusCode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">statusCode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Status code of the application gateway customer error. Possible values are <code class="docutils literal notranslate"><span class="pre">HttpStatus403</span></code> and <code class="docutils literal notranslate"><span class="pre">HttpStatus502</span></code></p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">frontend_ip_configuration_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the associated Frontend Configuration.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">frontend_ip_configuration_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">frontend_ip_configuration_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of the Frontend IP Configuration used for this HTTP Listener.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">frontendPortId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the associated Frontend Port.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">frontendPortName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">host_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">frontendPortName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of the Frontend Port use for this HTTP Listener.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">host_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Hostname which should be used for this HTTP Listener.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Rewrite Rule Set</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Application Gateway. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">requireSni</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of the HTTP Listener.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Protocol to use for this HTTP Listener. Possible values are <code class="docutils literal notranslate"><span class="pre">Http</span></code> and <code class="docutils literal notranslate"><span class="pre">Https</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requireSni</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should Server Name Indication be Required? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sslCertificateId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the associated SSL Certificate.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sslCertificateName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sslCertificateName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the associated SSL Certificate which should be used for this HTTP Listener.</p></li>
 </ul>
 <p>The <strong>identity</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">identityIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">identityIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies a list with a single user managed identity id to be assigned to the Application Gateway.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Managed Service Identity Type of this Application Gateway. The only possible value is <code class="docutils literal notranslate"><span class="pre">UserAssigned</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">UserAssigned</span></code>.</p></li>
 </ul>
 <p>The <strong>probes</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">host</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">host</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Hostname used for this Probe. If the Application Gateway is configured for a single site, by default the Host name should be specified as ‘127.0.0.1’, unless otherwise configured in custom probe. Cannot be set if <code class="docutils literal notranslate"><span class="pre">pick_host_name_from_backend_http_settings</span></code> is set to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Rewrite Rule Set</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">interval</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">match</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">interval</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The Interval between two consecutive probes in seconds. Possible values range from 1 second to a maximum of 86,400 seconds.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">match</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">match</span></code> block as defined above.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">body</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">statusCodes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">body</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A snippet from the Response Body which must be present in the Response..</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">statusCodes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of allowed status codes for this Health Probe.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">minimumServers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Application Gateway. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">pickHostNameFromBackendHttpSettings</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">timeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">unhealthyThreshold</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minimumServers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The minimum number of servers that are always marked as healthy. Defaults to <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of the Probe.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Path used for this Probe.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pickHostNameFromBackendHttpSettings</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether the host header should be picked from the backend http settings. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Protocol used for this Probe. Possible values are <code class="docutils literal notranslate"><span class="pre">Http</span></code> and <code class="docutils literal notranslate"><span class="pre">Https</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The Timeout used for this Probe, which indicates when a probe becomes unhealthy. Possible values range from 1 second to a maximum of 86,400 seconds.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">unhealthyThreshold</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The Unhealthy Threshold for this Probe, which indicates the amount of retries which should be attempted before a node is deemed unhealthy. Possible values are from 1 - 20 seconds.</p></li>
 </ul>
 <p>The <strong>redirect_configurations</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Rewrite Rule Set</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">includePath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">includeQueryString</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Application Gateway. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">redirectType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">includePath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether or not to include the path in the redirected Url. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">includeQueryString</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether or not to include the query string in the redirected Url. Default to <code class="docutils literal notranslate"><span class="pre">false</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Unique name of the redirect configuration block</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">redirectType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of redirect. Possible values are <code class="docutils literal notranslate"><span class="pre">Permanent</span></code>, <code class="docutils literal notranslate"><span class="pre">Temporary</span></code>, <code class="docutils literal notranslate"><span class="pre">Found</span></code> and <code class="docutils literal notranslate"><span class="pre">SeeOther</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">targetListenerId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">targetListenerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">targetUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">targetListenerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the listener to redirect to. Cannot be set if <code class="docutils literal notranslate"><span class="pre">target_url</span></code> is set.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">targetUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Url to redirect the request to. Cannot be set if <code class="docutils literal notranslate"><span class="pre">target_listener_name</span></code> is set.</p></li>
 </ul>
 <p>The <strong>request_routing_rules</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">backend_address_pool_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the associated Backend Address Pool.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">backendAddressPoolName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">backendAddressPoolName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of the Backend Address Pool which should be used for this Routing Rule. Cannot be set if <code class="docutils literal notranslate"><span class="pre">redirect_configuration_name</span></code> is set.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">backendHttpSettingsId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the associated Backend HTTP Settings Configuration.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">backendHttpSettingsName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">backendHttpSettingsName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of the Backend HTTP Settings Collection which should be used for this Routing Rule. Cannot be set if <code class="docutils literal notranslate"><span class="pre">redirect_configuration_name</span></code> is set.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">httpListenerId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the associated HTTP Listener.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">httpListenerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpListenerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of the HTTP Listener which should be used for this Routing Rule.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Rewrite Rule Set</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Application Gateway. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of this Request Routing Rule.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">redirectConfigurationId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the associated Redirect Configuration.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">redirectConfigurationName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">redirectConfigurationName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of the Redirect Configuration which should be used for this Routing Rule. Cannot be set if either <code class="docutils literal notranslate"><span class="pre">backend_address_pool_name</span></code> or <code class="docutils literal notranslate"><span class="pre">backend_http_settings_name</span></code> is set.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">rewriteRuleSetId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the associated Rewrite Rule Set.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">rewriteRuleSetName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ruleType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rewriteRuleSetName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of the Rewrite Rule Set which should be used for this Routing Rule. Only valid for v2 SKUs.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ruleType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Type of Routing that should be used for this Rule. Possible values are <code class="docutils literal notranslate"><span class="pre">Basic</span></code> and <code class="docutils literal notranslate"><span class="pre">PathBasedRouting</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">urlPathMapId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the associated URL Path Map.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">urlPathMapName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">urlPathMapName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of the URL Path Map which should be associated with this Routing Rule.</p></li>
 </ul>
 <p>The <strong>rewrite_rule_sets</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Rewrite Rule Set</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Application Gateway. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">rewriteRules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Unique name of the rewrite rule set block</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rewriteRules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">rewrite_rule</span></code> blocks as defined above.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">conditions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">conditions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">condition</span></code> blocks as defined above.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">ignoreCase</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">negate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">pattern</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">variable</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ignoreCase</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Perform a case in-sensitive comparison. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">negate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Negate the result of the condition evaluation. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pattern</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The pattern, either fixed string or regular expression, that evaluates the truthfulness of the condition.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">variable</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The <a class="reference external" href="https://docs.microsoft.com/en-us/azure/application-gateway/rewrite-http-headers#server-variables">variable</a> of the condition.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Application Gateway. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">requestHeaderConfigurations</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Unique name of the rewrite rule block</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requestHeaderConfigurations</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">request_header_configuration</span></code> blocks as defined above.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">headerValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Header name of the header configuration.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">headerValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Header value of the header configuration. To delete a request header set this property to an empty string.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">responseHeaderConfigurations</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">responseHeaderConfigurations</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">response_header_configuration</span></code> blocks as defined above.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">headerValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Header name of the header configuration.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">headerValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Header value of the header configuration. To delete a response header set this property to an empty string.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ruleSequence</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ruleSequence</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Rule sequence of the rewrite rule that determines the order of execution in a set.</p></li>
 </ul>
 </li>
 </ul>
 <p>The <strong>sku</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">capacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Application Gateway. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tier</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">capacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The Capacity of the SKU to use for this Application Gateway. When using a V1 SKU this value must be between 1 and 32, and 1 to 125 for a V2 SKU. This property is optional if <code class="docutils literal notranslate"><span class="pre">autoscale_configuration</span></code> is set.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of the SKU to use for this Application Gateway. Possible values are <code class="docutils literal notranslate"><span class="pre">Standard_Small</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard_Medium</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard_Large</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard_v2</span></code>, <code class="docutils literal notranslate"><span class="pre">WAF_Medium</span></code>, <code class="docutils literal notranslate"><span class="pre">WAF_Large</span></code>, and <code class="docutils literal notranslate"><span class="pre">WAF_v2</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tier</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Tier of the SKU to use for this Application Gateway. Possible values are <code class="docutils literal notranslate"><span class="pre">Standard</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard_v2</span></code>, <code class="docutils literal notranslate"><span class="pre">WAF</span></code> and <code class="docutils literal notranslate"><span class="pre">WAF_v2</span></code>.</p></li>
 </ul>
 <p>The <strong>ssl_certificates</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">data</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">data</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - PFX certificate. Required if <code class="docutils literal notranslate"><span class="pre">key_vault_secret_id</span></code> is not set.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Rewrite Rule Set</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">key_vault_secret_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Application Gateway. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key_vault_secret_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Secret Id of (base-64 encoded unencrypted pfx) <code class="docutils literal notranslate"><span class="pre">Secret</span></code> or <code class="docutils literal notranslate"><span class="pre">Certificate</span></code> object stored in Azure KeyVault. You need to enable soft delete for keyvault to use this feature. Required if <code class="docutils literal notranslate"><span class="pre">data</span></code> is not set.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of the SSL certificate that is unique within this Application Gateway</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Password for the pfx file specified in data.  Required if <code class="docutils literal notranslate"><span class="pre">data</span></code> is set.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">publicCertData</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Public Certificate Data associated with the SSL Certificate.</p></li>
 </ul>
 <p>The <strong>ssl_policies</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">cipherSuites</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">disabledProtocols</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">minProtocolVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">policyName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">policy_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cipherSuites</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A List of accepted cipher suites. Possible values are: <code class="docutils literal notranslate"><span class="pre">TLS_DHE_DSS_WITH_AES_128_CBC_SHA</span></code>, <code class="docutils literal notranslate"><span class="pre">TLS_DHE_DSS_WITH_AES_128_CBC_SHA256</span></code>, <code class="docutils literal notranslate"><span class="pre">TLS_DHE_DSS_WITH_AES_256_CBC_SHA</span></code>, <code class="docutils literal notranslate"><span class="pre">TLS_DHE_DSS_WITH_AES_256_CBC_SHA256</span></code>, <code class="docutils literal notranslate"><span class="pre">TLS_DHE_RSA_WITH_AES_128_CBC_SHA</span></code>, <code class="docutils literal notranslate"><span class="pre">TLS_DHE_RSA_WITH_AES_128_GCM_SHA256</span></code>, <code class="docutils literal notranslate"><span class="pre">TLS_DHE_RSA_WITH_AES_256_CBC_SHA</span></code>, <code class="docutils literal notranslate"><span class="pre">TLS_DHE_RSA_WITH_AES_256_GCM_SHA384</span></code>, <code class="docutils literal notranslate"><span class="pre">TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA</span></code>, <code class="docutils literal notranslate"><span class="pre">TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256</span></code>, <code class="docutils literal notranslate"><span class="pre">TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256</span></code>, <code class="docutils literal notranslate"><span class="pre">TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA</span></code>, <code class="docutils literal notranslate"><span class="pre">TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384</span></code>, <code class="docutils literal notranslate"><span class="pre">TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384</span></code>, <code class="docutils literal notranslate"><span class="pre">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</span></code>, <code class="docutils literal notranslate"><span class="pre">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256</span></code>, <code class="docutils literal notranslate"><span class="pre">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA</span></code>, <code class="docutils literal notranslate"><span class="pre">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384</span></code>, <code class="docutils literal notranslate"><span class="pre">TLS_RSA_WITH_3DES_EDE_CBC_SHA</span></code>, <code class="docutils literal notranslate"><span class="pre">TLS_RSA_WITH_AES_128_CBC_SHA</span></code>, <code class="docutils literal notranslate"><span class="pre">TLS_RSA_WITH_AES_128_CBC_SHA256</span></code>, <code class="docutils literal notranslate"><span class="pre">TLS_RSA_WITH_AES_128_GCM_SHA256</span></code>, <code class="docutils literal notranslate"><span class="pre">TLS_RSA_WITH_AES_256_CBC_SHA</span></code>, <code class="docutils literal notranslate"><span class="pre">TLS_RSA_WITH_AES_256_CBC_SHA256</span></code> and <code class="docutils literal notranslate"><span class="pre">TLS_RSA_WITH_AES_256_GCM_SHA384</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disabledProtocols</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of SSL Protocols which should be disabled on this Application Gateway. Possible values are <code class="docutils literal notranslate"><span class="pre">TLSv1_0</span></code>, <code class="docutils literal notranslate"><span class="pre">TLSv1_1</span></code> and <code class="docutils literal notranslate"><span class="pre">TLSv1_2</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minProtocolVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The minimal TLS version. Possible values are <code class="docutils literal notranslate"><span class="pre">TLSv1_0</span></code>, <code class="docutils literal notranslate"><span class="pre">TLSv1_1</span></code> and <code class="docutils literal notranslate"><span class="pre">TLSv1_2</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">policyName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of the Policy e.g AppGwSslPolicy20170401S. Required if <code class="docutils literal notranslate"><span class="pre">policy_type</span></code> is set to <code class="docutils literal notranslate"><span class="pre">Predefined</span></code>. Possible values can change over time and
+are published here <a class="reference external" href="https://docs.microsoft.com/en-us/azure/application-gateway/application-gateway-ssl-policy-overview">https://docs.microsoft.com/en-us/azure/application-gateway/application-gateway-ssl-policy-overview</a>. Not compatible with <code class="docutils literal notranslate"><span class="pre">disabled_protocols</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">policy_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Type of the Policy. Possible values are <code class="docutils literal notranslate"><span class="pre">Predefined</span></code> and <code class="docutils literal notranslate"><span class="pre">Custom</span></code>.</p></li>
 </ul>
 <p>The <strong>trusted_root_certificates</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">data</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">data</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The contents of the Trusted Root Certificate which should be used.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Rewrite Rule Set</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Application Gateway. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of the Trusted Root Certificate to use.</p></li>
 </ul>
 <p>The <strong>url_path_maps</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">defaultBackendAddressPoolId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Default Backend Address Pool.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">defaultBackendAddressPoolName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultBackendAddressPoolName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of the Default Backend Address Pool which should be used for this URL Path Map. Cannot be set if <code class="docutils literal notranslate"><span class="pre">default_redirect_configuration_name</span></code> is set.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">defaultBackendHttpSettingsId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Default Backend HTTP Settings Collection.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">defaultBackendHttpSettingsName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultBackendHttpSettingsName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of the Default Backend HTTP Settings Collection which should be used for this URL Path Map. Cannot be set if <code class="docutils literal notranslate"><span class="pre">default_redirect_configuration_name</span></code> is set.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">defaultRedirectConfigurationId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Default Redirect Configuration.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">defaultRedirectConfigurationName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultRedirectConfigurationName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of the Default Redirect Configuration which should be used for this URL Path Map. Cannot be set if either <code class="docutils literal notranslate"><span class="pre">default_backend_address_pool_name</span></code> or <code class="docutils literal notranslate"><span class="pre">default_backend_http_settings_name</span></code> is set.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">defaultRewriteRuleSetId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">defaultRewriteRuleSetName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultRewriteRuleSetName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of the Default Rewrite Rule Set which should be used for this URL Path Map. Only valid for v2 SKUs.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Rewrite Rule Set</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Application Gateway. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">pathRules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of <code class="docutils literal notranslate"><span class="pre">path_rule</span></code> blocks as defined above.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of the URL Path Map.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pathRules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">path_rule</span></code> blocks as defined above.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">backend_address_pool_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the associated Backend Address Pool.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">backendAddressPoolName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">backendAddressPoolName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of the Backend Address Pool to use for this Path Rule. Cannot be set if <code class="docutils literal notranslate"><span class="pre">redirect_configuration_name</span></code> is set.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">backendHttpSettingsId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the associated Backend HTTP Settings Configuration.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">backendHttpSettingsName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">backendHttpSettingsName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of the Backend HTTP Settings Collection to use for this Path Rule. Cannot be set if <code class="docutils literal notranslate"><span class="pre">redirect_configuration_name</span></code> is set.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Rewrite Rule Set</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Application Gateway. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">paths</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of the Path Rule.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">paths</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of Paths used in this Path Rule.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">redirectConfigurationId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the associated Redirect Configuration.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">redirectConfigurationName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">redirectConfigurationName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of a Redirect Configuration to use for this Path Rule. Cannot be set if <code class="docutils literal notranslate"><span class="pre">backend_address_pool_name</span></code> or <code class="docutils literal notranslate"><span class="pre">backend_http_settings_name</span></code> is set.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">rewriteRuleSetId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the associated Rewrite Rule Set.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">rewriteRuleSetName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rewriteRuleSetName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of the Rewrite Rule Set which should be used for this URL Path Map. Only valid for v2 SKUs.</p></li>
 </ul>
 </li>
 </ul>
 <p>The <strong>waf_configuration</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">disabledRuleGroups</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">disabledRuleGroups</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - one or more <code class="docutils literal notranslate"><span class="pre">disabled_rule_group</span></code> blocks as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">ruleGroupName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">rules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ruleGroupName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The rule group where specific rules should be disabled. Accepted values are:  <code class="docutils literal notranslate"><span class="pre">crs_20_protocol_violations</span></code>, <code class="docutils literal notranslate"><span class="pre">crs_21_protocol_anomalies</span></code>, <code class="docutils literal notranslate"><span class="pre">crs_23_request_limits</span></code>, <code class="docutils literal notranslate"><span class="pre">crs_30_http_policy</span></code>, <code class="docutils literal notranslate"><span class="pre">crs_35_bad_robots</span></code>, <code class="docutils literal notranslate"><span class="pre">crs_40_generic_attacks</span></code>, <code class="docutils literal notranslate"><span class="pre">crs_41_sql_injection_attacks</span></code>, <code class="docutils literal notranslate"><span class="pre">crs_41_xss_attacks</span></code>, <code class="docutils literal notranslate"><span class="pre">crs_42_tight_security</span></code>, <code class="docutils literal notranslate"><span class="pre">crs_45_trojans</span></code>, <code class="docutils literal notranslate"><span class="pre">General</span></code>, <code class="docutils literal notranslate"><span class="pre">REQUEST-911-METHOD-ENFORCEMENT</span></code>, <code class="docutils literal notranslate"><span class="pre">REQUEST-913-SCANNER-DETECTION</span></code>, <code class="docutils literal notranslate"><span class="pre">REQUEST-920-PROTOCOL-ENFORCEMENT</span></code>, <code class="docutils literal notranslate"><span class="pre">REQUEST-921-PROTOCOL-ATTACK</span></code>, <code class="docutils literal notranslate"><span class="pre">REQUEST-930-APPLICATION-ATTACK-LFI</span></code>, <code class="docutils literal notranslate"><span class="pre">REQUEST-931-APPLICATION-ATTACK-RFI</span></code>, <code class="docutils literal notranslate"><span class="pre">REQUEST-932-APPLICATION-ATTACK-RCE</span></code>, <code class="docutils literal notranslate"><span class="pre">REQUEST-933-APPLICATION-ATTACK-PHP</span></code>, <code class="docutils literal notranslate"><span class="pre">REQUEST-941-APPLICATION-ATTACK-XSS</span></code>, <code class="docutils literal notranslate"><span class="pre">REQUEST-942-APPLICATION-ATTACK-SQLI</span></code>, <code class="docutils literal notranslate"><span class="pre">REQUEST-943-APPLICATION-ATTACK-SESSION-FIXATION</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of rules which should be disabled in that group. Disables all rules in the specified group if <code class="docutils literal notranslate"><span class="pre">rules</span></code> is not specified.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">exclusions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is the Web Application Firewall be enabled?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">exclusions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - one or more <code class="docutils literal notranslate"><span class="pre">exclusion</span></code> blocks as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">matchVariable</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">selector</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">selectorMatchOperator</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">matchVariable</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Match variable of the exclusion rule to exclude header, cookie or GET arguments. Possible values are <code class="docutils literal notranslate"><span class="pre">RequestHeaderNames</span></code>, <code class="docutils literal notranslate"><span class="pre">RequestArgNames</span></code> and <code class="docutils literal notranslate"><span class="pre">RequestCookieNames</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">selector</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - String value which will be used for the filter operation. If empty will exclude all traffic on this <code class="docutils literal notranslate"><span class="pre">match_variable</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">selectorMatchOperator</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Operator which will be used to search in the variable content. Possible values are <code class="docutils literal notranslate"><span class="pre">Equals</span></code>, <code class="docutils literal notranslate"><span class="pre">StartsWith</span></code>, <code class="docutils literal notranslate"><span class="pre">EndsWith</span></code>, <code class="docutils literal notranslate"><span class="pre">Contains</span></code>. If empty will exclude all traffic on this <code class="docutils literal notranslate"><span class="pre">match_variable</span></code></p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">fileUploadLimitMb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">firewallMode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxRequestBodySizeKb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">requestBodyCheck</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ruleSetType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ruleSetVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fileUploadLimitMb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The File Upload Limit in MB. Accepted values are in the range <code class="docutils literal notranslate"><span class="pre">1</span></code>MB to <code class="docutils literal notranslate"><span class="pre">500</span></code>MB. Defaults to <code class="docutils literal notranslate"><span class="pre">100</span></code>MB.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">firewallMode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Web Application Firewall Mode. Possible values are <code class="docutils literal notranslate"><span class="pre">Detection</span></code> and <code class="docutils literal notranslate"><span class="pre">Prevention</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxRequestBodySizeKb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The Maximum Request Body Size in KB.  Accepted values are in the range <code class="docutils literal notranslate"><span class="pre">1</span></code>KB to <code class="docutils literal notranslate"><span class="pre">128</span></code>KB.  Defaults to <code class="docutils literal notranslate"><span class="pre">128</span></code>KB.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requestBodyCheck</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is Request Body Inspection enabled?  Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ruleSetType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Type of the Rule Set used for this Web Application Firewall.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ruleSetVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Version of the Rule Set used for this Web Application Firewall. Possible values are <code class="docutils literal notranslate"><span class="pre">2.2.9</span></code>, <code class="docutils literal notranslate"><span class="pre">3.0</span></code>, and <code class="docutils literal notranslate"><span class="pre">3.1</span></code>.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_azure.network.ApplicationGateway.authentication_certificates">
 <code class="sig-name descname">authentication_certificates</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.ApplicationGateway.authentication_certificates" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">authentication_certificate</span></code> blocks as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">data</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">data</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The contents of the Authentication Certificate which should be used.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the Rewrite Rule Set</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the Application Gateway. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the Authentication Certificate.</p></li>
 </ul>
 </dd></dl>
 
@@ -328,8 +329,8 @@ anything, please consult the source <a class="reference external" href="https://
 <code class="sig-name descname">autoscale_configuration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.ApplicationGateway.autoscale_configuration" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">autoscale_configuration</span></code> block as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">maxCapacity</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">minCapacity</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxCapacity</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Maximum capacity for autoscaling. Accepted values are in the range <code class="docutils literal notranslate"><span class="pre">2</span></code> to <code class="docutils literal notranslate"><span class="pre">125</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">min_capacity</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Minimum capacity for autoscaling. Accepted values are in the range <code class="docutils literal notranslate"><span class="pre">0</span></code> to <code class="docutils literal notranslate"><span class="pre">100</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -338,10 +339,10 @@ anything, please consult the source <a class="reference external" href="https://
 <code class="sig-name descname">backend_address_pools</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.ApplicationGateway.backend_address_pools" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">backend_address_pool</span></code> blocks as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">fqdns</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fqdns</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of FQDN’s which should be part of the Backend Address Pool.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the Rewrite Rule Set</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ipAddresses</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the Application Gateway. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipAddresses</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of IP Addresses which should be part of the Backend Address Pool.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the Backend Address Pool.</p></li>
 </ul>
 </dd></dl>
 
@@ -350,31 +351,31 @@ anything, please consult the source <a class="reference external" href="https://
 <code class="sig-name descname">backend_http_settings</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.ApplicationGateway.backend_http_settings" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">backend_http_settings</span></code> blocks as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">affinityCookieName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">authentication_certificates</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">authentication_certificate</span></code> blocks as defined below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">affinityCookieName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the affinity cookie.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">authentication_certificates</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">authentication_certificate</span></code> blocks.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the Rewrite Rule Set</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the Application Gateway. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the Authentication Certificate.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">connectionDraining</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">connectionDraining</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A <code class="docutils literal notranslate"><span class="pre">connection_draining</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">drainTimeoutSec</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">drainTimeoutSec</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of seconds connection draining is active. Acceptable values are from <code class="docutils literal notranslate"><span class="pre">1</span></code> second to <code class="docutils literal notranslate"><span class="pre">3600</span></code> seconds.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If connection draining is enabled or not.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">cookieBasedAffinity</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">host_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cookieBasedAffinity</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Is Cookie-Based Affinity enabled? Possible values are <code class="docutils literal notranslate"><span class="pre">Enabled</span></code> and <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">host_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Host header to be sent to the backend servers. Cannot be set if <code class="docutils literal notranslate"><span class="pre">pick_host_name_from_backend_address</span></code> is set to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the Rewrite Rule Set</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the Application Gateway. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">pickHostNameFromBackendAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the Backend HTTP Settings Collection.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Path which should be used as a prefix for all HTTP requests.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pickHostNameFromBackendAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether host header should be picked from the host name of the backend server. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The port used for this Frontend Port.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">probe_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the associated Probe.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">probeName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">requestTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">trustedRootCertificateNames</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">probeName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of an associated HTTP Probe.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Protocol to use for this HTTP Listener. Possible values are <code class="docutils literal notranslate"><span class="pre">Http</span></code> and <code class="docutils literal notranslate"><span class="pre">Https</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requestTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The request timeout in seconds, which must be between 1 and 86400 seconds.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">trustedRootCertificateNames</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of <code class="docutils literal notranslate"><span class="pre">trusted_root_certificate</span></code> names.</p></li>
 </ul>
 </dd></dl>
 
@@ -383,9 +384,9 @@ anything, please consult the source <a class="reference external" href="https://
 <code class="sig-name descname">custom_error_configurations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.ApplicationGateway.custom_error_configurations" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">custom_error_configuration</span></code> blocks as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">customErrorPageUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">customErrorPageUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Error page URL of the application gateway customer error.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the Rewrite Rule Set</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">statusCode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">statusCode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Status code of the application gateway customer error. Possible values are <code class="docutils literal notranslate"><span class="pre">HttpStatus403</span></code> and <code class="docutils literal notranslate"><span class="pre">HttpStatus502</span></code></p></li>
 </ul>
 </dd></dl>
 
@@ -401,11 +402,11 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">frontend_ip_configuration</span></code> blocks as defined below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the Rewrite Rule Set</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the Application Gateway. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">private_ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">privateIpAddressAllocation</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">publicIpAddressId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the Frontend IP Configuration.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">private_ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Private IP Address to use for the Application Gateway.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">privateIpAddressAllocation</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Allocation Method for the Private IP Address. Possible values are <code class="docutils literal notranslate"><span class="pre">Dynamic</span></code> and <code class="docutils literal notranslate"><span class="pre">Static</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publicIpAddressId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of a Public IP Address which the Application Gateway should use.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the Subnet which the Application Gateway should be connected to.</p></li>
 </ul>
 </dd></dl>
 
@@ -415,8 +416,8 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">frontend_port</span></code> blocks as defined below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the Rewrite Rule Set</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the Application Gateway. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the Frontend Port.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The port used for this Frontend Port.</p></li>
 </ul>
 </dd></dl>
 
@@ -426,8 +427,8 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">gateway_ip_configuration</span></code> blocks as defined below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the Rewrite Rule Set</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the Application Gateway. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Name of this Gateway IP Configuration.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of a Subnet.</p></li>
 </ul>
 </dd></dl>
 
@@ -438,22 +439,22 @@ anything, please consult the source <a class="reference external" href="https://
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">custom_error_configurations</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">custom_error_configuration</span></code> blocks as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">customErrorPageUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">customErrorPageUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Error page URL of the application gateway customer error.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the Rewrite Rule Set</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">statusCode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">statusCode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Status code of the application gateway customer error. Possible values are <code class="docutils literal notranslate"><span class="pre">HttpStatus403</span></code> and <code class="docutils literal notranslate"><span class="pre">HttpStatus502</span></code></p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">frontend_ip_configuration_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the associated Frontend Configuration.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">frontend_ip_configuration_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">frontend_ip_configuration_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Name of the Frontend IP Configuration used for this HTTP Listener.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">frontendPortId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the associated Frontend Port.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">frontendPortName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">host_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">frontendPortName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Name of the Frontend Port use for this HTTP Listener.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">host_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Hostname which should be used for this HTTP Listener.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the Rewrite Rule Set</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the Application Gateway. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">requireSni</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Name of the HTTP Listener.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Protocol to use for this HTTP Listener. Possible values are <code class="docutils literal notranslate"><span class="pre">Http</span></code> and <code class="docutils literal notranslate"><span class="pre">Https</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requireSni</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Should Server Name Indication be Required? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sslCertificateId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the associated SSL Certificate.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sslCertificateName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sslCertificateName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the associated SSL Certificate which should be used for this HTTP Listener.</p></li>
 </ul>
 </dd></dl>
 
@@ -462,8 +463,8 @@ anything, please consult the source <a class="reference external" href="https://
 <code class="sig-name descname">identity</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.ApplicationGateway.identity" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">identity</span></code> block.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">identityIds</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">identityIds</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies a list with a single user managed identity id to be assigned to the Application Gateway.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Managed Service Identity Type of this Application Gateway. The only possible value is <code class="docutils literal notranslate"><span class="pre">UserAssigned</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">UserAssigned</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -484,22 +485,22 @@ anything, please consult the source <a class="reference external" href="https://
 <code class="sig-name descname">probes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.ApplicationGateway.probes" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">probe</span></code> blocks as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">host</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">host</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Hostname used for this Probe. If the Application Gateway is configured for a single site, by default the Host name should be specified as ‘127.0.0.1’, unless otherwise configured in custom probe. Cannot be set if <code class="docutils literal notranslate"><span class="pre">pick_host_name_from_backend_http_settings</span></code> is set to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the Rewrite Rule Set</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">interval</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">match</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">interval</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The Interval between two consecutive probes in seconds. Possible values range from 1 second to a maximum of 86,400 seconds.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">match</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A <code class="docutils literal notranslate"><span class="pre">match</span></code> block as defined above.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">body</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">statusCodes</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">body</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A snippet from the Response Body which must be present in the Response..</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">statusCodes</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of allowed status codes for this Health Probe.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">minimumServers</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the Application Gateway. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">pickHostNameFromBackendHttpSettings</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">timeout</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">unhealthyThreshold</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minimumServers</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The minimum number of servers that are always marked as healthy. Defaults to <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Name of the Probe.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Path used for this Probe.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pickHostNameFromBackendHttpSettings</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether the host header should be picked from the backend http settings. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Protocol used for this Probe. Possible values are <code class="docutils literal notranslate"><span class="pre">Http</span></code> and <code class="docutils literal notranslate"><span class="pre">Https</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeout</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The Timeout used for this Probe, which indicates when a probe becomes unhealthy. Possible values range from 1 second to a maximum of 86,400 seconds.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">unhealthyThreshold</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The Unhealthy Threshold for this Probe, which indicates the amount of retries which should be attempted before a node is deemed unhealthy. Possible values are from 1 - 20 seconds.</p></li>
 </ul>
 </dd></dl>
 
@@ -509,13 +510,13 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">redirect_configuration</span></code> block as defined below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the Rewrite Rule Set</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">includePath</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">includeQueryString</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the Application Gateway. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">redirectType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">includePath</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether or not to include the path in the redirected Url. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">includeQueryString</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether or not to include the query string in the redirected Url. Default to <code class="docutils literal notranslate"><span class="pre">false</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Unique name of the redirect configuration block</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">redirectType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The type of redirect. Possible values are <code class="docutils literal notranslate"><span class="pre">Permanent</span></code>, <code class="docutils literal notranslate"><span class="pre">Temporary</span></code>, <code class="docutils literal notranslate"><span class="pre">Found</span></code> and <code class="docutils literal notranslate"><span class="pre">SeeOther</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">targetListenerId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">targetListenerName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">targetUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">targetListenerName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the listener to redirect to. Cannot be set if <code class="docutils literal notranslate"><span class="pre">target_url</span></code> is set.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">targetUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Url to redirect the request to. Cannot be set if <code class="docutils literal notranslate"><span class="pre">target_listener_name</span></code> is set.</p></li>
 </ul>
 </dd></dl>
 
@@ -525,20 +526,20 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">request_routing_rule</span></code> blocks as defined below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">backend_address_pool_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the associated Backend Address Pool.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">backendAddressPoolName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">backendAddressPoolName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Name of the Backend Address Pool which should be used for this Routing Rule. Cannot be set if <code class="docutils literal notranslate"><span class="pre">redirect_configuration_name</span></code> is set.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">backendHttpSettingsId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the associated Backend HTTP Settings Configuration.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">backendHttpSettingsName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">backendHttpSettingsName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Name of the Backend HTTP Settings Collection which should be used for this Routing Rule. Cannot be set if <code class="docutils literal notranslate"><span class="pre">redirect_configuration_name</span></code> is set.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">httpListenerId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the associated HTTP Listener.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">httpListenerName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpListenerName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Name of the HTTP Listener which should be used for this Routing Rule.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the Rewrite Rule Set</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the Application Gateway. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Name of this Request Routing Rule.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">redirectConfigurationId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the associated Redirect Configuration.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">redirectConfigurationName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">redirectConfigurationName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Name of the Redirect Configuration which should be used for this Routing Rule. Cannot be set if either <code class="docutils literal notranslate"><span class="pre">backend_address_pool_name</span></code> or <code class="docutils literal notranslate"><span class="pre">backend_http_settings_name</span></code> is set.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">rewriteRuleSetId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the associated Rewrite Rule Set.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">rewriteRuleSetName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ruleType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rewriteRuleSetName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Name of the Rewrite Rule Set which should be used for this Routing Rule. Only valid for v2 SKUs.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ruleType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Type of Routing that should be used for this Rule. Possible values are <code class="docutils literal notranslate"><span class="pre">Basic</span></code> and <code class="docutils literal notranslate"><span class="pre">PathBasedRouting</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">urlPathMapId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the associated URL Path Map.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">urlPathMapName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">urlPathMapName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Name of the URL Path Map which should be associated with this Routing Rule.</p></li>
 </ul>
 </dd></dl>
 
@@ -554,31 +555,31 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">rewrite_rule_set</span></code> blocks as defined below. Only valid for v2 SKUs.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the Rewrite Rule Set</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the Application Gateway. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">rewriteRules</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Unique name of the rewrite rule set block</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rewriteRules</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">rewrite_rule</span></code> blocks as defined above.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">conditions</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">conditions</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">condition</span></code> blocks as defined above.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">ignoreCase</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">negate</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">pattern</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">variable</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ignoreCase</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Perform a case in-sensitive comparison. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">negate</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Negate the result of the condition evaluation. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pattern</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The pattern, either fixed string or regular expression, that evaluates the truthfulness of the condition.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">variable</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The <a class="reference external" href="https://docs.microsoft.com/en-us/azure/application-gateway/rewrite-http-headers#server-variables">variable</a> of the condition.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the Application Gateway. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">requestHeaderConfigurations</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Unique name of the rewrite rule block</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requestHeaderConfigurations</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">request_header_configuration</span></code> blocks as defined above.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">headerValue</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Header name of the header configuration.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">headerValue</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Header value of the header configuration. To delete a request header set this property to an empty string.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">responseHeaderConfigurations</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">responseHeaderConfigurations</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">response_header_configuration</span></code> blocks as defined above.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">headerValue</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Header name of the header configuration.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">headerValue</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Header value of the header configuration. To delete a response header set this property to an empty string.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ruleSequence</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ruleSequence</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Rule sequence of the rewrite rule that determines the order of execution in a set.</p></li>
 </ul>
 </li>
 </ul>
@@ -589,9 +590,9 @@ anything, please consult the source <a class="reference external" href="https://
 <code class="sig-name descname">sku</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.ApplicationGateway.sku" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">sku</span></code> block as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">capacity</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the Application Gateway. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tier</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">capacity</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The Capacity of the SKU to use for this Application Gateway. When using a V1 SKU this value must be between 1 and 32, and 1 to 125 for a V2 SKU. This property is optional if <code class="docutils literal notranslate"><span class="pre">autoscale_configuration</span></code> is set.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Name of the SKU to use for this Application Gateway. Possible values are <code class="docutils literal notranslate"><span class="pre">Standard_Small</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard_Medium</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard_Large</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard_v2</span></code>, <code class="docutils literal notranslate"><span class="pre">WAF_Medium</span></code>, <code class="docutils literal notranslate"><span class="pre">WAF_Large</span></code>, and <code class="docutils literal notranslate"><span class="pre">WAF_v2</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tier</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Tier of the SKU to use for this Application Gateway. Possible values are <code class="docutils literal notranslate"><span class="pre">Standard</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard_v2</span></code>, <code class="docutils literal notranslate"><span class="pre">WAF</span></code> and <code class="docutils literal notranslate"><span class="pre">WAF_v2</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -600,11 +601,11 @@ anything, please consult the source <a class="reference external" href="https://
 <code class="sig-name descname">ssl_certificates</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.ApplicationGateway.ssl_certificates" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">ssl_certificate</span></code> blocks as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">data</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">data</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - PFX certificate. Required if <code class="docutils literal notranslate"><span class="pre">key_vault_secret_id</span></code> is not set.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the Rewrite Rule Set</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">key_vault_secret_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the Application Gateway. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key_vault_secret_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Secret Id of (base-64 encoded unencrypted pfx) <code class="docutils literal notranslate"><span class="pre">Secret</span></code> or <code class="docutils literal notranslate"><span class="pre">Certificate</span></code> object stored in Azure KeyVault. You need to enable soft delete for keyvault to use this feature. Required if <code class="docutils literal notranslate"><span class="pre">data</span></code> is not set.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Name of the SSL certificate that is unique within this Application Gateway</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Password for the pfx file specified in data.  Required if <code class="docutils literal notranslate"><span class="pre">data</span></code> is set.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">publicCertData</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Public Certificate Data associated with the SSL Certificate.</p></li>
 </ul>
 </dd></dl>
@@ -614,11 +615,12 @@ anything, please consult the source <a class="reference external" href="https://
 <code class="sig-name descname">ssl_policies</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.ApplicationGateway.ssl_policies" title="Permalink to this definition">¶</a></dt>
 <dd><p>a <code class="docutils literal notranslate"><span class="pre">ssl</span> <span class="pre">policy</span></code> block as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">cipherSuites</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">disabledProtocols</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">minProtocolVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">policyName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">policy_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cipherSuites</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A List of accepted cipher suites. Possible values are: <code class="docutils literal notranslate"><span class="pre">TLS_DHE_DSS_WITH_AES_128_CBC_SHA</span></code>, <code class="docutils literal notranslate"><span class="pre">TLS_DHE_DSS_WITH_AES_128_CBC_SHA256</span></code>, <code class="docutils literal notranslate"><span class="pre">TLS_DHE_DSS_WITH_AES_256_CBC_SHA</span></code>, <code class="docutils literal notranslate"><span class="pre">TLS_DHE_DSS_WITH_AES_256_CBC_SHA256</span></code>, <code class="docutils literal notranslate"><span class="pre">TLS_DHE_RSA_WITH_AES_128_CBC_SHA</span></code>, <code class="docutils literal notranslate"><span class="pre">TLS_DHE_RSA_WITH_AES_128_GCM_SHA256</span></code>, <code class="docutils literal notranslate"><span class="pre">TLS_DHE_RSA_WITH_AES_256_CBC_SHA</span></code>, <code class="docutils literal notranslate"><span class="pre">TLS_DHE_RSA_WITH_AES_256_GCM_SHA384</span></code>, <code class="docutils literal notranslate"><span class="pre">TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA</span></code>, <code class="docutils literal notranslate"><span class="pre">TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256</span></code>, <code class="docutils literal notranslate"><span class="pre">TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256</span></code>, <code class="docutils literal notranslate"><span class="pre">TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA</span></code>, <code class="docutils literal notranslate"><span class="pre">TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384</span></code>, <code class="docutils literal notranslate"><span class="pre">TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384</span></code>, <code class="docutils literal notranslate"><span class="pre">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</span></code>, <code class="docutils literal notranslate"><span class="pre">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256</span></code>, <code class="docutils literal notranslate"><span class="pre">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA</span></code>, <code class="docutils literal notranslate"><span class="pre">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384</span></code>, <code class="docutils literal notranslate"><span class="pre">TLS_RSA_WITH_3DES_EDE_CBC_SHA</span></code>, <code class="docutils literal notranslate"><span class="pre">TLS_RSA_WITH_AES_128_CBC_SHA</span></code>, <code class="docutils literal notranslate"><span class="pre">TLS_RSA_WITH_AES_128_CBC_SHA256</span></code>, <code class="docutils literal notranslate"><span class="pre">TLS_RSA_WITH_AES_128_GCM_SHA256</span></code>, <code class="docutils literal notranslate"><span class="pre">TLS_RSA_WITH_AES_256_CBC_SHA</span></code>, <code class="docutils literal notranslate"><span class="pre">TLS_RSA_WITH_AES_256_CBC_SHA256</span></code> and <code class="docutils literal notranslate"><span class="pre">TLS_RSA_WITH_AES_256_GCM_SHA384</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disabledProtocols</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of SSL Protocols which should be disabled on this Application Gateway. Possible values are <code class="docutils literal notranslate"><span class="pre">TLSv1_0</span></code>, <code class="docutils literal notranslate"><span class="pre">TLSv1_1</span></code> and <code class="docutils literal notranslate"><span class="pre">TLSv1_2</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minProtocolVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The minimal TLS version. Possible values are <code class="docutils literal notranslate"><span class="pre">TLSv1_0</span></code>, <code class="docutils literal notranslate"><span class="pre">TLSv1_1</span></code> and <code class="docutils literal notranslate"><span class="pre">TLSv1_2</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">policyName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Name of the Policy e.g AppGwSslPolicy20170401S. Required if <code class="docutils literal notranslate"><span class="pre">policy_type</span></code> is set to <code class="docutils literal notranslate"><span class="pre">Predefined</span></code>. Possible values can change over time and
+are published here <a class="reference external" href="https://docs.microsoft.com/en-us/azure/application-gateway/application-gateway-ssl-policy-overview">https://docs.microsoft.com/en-us/azure/application-gateway/application-gateway-ssl-policy-overview</a>. Not compatible with <code class="docutils literal notranslate"><span class="pre">disabled_protocols</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">policy_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Type of the Policy. Possible values are <code class="docutils literal notranslate"><span class="pre">Predefined</span></code> and <code class="docutils literal notranslate"><span class="pre">Custom</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -633,9 +635,9 @@ anything, please consult the source <a class="reference external" href="https://
 <code class="sig-name descname">trusted_root_certificates</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.ApplicationGateway.trusted_root_certificates" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">trusted_root_certificate</span></code> blocks as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">data</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">data</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The contents of the Trusted Root Certificate which should be used.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the Rewrite Rule Set</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the Application Gateway. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Name of the Trusted Root Certificate to use.</p></li>
 </ul>
 </dd></dl>
 
@@ -645,28 +647,28 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">url_path_map</span></code> blocks as defined below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">defaultBackendAddressPoolId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the Default Backend Address Pool.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">defaultBackendAddressPoolName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultBackendAddressPoolName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Name of the Default Backend Address Pool which should be used for this URL Path Map. Cannot be set if <code class="docutils literal notranslate"><span class="pre">default_redirect_configuration_name</span></code> is set.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">defaultBackendHttpSettingsId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the Default Backend HTTP Settings Collection.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">defaultBackendHttpSettingsName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultBackendHttpSettingsName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Name of the Default Backend HTTP Settings Collection which should be used for this URL Path Map. Cannot be set if <code class="docutils literal notranslate"><span class="pre">default_redirect_configuration_name</span></code> is set.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">defaultRedirectConfigurationId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the Default Redirect Configuration.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">defaultRedirectConfigurationName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultRedirectConfigurationName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Name of the Default Redirect Configuration which should be used for this URL Path Map. Cannot be set if either <code class="docutils literal notranslate"><span class="pre">default_backend_address_pool_name</span></code> or <code class="docutils literal notranslate"><span class="pre">default_backend_http_settings_name</span></code> is set.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">defaultRewriteRuleSetId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">defaultRewriteRuleSetName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultRewriteRuleSetName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Name of the Default Rewrite Rule Set which should be used for this URL Path Map. Only valid for v2 SKUs.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the Rewrite Rule Set</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the Application Gateway. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">pathRules</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of <code class="docutils literal notranslate"><span class="pre">path_rule</span></code> blocks as defined above.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Name of the URL Path Map.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pathRules</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">path_rule</span></code> blocks as defined above.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">backend_address_pool_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the associated Backend Address Pool.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">backendAddressPoolName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">backendAddressPoolName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Name of the Backend Address Pool to use for this Path Rule. Cannot be set if <code class="docutils literal notranslate"><span class="pre">redirect_configuration_name</span></code> is set.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">backendHttpSettingsId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the associated Backend HTTP Settings Configuration.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">backendHttpSettingsName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">backendHttpSettingsName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Name of the Backend HTTP Settings Collection to use for this Path Rule. Cannot be set if <code class="docutils literal notranslate"><span class="pre">redirect_configuration_name</span></code> is set.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the Rewrite Rule Set</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the Application Gateway. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">paths</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Name of the Path Rule.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">paths</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of Paths used in this Path Rule.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">redirectConfigurationId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the associated Redirect Configuration.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">redirectConfigurationName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">redirectConfigurationName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Name of a Redirect Configuration to use for this Path Rule. Cannot be set if <code class="docutils literal notranslate"><span class="pre">backend_address_pool_name</span></code> or <code class="docutils literal notranslate"><span class="pre">backend_http_settings_name</span></code> is set.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">rewriteRuleSetId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the associated Rewrite Rule Set.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">rewriteRuleSetName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rewriteRuleSetName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Name of the Rewrite Rule Set which should be used for this URL Path Map. Only valid for v2 SKUs.</p></li>
 </ul>
 </li>
 </ul>
@@ -677,26 +679,26 @@ anything, please consult the source <a class="reference external" href="https://
 <code class="sig-name descname">waf_configuration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.ApplicationGateway.waf_configuration" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">waf_configuration</span></code> block as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">disabledRuleGroups</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">disabledRuleGroups</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - one or more <code class="docutils literal notranslate"><span class="pre">disabled_rule_group</span></code> blocks as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">ruleGroupName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">rules</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ruleGroupName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The rule group where specific rules should be disabled. Accepted values are:  <code class="docutils literal notranslate"><span class="pre">crs_20_protocol_violations</span></code>, <code class="docutils literal notranslate"><span class="pre">crs_21_protocol_anomalies</span></code>, <code class="docutils literal notranslate"><span class="pre">crs_23_request_limits</span></code>, <code class="docutils literal notranslate"><span class="pre">crs_30_http_policy</span></code>, <code class="docutils literal notranslate"><span class="pre">crs_35_bad_robots</span></code>, <code class="docutils literal notranslate"><span class="pre">crs_40_generic_attacks</span></code>, <code class="docutils literal notranslate"><span class="pre">crs_41_sql_injection_attacks</span></code>, <code class="docutils literal notranslate"><span class="pre">crs_41_xss_attacks</span></code>, <code class="docutils literal notranslate"><span class="pre">crs_42_tight_security</span></code>, <code class="docutils literal notranslate"><span class="pre">crs_45_trojans</span></code>, <code class="docutils literal notranslate"><span class="pre">General</span></code>, <code class="docutils literal notranslate"><span class="pre">REQUEST-911-METHOD-ENFORCEMENT</span></code>, <code class="docutils literal notranslate"><span class="pre">REQUEST-913-SCANNER-DETECTION</span></code>, <code class="docutils literal notranslate"><span class="pre">REQUEST-920-PROTOCOL-ENFORCEMENT</span></code>, <code class="docutils literal notranslate"><span class="pre">REQUEST-921-PROTOCOL-ATTACK</span></code>, <code class="docutils literal notranslate"><span class="pre">REQUEST-930-APPLICATION-ATTACK-LFI</span></code>, <code class="docutils literal notranslate"><span class="pre">REQUEST-931-APPLICATION-ATTACK-RFI</span></code>, <code class="docutils literal notranslate"><span class="pre">REQUEST-932-APPLICATION-ATTACK-RCE</span></code>, <code class="docutils literal notranslate"><span class="pre">REQUEST-933-APPLICATION-ATTACK-PHP</span></code>, <code class="docutils literal notranslate"><span class="pre">REQUEST-941-APPLICATION-ATTACK-XSS</span></code>, <code class="docutils literal notranslate"><span class="pre">REQUEST-942-APPLICATION-ATTACK-SQLI</span></code>, <code class="docutils literal notranslate"><span class="pre">REQUEST-943-APPLICATION-ATTACK-SESSION-FIXATION</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rules</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of rules which should be disabled in that group. Disables all rules in the specified group if <code class="docutils literal notranslate"><span class="pre">rules</span></code> is not specified.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">exclusions</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Is the Web Application Firewall be enabled?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">exclusions</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - one or more <code class="docutils literal notranslate"><span class="pre">exclusion</span></code> blocks as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">matchVariable</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">selector</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">selectorMatchOperator</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">matchVariable</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Match variable of the exclusion rule to exclude header, cookie or GET arguments. Possible values are <code class="docutils literal notranslate"><span class="pre">RequestHeaderNames</span></code>, <code class="docutils literal notranslate"><span class="pre">RequestArgNames</span></code> and <code class="docutils literal notranslate"><span class="pre">RequestCookieNames</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">selector</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - String value which will be used for the filter operation. If empty will exclude all traffic on this <code class="docutils literal notranslate"><span class="pre">match_variable</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">selectorMatchOperator</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Operator which will be used to search in the variable content. Possible values are <code class="docutils literal notranslate"><span class="pre">Equals</span></code>, <code class="docutils literal notranslate"><span class="pre">StartsWith</span></code>, <code class="docutils literal notranslate"><span class="pre">EndsWith</span></code>, <code class="docutils literal notranslate"><span class="pre">Contains</span></code>. If empty will exclude all traffic on this <code class="docutils literal notranslate"><span class="pre">match_variable</span></code></p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">fileUploadLimitMb</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">firewallMode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxRequestBodySizeKb</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">requestBodyCheck</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ruleSetType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ruleSetVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fileUploadLimitMb</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The File Upload Limit in MB. Accepted values are in the range <code class="docutils literal notranslate"><span class="pre">1</span></code>MB to <code class="docutils literal notranslate"><span class="pre">500</span></code>MB. Defaults to <code class="docutils literal notranslate"><span class="pre">100</span></code>MB.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">firewallMode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Web Application Firewall Mode. Possible values are <code class="docutils literal notranslate"><span class="pre">Detection</span></code> and <code class="docutils literal notranslate"><span class="pre">Prevention</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxRequestBodySizeKb</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The Maximum Request Body Size in KB.  Accepted values are in the range <code class="docutils literal notranslate"><span class="pre">1</span></code>KB to <code class="docutils literal notranslate"><span class="pre">128</span></code>KB.  Defaults to <code class="docutils literal notranslate"><span class="pre">128</span></code>KB.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requestBodyCheck</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Is Request Body Inspection enabled?  Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ruleSetType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Type of the Rule Set used for this Web Application Firewall.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ruleSetVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Version of the Rule Set used for this Web Application Firewall. Possible values are <code class="docutils literal notranslate"><span class="pre">2.2.9</span></code>, <code class="docutils literal notranslate"><span class="pre">3.0</span></code>, and <code class="docutils literal notranslate"><span class="pre">3.1</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -748,261 +750,262 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>authentication_certificates</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">data</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">data</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The contents of the Authentication Certificate which should be used.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Rewrite Rule Set</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Application Gateway. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Authentication Certificate.</p></li>
 </ul>
 <p>The <strong>autoscale_configuration</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">maxCapacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">minCapacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxCapacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Maximum capacity for autoscaling. Accepted values are in the range <code class="docutils literal notranslate"><span class="pre">2</span></code> to <code class="docutils literal notranslate"><span class="pre">125</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">min_capacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Minimum capacity for autoscaling. Accepted values are in the range <code class="docutils literal notranslate"><span class="pre">0</span></code> to <code class="docutils literal notranslate"><span class="pre">100</span></code>.</p></li>
 </ul>
 <p>The <strong>backend_address_pools</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">fqdns</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fqdns</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of FQDN’s which should be part of the Backend Address Pool.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Rewrite Rule Set</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ipAddresses</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Application Gateway. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipAddresses</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of IP Addresses which should be part of the Backend Address Pool.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Backend Address Pool.</p></li>
 </ul>
 <p>The <strong>backend_http_settings</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">affinityCookieName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">authentication_certificates</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">authentication_certificate</span></code> blocks as defined below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">affinityCookieName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the affinity cookie.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">authentication_certificates</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">authentication_certificate</span></code> blocks.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Rewrite Rule Set</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Application Gateway. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Authentication Certificate.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">connectionDraining</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">connectionDraining</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">connection_draining</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">drainTimeoutSec</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">drainTimeoutSec</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of seconds connection draining is active. Acceptable values are from <code class="docutils literal notranslate"><span class="pre">1</span></code> second to <code class="docutils literal notranslate"><span class="pre">3600</span></code> seconds.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If connection draining is enabled or not.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">cookieBasedAffinity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">host_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cookieBasedAffinity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Is Cookie-Based Affinity enabled? Possible values are <code class="docutils literal notranslate"><span class="pre">Enabled</span></code> and <code class="docutils literal notranslate"><span class="pre">Disabled</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">host_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Host header to be sent to the backend servers. Cannot be set if <code class="docutils literal notranslate"><span class="pre">pick_host_name_from_backend_address</span></code> is set to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Rewrite Rule Set</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Application Gateway. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">pickHostNameFromBackendAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Backend HTTP Settings Collection.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Path which should be used as a prefix for all HTTP requests.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pickHostNameFromBackendAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether host header should be picked from the host name of the backend server. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The port used for this Frontend Port.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">probe_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the associated Probe.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">probeName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">requestTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">trustedRootCertificateNames</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">probeName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of an associated HTTP Probe.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Protocol to use for this HTTP Listener. Possible values are <code class="docutils literal notranslate"><span class="pre">Http</span></code> and <code class="docutils literal notranslate"><span class="pre">Https</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requestTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The request timeout in seconds, which must be between 1 and 86400 seconds.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">trustedRootCertificateNames</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of <code class="docutils literal notranslate"><span class="pre">trusted_root_certificate</span></code> names.</p></li>
 </ul>
 <p>The <strong>custom_error_configurations</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">customErrorPageUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">customErrorPageUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Error page URL of the application gateway customer error.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Rewrite Rule Set</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">statusCode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">statusCode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Status code of the application gateway customer error. Possible values are <code class="docutils literal notranslate"><span class="pre">HttpStatus403</span></code> and <code class="docutils literal notranslate"><span class="pre">HttpStatus502</span></code></p></li>
 </ul>
 <p>The <strong>frontend_ip_configurations</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Rewrite Rule Set</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Application Gateway. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">private_ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">privateIpAddressAllocation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">publicIpAddressId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Frontend IP Configuration.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">private_ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Private IP Address to use for the Application Gateway.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">privateIpAddressAllocation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Allocation Method for the Private IP Address. Possible values are <code class="docutils literal notranslate"><span class="pre">Dynamic</span></code> and <code class="docutils literal notranslate"><span class="pre">Static</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publicIpAddressId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of a Public IP Address which the Application Gateway should use.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Subnet which the Application Gateway should be connected to.</p></li>
 </ul>
 <p>The <strong>frontend_ports</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Rewrite Rule Set</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Application Gateway. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Frontend Port.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The port used for this Frontend Port.</p></li>
 </ul>
 <p>The <strong>gateway_ip_configurations</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Rewrite Rule Set</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Application Gateway. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of this Gateway IP Configuration.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of a Subnet.</p></li>
 </ul>
 <p>The <strong>http_listeners</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">custom_error_configurations</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">custom_error_configuration</span></code> blocks as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">customErrorPageUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">customErrorPageUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Error page URL of the application gateway customer error.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Rewrite Rule Set</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">statusCode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">statusCode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Status code of the application gateway customer error. Possible values are <code class="docutils literal notranslate"><span class="pre">HttpStatus403</span></code> and <code class="docutils literal notranslate"><span class="pre">HttpStatus502</span></code></p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">frontend_ip_configuration_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the associated Frontend Configuration.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">frontend_ip_configuration_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">frontend_ip_configuration_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of the Frontend IP Configuration used for this HTTP Listener.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">frontendPortId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the associated Frontend Port.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">frontendPortName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">host_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">frontendPortName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of the Frontend Port use for this HTTP Listener.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">host_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Hostname which should be used for this HTTP Listener.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Rewrite Rule Set</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Application Gateway. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">requireSni</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of the HTTP Listener.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Protocol to use for this HTTP Listener. Possible values are <code class="docutils literal notranslate"><span class="pre">Http</span></code> and <code class="docutils literal notranslate"><span class="pre">Https</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requireSni</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should Server Name Indication be Required? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sslCertificateId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the associated SSL Certificate.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sslCertificateName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sslCertificateName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the associated SSL Certificate which should be used for this HTTP Listener.</p></li>
 </ul>
 <p>The <strong>identity</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">identityIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">identityIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies a list with a single user managed identity id to be assigned to the Application Gateway.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Managed Service Identity Type of this Application Gateway. The only possible value is <code class="docutils literal notranslate"><span class="pre">UserAssigned</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">UserAssigned</span></code>.</p></li>
 </ul>
 <p>The <strong>probes</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">host</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">host</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Hostname used for this Probe. If the Application Gateway is configured for a single site, by default the Host name should be specified as ‘127.0.0.1’, unless otherwise configured in custom probe. Cannot be set if <code class="docutils literal notranslate"><span class="pre">pick_host_name_from_backend_http_settings</span></code> is set to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Rewrite Rule Set</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">interval</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">match</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">interval</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The Interval between two consecutive probes in seconds. Possible values range from 1 second to a maximum of 86,400 seconds.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">match</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">match</span></code> block as defined above.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">body</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">statusCodes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">body</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A snippet from the Response Body which must be present in the Response..</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">statusCodes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of allowed status codes for this Health Probe.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">minimumServers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Application Gateway. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">pickHostNameFromBackendHttpSettings</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">timeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">unhealthyThreshold</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minimumServers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The minimum number of servers that are always marked as healthy. Defaults to <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of the Probe.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Path used for this Probe.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pickHostNameFromBackendHttpSettings</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether the host header should be picked from the backend http settings. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Protocol used for this Probe. Possible values are <code class="docutils literal notranslate"><span class="pre">Http</span></code> and <code class="docutils literal notranslate"><span class="pre">Https</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The Timeout used for this Probe, which indicates when a probe becomes unhealthy. Possible values range from 1 second to a maximum of 86,400 seconds.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">unhealthyThreshold</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The Unhealthy Threshold for this Probe, which indicates the amount of retries which should be attempted before a node is deemed unhealthy. Possible values are from 1 - 20 seconds.</p></li>
 </ul>
 <p>The <strong>redirect_configurations</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Rewrite Rule Set</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">includePath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">includeQueryString</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Application Gateway. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">redirectType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">includePath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether or not to include the path in the redirected Url. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">includeQueryString</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether or not to include the query string in the redirected Url. Default to <code class="docutils literal notranslate"><span class="pre">false</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Unique name of the redirect configuration block</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">redirectType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of redirect. Possible values are <code class="docutils literal notranslate"><span class="pre">Permanent</span></code>, <code class="docutils literal notranslate"><span class="pre">Temporary</span></code>, <code class="docutils literal notranslate"><span class="pre">Found</span></code> and <code class="docutils literal notranslate"><span class="pre">SeeOther</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">targetListenerId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">targetListenerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">targetUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">targetListenerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the listener to redirect to. Cannot be set if <code class="docutils literal notranslate"><span class="pre">target_url</span></code> is set.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">targetUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Url to redirect the request to. Cannot be set if <code class="docutils literal notranslate"><span class="pre">target_listener_name</span></code> is set.</p></li>
 </ul>
 <p>The <strong>request_routing_rules</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">backend_address_pool_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the associated Backend Address Pool.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">backendAddressPoolName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">backendAddressPoolName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of the Backend Address Pool which should be used for this Routing Rule. Cannot be set if <code class="docutils literal notranslate"><span class="pre">redirect_configuration_name</span></code> is set.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">backendHttpSettingsId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the associated Backend HTTP Settings Configuration.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">backendHttpSettingsName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">backendHttpSettingsName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of the Backend HTTP Settings Collection which should be used for this Routing Rule. Cannot be set if <code class="docutils literal notranslate"><span class="pre">redirect_configuration_name</span></code> is set.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">httpListenerId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the associated HTTP Listener.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">httpListenerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpListenerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of the HTTP Listener which should be used for this Routing Rule.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Rewrite Rule Set</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Application Gateway. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of this Request Routing Rule.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">redirectConfigurationId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the associated Redirect Configuration.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">redirectConfigurationName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">redirectConfigurationName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of the Redirect Configuration which should be used for this Routing Rule. Cannot be set if either <code class="docutils literal notranslate"><span class="pre">backend_address_pool_name</span></code> or <code class="docutils literal notranslate"><span class="pre">backend_http_settings_name</span></code> is set.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">rewriteRuleSetId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the associated Rewrite Rule Set.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">rewriteRuleSetName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ruleType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rewriteRuleSetName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of the Rewrite Rule Set which should be used for this Routing Rule. Only valid for v2 SKUs.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ruleType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Type of Routing that should be used for this Rule. Possible values are <code class="docutils literal notranslate"><span class="pre">Basic</span></code> and <code class="docutils literal notranslate"><span class="pre">PathBasedRouting</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">urlPathMapId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the associated URL Path Map.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">urlPathMapName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">urlPathMapName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of the URL Path Map which should be associated with this Routing Rule.</p></li>
 </ul>
 <p>The <strong>rewrite_rule_sets</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Rewrite Rule Set</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Application Gateway. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">rewriteRules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Unique name of the rewrite rule set block</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rewriteRules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">rewrite_rule</span></code> blocks as defined above.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">conditions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">conditions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">condition</span></code> blocks as defined above.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">ignoreCase</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">negate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">pattern</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">variable</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ignoreCase</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Perform a case in-sensitive comparison. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">negate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Negate the result of the condition evaluation. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pattern</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The pattern, either fixed string or regular expression, that evaluates the truthfulness of the condition.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">variable</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The <a class="reference external" href="https://docs.microsoft.com/en-us/azure/application-gateway/rewrite-http-headers#server-variables">variable</a> of the condition.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Application Gateway. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">requestHeaderConfigurations</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Unique name of the rewrite rule block</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requestHeaderConfigurations</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">request_header_configuration</span></code> blocks as defined above.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">headerValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Header name of the header configuration.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">headerValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Header value of the header configuration. To delete a request header set this property to an empty string.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">responseHeaderConfigurations</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">responseHeaderConfigurations</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">response_header_configuration</span></code> blocks as defined above.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">headerValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">headerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Header name of the header configuration.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">headerValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Header value of the header configuration. To delete a response header set this property to an empty string.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ruleSequence</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ruleSequence</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Rule sequence of the rewrite rule that determines the order of execution in a set.</p></li>
 </ul>
 </li>
 </ul>
 <p>The <strong>sku</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">capacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Application Gateway. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tier</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">capacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The Capacity of the SKU to use for this Application Gateway. When using a V1 SKU this value must be between 1 and 32, and 1 to 125 for a V2 SKU. This property is optional if <code class="docutils literal notranslate"><span class="pre">autoscale_configuration</span></code> is set.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of the SKU to use for this Application Gateway. Possible values are <code class="docutils literal notranslate"><span class="pre">Standard_Small</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard_Medium</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard_Large</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard_v2</span></code>, <code class="docutils literal notranslate"><span class="pre">WAF_Medium</span></code>, <code class="docutils literal notranslate"><span class="pre">WAF_Large</span></code>, and <code class="docutils literal notranslate"><span class="pre">WAF_v2</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tier</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Tier of the SKU to use for this Application Gateway. Possible values are <code class="docutils literal notranslate"><span class="pre">Standard</span></code>, <code class="docutils literal notranslate"><span class="pre">Standard_v2</span></code>, <code class="docutils literal notranslate"><span class="pre">WAF</span></code> and <code class="docutils literal notranslate"><span class="pre">WAF_v2</span></code>.</p></li>
 </ul>
 <p>The <strong>ssl_certificates</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">data</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">data</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - PFX certificate. Required if <code class="docutils literal notranslate"><span class="pre">key_vault_secret_id</span></code> is not set.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Rewrite Rule Set</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">key_vault_secret_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Application Gateway. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key_vault_secret_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Secret Id of (base-64 encoded unencrypted pfx) <code class="docutils literal notranslate"><span class="pre">Secret</span></code> or <code class="docutils literal notranslate"><span class="pre">Certificate</span></code> object stored in Azure KeyVault. You need to enable soft delete for keyvault to use this feature. Required if <code class="docutils literal notranslate"><span class="pre">data</span></code> is not set.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of the SSL certificate that is unique within this Application Gateway</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Password for the pfx file specified in data.  Required if <code class="docutils literal notranslate"><span class="pre">data</span></code> is set.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">publicCertData</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Public Certificate Data associated with the SSL Certificate.</p></li>
 </ul>
 <p>The <strong>ssl_policies</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">cipherSuites</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">disabledProtocols</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">minProtocolVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">policyName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">policy_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cipherSuites</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A List of accepted cipher suites. Possible values are: <code class="docutils literal notranslate"><span class="pre">TLS_DHE_DSS_WITH_AES_128_CBC_SHA</span></code>, <code class="docutils literal notranslate"><span class="pre">TLS_DHE_DSS_WITH_AES_128_CBC_SHA256</span></code>, <code class="docutils literal notranslate"><span class="pre">TLS_DHE_DSS_WITH_AES_256_CBC_SHA</span></code>, <code class="docutils literal notranslate"><span class="pre">TLS_DHE_DSS_WITH_AES_256_CBC_SHA256</span></code>, <code class="docutils literal notranslate"><span class="pre">TLS_DHE_RSA_WITH_AES_128_CBC_SHA</span></code>, <code class="docutils literal notranslate"><span class="pre">TLS_DHE_RSA_WITH_AES_128_GCM_SHA256</span></code>, <code class="docutils literal notranslate"><span class="pre">TLS_DHE_RSA_WITH_AES_256_CBC_SHA</span></code>, <code class="docutils literal notranslate"><span class="pre">TLS_DHE_RSA_WITH_AES_256_GCM_SHA384</span></code>, <code class="docutils literal notranslate"><span class="pre">TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA</span></code>, <code class="docutils literal notranslate"><span class="pre">TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256</span></code>, <code class="docutils literal notranslate"><span class="pre">TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256</span></code>, <code class="docutils literal notranslate"><span class="pre">TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA</span></code>, <code class="docutils literal notranslate"><span class="pre">TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384</span></code>, <code class="docutils literal notranslate"><span class="pre">TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384</span></code>, <code class="docutils literal notranslate"><span class="pre">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</span></code>, <code class="docutils literal notranslate"><span class="pre">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256</span></code>, <code class="docutils literal notranslate"><span class="pre">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA</span></code>, <code class="docutils literal notranslate"><span class="pre">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384</span></code>, <code class="docutils literal notranslate"><span class="pre">TLS_RSA_WITH_3DES_EDE_CBC_SHA</span></code>, <code class="docutils literal notranslate"><span class="pre">TLS_RSA_WITH_AES_128_CBC_SHA</span></code>, <code class="docutils literal notranslate"><span class="pre">TLS_RSA_WITH_AES_128_CBC_SHA256</span></code>, <code class="docutils literal notranslate"><span class="pre">TLS_RSA_WITH_AES_128_GCM_SHA256</span></code>, <code class="docutils literal notranslate"><span class="pre">TLS_RSA_WITH_AES_256_CBC_SHA</span></code>, <code class="docutils literal notranslate"><span class="pre">TLS_RSA_WITH_AES_256_CBC_SHA256</span></code> and <code class="docutils literal notranslate"><span class="pre">TLS_RSA_WITH_AES_256_GCM_SHA384</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disabledProtocols</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of SSL Protocols which should be disabled on this Application Gateway. Possible values are <code class="docutils literal notranslate"><span class="pre">TLSv1_0</span></code>, <code class="docutils literal notranslate"><span class="pre">TLSv1_1</span></code> and <code class="docutils literal notranslate"><span class="pre">TLSv1_2</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minProtocolVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The minimal TLS version. Possible values are <code class="docutils literal notranslate"><span class="pre">TLSv1_0</span></code>, <code class="docutils literal notranslate"><span class="pre">TLSv1_1</span></code> and <code class="docutils literal notranslate"><span class="pre">TLSv1_2</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">policyName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of the Policy e.g AppGwSslPolicy20170401S. Required if <code class="docutils literal notranslate"><span class="pre">policy_type</span></code> is set to <code class="docutils literal notranslate"><span class="pre">Predefined</span></code>. Possible values can change over time and
+are published here <a class="reference external" href="https://docs.microsoft.com/en-us/azure/application-gateway/application-gateway-ssl-policy-overview">https://docs.microsoft.com/en-us/azure/application-gateway/application-gateway-ssl-policy-overview</a>. Not compatible with <code class="docutils literal notranslate"><span class="pre">disabled_protocols</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">policy_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Type of the Policy. Possible values are <code class="docutils literal notranslate"><span class="pre">Predefined</span></code> and <code class="docutils literal notranslate"><span class="pre">Custom</span></code>.</p></li>
 </ul>
 <p>The <strong>trusted_root_certificates</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">data</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">data</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The contents of the Trusted Root Certificate which should be used.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Rewrite Rule Set</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Application Gateway. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of the Trusted Root Certificate to use.</p></li>
 </ul>
 <p>The <strong>url_path_maps</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">defaultBackendAddressPoolId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Default Backend Address Pool.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">defaultBackendAddressPoolName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultBackendAddressPoolName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of the Default Backend Address Pool which should be used for this URL Path Map. Cannot be set if <code class="docutils literal notranslate"><span class="pre">default_redirect_configuration_name</span></code> is set.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">defaultBackendHttpSettingsId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Default Backend HTTP Settings Collection.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">defaultBackendHttpSettingsName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultBackendHttpSettingsName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of the Default Backend HTTP Settings Collection which should be used for this URL Path Map. Cannot be set if <code class="docutils literal notranslate"><span class="pre">default_redirect_configuration_name</span></code> is set.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">defaultRedirectConfigurationId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Default Redirect Configuration.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">defaultRedirectConfigurationName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultRedirectConfigurationName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of the Default Redirect Configuration which should be used for this URL Path Map. Cannot be set if either <code class="docutils literal notranslate"><span class="pre">default_backend_address_pool_name</span></code> or <code class="docutils literal notranslate"><span class="pre">default_backend_http_settings_name</span></code> is set.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">defaultRewriteRuleSetId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">defaultRewriteRuleSetName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultRewriteRuleSetName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of the Default Rewrite Rule Set which should be used for this URL Path Map. Only valid for v2 SKUs.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Rewrite Rule Set</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Application Gateway. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">pathRules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of <code class="docutils literal notranslate"><span class="pre">path_rule</span></code> blocks as defined above.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of the URL Path Map.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pathRules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">path_rule</span></code> blocks as defined above.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">backend_address_pool_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the associated Backend Address Pool.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">backendAddressPoolName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">backendAddressPoolName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of the Backend Address Pool to use for this Path Rule. Cannot be set if <code class="docutils literal notranslate"><span class="pre">redirect_configuration_name</span></code> is set.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">backendHttpSettingsId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the associated Backend HTTP Settings Configuration.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">backendHttpSettingsName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">backendHttpSettingsName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of the Backend HTTP Settings Collection to use for this Path Rule. Cannot be set if <code class="docutils literal notranslate"><span class="pre">redirect_configuration_name</span></code> is set.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Rewrite Rule Set</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Application Gateway. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">paths</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of the Path Rule.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">paths</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of Paths used in this Path Rule.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">redirectConfigurationId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the associated Redirect Configuration.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">redirectConfigurationName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">redirectConfigurationName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of a Redirect Configuration to use for this Path Rule. Cannot be set if <code class="docutils literal notranslate"><span class="pre">backend_address_pool_name</span></code> or <code class="docutils literal notranslate"><span class="pre">backend_http_settings_name</span></code> is set.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">rewriteRuleSetId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the associated Rewrite Rule Set.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">rewriteRuleSetName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rewriteRuleSetName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of the Rewrite Rule Set which should be used for this URL Path Map. Only valid for v2 SKUs.</p></li>
 </ul>
 </li>
 </ul>
 <p>The <strong>waf_configuration</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">disabledRuleGroups</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">disabledRuleGroups</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - one or more <code class="docutils literal notranslate"><span class="pre">disabled_rule_group</span></code> blocks as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">ruleGroupName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">rules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ruleGroupName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The rule group where specific rules should be disabled. Accepted values are:  <code class="docutils literal notranslate"><span class="pre">crs_20_protocol_violations</span></code>, <code class="docutils literal notranslate"><span class="pre">crs_21_protocol_anomalies</span></code>, <code class="docutils literal notranslate"><span class="pre">crs_23_request_limits</span></code>, <code class="docutils literal notranslate"><span class="pre">crs_30_http_policy</span></code>, <code class="docutils literal notranslate"><span class="pre">crs_35_bad_robots</span></code>, <code class="docutils literal notranslate"><span class="pre">crs_40_generic_attacks</span></code>, <code class="docutils literal notranslate"><span class="pre">crs_41_sql_injection_attacks</span></code>, <code class="docutils literal notranslate"><span class="pre">crs_41_xss_attacks</span></code>, <code class="docutils literal notranslate"><span class="pre">crs_42_tight_security</span></code>, <code class="docutils literal notranslate"><span class="pre">crs_45_trojans</span></code>, <code class="docutils literal notranslate"><span class="pre">General</span></code>, <code class="docutils literal notranslate"><span class="pre">REQUEST-911-METHOD-ENFORCEMENT</span></code>, <code class="docutils literal notranslate"><span class="pre">REQUEST-913-SCANNER-DETECTION</span></code>, <code class="docutils literal notranslate"><span class="pre">REQUEST-920-PROTOCOL-ENFORCEMENT</span></code>, <code class="docutils literal notranslate"><span class="pre">REQUEST-921-PROTOCOL-ATTACK</span></code>, <code class="docutils literal notranslate"><span class="pre">REQUEST-930-APPLICATION-ATTACK-LFI</span></code>, <code class="docutils literal notranslate"><span class="pre">REQUEST-931-APPLICATION-ATTACK-RFI</span></code>, <code class="docutils literal notranslate"><span class="pre">REQUEST-932-APPLICATION-ATTACK-RCE</span></code>, <code class="docutils literal notranslate"><span class="pre">REQUEST-933-APPLICATION-ATTACK-PHP</span></code>, <code class="docutils literal notranslate"><span class="pre">REQUEST-941-APPLICATION-ATTACK-XSS</span></code>, <code class="docutils literal notranslate"><span class="pre">REQUEST-942-APPLICATION-ATTACK-SQLI</span></code>, <code class="docutils literal notranslate"><span class="pre">REQUEST-943-APPLICATION-ATTACK-SESSION-FIXATION</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of rules which should be disabled in that group. Disables all rules in the specified group if <code class="docutils literal notranslate"><span class="pre">rules</span></code> is not specified.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">exclusions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is the Web Application Firewall be enabled?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">exclusions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - one or more <code class="docutils literal notranslate"><span class="pre">exclusion</span></code> blocks as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">matchVariable</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">selector</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">selectorMatchOperator</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">matchVariable</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Match variable of the exclusion rule to exclude header, cookie or GET arguments. Possible values are <code class="docutils literal notranslate"><span class="pre">RequestHeaderNames</span></code>, <code class="docutils literal notranslate"><span class="pre">RequestArgNames</span></code> and <code class="docutils literal notranslate"><span class="pre">RequestCookieNames</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">selector</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - String value which will be used for the filter operation. If empty will exclude all traffic on this <code class="docutils literal notranslate"><span class="pre">match_variable</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">selectorMatchOperator</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Operator which will be used to search in the variable content. Possible values are <code class="docutils literal notranslate"><span class="pre">Equals</span></code>, <code class="docutils literal notranslate"><span class="pre">StartsWith</span></code>, <code class="docutils literal notranslate"><span class="pre">EndsWith</span></code>, <code class="docutils literal notranslate"><span class="pre">Contains</span></code>. If empty will exclude all traffic on this <code class="docutils literal notranslate"><span class="pre">match_variable</span></code></p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">fileUploadLimitMb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">firewallMode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxRequestBodySizeKb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">requestBodyCheck</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ruleSetType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ruleSetVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fileUploadLimitMb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The File Upload Limit in MB. Accepted values are in the range <code class="docutils literal notranslate"><span class="pre">1</span></code>MB to <code class="docutils literal notranslate"><span class="pre">500</span></code>MB. Defaults to <code class="docutils literal notranslate"><span class="pre">100</span></code>MB.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">firewallMode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Web Application Firewall Mode. Possible values are <code class="docutils literal notranslate"><span class="pre">Detection</span></code> and <code class="docutils literal notranslate"><span class="pre">Prevention</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxRequestBodySizeKb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The Maximum Request Body Size in KB.  Accepted values are in the range <code class="docutils literal notranslate"><span class="pre">1</span></code>KB to <code class="docutils literal notranslate"><span class="pre">128</span></code>KB.  Defaults to <code class="docutils literal notranslate"><span class="pre">128</span></code>KB.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requestBodyCheck</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is Request Body Inspection enabled?  Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ruleSetType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Type of the Rule Set used for this Web Application Firewall.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ruleSetVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Version of the Rule Set used for this Web Application Firewall. Possible values are <code class="docutils literal notranslate"><span class="pre">2.2.9</span></code>, <code class="docutils literal notranslate"><span class="pre">3.0</span></code>, and <code class="docutils literal notranslate"><span class="pre">3.1</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -1208,6 +1211,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_azure.network.AwaitableGetRouteTableResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.network.</code><code class="sig-name descname">AwaitableGetRouteTableResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">routes=None</em>, <em class="sig-param">subnets=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.AwaitableGetRouteTableResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_azure.network.AwaitableGetServiceTagsResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.network.</code><code class="sig-name descname">AwaitableGetServiceTagsResult</code><span class="sig-paren">(</span><em class="sig-param">address_prefixes=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">location_filter=None</em>, <em class="sig-param">service=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.AwaitableGetServiceTagsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -1653,7 +1661,7 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 </dl>
 <p>The <strong>microsoft_peering_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">advertisedPublicPrefixes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">advertisedPublicPrefixes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of Advertised Public Prefixes</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_azure.network.ExpressRouteCircuitPeering.azure_asn">
@@ -1672,7 +1680,7 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 <code class="sig-name descname">microsoft_peering_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.ExpressRouteCircuitPeering.microsoft_peering_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">microsoft_peering_config</span></code> block as defined below. Required when <code class="docutils literal notranslate"><span class="pre">peering_type</span></code> is set to <code class="docutils literal notranslate"><span class="pre">MicrosoftPeering</span></code>.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">advertisedPublicPrefixes</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">advertisedPublicPrefixes</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of Advertised Public Prefixes</p></li>
 </ul>
 </dd></dl>
 
@@ -1760,7 +1768,7 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 </dl>
 <p>The <strong>microsoft_peering_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">advertisedPublicPrefixes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">advertisedPublicPrefixes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of Advertised Public Prefixes</p></li>
 </ul>
 </dd></dl>
 
@@ -1942,20 +1950,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <p>The <strong>ip_configurations</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the Firewall. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the IP Configuration.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">private_ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The private IP address of the Azure Firewall.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">publicIpAddressId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publicIpAddressId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Resource ID of the Public IP Address associated with the firewall.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Reference to the subnet associated with the IP Configuration.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_azure.network.Firewall.ip_configurations">
 <code class="sig-name descname">ip_configurations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.Firewall.ip_configurations" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">ip_configuration</span></code> block as documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the name of the Firewall. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the name of the IP Configuration.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">private_ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The private IP address of the Azure Firewall.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">publicIpAddressId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publicIpAddressId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Resource ID of the Public IP Address associated with the firewall.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Reference to the subnet associated with the IP Configuration.</p></li>
 </ul>
 </dd></dl>
 
@@ -2011,10 +2019,10 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>ip_configurations</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the Firewall. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the IP Configuration.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">private_ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The private IP address of the Azure Firewall.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">publicIpAddressId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publicIpAddressId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Resource ID of the Public IP Address associated with the firewall.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Reference to the subnet associated with the IP Configuration.</p></li>
 </ul>
 </dd></dl>
 
@@ -2079,17 +2087,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <p>The <strong>rules</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">fqdnTags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the Application Rule Collection which must be unique within the Firewall. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">protocols</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies a description for the rule.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fqdnTags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of FQDN tags. Possible values are <code class="docutils literal notranslate"><span class="pre">AppServiceEnvironment</span></code>, <code class="docutils literal notranslate"><span class="pre">AzureBackup</span></code>, <code class="docutils literal notranslate"><span class="pre">MicrosoftActiveProtectionService</span></code>, <code class="docutils literal notranslate"><span class="pre">WindowsDiagnostics</span></code> and <code class="docutils literal notranslate"><span class="pre">WindowsUpdate</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the rule.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocols</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">protocol</span></code> blocks as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specify a port for the connection.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the type of connection. Possible values are <code class="docutils literal notranslate"><span class="pre">Http</span></code>, <code class="docutils literal notranslate"><span class="pre">Https</span></code> and <code class="docutils literal notranslate"><span class="pre">Mssql</span></code>.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sourceAddresses</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">targetFqdns</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sourceAddresses</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of source IP addresses and/or IP ranges.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">targetFqdns</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of FQDNs.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_azure.network.FirewallApplicationRuleCollection.action">
@@ -2126,17 +2134,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">rules</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.FirewallApplicationRuleCollection.rules" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">rule</span></code> blocks as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">fqdnTags</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the name of the Application Rule Collection which must be unique within the Firewall. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">protocols</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies a description for the rule.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fqdnTags</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of FQDN tags. Possible values are <code class="docutils literal notranslate"><span class="pre">AppServiceEnvironment</span></code>, <code class="docutils literal notranslate"><span class="pre">AzureBackup</span></code>, <code class="docutils literal notranslate"><span class="pre">MicrosoftActiveProtectionService</span></code>, <code class="docutils literal notranslate"><span class="pre">WindowsDiagnostics</span></code> and <code class="docutils literal notranslate"><span class="pre">WindowsUpdate</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the name of the rule.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocols</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">protocol</span></code> blocks as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Specify a port for the connection.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the type of connection. Possible values are <code class="docutils literal notranslate"><span class="pre">Http</span></code>, <code class="docutils literal notranslate"><span class="pre">Https</span></code> and <code class="docutils literal notranslate"><span class="pre">Mssql</span></code>.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sourceAddresses</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">targetFqdns</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sourceAddresses</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of source IP addresses and/or IP ranges.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">targetFqdns</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of FQDNs.</p></li>
 </ul>
 </dd></dl>
 
@@ -2162,17 +2170,17 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>rules</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">fqdnTags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the Application Rule Collection which must be unique within the Firewall. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">protocols</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies a description for the rule.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fqdnTags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of FQDN tags. Possible values are <code class="docutils literal notranslate"><span class="pre">AppServiceEnvironment</span></code>, <code class="docutils literal notranslate"><span class="pre">AzureBackup</span></code>, <code class="docutils literal notranslate"><span class="pre">MicrosoftActiveProtectionService</span></code>, <code class="docutils literal notranslate"><span class="pre">WindowsDiagnostics</span></code> and <code class="docutils literal notranslate"><span class="pre">WindowsUpdate</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the rule.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocols</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">protocol</span></code> blocks as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specify a port for the connection.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the type of connection. Possible values are <code class="docutils literal notranslate"><span class="pre">Http</span></code>, <code class="docutils literal notranslate"><span class="pre">Https</span></code> and <code class="docutils literal notranslate"><span class="pre">Mssql</span></code>.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sourceAddresses</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">targetFqdns</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sourceAddresses</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of source IP addresses and/or IP ranges.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">targetFqdns</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of FQDNs.</p></li>
 </ul>
 </dd></dl>
 
@@ -2237,14 +2245,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <p>The <strong>rules</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">destinationAddresses</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">destinationPorts</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the NAT Rule Collection which must be unique within the Firewall. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">protocols</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sourceAddresses</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">translatedAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">translatedPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies a description for the rule.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">destinationAddresses</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of destination IP addresses and/or IP ranges.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">destinationPorts</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of destination ports.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the rule.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocols</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of protocols. Possible values are <code class="docutils literal notranslate"><span class="pre">Any</span></code>, <code class="docutils literal notranslate"><span class="pre">ICMP</span></code>, <code class="docutils literal notranslate"><span class="pre">TCP</span></code> and <code class="docutils literal notranslate"><span class="pre">UDP</span></code>.  If <code class="docutils literal notranslate"><span class="pre">action</span></code> is <code class="docutils literal notranslate"><span class="pre">Dnat</span></code>, protocols can only be <code class="docutils literal notranslate"><span class="pre">TCP</span></code> and <code class="docutils literal notranslate"><span class="pre">UDP</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sourceAddresses</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of source IP addresses and/or IP ranges.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">translatedAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The address of the service behind the Firewall.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">translatedPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The port of the service behind the Firewall.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_azure.network.FirewallNatRuleCollection.action">
@@ -2281,14 +2289,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">rules</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.FirewallNatRuleCollection.rules" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">rule</span></code> blocks as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">destinationAddresses</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">destinationPorts</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the name of the NAT Rule Collection which must be unique within the Firewall. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">protocols</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sourceAddresses</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">translatedAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">translatedPort</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies a description for the rule.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">destinationAddresses</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of destination IP addresses and/or IP ranges.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">destinationPorts</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of destination ports.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the name of the rule.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocols</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of protocols. Possible values are <code class="docutils literal notranslate"><span class="pre">Any</span></code>, <code class="docutils literal notranslate"><span class="pre">ICMP</span></code>, <code class="docutils literal notranslate"><span class="pre">TCP</span></code> and <code class="docutils literal notranslate"><span class="pre">UDP</span></code>.  If <code class="docutils literal notranslate"><span class="pre">action</span></code> is <code class="docutils literal notranslate"><span class="pre">Dnat</span></code>, protocols can only be <code class="docutils literal notranslate"><span class="pre">TCP</span></code> and <code class="docutils literal notranslate"><span class="pre">UDP</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sourceAddresses</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of source IP addresses and/or IP ranges.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">translatedAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The address of the service behind the Firewall.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">translatedPort</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The port of the service behind the Firewall.</p></li>
 </ul>
 </dd></dl>
 
@@ -2314,14 +2322,14 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>rules</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">destinationAddresses</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">destinationPorts</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the NAT Rule Collection which must be unique within the Firewall. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">protocols</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sourceAddresses</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">translatedAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">translatedPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies a description for the rule.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">destinationAddresses</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of destination IP addresses and/or IP ranges.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">destinationPorts</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of destination ports.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the rule.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocols</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of protocols. Possible values are <code class="docutils literal notranslate"><span class="pre">Any</span></code>, <code class="docutils literal notranslate"><span class="pre">ICMP</span></code>, <code class="docutils literal notranslate"><span class="pre">TCP</span></code> and <code class="docutils literal notranslate"><span class="pre">UDP</span></code>.  If <code class="docutils literal notranslate"><span class="pre">action</span></code> is <code class="docutils literal notranslate"><span class="pre">Dnat</span></code>, protocols can only be <code class="docutils literal notranslate"><span class="pre">TCP</span></code> and <code class="docutils literal notranslate"><span class="pre">UDP</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sourceAddresses</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of source IP addresses and/or IP ranges.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">translatedAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The address of the service behind the Firewall.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">translatedPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The port of the service behind the Firewall.</p></li>
 </ul>
 </dd></dl>
 
@@ -2386,12 +2394,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <p>The <strong>rules</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">destinationAddresses</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">destinationPorts</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the Network Rule Collection which must be unique within the Firewall. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">protocols</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sourceAddresses</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies a description for the rule.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">destinationAddresses</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of destination IP addresses and/or IP ranges.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">destinationPorts</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of destination ports.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the rule.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocols</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of protocols. Possible values are <code class="docutils literal notranslate"><span class="pre">Any</span></code>, <code class="docutils literal notranslate"><span class="pre">ICMP</span></code>, <code class="docutils literal notranslate"><span class="pre">TCP</span></code> and <code class="docutils literal notranslate"><span class="pre">UDP</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sourceAddresses</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of source IP addresses and/or IP ranges.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_azure.network.FirewallNetworkRuleCollection.action">
@@ -2428,12 +2436,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">rules</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.FirewallNetworkRuleCollection.rules" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">rule</span></code> blocks as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">destinationAddresses</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">destinationPorts</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the name of the Network Rule Collection which must be unique within the Firewall. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">protocols</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sourceAddresses</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies a description for the rule.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">destinationAddresses</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of destination IP addresses and/or IP ranges.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">destinationPorts</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of destination ports.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the name of the rule.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocols</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of protocols. Possible values are <code class="docutils literal notranslate"><span class="pre">Any</span></code>, <code class="docutils literal notranslate"><span class="pre">ICMP</span></code>, <code class="docutils literal notranslate"><span class="pre">TCP</span></code> and <code class="docutils literal notranslate"><span class="pre">UDP</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sourceAddresses</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of source IP addresses and/or IP ranges.</p></li>
 </ul>
 </dd></dl>
 
@@ -2459,12 +2467,12 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>rules</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">destinationAddresses</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">destinationPorts</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the Network Rule Collection which must be unique within the Firewall. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">protocols</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sourceAddresses</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies a description for the rule.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">destinationAddresses</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of destination IP addresses and/or IP ranges.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">destinationPorts</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of destination ports.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the rule.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocols</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of protocols. Possible values are <code class="docutils literal notranslate"><span class="pre">Any</span></code>, <code class="docutils literal notranslate"><span class="pre">ICMP</span></code>, <code class="docutils literal notranslate"><span class="pre">TCP</span></code> and <code class="docutils literal notranslate"><span class="pre">UDP</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sourceAddresses</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of source IP addresses and/or IP ranges.</p></li>
 </ul>
 </dd></dl>
 
@@ -3101,6 +3109,24 @@ in which the connection is created.</p>
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_azure.network.GetServiceTagsResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.network.</code><code class="sig-name descname">GetServiceTagsResult</code><span class="sig-paren">(</span><em class="sig-param">address_prefixes=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">location_filter=None</em>, <em class="sig-param">service=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.GetServiceTagsResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getServiceTags.</p>
+<dl class="attribute">
+<dt id="pulumi_azure.network.GetServiceTagsResult.address_prefixes">
+<code class="sig-name descname">address_prefixes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.GetServiceTagsResult.address_prefixes" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of address prefixes for the service type (and optionally a specific region).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.network.GetServiceTagsResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.GetServiceTagsResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_azure.network.GetSubnetResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.network.</code><code class="sig-name descname">GetSubnetResult</code><span class="sig-paren">(</span><em class="sig-param">address_prefix=None</em>, <em class="sig-param">enforce_private_link_endpoint_network_policies=None</em>, <em class="sig-param">enforce_private_link_service_network_policies=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_security_group_id=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">route_table_id=None</em>, <em class="sig-param">service_endpoints=None</em>, <em class="sig-param">virtual_network_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.GetSubnetResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getSubnet.</p>
@@ -3667,14 +3693,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <p>The <strong>destination</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">virtual_machine_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - IP address or domain name to monitor connectivity to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The port on the destination to monitor connectivity to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtual_machine_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Virtual Machine to monitor connectivity to.</p></li>
 </ul>
 <p>The <strong>source</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">virtual_machine_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The port on the destination to monitor connectivity to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtual_machine_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Virtual Machine to monitor connectivity to.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_azure.network.NetworkConnectionMonitor.auto_start">
@@ -3687,9 +3713,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">destination</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.NetworkConnectionMonitor.destination" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">destination</span></code> block as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">address</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">virtual_machine_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">address</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - IP address or domain name to monitor connectivity to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The port on the destination to monitor connectivity to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtual_machine_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the Virtual Machine to monitor connectivity to.</p></li>
 </ul>
 </dd></dl>
 
@@ -3728,8 +3754,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">source</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.NetworkConnectionMonitor.source" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">source</span></code> block as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">virtual_machine_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The port on the destination to monitor connectivity to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtual_machine_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the Virtual Machine to monitor connectivity to.</p></li>
 </ul>
 </dd></dl>
 
@@ -3764,14 +3790,14 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>destination</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">virtual_machine_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - IP address or domain name to monitor connectivity to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The port on the destination to monitor connectivity to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtual_machine_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Virtual Machine to monitor connectivity to.</p></li>
 </ul>
 <p>The <strong>source</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">virtual_machine_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The port on the destination to monitor connectivity to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtual_machine_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Virtual Machine to monitor connectivity to.</p></li>
 </ul>
 </dd></dl>
 
@@ -3839,13 +3865,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <p>The <strong>ip_configurations</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Network Interface. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">primary</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">private_ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The first private IP address of the network interface.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">privateIpAddressAllocation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">privateIpAddressVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">publicIpAddressId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A name used for this IP Configuration.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">primary</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is this the Primary IP Configuration? Must be <code class="docutils literal notranslate"><span class="pre">true</span></code> for the first <code class="docutils literal notranslate"><span class="pre">ip_configuration</span></code> when multiple are specified. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">private_ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Static IP Address which should be used.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">privateIpAddressAllocation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The allocation method used for the Private IP Address. Possible values are <code class="docutils literal notranslate"><span class="pre">Dynamic</span></code> and <code class="docutils literal notranslate"><span class="pre">Static</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">privateIpAddressVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The IP Version to use. Possible values are <code class="docutils literal notranslate"><span class="pre">IPv4</span></code> or <code class="docutils literal notranslate"><span class="pre">IPv6</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">IPv4</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publicIpAddressId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Reference to a Public IP Address to associate with this NIC</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Subnet where this Network Interface should be located in.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_azure.network.NetworkInterface.applied_dns_servers">
@@ -3882,13 +3908,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">ip_configurations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.NetworkInterface.ip_configurations" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">ip_configuration</span></code> blocks as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the Network Interface. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">primary</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">private_ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The first private IP address of the network interface.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">privateIpAddressAllocation</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">privateIpAddressVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">publicIpAddressId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A name used for this IP Configuration.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">primary</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Is this the Primary IP Configuration? Must be <code class="docutils literal notranslate"><span class="pre">true</span></code> for the first <code class="docutils literal notranslate"><span class="pre">ip_configuration</span></code> when multiple are specified. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">private_ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Static IP Address which should be used.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">privateIpAddressAllocation</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The allocation method used for the Private IP Address. Possible values are <code class="docutils literal notranslate"><span class="pre">Dynamic</span></code> and <code class="docutils literal notranslate"><span class="pre">Static</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">privateIpAddressVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The IP Version to use. Possible values are <code class="docutils literal notranslate"><span class="pre">IPv4</span></code> or <code class="docutils literal notranslate"><span class="pre">IPv6</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">IPv4</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publicIpAddressId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Reference to a Public IP Address to associate with this NIC</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the Subnet where this Network Interface should be located in.</p></li>
 </ul>
 </dd></dl>
 
@@ -3913,7 +3939,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.network.NetworkInterface.private_ip_address">
 <code class="sig-name descname">private_ip_address</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.NetworkInterface.private_ip_address" title="Permalink to this definition">¶</a></dt>
-<dd><p>The first private IP address of the network interface.</p>
+<dd><p>The Static IP Address which should be used.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -3960,7 +3986,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The location where the Network Interface should exist. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>mac_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Media Access Control (MAC) Address of the Network Interface.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Network Interface. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>private_ip_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The first private IP address of the network interface.</p></li>
+<li><p><strong>private_ip_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Static IP Address which should be used.</p></li>
 <li><p><strong>private_ip_addresses</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The private IP addresses of the network interface.</p></li>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Resource Group in which to create the Network Interface. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
@@ -3970,13 +3996,13 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>ip_configurations</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Network Interface. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">primary</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">private_ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The first private IP address of the network interface.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">privateIpAddressAllocation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">privateIpAddressVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">publicIpAddressId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A name used for this IP Configuration.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">primary</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is this the Primary IP Configuration? Must be <code class="docutils literal notranslate"><span class="pre">true</span></code> for the first <code class="docutils literal notranslate"><span class="pre">ip_configuration</span></code> when multiple are specified. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">private_ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Static IP Address which should be used.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">privateIpAddressAllocation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The allocation method used for the Private IP Address. Possible values are <code class="docutils literal notranslate"><span class="pre">Dynamic</span></code> and <code class="docutils literal notranslate"><span class="pre">Static</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">privateIpAddressVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The IP Version to use. Possible values are <code class="docutils literal notranslate"><span class="pre">IPv4</span></code> or <code class="docutils literal notranslate"><span class="pre">IPv6</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">IPv4</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publicIpAddressId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Reference to a Public IP Address to associate with this NIC</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Subnet where this Network Interface should be located in.</p></li>
 </ul>
 </dd></dl>
 
@@ -4493,16 +4519,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <p>The <strong>filters</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">localIpAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">localPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">remoteIpAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">remotePort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">localIpAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The local IP Address to be filtered on. Notation: “127.0.0.1” for single address entry. “127.0.0.1-127.0.0.255” for range. “127.0.0.1;127.0.0.5” for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">localPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The local port to be filtered on. Notation: “80” for single port entry.”80-85” for range. “80;443;” for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Protocol to be filtered on. Possible values include <code class="docutils literal notranslate"><span class="pre">Any</span></code>, <code class="docutils literal notranslate"><span class="pre">TCP</span></code> and <code class="docutils literal notranslate"><span class="pre">UDP</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">remoteIpAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The remote IP Address to be filtered on. Notation: “127.0.0.1” for single address entry. “127.0.0.1-127.0.0.255” for range. “127.0.0.1;127.0.0.5;” for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported.. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">remotePort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The remote port to be filtered on. Notation: “80” for single port entry.”80-85” for range. “80;443;” for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Changing this forces a new resource to be created.</p></li>
 </ul>
 <p>The <strong>storage_location</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">filePath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">filePath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A valid local path on the targeting VM. Must include the name of the capture file (<a href="#id3"><span class="problematic" id="id4">*</span></a>.cap). For linux virtual machine it must start with <code class="docutils literal notranslate"><span class="pre">/var/captures</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the storage account to save the packet capture session</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">storagePath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The URI of the storage path to save the packet capture.</p></li>
 </ul>
 <dl class="attribute">
@@ -4510,11 +4536,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">filters</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.NetworkPacketCapture.filters" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">filter</span></code> blocks as defined below. Changing this forces a new resource to be created.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">localIpAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">localPort</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">remoteIpAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">remotePort</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">localIpAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The local IP Address to be filtered on. Notation: “127.0.0.1” for single address entry. “127.0.0.1-127.0.0.255” for range. “127.0.0.1;127.0.0.5” for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">localPort</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The local port to be filtered on. Notation: “80” for single port entry.”80-85” for range. “80;443;” for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Protocol to be filtered on. Possible values include <code class="docutils literal notranslate"><span class="pre">Any</span></code>, <code class="docutils literal notranslate"><span class="pre">TCP</span></code> and <code class="docutils literal notranslate"><span class="pre">UDP</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">remoteIpAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The remote IP Address to be filtered on. Notation: “127.0.0.1” for single address entry. “127.0.0.1-127.0.0.255” for range. “127.0.0.1;127.0.0.5;” for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported.. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">remotePort</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The remote port to be filtered on. Notation: “80” for single port entry.”80-85” for range. “80;443;” for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Changing this forces a new resource to be created.</p></li>
 </ul>
 </dd></dl>
 
@@ -4559,8 +4585,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">storage_location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.NetworkPacketCapture.storage_location" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">storage_location</span></code> block as defined below. Changing this forces a new resource to be created.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">filePath</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">filePath</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A valid local path on the targeting VM. Must include the name of the capture file (<a href="#id5"><span class="problematic" id="id6">*</span></a>.cap). For linux virtual machine it must start with <code class="docutils literal notranslate"><span class="pre">/var/captures</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the storage account to save the packet capture session</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">storagePath</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The URI of the storage path to save the packet capture.</p></li>
 </ul>
 </dd></dl>
@@ -4596,16 +4622,16 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>filters</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">localIpAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">localPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">remoteIpAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">remotePort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">localIpAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The local IP Address to be filtered on. Notation: “127.0.0.1” for single address entry. “127.0.0.1-127.0.0.255” for range. “127.0.0.1;127.0.0.5” for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">localPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The local port to be filtered on. Notation: “80” for single port entry.”80-85” for range. “80;443;” for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Protocol to be filtered on. Possible values include <code class="docutils literal notranslate"><span class="pre">Any</span></code>, <code class="docutils literal notranslate"><span class="pre">TCP</span></code> and <code class="docutils literal notranslate"><span class="pre">UDP</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">remoteIpAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The remote IP Address to be filtered on. Notation: “127.0.0.1” for single address entry. “127.0.0.1-127.0.0.255” for range. “127.0.0.1;127.0.0.5;” for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported.. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">remotePort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The remote port to be filtered on. Notation: “80” for single port entry.”80-85” for range. “80;443;” for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Changing this forces a new resource to be created.</p></li>
 </ul>
 <p>The <strong>storage_location</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">filePath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">filePath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A valid local path on the targeting VM. Must include the name of the capture file (<a href="#id7"><span class="problematic" id="id8">*</span></a>.cap). For linux virtual machine it must start with <code class="docutils literal notranslate"><span class="pre">/var/captures</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the storage account to save the packet capture session</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">storagePath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The URI of the storage path to save the packet capture.</p></li>
 </ul>
 </dd></dl>
@@ -4836,13 +4862,13 @@ At this time you cannot use a Network Security Group with in-line Network Securi
 <li><p><strong>destination_address_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – CIDR or destination IP range or * to match any IP. Tags such as ‘VirtualNetwork’, ‘AzureLoadBalancer’ and ‘Internet’ can also be used. This is required if <code class="docutils literal notranslate"><span class="pre">destination_address_prefixes</span></code> is not specified.</p></li>
 <li><p><strong>destination_address_prefixes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of destination address prefixes. Tags may not be used. This is required if <code class="docutils literal notranslate"><span class="pre">destination_address_prefix</span></code> is not specified.</p></li>
 <li><p><strong>destination_application_security_group_ids</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A List of destination Application Security Group ID’s</p></li>
-<li><p><strong>destination_port_range</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Destination Port or Range. Integer or range between <code class="docutils literal notranslate"><span class="pre">0</span></code> and <code class="docutils literal notranslate"><span class="pre">65535</span></code> or <cite>*``to match any. This is required if`</cite>destination_port_ranges<a href="#id1"><span class="problematic" id="id2">``</span></a>is not specified.</p></li>
-<li><p><strong>destination_port_ranges</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of destination ports or port ranges. This is required if``destination_port_range<a href="#id3"><span class="problematic" id="id4">``</span></a>is not specified.</p></li>
-<li><p><strong>direction</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The direction specifies if rule will be evaluated on incoming or outgoing traffic. Possible values are``Inbound<code class="docutils literal notranslate"><span class="pre">and</span></code>Outbound<a href="#id5"><span class="problematic" id="id6">``</span></a>.</p></li>
+<li><p><strong>destination_port_range</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Destination Port or Range. Integer or range between <code class="docutils literal notranslate"><span class="pre">0</span></code> and <code class="docutils literal notranslate"><span class="pre">65535</span></code> or <cite>*``to match any. This is required if`</cite>destination_port_ranges<a href="#id9"><span class="problematic" id="id10">``</span></a>is not specified.</p></li>
+<li><p><strong>destination_port_ranges</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of destination ports or port ranges. This is required if``destination_port_range<a href="#id11"><span class="problematic" id="id12">``</span></a>is not specified.</p></li>
+<li><p><strong>direction</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The direction specifies if rule will be evaluated on incoming or outgoing traffic. Possible values are``Inbound<code class="docutils literal notranslate"><span class="pre">and</span></code>Outbound<a href="#id13"><span class="problematic" id="id14">``</span></a>.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the security rule. This needs to be unique across all Rules in the Network Security Group. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>network_security_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Network Security Group that we want to attach the rule to. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>priority</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Specifies the priority of the rule. The value can be between 100 and 4096. The priority number must be unique for each rule in the collection. The lower the priority number, the higher the priority of the rule.</p></li>
-<li><p><strong>protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Network protocol this rule applies to. Possible values include``Tcp<code class="docutils literal notranslate"><span class="pre">,</span></code>Udp<code class="docutils literal notranslate"><span class="pre">,</span></code>Icmp<code class="docutils literal notranslate"><span class="pre">,</span> <span class="pre">or</span></code><a href="#id7"><span class="problematic" id="id8">*</span></a>` (which matches all).</p></li>
+<li><p><strong>protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Network protocol this rule applies to. Possible values include``Tcp<code class="docutils literal notranslate"><span class="pre">,</span></code>Udp<code class="docutils literal notranslate"><span class="pre">,</span></code>Icmp<code class="docutils literal notranslate"><span class="pre">,</span> <span class="pre">or</span></code><a href="#id15"><span class="problematic" id="id16">*</span></a>` (which matches all).</p></li>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the Network Security Rule. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>source_address_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – CIDR or source IP range or * to match any IP. Tags such as ‘VirtualNetwork’, ‘AzureLoadBalancer’ and ‘Internet’ can also be used. This is required if <code class="docutils literal notranslate"><span class="pre">source_address_prefixes</span></code> is not specified.</p></li>
 <li><p><strong>source_address_prefixes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of source address prefixes. Tags may not be used. This is required if <code class="docutils literal notranslate"><span class="pre">source_address_prefix</span></code> is not specified.</p></li>
@@ -4976,13 +5002,13 @@ properties used to qualify the lookup.</p>
 <li><p><strong>destination_address_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – CIDR or destination IP range or * to match any IP. Tags such as ‘VirtualNetwork’, ‘AzureLoadBalancer’ and ‘Internet’ can also be used. This is required if <code class="docutils literal notranslate"><span class="pre">destination_address_prefixes</span></code> is not specified.</p></li>
 <li><p><strong>destination_address_prefixes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of destination address prefixes. Tags may not be used. This is required if <code class="docutils literal notranslate"><span class="pre">destination_address_prefix</span></code> is not specified.</p></li>
 <li><p><strong>destination_application_security_group_ids</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A List of destination Application Security Group ID’s</p></li>
-<li><p><strong>destination_port_range</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Destination Port or Range. Integer or range between <code class="docutils literal notranslate"><span class="pre">0</span></code> and <code class="docutils literal notranslate"><span class="pre">65535</span></code> or <cite>*``to match any. This is required if`</cite>destination_port_ranges<a href="#id9"><span class="problematic" id="id10">``</span></a>is not specified.</p></li>
-<li><p><strong>destination_port_ranges</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of destination ports or port ranges. This is required if``destination_port_range<a href="#id11"><span class="problematic" id="id12">``</span></a>is not specified.</p></li>
-<li><p><strong>direction</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The direction specifies if rule will be evaluated on incoming or outgoing traffic. Possible values are``Inbound<code class="docutils literal notranslate"><span class="pre">and</span></code>Outbound<a href="#id13"><span class="problematic" id="id14">``</span></a>.</p></li>
+<li><p><strong>destination_port_range</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Destination Port or Range. Integer or range between <code class="docutils literal notranslate"><span class="pre">0</span></code> and <code class="docutils literal notranslate"><span class="pre">65535</span></code> or <cite>*``to match any. This is required if`</cite>destination_port_ranges<a href="#id17"><span class="problematic" id="id18">``</span></a>is not specified.</p></li>
+<li><p><strong>destination_port_ranges</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of destination ports or port ranges. This is required if``destination_port_range<a href="#id19"><span class="problematic" id="id20">``</span></a>is not specified.</p></li>
+<li><p><strong>direction</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The direction specifies if rule will be evaluated on incoming or outgoing traffic. Possible values are``Inbound<code class="docutils literal notranslate"><span class="pre">and</span></code>Outbound<a href="#id21"><span class="problematic" id="id22">``</span></a>.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the security rule. This needs to be unique across all Rules in the Network Security Group. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>network_security_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Network Security Group that we want to attach the rule to. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>priority</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Specifies the priority of the rule. The value can be between 100 and 4096. The priority number must be unique for each rule in the collection. The lower the priority number, the higher the priority of the rule.</p></li>
-<li><p><strong>protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Network protocol this rule applies to. Possible values include``Tcp<code class="docutils literal notranslate"><span class="pre">,</span></code>Udp<code class="docutils literal notranslate"><span class="pre">,</span></code>Icmp<code class="docutils literal notranslate"><span class="pre">,</span> <span class="pre">or</span></code><a href="#id15"><span class="problematic" id="id16">*</span></a>` (which matches all).</p></li>
+<li><p><strong>protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Network protocol this rule applies to. Possible values include``Tcp<code class="docutils literal notranslate"><span class="pre">,</span></code>Udp<code class="docutils literal notranslate"><span class="pre">,</span></code>Icmp<code class="docutils literal notranslate"><span class="pre">,</span> <span class="pre">or</span></code><a href="#id23"><span class="problematic" id="id24">*</span></a>` (which matches all).</p></li>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the Network Security Rule. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>source_address_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – CIDR or source IP range or * to match any IP. Tags such as ‘VirtualNetwork’, ‘AzureLoadBalancer’ and ‘Internet’ can also be used. This is required if <code class="docutils literal notranslate"><span class="pre">source_address_prefixes</span></code> is not specified.</p></li>
 <li><p><strong>source_address_prefixes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of source address prefixes. Tags may not be used. This is required if <code class="docutils literal notranslate"><span class="pre">source_address_prefix</span></code> is not specified.</p></li>
@@ -5145,7 +5171,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean flag to enable/disable traffic analytics.</p></li>
+<li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should Network Flow Logging be Enabled?</p></li>
 <li><p><strong>network_security_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Network Security Group for which to enable flow logs for. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>network_watcher_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Network Watcher. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which the Network Watcher was deployed. Changing this forces a new resource to be created.</p></li>
@@ -5159,7 +5185,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>The <strong>retention_policy</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">days</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of days to retain flow log records.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Boolean flag to enable/disable traffic analytics.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Boolean flag to enable/disable retention.</p></li>
 </ul>
 <p>The <strong>traffic_analytics</strong> object supports the following:</p>
 <ul class="simple">
@@ -5172,7 +5198,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.network.NetworkWatcherFlowLog.enabled">
 <code class="sig-name descname">enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.NetworkWatcherFlowLog.enabled" title="Permalink to this definition">¶</a></dt>
-<dd><p>Boolean flag to enable/disable traffic analytics.</p>
+<dd><p>Should Network Flow Logging be Enabled?</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -5199,7 +5225,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">retention_policy</span></code> block as documented below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">days</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of days to retain flow log records.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Boolean flag to enable/disable traffic analytics.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Boolean flag to enable/disable retention.</p></li>
 </ul>
 </dd></dl>
 
@@ -5239,7 +5265,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean flag to enable/disable traffic analytics.</p></li>
+<li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should Network Flow Logging be Enabled?</p></li>
 <li><p><strong>network_security_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Network Security Group for which to enable flow logs for. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>network_watcher_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Network Watcher. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which the Network Watcher was deployed. Changing this forces a new resource to be created.</p></li>
@@ -5253,7 +5279,7 @@ properties used to qualify the lookup.</p>
 <p>The <strong>retention_policy</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">days</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of days to retain flow log records.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Boolean flag to enable/disable traffic analytics.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Boolean flag to enable/disable retention.</p></li>
 </ul>
 <p>The <strong>traffic_analytics</strong> object supports the following:</p>
 <ul class="simple">
@@ -5330,16 +5356,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <p>The <strong>filters</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">localIpAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">localPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">remoteIpAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">remotePort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">localIpAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The local IP Address to be filtered on. Notation: “127.0.0.1” for single address entry. “127.0.0.1-127.0.0.255” for range. “127.0.0.1;127.0.0.5” for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">localPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The local port to be filtered on. Notation: “80” for single port entry.”80-85” for range. “80;443;” for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Protocol to be filtered on. Possible values include <code class="docutils literal notranslate"><span class="pre">Any</span></code>, <code class="docutils literal notranslate"><span class="pre">TCP</span></code> and <code class="docutils literal notranslate"><span class="pre">UDP</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">remoteIpAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The remote IP Address to be filtered on. Notation: “127.0.0.1” for single address entry. “127.0.0.1-127.0.0.255” for range. “127.0.0.1;127.0.0.5;” for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported.. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">remotePort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The remote port to be filtered on. Notation: “80” for single port entry.”80-85” for range. “80;443;” for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Changing this forces a new resource to be created.</p></li>
 </ul>
 <p>The <strong>storage_location</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">filePath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">filePath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A valid local path on the targeting VM. Must include the name of the capture file (<a href="#id25"><span class="problematic" id="id26">*</span></a>.cap). For linux virtual machine it must start with <code class="docutils literal notranslate"><span class="pre">/var/captures</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the storage account to save the packet capture session</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">storagePath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The URI of the storage path to save the packet capture.</p></li>
 </ul>
 <dl class="attribute">
@@ -5347,11 +5373,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">filters</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.PacketCapture.filters" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">filter</span></code> blocks as defined below. Changing this forces a new resource to be created.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">localIpAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">localPort</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">remoteIpAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">remotePort</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">localIpAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The local IP Address to be filtered on. Notation: “127.0.0.1” for single address entry. “127.0.0.1-127.0.0.255” for range. “127.0.0.1;127.0.0.5” for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">localPort</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The local port to be filtered on. Notation: “80” for single port entry.”80-85” for range. “80;443;” for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Protocol to be filtered on. Possible values include <code class="docutils literal notranslate"><span class="pre">Any</span></code>, <code class="docutils literal notranslate"><span class="pre">TCP</span></code> and <code class="docutils literal notranslate"><span class="pre">UDP</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">remoteIpAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The remote IP Address to be filtered on. Notation: “127.0.0.1” for single address entry. “127.0.0.1-127.0.0.255” for range. “127.0.0.1;127.0.0.5;” for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported.. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">remotePort</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The remote port to be filtered on. Notation: “80” for single port entry.”80-85” for range. “80;443;” for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Changing this forces a new resource to be created.</p></li>
 </ul>
 </dd></dl>
 
@@ -5396,8 +5422,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">storage_location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.PacketCapture.storage_location" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">storage_location</span></code> block as defined below. Changing this forces a new resource to be created.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">filePath</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">filePath</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A valid local path on the targeting VM. Must include the name of the capture file (<a href="#id27"><span class="problematic" id="id28">*</span></a>.cap). For linux virtual machine it must start with <code class="docutils literal notranslate"><span class="pre">/var/captures</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the storage account to save the packet capture session</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">storagePath</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The URI of the storage path to save the packet capture.</p></li>
 </ul>
 </dd></dl>
@@ -5433,16 +5459,16 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>filters</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">localIpAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">localPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">remoteIpAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">remotePort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">localIpAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The local IP Address to be filtered on. Notation: “127.0.0.1” for single address entry. “127.0.0.1-127.0.0.255” for range. “127.0.0.1;127.0.0.5” for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">localPort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The local port to be filtered on. Notation: “80” for single port entry.”80-85” for range. “80;443;” for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Protocol to be filtered on. Possible values include <code class="docutils literal notranslate"><span class="pre">Any</span></code>, <code class="docutils literal notranslate"><span class="pre">TCP</span></code> and <code class="docutils literal notranslate"><span class="pre">UDP</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">remoteIpAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The remote IP Address to be filtered on. Notation: “127.0.0.1” for single address entry. “127.0.0.1-127.0.0.255” for range. “127.0.0.1;127.0.0.5;” for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported.. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">remotePort</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The remote port to be filtered on. Notation: “80” for single port entry.”80-85” for range. “80;443;” for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Changing this forces a new resource to be created.</p></li>
 </ul>
 <p>The <strong>storage_location</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">filePath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">filePath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A valid local path on the targeting VM. Must include the name of the capture file (<a href="#id29"><span class="problematic" id="id30">*</span></a>.cap). For linux virtual machine it must start with <code class="docutils literal notranslate"><span class="pre">/var/captures</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the storage account to save the packet capture session</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">storagePath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The URI of the storage path to save the packet capture.</p></li>
 </ul>
 </dd></dl>
@@ -5510,10 +5536,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <p>The <strong>connection_configuration</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the Point-to-Site VPN Gateway. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">vpnClientAddressPool</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name which should be used for this Connection Configuration.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vpnClientAddressPool</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">vpn_client_address_pool</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">addressPrefixes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">addressPrefixes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of CIDR Ranges which should be used as Address Prefixes.</p></li>
 </ul>
 </li>
 </ul>
@@ -5522,10 +5548,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">connection_configuration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.PointToPointVpnGateway.connection_configuration" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">connection_configuration</span></code> block as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the name of the Point-to-Site VPN Gateway. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">vpnClientAddressPool</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Name which should be used for this Connection Configuration.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vpnClientAddressPool</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A <code class="docutils literal notranslate"><span class="pre">vpn_client_address_pool</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">addressPrefixes</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">addressPrefixes</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of CIDR Ranges which should be used as Address Prefixes.</p></li>
 </ul>
 </li>
 </ul>
@@ -5597,10 +5623,10 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>connection_configuration</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the Point-to-Site VPN Gateway. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">vpnClientAddressPool</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name which should be used for this Connection Configuration.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vpnClientAddressPool</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">vpn_client_address_pool</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">addressPrefixes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">addressPrefixes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of CIDR Ranges which should be used as Address Prefixes.</p></li>
 </ul>
 </li>
 </ul>
@@ -5666,26 +5692,26 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <p>The <strong>container_network_interface</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">ip_configurations</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">ip_configurations</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">ip_configuration</span></code> blocks as documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the Network Profile. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the IP Configuration.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Reference to the subnet associated with the IP Configuration.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the Network Profile. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the IP Configuration.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_azure.network.Profile.container_network_interface">
 <code class="sig-name descname">container_network_interface</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.Profile.container_network_interface" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">container_network_interface</span></code> block as documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">ip_configurations</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">ip_configurations</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">ip_configuration</span></code> blocks as documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the name of the Network Profile. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the name of the IP Configuration.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Reference to the subnet associated with the IP Configuration.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the name of the Network Profile. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the name of the IP Configuration.</p></li>
 </ul>
 </dd></dl>
 
@@ -5741,13 +5767,13 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>container_network_interface</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">ip_configurations</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">ip_configurations</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">ip_configuration</span></code> blocks as documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the Network Profile. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the IP Configuration.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Reference to the subnet associated with the IP Configuration.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the Network Profile. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the IP Configuration.</p></li>
 </ul>
 </dd></dl>
 
@@ -6398,11 +6424,11 @@ At this time you cannot use a Virtual Network with in-line Subnets in conjunctio
 </dl>
 <p>The <strong>delegations</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the subnet. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">serviceDelegation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A name for this delegation.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serviceDelegation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">service_delegation</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">actions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the subnet. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">actions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of Actions which should be delegated. This list is specific to the service to delegate to. Possible values include <code class="docutils literal notranslate"><span class="pre">Microsoft.Network/networkinterfaces/*</span></code>, <code class="docutils literal notranslate"><span class="pre">Microsoft.Network/virtualNetworks/subnets/action</span></code>, <code class="docutils literal notranslate"><span class="pre">Microsoft.Network/virtualNetworks/subnets/join/action</span></code>, <code class="docutils literal notranslate"><span class="pre">Microsoft.Network/virtualNetworks/subnets/prepareNetworkPolicies/action</span></code> and <code class="docutils literal notranslate"><span class="pre">Microsoft.Network/virtualNetworks/subnets/unprepareNetworkPolicies/action</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of service to delegate to. Possible values include <code class="docutils literal notranslate"><span class="pre">Microsoft.BareMetal/AzureVMware</span></code>, <code class="docutils literal notranslate"><span class="pre">Microsoft.BareMetal/CrayServers</span></code>, <code class="docutils literal notranslate"><span class="pre">Microsoft.Batch/batchAccounts</span></code>, <code class="docutils literal notranslate"><span class="pre">Microsoft.ContainerInstance/containerGroups</span></code>, <code class="docutils literal notranslate"><span class="pre">Microsoft.Databricks/workspaces</span></code>, <code class="docutils literal notranslate"><span class="pre">Microsoft.DBforPostgreSQL/serversv2</span></code>, <code class="docutils literal notranslate"><span class="pre">Microsoft.HardwareSecurityModules/dedicatedHSMs</span></code>, <code class="docutils literal notranslate"><span class="pre">Microsoft.Logic/integrationServiceEnvironments</span></code>, <code class="docutils literal notranslate"><span class="pre">Microsoft.Netapp/volumes</span></code>, <code class="docutils literal notranslate"><span class="pre">Microsoft.ServiceFabricMesh/networks</span></code>, <code class="docutils literal notranslate"><span class="pre">Microsoft.Sql/managedInstances</span></code>, <code class="docutils literal notranslate"><span class="pre">Microsoft.Sql/servers</span></code>, <code class="docutils literal notranslate"><span class="pre">Microsoft.StreamAnalytics/streamingJobs</span></code>, <code class="docutils literal notranslate"><span class="pre">Microsoft.Web/hostingEnvironments</span></code> and <code class="docutils literal notranslate"><span class="pre">Microsoft.Web/serverFarms</span></code>.</p></li>
 </ul>
 </li>
 </ul>
@@ -6417,11 +6443,11 @@ At this time you cannot use a Virtual Network with in-line Subnets in conjunctio
 <code class="sig-name descname">delegations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.Subnet.delegations" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">delegation</span></code> blocks as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the subnet. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">serviceDelegation</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A name for this delegation.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serviceDelegation</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A <code class="docutils literal notranslate"><span class="pre">service_delegation</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">actions</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the subnet. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">actions</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of Actions which should be delegated. This list is specific to the service to delegate to. Possible values include <code class="docutils literal notranslate"><span class="pre">Microsoft.Network/networkinterfaces/*</span></code>, <code class="docutils literal notranslate"><span class="pre">Microsoft.Network/virtualNetworks/subnets/action</span></code>, <code class="docutils literal notranslate"><span class="pre">Microsoft.Network/virtualNetworks/subnets/join/action</span></code>, <code class="docutils literal notranslate"><span class="pre">Microsoft.Network/virtualNetworks/subnets/prepareNetworkPolicies/action</span></code> and <code class="docutils literal notranslate"><span class="pre">Microsoft.Network/virtualNetworks/subnets/unprepareNetworkPolicies/action</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of service to delegate to. Possible values include <code class="docutils literal notranslate"><span class="pre">Microsoft.BareMetal/AzureVMware</span></code>, <code class="docutils literal notranslate"><span class="pre">Microsoft.BareMetal/CrayServers</span></code>, <code class="docutils literal notranslate"><span class="pre">Microsoft.Batch/batchAccounts</span></code>, <code class="docutils literal notranslate"><span class="pre">Microsoft.ContainerInstance/containerGroups</span></code>, <code class="docutils literal notranslate"><span class="pre">Microsoft.Databricks/workspaces</span></code>, <code class="docutils literal notranslate"><span class="pre">Microsoft.DBforPostgreSQL/serversv2</span></code>, <code class="docutils literal notranslate"><span class="pre">Microsoft.HardwareSecurityModules/dedicatedHSMs</span></code>, <code class="docutils literal notranslate"><span class="pre">Microsoft.Logic/integrationServiceEnvironments</span></code>, <code class="docutils literal notranslate"><span class="pre">Microsoft.Netapp/volumes</span></code>, <code class="docutils literal notranslate"><span class="pre">Microsoft.ServiceFabricMesh/networks</span></code>, <code class="docutils literal notranslate"><span class="pre">Microsoft.Sql/managedInstances</span></code>, <code class="docutils literal notranslate"><span class="pre">Microsoft.Sql/servers</span></code>, <code class="docutils literal notranslate"><span class="pre">Microsoft.StreamAnalytics/streamingJobs</span></code>, <code class="docutils literal notranslate"><span class="pre">Microsoft.Web/hostingEnvironments</span></code> and <code class="docutils literal notranslate"><span class="pre">Microsoft.Web/serverFarms</span></code>.</p></li>
 </ul>
 </li>
 </ul>
@@ -6487,11 +6513,11 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>delegations</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the subnet. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">serviceDelegation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A name for this delegation.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serviceDelegation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">service_delegation</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">actions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the subnet. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">actions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of Actions which should be delegated. This list is specific to the service to delegate to. Possible values include <code class="docutils literal notranslate"><span class="pre">Microsoft.Network/networkinterfaces/*</span></code>, <code class="docutils literal notranslate"><span class="pre">Microsoft.Network/virtualNetworks/subnets/action</span></code>, <code class="docutils literal notranslate"><span class="pre">Microsoft.Network/virtualNetworks/subnets/join/action</span></code>, <code class="docutils literal notranslate"><span class="pre">Microsoft.Network/virtualNetworks/subnets/prepareNetworkPolicies/action</span></code> and <code class="docutils literal notranslate"><span class="pre">Microsoft.Network/virtualNetworks/subnets/unprepareNetworkPolicies/action</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of service to delegate to. Possible values include <code class="docutils literal notranslate"><span class="pre">Microsoft.BareMetal/AzureVMware</span></code>, <code class="docutils literal notranslate"><span class="pre">Microsoft.BareMetal/CrayServers</span></code>, <code class="docutils literal notranslate"><span class="pre">Microsoft.Batch/batchAccounts</span></code>, <code class="docutils literal notranslate"><span class="pre">Microsoft.ContainerInstance/containerGroups</span></code>, <code class="docutils literal notranslate"><span class="pre">Microsoft.Databricks/workspaces</span></code>, <code class="docutils literal notranslate"><span class="pre">Microsoft.DBforPostgreSQL/serversv2</span></code>, <code class="docutils literal notranslate"><span class="pre">Microsoft.HardwareSecurityModules/dedicatedHSMs</span></code>, <code class="docutils literal notranslate"><span class="pre">Microsoft.Logic/integrationServiceEnvironments</span></code>, <code class="docutils literal notranslate"><span class="pre">Microsoft.Netapp/volumes</span></code>, <code class="docutils literal notranslate"><span class="pre">Microsoft.ServiceFabricMesh/networks</span></code>, <code class="docutils literal notranslate"><span class="pre">Microsoft.Sql/managedInstances</span></code>, <code class="docutils literal notranslate"><span class="pre">Microsoft.Sql/servers</span></code>, <code class="docutils literal notranslate"><span class="pre">Microsoft.StreamAnalytics/streamingJobs</span></code>, <code class="docutils literal notranslate"><span class="pre">Microsoft.Web/hostingEnvironments</span></code> and <code class="docutils literal notranslate"><span class="pre">Microsoft.Web/serverFarms</span></code>.</p></li>
 </ul>
 </li>
 </ul>
@@ -6851,24 +6877,22 @@ routing method. Supports values between 1 and 1000.</p>
 </dl>
 <p>The <strong>custom_headers</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Traffic Manager endpoint. Changing this forces a
-new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the custom header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value of custom header. Applicable for Http and Https protocol.</p></li>
 </ul>
 <p>The <strong>subnets</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">first</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">last</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">scope</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">first</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The First IP….</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">last</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Last IP…</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scope</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The Scope…</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_azure.network.TrafficManagerEndpoint.custom_headers">
 <code class="sig-name descname">custom_headers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.TrafficManagerEndpoint.custom_headers" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">custom_header</span></code> blocks as defined below</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the Traffic Manager endpoint. Changing this forces a
-new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the custom header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The value of custom header. Applicable for Http and Https protocol.</p></li>
 </ul>
 </dd></dl>
 
@@ -6940,9 +6964,9 @@ create the Traffic Manager endpoint.</p>
 <code class="sig-name descname">subnets</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.TrafficManagerEndpoint.subnets" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">subnet</span></code> blocks as defined below</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">first</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">last</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">scope</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">first</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The First IP….</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">last</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Last IP…</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scope</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The Scope…</p></li>
 </ul>
 </dd></dl>
 
@@ -7042,15 +7066,14 @@ routing method. Supports values between 1 and 1000.</p>
 </dl>
 <p>The <strong>custom_headers</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Traffic Manager endpoint. Changing this forces a
-new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the custom header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value of custom header. Applicable for Http and Https protocol.</p></li>
 </ul>
 <p>The <strong>subnets</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">first</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">last</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">scope</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">first</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The First IP….</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">last</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Last IP…</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scope</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The Scope…</p></li>
 </ul>
 </dd></dl>
 
@@ -7116,26 +7139,32 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <p>The <strong>dns_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">relativeName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ttl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">relativeName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The relative domain name, this is combined with the domain name used by Traffic Manager to form the FQDN which is exported as documented below. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ttl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The TTL value of the Profile used by Local DNS resolvers and clients.</p></li>
 </ul>
 <p>The <strong>monitor_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">expectedStatusCodeRanges</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">interval_in_seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">timeoutInSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">toleratedNumberOfFailures</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">custom_headers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">custom_header</span></code> blocks as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the custom header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value of custom header. Applicable for Http and Https protocol.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">expectedStatusCodeRanges</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of status code ranges in the format of <code class="docutils literal notranslate"><span class="pre">100-101</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">interval_in_seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The interval used to check the endpoint health from a Traffic Manager probing agent. You can specify two values here: <code class="docutils literal notranslate"><span class="pre">30</span></code> (normal probing) and <code class="docutils literal notranslate"><span class="pre">10</span></code> (fast probing). The default value is <code class="docutils literal notranslate"><span class="pre">30</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path used by the monitoring checks. Required when <code class="docutils literal notranslate"><span class="pre">protocol</span></code> is set to <code class="docutils literal notranslate"><span class="pre">HTTP</span></code> or <code class="docutils literal notranslate"><span class="pre">HTTPS</span></code> - cannot be set when <code class="docutils literal notranslate"><span class="pre">protocol</span></code> is set to <code class="docutils literal notranslate"><span class="pre">TCP</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The port number used by the monitoring checks.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The protocol used by the monitoring checks, supported values are <code class="docutils literal notranslate"><span class="pre">HTTP</span></code>, <code class="docutils literal notranslate"><span class="pre">HTTPS</span></code> and <code class="docutils literal notranslate"><span class="pre">TCP</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeoutInSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The amount of time the Traffic Manager probing agent should wait before considering that check a failure when a health check probe is sent to the endpoint. If <code class="docutils literal notranslate"><span class="pre">interval_in_seconds</span></code> is set to <code class="docutils literal notranslate"><span class="pre">30</span></code>, then <code class="docutils literal notranslate"><span class="pre">timeout_in_seconds</span></code> can be between <code class="docutils literal notranslate"><span class="pre">5</span></code> and <code class="docutils literal notranslate"><span class="pre">10</span></code>. The default value is <code class="docutils literal notranslate"><span class="pre">10</span></code>. If <code class="docutils literal notranslate"><span class="pre">interval_in_seconds</span></code> is set to <code class="docutils literal notranslate"><span class="pre">10</span></code>, then valid values are between <code class="docutils literal notranslate"><span class="pre">5</span></code> and <code class="docutils literal notranslate"><span class="pre">9</span></code> and <code class="docutils literal notranslate"><span class="pre">timeout_in_seconds</span></code> is required.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">toleratedNumberOfFailures</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of failures a Traffic Manager probing agent tolerates before marking that endpoint as unhealthy. Valid values are between <code class="docutils literal notranslate"><span class="pre">0</span></code> and <code class="docutils literal notranslate"><span class="pre">9</span></code>. The default value is <code class="docutils literal notranslate"><span class="pre">3</span></code></p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_azure.network.TrafficManagerProfile.dns_config">
 <code class="sig-name descname">dns_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.TrafficManagerProfile.dns_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>This block specifies the DNS configuration of the Profile, it supports the fields documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">relativeName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ttl</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">relativeName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The relative domain name, this is combined with the domain name used by Traffic Manager to form the FQDN which is exported as documented below. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ttl</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The TTL value of the Profile used by Local DNS resolvers and clients.</p></li>
 </ul>
 </dd></dl>
 
@@ -7150,13 +7179,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">monitor_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.TrafficManagerProfile.monitor_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>This block specifies the Endpoint monitoring configuration for the Profile, it supports the fields documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">expectedStatusCodeRanges</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">interval_in_seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">timeoutInSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">toleratedNumberOfFailures</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">custom_headers</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">custom_header</span></code> blocks as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the custom header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The value of custom header. Applicable for Http and Https protocol.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">expectedStatusCodeRanges</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of status code ranges in the format of <code class="docutils literal notranslate"><span class="pre">100-101</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">interval_in_seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The interval used to check the endpoint health from a Traffic Manager probing agent. You can specify two values here: <code class="docutils literal notranslate"><span class="pre">30</span></code> (normal probing) and <code class="docutils literal notranslate"><span class="pre">10</span></code> (fast probing). The default value is <code class="docutils literal notranslate"><span class="pre">30</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The path used by the monitoring checks. Required when <code class="docutils literal notranslate"><span class="pre">protocol</span></code> is set to <code class="docutils literal notranslate"><span class="pre">HTTP</span></code> or <code class="docutils literal notranslate"><span class="pre">HTTPS</span></code> - cannot be set when <code class="docutils literal notranslate"><span class="pre">protocol</span></code> is set to <code class="docutils literal notranslate"><span class="pre">TCP</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The port number used by the monitoring checks.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The protocol used by the monitoring checks, supported values are <code class="docutils literal notranslate"><span class="pre">HTTP</span></code>, <code class="docutils literal notranslate"><span class="pre">HTTPS</span></code> and <code class="docutils literal notranslate"><span class="pre">TCP</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeoutInSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The amount of time the Traffic Manager probing agent should wait before considering that check a failure when a health check probe is sent to the endpoint. If <code class="docutils literal notranslate"><span class="pre">interval_in_seconds</span></code> is set to <code class="docutils literal notranslate"><span class="pre">30</span></code>, then <code class="docutils literal notranslate"><span class="pre">timeout_in_seconds</span></code> can be between <code class="docutils literal notranslate"><span class="pre">5</span></code> and <code class="docutils literal notranslate"><span class="pre">10</span></code>. The default value is <code class="docutils literal notranslate"><span class="pre">10</span></code>. If <code class="docutils literal notranslate"><span class="pre">interval_in_seconds</span></code> is set to <code class="docutils literal notranslate"><span class="pre">10</span></code>, then valid values are between <code class="docutils literal notranslate"><span class="pre">5</span></code> and <code class="docutils literal notranslate"><span class="pre">9</span></code> and <code class="docutils literal notranslate"><span class="pre">timeout_in_seconds</span></code> is required.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">toleratedNumberOfFailures</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of failures a Traffic Manager probing agent tolerates before marking that endpoint as unhealthy. Valid values are between <code class="docutils literal notranslate"><span class="pre">0</span></code> and <code class="docutils literal notranslate"><span class="pre">9</span></code>. The default value is <code class="docutils literal notranslate"><span class="pre">3</span></code></p></li>
 </ul>
 </dd></dl>
 
@@ -7214,18 +7249,24 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>dns_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">relativeName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ttl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">relativeName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The relative domain name, this is combined with the domain name used by Traffic Manager to form the FQDN which is exported as documented below. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ttl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The TTL value of the Profile used by Local DNS resolvers and clients.</p></li>
 </ul>
 <p>The <strong>monitor_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">expectedStatusCodeRanges</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">interval_in_seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">timeoutInSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">toleratedNumberOfFailures</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">custom_headers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">custom_header</span></code> blocks as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the custom header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value of custom header. Applicable for Http and Https protocol.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">expectedStatusCodeRanges</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of status code ranges in the format of <code class="docutils literal notranslate"><span class="pre">100-101</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">interval_in_seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The interval used to check the endpoint health from a Traffic Manager probing agent. You can specify two values here: <code class="docutils literal notranslate"><span class="pre">30</span></code> (normal probing) and <code class="docutils literal notranslate"><span class="pre">10</span></code> (fast probing). The default value is <code class="docutils literal notranslate"><span class="pre">30</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path used by the monitoring checks. Required when <code class="docutils literal notranslate"><span class="pre">protocol</span></code> is set to <code class="docutils literal notranslate"><span class="pre">HTTP</span></code> or <code class="docutils literal notranslate"><span class="pre">HTTPS</span></code> - cannot be set when <code class="docutils literal notranslate"><span class="pre">protocol</span></code> is set to <code class="docutils literal notranslate"><span class="pre">TCP</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The port number used by the monitoring checks.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The protocol used by the monitoring checks, supported values are <code class="docutils literal notranslate"><span class="pre">HTTP</span></code>, <code class="docutils literal notranslate"><span class="pre">HTTPS</span></code> and <code class="docutils literal notranslate"><span class="pre">TCP</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeoutInSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The amount of time the Traffic Manager probing agent should wait before considering that check a failure when a health check probe is sent to the endpoint. If <code class="docutils literal notranslate"><span class="pre">interval_in_seconds</span></code> is set to <code class="docutils literal notranslate"><span class="pre">30</span></code>, then <code class="docutils literal notranslate"><span class="pre">timeout_in_seconds</span></code> can be between <code class="docutils literal notranslate"><span class="pre">5</span></code> and <code class="docutils literal notranslate"><span class="pre">10</span></code>. The default value is <code class="docutils literal notranslate"><span class="pre">10</span></code>. If <code class="docutils literal notranslate"><span class="pre">interval_in_seconds</span></code> is set to <code class="docutils literal notranslate"><span class="pre">10</span></code>, then valid values are between <code class="docutils literal notranslate"><span class="pre">5</span></code> and <code class="docutils literal notranslate"><span class="pre">9</span></code> and <code class="docutils literal notranslate"><span class="pre">timeout_in_seconds</span></code> is required.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">toleratedNumberOfFailures</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of failures a Traffic Manager probing agent tolerates before marking that endpoint as unhealthy. Valid values are between <code class="docutils literal notranslate"><span class="pre">0</span></code> and <code class="docutils literal notranslate"><span class="pre">9</span></code>. The default value is <code class="docutils literal notranslate"><span class="pre">3</span></code></p></li>
 </ul>
 </dd></dl>
 
@@ -7291,8 +7332,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <p>The <strong>routes</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">addressPrefixes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">nextHopIpAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">addressPrefixes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of Address Prefixes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nextHopIpAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The IP Address that Packets should be forwarded to as the Next Hop.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_azure.network.VirtualHub.address_prefix">
@@ -7323,8 +7364,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">routes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.VirtualHub.routes" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">route</span></code> blocks as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">addressPrefixes</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">nextHopIpAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">addressPrefixes</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of Address Prefixes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nextHopIpAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The IP Address that Packets should be forwarded to as the Next Hop.</p></li>
 </ul>
 </dd></dl>
 
@@ -7363,8 +7404,8 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>routes</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">addressPrefixes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">nextHopIpAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">addressPrefixes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of Address Prefixes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nextHopIpAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The IP Address that Packets should be forwarded to as the Next Hop.</p></li>
 </ul>
 </dd></dl>
 
@@ -7558,16 +7599,17 @@ subnets. Each <code class="docutils literal notranslate"><span class="pre">subne
 </dl>
 <p>The <strong>ddos_protection_plan</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">enable</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of this subnet.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enable</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enable/disable DDoS Protection Plan on Virtual Network.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Resource ID of DDoS Protection Plan.</p></li>
 </ul>
 <p>The <strong>subnets</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">address_prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of this subnet.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">address_prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The address prefix to use for the subnet.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Resource ID of DDoS Protection Plan.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the virtual network. Changing this forces a
 new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">securityGroup</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">securityGroup</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Network Security Group to associate with
+the subnet. (Referenced by <code class="docutils literal notranslate"><span class="pre">id</span></code>, ie. <code class="docutils literal notranslate"><span class="pre">azurerm_network_security_group.example.id</span></code>)</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_azure.network.VirtualNetwork.address_spaces">
@@ -7582,8 +7624,8 @@ a new resource to be created.</p>
 <code class="sig-name descname">ddos_protection_plan</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.VirtualNetwork.ddos_protection_plan" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">ddos_protection_plan</span></code> block as documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">enable</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of this subnet.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enable</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Enable/disable DDoS Protection Plan on Virtual Network.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Resource ID of DDoS Protection Plan.</p></li>
 </ul>
 </dd></dl>
 
@@ -7620,11 +7662,12 @@ create the virtual network.</p>
 <dd><p>Can be specified multiple times to define multiple
 subnets. Each <code class="docutils literal notranslate"><span class="pre">subnet</span></code> block supports fields documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">address_prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of this subnet.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">address_prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The address prefix to use for the subnet.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Resource ID of DDoS Protection Plan.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the virtual network. Changing this forces a
 new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">securityGroup</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">securityGroup</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Network Security Group to associate with
+the subnet. (Referenced by <code class="docutils literal notranslate"><span class="pre">id</span></code>, ie. <code class="docutils literal notranslate"><span class="pre">azurerm_network_security_group.example.id</span></code>)</p></li>
 </ul>
 </dd></dl>
 
@@ -7664,16 +7707,17 @@ subnets. Each <code class="docutils literal notranslate"><span class="pre">subne
 </dl>
 <p>The <strong>ddos_protection_plan</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">enable</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of this subnet.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enable</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enable/disable DDoS Protection Plan on Virtual Network.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Resource ID of DDoS Protection Plan.</p></li>
 </ul>
 <p>The <strong>subnets</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">address_prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of this subnet.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">address_prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The address prefix to use for the subnet.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Resource ID of DDoS Protection Plan.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the virtual network. Changing this forces a
 new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">securityGroup</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">securityGroup</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Network Security Group to associate with
+the subnet. (Referenced by <code class="docutils literal notranslate"><span class="pre">id</span></code>, ie. <code class="docutils literal notranslate"><span class="pre">azurerm_network_security_group.example.id</span></code>)</p></li>
 </ul>
 </dd></dl>
 
@@ -7746,8 +7790,7 @@ An active-standby gateway requires exactly one <code class="docutils literal not
 an active-active gateway requires exactly two <code class="docutils literal notranslate"><span class="pre">ip_configuration</span></code> blocks.</p></li>
 <li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The location/region where the Virtual Network Gateway is
 located. Changing the location/region forces a new resource to be created.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Virtual Network Gateway. Changing the name
-forces a new resource to be created.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A user-defined name of the revoked certificate.</p></li>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to
 create the Virtual Network Gateway. Changing the resource group name forces
 a new resource to be created.</p></li>
@@ -7771,38 +7814,56 @@ options are <code class="docutils literal notranslate"><span class="pre">RouteBa
 </dl>
 <p>The <strong>bgp_settings</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">asn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">peerWeight</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">peeringAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">asn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The Autonomous System Number (ASN) to use as part of the BGP.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">peerWeight</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The weight added to routes which have been learned
+through BGP peering. Valid values can be between <code class="docutils literal notranslate"><span class="pre">0</span></code> and <code class="docutils literal notranslate"><span class="pre">100</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">peeringAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The BGP peer IP address of the virtual network
+gateway. This address is needed to configure the created gateway as a BGP Peer
+on the on-premises VPN devices. The IP address must be part of the subnet of
+the Virtual Network Gateway. Changing this forces a new resource to be created.</p></li>
 </ul>
 <p>The <strong>ip_configurations</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Virtual Network Gateway. Changing the name
-forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">privateIpAddressAllocation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">publicIpAddressId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A user-defined name of the revoked certificate.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">privateIpAddressAllocation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Defines how the private IP address
+of the gateways virtual interface is assigned. Valid options are <code class="docutils literal notranslate"><span class="pre">Static</span></code> or
+<code class="docutils literal notranslate"><span class="pre">Dynamic</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Dynamic</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publicIpAddressId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the public ip address to associate
+with the Virtual Network Gateway.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the gateway subnet of a virtual network in
+which the virtual network gateway will be created. It is mandatory that
+the associated subnet is named <code class="docutils literal notranslate"><span class="pre">GatewaySubnet</span></code>. Therefore, each virtual
+network can contain at most a single Virtual Network Gateway.</p></li>
 </ul>
 <p>The <strong>vpn_client_configuration</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">address_spaces</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">radiusServerAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">radiusServerSecret</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">revokedCertificates</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">address_spaces</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The address space out of which ip addresses for
+vpn clients will be taken. You can provide more than one address space, e.g.
+in CIDR notation.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">radiusServerAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The address of the Radius server.
+This setting is incompatible with the use of <code class="docutils literal notranslate"><span class="pre">root_certificate</span></code> and <code class="docutils literal notranslate"><span class="pre">revoked_certificate</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">radiusServerSecret</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The secret used by the Radius server.
+This setting is incompatible with the use of <code class="docutils literal notranslate"><span class="pre">root_certificate</span></code> and <code class="docutils literal notranslate"><span class="pre">revoked_certificate</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">revokedCertificates</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">revoked_certificate</span></code> blocks which
+are defined below.
+This setting is incompatible with the use of <code class="docutils literal notranslate"><span class="pre">radius_server_address</span></code> and <code class="docutils literal notranslate"><span class="pre">radius_server_secret</span></code>.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Virtual Network Gateway. Changing the name
-forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A user-defined name of the revoked certificate.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">thumbprint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">rootCertificates</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">rootCertificates</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">root_certificate</span></code> blocks which are
+defined below. These root certificates are used to sign the client certificate
+used by the VPN clients to connect to the gateway.
+This setting is incompatible with the use of <code class="docutils literal notranslate"><span class="pre">radius_server_address</span></code> and <code class="docutils literal notranslate"><span class="pre">radius_server_secret</span></code>.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Virtual Network Gateway. Changing the name
-forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">publicCertData</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A user-defined name of the revoked certificate.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publicCertData</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The SHA1 thumbprint of the certificate to be
+revoked.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">vpnClientProtocols</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vpnClientProtocols</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - List of the protocols supported by the vpn client.
+The supported values are <code class="docutils literal notranslate"><span class="pre">SSTP</span></code>, <code class="docutils literal notranslate"><span class="pre">IkeV2</span></code> and <code class="docutils literal notranslate"><span class="pre">OpenVPN</span></code>.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_azure.network.VirtualNetworkGateway.active_active">
@@ -7843,11 +7904,16 @@ for this Virtual Network Gateway. Defaults to <code class="docutils literal notr
 An active-standby gateway requires exactly one <code class="docutils literal notranslate"><span class="pre">ip_configuration</span></code> block whereas
 an active-active gateway requires exactly two <code class="docutils literal notranslate"><span class="pre">ip_configuration</span></code> blocks.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the Virtual Network Gateway. Changing the name
-forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">privateIpAddressAllocation</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">publicIpAddressId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A user-defined name of the revoked certificate.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">privateIpAddressAllocation</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Defines how the private IP address
+of the gateways virtual interface is assigned. Valid options are <code class="docutils literal notranslate"><span class="pre">Static</span></code> or
+<code class="docutils literal notranslate"><span class="pre">Dynamic</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Dynamic</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publicIpAddressId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the public ip address to associate
+with the Virtual Network Gateway.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the gateway subnet of a virtual network in
+which the virtual network gateway will be created. It is mandatory that
+the associated subnet is named <code class="docutils literal notranslate"><span class="pre">GatewaySubnet</span></code>. Therefore, each virtual
+network can contain at most a single Virtual Network Gateway.</p></li>
 </ul>
 </dd></dl>
 
@@ -7861,8 +7927,7 @@ located. Changing the location/region forces a new resource to be created.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.network.VirtualNetworkGateway.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.VirtualNetworkGateway.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the Virtual Network Gateway. Changing the name
-forces a new resource to be created.</p>
+<dd><p>A user-defined name of the revoked certificate.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -7905,24 +7970,33 @@ sku is only supported by an <code class="docutils literal notranslate"><span cla
 is documented below. In this block the Virtual Network Gateway can be configured
 to accept IPSec point-to-site connections.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">address_spaces</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">radiusServerAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">radiusServerSecret</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">revokedCertificates</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">address_spaces</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The address space out of which ip addresses for
+vpn clients will be taken. You can provide more than one address space, e.g.
+in CIDR notation.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">radiusServerAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The address of the Radius server.
+This setting is incompatible with the use of <code class="docutils literal notranslate"><span class="pre">root_certificate</span></code> and <code class="docutils literal notranslate"><span class="pre">revoked_certificate</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">radiusServerSecret</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The secret used by the Radius server.
+This setting is incompatible with the use of <code class="docutils literal notranslate"><span class="pre">root_certificate</span></code> and <code class="docutils literal notranslate"><span class="pre">revoked_certificate</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">revokedCertificates</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">revoked_certificate</span></code> blocks which
+are defined below.
+This setting is incompatible with the use of <code class="docutils literal notranslate"><span class="pre">radius_server_address</span></code> and <code class="docutils literal notranslate"><span class="pre">radius_server_secret</span></code>.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the Virtual Network Gateway. Changing the name
-forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A user-defined name of the revoked certificate.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">thumbprint</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">rootCertificates</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">rootCertificates</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">root_certificate</span></code> blocks which are
+defined below. These root certificates are used to sign the client certificate
+used by the VPN clients to connect to the gateway.
+This setting is incompatible with the use of <code class="docutils literal notranslate"><span class="pre">radius_server_address</span></code> and <code class="docutils literal notranslate"><span class="pre">radius_server_secret</span></code>.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the Virtual Network Gateway. Changing the name
-forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">publicCertData</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A user-defined name of the revoked certificate.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publicCertData</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The SHA1 thumbprint of the certificate to be
+revoked.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">vpnClientProtocols</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vpnClientProtocols</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - List of the protocols supported by the vpn client.
+The supported values are <code class="docutils literal notranslate"><span class="pre">SSTP</span></code>, <code class="docutils literal notranslate"><span class="pre">IkeV2</span></code> and <code class="docutils literal notranslate"><span class="pre">OpenVPN</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -7962,8 +8036,7 @@ An active-standby gateway requires exactly one <code class="docutils literal not
 an active-active gateway requires exactly two <code class="docutils literal notranslate"><span class="pre">ip_configuration</span></code> blocks.</p></li>
 <li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The location/region where the Virtual Network Gateway is
 located. Changing the location/region forces a new resource to be created.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Virtual Network Gateway. Changing the name
-forces a new resource to be created.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A user-defined name of the revoked certificate.</p></li>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to
 create the Virtual Network Gateway. Changing the resource group name forces
 a new resource to be created.</p></li>
@@ -7987,38 +8060,56 @@ options are <code class="docutils literal notranslate"><span class="pre">RouteBa
 </dl>
 <p>The <strong>bgp_settings</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">asn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">peerWeight</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">peeringAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">asn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The Autonomous System Number (ASN) to use as part of the BGP.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">peerWeight</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The weight added to routes which have been learned
+through BGP peering. Valid values can be between <code class="docutils literal notranslate"><span class="pre">0</span></code> and <code class="docutils literal notranslate"><span class="pre">100</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">peeringAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The BGP peer IP address of the virtual network
+gateway. This address is needed to configure the created gateway as a BGP Peer
+on the on-premises VPN devices. The IP address must be part of the subnet of
+the Virtual Network Gateway. Changing this forces a new resource to be created.</p></li>
 </ul>
 <p>The <strong>ip_configurations</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Virtual Network Gateway. Changing the name
-forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">privateIpAddressAllocation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">publicIpAddressId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A user-defined name of the revoked certificate.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">privateIpAddressAllocation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Defines how the private IP address
+of the gateways virtual interface is assigned. Valid options are <code class="docutils literal notranslate"><span class="pre">Static</span></code> or
+<code class="docutils literal notranslate"><span class="pre">Dynamic</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Dynamic</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publicIpAddressId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the public ip address to associate
+with the Virtual Network Gateway.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the gateway subnet of a virtual network in
+which the virtual network gateway will be created. It is mandatory that
+the associated subnet is named <code class="docutils literal notranslate"><span class="pre">GatewaySubnet</span></code>. Therefore, each virtual
+network can contain at most a single Virtual Network Gateway.</p></li>
 </ul>
 <p>The <strong>vpn_client_configuration</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">address_spaces</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">radiusServerAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">radiusServerSecret</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">revokedCertificates</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">address_spaces</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The address space out of which ip addresses for
+vpn clients will be taken. You can provide more than one address space, e.g.
+in CIDR notation.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">radiusServerAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The address of the Radius server.
+This setting is incompatible with the use of <code class="docutils literal notranslate"><span class="pre">root_certificate</span></code> and <code class="docutils literal notranslate"><span class="pre">revoked_certificate</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">radiusServerSecret</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The secret used by the Radius server.
+This setting is incompatible with the use of <code class="docutils literal notranslate"><span class="pre">root_certificate</span></code> and <code class="docutils literal notranslate"><span class="pre">revoked_certificate</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">revokedCertificates</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">revoked_certificate</span></code> blocks which
+are defined below.
+This setting is incompatible with the use of <code class="docutils literal notranslate"><span class="pre">radius_server_address</span></code> and <code class="docutils literal notranslate"><span class="pre">radius_server_secret</span></code>.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Virtual Network Gateway. Changing the name
-forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A user-defined name of the revoked certificate.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">thumbprint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">rootCertificates</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">rootCertificates</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">root_certificate</span></code> blocks which are
+defined below. These root certificates are used to sign the client certificate
+used by the VPN clients to connect to the gateway.
+This setting is incompatible with the use of <code class="docutils literal notranslate"><span class="pre">radius_server_address</span></code> and <code class="docutils literal notranslate"><span class="pre">radius_server_secret</span></code>.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Virtual Network Gateway. Changing the name
-forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">publicCertData</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A user-defined name of the revoked certificate.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publicCertData</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The SHA1 thumbprint of the certificate to be
+revoked.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">vpnClientProtocols</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vpnClientProtocols</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - List of the protocols supported by the vpn client.
+The supported values are <code class="docutils literal notranslate"><span class="pre">SSTP</span></code>, <code class="docutils literal notranslate"><span class="pre">IkeV2</span></code> and <code class="docutils literal notranslate"><span class="pre">OpenVPN</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -8129,14 +8220,24 @@ resource to be created.</p></li>
 </dl>
 <p>The <strong>ipsec_policy</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">dhGroup</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ikeEncryption</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ikeIntegrity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ipsecEncryption</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ipsecIntegrity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">pfsGroup</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">saDatasize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">saLifetime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dhGroup</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The DH group used in IKE phase 1 for initial SA. Valid
+options are <code class="docutils literal notranslate"><span class="pre">DHGroup1</span></code>, <code class="docutils literal notranslate"><span class="pre">DHGroup14</span></code>, <code class="docutils literal notranslate"><span class="pre">DHGroup2</span></code>, <code class="docutils literal notranslate"><span class="pre">DHGroup2048</span></code>, <code class="docutils literal notranslate"><span class="pre">DHGroup24</span></code>,
+<code class="docutils literal notranslate"><span class="pre">ECP256</span></code>, <code class="docutils literal notranslate"><span class="pre">ECP384</span></code>, or <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ikeEncryption</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The IKE encryption algorithm. Valid
+options are <code class="docutils literal notranslate"><span class="pre">AES128</span></code>, <code class="docutils literal notranslate"><span class="pre">AES192</span></code>, <code class="docutils literal notranslate"><span class="pre">AES256</span></code>, <code class="docutils literal notranslate"><span class="pre">DES</span></code>, or <code class="docutils literal notranslate"><span class="pre">DES3</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ikeIntegrity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The IKE integrity algorithm. Valid
+options are <code class="docutils literal notranslate"><span class="pre">MD5</span></code>, <code class="docutils literal notranslate"><span class="pre">SHA1</span></code>, <code class="docutils literal notranslate"><span class="pre">SHA256</span></code>, or <code class="docutils literal notranslate"><span class="pre">SHA384</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipsecEncryption</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The IPSec encryption algorithm. Valid
+options are <code class="docutils literal notranslate"><span class="pre">AES128</span></code>, <code class="docutils literal notranslate"><span class="pre">AES192</span></code>, <code class="docutils literal notranslate"><span class="pre">AES256</span></code>, <code class="docutils literal notranslate"><span class="pre">DES</span></code>, <code class="docutils literal notranslate"><span class="pre">DES3</span></code>, <code class="docutils literal notranslate"><span class="pre">GCMAES128</span></code>, <code class="docutils literal notranslate"><span class="pre">GCMAES192</span></code>, <code class="docutils literal notranslate"><span class="pre">GCMAES256</span></code>, or <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipsecIntegrity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The IPSec integrity algorithm. Valid
+options are <code class="docutils literal notranslate"><span class="pre">GCMAES128</span></code>, <code class="docutils literal notranslate"><span class="pre">GCMAES192</span></code>, <code class="docutils literal notranslate"><span class="pre">GCMAES256</span></code>, <code class="docutils literal notranslate"><span class="pre">MD5</span></code>, <code class="docutils literal notranslate"><span class="pre">SHA1</span></code>, or <code class="docutils literal notranslate"><span class="pre">SHA256</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pfsGroup</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The DH group used in IKE phase 2 for new child SA.
+Valid options are <code class="docutils literal notranslate"><span class="pre">ECP256</span></code>, <code class="docutils literal notranslate"><span class="pre">ECP384</span></code>, <code class="docutils literal notranslate"><span class="pre">PFS1</span></code>, <code class="docutils literal notranslate"><span class="pre">PFS2</span></code>, <code class="docutils literal notranslate"><span class="pre">PFS2048</span></code>, <code class="docutils literal notranslate"><span class="pre">PFS24</span></code>,
+or <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">saDatasize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The IPSec SA payload size in KB. Must be at least
+<code class="docutils literal notranslate"><span class="pre">1024</span></code> KB. Defaults to <code class="docutils literal notranslate"><span class="pre">102400000</span></code> KB.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">saLifetime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The IPSec SA lifetime in seconds. Must be at least
+<code class="docutils literal notranslate"><span class="pre">300</span></code> seconds. Defaults to <code class="docutils literal notranslate"><span class="pre">27000</span></code> seconds.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_azure.network.VirtualNetworkGatewayConnection.authorization_key">
@@ -8185,14 +8286,24 @@ The Express Route Circuit can be in the same or in a different subscription.</p>
 Only a single policy can be defined for a connection. For details on
 custom policies refer to <a class="reference external" href="https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-ipsecikepolicy-rm-powershell">the relevant section in the Azure documentation</a>.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">dhGroup</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ikeEncryption</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ikeIntegrity</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ipsecEncryption</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ipsecIntegrity</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">pfsGroup</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">saDatasize</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">saLifetime</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dhGroup</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The DH group used in IKE phase 1 for initial SA. Valid
+options are <code class="docutils literal notranslate"><span class="pre">DHGroup1</span></code>, <code class="docutils literal notranslate"><span class="pre">DHGroup14</span></code>, <code class="docutils literal notranslate"><span class="pre">DHGroup2</span></code>, <code class="docutils literal notranslate"><span class="pre">DHGroup2048</span></code>, <code class="docutils literal notranslate"><span class="pre">DHGroup24</span></code>,
+<code class="docutils literal notranslate"><span class="pre">ECP256</span></code>, <code class="docutils literal notranslate"><span class="pre">ECP384</span></code>, or <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ikeEncryption</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The IKE encryption algorithm. Valid
+options are <code class="docutils literal notranslate"><span class="pre">AES128</span></code>, <code class="docutils literal notranslate"><span class="pre">AES192</span></code>, <code class="docutils literal notranslate"><span class="pre">AES256</span></code>, <code class="docutils literal notranslate"><span class="pre">DES</span></code>, or <code class="docutils literal notranslate"><span class="pre">DES3</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ikeIntegrity</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The IKE integrity algorithm. Valid
+options are <code class="docutils literal notranslate"><span class="pre">MD5</span></code>, <code class="docutils literal notranslate"><span class="pre">SHA1</span></code>, <code class="docutils literal notranslate"><span class="pre">SHA256</span></code>, or <code class="docutils literal notranslate"><span class="pre">SHA384</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipsecEncryption</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The IPSec encryption algorithm. Valid
+options are <code class="docutils literal notranslate"><span class="pre">AES128</span></code>, <code class="docutils literal notranslate"><span class="pre">AES192</span></code>, <code class="docutils literal notranslate"><span class="pre">AES256</span></code>, <code class="docutils literal notranslate"><span class="pre">DES</span></code>, <code class="docutils literal notranslate"><span class="pre">DES3</span></code>, <code class="docutils literal notranslate"><span class="pre">GCMAES128</span></code>, <code class="docutils literal notranslate"><span class="pre">GCMAES192</span></code>, <code class="docutils literal notranslate"><span class="pre">GCMAES256</span></code>, or <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipsecIntegrity</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The IPSec integrity algorithm. Valid
+options are <code class="docutils literal notranslate"><span class="pre">GCMAES128</span></code>, <code class="docutils literal notranslate"><span class="pre">GCMAES192</span></code>, <code class="docutils literal notranslate"><span class="pre">GCMAES256</span></code>, <code class="docutils literal notranslate"><span class="pre">MD5</span></code>, <code class="docutils literal notranslate"><span class="pre">SHA1</span></code>, or <code class="docutils literal notranslate"><span class="pre">SHA256</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pfsGroup</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The DH group used in IKE phase 2 for new child SA.
+Valid options are <code class="docutils literal notranslate"><span class="pre">ECP256</span></code>, <code class="docutils literal notranslate"><span class="pre">ECP384</span></code>, <code class="docutils literal notranslate"><span class="pre">PFS1</span></code>, <code class="docutils literal notranslate"><span class="pre">PFS2</span></code>, <code class="docutils literal notranslate"><span class="pre">PFS2048</span></code>, <code class="docutils literal notranslate"><span class="pre">PFS24</span></code>,
+or <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">saDatasize</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The IPSec SA payload size in KB. Must be at least
+<code class="docutils literal notranslate"><span class="pre">1024</span></code> KB. Defaults to <code class="docutils literal notranslate"><span class="pre">102400000</span></code> KB.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">saLifetime</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The IPSec SA lifetime in seconds. Must be at least
+<code class="docutils literal notranslate"><span class="pre">300</span></code> seconds. Defaults to <code class="docutils literal notranslate"><span class="pre">27000</span></code> seconds.</p></li>
 </ul>
 </dd></dl>
 
@@ -8348,14 +8459,24 @@ resource to be created.</p></li>
 </dl>
 <p>The <strong>ipsec_policy</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">dhGroup</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ikeEncryption</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ikeIntegrity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ipsecEncryption</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ipsecIntegrity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">pfsGroup</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">saDatasize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">saLifetime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dhGroup</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The DH group used in IKE phase 1 for initial SA. Valid
+options are <code class="docutils literal notranslate"><span class="pre">DHGroup1</span></code>, <code class="docutils literal notranslate"><span class="pre">DHGroup14</span></code>, <code class="docutils literal notranslate"><span class="pre">DHGroup2</span></code>, <code class="docutils literal notranslate"><span class="pre">DHGroup2048</span></code>, <code class="docutils literal notranslate"><span class="pre">DHGroup24</span></code>,
+<code class="docutils literal notranslate"><span class="pre">ECP256</span></code>, <code class="docutils literal notranslate"><span class="pre">ECP384</span></code>, or <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ikeEncryption</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The IKE encryption algorithm. Valid
+options are <code class="docutils literal notranslate"><span class="pre">AES128</span></code>, <code class="docutils literal notranslate"><span class="pre">AES192</span></code>, <code class="docutils literal notranslate"><span class="pre">AES256</span></code>, <code class="docutils literal notranslate"><span class="pre">DES</span></code>, or <code class="docutils literal notranslate"><span class="pre">DES3</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ikeIntegrity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The IKE integrity algorithm. Valid
+options are <code class="docutils literal notranslate"><span class="pre">MD5</span></code>, <code class="docutils literal notranslate"><span class="pre">SHA1</span></code>, <code class="docutils literal notranslate"><span class="pre">SHA256</span></code>, or <code class="docutils literal notranslate"><span class="pre">SHA384</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipsecEncryption</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The IPSec encryption algorithm. Valid
+options are <code class="docutils literal notranslate"><span class="pre">AES128</span></code>, <code class="docutils literal notranslate"><span class="pre">AES192</span></code>, <code class="docutils literal notranslate"><span class="pre">AES256</span></code>, <code class="docutils literal notranslate"><span class="pre">DES</span></code>, <code class="docutils literal notranslate"><span class="pre">DES3</span></code>, <code class="docutils literal notranslate"><span class="pre">GCMAES128</span></code>, <code class="docutils literal notranslate"><span class="pre">GCMAES192</span></code>, <code class="docutils literal notranslate"><span class="pre">GCMAES256</span></code>, or <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipsecIntegrity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The IPSec integrity algorithm. Valid
+options are <code class="docutils literal notranslate"><span class="pre">GCMAES128</span></code>, <code class="docutils literal notranslate"><span class="pre">GCMAES192</span></code>, <code class="docutils literal notranslate"><span class="pre">GCMAES256</span></code>, <code class="docutils literal notranslate"><span class="pre">MD5</span></code>, <code class="docutils literal notranslate"><span class="pre">SHA1</span></code>, or <code class="docutils literal notranslate"><span class="pre">SHA256</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pfsGroup</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The DH group used in IKE phase 2 for new child SA.
+Valid options are <code class="docutils literal notranslate"><span class="pre">ECP256</span></code>, <code class="docutils literal notranslate"><span class="pre">ECP384</span></code>, <code class="docutils literal notranslate"><span class="pre">PFS1</span></code>, <code class="docutils literal notranslate"><span class="pre">PFS2</span></code>, <code class="docutils literal notranslate"><span class="pre">PFS2048</span></code>, <code class="docutils literal notranslate"><span class="pre">PFS24</span></code>,
+or <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">saDatasize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The IPSec SA payload size in KB. Must be at least
+<code class="docutils literal notranslate"><span class="pre">1024</span></code> KB. Defaults to <code class="docutils literal notranslate"><span class="pre">102400000</span></code> KB.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">saLifetime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The IPSec SA lifetime in seconds. Must be at least
+<code class="docutils literal notranslate"><span class="pre">300</span></code> seconds. Defaults to <code class="docutils literal notranslate"><span class="pre">27000</span></code> seconds.</p></li>
 </ul>
 </dd></dl>
 
@@ -8739,18 +8860,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <p>The <strong>bgp_settings</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">asn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">asn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The ASN of the BGP Speaker. Changing this forces a new resource to be created.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">bgpPeeringAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Address which should be used for the BGP Peering.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">peerWeight</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">peerWeight</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The weight added to Routes learned from this BGP Speaker. Changing this forces a new resource to be created.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_azure.network.VpnGateway.bgp_settings">
 <code class="sig-name descname">bgp_settings</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.VpnGateway.bgp_settings" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">bgp_settings</span></code> block as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">asn</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">asn</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The ASN of the BGP Speaker. Changing this forces a new resource to be created.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">bgpPeeringAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Address which should be used for the BGP Peering.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">peerWeight</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">peerWeight</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The weight added to Routes learned from this BGP Speaker. Changing this forces a new resource to be created.</p></li>
 </ul>
 </dd></dl>
 
@@ -8813,9 +8934,9 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>bgp_settings</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">asn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">asn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The ASN of the BGP Speaker. Changing this forces a new resource to be created.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">bgpPeeringAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Address which should be used for the BGP Peering.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">peerWeight</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">peerWeight</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The weight added to Routes learned from this BGP Speaker. Changing this forces a new resource to be created.</p></li>
 </ul>
 </dd></dl>
 
@@ -8885,45 +9006,45 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <p>The <strong>azure_active_directory_authentications</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">audience</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">issuer</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tenant</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">audience</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Audience which should be used for authentication.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">issuer</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Issuer which should be used for authentication.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tenant</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Tenant which should be used for authentication.</p></li>
 </ul>
 <p>The <strong>client_revoked_certificates</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name which should be used for this VPN Server Configuration. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">thumbprint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A name used to uniquely identify this certificate.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">thumbprint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Thumbprint of the Certificate.</p></li>
 </ul>
 <p>The <strong>client_root_certificates</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name which should be used for this VPN Server Configuration. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">publicCertData</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A name used to uniquely identify this certificate.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publicCertData</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Public Key Data associated with the Certificate.</p></li>
 </ul>
 <p>The <strong>ipsec_policy</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">dhGroup</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ikeEncryption</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ikeIntegrity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ipsecEncryption</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ipsecIntegrity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">pfsGroup</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">saDataSizeKilobytes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">saLifetimeSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dhGroup</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The DH Group, used in IKE Phase 1. Possible values include <code class="docutils literal notranslate"><span class="pre">DHGroup1</span></code>, <code class="docutils literal notranslate"><span class="pre">DHGroup2</span></code>, <code class="docutils literal notranslate"><span class="pre">DHGroup14</span></code>, <code class="docutils literal notranslate"><span class="pre">DHGroup24</span></code>, <code class="docutils literal notranslate"><span class="pre">DHGroup2048</span></code>, <code class="docutils literal notranslate"><span class="pre">ECP256</span></code>, <code class="docutils literal notranslate"><span class="pre">ECP384</span></code> and <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ikeEncryption</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The IKE encryption algorithm, used for IKE Phase 2. Possible values include <code class="docutils literal notranslate"><span class="pre">AES128</span></code>, <code class="docutils literal notranslate"><span class="pre">AES192</span></code>, <code class="docutils literal notranslate"><span class="pre">AES256</span></code>, <code class="docutils literal notranslate"><span class="pre">DES</span></code>, <code class="docutils literal notranslate"><span class="pre">DES3</span></code>, <code class="docutils literal notranslate"><span class="pre">GCMAES128</span></code> and <code class="docutils literal notranslate"><span class="pre">GCMAES256</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ikeIntegrity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The IKE encryption integrity algorithm, used for IKE Phase 2. Possible values include <code class="docutils literal notranslate"><span class="pre">GCMAES128</span></code>, <code class="docutils literal notranslate"><span class="pre">GCMAES256</span></code>, <code class="docutils literal notranslate"><span class="pre">MD5</span></code>, <code class="docutils literal notranslate"><span class="pre">SHA1</span></code>, <code class="docutils literal notranslate"><span class="pre">SHA256</span></code> and <code class="docutils literal notranslate"><span class="pre">SHA384</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipsecEncryption</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The IPSec encryption algorithm, used for IKE phase 1. Possible values include <code class="docutils literal notranslate"><span class="pre">AES128</span></code>, <code class="docutils literal notranslate"><span class="pre">AES192</span></code>, <code class="docutils literal notranslate"><span class="pre">AES256</span></code>, <code class="docutils literal notranslate"><span class="pre">DES</span></code>, <code class="docutils literal notranslate"><span class="pre">DES3</span></code>, <code class="docutils literal notranslate"><span class="pre">GCMAES128</span></code>, <code class="docutils literal notranslate"><span class="pre">GCMAES192</span></code>, <code class="docutils literal notranslate"><span class="pre">GCMAES256</span></code> and <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipsecIntegrity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The IPSec integrity algorithm, used for IKE phase 1. Possible values include <code class="docutils literal notranslate"><span class="pre">GCMAES128</span></code>, <code class="docutils literal notranslate"><span class="pre">GCMAES192</span></code>, <code class="docutils literal notranslate"><span class="pre">GCMAES256</span></code>, <code class="docutils literal notranslate"><span class="pre">MD5</span></code>, <code class="docutils literal notranslate"><span class="pre">SHA1</span></code> and <code class="docutils literal notranslate"><span class="pre">SHA256</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pfsGroup</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Pfs Group, used in IKE Phase 2. Possible values include <code class="docutils literal notranslate"><span class="pre">ECP256</span></code>, <code class="docutils literal notranslate"><span class="pre">ECP384</span></code>, <code class="docutils literal notranslate"><span class="pre">PFS1</span></code>, <code class="docutils literal notranslate"><span class="pre">PFS2</span></code>, <code class="docutils literal notranslate"><span class="pre">PFS14</span></code>, <code class="docutils literal notranslate"><span class="pre">PFS24</span></code>, <code class="docutils literal notranslate"><span class="pre">PFS2048</span></code>, <code class="docutils literal notranslate"><span class="pre">PFSMM</span></code> and <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">saDataSizeKilobytes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The IPSec Security Association payload size in KB for a Site-to-Site VPN tunnel.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">saLifetimeSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The IPSec Security Association lifetime in seconds for a Site-to-Site VPN tunnel.</p></li>
 </ul>
 <p>The <strong>radius_server</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">client_root_certificates</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">client_root_certificate</span></code> blocks as defined below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Address of the Radius Server.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">client_root_certificates</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">client_root_certificate</span></code> blocks as defined above.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name which should be used for this VPN Server Configuration. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">thumbprint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A name used to uniquely identify this certificate.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">thumbprint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Thumbprint of the Certificate.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">secret</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">serverRootCertificates</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">secret</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Secret used to communicate with the Radius Server.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serverRootCertificates</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">server_root_certificate</span></code> blocks as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name which should be used for this VPN Server Configuration. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">publicCertData</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A name used to uniquely identify this certificate.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publicCertData</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Public Key Data associated with the Certificate.</p></li>
 </ul>
 </li>
 </ul>
@@ -8932,9 +9053,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">azure_active_directory_authentications</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.VpnServerConfiguration.azure_active_directory_authentications" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">azure_active_directory_authentication</span></code> block as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">audience</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">issuer</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tenant</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">audience</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Audience which should be used for authentication.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">issuer</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Issuer which should be used for authentication.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tenant</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Tenant which should be used for authentication.</p></li>
 </ul>
 </dd></dl>
 
@@ -8943,8 +9064,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">client_revoked_certificates</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.VpnServerConfiguration.client_revoked_certificates" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">client_revoked_certificate</span></code> blocks as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Name which should be used for this VPN Server Configuration. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">thumbprint</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A name used to uniquely identify this certificate.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">thumbprint</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Thumbprint of the Certificate.</p></li>
 </ul>
 </dd></dl>
 
@@ -8953,8 +9074,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">client_root_certificates</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.VpnServerConfiguration.client_root_certificates" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">client_root_certificate</span></code> blocks as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Name which should be used for this VPN Server Configuration. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">publicCertData</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A name used to uniquely identify this certificate.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publicCertData</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Public Key Data associated with the Certificate.</p></li>
 </ul>
 </dd></dl>
 
@@ -8963,14 +9084,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">ipsec_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.VpnServerConfiguration.ipsec_policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">ipsec_policy</span></code> block as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">dhGroup</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ikeEncryption</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ikeIntegrity</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ipsecEncryption</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ipsecIntegrity</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">pfsGroup</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">saDataSizeKilobytes</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">saLifetimeSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dhGroup</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The DH Group, used in IKE Phase 1. Possible values include <code class="docutils literal notranslate"><span class="pre">DHGroup1</span></code>, <code class="docutils literal notranslate"><span class="pre">DHGroup2</span></code>, <code class="docutils literal notranslate"><span class="pre">DHGroup14</span></code>, <code class="docutils literal notranslate"><span class="pre">DHGroup24</span></code>, <code class="docutils literal notranslate"><span class="pre">DHGroup2048</span></code>, <code class="docutils literal notranslate"><span class="pre">ECP256</span></code>, <code class="docutils literal notranslate"><span class="pre">ECP384</span></code> and <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ikeEncryption</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The IKE encryption algorithm, used for IKE Phase 2. Possible values include <code class="docutils literal notranslate"><span class="pre">AES128</span></code>, <code class="docutils literal notranslate"><span class="pre">AES192</span></code>, <code class="docutils literal notranslate"><span class="pre">AES256</span></code>, <code class="docutils literal notranslate"><span class="pre">DES</span></code>, <code class="docutils literal notranslate"><span class="pre">DES3</span></code>, <code class="docutils literal notranslate"><span class="pre">GCMAES128</span></code> and <code class="docutils literal notranslate"><span class="pre">GCMAES256</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ikeIntegrity</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The IKE encryption integrity algorithm, used for IKE Phase 2. Possible values include <code class="docutils literal notranslate"><span class="pre">GCMAES128</span></code>, <code class="docutils literal notranslate"><span class="pre">GCMAES256</span></code>, <code class="docutils literal notranslate"><span class="pre">MD5</span></code>, <code class="docutils literal notranslate"><span class="pre">SHA1</span></code>, <code class="docutils literal notranslate"><span class="pre">SHA256</span></code> and <code class="docutils literal notranslate"><span class="pre">SHA384</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipsecEncryption</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The IPSec encryption algorithm, used for IKE phase 1. Possible values include <code class="docutils literal notranslate"><span class="pre">AES128</span></code>, <code class="docutils literal notranslate"><span class="pre">AES192</span></code>, <code class="docutils literal notranslate"><span class="pre">AES256</span></code>, <code class="docutils literal notranslate"><span class="pre">DES</span></code>, <code class="docutils literal notranslate"><span class="pre">DES3</span></code>, <code class="docutils literal notranslate"><span class="pre">GCMAES128</span></code>, <code class="docutils literal notranslate"><span class="pre">GCMAES192</span></code>, <code class="docutils literal notranslate"><span class="pre">GCMAES256</span></code> and <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipsecIntegrity</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The IPSec integrity algorithm, used for IKE phase 1. Possible values include <code class="docutils literal notranslate"><span class="pre">GCMAES128</span></code>, <code class="docutils literal notranslate"><span class="pre">GCMAES192</span></code>, <code class="docutils literal notranslate"><span class="pre">GCMAES256</span></code>, <code class="docutils literal notranslate"><span class="pre">MD5</span></code>, <code class="docutils literal notranslate"><span class="pre">SHA1</span></code> and <code class="docutils literal notranslate"><span class="pre">SHA256</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pfsGroup</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Pfs Group, used in IKE Phase 2. Possible values include <code class="docutils literal notranslate"><span class="pre">ECP256</span></code>, <code class="docutils literal notranslate"><span class="pre">ECP384</span></code>, <code class="docutils literal notranslate"><span class="pre">PFS1</span></code>, <code class="docutils literal notranslate"><span class="pre">PFS2</span></code>, <code class="docutils literal notranslate"><span class="pre">PFS14</span></code>, <code class="docutils literal notranslate"><span class="pre">PFS24</span></code>, <code class="docutils literal notranslate"><span class="pre">PFS2048</span></code>, <code class="docutils literal notranslate"><span class="pre">PFSMM</span></code> and <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">saDataSizeKilobytes</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The IPSec Security Association payload size in KB for a Site-to-Site VPN tunnel.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">saLifetimeSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The IPSec Security Association lifetime in seconds for a Site-to-Site VPN tunnel.</p></li>
 </ul>
 </dd></dl>
 
@@ -8991,18 +9112,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">radius_server</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.network.VpnServerConfiguration.radius_server" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">radius_server</span></code> block as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">address</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">client_root_certificates</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">client_root_certificate</span></code> blocks as defined below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">address</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Address of the Radius Server.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">client_root_certificates</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">client_root_certificate</span></code> blocks as defined above.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Name which should be used for this VPN Server Configuration. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">thumbprint</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A name used to uniquely identify this certificate.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">thumbprint</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Thumbprint of the Certificate.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">secret</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">serverRootCertificates</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">secret</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Secret used to communicate with the Radius Server.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serverRootCertificates</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">server_root_certificate</span></code> blocks as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Name which should be used for this VPN Server Configuration. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">publicCertData</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A name used to uniquely identify this certificate.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publicCertData</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Public Key Data associated with the Certificate.</p></li>
 </ul>
 </li>
 </ul>
@@ -9059,45 +9180,45 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>azure_active_directory_authentications</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">audience</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">issuer</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tenant</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">audience</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Audience which should be used for authentication.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">issuer</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Issuer which should be used for authentication.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tenant</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Tenant which should be used for authentication.</p></li>
 </ul>
 <p>The <strong>client_revoked_certificates</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name which should be used for this VPN Server Configuration. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">thumbprint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A name used to uniquely identify this certificate.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">thumbprint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Thumbprint of the Certificate.</p></li>
 </ul>
 <p>The <strong>client_root_certificates</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name which should be used for this VPN Server Configuration. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">publicCertData</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A name used to uniquely identify this certificate.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publicCertData</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Public Key Data associated with the Certificate.</p></li>
 </ul>
 <p>The <strong>ipsec_policy</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">dhGroup</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ikeEncryption</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ikeIntegrity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ipsecEncryption</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ipsecIntegrity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">pfsGroup</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">saDataSizeKilobytes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">saLifetimeSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dhGroup</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The DH Group, used in IKE Phase 1. Possible values include <code class="docutils literal notranslate"><span class="pre">DHGroup1</span></code>, <code class="docutils literal notranslate"><span class="pre">DHGroup2</span></code>, <code class="docutils literal notranslate"><span class="pre">DHGroup14</span></code>, <code class="docutils literal notranslate"><span class="pre">DHGroup24</span></code>, <code class="docutils literal notranslate"><span class="pre">DHGroup2048</span></code>, <code class="docutils literal notranslate"><span class="pre">ECP256</span></code>, <code class="docutils literal notranslate"><span class="pre">ECP384</span></code> and <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ikeEncryption</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The IKE encryption algorithm, used for IKE Phase 2. Possible values include <code class="docutils literal notranslate"><span class="pre">AES128</span></code>, <code class="docutils literal notranslate"><span class="pre">AES192</span></code>, <code class="docutils literal notranslate"><span class="pre">AES256</span></code>, <code class="docutils literal notranslate"><span class="pre">DES</span></code>, <code class="docutils literal notranslate"><span class="pre">DES3</span></code>, <code class="docutils literal notranslate"><span class="pre">GCMAES128</span></code> and <code class="docutils literal notranslate"><span class="pre">GCMAES256</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ikeIntegrity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The IKE encryption integrity algorithm, used for IKE Phase 2. Possible values include <code class="docutils literal notranslate"><span class="pre">GCMAES128</span></code>, <code class="docutils literal notranslate"><span class="pre">GCMAES256</span></code>, <code class="docutils literal notranslate"><span class="pre">MD5</span></code>, <code class="docutils literal notranslate"><span class="pre">SHA1</span></code>, <code class="docutils literal notranslate"><span class="pre">SHA256</span></code> and <code class="docutils literal notranslate"><span class="pre">SHA384</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipsecEncryption</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The IPSec encryption algorithm, used for IKE phase 1. Possible values include <code class="docutils literal notranslate"><span class="pre">AES128</span></code>, <code class="docutils literal notranslate"><span class="pre">AES192</span></code>, <code class="docutils literal notranslate"><span class="pre">AES256</span></code>, <code class="docutils literal notranslate"><span class="pre">DES</span></code>, <code class="docutils literal notranslate"><span class="pre">DES3</span></code>, <code class="docutils literal notranslate"><span class="pre">GCMAES128</span></code>, <code class="docutils literal notranslate"><span class="pre">GCMAES192</span></code>, <code class="docutils literal notranslate"><span class="pre">GCMAES256</span></code> and <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipsecIntegrity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The IPSec integrity algorithm, used for IKE phase 1. Possible values include <code class="docutils literal notranslate"><span class="pre">GCMAES128</span></code>, <code class="docutils literal notranslate"><span class="pre">GCMAES192</span></code>, <code class="docutils literal notranslate"><span class="pre">GCMAES256</span></code>, <code class="docutils literal notranslate"><span class="pre">MD5</span></code>, <code class="docutils literal notranslate"><span class="pre">SHA1</span></code> and <code class="docutils literal notranslate"><span class="pre">SHA256</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pfsGroup</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Pfs Group, used in IKE Phase 2. Possible values include <code class="docutils literal notranslate"><span class="pre">ECP256</span></code>, <code class="docutils literal notranslate"><span class="pre">ECP384</span></code>, <code class="docutils literal notranslate"><span class="pre">PFS1</span></code>, <code class="docutils literal notranslate"><span class="pre">PFS2</span></code>, <code class="docutils literal notranslate"><span class="pre">PFS14</span></code>, <code class="docutils literal notranslate"><span class="pre">PFS24</span></code>, <code class="docutils literal notranslate"><span class="pre">PFS2048</span></code>, <code class="docutils literal notranslate"><span class="pre">PFSMM</span></code> and <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">saDataSizeKilobytes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The IPSec Security Association payload size in KB for a Site-to-Site VPN tunnel.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">saLifetimeSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The IPSec Security Association lifetime in seconds for a Site-to-Site VPN tunnel.</p></li>
 </ul>
 <p>The <strong>radius_server</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">client_root_certificates</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">client_root_certificate</span></code> blocks as defined below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Address of the Radius Server.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">client_root_certificates</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">client_root_certificate</span></code> blocks as defined above.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name which should be used for this VPN Server Configuration. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">thumbprint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A name used to uniquely identify this certificate.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">thumbprint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Thumbprint of the Certificate.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">secret</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">serverRootCertificates</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">secret</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Secret used to communicate with the Radius Server.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serverRootCertificates</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">server_root_certificate</span></code> blocks as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name which should be used for this VPN Server Configuration. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">publicCertData</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A name used to uniquely identify this certificate.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publicCertData</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Public Key Data associated with the Certificate.</p></li>
 </ul>
 </li>
 </ul>
@@ -9221,6 +9342,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> (<em>str</em>) – Specifies the Name of the NAT Gateway.</p></li>
+<li><p><strong>public_ip_address_ids</strong> (<em>list</em>) – A list of existing Public IP Address resource IDs which the NAT Gateway is using.</p></li>
+<li><p><strong>public_ip_prefix_ids</strong> (<em>list</em>) – A list of existing Public IP Prefix resource IDs which the NAT Gateway is using.</p></li>
 <li><p><strong>resource_group_name</strong> (<em>str</em>) – Specifies the name of the Resource Group where the NAT Gateway exists.</p></li>
 </ul>
 </dd>
@@ -9239,6 +9362,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> (<em>str</em>) – The name of the Network DDoS Protection Plan.</p></li>
 <li><p><strong>resource_group_name</strong> (<em>str</em>) – The name of the resource group where the Network DDoS Protection Plan exists.</p></li>
+<li><p><strong>tags</strong> (<em>dict</em>) – A mapping of tags assigned to the resource.</p></li>
 </ul>
 </dd>
 </dl>
@@ -9326,6 +9450,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> (<em>str</em>) – Specifies the name of the public IP address.</p></li>
 <li><p><strong>resource_group_name</strong> (<em>str</em>) – Specifies the name of the resource group.</p></li>
+<li><p><strong>tags</strong> (<em>dict</em>) – A mapping of tags to assigned to the resource.</p></li>
 </ul>
 </dd>
 </dl>
@@ -9360,6 +9485,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> (<em>str</em>) – The name of the Route Table.</p></li>
 <li><p><strong>resource_group_name</strong> (<em>str</em>) – The name of the Resource Group in which the Route Table exists.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_azure.network.get_service_tags">
+<code class="sig-prename descclassname">pulumi_azure.network.</code><code class="sig-name descname">get_service_tags</code><span class="sig-paren">(</span><em class="sig-param">location=None</em>, <em class="sig-param">location_filter=None</em>, <em class="sig-param">service=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.network.get_service_tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to access information about Service Tags.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/network_service_tags.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/network_service_tags.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>location</strong> (<em>str</em>) – The Azure Region where the Service Tags exists. This value is not used to filter the results but for specifying the region to request. For filtering by region use <code class="docutils literal notranslate"><span class="pre">location_filter</span></code> instead.  More information can be found here: <a class="reference external" href="https://docs.microsoft.com/en-us/rest/api/virtualnetwork/servicetags/list#uri-parameters">Service Tags URL parameters</a>.</p></li>
+<li><p><strong>location_filter</strong> (<em>str</em>) – Changes the scope of the service tags. Can be any value that is also valid for <code class="docutils literal notranslate"><span class="pre">location</span></code>. If this field is empty then all address prefixes are considered instead of only location specific ones.</p></li>
+<li><p><strong>service</strong> (<em>str</em>) – The type of the service for which address prefixes will be fetched. Available service tags can be found here: <a class="reference external" href="https://docs.microsoft.com/en-us/azure/virtual-network/service-tags-overview#available-service-tags">Available service tags</a>.</p></li>
 </ul>
 </dd>
 </dl>

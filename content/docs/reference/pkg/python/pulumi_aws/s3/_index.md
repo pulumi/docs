@@ -16,14 +16,21 @@ anything, please consult the source <a class="reference external" href="https://
 <span class="target" id="module-pulumi_aws.s3"></span><dl class="class">
 <dt id="pulumi_aws.s3.AccessPoint">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.s3.</code><code class="sig-name descname">AccessPoint</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">account_id=None</em>, <em class="sig-param">bucket=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">policy=None</em>, <em class="sig-param">public_access_block_configuration=None</em>, <em class="sig-param">vpc_configuration=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.s3.AccessPoint" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a AccessPoint resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] bucket: The name of the bucket that you want to associate this access point with.
-:param pulumi.Input[str] name: The name you want to assign to this access point.
-:param pulumi.Input[str] policy: A valid JSON document that specifies the policy that you want to apply to this access point.
-:param pulumi.Input[dict] public_access_block_configuration: Configuration block to manage the <code class="docutils literal notranslate"><span class="pre">PublicAccessBlock</span></code> configuration that you want to apply to this Amazon S3 bucket. You can enable the configuration options in any combination. Detailed below.
-:param pulumi.Input[dict] vpc_configuration: Configuration block to restrict access to this access point to requests from the specified Virtual Private Cloud (VPC). Detailed below.</p>
+<dd><p>Provides a resource to manage an S3 Access Point.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AWS account ID for the owner of the bucket for which you want to create an access point. Defaults to automatically determined account ID of the provider.</p></li>
+<li><p><strong>bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the bucket that you want to associate this access point with.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name you want to assign to this access point.</p></li>
+<li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A valid JSON document that specifies the policy that you want to apply to this access point.</p></li>
+<li><p><strong>public_access_block_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration block to manage the <code class="docutils literal notranslate"><span class="pre">PublicAccessBlock</span></code> configuration that you want to apply to this Amazon S3 bucket. You can enable the configuration options in any combination. Detailed below.</p></li>
+<li><p><strong>vpc_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration block to restrict access to this access point to requests from the specified Virtual Private Cloud (VPC). Detailed below.</p></li>
+</ul>
+</dd>
+</dl>
 <p>The <strong>public_access_block_configuration</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">block_public_acls</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether Amazon S3 should block public ACLs for buckets in this account. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Enabling this setting does not affect existing policies or ACLs. When set to <code class="docutils literal notranslate"><span class="pre">true</span></code> causes the following behavior:</p>
@@ -53,6 +60,12 @@ anything, please consult the source <a class="reference external" href="https://
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">vpc_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - This access point will only allow connections from the specified VPC ID.</p></li>
 </ul>
+<dl class="attribute">
+<dt id="pulumi_aws.s3.AccessPoint.account_id">
+<code class="sig-name descname">account_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.AccessPoint.account_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The AWS account ID for the owner of the bucket for which you want to create an access point. Defaults to automatically determined account ID of the provider.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_aws.s3.AccessPoint.arn">
 <code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.AccessPoint.arn" title="Permalink to this definition">¶</a></dt>
@@ -146,6 +159,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The AWS account ID for the owner of the bucket for which you want to create an access point. Defaults to automatically determined account ID of the provider.</p></li>
 <li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Amazon Resource Name (ARN) of the S3 Access Point.</p></li>
 <li><p><strong>bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the bucket that you want to associate this access point with.</p></li>
 <li><p><strong>domain*name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The DNS domain name of the S3 Access Point in the format <em>`name`_-_`account_id`_.s3-accesspoint.*region</em>.amazonaws.com.
@@ -236,7 +250,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> Each AWS account may only have one S3 Public Access Block configuration. Multiple configurations of the resource against the same AWS account will cause a perpetual difference.</p>
 <p>Advanced usage: To use a custom API endpoint for this resource, use the <cite>``s3control`</cite> endpoint provider configuration &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/index.html#s3control">https://www.terraform.io/docs/providers/aws/index.html#s3control</a>&gt;`_, not the <code class="docutils literal notranslate"><span class="pre">s3</span></code> endpoint provider configuration.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_account_public_access_block.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_account_public_access_block.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -532,9 +545,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.s3.Bucket">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.s3.</code><code class="sig-name descname">Bucket</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">acceleration_status=None</em>, <em class="sig-param">acl=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">bucket=None</em>, <em class="sig-param">bucket_prefix=None</em>, <em class="sig-param">cors_rules=None</em>, <em class="sig-param">force_destroy=None</em>, <em class="sig-param">grants=None</em>, <em class="sig-param">hosted_zone_id=None</em>, <em class="sig-param">lifecycle_rules=None</em>, <em class="sig-param">loggings=None</em>, <em class="sig-param">object_lock_configuration=None</em>, <em class="sig-param">policy=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">replication_configuration=None</em>, <em class="sig-param">request_payer=None</em>, <em class="sig-param">server_side_encryption_configuration=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">versioning=None</em>, <em class="sig-param">website=None</em>, <em class="sig-param">website_domain=None</em>, <em class="sig-param">website_endpoint=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.s3.Bucket" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a S3 bucket resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_bucket.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_bucket.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -543,7 +553,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>acceleration_status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Sets the accelerate configuration of an existing bucket. Can be <code class="docutils literal notranslate"><span class="pre">Enabled</span></code> or <code class="docutils literal notranslate"><span class="pre">Suspended</span></code>.</p></li>
 <li><p><strong>acl</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl">canned ACL</a> to apply. Defaults to “private”.  Conflicts with <code class="docutils literal notranslate"><span class="pre">grant</span></code>.</p></li>
 <li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the bucket. Will be of format <code class="docutils literal notranslate"><span class="pre">arn:aws:s3:::bucketname</span></code>.</p></li>
-<li><p><strong>bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the S3 bucket where you want Amazon S3 to store replicas of the object identified by the rule.</p></li>
+<li><p><strong>bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the bucket. If omitted, this provider will assign a random, unique name.</p></li>
 <li><p><strong>bucket_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique bucket name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">bucket</span></code>.</p></li>
 <li><p><strong>cors_rules</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A rule of <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/cors.html">Cross-Origin Resource Sharing</a> (documented below).</p></li>
 <li><p><strong>force_destroy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean that indicates all objects (including any <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html">locked objects</a>) should be deleted from the bucket so that the bucket can be destroyed without error. These objects are <em>not</em> recoverable.</p></li>
@@ -560,8 +570,7 @@ Can be either <code class="docutils literal notranslate"><span class="pre">Bucke
 the costs of any data transfer. See <a class="reference external" href="http://docs.aws.amazon.com/AmazonS3/latest/dev/RequesterPaysBuckets.html">Requester Pays Buckets</a>
 developer guide for more information.</p></li>
 <li><p><strong>server_side_encryption_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A configuration of <a class="reference external" href="http://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-encryption.html">server-side encryption configuration</a> (documented below)</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags that identifies subset of objects to which the rule applies.
-The rule applies only to objects having all the tags in its tagset.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the bucket.</p></li>
 <li><p><strong>versioning</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A state of <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html">versioning</a> (documented below)</p></li>
 <li><p><strong>website</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A website object (documented below).</p></li>
 <li><p><strong>website_domain</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The domain of the website endpoint, if the bucket is configured with a website. If not, this will be an empty string. This is used to create Route 53 alias records.</p></li>
@@ -580,41 +589,40 @@ The rule applies only to objects having all the tags in its tagset.</p></li>
 <p>The <strong>grants</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Canonical user id to grant for. Used only when <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">CanonicalUser</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">permissions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - List of permissions to apply for grantee. Valid values are <code class="docutils literal notranslate"><span class="pre">READ</span></code>, <code class="docutils literal notranslate"><span class="pre">WRITE</span></code>, <code class="docutils literal notranslate"><span class="pre">READ_ACP</span></code>, <code class="docutils literal notranslate"><span class="pre">WRITE_ACP</span></code>, <code class="docutils literal notranslate"><span class="pre">FULL_ACCESS</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">permissions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - List of permissions to apply for grantee. Valid values are <code class="docutils literal notranslate"><span class="pre">READ</span></code>, <code class="docutils literal notranslate"><span class="pre">WRITE</span></code>, <code class="docutils literal notranslate"><span class="pre">READ_ACP</span></code>, <code class="docutils literal notranslate"><span class="pre">WRITE_ACP</span></code>, <code class="docutils literal notranslate"><span class="pre">FULL_CONTROL</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - - Type of grantee to apply for. Valid values are <code class="docutils literal notranslate"><span class="pre">CanonicalUser</span></code> and <code class="docutils literal notranslate"><span class="pre">Group</span></code>. <code class="docutils literal notranslate"><span class="pre">AmazonCustomerByEmail</span></code> is not supported.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">uri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Uri address to grant for. Used only when <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">Group</span></code>.</p></li>
 </ul>
 <p>The <strong>lifecycle_rules</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">abortIncompleteMultipartUploadDays</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the number of days after initiating a multipart upload when the multipart upload must be completed.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Boolean which indicates if this criteria is enabled.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specifies lifecycle rule status.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">expiration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies a period in the object’s expire (documented below).</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">date</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the date after which you want the corresponding action to take effect.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">days</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of days that you want to specify for the default retention period.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">days</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the number of days after object creation when the specific rule action takes effect.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">expiredObjectDeleteMarker</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - On a versioned bucket (versioning-enabled or versioning-suspended bucket), you can add this element in the lifecycle configuration to direct Amazon S3 to delete expired object delete markers.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Canonical user id to grant for. Used only when <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">CanonicalUser</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Unique identifier for the rule.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">noncurrentVersionExpiration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies when noncurrent object versions expire (documented below).</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">days</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of days that you want to specify for the default retention period.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">days</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the number of days an object is noncurrent object versions expire.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">noncurrentVersionTransitions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies when noncurrent object versions transitions (documented below).</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">days</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of days that you want to specify for the default retention period.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">storage_class</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The class of storage used to store the object. Can be <code class="docutils literal notranslate"><span class="pre">STANDARD</span></code>, <code class="docutils literal notranslate"><span class="pre">REDUCED_REDUNDANCY</span></code>, <code class="docutils literal notranslate"><span class="pre">STANDARD_IA</span></code>, <code class="docutils literal notranslate"><span class="pre">ONEZONE_IA</span></code>, <code class="docutils literal notranslate"><span class="pre">INTELLIGENT_TIERING</span></code>, <code class="docutils literal notranslate"><span class="pre">GLACIER</span></code>, or <code class="docutils literal notranslate"><span class="pre">DEEP_ARCHIVE</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">days</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the number of days an object is noncurrent object versions expire.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_class</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the Amazon S3 storage class to which you want the noncurrent versions object to transition. Can be <code class="docutils literal notranslate"><span class="pre">ONEZONE_IA</span></code>, <code class="docutils literal notranslate"><span class="pre">STANDARD_IA</span></code>, <code class="docutils literal notranslate"><span class="pre">INTELLIGENT_TIERING</span></code>, <code class="docutils literal notranslate"><span class="pre">GLACIER</span></code>, or <code class="docutils literal notranslate"><span class="pre">DEEP_ARCHIVE</span></code>.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Object keyname prefix that identifies subset of objects to which the rule applies.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A mapping of tags that identifies subset of objects to which the rule applies.
-The rule applies only to objects having all the tags in its tagset.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Object key prefix identifying one or more objects to which the rule applies.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies object tags key and value.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">transitions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies a period in the object’s transitions (documented below).</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">date</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the date after which you want the corresponding action to take effect.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">days</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of days that you want to specify for the default retention period.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">storage_class</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The class of storage used to store the object. Can be <code class="docutils literal notranslate"><span class="pre">STANDARD</span></code>, <code class="docutils literal notranslate"><span class="pre">REDUCED_REDUNDANCY</span></code>, <code class="docutils literal notranslate"><span class="pre">STANDARD_IA</span></code>, <code class="docutils literal notranslate"><span class="pre">ONEZONE_IA</span></code>, <code class="docutils literal notranslate"><span class="pre">INTELLIGENT_TIERING</span></code>, <code class="docutils literal notranslate"><span class="pre">GLACIER</span></code>, or <code class="docutils literal notranslate"><span class="pre">DEEP_ARCHIVE</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">days</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the number of days after object creation when the specific rule action takes effect.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_class</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the Amazon S3 storage class to which you want the object to transition. Can be <code class="docutils literal notranslate"><span class="pre">ONEZONE_IA</span></code>, <code class="docutils literal notranslate"><span class="pre">STANDARD_IA</span></code>, <code class="docutils literal notranslate"><span class="pre">INTELLIGENT_TIERING</span></code>, <code class="docutils literal notranslate"><span class="pre">GLACIER</span></code>, or <code class="docutils literal notranslate"><span class="pre">DEEP_ARCHIVE</span></code>.</p></li>
 </ul>
 </li>
 </ul>
@@ -664,8 +672,8 @@ The rule applies only to objects having all the tags in its tagset.</p></li>
 The rule applies only to objects having all the tags in its tagset.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Canonical user id to grant for. Used only when <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">CanonicalUser</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Object keyname prefix that identifies subset of objects to which the rule applies.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Unique identifier for the rule.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Object keyname prefix identifying one or more objects to which the rule applies.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">priority</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The priority associated with the rule.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sourceSelectionCriteria</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies special object selection criteria (documented below).</p>
 <ul>
@@ -683,7 +691,7 @@ in <code class="docutils literal notranslate"><span class="pre">destination</spa
 </ul>
 <p>The <strong>server_side_encryption_configuration</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">rule</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The Object Lock rule in place for this bucket.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">rule</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A single object for server-side encryption by default configuration. (documented below)</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">applyServerSideEncryptionByDefault</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A single object for setting server-side encryption by default. (documented below)</p>
 <ul>
@@ -696,7 +704,7 @@ in <code class="docutils literal notranslate"><span class="pre">destination</spa
 </ul>
 <p>The <strong>versioning</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Boolean which indicates if this criteria is enabled.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enable versioning. Once you version-enable a bucket, it can never return to an unversioned state. You can, however, suspend versioning on that bucket.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">mfaDelete</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enable MFA delete for either <code class="docutils literal notranslate"><span class="pre">Change</span> <span class="pre">the</span> <span class="pre">versioning</span> <span class="pre">state</span> <span class="pre">of</span> <span class="pre">your</span> <span class="pre">bucket</span></code> or <code class="docutils literal notranslate"><span class="pre">Permanently</span> <span class="pre">delete</span> <span class="pre">an</span> <span class="pre">object</span> <span class="pre">version</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
 <p>The <strong>website</strong> object supports the following:</p>
@@ -728,7 +736,7 @@ describing redirect behavior and when redirects are applied.</p></li>
 <dl class="attribute">
 <dt id="pulumi_aws.s3.Bucket.bucket">
 <code class="sig-name descname">bucket</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.Bucket.bucket" title="Permalink to this definition">¶</a></dt>
-<dd><p>The ARN of the S3 bucket where you want Amazon S3 to store replicas of the object identified by the rule.</p>
+<dd><p>The name of the bucket. If omitted, this provider will assign a random, unique name.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -774,7 +782,7 @@ describing redirect behavior and when redirects are applied.</p></li>
 <dd><p>An <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#sample-acl">ACL policy grant</a> (documented below). Conflicts with <code class="docutils literal notranslate"><span class="pre">acl</span></code>.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Canonical user id to grant for. Used only when <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">CanonicalUser</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">permissions</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - List of permissions to apply for grantee. Valid values are <code class="docutils literal notranslate"><span class="pre">READ</span></code>, <code class="docutils literal notranslate"><span class="pre">WRITE</span></code>, <code class="docutils literal notranslate"><span class="pre">READ_ACP</span></code>, <code class="docutils literal notranslate"><span class="pre">WRITE_ACP</span></code>, <code class="docutils literal notranslate"><span class="pre">FULL_ACCESS</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">permissions</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - List of permissions to apply for grantee. Valid values are <code class="docutils literal notranslate"><span class="pre">READ</span></code>, <code class="docutils literal notranslate"><span class="pre">WRITE</span></code>, <code class="docutils literal notranslate"><span class="pre">READ_ACP</span></code>, <code class="docutils literal notranslate"><span class="pre">WRITE_ACP</span></code>, <code class="docutils literal notranslate"><span class="pre">FULL_CONTROL</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - - Type of grantee to apply for. Valid values are <code class="docutils literal notranslate"><span class="pre">CanonicalUser</span></code> and <code class="docutils literal notranslate"><span class="pre">Group</span></code>. <code class="docutils literal notranslate"><span class="pre">AmazonCustomerByEmail</span></code> is not supported.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">uri</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Uri address to grant for. Used only when <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">Group</span></code>.</p></li>
 </ul>
@@ -792,34 +800,33 @@ describing redirect behavior and when redirects are applied.</p></li>
 <dd><p>A configuration of <a class="reference external" href="http://docs.aws.amazon.com/AmazonS3/latest/dev/object-lifecycle-mgmt.html">object lifecycle management</a> (documented below).</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">abortIncompleteMultipartUploadDays</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Specifies the number of days after initiating a multipart upload when the multipart upload must be completed.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Boolean which indicates if this criteria is enabled.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Specifies lifecycle rule status.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">expiration</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Specifies a period in the object’s expire (documented below).</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">date</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the date after which you want the corresponding action to take effect.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">days</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of days that you want to specify for the default retention period.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">days</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Specifies the number of days after object creation when the specific rule action takes effect.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">expiredObjectDeleteMarker</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - On a versioned bucket (versioning-enabled or versioning-suspended bucket), you can add this element in the lifecycle configuration to direct Amazon S3 to delete expired object delete markers.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Canonical user id to grant for. Used only when <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">CanonicalUser</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Unique identifier for the rule.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">noncurrentVersionExpiration</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Specifies when noncurrent object versions expire (documented below).</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">days</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of days that you want to specify for the default retention period.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">days</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Specifies the number of days an object is noncurrent object versions expire.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">noncurrentVersionTransitions</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Specifies when noncurrent object versions transitions (documented below).</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">days</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of days that you want to specify for the default retention period.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">storage_class</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The class of storage used to store the object. Can be <code class="docutils literal notranslate"><span class="pre">STANDARD</span></code>, <code class="docutils literal notranslate"><span class="pre">REDUCED_REDUNDANCY</span></code>, <code class="docutils literal notranslate"><span class="pre">STANDARD_IA</span></code>, <code class="docutils literal notranslate"><span class="pre">ONEZONE_IA</span></code>, <code class="docutils literal notranslate"><span class="pre">INTELLIGENT_TIERING</span></code>, <code class="docutils literal notranslate"><span class="pre">GLACIER</span></code>, or <code class="docutils literal notranslate"><span class="pre">DEEP_ARCHIVE</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">days</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Specifies the number of days an object is noncurrent object versions expire.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_class</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the Amazon S3 storage class to which you want the noncurrent versions object to transition. Can be <code class="docutils literal notranslate"><span class="pre">ONEZONE_IA</span></code>, <code class="docutils literal notranslate"><span class="pre">STANDARD_IA</span></code>, <code class="docutils literal notranslate"><span class="pre">INTELLIGENT_TIERING</span></code>, <code class="docutils literal notranslate"><span class="pre">GLACIER</span></code>, or <code class="docutils literal notranslate"><span class="pre">DEEP_ARCHIVE</span></code>.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Object keyname prefix that identifies subset of objects to which the rule applies.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A mapping of tags that identifies subset of objects to which the rule applies.
-The rule applies only to objects having all the tags in its tagset.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Object key prefix identifying one or more objects to which the rule applies.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Specifies object tags key and value.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">transitions</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Specifies a period in the object’s transitions (documented below).</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">date</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the date after which you want the corresponding action to take effect.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">days</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of days that you want to specify for the default retention period.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">storage_class</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The class of storage used to store the object. Can be <code class="docutils literal notranslate"><span class="pre">STANDARD</span></code>, <code class="docutils literal notranslate"><span class="pre">REDUCED_REDUNDANCY</span></code>, <code class="docutils literal notranslate"><span class="pre">STANDARD_IA</span></code>, <code class="docutils literal notranslate"><span class="pre">ONEZONE_IA</span></code>, <code class="docutils literal notranslate"><span class="pre">INTELLIGENT_TIERING</span></code>, <code class="docutils literal notranslate"><span class="pre">GLACIER</span></code>, or <code class="docutils literal notranslate"><span class="pre">DEEP_ARCHIVE</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">days</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Specifies the number of days after object creation when the specific rule action takes effect.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_class</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the Amazon S3 storage class to which you want the object to transition. Can be <code class="docutils literal notranslate"><span class="pre">ONEZONE_IA</span></code>, <code class="docutils literal notranslate"><span class="pre">STANDARD_IA</span></code>, <code class="docutils literal notranslate"><span class="pre">INTELLIGENT_TIERING</span></code>, <code class="docutils literal notranslate"><span class="pre">GLACIER</span></code>, or <code class="docutils literal notranslate"><span class="pre">DEEP_ARCHIVE</span></code>.</p></li>
 </ul>
 </li>
 </ul>
@@ -896,8 +903,8 @@ The rule applies only to objects having all the tags in its tagset.</p></li>
 The rule applies only to objects having all the tags in its tagset.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Canonical user id to grant for. Used only when <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">CanonicalUser</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Object keyname prefix that identifies subset of objects to which the rule applies.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Unique identifier for the rule.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Object keyname prefix identifying one or more objects to which the rule applies.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">priority</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The priority associated with the rule.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sourceSelectionCriteria</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Specifies special object selection criteria (documented below).</p>
 <ul>
@@ -929,7 +936,7 @@ developer guide for more information.</p>
 <code class="sig-name descname">server_side_encryption_configuration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.Bucket.server_side_encryption_configuration" title="Permalink to this definition">¶</a></dt>
 <dd><p>A configuration of <a class="reference external" href="http://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-encryption.html">server-side encryption configuration</a> (documented below)</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">rule</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The Object Lock rule in place for this bucket.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">rule</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A single object for server-side encryption by default configuration. (documented below)</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">applyServerSideEncryptionByDefault</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A single object for setting server-side encryption by default. (documented below)</p>
 <ul>
@@ -945,8 +952,7 @@ developer guide for more information.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.s3.Bucket.tags">
 <code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.Bucket.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>A mapping of tags that identifies subset of objects to which the rule applies.
-The rule applies only to objects having all the tags in its tagset.</p>
+<dd><p>A mapping of tags to assign to the bucket.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -954,7 +960,7 @@ The rule applies only to objects having all the tags in its tagset.</p>
 <code class="sig-name descname">versioning</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.Bucket.versioning" title="Permalink to this definition">¶</a></dt>
 <dd><p>A state of <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html">versioning</a> (documented below)</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Boolean which indicates if this criteria is enabled.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Enable versioning. Once you version-enable a bucket, it can never return to an unversioned state. You can, however, suspend versioning on that bucket.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">mfaDelete</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Enable MFA delete for either <code class="docutils literal notranslate"><span class="pre">Change</span> <span class="pre">the</span> <span class="pre">versioning</span> <span class="pre">state</span> <span class="pre">of</span> <span class="pre">your</span> <span class="pre">bucket</span></code> or <code class="docutils literal notranslate"><span class="pre">Permanently</span> <span class="pre">delete</span> <span class="pre">an</span> <span class="pre">object</span> <span class="pre">version</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
 </dd></dl>
@@ -999,7 +1005,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>acl</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>The <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl">canned ACL</a> to apply. Defaults to “private”.  Conflicts with <code class="docutils literal notranslate"><span class="pre">grant</span></code>.</p>
 </p></li>
 <li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the bucket. Will be of format <code class="docutils literal notranslate"><span class="pre">arn:aws:s3:::bucketname</span></code>.</p></li>
-<li><p><strong>bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the S3 bucket where you want Amazon S3 to store replicas of the object identified by the rule.</p></li>
+<li><p><strong>bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the bucket. If omitted, this provider will assign a random, unique name.</p></li>
 <li><p><strong>bucket_domain_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The bucket domain name. Will be of format <code class="docutils literal notranslate"><span class="pre">bucketname.s3.amazonaws.com</span></code>.</p></li>
 <li><p><strong>bucket_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique bucket name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">bucket</span></code>.</p></li>
 <li><p><strong>bucket_regional_domain_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The bucket region-specific domain name. The bucket domain name including the region name, please refer <a class="reference external" href="https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region">here</a> for format. Note: The AWS CloudFront allows specifying S3 region-specific endpoint when creating S3 origin, it will prevent <a class="reference external" href="https://forums.aws.amazon.com/thread.jspa?threadID=216814">redirect issues</a> from CloudFront to S3 Origin URL.</p>
@@ -1030,8 +1036,7 @@ developer guide for more information.</p>
 </p></li>
 <li><p><strong>server_side_encryption_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>A configuration of <a class="reference external" href="http://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-encryption.html">server-side encryption configuration</a> (documented below)</p>
 </p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags that identifies subset of objects to which the rule applies.
-The rule applies only to objects having all the tags in its tagset.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the bucket.</p></li>
 <li><p><strong>versioning</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>A state of <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html">versioning</a> (documented below)</p>
 </p></li>
 <li><p><strong>website</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A website object (documented below).</p></li>
@@ -1051,41 +1056,40 @@ The rule applies only to objects having all the tags in its tagset.</p></li>
 <p>The <strong>grants</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Canonical user id to grant for. Used only when <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">CanonicalUser</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">permissions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - List of permissions to apply for grantee. Valid values are <code class="docutils literal notranslate"><span class="pre">READ</span></code>, <code class="docutils literal notranslate"><span class="pre">WRITE</span></code>, <code class="docutils literal notranslate"><span class="pre">READ_ACP</span></code>, <code class="docutils literal notranslate"><span class="pre">WRITE_ACP</span></code>, <code class="docutils literal notranslate"><span class="pre">FULL_ACCESS</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">permissions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - List of permissions to apply for grantee. Valid values are <code class="docutils literal notranslate"><span class="pre">READ</span></code>, <code class="docutils literal notranslate"><span class="pre">WRITE</span></code>, <code class="docutils literal notranslate"><span class="pre">READ_ACP</span></code>, <code class="docutils literal notranslate"><span class="pre">WRITE_ACP</span></code>, <code class="docutils literal notranslate"><span class="pre">FULL_CONTROL</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - - Type of grantee to apply for. Valid values are <code class="docutils literal notranslate"><span class="pre">CanonicalUser</span></code> and <code class="docutils literal notranslate"><span class="pre">Group</span></code>. <code class="docutils literal notranslate"><span class="pre">AmazonCustomerByEmail</span></code> is not supported.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">uri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Uri address to grant for. Used only when <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">Group</span></code>.</p></li>
 </ul>
 <p>The <strong>lifecycle_rules</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">abortIncompleteMultipartUploadDays</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the number of days after initiating a multipart upload when the multipart upload must be completed.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Boolean which indicates if this criteria is enabled.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specifies lifecycle rule status.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">expiration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies a period in the object’s expire (documented below).</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">date</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the date after which you want the corresponding action to take effect.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">days</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of days that you want to specify for the default retention period.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">days</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the number of days after object creation when the specific rule action takes effect.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">expiredObjectDeleteMarker</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - On a versioned bucket (versioning-enabled or versioning-suspended bucket), you can add this element in the lifecycle configuration to direct Amazon S3 to delete expired object delete markers.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Canonical user id to grant for. Used only when <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">CanonicalUser</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Unique identifier for the rule.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">noncurrentVersionExpiration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies when noncurrent object versions expire (documented below).</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">days</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of days that you want to specify for the default retention period.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">days</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the number of days an object is noncurrent object versions expire.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">noncurrentVersionTransitions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies when noncurrent object versions transitions (documented below).</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">days</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of days that you want to specify for the default retention period.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">storage_class</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The class of storage used to store the object. Can be <code class="docutils literal notranslate"><span class="pre">STANDARD</span></code>, <code class="docutils literal notranslate"><span class="pre">REDUCED_REDUNDANCY</span></code>, <code class="docutils literal notranslate"><span class="pre">STANDARD_IA</span></code>, <code class="docutils literal notranslate"><span class="pre">ONEZONE_IA</span></code>, <code class="docutils literal notranslate"><span class="pre">INTELLIGENT_TIERING</span></code>, <code class="docutils literal notranslate"><span class="pre">GLACIER</span></code>, or <code class="docutils literal notranslate"><span class="pre">DEEP_ARCHIVE</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">days</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the number of days an object is noncurrent object versions expire.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_class</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the Amazon S3 storage class to which you want the noncurrent versions object to transition. Can be <code class="docutils literal notranslate"><span class="pre">ONEZONE_IA</span></code>, <code class="docutils literal notranslate"><span class="pre">STANDARD_IA</span></code>, <code class="docutils literal notranslate"><span class="pre">INTELLIGENT_TIERING</span></code>, <code class="docutils literal notranslate"><span class="pre">GLACIER</span></code>, or <code class="docutils literal notranslate"><span class="pre">DEEP_ARCHIVE</span></code>.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Object keyname prefix that identifies subset of objects to which the rule applies.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A mapping of tags that identifies subset of objects to which the rule applies.
-The rule applies only to objects having all the tags in its tagset.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Object key prefix identifying one or more objects to which the rule applies.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies object tags key and value.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">transitions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies a period in the object’s transitions (documented below).</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">date</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the date after which you want the corresponding action to take effect.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">days</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of days that you want to specify for the default retention period.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">storage_class</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The class of storage used to store the object. Can be <code class="docutils literal notranslate"><span class="pre">STANDARD</span></code>, <code class="docutils literal notranslate"><span class="pre">REDUCED_REDUNDANCY</span></code>, <code class="docutils literal notranslate"><span class="pre">STANDARD_IA</span></code>, <code class="docutils literal notranslate"><span class="pre">ONEZONE_IA</span></code>, <code class="docutils literal notranslate"><span class="pre">INTELLIGENT_TIERING</span></code>, <code class="docutils literal notranslate"><span class="pre">GLACIER</span></code>, or <code class="docutils literal notranslate"><span class="pre">DEEP_ARCHIVE</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">days</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the number of days after object creation when the specific rule action takes effect.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_class</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the Amazon S3 storage class to which you want the object to transition. Can be <code class="docutils literal notranslate"><span class="pre">ONEZONE_IA</span></code>, <code class="docutils literal notranslate"><span class="pre">STANDARD_IA</span></code>, <code class="docutils literal notranslate"><span class="pre">INTELLIGENT_TIERING</span></code>, <code class="docutils literal notranslate"><span class="pre">GLACIER</span></code>, or <code class="docutils literal notranslate"><span class="pre">DEEP_ARCHIVE</span></code>.</p></li>
 </ul>
 </li>
 </ul>
@@ -1135,8 +1139,8 @@ The rule applies only to objects having all the tags in its tagset.</p></li>
 The rule applies only to objects having all the tags in its tagset.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Canonical user id to grant for. Used only when <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">CanonicalUser</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Object keyname prefix that identifies subset of objects to which the rule applies.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Unique identifier for the rule.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Object keyname prefix identifying one or more objects to which the rule applies.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">priority</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The priority associated with the rule.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sourceSelectionCriteria</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies special object selection criteria (documented below).</p>
 <ul>
@@ -1154,7 +1158,7 @@ in <code class="docutils literal notranslate"><span class="pre">destination</spa
 </ul>
 <p>The <strong>server_side_encryption_configuration</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">rule</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The Object Lock rule in place for this bucket.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">rule</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A single object for server-side encryption by default configuration. (documented below)</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">applyServerSideEncryptionByDefault</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A single object for setting server-side encryption by default. (documented below)</p>
 <ul>
@@ -1167,7 +1171,7 @@ in <code class="docutils literal notranslate"><span class="pre">destination</spa
 </ul>
 <p>The <strong>versioning</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Boolean which indicates if this criteria is enabled.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enable versioning. Once you version-enable a bucket, it can never return to an unversioned state. You can, however, suspend versioning on that bucket.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">mfaDelete</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enable MFA delete for either <code class="docutils literal notranslate"><span class="pre">Change</span> <span class="pre">the</span> <span class="pre">versioning</span> <span class="pre">state</span> <span class="pre">of</span> <span class="pre">your</span> <span class="pre">bucket</span></code> or <code class="docutils literal notranslate"><span class="pre">Permanently</span> <span class="pre">delete</span> <span class="pre">an</span> <span class="pre">object</span> <span class="pre">version</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
 <p>The <strong>website</strong> object supports the following:</p>
@@ -1222,9 +1226,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.s3.BucketMetric">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.s3.</code><code class="sig-name descname">BucketMetric</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">bucket=None</em>, <em class="sig-param">filter=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.s3.BucketMetric" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a S3 bucket <a class="reference external" href="http://docs.aws.amazon.com/AmazonS3/latest/dev/metrics-configurations.html">metrics configuration</a> resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_bucket_metric.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_bucket_metric.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1332,7 +1333,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Manages a S3 Bucket Notification Configuration. For additional information, see the <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html">Configuring S3 Event Notifications section in the Amazon S3 Developer Guide</a>.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> S3 Buckets only support a single notification configuration. Declaring multiple <code class="docutils literal notranslate"><span class="pre">s3.BucketNotification</span></code> resources to the same S3 Bucket will cause a perpetual difference in configuration. See the example “Trigger multiple Lambda functions” for an option.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_bucket_notification.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_bucket_notification.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1501,9 +1501,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.s3.BucketObject">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.s3.</code><code class="sig-name descname">BucketObject</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">acl=None</em>, <em class="sig-param">bucket=None</em>, <em class="sig-param">cache_control=None</em>, <em class="sig-param">content=None</em>, <em class="sig-param">content_base64=None</em>, <em class="sig-param">content_disposition=None</em>, <em class="sig-param">content_encoding=None</em>, <em class="sig-param">content_language=None</em>, <em class="sig-param">content_type=None</em>, <em class="sig-param">etag=None</em>, <em class="sig-param">force_destroy=None</em>, <em class="sig-param">key=None</em>, <em class="sig-param">kms_key_id=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">object_lock_legal_hold_status=None</em>, <em class="sig-param">object_lock_mode=None</em>, <em class="sig-param">object_lock_retain_until_date=None</em>, <em class="sig-param">server_side_encryption=None</em>, <em class="sig-param">source=None</em>, <em class="sig-param">storage_class=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">website_redirect=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.s3.BucketObject" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a S3 bucket object resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_bucket_object.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_bucket_object.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1784,15 +1781,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.s3.BucketPolicy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.s3.</code><code class="sig-name descname">BucketPolicy</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">bucket=None</em>, <em class="sig-param">policy=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.s3.BucketPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Attaches a policy to an S3 bucket resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_bucket_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_bucket_policy.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the bucket to which to apply the policy.</p></li>
+<li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The text of the policy.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1800,6 +1795,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.s3.BucketPolicy.bucket">
 <code class="sig-name descname">bucket</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.BucketPolicy.bucket" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the bucket to which to apply the policy.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.s3.BucketPolicy.policy">
+<code class="sig-name descname">policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.BucketPolicy.policy" title="Permalink to this definition">¶</a></dt>
+<dd><p>The text of the policy.</p>
 </dd></dl>
 
 <dl class="method">
@@ -1814,6 +1815,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the bucket to which to apply the policy.</p></li>
+<li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The text of the policy.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1861,9 +1863,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.s3.BucketPublicAccessBlock">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.s3.</code><code class="sig-name descname">BucketPublicAccessBlock</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">block_public_acls=None</em>, <em class="sig-param">block_public_policy=None</em>, <em class="sig-param">bucket=None</em>, <em class="sig-param">ignore_public_acls=None</em>, <em class="sig-param">restrict_public_buckets=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.s3.BucketPublicAccessBlock" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages S3 bucket-level Public Access Block configuration. For more information about these settings, see the <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html">AWS S3 Block Public Access documentation</a>.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_bucket_public_access_block.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_bucket_public_access_block.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2259,15 +2258,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.s3.Inventory">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.s3.</code><code class="sig-name descname">Inventory</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">bucket=None</em>, <em class="sig-param">destination=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">filter=None</em>, <em class="sig-param">included_object_versions=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">optional_fields=None</em>, <em class="sig-param">schedule=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.s3.Inventory" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a S3 bucket <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/storage-inventory.html">inventory configuration</a> resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_bucket_inventory.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_bucket_inventory.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The S3 bucket configuration where inventory results are published (documented below).</p></li>
+<li><p><strong>bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the bucket where the inventory configuration will be stored.</p></li>
 <li><p><strong>destination</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Contains information about where to publish the inventory results (documented below).</p></li>
 <li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether the inventory is enabled or disabled.</p></li>
 <li><p><strong>filter</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Specifies an inventory filter. The inventory only includes objects that meet the filter’s criteria (documented below).</p></li>
@@ -2302,7 +2298,7 @@ Valid values: <code class="docutils literal notranslate"><span class="pre">Size<
 </ul>
 <p>The <strong>filter</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The prefix that is prepended to all inventory results.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The prefix that an object must have to be included in the inventory results.</p></li>
 </ul>
 <p>The <strong>schedule</strong> object supports the following:</p>
 <ul class="simple">
@@ -2311,7 +2307,7 @@ Valid values: <code class="docutils literal notranslate"><span class="pre">Size<
 <dl class="attribute">
 <dt id="pulumi_aws.s3.Inventory.bucket">
 <code class="sig-name descname">bucket</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.Inventory.bucket" title="Permalink to this definition">¶</a></dt>
-<dd><p>The S3 bucket configuration where inventory results are published (documented below).</p>
+<dd><p>The name of the bucket where the inventory configuration will be stored.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2351,7 +2347,7 @@ Valid values: <code class="docutils literal notranslate"><span class="pre">Size<
 <code class="sig-name descname">filter</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.s3.Inventory.filter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies an inventory filter. The inventory only includes objects that meet the filter’s criteria (documented below).</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The prefix that is prepended to all inventory results.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The prefix that an object must have to be included in the inventory results.</p></li>
 </ul>
 </dd></dl>
 
@@ -2394,7 +2390,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The S3 bucket configuration where inventory results are published (documented below).</p></li>
+<li><p><strong>bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the bucket where the inventory configuration will be stored.</p></li>
 <li><p><strong>destination</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Contains information about where to publish the inventory results (documented below).</p></li>
 <li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether the inventory is enabled or disabled.</p></li>
 <li><p><strong>filter</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Specifies an inventory filter. The inventory only includes objects that meet the filter’s criteria (documented below).</p></li>
@@ -2429,7 +2425,7 @@ Valid values: <code class="docutils literal notranslate"><span class="pre">Size<
 </ul>
 <p>The <strong>filter</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The prefix that is prepended to all inventory results.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The prefix that an object must have to be included in the inventory results.</p></li>
 </ul>
 <p>The <strong>schedule</strong> object supports the following:</p>
 <ul class="simple">
@@ -2481,9 +2477,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Provides details about a specific S3 bucket.</p>
 <p>This resource may prove useful when setting up a Route53 record, or an origin for a CloudFront
 Distribution.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/s3_bucket.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/s3_bucket.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>bucket</strong> (<em>str</em>) – The name of the bucket</p>
@@ -2498,7 +2491,6 @@ Distribution.</p>
 <em>optionally</em> (see below) content of an object stored inside S3 bucket.</p>
 <blockquote>
 <div><p><strong>Note:</strong> The content of an object (<code class="docutils literal notranslate"><span class="pre">body</span></code> field) is available only for objects which have a human-readable <code class="docutils literal notranslate"><span class="pre">Content-Type</span></code> (<code class="docutils literal notranslate"><span class="pre">text/*</span></code> and <code class="docutils literal notranslate"><span class="pre">application/json</span></code>). This is to prevent printing unsafe characters and potentially downloading large amount of data which would be thrown away in favour of metadata.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/s3_bucket_object.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/s3_bucket_object.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -2506,6 +2498,7 @@ Distribution.</p>
 <li><p><strong>bucket</strong> (<em>str</em>) – <p>The name of the bucket to read the object from. Alternatively, an <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/dev/using-access-points.html">S3 access point</a> ARN can be specified</p>
 </p></li>
 <li><p><strong>key</strong> (<em>str</em>) – The full path to the object inside the bucket</p></li>
+<li><p><strong>tags</strong> (<em>dict</em>) – A mapping of tags assigned to the object.</p></li>
 <li><p><strong>version_id</strong> (<em>str</em>) – Specific version ID of the object returned (defaults to latest version)</p></li>
 </ul>
 </dd>
@@ -2515,7 +2508,10 @@ Distribution.</p>
 <dl class="function">
 <dt id="pulumi_aws.s3.get_bucket_objects">
 <code class="sig-prename descclassname">pulumi_aws.s3.</code><code class="sig-name descname">get_bucket_objects</code><span class="sig-paren">(</span><em class="sig-param">bucket=None</em>, <em class="sig-param">delimiter=None</em>, <em class="sig-param">encoding_type=None</em>, <em class="sig-param">fetch_owner=None</em>, <em class="sig-param">max_keys=None</em>, <em class="sig-param">prefix=None</em>, <em class="sig-param">start_after=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.s3.get_bucket_objects" title="Permalink to this definition">¶</a></dt>
-<dd><p>Use this data source to access information about an existing resource.</p>
+<dd><blockquote>
+<div><p><strong>NOTE on ``max_keys``:</strong> Retrieving very large numbers of keys can adversely affect this provider’s performance.</p>
+</div></blockquote>
+<p>The bucket-objects data source returns keys (i.e., file names) and other metadata about objects in an S3 bucket.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

@@ -40,9 +40,6 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.sns.PlatformApplication">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.sns.</code><code class="sig-name descname">PlatformApplication</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">event_delivery_failure_topic_arn=None</em>, <em class="sig-param">event_endpoint_created_topic_arn=None</em>, <em class="sig-param">event_endpoint_deleted_topic_arn=None</em>, <em class="sig-param">event_endpoint_updated_topic_arn=None</em>, <em class="sig-param">failure_feedback_role_arn=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">platform=None</em>, <em class="sig-param">platform_credential=None</em>, <em class="sig-param">platform_principal=None</em>, <em class="sig-param">success_feedback_role_arn=None</em>, <em class="sig-param">success_feedback_sample_rate=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.sns.PlatformApplication" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an SNS platform application resource</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sns_platform_application.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sns_platform_application.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -204,9 +201,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.sns.SmsPreferences">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.sns.</code><code class="sig-name descname">SmsPreferences</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">default_sender_id=None</em>, <em class="sig-param">default_sms_type=None</em>, <em class="sig-param">delivery_status_iam_role_arn=None</em>, <em class="sig-param">delivery_status_success_sampling_rate=None</em>, <em class="sig-param">monthly_spend_limit=None</em>, <em class="sig-param">usage_report_s3_bucket=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.sns.SmsPreferences" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a way to set SNS SMS preferences.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sns_sms_preferences.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sns_sms_preferences.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -322,9 +316,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.sns.</code><code class="sig-name descname">Topic</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">application_failure_feedback_role_arn=None</em>, <em class="sig-param">application_success_feedback_role_arn=None</em>, <em class="sig-param">application_success_feedback_sample_rate=None</em>, <em class="sig-param">delivery_policy=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">http_failure_feedback_role_arn=None</em>, <em class="sig-param">http_success_feedback_role_arn=None</em>, <em class="sig-param">http_success_feedback_sample_rate=None</em>, <em class="sig-param">kms_master_key_id=None</em>, <em class="sig-param">lambda_failure_feedback_role_arn=None</em>, <em class="sig-param">lambda_success_feedback_role_arn=None</em>, <em class="sig-param">lambda_success_feedback_sample_rate=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">policy=None</em>, <em class="sig-param">sqs_failure_feedback_role_arn=None</em>, <em class="sig-param">sqs_success_feedback_role_arn=None</em>, <em class="sig-param">sqs_success_feedback_sample_rate=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.sns.Topic" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an SNS topic resource</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">&lt;endpoint&gt;_success_feedback_role_arn</span></code> and <code class="docutils literal notranslate"><span class="pre">&lt;endpoint&gt;_failure_feedback_role_arn</span></code> arguments are used to give Amazon SNS write access to use CloudWatch Logs on your behalf. The <code class="docutils literal notranslate"><span class="pre">&lt;endpoint&gt;_success_feedback_sample_rate</span></code> argument is for specifying the sample rate percentage (0-100) of successfully delivered messages. After you configure the  <code class="docutils literal notranslate"><span class="pre">&lt;endpoint&gt;_failure_feedback_role_arn</span></code> argument, then all failed message deliveries generate CloudWatch Logs.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sns_topic.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sns_topic.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -344,6 +335,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>lambda_success_feedback_sample_rate</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Percentage of success to sample</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The friendly name for the SNS topic. By default generated by this provider.</p></li>
 <li><p><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The friendly name for the SNS topic. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p></li>
+<li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The fully-formed AWS policy as JSON.</p></li>
 <li><p><strong>sqs_failure_feedback_role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – IAM role for failure feedback</p></li>
 <li><p><strong>sqs_success_feedback_role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IAM role permitted to receive success feedback for this topic</p></li>
 <li><p><strong>sqs_success_feedback_sample_rate</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Percentage of success to sample</p></li>
@@ -442,6 +434,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.sns.Topic.policy">
+<code class="sig-name descname">policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.sns.Topic.policy" title="Permalink to this definition">¶</a></dt>
+<dd><p>The fully-formed AWS policy as JSON.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.sns.Topic.sqs_failure_feedback_role_arn">
 <code class="sig-name descname">sqs_failure_feedback_role_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.sns.Topic.sqs_failure_feedback_role_arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>IAM role for failure feedback</p>
@@ -493,6 +491,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>lambda_success_feedback_sample_rate</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Percentage of success to sample</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The friendly name for the SNS topic. By default generated by this provider.</p></li>
 <li><p><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The friendly name for the SNS topic. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p></li>
+<li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The fully-formed AWS policy as JSON.</p></li>
 <li><p><strong>sqs_failure_feedback_role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – IAM role for failure feedback</p></li>
 <li><p><strong>sqs_success_feedback_role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IAM role permitted to receive success feedback for this topic</p></li>
 <li><p><strong>sqs_success_feedback_sample_rate</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Percentage of success to sample</p></li>
@@ -546,7 +545,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Provides an SNS topic policy resource</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> If a Principal is specified as just an AWS account ID rather than an ARN, AWS silently converts it to the ARN for the root user, causing future deployments to differ. To avoid this problem, just specify the full ARN, e.g. <code class="docutils literal notranslate"><span class="pre">arn:aws:iam::123456789012:root</span></code></p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sns_topic_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sns_topic_policy.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -554,6 +552,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the SNS topic</p></li>
+<li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The fully-formed AWS policy as JSON.</p></li>
 </ul>
 </dd>
 </dl>
@@ -561,6 +560,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.sns.TopicPolicy.arn">
 <code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.sns.TopicPolicy.arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ARN of the SNS topic</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.sns.TopicPolicy.policy">
+<code class="sig-name descname">policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.sns.TopicPolicy.policy" title="Permalink to this definition">¶</a></dt>
+<dd><p>The fully-formed AWS policy as JSON.</p>
 </dd></dl>
 
 <dl class="method">
@@ -575,6 +580,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the SNS topic</p></li>
+<li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The fully-formed AWS policy as JSON.</p></li>
 </ul>
 </dd>
 </dl>
@@ -632,7 +638,6 @@ probably be SQS queues.</p>
 <p><strong>NOTE:</strong> Setup of cross-account subscriptions from SNS topics to SQS queues requires the provider to have access to BOTH accounts.</p>
 <p><strong>NOTE:</strong> If SNS topic and SQS queue are in different AWS accounts but the same region it is important for the “sns.TopicSubscription” to use the AWS provider of the account with the SQS queue. If “sns.TopicSubscription” is using a Provider with a different account than the SQS queue, the provider creates the subscriptions but does not keep state and tries to re-create the subscription at every apply.</p>
 <p><strong>NOTE:</strong> If SNS topic and SQS queue are in different AWS accounts and different AWS regions it is important to recognize that the subscription needs to be initiated from the account with the SQS queue but in the region of the SNS topic.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sns_topic_subscription.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sns_topic_subscription.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -777,9 +782,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Use this data source to get the ARN of a topic in AWS Simple Notification
 Service (SNS). By using this data source, you can reference SNS topics
 without having to hard code the ARNs as input.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/sns_topic.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/sns_topic.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The friendly name of the topic to match.</p>

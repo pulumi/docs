@@ -17,9 +17,6 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.codedeploy.Application">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.codedeploy.</code><code class="sig-name descname">Application</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">compute_platform=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">unique_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.codedeploy.Application" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a CodeDeploy application to be used as a basis for deployments</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/codedeploy_app.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/codedeploy_app.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -102,9 +99,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.codedeploy.DeploymentConfig">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.codedeploy.</code><code class="sig-name descname">DeploymentConfig</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">compute_platform=None</em>, <em class="sig-param">deployment_config_name=None</em>, <em class="sig-param">minimum_healthy_hosts=None</em>, <em class="sig-param">traffic_routing_config=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.codedeploy.DeploymentConfig" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a CodeDeploy deployment config for an application</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/codedeploy_deployment_config.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/codedeploy_deployment_config.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -119,24 +113,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <p>The <strong>minimum_healthy_hosts</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type can either be <code class="docutils literal notranslate"><span class="pre">FLEET_PERCENT</span></code> or <code class="docutils literal notranslate"><span class="pre">HOST_COUNT</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The value when the type is <code class="docutils literal notranslate"><span class="pre">FLEET_PERCENT</span></code> represents the minimum number of healthy instances as
+a percentage of the total number of instances in the deployment. If you specify FLEET_PERCENT, at the start of the
+deployment, AWS CodeDeploy converts the percentage to the equivalent number of instance and rounds up fractional instances.
+When the type is <code class="docutils literal notranslate"><span class="pre">HOST_COUNT</span></code>, the value represents the minimum number of healthy instances as an absolute value.</p></li>
 </ul>
 <p>The <strong>traffic_routing_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">timeBasedCanary</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeBasedCanary</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The time based canary configuration information. If <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">TimeBasedLinear</span></code>, use <code class="docutils literal notranslate"><span class="pre">time_based_linear</span></code> instead.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">interval</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">percentage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">interval</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of minutes between the first and second traffic shifts of a <code class="docutils literal notranslate"><span class="pre">TimeBasedCanary</span></code> deployment.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">percentage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The percentage of traffic to shift in the first increment of a <code class="docutils literal notranslate"><span class="pre">TimeBasedCanary</span></code> deployment.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">timeBasedLinear</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeBasedLinear</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The time based linear configuration information. If <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">TimeBasedCanary</span></code>, use <code class="docutils literal notranslate"><span class="pre">time_based_canary</span></code> instead.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">interval</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">percentage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">interval</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of minutes between each incremental traffic shift of a <code class="docutils literal notranslate"><span class="pre">TimeBasedLinear</span></code> deployment.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">percentage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The percentage of traffic that is shifted at the start of each increment of a <code class="docutils literal notranslate"><span class="pre">TimeBasedLinear</span></code> deployment.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Type of traffic routing config. One of <code class="docutils literal notranslate"><span class="pre">TimeBasedCanary</span></code>, <code class="docutils literal notranslate"><span class="pre">TimeBasedLinear</span></code>, <code class="docutils literal notranslate"><span class="pre">AllAtOnce</span></code>.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_aws.codedeploy.DeploymentConfig.compute_platform">
@@ -161,8 +158,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">minimum_healthy_hosts</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.codedeploy.DeploymentConfig.minimum_healthy_hosts" title="Permalink to this definition">¶</a></dt>
 <dd><p>A minimum_healthy_hosts block. Required for <code class="docutils literal notranslate"><span class="pre">Server</span></code> compute platform. Minimum Healthy Hosts are documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The type can either be <code class="docutils literal notranslate"><span class="pre">FLEET_PERCENT</span></code> or <code class="docutils literal notranslate"><span class="pre">HOST_COUNT</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The value when the type is <code class="docutils literal notranslate"><span class="pre">FLEET_PERCENT</span></code> represents the minimum number of healthy instances as
+a percentage of the total number of instances in the deployment. If you specify FLEET_PERCENT, at the start of the
+deployment, AWS CodeDeploy converts the percentage to the equivalent number of instance and rounds up fractional instances.
+When the type is <code class="docutils literal notranslate"><span class="pre">HOST_COUNT</span></code>, the value represents the minimum number of healthy instances as an absolute value.</p></li>
 </ul>
 </dd></dl>
 
@@ -171,19 +171,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">traffic_routing_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.codedeploy.DeploymentConfig.traffic_routing_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>A traffic_routing_config block. Traffic Routing Config is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">timeBasedCanary</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeBasedCanary</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The time based canary configuration information. If <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">TimeBasedLinear</span></code>, use <code class="docutils literal notranslate"><span class="pre">time_based_linear</span></code> instead.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">interval</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">percentage</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">interval</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of minutes between the first and second traffic shifts of a <code class="docutils literal notranslate"><span class="pre">TimeBasedCanary</span></code> deployment.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">percentage</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The percentage of traffic to shift in the first increment of a <code class="docutils literal notranslate"><span class="pre">TimeBasedCanary</span></code> deployment.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">timeBasedLinear</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeBasedLinear</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The time based linear configuration information. If <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">TimeBasedCanary</span></code>, use <code class="docutils literal notranslate"><span class="pre">time_based_canary</span></code> instead.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">interval</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">percentage</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">interval</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of minutes between each incremental traffic shift of a <code class="docutils literal notranslate"><span class="pre">TimeBasedLinear</span></code> deployment.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">percentage</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The percentage of traffic that is shifted at the start of each increment of a <code class="docutils literal notranslate"><span class="pre">TimeBasedLinear</span></code> deployment.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Type of traffic routing config. One of <code class="docutils literal notranslate"><span class="pre">TimeBasedCanary</span></code>, <code class="docutils literal notranslate"><span class="pre">TimeBasedLinear</span></code>, <code class="docutils literal notranslate"><span class="pre">AllAtOnce</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -208,24 +208,27 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>minimum_healthy_hosts</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type can either be <code class="docutils literal notranslate"><span class="pre">FLEET_PERCENT</span></code> or <code class="docutils literal notranslate"><span class="pre">HOST_COUNT</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The value when the type is <code class="docutils literal notranslate"><span class="pre">FLEET_PERCENT</span></code> represents the minimum number of healthy instances as
+a percentage of the total number of instances in the deployment. If you specify FLEET_PERCENT, at the start of the
+deployment, AWS CodeDeploy converts the percentage to the equivalent number of instance and rounds up fractional instances.
+When the type is <code class="docutils literal notranslate"><span class="pre">HOST_COUNT</span></code>, the value represents the minimum number of healthy instances as an absolute value.</p></li>
 </ul>
 <p>The <strong>traffic_routing_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">timeBasedCanary</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeBasedCanary</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The time based canary configuration information. If <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">TimeBasedLinear</span></code>, use <code class="docutils literal notranslate"><span class="pre">time_based_linear</span></code> instead.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">interval</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">percentage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">interval</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of minutes between the first and second traffic shifts of a <code class="docutils literal notranslate"><span class="pre">TimeBasedCanary</span></code> deployment.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">percentage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The percentage of traffic to shift in the first increment of a <code class="docutils literal notranslate"><span class="pre">TimeBasedCanary</span></code> deployment.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">timeBasedLinear</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeBasedLinear</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The time based linear configuration information. If <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">TimeBasedCanary</span></code>, use <code class="docutils literal notranslate"><span class="pre">time_based_canary</span></code> instead.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">interval</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">percentage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">interval</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of minutes between each incremental traffic shift of a <code class="docutils literal notranslate"><span class="pre">TimeBasedLinear</span></code> deployment.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">percentage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The percentage of traffic that is shifted at the start of each increment of a <code class="docutils literal notranslate"><span class="pre">TimeBasedLinear</span></code> deployment.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Type of traffic routing config. One of <code class="docutils literal notranslate"><span class="pre">TimeBasedCanary</span></code>, <code class="docutils literal notranslate"><span class="pre">TimeBasedLinear</span></code>, <code class="docutils literal notranslate"><span class="pre">AllAtOnce</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -273,7 +276,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Provides a CodeDeploy Deployment Group for a CodeDeploy Application</p>
 <blockquote>
 <div><p><strong>NOTE on blue/green deployments:</strong> When using <code class="docutils literal notranslate"><span class="pre">green_fleet_provisioning_option</span></code> with the <code class="docutils literal notranslate"><span class="pre">COPY_AUTO_SCALING_GROUP</span></code> action, CodeDeploy will create a new ASG with a different name. This ASG is <em>not</em> managed by this provider and will conflict with existing configuration and state. You may want to use a different approach to managing deployments that involve multiple ASG, such as <code class="docutils literal notranslate"><span class="pre">DISCOVER_EXISTING</span></code> with separate blue and green ASG.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/codedeploy_deployment_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/codedeploy_deployment_group.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -301,7 +303,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>The <strong>alarm_configuration</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">alarms</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of alarms configured for the deployment group. <em>A maximum of 10 alarms can be added to a deployment group</em>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether a defined automatic rollback configuration is currently enabled for this Deployment Group. If you enable automatic rollback, you must specify at least one event type.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether the alarm configuration is enabled. This option is useful when you want to temporarily deactivate alarm monitoring for a deployment group without having to add the same alarms again later.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ignorePollAlarmFailure</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether a deployment should continue if information about the current state of alarms cannot be retrieved from CloudWatch. The default value is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">true</span></code>: The deployment will proceed even if alarm status information can’t be retrieved.</p></li>
@@ -329,10 +331,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">greenFleetProvisioningOption</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Information about how instances are provisioned for a replacement environment in a blue/green deployment (documented below).</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">action</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The action to take on instances in the original environment after a successful blue/green deployment.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">action</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The method used to add instances to a replacement environment.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">TERMINATE</span></code>: Instances are terminated after a specified wait time.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">KEEP_ALIVE</span></code>: Instances are left running after they are deregistered from the load balancer and removed from the deployment group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">DISCOVER_EXISTING</span></code>: Use instances that already exist or will be created manually.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">COPY_AUTO_SCALING_GROUP</span></code>: Use settings from a specified <strong>Auto Scaling</strong> group to define and create instances in a new Auto Scaling group. <em>Exactly one Auto Scaling group must be specified</em> when selecting <code class="docutils literal notranslate"><span class="pre">COPY_AUTO_SCALING_GROUP</span></code>. Use <code class="docutils literal notranslate"><span class="pre">autoscaling_groups</span></code> to specify the Auto Scaling group.</p></li>
 </ul>
 </li>
 </ul>
@@ -379,12 +381,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">elbInfos</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The Classic Elastic Load Balancer to use in a deployment. Conflicts with <code class="docutils literal notranslate"><span class="pre">target_group_info</span></code> and <code class="docutils literal notranslate"><span class="pre">target_group_pair_info</span></code>.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the target group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the load balancer that will be used to route traffic from original instances to replacement instances in a blue/green deployment. For in-place deployments, the name of the load balancer that instances are deregistered from so they are not serving traffic during a deployment, and then re-registered with after the deployment completes.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">targetGroupInfos</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The (Application/Network Load Balancer) target group to use in a deployment. Conflicts with <code class="docutils literal notranslate"><span class="pre">elb_info</span></code> and <code class="docutils literal notranslate"><span class="pre">target_group_pair_info</span></code>.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the target group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the target group that instances in the original environment are deregistered from, and instances in the replacement environment registered with. For in-place deployments, the name of the target group that instances are deregistered from, so they are not serving traffic during a deployment, and then re-registered with after the deployment completes.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">targetGroupPairInfo</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The (Application/Network Load Balancer) target group pair to use in a deployment. Conflicts with <code class="docutils literal notranslate"><span class="pre">elb_info</span></code> and <code class="docutils literal notranslate"><span class="pre">target_group_info</span></code>.</p>
@@ -425,7 +427,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Configuration block of alarms associated with the deployment group (documented below).</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">alarms</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of alarms configured for the deployment group. <em>A maximum of 10 alarms can be added to a deployment group</em>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Indicates whether a defined automatic rollback configuration is currently enabled for this Deployment Group. If you enable automatic rollback, you must specify at least one event type.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Indicates whether the alarm configuration is enabled. This option is useful when you want to temporarily deactivate alarm monitoring for a deployment group without having to add the same alarms again later.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ignorePollAlarmFailure</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Indicates whether a deployment should continue if information about the current state of alarms cannot be retrieved from CloudWatch. The default value is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">true</span></code>: The deployment will proceed even if alarm status information can’t be retrieved.</p></li>
@@ -475,10 +477,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">greenFleetProvisioningOption</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Information about how instances are provisioned for a replacement environment in a blue/green deployment (documented below).</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">action</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The action to take on instances in the original environment after a successful blue/green deployment.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">action</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The method used to add instances to a replacement environment.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">TERMINATE</span></code>: Instances are terminated after a specified wait time.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">KEEP_ALIVE</span></code>: Instances are left running after they are deregistered from the load balancer and removed from the deployment group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">DISCOVER_EXISTING</span></code>: Use instances that already exist or will be created manually.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">COPY_AUTO_SCALING_GROUP</span></code>: Use settings from a specified <strong>Auto Scaling</strong> group to define and create instances in a new Auto Scaling group. <em>Exactly one Auto Scaling group must be specified</em> when selecting <code class="docutils literal notranslate"><span class="pre">COPY_AUTO_SCALING_GROUP</span></code>. Use <code class="docutils literal notranslate"><span class="pre">autoscaling_groups</span></code> to specify the Auto Scaling group.</p></li>
 </ul>
 </li>
 </ul>
@@ -562,12 +564,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">elbInfos</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The Classic Elastic Load Balancer to use in a deployment. Conflicts with <code class="docutils literal notranslate"><span class="pre">target_group_info</span></code> and <code class="docutils literal notranslate"><span class="pre">target_group_pair_info</span></code>.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Name of the target group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the load balancer that will be used to route traffic from original instances to replacement instances in a blue/green deployment. For in-place deployments, the name of the load balancer that instances are deregistered from so they are not serving traffic during a deployment, and then re-registered with after the deployment completes.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">targetGroupInfos</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The (Application/Network Load Balancer) target group to use in a deployment. Conflicts with <code class="docutils literal notranslate"><span class="pre">elb_info</span></code> and <code class="docutils literal notranslate"><span class="pre">target_group_pair_info</span></code>.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Name of the target group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the target group that instances in the original environment are deregistered from, and instances in the replacement environment registered with. For in-place deployments, the name of the target group that instances are deregistered from, so they are not serving traffic during a deployment, and then re-registered with after the deployment completes.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">targetGroupPairInfo</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The (Application/Network Load Balancer) target group pair to use in a deployment. Conflicts with <code class="docutils literal notranslate"><span class="pre">elb_info</span></code> and <code class="docutils literal notranslate"><span class="pre">target_group_info</span></code>.</p>
@@ -652,7 +654,7 @@ properties used to qualify the lookup.</p>
 <p>The <strong>alarm_configuration</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">alarms</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of alarms configured for the deployment group. <em>A maximum of 10 alarms can be added to a deployment group</em>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether a defined automatic rollback configuration is currently enabled for this Deployment Group. If you enable automatic rollback, you must specify at least one event type.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether the alarm configuration is enabled. This option is useful when you want to temporarily deactivate alarm monitoring for a deployment group without having to add the same alarms again later.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ignorePollAlarmFailure</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether a deployment should continue if information about the current state of alarms cannot be retrieved from CloudWatch. The default value is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">true</span></code>: The deployment will proceed even if alarm status information can’t be retrieved.</p></li>
@@ -680,10 +682,10 @@ properties used to qualify the lookup.</p>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">greenFleetProvisioningOption</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Information about how instances are provisioned for a replacement environment in a blue/green deployment (documented below).</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">action</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The action to take on instances in the original environment after a successful blue/green deployment.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">action</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The method used to add instances to a replacement environment.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">TERMINATE</span></code>: Instances are terminated after a specified wait time.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">KEEP_ALIVE</span></code>: Instances are left running after they are deregistered from the load balancer and removed from the deployment group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">DISCOVER_EXISTING</span></code>: Use instances that already exist or will be created manually.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">COPY_AUTO_SCALING_GROUP</span></code>: Use settings from a specified <strong>Auto Scaling</strong> group to define and create instances in a new Auto Scaling group. <em>Exactly one Auto Scaling group must be specified</em> when selecting <code class="docutils literal notranslate"><span class="pre">COPY_AUTO_SCALING_GROUP</span></code>. Use <code class="docutils literal notranslate"><span class="pre">autoscaling_groups</span></code> to specify the Auto Scaling group.</p></li>
 </ul>
 </li>
 </ul>
@@ -730,12 +732,12 @@ properties used to qualify the lookup.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">elbInfos</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The Classic Elastic Load Balancer to use in a deployment. Conflicts with <code class="docutils literal notranslate"><span class="pre">target_group_info</span></code> and <code class="docutils literal notranslate"><span class="pre">target_group_pair_info</span></code>.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the target group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the load balancer that will be used to route traffic from original instances to replacement instances in a blue/green deployment. For in-place deployments, the name of the load balancer that instances are deregistered from so they are not serving traffic during a deployment, and then re-registered with after the deployment completes.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">targetGroupInfos</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The (Application/Network Load Balancer) target group to use in a deployment. Conflicts with <code class="docutils literal notranslate"><span class="pre">elb_info</span></code> and <code class="docutils literal notranslate"><span class="pre">target_group_pair_info</span></code>.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the target group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the target group that instances in the original environment are deregistered from, and instances in the replacement environment registered with. For in-place deployments, the name of the target group that instances are deregistered from, so they are not serving traffic during a deployment, and then re-registered with after the deployment completes.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">targetGroupPairInfo</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The (Application/Network Load Balancer) target group pair to use in a deployment. Conflicts with <code class="docutils literal notranslate"><span class="pre">elb_info</span></code> and <code class="docutils literal notranslate"><span class="pre">target_group_info</span></code>.</p>

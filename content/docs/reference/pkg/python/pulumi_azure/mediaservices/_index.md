@@ -34,8 +34,8 @@ anything, please consult the source <a class="reference external" href="https://
 </dl>
 <p>The <strong>storage_accounts</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Media Services Account.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">isPrimary</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the ID of the Storage Account that will be associated with the Media Services instance.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">isPrimary</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specifies whether the storage account should be the primary account or not. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_azure.mediaservices.Account.location">
@@ -60,8 +60,8 @@ anything, please consult the source <a class="reference external" href="https://
 <code class="sig-name descname">storage_accounts</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.mediaservices.Account.storage_accounts" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">storage_account</span></code> blocks as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the Media Services Account.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">isPrimary</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the ID of the Storage Account that will be associated with the Media Services instance.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">isPrimary</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Specifies whether the storage account should be the primary account or not. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -85,8 +85,8 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>storage_accounts</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Media Services Account.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">isPrimary</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the ID of the Storage Account that will be associated with the Media Services instance.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">isPrimary</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specifies whether the storage account should be the primary account or not. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
 </dd></dl>
 

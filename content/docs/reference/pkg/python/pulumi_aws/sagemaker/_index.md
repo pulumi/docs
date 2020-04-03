@@ -17,9 +17,6 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.sagemaker.Endpoint">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.sagemaker.</code><code class="sig-name descname">Endpoint</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">endpoint_config_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.sagemaker.Endpoint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a SageMaker Endpoint resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sagemaker_endpoint.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sagemaker_endpoint.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -117,9 +114,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.sagemaker.EndpointConfiguration">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.sagemaker.</code><code class="sig-name descname">EndpointConfiguration</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">kms_key_arn=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">production_variants=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.sagemaker.EndpointConfiguration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a SageMaker endpoint configuration resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sagemaker_endpoint_configuration.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sagemaker_endpoint_configuration.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -134,12 +128,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <p>The <strong>production_variants</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">acceleratorType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">initialInstanceCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">initialVariantWeight</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">instance_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">modelName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">variantName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">acceleratorType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The size of the Elastic Inference (EI) instance to use for the production variant.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">initialInstanceCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Initial number of instances used for auto-scaling.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">initialVariantWeight</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Determines initial traffic distribution among all of the models that you specify in the endpoint configuration. If unspecified, it defaults to 1.0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instance_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of instance to start.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">modelName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the model to use.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">variantName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the variant. If omitted, this provider will assign a random, unique name.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_aws.sagemaker.EndpointConfiguration.arn">
@@ -164,12 +158,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">production_variants</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.sagemaker.EndpointConfiguration.production_variants" title="Permalink to this definition">¶</a></dt>
 <dd><p>Fields are documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">acceleratorType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">initialInstanceCount</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">initialVariantWeight</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">instance_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">modelName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">variantName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">acceleratorType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The size of the Elastic Inference (EI) instance to use for the production variant.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">initialInstanceCount</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Initial number of instances used for auto-scaling.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">initialVariantWeight</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Determines initial traffic distribution among all of the models that you specify in the endpoint configuration. If unspecified, it defaults to 1.0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instance_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The type of instance to start.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">modelName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the model to use.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">variantName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the variant. If omitted, this provider will assign a random, unique name.</p></li>
 </ul>
 </dd></dl>
 
@@ -200,12 +194,12 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>production_variants</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">acceleratorType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">initialInstanceCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">initialVariantWeight</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">instance_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">modelName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">variantName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">acceleratorType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The size of the Elastic Inference (EI) instance to use for the production variant.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">initialInstanceCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Initial number of instances used for auto-scaling.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">initialVariantWeight</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Determines initial traffic distribution among all of the models that you specify in the endpoint configuration. If unspecified, it defaults to 1.0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instance_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of instance to start.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">modelName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the model to use.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">variantName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the variant. If omitted, this provider will assign a random, unique name.</p></li>
 </ul>
 </dd></dl>
 
@@ -251,9 +245,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.sagemaker.Model">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.sagemaker.</code><code class="sig-name descname">Model</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">containers=None</em>, <em class="sig-param">enable_network_isolation=None</em>, <em class="sig-param">execution_role_arn=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">primary_container=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_config=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.sagemaker.Model" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a SageMaker model resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sagemaker_model.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sagemaker_model.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -271,17 +262,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <p>The <strong>containers</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">containerHostname</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">environment</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">image</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">modelDataUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">containerHostname</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The DNS host name for the container.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">environment</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Environment variables for the Docker container.
+A list of key value pairs.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">image</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The registry path where the inference code image is stored in Amazon ECR.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">modelDataUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The URL for the S3 location where model artifacts are stored.</p></li>
 </ul>
 <p>The <strong>primary_container</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">containerHostname</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">environment</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">image</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">modelDataUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">containerHostname</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The DNS host name for the container.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">environment</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Environment variables for the Docker container.
+A list of key value pairs.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">image</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The registry path where the inference code image is stored in Amazon ECR.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">modelDataUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The URL for the S3 location where model artifacts are stored.</p></li>
 </ul>
 <p>The <strong>vpc_config</strong> object supports the following:</p>
 <ul class="simple">
@@ -299,10 +292,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">containers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.sagemaker.Model.containers" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies containers in the inference pipeline. If not specified, the <code class="docutils literal notranslate"><span class="pre">primary_container</span></code> argument is required. Fields are documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">containerHostname</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">environment</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">image</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">modelDataUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">containerHostname</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The DNS host name for the container.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">environment</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Environment variables for the Docker container.
+A list of key value pairs.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">image</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The registry path where the inference code image is stored in Amazon ECR.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">modelDataUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The URL for the S3 location where model artifacts are stored.</p></li>
 </ul>
 </dd></dl>
 
@@ -329,10 +323,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">primary_container</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.sagemaker.Model.primary_container" title="Permalink to this definition">¶</a></dt>
 <dd><p>The primary docker image containing inference code that is used when the model is deployed for predictions.  If not specified, the <code class="docutils literal notranslate"><span class="pre">container</span></code> argument is required. Fields are documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">containerHostname</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">environment</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">image</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">modelDataUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">containerHostname</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The DNS host name for the container.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">environment</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Environment variables for the Docker container.
+A list of key value pairs.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">image</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The registry path where the inference code image is stored in Amazon ECR.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">modelDataUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The URL for the S3 location where model artifacts are stored.</p></li>
 </ul>
 </dd></dl>
 
@@ -376,17 +371,19 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>containers</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">containerHostname</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">environment</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">image</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">modelDataUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">containerHostname</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The DNS host name for the container.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">environment</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Environment variables for the Docker container.
+A list of key value pairs.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">image</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The registry path where the inference code image is stored in Amazon ECR.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">modelDataUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The URL for the S3 location where model artifacts are stored.</p></li>
 </ul>
 <p>The <strong>primary_container</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">containerHostname</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">environment</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">image</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">modelDataUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">containerHostname</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The DNS host name for the container.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">environment</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Environment variables for the Docker container.
+A list of key value pairs.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">image</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The registry path where the inference code image is stored in Amazon ECR.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">modelDataUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The URL for the S3 location where model artifacts are stored.</p></li>
 </ul>
 <p>The <strong>vpc_config</strong> object supports the following:</p>
 <ul class="simple">
@@ -437,9 +434,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.sagemaker.NotebookInstance">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.sagemaker.</code><code class="sig-name descname">NotebookInstance</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">direct_internet_access=None</em>, <em class="sig-param">instance_type=None</em>, <em class="sig-param">kms_key_id=None</em>, <em class="sig-param">lifecycle_config_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">role_arn=None</em>, <em class="sig-param">security_groups=None</em>, <em class="sig-param">subnet_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.sagemaker.NotebookInstance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Sagemaker Notebook Instance resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sagemaker_notebook_instance.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sagemaker_notebook_instance.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -585,9 +579,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.sagemaker.NotebookInstanceLifecycleConfiguration">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.sagemaker.</code><code class="sig-name descname">NotebookInstanceLifecycleConfiguration</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">on_create=None</em>, <em class="sig-param">on_start=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.sagemaker.NotebookInstanceLifecycleConfiguration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a lifecycle configuration for SageMaker Notebook Instances.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sagemaker_notebook_instance_lifecycle_configuration.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sagemaker_notebook_instance_lifecycle_configuration.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

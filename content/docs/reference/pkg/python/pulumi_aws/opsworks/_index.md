@@ -17,9 +17,6 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.opsworks.Application">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.opsworks.</code><code class="sig-name descname">Application</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">app_sources=None</em>, <em class="sig-param">auto_bundle_on_deploy=None</em>, <em class="sig-param">aws_flow_ruby_settings=None</em>, <em class="sig-param">data_source_arn=None</em>, <em class="sig-param">data_source_database_name=None</em>, <em class="sig-param">data_source_type=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">document_root=None</em>, <em class="sig-param">domains=None</em>, <em class="sig-param">enable_ssl=None</em>, <em class="sig-param">environments=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">rails_env=None</em>, <em class="sig-param">short_name=None</em>, <em class="sig-param">ssl_configurations=None</em>, <em class="sig-param">stack_id=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.Application" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an OpsWorks application resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_application.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_application.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -41,39 +38,39 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><strong>short_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A short, machine-readable name for the application. This can only be defined on resource creation and ignored on resource update.</p></li>
 <li><p><strong>ssl_configurations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The SSL configuration of the app. Object is described below.</p></li>
 <li><p><strong>stack_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the stack the application will belong to.</p></li>
-<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of source to use. For example, “archive”.</p></li>
+<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Opsworks application type. One of <code class="docutils literal notranslate"><span class="pre">aws-flow-ruby</span></code>, <code class="docutils literal notranslate"><span class="pre">java</span></code>, <code class="docutils literal notranslate"><span class="pre">rails</span></code>, <code class="docutils literal notranslate"><span class="pre">php</span></code>, <code class="docutils literal notranslate"><span class="pre">nodejs</span></code>, <code class="docutils literal notranslate"><span class="pre">static</span></code> or <code class="docutils literal notranslate"><span class="pre">other</span></code>.</p></li>
 </ul>
 </dd>
 </dl>
 <p>The <strong>app_sources</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Password to use when authenticating to the source. This provider cannot perform drift detection of this configuration.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">revision</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - For sources that are version-aware, the revision to use.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sshKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sshKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - SSH key to use when authenticating to the source. This provider cannot perform drift detection of this configuration.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of source to use. For example, “archive”.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The URL where the app resource can be found.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Username to use when authenticating to the source.</p></li>
 </ul>
 <p>The <strong>environments</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">secure</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Variable name.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">secure</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Set visibility of the variable value to <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Variable value.</p></li>
 </ul>
 <p>The <strong>ssl_configurations</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">certificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">chain</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">private_key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The contents of the certificate’s domain.crt file.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">chain</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Can be used to specify an intermediate certificate authority key or client authentication.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">private_key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The private key; the contents of the certificate’s domain.key file.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_aws.opsworks.Application.app_sources">
 <code class="sig-name descname">app_sources</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.Application.app_sources" title="Permalink to this definition">¶</a></dt>
 <dd><p>SCM configuration of the app as described below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Password to use when authenticating to the source. This provider cannot perform drift detection of this configuration.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">revision</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - For sources that are version-aware, the revision to use.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sshKey</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sshKey</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - SSH key to use when authenticating to the source. This provider cannot perform drift detection of this configuration.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The type of source to use. For example, “archive”.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The URL where the app resource can be found.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Username to use when authenticating to the source.</p></li>
@@ -139,9 +136,9 @@ anything, please consult the source <a class="reference external" href="https://
 <code class="sig-name descname">environments</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.Application.environments" title="Permalink to this definition">¶</a></dt>
 <dd><p>Object to define environment variables.  Object is described below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">secure</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Variable name.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">secure</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Set visibility of the variable value to <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Variable value.</p></li>
 </ul>
 </dd></dl>
 
@@ -168,9 +165,9 @@ anything, please consult the source <a class="reference external" href="https://
 <code class="sig-name descname">ssl_configurations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.Application.ssl_configurations" title="Permalink to this definition">¶</a></dt>
 <dd><p>The SSL configuration of the app. Object is described below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">certificate</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">chain</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">private_key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificate</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The contents of the certificate’s domain.crt file.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">chain</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Can be used to specify an intermediate certificate authority key or client authentication.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">private_key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The private key; the contents of the certificate’s domain.key file.</p></li>
 </ul>
 </dd></dl>
 
@@ -183,7 +180,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dl class="attribute">
 <dt id="pulumi_aws.opsworks.Application.type">
 <code class="sig-name descname">type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.Application.type" title="Permalink to this definition">¶</a></dt>
-<dd><p>The type of source to use. For example, “archive”.</p>
+<dd><p>Opsworks application type. One of <code class="docutils literal notranslate"><span class="pre">aws-flow-ruby</span></code>, <code class="docutils literal notranslate"><span class="pre">java</span></code>, <code class="docutils literal notranslate"><span class="pre">rails</span></code>, <code class="docutils literal notranslate"><span class="pre">php</span></code>, <code class="docutils literal notranslate"><span class="pre">nodejs</span></code>, <code class="docutils literal notranslate"><span class="pre">static</span></code> or <code class="docutils literal notranslate"><span class="pre">other</span></code>.</p>
 </dd></dl>
 
 <dl class="method">
@@ -213,30 +210,30 @@ properties used to qualify the lookup.</p>
 <li><p><strong>short_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A short, machine-readable name for the application. This can only be defined on resource creation and ignored on resource update.</p></li>
 <li><p><strong>ssl_configurations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The SSL configuration of the app. Object is described below.</p></li>
 <li><p><strong>stack_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the stack the application will belong to.</p></li>
-<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of source to use. For example, “archive”.</p></li>
+<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Opsworks application type. One of <code class="docutils literal notranslate"><span class="pre">aws-flow-ruby</span></code>, <code class="docutils literal notranslate"><span class="pre">java</span></code>, <code class="docutils literal notranslate"><span class="pre">rails</span></code>, <code class="docutils literal notranslate"><span class="pre">php</span></code>, <code class="docutils literal notranslate"><span class="pre">nodejs</span></code>, <code class="docutils literal notranslate"><span class="pre">static</span></code> or <code class="docutils literal notranslate"><span class="pre">other</span></code>.</p></li>
 </ul>
 </dd>
 </dl>
 <p>The <strong>app_sources</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Password to use when authenticating to the source. This provider cannot perform drift detection of this configuration.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">revision</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - For sources that are version-aware, the revision to use.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sshKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sshKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - SSH key to use when authenticating to the source. This provider cannot perform drift detection of this configuration.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of source to use. For example, “archive”.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The URL where the app resource can be found.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Username to use when authenticating to the source.</p></li>
 </ul>
 <p>The <strong>environments</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">secure</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Variable name.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">secure</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Set visibility of the variable value to <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Variable value.</p></li>
 </ul>
 <p>The <strong>ssl_configurations</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">certificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">chain</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">private_key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The contents of the certificate’s domain.crt file.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">chain</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Can be used to specify an intermediate certificate authority key or client authentication.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">private_key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The private key; the contents of the certificate’s domain.key file.</p></li>
 </ul>
 </dd></dl>
 
@@ -280,11 +277,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.opsworks.CustomLayer">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.opsworks.</code><code class="sig-name descname">CustomLayer</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_assign_elastic_ips=None</em>, <em class="sig-param">auto_assign_public_ips=None</em>, <em class="sig-param">auto_healing=None</em>, <em class="sig-param">custom_configure_recipes=None</em>, <em class="sig-param">custom_deploy_recipes=None</em>, <em class="sig-param">custom_instance_profile_arn=None</em>, <em class="sig-param">custom_json=None</em>, <em class="sig-param">custom_security_group_ids=None</em>, <em class="sig-param">custom_setup_recipes=None</em>, <em class="sig-param">custom_shutdown_recipes=None</em>, <em class="sig-param">custom_undeploy_recipes=None</em>, <em class="sig-param">drain_elb_on_shutdown=None</em>, <em class="sig-param">ebs_volumes=None</em>, <em class="sig-param">elastic_load_balancer=None</em>, <em class="sig-param">install_updates_on_boot=None</em>, <em class="sig-param">instance_shutdown_timeout=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">short_name=None</em>, <em class="sig-param">stack_id=None</em>, <em class="sig-param">system_packages=None</em>, <em class="sig-param">use_ebs_optimized_instances=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.CustomLayer" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.opsworks.</code><code class="sig-name descname">CustomLayer</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_assign_elastic_ips=None</em>, <em class="sig-param">auto_assign_public_ips=None</em>, <em class="sig-param">auto_healing=None</em>, <em class="sig-param">custom_configure_recipes=None</em>, <em class="sig-param">custom_deploy_recipes=None</em>, <em class="sig-param">custom_instance_profile_arn=None</em>, <em class="sig-param">custom_json=None</em>, <em class="sig-param">custom_security_group_ids=None</em>, <em class="sig-param">custom_setup_recipes=None</em>, <em class="sig-param">custom_shutdown_recipes=None</em>, <em class="sig-param">custom_undeploy_recipes=None</em>, <em class="sig-param">drain_elb_on_shutdown=None</em>, <em class="sig-param">ebs_volumes=None</em>, <em class="sig-param">elastic_load_balancer=None</em>, <em class="sig-param">install_updates_on_boot=None</em>, <em class="sig-param">instance_shutdown_timeout=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">short_name=None</em>, <em class="sig-param">stack_id=None</em>, <em class="sig-param">system_packages=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">use_ebs_optimized_instances=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.CustomLayer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an OpsWorks custom layer resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_custom_layer.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_custom_layer.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -305,20 +299,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>short_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A short, machine-readable name for the layer, which will be used to identify it in the Chef node JSON.</p></li>
 <li><p><strong>stack_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the stack the layer will belong to.</p></li>
 <li><p><strong>system_packages</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Names of a set of system packages to install on the layer’s instances.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 <li><p><strong>use_ebs_optimized_instances</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to use EBS-optimized instances.</p></li>
 </ul>
 </dd>
 </dl>
 <p>The <strong>ebs_volumes</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">mountPoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">numberOfDisks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">raidLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Encrypt the volume.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - For PIOPS volumes, the IOPS per disk.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mountPoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path to mount the EBS volume on the layer’s instances.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">numberOfDisks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of disks to use for the EBS volume.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">raidLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The RAID level to use for the volume.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size of the volume in gigabytes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of volume to create. This may be <code class="docutils literal notranslate"><span class="pre">standard</span></code> (the default), <code class="docutils literal notranslate"><span class="pre">io1</span></code> or <code class="docutils literal notranslate"><span class="pre">gp2</span></code>.</p></li>
 </ul>
+<dl class="attribute">
+<dt id="pulumi_aws.opsworks.CustomLayer.arn">
+<code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.CustomLayer.arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Amazon Resource Name(ARN) of the layer.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_aws.opsworks.CustomLayer.auto_assign_elastic_ips">
 <code class="sig-name descname">auto_assign_elastic_ips</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.CustomLayer.auto_assign_elastic_ips" title="Permalink to this definition">¶</a></dt>
@@ -366,13 +367,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">ebs_volumes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.CustomLayer.ebs_volumes" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">ebs_volume</span></code> blocks, as described below, will each create an EBS volume and connect it to the layer’s instances.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">mountPoint</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">numberOfDisks</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">raidLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Encrypt the volume.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - For PIOPS volumes, the IOPS per disk.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mountPoint</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The path to mount the EBS volume on the layer’s instances.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">numberOfDisks</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of disks to use for the EBS volume.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">raidLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The RAID level to use for the volume.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The size of the volume in gigabytes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The type of volume to create. This may be <code class="docutils literal notranslate"><span class="pre">standard</span></code> (the default), <code class="docutils literal notranslate"><span class="pre">io1</span></code> or <code class="docutils literal notranslate"><span class="pre">gp2</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -419,6 +420,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.opsworks.CustomLayer.tags">
+<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.CustomLayer.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of tags to assign to the resource.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.opsworks.CustomLayer.use_ebs_optimized_instances">
 <code class="sig-name descname">use_ebs_optimized_instances</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.CustomLayer.use_ebs_optimized_instances" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether to use EBS-optimized instances.</p>
@@ -426,7 +433,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="method">
 <dt id="pulumi_aws.opsworks.CustomLayer.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_assign_elastic_ips=None</em>, <em class="sig-param">auto_assign_public_ips=None</em>, <em class="sig-param">auto_healing=None</em>, <em class="sig-param">custom_configure_recipes=None</em>, <em class="sig-param">custom_deploy_recipes=None</em>, <em class="sig-param">custom_instance_profile_arn=None</em>, <em class="sig-param">custom_json=None</em>, <em class="sig-param">custom_security_group_ids=None</em>, <em class="sig-param">custom_setup_recipes=None</em>, <em class="sig-param">custom_shutdown_recipes=None</em>, <em class="sig-param">custom_undeploy_recipes=None</em>, <em class="sig-param">drain_elb_on_shutdown=None</em>, <em class="sig-param">ebs_volumes=None</em>, <em class="sig-param">elastic_load_balancer=None</em>, <em class="sig-param">install_updates_on_boot=None</em>, <em class="sig-param">instance_shutdown_timeout=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">short_name=None</em>, <em class="sig-param">stack_id=None</em>, <em class="sig-param">system_packages=None</em>, <em class="sig-param">use_ebs_optimized_instances=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.CustomLayer.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">auto_assign_elastic_ips=None</em>, <em class="sig-param">auto_assign_public_ips=None</em>, <em class="sig-param">auto_healing=None</em>, <em class="sig-param">custom_configure_recipes=None</em>, <em class="sig-param">custom_deploy_recipes=None</em>, <em class="sig-param">custom_instance_profile_arn=None</em>, <em class="sig-param">custom_json=None</em>, <em class="sig-param">custom_security_group_ids=None</em>, <em class="sig-param">custom_setup_recipes=None</em>, <em class="sig-param">custom_shutdown_recipes=None</em>, <em class="sig-param">custom_undeploy_recipes=None</em>, <em class="sig-param">drain_elb_on_shutdown=None</em>, <em class="sig-param">ebs_volumes=None</em>, <em class="sig-param">elastic_load_balancer=None</em>, <em class="sig-param">install_updates_on_boot=None</em>, <em class="sig-param">instance_shutdown_timeout=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">short_name=None</em>, <em class="sig-param">stack_id=None</em>, <em class="sig-param">system_packages=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">use_ebs_optimized_instances=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.CustomLayer.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing CustomLayer resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -435,6 +442,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name(ARN) of the layer.</p></li>
 <li><p><strong>auto_assign_elastic_ips</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to automatically assign an elastic IP address to the layer’s instances.</p></li>
 <li><p><strong>auto_assign_public_ips</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer’s instances.</p></li>
 <li><p><strong>auto_healing</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to enable auto-healing for the layer.</p></li>
@@ -450,19 +458,20 @@ properties used to qualify the lookup.</p>
 <li><p><strong>short_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A short, machine-readable name for the layer, which will be used to identify it in the Chef node JSON.</p></li>
 <li><p><strong>stack_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the stack the layer will belong to.</p></li>
 <li><p><strong>system_packages</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Names of a set of system packages to install on the layer’s instances.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 <li><p><strong>use_ebs_optimized_instances</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to use EBS-optimized instances.</p></li>
 </ul>
 </dd>
 </dl>
 <p>The <strong>ebs_volumes</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">mountPoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">numberOfDisks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">raidLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Encrypt the volume.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - For PIOPS volumes, the IOPS per disk.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mountPoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path to mount the EBS volume on the layer’s instances.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">numberOfDisks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of disks to use for the EBS volume.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">raidLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The RAID level to use for the volume.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size of the volume in gigabytes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of volume to create. This may be <code class="docutils literal notranslate"><span class="pre">standard</span></code> (the default), <code class="docutils literal notranslate"><span class="pre">io1</span></code> or <code class="docutils literal notranslate"><span class="pre">gp2</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -506,11 +515,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.opsworks.GangliaLayer">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.opsworks.</code><code class="sig-name descname">GangliaLayer</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_assign_elastic_ips=None</em>, <em class="sig-param">auto_assign_public_ips=None</em>, <em class="sig-param">auto_healing=None</em>, <em class="sig-param">custom_configure_recipes=None</em>, <em class="sig-param">custom_deploy_recipes=None</em>, <em class="sig-param">custom_instance_profile_arn=None</em>, <em class="sig-param">custom_json=None</em>, <em class="sig-param">custom_security_group_ids=None</em>, <em class="sig-param">custom_setup_recipes=None</em>, <em class="sig-param">custom_shutdown_recipes=None</em>, <em class="sig-param">custom_undeploy_recipes=None</em>, <em class="sig-param">drain_elb_on_shutdown=None</em>, <em class="sig-param">ebs_volumes=None</em>, <em class="sig-param">elastic_load_balancer=None</em>, <em class="sig-param">install_updates_on_boot=None</em>, <em class="sig-param">instance_shutdown_timeout=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">stack_id=None</em>, <em class="sig-param">system_packages=None</em>, <em class="sig-param">url=None</em>, <em class="sig-param">use_ebs_optimized_instances=None</em>, <em class="sig-param">username=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.GangliaLayer" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.opsworks.</code><code class="sig-name descname">GangliaLayer</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_assign_elastic_ips=None</em>, <em class="sig-param">auto_assign_public_ips=None</em>, <em class="sig-param">auto_healing=None</em>, <em class="sig-param">custom_configure_recipes=None</em>, <em class="sig-param">custom_deploy_recipes=None</em>, <em class="sig-param">custom_instance_profile_arn=None</em>, <em class="sig-param">custom_json=None</em>, <em class="sig-param">custom_security_group_ids=None</em>, <em class="sig-param">custom_setup_recipes=None</em>, <em class="sig-param">custom_shutdown_recipes=None</em>, <em class="sig-param">custom_undeploy_recipes=None</em>, <em class="sig-param">drain_elb_on_shutdown=None</em>, <em class="sig-param">ebs_volumes=None</em>, <em class="sig-param">elastic_load_balancer=None</em>, <em class="sig-param">install_updates_on_boot=None</em>, <em class="sig-param">instance_shutdown_timeout=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">stack_id=None</em>, <em class="sig-param">system_packages=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">url=None</em>, <em class="sig-param">use_ebs_optimized_instances=None</em>, <em class="sig-param">username=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.GangliaLayer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an OpsWorks Ganglia layer resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_ganglia_layer.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_ganglia_layer.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -531,6 +537,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The password to use for Ganglia.</p></li>
 <li><p><strong>stack_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the stack the layer will belong to.</p></li>
 <li><p><strong>system_packages</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Names of a set of system packages to install on the layer’s instances.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 <li><p><strong>url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URL path to use for Ganglia. Defaults to “/ganglia”.</p></li>
 <li><p><strong>use_ebs_optimized_instances</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to use EBS-optimized instances.</p></li>
 <li><p><strong>username</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The username to use for Ganglia. Defaults to “opsworks”.</p></li>
@@ -540,13 +547,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>The <strong>ebs_volumes</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">mountPoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">numberOfDisks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">raidLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - For PIOPS volumes, the IOPS per disk.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mountPoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path to mount the EBS volume on the layer’s instances.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">numberOfDisks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of disks to use for the EBS volume.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">raidLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The RAID level to use for the volume.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size of the volume in gigabytes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of volume to create. This may be <code class="docutils literal notranslate"><span class="pre">standard</span></code> (the default), <code class="docutils literal notranslate"><span class="pre">io1</span></code> or <code class="docutils literal notranslate"><span class="pre">gp2</span></code>.</p></li>
 </ul>
+<dl class="attribute">
+<dt id="pulumi_aws.opsworks.GangliaLayer.arn">
+<code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.GangliaLayer.arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Amazon Resource Name(ARN) of the layer.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_aws.opsworks.GangliaLayer.auto_assign_elastic_ips">
 <code class="sig-name descname">auto_assign_elastic_ips</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.GangliaLayer.auto_assign_elastic_ips" title="Permalink to this definition">¶</a></dt>
@@ -595,12 +608,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p><code class="docutils literal notranslate"><span class="pre">ebs_volume</span></code> blocks, as described below, will each create an EBS volume and connect it to the layer’s instances.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">mountPoint</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">numberOfDisks</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">raidLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - For PIOPS volumes, the IOPS per disk.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mountPoint</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The path to mount the EBS volume on the layer’s instances.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">numberOfDisks</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of disks to use for the EBS volume.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">raidLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The RAID level to use for the volume.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The size of the volume in gigabytes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The type of volume to create. This may be <code class="docutils literal notranslate"><span class="pre">standard</span></code> (the default), <code class="docutils literal notranslate"><span class="pre">io1</span></code> or <code class="docutils literal notranslate"><span class="pre">gp2</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -647,6 +660,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.opsworks.GangliaLayer.tags">
+<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.GangliaLayer.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of tags to assign to the resource.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.opsworks.GangliaLayer.url">
 <code class="sig-name descname">url</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.GangliaLayer.url" title="Permalink to this definition">¶</a></dt>
 <dd><p>The URL path to use for Ganglia. Defaults to “/ganglia”.</p>
@@ -666,7 +685,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="method">
 <dt id="pulumi_aws.opsworks.GangliaLayer.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_assign_elastic_ips=None</em>, <em class="sig-param">auto_assign_public_ips=None</em>, <em class="sig-param">auto_healing=None</em>, <em class="sig-param">custom_configure_recipes=None</em>, <em class="sig-param">custom_deploy_recipes=None</em>, <em class="sig-param">custom_instance_profile_arn=None</em>, <em class="sig-param">custom_json=None</em>, <em class="sig-param">custom_security_group_ids=None</em>, <em class="sig-param">custom_setup_recipes=None</em>, <em class="sig-param">custom_shutdown_recipes=None</em>, <em class="sig-param">custom_undeploy_recipes=None</em>, <em class="sig-param">drain_elb_on_shutdown=None</em>, <em class="sig-param">ebs_volumes=None</em>, <em class="sig-param">elastic_load_balancer=None</em>, <em class="sig-param">install_updates_on_boot=None</em>, <em class="sig-param">instance_shutdown_timeout=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">stack_id=None</em>, <em class="sig-param">system_packages=None</em>, <em class="sig-param">url=None</em>, <em class="sig-param">use_ebs_optimized_instances=None</em>, <em class="sig-param">username=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.GangliaLayer.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">auto_assign_elastic_ips=None</em>, <em class="sig-param">auto_assign_public_ips=None</em>, <em class="sig-param">auto_healing=None</em>, <em class="sig-param">custom_configure_recipes=None</em>, <em class="sig-param">custom_deploy_recipes=None</em>, <em class="sig-param">custom_instance_profile_arn=None</em>, <em class="sig-param">custom_json=None</em>, <em class="sig-param">custom_security_group_ids=None</em>, <em class="sig-param">custom_setup_recipes=None</em>, <em class="sig-param">custom_shutdown_recipes=None</em>, <em class="sig-param">custom_undeploy_recipes=None</em>, <em class="sig-param">drain_elb_on_shutdown=None</em>, <em class="sig-param">ebs_volumes=None</em>, <em class="sig-param">elastic_load_balancer=None</em>, <em class="sig-param">install_updates_on_boot=None</em>, <em class="sig-param">instance_shutdown_timeout=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">stack_id=None</em>, <em class="sig-param">system_packages=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">url=None</em>, <em class="sig-param">use_ebs_optimized_instances=None</em>, <em class="sig-param">username=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.GangliaLayer.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing GangliaLayer resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -675,6 +694,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name(ARN) of the layer.</p></li>
 <li><p><strong>auto_assign_elastic_ips</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to automatically assign an elastic IP address to the layer’s instances.</p></li>
 <li><p><strong>auto_assign_public_ips</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer’s instances.</p></li>
 <li><p><strong>auto_healing</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to enable auto-healing for the layer.</p></li>
@@ -690,6 +710,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The password to use for Ganglia.</p></li>
 <li><p><strong>stack_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the stack the layer will belong to.</p></li>
 <li><p><strong>system_packages</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Names of a set of system packages to install on the layer’s instances.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 <li><p><strong>url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URL path to use for Ganglia. Defaults to “/ganglia”.</p></li>
 <li><p><strong>use_ebs_optimized_instances</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to use EBS-optimized instances.</p></li>
 <li><p><strong>username</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The username to use for Ganglia. Defaults to “opsworks”.</p></li>
@@ -699,12 +720,12 @@ properties used to qualify the lookup.</p>
 <p>The <strong>ebs_volumes</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">mountPoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">numberOfDisks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">raidLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - For PIOPS volumes, the IOPS per disk.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mountPoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path to mount the EBS volume on the layer’s instances.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">numberOfDisks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of disks to use for the EBS volume.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">raidLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The RAID level to use for the volume.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size of the volume in gigabytes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of volume to create. This may be <code class="docutils literal notranslate"><span class="pre">standard</span></code> (the default), <code class="docutils literal notranslate"><span class="pre">io1</span></code> or <code class="docutils literal notranslate"><span class="pre">gp2</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -748,11 +769,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.opsworks.HaproxyLayer">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.opsworks.</code><code class="sig-name descname">HaproxyLayer</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_assign_elastic_ips=None</em>, <em class="sig-param">auto_assign_public_ips=None</em>, <em class="sig-param">auto_healing=None</em>, <em class="sig-param">custom_configure_recipes=None</em>, <em class="sig-param">custom_deploy_recipes=None</em>, <em class="sig-param">custom_instance_profile_arn=None</em>, <em class="sig-param">custom_json=None</em>, <em class="sig-param">custom_security_group_ids=None</em>, <em class="sig-param">custom_setup_recipes=None</em>, <em class="sig-param">custom_shutdown_recipes=None</em>, <em class="sig-param">custom_undeploy_recipes=None</em>, <em class="sig-param">drain_elb_on_shutdown=None</em>, <em class="sig-param">ebs_volumes=None</em>, <em class="sig-param">elastic_load_balancer=None</em>, <em class="sig-param">healthcheck_method=None</em>, <em class="sig-param">healthcheck_url=None</em>, <em class="sig-param">install_updates_on_boot=None</em>, <em class="sig-param">instance_shutdown_timeout=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">stack_id=None</em>, <em class="sig-param">stats_enabled=None</em>, <em class="sig-param">stats_password=None</em>, <em class="sig-param">stats_url=None</em>, <em class="sig-param">stats_user=None</em>, <em class="sig-param">system_packages=None</em>, <em class="sig-param">use_ebs_optimized_instances=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.HaproxyLayer" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.opsworks.</code><code class="sig-name descname">HaproxyLayer</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_assign_elastic_ips=None</em>, <em class="sig-param">auto_assign_public_ips=None</em>, <em class="sig-param">auto_healing=None</em>, <em class="sig-param">custom_configure_recipes=None</em>, <em class="sig-param">custom_deploy_recipes=None</em>, <em class="sig-param">custom_instance_profile_arn=None</em>, <em class="sig-param">custom_json=None</em>, <em class="sig-param">custom_security_group_ids=None</em>, <em class="sig-param">custom_setup_recipes=None</em>, <em class="sig-param">custom_shutdown_recipes=None</em>, <em class="sig-param">custom_undeploy_recipes=None</em>, <em class="sig-param">drain_elb_on_shutdown=None</em>, <em class="sig-param">ebs_volumes=None</em>, <em class="sig-param">elastic_load_balancer=None</em>, <em class="sig-param">healthcheck_method=None</em>, <em class="sig-param">healthcheck_url=None</em>, <em class="sig-param">install_updates_on_boot=None</em>, <em class="sig-param">instance_shutdown_timeout=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">stack_id=None</em>, <em class="sig-param">stats_enabled=None</em>, <em class="sig-param">stats_password=None</em>, <em class="sig-param">stats_url=None</em>, <em class="sig-param">stats_user=None</em>, <em class="sig-param">system_packages=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">use_ebs_optimized_instances=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.HaproxyLayer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an OpsWorks haproxy layer resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_haproxy_layer.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_haproxy_layer.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -778,6 +796,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>stats_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The HAProxy stats URL. Defaults to “/haproxy?stats”.</p></li>
 <li><p><strong>stats_user</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The username for HAProxy stats. Defaults to “opsworks”.</p></li>
 <li><p><strong>system_packages</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Names of a set of system packages to install on the layer’s instances.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 <li><p><strong>use_ebs_optimized_instances</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to use EBS-optimized instances.</p></li>
 </ul>
 </dd>
@@ -785,13 +804,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>The <strong>ebs_volumes</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">mountPoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">numberOfDisks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">raidLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - For PIOPS volumes, the IOPS per disk.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mountPoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path to mount the EBS volume on the layer’s instances.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">numberOfDisks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of disks to use for the EBS volume.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">raidLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The RAID level to use for the volume.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size of the volume in gigabytes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of volume to create. This may be <code class="docutils literal notranslate"><span class="pre">standard</span></code> (the default), <code class="docutils literal notranslate"><span class="pre">io1</span></code> or <code class="docutils literal notranslate"><span class="pre">gp2</span></code>.</p></li>
 </ul>
+<dl class="attribute">
+<dt id="pulumi_aws.opsworks.HaproxyLayer.arn">
+<code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.HaproxyLayer.arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Amazon Resource Name(ARN) of the layer.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_aws.opsworks.HaproxyLayer.auto_assign_elastic_ips">
 <code class="sig-name descname">auto_assign_elastic_ips</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.HaproxyLayer.auto_assign_elastic_ips" title="Permalink to this definition">¶</a></dt>
@@ -840,12 +865,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p><code class="docutils literal notranslate"><span class="pre">ebs_volume</span></code> blocks, as described below, will each create an EBS volume and connect it to the layer’s instances.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">mountPoint</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">numberOfDisks</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">raidLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - For PIOPS volumes, the IOPS per disk.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mountPoint</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The path to mount the EBS volume on the layer’s instances.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">numberOfDisks</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of disks to use for the EBS volume.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">raidLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The RAID level to use for the volume.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The size of the volume in gigabytes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The type of volume to create. This may be <code class="docutils literal notranslate"><span class="pre">standard</span></code> (the default), <code class="docutils literal notranslate"><span class="pre">io1</span></code> or <code class="docutils literal notranslate"><span class="pre">gp2</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -922,6 +947,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.opsworks.HaproxyLayer.tags">
+<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.HaproxyLayer.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of tags to assign to the resource.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.opsworks.HaproxyLayer.use_ebs_optimized_instances">
 <code class="sig-name descname">use_ebs_optimized_instances</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.HaproxyLayer.use_ebs_optimized_instances" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether to use EBS-optimized instances.</p>
@@ -929,7 +960,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="method">
 <dt id="pulumi_aws.opsworks.HaproxyLayer.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_assign_elastic_ips=None</em>, <em class="sig-param">auto_assign_public_ips=None</em>, <em class="sig-param">auto_healing=None</em>, <em class="sig-param">custom_configure_recipes=None</em>, <em class="sig-param">custom_deploy_recipes=None</em>, <em class="sig-param">custom_instance_profile_arn=None</em>, <em class="sig-param">custom_json=None</em>, <em class="sig-param">custom_security_group_ids=None</em>, <em class="sig-param">custom_setup_recipes=None</em>, <em class="sig-param">custom_shutdown_recipes=None</em>, <em class="sig-param">custom_undeploy_recipes=None</em>, <em class="sig-param">drain_elb_on_shutdown=None</em>, <em class="sig-param">ebs_volumes=None</em>, <em class="sig-param">elastic_load_balancer=None</em>, <em class="sig-param">healthcheck_method=None</em>, <em class="sig-param">healthcheck_url=None</em>, <em class="sig-param">install_updates_on_boot=None</em>, <em class="sig-param">instance_shutdown_timeout=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">stack_id=None</em>, <em class="sig-param">stats_enabled=None</em>, <em class="sig-param">stats_password=None</em>, <em class="sig-param">stats_url=None</em>, <em class="sig-param">stats_user=None</em>, <em class="sig-param">system_packages=None</em>, <em class="sig-param">use_ebs_optimized_instances=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.HaproxyLayer.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">auto_assign_elastic_ips=None</em>, <em class="sig-param">auto_assign_public_ips=None</em>, <em class="sig-param">auto_healing=None</em>, <em class="sig-param">custom_configure_recipes=None</em>, <em class="sig-param">custom_deploy_recipes=None</em>, <em class="sig-param">custom_instance_profile_arn=None</em>, <em class="sig-param">custom_json=None</em>, <em class="sig-param">custom_security_group_ids=None</em>, <em class="sig-param">custom_setup_recipes=None</em>, <em class="sig-param">custom_shutdown_recipes=None</em>, <em class="sig-param">custom_undeploy_recipes=None</em>, <em class="sig-param">drain_elb_on_shutdown=None</em>, <em class="sig-param">ebs_volumes=None</em>, <em class="sig-param">elastic_load_balancer=None</em>, <em class="sig-param">healthcheck_method=None</em>, <em class="sig-param">healthcheck_url=None</em>, <em class="sig-param">install_updates_on_boot=None</em>, <em class="sig-param">instance_shutdown_timeout=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">stack_id=None</em>, <em class="sig-param">stats_enabled=None</em>, <em class="sig-param">stats_password=None</em>, <em class="sig-param">stats_url=None</em>, <em class="sig-param">stats_user=None</em>, <em class="sig-param">system_packages=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">use_ebs_optimized_instances=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.HaproxyLayer.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing HaproxyLayer resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -938,6 +969,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name(ARN) of the layer.</p></li>
 <li><p><strong>auto_assign_elastic_ips</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to automatically assign an elastic IP address to the layer’s instances.</p></li>
 <li><p><strong>auto_assign_public_ips</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer’s instances.</p></li>
 <li><p><strong>auto_healing</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to enable auto-healing for the layer.</p></li>
@@ -958,6 +990,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>stats_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The HAProxy stats URL. Defaults to “/haproxy?stats”.</p></li>
 <li><p><strong>stats_user</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The username for HAProxy stats. Defaults to “opsworks”.</p></li>
 <li><p><strong>system_packages</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Names of a set of system packages to install on the layer’s instances.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 <li><p><strong>use_ebs_optimized_instances</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to use EBS-optimized instances.</p></li>
 </ul>
 </dd>
@@ -965,12 +998,12 @@ properties used to qualify the lookup.</p>
 <p>The <strong>ebs_volumes</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">mountPoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">numberOfDisks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">raidLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - For PIOPS volumes, the IOPS per disk.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mountPoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path to mount the EBS volume on the layer’s instances.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">numberOfDisks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of disks to use for the EBS volume.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">raidLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The RAID level to use for the volume.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size of the volume in gigabytes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of volume to create. This may be <code class="docutils literal notranslate"><span class="pre">standard</span></code> (the default), <code class="docutils literal notranslate"><span class="pre">io1</span></code> or <code class="docutils literal notranslate"><span class="pre">gp2</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -1063,8 +1096,7 @@ identified by the <code class="docutils literal notranslate"><span class="pre">v
 <div><p><strong>NOTE:</strong> Currently, changes to <code class="docutils literal notranslate"><span class="pre">*_block_device</span></code> configuration of <em>existing</em>
 resources cannot be automatically detected by this provider. After making updates
 to block device configuration, resource recreation can be manually triggered by
-using the <cite>``taint`</cite> command &lt;<a class="reference external" href="https://www.terraform.io/docs/commands/taint.html">https://www.terraform.io/docs/commands/taint.html</a>&gt;`_.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_instance.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_instance.html.markdown</a>.</p>
+using the <cite>``up`</cite> command with the –replace argument &lt;<a class="reference external" href="https://www.pulumi.com/docs/reference/cli/pulumi_up/">https://www.pulumi.com/docs/reference/cli/pulumi_up/</a>&gt;`_.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1429,11 +1461,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.opsworks.JavaAppLayer">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.opsworks.</code><code class="sig-name descname">JavaAppLayer</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">app_server=None</em>, <em class="sig-param">app_server_version=None</em>, <em class="sig-param">auto_assign_elastic_ips=None</em>, <em class="sig-param">auto_assign_public_ips=None</em>, <em class="sig-param">auto_healing=None</em>, <em class="sig-param">custom_configure_recipes=None</em>, <em class="sig-param">custom_deploy_recipes=None</em>, <em class="sig-param">custom_instance_profile_arn=None</em>, <em class="sig-param">custom_json=None</em>, <em class="sig-param">custom_security_group_ids=None</em>, <em class="sig-param">custom_setup_recipes=None</em>, <em class="sig-param">custom_shutdown_recipes=None</em>, <em class="sig-param">custom_undeploy_recipes=None</em>, <em class="sig-param">drain_elb_on_shutdown=None</em>, <em class="sig-param">ebs_volumes=None</em>, <em class="sig-param">elastic_load_balancer=None</em>, <em class="sig-param">install_updates_on_boot=None</em>, <em class="sig-param">instance_shutdown_timeout=None</em>, <em class="sig-param">jvm_options=None</em>, <em class="sig-param">jvm_type=None</em>, <em class="sig-param">jvm_version=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">stack_id=None</em>, <em class="sig-param">system_packages=None</em>, <em class="sig-param">use_ebs_optimized_instances=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.JavaAppLayer" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.opsworks.</code><code class="sig-name descname">JavaAppLayer</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">app_server=None</em>, <em class="sig-param">app_server_version=None</em>, <em class="sig-param">auto_assign_elastic_ips=None</em>, <em class="sig-param">auto_assign_public_ips=None</em>, <em class="sig-param">auto_healing=None</em>, <em class="sig-param">custom_configure_recipes=None</em>, <em class="sig-param">custom_deploy_recipes=None</em>, <em class="sig-param">custom_instance_profile_arn=None</em>, <em class="sig-param">custom_json=None</em>, <em class="sig-param">custom_security_group_ids=None</em>, <em class="sig-param">custom_setup_recipes=None</em>, <em class="sig-param">custom_shutdown_recipes=None</em>, <em class="sig-param">custom_undeploy_recipes=None</em>, <em class="sig-param">drain_elb_on_shutdown=None</em>, <em class="sig-param">ebs_volumes=None</em>, <em class="sig-param">elastic_load_balancer=None</em>, <em class="sig-param">install_updates_on_boot=None</em>, <em class="sig-param">instance_shutdown_timeout=None</em>, <em class="sig-param">jvm_options=None</em>, <em class="sig-param">jvm_type=None</em>, <em class="sig-param">jvm_version=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">stack_id=None</em>, <em class="sig-param">system_packages=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">use_ebs_optimized_instances=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.JavaAppLayer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an OpsWorks Java application layer resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_java_app_layer.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_java_app_layer.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1458,6 +1487,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A human-readable name for the layer.</p></li>
 <li><p><strong>stack_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the stack the layer will belong to.</p></li>
 <li><p><strong>system_packages</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Names of a set of system packages to install on the layer’s instances.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 <li><p><strong>use_ebs_optimized_instances</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to use EBS-optimized instances.</p></li>
 </ul>
 </dd>
@@ -1465,12 +1495,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>The <strong>ebs_volumes</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">mountPoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">numberOfDisks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">raidLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - For PIOPS volumes, the IOPS per disk.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mountPoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path to mount the EBS volume on the layer’s instances.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">numberOfDisks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of disks to use for the EBS volume.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">raidLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The RAID level to use for the volume.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size of the volume in gigabytes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of volume to create. This may be <code class="docutils literal notranslate"><span class="pre">standard</span></code> (the default), <code class="docutils literal notranslate"><span class="pre">io1</span></code> or <code class="docutils literal notranslate"><span class="pre">gp2</span></code>.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_aws.opsworks.JavaAppLayer.app_server">
@@ -1482,6 +1512,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.opsworks.JavaAppLayer.app_server_version">
 <code class="sig-name descname">app_server_version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.JavaAppLayer.app_server_version" title="Permalink to this definition">¶</a></dt>
 <dd><p>Version of the selected application container to use. Defaults to “7”.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.opsworks.JavaAppLayer.arn">
+<code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.JavaAppLayer.arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Amazon Resource Name(ARN) of the layer.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1532,12 +1568,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p><code class="docutils literal notranslate"><span class="pre">ebs_volume</span></code> blocks, as described below, will each create an EBS volume and connect it to the layer’s instances.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">mountPoint</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">numberOfDisks</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">raidLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - For PIOPS volumes, the IOPS per disk.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mountPoint</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The path to mount the EBS volume on the layer’s instances.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">numberOfDisks</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of disks to use for the EBS volume.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">raidLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The RAID level to use for the volume.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The size of the volume in gigabytes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The type of volume to create. This may be <code class="docutils literal notranslate"><span class="pre">standard</span></code> (the default), <code class="docutils literal notranslate"><span class="pre">io1</span></code> or <code class="docutils literal notranslate"><span class="pre">gp2</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -1596,6 +1632,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.opsworks.JavaAppLayer.tags">
+<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.JavaAppLayer.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of tags to assign to the resource.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.opsworks.JavaAppLayer.use_ebs_optimized_instances">
 <code class="sig-name descname">use_ebs_optimized_instances</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.JavaAppLayer.use_ebs_optimized_instances" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether to use EBS-optimized instances.</p>
@@ -1603,7 +1645,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="method">
 <dt id="pulumi_aws.opsworks.JavaAppLayer.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">app_server=None</em>, <em class="sig-param">app_server_version=None</em>, <em class="sig-param">auto_assign_elastic_ips=None</em>, <em class="sig-param">auto_assign_public_ips=None</em>, <em class="sig-param">auto_healing=None</em>, <em class="sig-param">custom_configure_recipes=None</em>, <em class="sig-param">custom_deploy_recipes=None</em>, <em class="sig-param">custom_instance_profile_arn=None</em>, <em class="sig-param">custom_json=None</em>, <em class="sig-param">custom_security_group_ids=None</em>, <em class="sig-param">custom_setup_recipes=None</em>, <em class="sig-param">custom_shutdown_recipes=None</em>, <em class="sig-param">custom_undeploy_recipes=None</em>, <em class="sig-param">drain_elb_on_shutdown=None</em>, <em class="sig-param">ebs_volumes=None</em>, <em class="sig-param">elastic_load_balancer=None</em>, <em class="sig-param">install_updates_on_boot=None</em>, <em class="sig-param">instance_shutdown_timeout=None</em>, <em class="sig-param">jvm_options=None</em>, <em class="sig-param">jvm_type=None</em>, <em class="sig-param">jvm_version=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">stack_id=None</em>, <em class="sig-param">system_packages=None</em>, <em class="sig-param">use_ebs_optimized_instances=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.JavaAppLayer.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">app_server=None</em>, <em class="sig-param">app_server_version=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">auto_assign_elastic_ips=None</em>, <em class="sig-param">auto_assign_public_ips=None</em>, <em class="sig-param">auto_healing=None</em>, <em class="sig-param">custom_configure_recipes=None</em>, <em class="sig-param">custom_deploy_recipes=None</em>, <em class="sig-param">custom_instance_profile_arn=None</em>, <em class="sig-param">custom_json=None</em>, <em class="sig-param">custom_security_group_ids=None</em>, <em class="sig-param">custom_setup_recipes=None</em>, <em class="sig-param">custom_shutdown_recipes=None</em>, <em class="sig-param">custom_undeploy_recipes=None</em>, <em class="sig-param">drain_elb_on_shutdown=None</em>, <em class="sig-param">ebs_volumes=None</em>, <em class="sig-param">elastic_load_balancer=None</em>, <em class="sig-param">install_updates_on_boot=None</em>, <em class="sig-param">instance_shutdown_timeout=None</em>, <em class="sig-param">jvm_options=None</em>, <em class="sig-param">jvm_type=None</em>, <em class="sig-param">jvm_version=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">stack_id=None</em>, <em class="sig-param">system_packages=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">use_ebs_optimized_instances=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.JavaAppLayer.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing JavaAppLayer resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -1614,6 +1656,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>app_server</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Keyword for the application container to use. Defaults to “tomcat”.</p></li>
 <li><p><strong>app_server_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Version of the selected application container to use. Defaults to “7”.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name(ARN) of the layer.</p></li>
 <li><p><strong>auto_assign_elastic_ips</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to automatically assign an elastic IP address to the layer’s instances.</p></li>
 <li><p><strong>auto_assign_public_ips</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer’s instances.</p></li>
 <li><p><strong>auto_healing</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to enable auto-healing for the layer.</p></li>
@@ -1631,6 +1674,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A human-readable name for the layer.</p></li>
 <li><p><strong>stack_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the stack the layer will belong to.</p></li>
 <li><p><strong>system_packages</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Names of a set of system packages to install on the layer’s instances.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 <li><p><strong>use_ebs_optimized_instances</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to use EBS-optimized instances.</p></li>
 </ul>
 </dd>
@@ -1638,12 +1682,12 @@ properties used to qualify the lookup.</p>
 <p>The <strong>ebs_volumes</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">mountPoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">numberOfDisks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">raidLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - For PIOPS volumes, the IOPS per disk.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mountPoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path to mount the EBS volume on the layer’s instances.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">numberOfDisks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of disks to use for the EBS volume.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">raidLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The RAID level to use for the volume.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size of the volume in gigabytes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of volume to create. This may be <code class="docutils literal notranslate"><span class="pre">standard</span></code> (the default), <code class="docutils literal notranslate"><span class="pre">io1</span></code> or <code class="docutils literal notranslate"><span class="pre">gp2</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -1687,11 +1731,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.opsworks.MemcachedLayer">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.opsworks.</code><code class="sig-name descname">MemcachedLayer</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allocated_memory=None</em>, <em class="sig-param">auto_assign_elastic_ips=None</em>, <em class="sig-param">auto_assign_public_ips=None</em>, <em class="sig-param">auto_healing=None</em>, <em class="sig-param">custom_configure_recipes=None</em>, <em class="sig-param">custom_deploy_recipes=None</em>, <em class="sig-param">custom_instance_profile_arn=None</em>, <em class="sig-param">custom_json=None</em>, <em class="sig-param">custom_security_group_ids=None</em>, <em class="sig-param">custom_setup_recipes=None</em>, <em class="sig-param">custom_shutdown_recipes=None</em>, <em class="sig-param">custom_undeploy_recipes=None</em>, <em class="sig-param">drain_elb_on_shutdown=None</em>, <em class="sig-param">ebs_volumes=None</em>, <em class="sig-param">elastic_load_balancer=None</em>, <em class="sig-param">install_updates_on_boot=None</em>, <em class="sig-param">instance_shutdown_timeout=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">stack_id=None</em>, <em class="sig-param">system_packages=None</em>, <em class="sig-param">use_ebs_optimized_instances=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.MemcachedLayer" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.opsworks.</code><code class="sig-name descname">MemcachedLayer</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allocated_memory=None</em>, <em class="sig-param">auto_assign_elastic_ips=None</em>, <em class="sig-param">auto_assign_public_ips=None</em>, <em class="sig-param">auto_healing=None</em>, <em class="sig-param">custom_configure_recipes=None</em>, <em class="sig-param">custom_deploy_recipes=None</em>, <em class="sig-param">custom_instance_profile_arn=None</em>, <em class="sig-param">custom_json=None</em>, <em class="sig-param">custom_security_group_ids=None</em>, <em class="sig-param">custom_setup_recipes=None</em>, <em class="sig-param">custom_shutdown_recipes=None</em>, <em class="sig-param">custom_undeploy_recipes=None</em>, <em class="sig-param">drain_elb_on_shutdown=None</em>, <em class="sig-param">ebs_volumes=None</em>, <em class="sig-param">elastic_load_balancer=None</em>, <em class="sig-param">install_updates_on_boot=None</em>, <em class="sig-param">instance_shutdown_timeout=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">stack_id=None</em>, <em class="sig-param">system_packages=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">use_ebs_optimized_instances=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.MemcachedLayer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an OpsWorks memcached layer resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_memcached_layer.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_memcached_layer.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1712,6 +1753,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A human-readable name for the layer.</p></li>
 <li><p><strong>stack_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the stack the layer will belong to.</p></li>
 <li><p><strong>system_packages</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Names of a set of system packages to install on the layer’s instances.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 <li><p><strong>use_ebs_optimized_instances</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to use EBS-optimized instances.</p></li>
 </ul>
 </dd>
@@ -1719,17 +1761,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>The <strong>ebs_volumes</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">mountPoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">numberOfDisks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">raidLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - For PIOPS volumes, the IOPS per disk.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mountPoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path to mount the EBS volume on the layer’s instances.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">numberOfDisks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of disks to use for the EBS volume.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">raidLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The RAID level to use for the volume.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size of the volume in gigabytes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of volume to create. This may be <code class="docutils literal notranslate"><span class="pre">standard</span></code> (the default), <code class="docutils literal notranslate"><span class="pre">io1</span></code> or <code class="docutils literal notranslate"><span class="pre">gp2</span></code>.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_aws.opsworks.MemcachedLayer.allocated_memory">
 <code class="sig-name descname">allocated_memory</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.MemcachedLayer.allocated_memory" title="Permalink to this definition">¶</a></dt>
 <dd><p>Amount of memory to allocate for the cache on each instance, in megabytes. Defaults to 512MB.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.opsworks.MemcachedLayer.arn">
+<code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.MemcachedLayer.arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Amazon Resource Name(ARN) of the layer.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1780,12 +1828,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p><code class="docutils literal notranslate"><span class="pre">ebs_volume</span></code> blocks, as described below, will each create an EBS volume and connect it to the layer’s instances.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">mountPoint</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">numberOfDisks</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">raidLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - For PIOPS volumes, the IOPS per disk.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mountPoint</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The path to mount the EBS volume on the layer’s instances.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">numberOfDisks</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of disks to use for the EBS volume.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">raidLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The RAID level to use for the volume.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The size of the volume in gigabytes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The type of volume to create. This may be <code class="docutils literal notranslate"><span class="pre">standard</span></code> (the default), <code class="docutils literal notranslate"><span class="pre">io1</span></code> or <code class="docutils literal notranslate"><span class="pre">gp2</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -1826,6 +1874,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.opsworks.MemcachedLayer.tags">
+<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.MemcachedLayer.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of tags to assign to the resource.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.opsworks.MemcachedLayer.use_ebs_optimized_instances">
 <code class="sig-name descname">use_ebs_optimized_instances</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.MemcachedLayer.use_ebs_optimized_instances" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether to use EBS-optimized instances.</p>
@@ -1833,7 +1887,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="method">
 <dt id="pulumi_aws.opsworks.MemcachedLayer.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allocated_memory=None</em>, <em class="sig-param">auto_assign_elastic_ips=None</em>, <em class="sig-param">auto_assign_public_ips=None</em>, <em class="sig-param">auto_healing=None</em>, <em class="sig-param">custom_configure_recipes=None</em>, <em class="sig-param">custom_deploy_recipes=None</em>, <em class="sig-param">custom_instance_profile_arn=None</em>, <em class="sig-param">custom_json=None</em>, <em class="sig-param">custom_security_group_ids=None</em>, <em class="sig-param">custom_setup_recipes=None</em>, <em class="sig-param">custom_shutdown_recipes=None</em>, <em class="sig-param">custom_undeploy_recipes=None</em>, <em class="sig-param">drain_elb_on_shutdown=None</em>, <em class="sig-param">ebs_volumes=None</em>, <em class="sig-param">elastic_load_balancer=None</em>, <em class="sig-param">install_updates_on_boot=None</em>, <em class="sig-param">instance_shutdown_timeout=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">stack_id=None</em>, <em class="sig-param">system_packages=None</em>, <em class="sig-param">use_ebs_optimized_instances=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.MemcachedLayer.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allocated_memory=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">auto_assign_elastic_ips=None</em>, <em class="sig-param">auto_assign_public_ips=None</em>, <em class="sig-param">auto_healing=None</em>, <em class="sig-param">custom_configure_recipes=None</em>, <em class="sig-param">custom_deploy_recipes=None</em>, <em class="sig-param">custom_instance_profile_arn=None</em>, <em class="sig-param">custom_json=None</em>, <em class="sig-param">custom_security_group_ids=None</em>, <em class="sig-param">custom_setup_recipes=None</em>, <em class="sig-param">custom_shutdown_recipes=None</em>, <em class="sig-param">custom_undeploy_recipes=None</em>, <em class="sig-param">drain_elb_on_shutdown=None</em>, <em class="sig-param">ebs_volumes=None</em>, <em class="sig-param">elastic_load_balancer=None</em>, <em class="sig-param">install_updates_on_boot=None</em>, <em class="sig-param">instance_shutdown_timeout=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">stack_id=None</em>, <em class="sig-param">system_packages=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">use_ebs_optimized_instances=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.MemcachedLayer.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing MemcachedLayer resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -1843,6 +1897,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>allocated_memory</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Amount of memory to allocate for the cache on each instance, in megabytes. Defaults to 512MB.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name(ARN) of the layer.</p></li>
 <li><p><strong>auto_assign_elastic_ips</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to automatically assign an elastic IP address to the layer’s instances.</p></li>
 <li><p><strong>auto_assign_public_ips</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer’s instances.</p></li>
 <li><p><strong>auto_healing</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to enable auto-healing for the layer.</p></li>
@@ -1857,6 +1912,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A human-readable name for the layer.</p></li>
 <li><p><strong>stack_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the stack the layer will belong to.</p></li>
 <li><p><strong>system_packages</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Names of a set of system packages to install on the layer’s instances.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 <li><p><strong>use_ebs_optimized_instances</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to use EBS-optimized instances.</p></li>
 </ul>
 </dd>
@@ -1864,12 +1920,12 @@ properties used to qualify the lookup.</p>
 <p>The <strong>ebs_volumes</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">mountPoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">numberOfDisks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">raidLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - For PIOPS volumes, the IOPS per disk.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mountPoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path to mount the EBS volume on the layer’s instances.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">numberOfDisks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of disks to use for the EBS volume.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">raidLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The RAID level to use for the volume.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size of the volume in gigabytes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of volume to create. This may be <code class="docutils literal notranslate"><span class="pre">standard</span></code> (the default), <code class="docutils literal notranslate"><span class="pre">io1</span></code> or <code class="docutils literal notranslate"><span class="pre">gp2</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -1913,12 +1969,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.opsworks.MysqlLayer">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.opsworks.</code><code class="sig-name descname">MysqlLayer</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_assign_elastic_ips=None</em>, <em class="sig-param">auto_assign_public_ips=None</em>, <em class="sig-param">auto_healing=None</em>, <em class="sig-param">custom_configure_recipes=None</em>, <em class="sig-param">custom_deploy_recipes=None</em>, <em class="sig-param">custom_instance_profile_arn=None</em>, <em class="sig-param">custom_json=None</em>, <em class="sig-param">custom_security_group_ids=None</em>, <em class="sig-param">custom_setup_recipes=None</em>, <em class="sig-param">custom_shutdown_recipes=None</em>, <em class="sig-param">custom_undeploy_recipes=None</em>, <em class="sig-param">drain_elb_on_shutdown=None</em>, <em class="sig-param">ebs_volumes=None</em>, <em class="sig-param">elastic_load_balancer=None</em>, <em class="sig-param">install_updates_on_boot=None</em>, <em class="sig-param">instance_shutdown_timeout=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">root_password=None</em>, <em class="sig-param">root_password_on_all_instances=None</em>, <em class="sig-param">stack_id=None</em>, <em class="sig-param">system_packages=None</em>, <em class="sig-param">use_ebs_optimized_instances=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.MysqlLayer" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.opsworks.</code><code class="sig-name descname">MysqlLayer</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_assign_elastic_ips=None</em>, <em class="sig-param">auto_assign_public_ips=None</em>, <em class="sig-param">auto_healing=None</em>, <em class="sig-param">custom_configure_recipes=None</em>, <em class="sig-param">custom_deploy_recipes=None</em>, <em class="sig-param">custom_instance_profile_arn=None</em>, <em class="sig-param">custom_json=None</em>, <em class="sig-param">custom_security_group_ids=None</em>, <em class="sig-param">custom_setup_recipes=None</em>, <em class="sig-param">custom_shutdown_recipes=None</em>, <em class="sig-param">custom_undeploy_recipes=None</em>, <em class="sig-param">drain_elb_on_shutdown=None</em>, <em class="sig-param">ebs_volumes=None</em>, <em class="sig-param">elastic_load_balancer=None</em>, <em class="sig-param">install_updates_on_boot=None</em>, <em class="sig-param">instance_shutdown_timeout=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">root_password=None</em>, <em class="sig-param">root_password_on_all_instances=None</em>, <em class="sig-param">stack_id=None</em>, <em class="sig-param">system_packages=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">use_ebs_optimized_instances=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.MysqlLayer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an OpsWorks MySQL layer resource.</p>
 <blockquote>
 <div><p><strong>Note:</strong> All arguments including the root password will be stored in the raw state as plain-text.
 <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_mysql_layer.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_mysql_layer.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1941,6 +1996,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>root_password_on_all_instances</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to set the root user password to all instances in the stack so they can access the instances in this layer.</p></li>
 <li><p><strong>stack_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the stack the layer will belong to.</p></li>
 <li><p><strong>system_packages</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Names of a set of system packages to install on the layer’s instances.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 <li><p><strong>use_ebs_optimized_instances</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to use EBS-optimized instances.</p></li>
 </ul>
 </dd>
@@ -1948,13 +2004,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>The <strong>ebs_volumes</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">mountPoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">numberOfDisks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">raidLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - For PIOPS volumes, the IOPS per disk.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mountPoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path to mount the EBS volume on the layer’s instances.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">numberOfDisks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of disks to use for the EBS volume.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">raidLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The RAID level to use for the volume.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size of the volume in gigabytes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of volume to create. This may be <code class="docutils literal notranslate"><span class="pre">standard</span></code> (the default), <code class="docutils literal notranslate"><span class="pre">io1</span></code> or <code class="docutils literal notranslate"><span class="pre">gp2</span></code>.</p></li>
 </ul>
+<dl class="attribute">
+<dt id="pulumi_aws.opsworks.MysqlLayer.arn">
+<code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.MysqlLayer.arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Amazon Resource Name(ARN) of the layer.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_aws.opsworks.MysqlLayer.auto_assign_elastic_ips">
 <code class="sig-name descname">auto_assign_elastic_ips</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.MysqlLayer.auto_assign_elastic_ips" title="Permalink to this definition">¶</a></dt>
@@ -2003,12 +2065,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p><code class="docutils literal notranslate"><span class="pre">ebs_volume</span></code> blocks, as described below, will each create an EBS volume and connect it to the layer’s instances.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">mountPoint</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">numberOfDisks</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">raidLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - For PIOPS volumes, the IOPS per disk.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mountPoint</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The path to mount the EBS volume on the layer’s instances.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">numberOfDisks</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of disks to use for the EBS volume.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">raidLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The RAID level to use for the volume.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The size of the volume in gigabytes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The type of volume to create. This may be <code class="docutils literal notranslate"><span class="pre">standard</span></code> (the default), <code class="docutils literal notranslate"><span class="pre">io1</span></code> or <code class="docutils literal notranslate"><span class="pre">gp2</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -2061,6 +2123,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.opsworks.MysqlLayer.tags">
+<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.MysqlLayer.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of tags to assign to the resource.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.opsworks.MysqlLayer.use_ebs_optimized_instances">
 <code class="sig-name descname">use_ebs_optimized_instances</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.MysqlLayer.use_ebs_optimized_instances" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether to use EBS-optimized instances.</p>
@@ -2068,7 +2136,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="method">
 <dt id="pulumi_aws.opsworks.MysqlLayer.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_assign_elastic_ips=None</em>, <em class="sig-param">auto_assign_public_ips=None</em>, <em class="sig-param">auto_healing=None</em>, <em class="sig-param">custom_configure_recipes=None</em>, <em class="sig-param">custom_deploy_recipes=None</em>, <em class="sig-param">custom_instance_profile_arn=None</em>, <em class="sig-param">custom_json=None</em>, <em class="sig-param">custom_security_group_ids=None</em>, <em class="sig-param">custom_setup_recipes=None</em>, <em class="sig-param">custom_shutdown_recipes=None</em>, <em class="sig-param">custom_undeploy_recipes=None</em>, <em class="sig-param">drain_elb_on_shutdown=None</em>, <em class="sig-param">ebs_volumes=None</em>, <em class="sig-param">elastic_load_balancer=None</em>, <em class="sig-param">install_updates_on_boot=None</em>, <em class="sig-param">instance_shutdown_timeout=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">root_password=None</em>, <em class="sig-param">root_password_on_all_instances=None</em>, <em class="sig-param">stack_id=None</em>, <em class="sig-param">system_packages=None</em>, <em class="sig-param">use_ebs_optimized_instances=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.MysqlLayer.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">auto_assign_elastic_ips=None</em>, <em class="sig-param">auto_assign_public_ips=None</em>, <em class="sig-param">auto_healing=None</em>, <em class="sig-param">custom_configure_recipes=None</em>, <em class="sig-param">custom_deploy_recipes=None</em>, <em class="sig-param">custom_instance_profile_arn=None</em>, <em class="sig-param">custom_json=None</em>, <em class="sig-param">custom_security_group_ids=None</em>, <em class="sig-param">custom_setup_recipes=None</em>, <em class="sig-param">custom_shutdown_recipes=None</em>, <em class="sig-param">custom_undeploy_recipes=None</em>, <em class="sig-param">drain_elb_on_shutdown=None</em>, <em class="sig-param">ebs_volumes=None</em>, <em class="sig-param">elastic_load_balancer=None</em>, <em class="sig-param">install_updates_on_boot=None</em>, <em class="sig-param">instance_shutdown_timeout=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">root_password=None</em>, <em class="sig-param">root_password_on_all_instances=None</em>, <em class="sig-param">stack_id=None</em>, <em class="sig-param">system_packages=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">use_ebs_optimized_instances=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.MysqlLayer.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing MysqlLayer resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -2077,6 +2145,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name(ARN) of the layer.</p></li>
 <li><p><strong>auto_assign_elastic_ips</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to automatically assign an elastic IP address to the layer’s instances.</p></li>
 <li><p><strong>auto_assign_public_ips</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer’s instances.</p></li>
 <li><p><strong>auto_healing</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to enable auto-healing for the layer.</p></li>
@@ -2093,6 +2162,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>root_password_on_all_instances</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to set the root user password to all instances in the stack so they can access the instances in this layer.</p></li>
 <li><p><strong>stack_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the stack the layer will belong to.</p></li>
 <li><p><strong>system_packages</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Names of a set of system packages to install on the layer’s instances.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 <li><p><strong>use_ebs_optimized_instances</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to use EBS-optimized instances.</p></li>
 </ul>
 </dd>
@@ -2100,12 +2170,12 @@ properties used to qualify the lookup.</p>
 <p>The <strong>ebs_volumes</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">mountPoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">numberOfDisks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">raidLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - For PIOPS volumes, the IOPS per disk.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mountPoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path to mount the EBS volume on the layer’s instances.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">numberOfDisks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of disks to use for the EBS volume.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">raidLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The RAID level to use for the volume.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size of the volume in gigabytes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of volume to create. This may be <code class="docutils literal notranslate"><span class="pre">standard</span></code> (the default), <code class="docutils literal notranslate"><span class="pre">io1</span></code> or <code class="docutils literal notranslate"><span class="pre">gp2</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -2149,11 +2219,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.opsworks.NodejsAppLayer">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.opsworks.</code><code class="sig-name descname">NodejsAppLayer</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_assign_elastic_ips=None</em>, <em class="sig-param">auto_assign_public_ips=None</em>, <em class="sig-param">auto_healing=None</em>, <em class="sig-param">custom_configure_recipes=None</em>, <em class="sig-param">custom_deploy_recipes=None</em>, <em class="sig-param">custom_instance_profile_arn=None</em>, <em class="sig-param">custom_json=None</em>, <em class="sig-param">custom_security_group_ids=None</em>, <em class="sig-param">custom_setup_recipes=None</em>, <em class="sig-param">custom_shutdown_recipes=None</em>, <em class="sig-param">custom_undeploy_recipes=None</em>, <em class="sig-param">drain_elb_on_shutdown=None</em>, <em class="sig-param">ebs_volumes=None</em>, <em class="sig-param">elastic_load_balancer=None</em>, <em class="sig-param">install_updates_on_boot=None</em>, <em class="sig-param">instance_shutdown_timeout=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">nodejs_version=None</em>, <em class="sig-param">stack_id=None</em>, <em class="sig-param">system_packages=None</em>, <em class="sig-param">use_ebs_optimized_instances=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.NodejsAppLayer" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.opsworks.</code><code class="sig-name descname">NodejsAppLayer</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_assign_elastic_ips=None</em>, <em class="sig-param">auto_assign_public_ips=None</em>, <em class="sig-param">auto_healing=None</em>, <em class="sig-param">custom_configure_recipes=None</em>, <em class="sig-param">custom_deploy_recipes=None</em>, <em class="sig-param">custom_instance_profile_arn=None</em>, <em class="sig-param">custom_json=None</em>, <em class="sig-param">custom_security_group_ids=None</em>, <em class="sig-param">custom_setup_recipes=None</em>, <em class="sig-param">custom_shutdown_recipes=None</em>, <em class="sig-param">custom_undeploy_recipes=None</em>, <em class="sig-param">drain_elb_on_shutdown=None</em>, <em class="sig-param">ebs_volumes=None</em>, <em class="sig-param">elastic_load_balancer=None</em>, <em class="sig-param">install_updates_on_boot=None</em>, <em class="sig-param">instance_shutdown_timeout=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">nodejs_version=None</em>, <em class="sig-param">stack_id=None</em>, <em class="sig-param">system_packages=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">use_ebs_optimized_instances=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.NodejsAppLayer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an OpsWorks NodeJS application layer resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_nodejs_app_layer.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_nodejs_app_layer.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2174,6 +2241,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>nodejs_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The version of NodeJS to use. Defaults to “0.10.38”.</p></li>
 <li><p><strong>stack_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the stack the layer will belong to.</p></li>
 <li><p><strong>system_packages</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Names of a set of system packages to install on the layer’s instances.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 <li><p><strong>use_ebs_optimized_instances</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to use EBS-optimized instances.</p></li>
 </ul>
 </dd>
@@ -2181,13 +2249,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>The <strong>ebs_volumes</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">mountPoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">numberOfDisks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">raidLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - For PIOPS volumes, the IOPS per disk.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mountPoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path to mount the EBS volume on the layer’s instances.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">numberOfDisks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of disks to use for the EBS volume.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">raidLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The RAID level to use for the volume.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size of the volume in gigabytes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of volume to create. This may be <code class="docutils literal notranslate"><span class="pre">standard</span></code> (the default), <code class="docutils literal notranslate"><span class="pre">io1</span></code> or <code class="docutils literal notranslate"><span class="pre">gp2</span></code>.</p></li>
 </ul>
+<dl class="attribute">
+<dt id="pulumi_aws.opsworks.NodejsAppLayer.arn">
+<code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.NodejsAppLayer.arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Amazon Resource Name(ARN) of the layer.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_aws.opsworks.NodejsAppLayer.auto_assign_elastic_ips">
 <code class="sig-name descname">auto_assign_elastic_ips</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.NodejsAppLayer.auto_assign_elastic_ips" title="Permalink to this definition">¶</a></dt>
@@ -2236,12 +2310,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p><code class="docutils literal notranslate"><span class="pre">ebs_volume</span></code> blocks, as described below, will each create an EBS volume and connect it to the layer’s instances.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">mountPoint</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">numberOfDisks</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">raidLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - For PIOPS volumes, the IOPS per disk.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mountPoint</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The path to mount the EBS volume on the layer’s instances.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">numberOfDisks</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of disks to use for the EBS volume.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">raidLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The RAID level to use for the volume.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The size of the volume in gigabytes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The type of volume to create. This may be <code class="docutils literal notranslate"><span class="pre">standard</span></code> (the default), <code class="docutils literal notranslate"><span class="pre">io1</span></code> or <code class="docutils literal notranslate"><span class="pre">gp2</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -2288,6 +2362,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.opsworks.NodejsAppLayer.tags">
+<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.NodejsAppLayer.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of tags to assign to the resource.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.opsworks.NodejsAppLayer.use_ebs_optimized_instances">
 <code class="sig-name descname">use_ebs_optimized_instances</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.NodejsAppLayer.use_ebs_optimized_instances" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether to use EBS-optimized instances.</p>
@@ -2295,7 +2375,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="method">
 <dt id="pulumi_aws.opsworks.NodejsAppLayer.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_assign_elastic_ips=None</em>, <em class="sig-param">auto_assign_public_ips=None</em>, <em class="sig-param">auto_healing=None</em>, <em class="sig-param">custom_configure_recipes=None</em>, <em class="sig-param">custom_deploy_recipes=None</em>, <em class="sig-param">custom_instance_profile_arn=None</em>, <em class="sig-param">custom_json=None</em>, <em class="sig-param">custom_security_group_ids=None</em>, <em class="sig-param">custom_setup_recipes=None</em>, <em class="sig-param">custom_shutdown_recipes=None</em>, <em class="sig-param">custom_undeploy_recipes=None</em>, <em class="sig-param">drain_elb_on_shutdown=None</em>, <em class="sig-param">ebs_volumes=None</em>, <em class="sig-param">elastic_load_balancer=None</em>, <em class="sig-param">install_updates_on_boot=None</em>, <em class="sig-param">instance_shutdown_timeout=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">nodejs_version=None</em>, <em class="sig-param">stack_id=None</em>, <em class="sig-param">system_packages=None</em>, <em class="sig-param">use_ebs_optimized_instances=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.NodejsAppLayer.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">auto_assign_elastic_ips=None</em>, <em class="sig-param">auto_assign_public_ips=None</em>, <em class="sig-param">auto_healing=None</em>, <em class="sig-param">custom_configure_recipes=None</em>, <em class="sig-param">custom_deploy_recipes=None</em>, <em class="sig-param">custom_instance_profile_arn=None</em>, <em class="sig-param">custom_json=None</em>, <em class="sig-param">custom_security_group_ids=None</em>, <em class="sig-param">custom_setup_recipes=None</em>, <em class="sig-param">custom_shutdown_recipes=None</em>, <em class="sig-param">custom_undeploy_recipes=None</em>, <em class="sig-param">drain_elb_on_shutdown=None</em>, <em class="sig-param">ebs_volumes=None</em>, <em class="sig-param">elastic_load_balancer=None</em>, <em class="sig-param">install_updates_on_boot=None</em>, <em class="sig-param">instance_shutdown_timeout=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">nodejs_version=None</em>, <em class="sig-param">stack_id=None</em>, <em class="sig-param">system_packages=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">use_ebs_optimized_instances=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.NodejsAppLayer.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing NodejsAppLayer resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -2304,6 +2384,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name(ARN) of the layer.</p></li>
 <li><p><strong>auto_assign_elastic_ips</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to automatically assign an elastic IP address to the layer’s instances.</p></li>
 <li><p><strong>auto_assign_public_ips</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer’s instances.</p></li>
 <li><p><strong>auto_healing</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to enable auto-healing for the layer.</p></li>
@@ -2319,6 +2400,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>nodejs_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The version of NodeJS to use. Defaults to “0.10.38”.</p></li>
 <li><p><strong>stack_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the stack the layer will belong to.</p></li>
 <li><p><strong>system_packages</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Names of a set of system packages to install on the layer’s instances.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 <li><p><strong>use_ebs_optimized_instances</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to use EBS-optimized instances.</p></li>
 </ul>
 </dd>
@@ -2326,12 +2408,12 @@ properties used to qualify the lookup.</p>
 <p>The <strong>ebs_volumes</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">mountPoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">numberOfDisks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">raidLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - For PIOPS volumes, the IOPS per disk.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mountPoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path to mount the EBS volume on the layer’s instances.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">numberOfDisks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of disks to use for the EBS volume.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">raidLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The RAID level to use for the volume.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size of the volume in gigabytes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of volume to create. This may be <code class="docutils literal notranslate"><span class="pre">standard</span></code> (the default), <code class="docutils literal notranslate"><span class="pre">io1</span></code> or <code class="docutils literal notranslate"><span class="pre">gp2</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -2377,9 +2459,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.opsworks.Permission">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.opsworks.</code><code class="sig-name descname">Permission</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allow_ssh=None</em>, <em class="sig-param">allow_sudo=None</em>, <em class="sig-param">level=None</em>, <em class="sig-param">stack_id=None</em>, <em class="sig-param">user_arn=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.Permission" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an OpsWorks permission resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_permission.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_permission.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2484,11 +2563,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.opsworks.PhpAppLayer">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.opsworks.</code><code class="sig-name descname">PhpAppLayer</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_assign_elastic_ips=None</em>, <em class="sig-param">auto_assign_public_ips=None</em>, <em class="sig-param">auto_healing=None</em>, <em class="sig-param">custom_configure_recipes=None</em>, <em class="sig-param">custom_deploy_recipes=None</em>, <em class="sig-param">custom_instance_profile_arn=None</em>, <em class="sig-param">custom_json=None</em>, <em class="sig-param">custom_security_group_ids=None</em>, <em class="sig-param">custom_setup_recipes=None</em>, <em class="sig-param">custom_shutdown_recipes=None</em>, <em class="sig-param">custom_undeploy_recipes=None</em>, <em class="sig-param">drain_elb_on_shutdown=None</em>, <em class="sig-param">ebs_volumes=None</em>, <em class="sig-param">elastic_load_balancer=None</em>, <em class="sig-param">install_updates_on_boot=None</em>, <em class="sig-param">instance_shutdown_timeout=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">stack_id=None</em>, <em class="sig-param">system_packages=None</em>, <em class="sig-param">use_ebs_optimized_instances=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.PhpAppLayer" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.opsworks.</code><code class="sig-name descname">PhpAppLayer</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_assign_elastic_ips=None</em>, <em class="sig-param">auto_assign_public_ips=None</em>, <em class="sig-param">auto_healing=None</em>, <em class="sig-param">custom_configure_recipes=None</em>, <em class="sig-param">custom_deploy_recipes=None</em>, <em class="sig-param">custom_instance_profile_arn=None</em>, <em class="sig-param">custom_json=None</em>, <em class="sig-param">custom_security_group_ids=None</em>, <em class="sig-param">custom_setup_recipes=None</em>, <em class="sig-param">custom_shutdown_recipes=None</em>, <em class="sig-param">custom_undeploy_recipes=None</em>, <em class="sig-param">drain_elb_on_shutdown=None</em>, <em class="sig-param">ebs_volumes=None</em>, <em class="sig-param">elastic_load_balancer=None</em>, <em class="sig-param">install_updates_on_boot=None</em>, <em class="sig-param">instance_shutdown_timeout=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">stack_id=None</em>, <em class="sig-param">system_packages=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">use_ebs_optimized_instances=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.PhpAppLayer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an OpsWorks PHP application layer resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_php_app_layer.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_php_app_layer.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2508,6 +2584,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A human-readable name for the layer.</p></li>
 <li><p><strong>stack_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the stack the layer will belong to.</p></li>
 <li><p><strong>system_packages</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Names of a set of system packages to install on the layer’s instances.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 <li><p><strong>use_ebs_optimized_instances</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to use EBS-optimized instances.</p></li>
 </ul>
 </dd>
@@ -2515,13 +2592,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>The <strong>ebs_volumes</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">mountPoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">numberOfDisks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">raidLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - For PIOPS volumes, the IOPS per disk.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mountPoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path to mount the EBS volume on the layer’s instances.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">numberOfDisks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of disks to use for the EBS volume.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">raidLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The RAID level to use for the volume.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size of the volume in gigabytes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of volume to create. This may be <code class="docutils literal notranslate"><span class="pre">standard</span></code> (the default), <code class="docutils literal notranslate"><span class="pre">io1</span></code> or <code class="docutils literal notranslate"><span class="pre">gp2</span></code>.</p></li>
 </ul>
+<dl class="attribute">
+<dt id="pulumi_aws.opsworks.PhpAppLayer.arn">
+<code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.PhpAppLayer.arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Amazon Resource Name(ARN) of the layer.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_aws.opsworks.PhpAppLayer.auto_assign_elastic_ips">
 <code class="sig-name descname">auto_assign_elastic_ips</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.PhpAppLayer.auto_assign_elastic_ips" title="Permalink to this definition">¶</a></dt>
@@ -2570,12 +2653,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p><code class="docutils literal notranslate"><span class="pre">ebs_volume</span></code> blocks, as described below, will each create an EBS volume and connect it to the layer’s instances.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">mountPoint</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">numberOfDisks</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">raidLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - For PIOPS volumes, the IOPS per disk.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mountPoint</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The path to mount the EBS volume on the layer’s instances.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">numberOfDisks</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of disks to use for the EBS volume.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">raidLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The RAID level to use for the volume.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The size of the volume in gigabytes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The type of volume to create. This may be <code class="docutils literal notranslate"><span class="pre">standard</span></code> (the default), <code class="docutils literal notranslate"><span class="pre">io1</span></code> or <code class="docutils literal notranslate"><span class="pre">gp2</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -2616,6 +2699,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.opsworks.PhpAppLayer.tags">
+<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.PhpAppLayer.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of tags to assign to the resource.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.opsworks.PhpAppLayer.use_ebs_optimized_instances">
 <code class="sig-name descname">use_ebs_optimized_instances</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.PhpAppLayer.use_ebs_optimized_instances" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether to use EBS-optimized instances.</p>
@@ -2623,7 +2712,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="method">
 <dt id="pulumi_aws.opsworks.PhpAppLayer.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_assign_elastic_ips=None</em>, <em class="sig-param">auto_assign_public_ips=None</em>, <em class="sig-param">auto_healing=None</em>, <em class="sig-param">custom_configure_recipes=None</em>, <em class="sig-param">custom_deploy_recipes=None</em>, <em class="sig-param">custom_instance_profile_arn=None</em>, <em class="sig-param">custom_json=None</em>, <em class="sig-param">custom_security_group_ids=None</em>, <em class="sig-param">custom_setup_recipes=None</em>, <em class="sig-param">custom_shutdown_recipes=None</em>, <em class="sig-param">custom_undeploy_recipes=None</em>, <em class="sig-param">drain_elb_on_shutdown=None</em>, <em class="sig-param">ebs_volumes=None</em>, <em class="sig-param">elastic_load_balancer=None</em>, <em class="sig-param">install_updates_on_boot=None</em>, <em class="sig-param">instance_shutdown_timeout=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">stack_id=None</em>, <em class="sig-param">system_packages=None</em>, <em class="sig-param">use_ebs_optimized_instances=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.PhpAppLayer.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">auto_assign_elastic_ips=None</em>, <em class="sig-param">auto_assign_public_ips=None</em>, <em class="sig-param">auto_healing=None</em>, <em class="sig-param">custom_configure_recipes=None</em>, <em class="sig-param">custom_deploy_recipes=None</em>, <em class="sig-param">custom_instance_profile_arn=None</em>, <em class="sig-param">custom_json=None</em>, <em class="sig-param">custom_security_group_ids=None</em>, <em class="sig-param">custom_setup_recipes=None</em>, <em class="sig-param">custom_shutdown_recipes=None</em>, <em class="sig-param">custom_undeploy_recipes=None</em>, <em class="sig-param">drain_elb_on_shutdown=None</em>, <em class="sig-param">ebs_volumes=None</em>, <em class="sig-param">elastic_load_balancer=None</em>, <em class="sig-param">install_updates_on_boot=None</em>, <em class="sig-param">instance_shutdown_timeout=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">stack_id=None</em>, <em class="sig-param">system_packages=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">use_ebs_optimized_instances=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.PhpAppLayer.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing PhpAppLayer resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -2632,6 +2721,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name(ARN) of the layer.</p></li>
 <li><p><strong>auto_assign_elastic_ips</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to automatically assign an elastic IP address to the layer’s instances.</p></li>
 <li><p><strong>auto_assign_public_ips</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer’s instances.</p></li>
 <li><p><strong>auto_healing</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to enable auto-healing for the layer.</p></li>
@@ -2646,6 +2736,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A human-readable name for the layer.</p></li>
 <li><p><strong>stack_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the stack the layer will belong to.</p></li>
 <li><p><strong>system_packages</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Names of a set of system packages to install on the layer’s instances.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 <li><p><strong>use_ebs_optimized_instances</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to use EBS-optimized instances.</p></li>
 </ul>
 </dd>
@@ -2653,12 +2744,12 @@ properties used to qualify the lookup.</p>
 <p>The <strong>ebs_volumes</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">mountPoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">numberOfDisks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">raidLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - For PIOPS volumes, the IOPS per disk.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mountPoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path to mount the EBS volume on the layer’s instances.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">numberOfDisks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of disks to use for the EBS volume.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">raidLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The RAID level to use for the volume.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size of the volume in gigabytes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of volume to create. This may be <code class="docutils literal notranslate"><span class="pre">standard</span></code> (the default), <code class="docutils literal notranslate"><span class="pre">io1</span></code> or <code class="docutils literal notranslate"><span class="pre">gp2</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -2702,11 +2793,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.opsworks.RailsAppLayer">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.opsworks.</code><code class="sig-name descname">RailsAppLayer</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">app_server=None</em>, <em class="sig-param">auto_assign_elastic_ips=None</em>, <em class="sig-param">auto_assign_public_ips=None</em>, <em class="sig-param">auto_healing=None</em>, <em class="sig-param">bundler_version=None</em>, <em class="sig-param">custom_configure_recipes=None</em>, <em class="sig-param">custom_deploy_recipes=None</em>, <em class="sig-param">custom_instance_profile_arn=None</em>, <em class="sig-param">custom_json=None</em>, <em class="sig-param">custom_security_group_ids=None</em>, <em class="sig-param">custom_setup_recipes=None</em>, <em class="sig-param">custom_shutdown_recipes=None</em>, <em class="sig-param">custom_undeploy_recipes=None</em>, <em class="sig-param">drain_elb_on_shutdown=None</em>, <em class="sig-param">ebs_volumes=None</em>, <em class="sig-param">elastic_load_balancer=None</em>, <em class="sig-param">install_updates_on_boot=None</em>, <em class="sig-param">instance_shutdown_timeout=None</em>, <em class="sig-param">manage_bundler=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">passenger_version=None</em>, <em class="sig-param">ruby_version=None</em>, <em class="sig-param">rubygems_version=None</em>, <em class="sig-param">stack_id=None</em>, <em class="sig-param">system_packages=None</em>, <em class="sig-param">use_ebs_optimized_instances=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.RailsAppLayer" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.opsworks.</code><code class="sig-name descname">RailsAppLayer</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">app_server=None</em>, <em class="sig-param">auto_assign_elastic_ips=None</em>, <em class="sig-param">auto_assign_public_ips=None</em>, <em class="sig-param">auto_healing=None</em>, <em class="sig-param">bundler_version=None</em>, <em class="sig-param">custom_configure_recipes=None</em>, <em class="sig-param">custom_deploy_recipes=None</em>, <em class="sig-param">custom_instance_profile_arn=None</em>, <em class="sig-param">custom_json=None</em>, <em class="sig-param">custom_security_group_ids=None</em>, <em class="sig-param">custom_setup_recipes=None</em>, <em class="sig-param">custom_shutdown_recipes=None</em>, <em class="sig-param">custom_undeploy_recipes=None</em>, <em class="sig-param">drain_elb_on_shutdown=None</em>, <em class="sig-param">ebs_volumes=None</em>, <em class="sig-param">elastic_load_balancer=None</em>, <em class="sig-param">install_updates_on_boot=None</em>, <em class="sig-param">instance_shutdown_timeout=None</em>, <em class="sig-param">manage_bundler=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">passenger_version=None</em>, <em class="sig-param">ruby_version=None</em>, <em class="sig-param">rubygems_version=None</em>, <em class="sig-param">stack_id=None</em>, <em class="sig-param">system_packages=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">use_ebs_optimized_instances=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.RailsAppLayer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an OpsWorks Ruby on Rails application layer resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_rails_app_layer.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_rails_app_layer.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2732,6 +2820,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>rubygems_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The version of RubyGems to use. Defaults to “2.2.2”.</p></li>
 <li><p><strong>stack_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the stack the layer will belong to.</p></li>
 <li><p><strong>system_packages</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Names of a set of system packages to install on the layer’s instances.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 <li><p><strong>use_ebs_optimized_instances</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to use EBS-optimized instances.</p></li>
 </ul>
 </dd>
@@ -2739,17 +2828,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>The <strong>ebs_volumes</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">mountPoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">numberOfDisks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">raidLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - For PIOPS volumes, the IOPS per disk.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mountPoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path to mount the EBS volume on the layer’s instances.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">numberOfDisks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of disks to use for the EBS volume.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">raidLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The RAID level to use for the volume.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size of the volume in gigabytes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of volume to create. This may be <code class="docutils literal notranslate"><span class="pre">standard</span></code> (the default), <code class="docutils literal notranslate"><span class="pre">io1</span></code> or <code class="docutils literal notranslate"><span class="pre">gp2</span></code>.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_aws.opsworks.RailsAppLayer.app_server">
 <code class="sig-name descname">app_server</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.RailsAppLayer.app_server" title="Permalink to this definition">¶</a></dt>
 <dd><p>Keyword for the app server to use. Defaults to “apache_passenger”.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.opsworks.RailsAppLayer.arn">
+<code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.RailsAppLayer.arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Amazon Resource Name(ARN) of the layer.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2806,12 +2901,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p><code class="docutils literal notranslate"><span class="pre">ebs_volume</span></code> blocks, as described below, will each create an EBS volume and connect it to the layer’s instances.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">mountPoint</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">numberOfDisks</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">raidLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - For PIOPS volumes, the IOPS per disk.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mountPoint</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The path to mount the EBS volume on the layer’s instances.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">numberOfDisks</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of disks to use for the EBS volume.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">raidLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The RAID level to use for the volume.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The size of the volume in gigabytes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The type of volume to create. This may be <code class="docutils literal notranslate"><span class="pre">standard</span></code> (the default), <code class="docutils literal notranslate"><span class="pre">io1</span></code> or <code class="docutils literal notranslate"><span class="pre">gp2</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -2876,6 +2971,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.opsworks.RailsAppLayer.tags">
+<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.RailsAppLayer.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of tags to assign to the resource.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.opsworks.RailsAppLayer.use_ebs_optimized_instances">
 <code class="sig-name descname">use_ebs_optimized_instances</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.RailsAppLayer.use_ebs_optimized_instances" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether to use EBS-optimized instances.</p>
@@ -2883,7 +2984,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="method">
 <dt id="pulumi_aws.opsworks.RailsAppLayer.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">app_server=None</em>, <em class="sig-param">auto_assign_elastic_ips=None</em>, <em class="sig-param">auto_assign_public_ips=None</em>, <em class="sig-param">auto_healing=None</em>, <em class="sig-param">bundler_version=None</em>, <em class="sig-param">custom_configure_recipes=None</em>, <em class="sig-param">custom_deploy_recipes=None</em>, <em class="sig-param">custom_instance_profile_arn=None</em>, <em class="sig-param">custom_json=None</em>, <em class="sig-param">custom_security_group_ids=None</em>, <em class="sig-param">custom_setup_recipes=None</em>, <em class="sig-param">custom_shutdown_recipes=None</em>, <em class="sig-param">custom_undeploy_recipes=None</em>, <em class="sig-param">drain_elb_on_shutdown=None</em>, <em class="sig-param">ebs_volumes=None</em>, <em class="sig-param">elastic_load_balancer=None</em>, <em class="sig-param">install_updates_on_boot=None</em>, <em class="sig-param">instance_shutdown_timeout=None</em>, <em class="sig-param">manage_bundler=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">passenger_version=None</em>, <em class="sig-param">ruby_version=None</em>, <em class="sig-param">rubygems_version=None</em>, <em class="sig-param">stack_id=None</em>, <em class="sig-param">system_packages=None</em>, <em class="sig-param">use_ebs_optimized_instances=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.RailsAppLayer.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">app_server=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">auto_assign_elastic_ips=None</em>, <em class="sig-param">auto_assign_public_ips=None</em>, <em class="sig-param">auto_healing=None</em>, <em class="sig-param">bundler_version=None</em>, <em class="sig-param">custom_configure_recipes=None</em>, <em class="sig-param">custom_deploy_recipes=None</em>, <em class="sig-param">custom_instance_profile_arn=None</em>, <em class="sig-param">custom_json=None</em>, <em class="sig-param">custom_security_group_ids=None</em>, <em class="sig-param">custom_setup_recipes=None</em>, <em class="sig-param">custom_shutdown_recipes=None</em>, <em class="sig-param">custom_undeploy_recipes=None</em>, <em class="sig-param">drain_elb_on_shutdown=None</em>, <em class="sig-param">ebs_volumes=None</em>, <em class="sig-param">elastic_load_balancer=None</em>, <em class="sig-param">install_updates_on_boot=None</em>, <em class="sig-param">instance_shutdown_timeout=None</em>, <em class="sig-param">manage_bundler=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">passenger_version=None</em>, <em class="sig-param">ruby_version=None</em>, <em class="sig-param">rubygems_version=None</em>, <em class="sig-param">stack_id=None</em>, <em class="sig-param">system_packages=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">use_ebs_optimized_instances=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.RailsAppLayer.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing RailsAppLayer resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -2893,6 +2994,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>app_server</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Keyword for the app server to use. Defaults to “apache_passenger”.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name(ARN) of the layer.</p></li>
 <li><p><strong>auto_assign_elastic_ips</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to automatically assign an elastic IP address to the layer’s instances.</p></li>
 <li><p><strong>auto_assign_public_ips</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer’s instances.</p></li>
 <li><p><strong>auto_healing</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to enable auto-healing for the layer.</p></li>
@@ -2912,6 +3014,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>rubygems_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The version of RubyGems to use. Defaults to “2.2.2”.</p></li>
 <li><p><strong>stack_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the stack the layer will belong to.</p></li>
 <li><p><strong>system_packages</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Names of a set of system packages to install on the layer’s instances.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 <li><p><strong>use_ebs_optimized_instances</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to use EBS-optimized instances.</p></li>
 </ul>
 </dd>
@@ -2919,12 +3022,12 @@ properties used to qualify the lookup.</p>
 <p>The <strong>ebs_volumes</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">mountPoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">numberOfDisks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">raidLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - For PIOPS volumes, the IOPS per disk.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mountPoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path to mount the EBS volume on the layer’s instances.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">numberOfDisks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of disks to use for the EBS volume.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">raidLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The RAID level to use for the volume.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size of the volume in gigabytes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of volume to create. This may be <code class="docutils literal notranslate"><span class="pre">standard</span></code> (the default), <code class="docutils literal notranslate"><span class="pre">io1</span></code> or <code class="docutils literal notranslate"><span class="pre">gp2</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -2973,7 +3076,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> All arguments including the username and password will be stored in the raw state as plain-text.
 <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_rds_db_instance.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_rds_db_instance.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -3073,9 +3175,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.opsworks.Stack">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.opsworks.</code><code class="sig-name descname">Stack</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">agent_version=None</em>, <em class="sig-param">berkshelf_version=None</em>, <em class="sig-param">color=None</em>, <em class="sig-param">configuration_manager_name=None</em>, <em class="sig-param">configuration_manager_version=None</em>, <em class="sig-param">custom_cookbooks_sources=None</em>, <em class="sig-param">custom_json=None</em>, <em class="sig-param">default_availability_zone=None</em>, <em class="sig-param">default_instance_profile_arn=None</em>, <em class="sig-param">default_os=None</em>, <em class="sig-param">default_root_device_type=None</em>, <em class="sig-param">default_ssh_key_name=None</em>, <em class="sig-param">default_subnet_id=None</em>, <em class="sig-param">hostname_theme=None</em>, <em class="sig-param">manage_berkshelf=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">service_role_arn=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">use_custom_cookbooks=None</em>, <em class="sig-param">use_opsworks_security_groups=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.Stack" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an OpsWorks stack resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_stack.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_stack.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3115,12 +3214,12 @@ security groups apply to created instances.</p></li>
 </dl>
 <p>The <strong>custom_cookbooks_sources</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">revision</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sshKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Password to use when authenticating to the source. The provider cannot perform drift detection of this configuration.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">revision</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - For sources that are version-aware, the revision to use.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sshKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - SSH key to use when authenticating to the source. The provider cannot perform drift detection of this configuration.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of source to use. For example, “archive”.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The URL where the cookbooks resource can be found.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Username to use when authenticating to the source.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_aws.opsworks.Stack.agent_version">
@@ -3158,12 +3257,12 @@ security groups apply to created instances.</p></li>
 <dd><p>When <code class="docutils literal notranslate"><span class="pre">use_custom_cookbooks</span></code> is set, provide this sub-object as
 described below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">revision</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sshKey</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Password to use when authenticating to the source. The provider cannot perform drift detection of this configuration.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">revision</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - For sources that are version-aware, the revision to use.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sshKey</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - SSH key to use when authenticating to the source. The provider cannot perform drift detection of this configuration.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The type of source to use. For example, “archive”.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The URL where the cookbooks resource can be found.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Username to use when authenticating to the source.</p></li>
 </ul>
 </dd></dl>
 
@@ -3314,12 +3413,12 @@ security groups apply to created instances.</p></li>
 </dl>
 <p>The <strong>custom_cookbooks_sources</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">revision</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sshKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Password to use when authenticating to the source. The provider cannot perform drift detection of this configuration.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">revision</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - For sources that are version-aware, the revision to use.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sshKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - SSH key to use when authenticating to the source. The provider cannot perform drift detection of this configuration.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of source to use. For example, “archive”.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The URL where the cookbooks resource can be found.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Username to use when authenticating to the source.</p></li>
 </ul>
 </dd></dl>
 
@@ -3363,11 +3462,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.opsworks.StaticWebLayer">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.opsworks.</code><code class="sig-name descname">StaticWebLayer</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_assign_elastic_ips=None</em>, <em class="sig-param">auto_assign_public_ips=None</em>, <em class="sig-param">auto_healing=None</em>, <em class="sig-param">custom_configure_recipes=None</em>, <em class="sig-param">custom_deploy_recipes=None</em>, <em class="sig-param">custom_instance_profile_arn=None</em>, <em class="sig-param">custom_json=None</em>, <em class="sig-param">custom_security_group_ids=None</em>, <em class="sig-param">custom_setup_recipes=None</em>, <em class="sig-param">custom_shutdown_recipes=None</em>, <em class="sig-param">custom_undeploy_recipes=None</em>, <em class="sig-param">drain_elb_on_shutdown=None</em>, <em class="sig-param">ebs_volumes=None</em>, <em class="sig-param">elastic_load_balancer=None</em>, <em class="sig-param">install_updates_on_boot=None</em>, <em class="sig-param">instance_shutdown_timeout=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">stack_id=None</em>, <em class="sig-param">system_packages=None</em>, <em class="sig-param">use_ebs_optimized_instances=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.StaticWebLayer" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.opsworks.</code><code class="sig-name descname">StaticWebLayer</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_assign_elastic_ips=None</em>, <em class="sig-param">auto_assign_public_ips=None</em>, <em class="sig-param">auto_healing=None</em>, <em class="sig-param">custom_configure_recipes=None</em>, <em class="sig-param">custom_deploy_recipes=None</em>, <em class="sig-param">custom_instance_profile_arn=None</em>, <em class="sig-param">custom_json=None</em>, <em class="sig-param">custom_security_group_ids=None</em>, <em class="sig-param">custom_setup_recipes=None</em>, <em class="sig-param">custom_shutdown_recipes=None</em>, <em class="sig-param">custom_undeploy_recipes=None</em>, <em class="sig-param">drain_elb_on_shutdown=None</em>, <em class="sig-param">ebs_volumes=None</em>, <em class="sig-param">elastic_load_balancer=None</em>, <em class="sig-param">install_updates_on_boot=None</em>, <em class="sig-param">instance_shutdown_timeout=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">stack_id=None</em>, <em class="sig-param">system_packages=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">use_ebs_optimized_instances=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.StaticWebLayer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an OpsWorks static web server layer resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_static_web_layer.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_static_web_layer.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3386,6 +3482,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A human-readable name for the layer.</p></li>
 <li><p><strong>stack_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the stack the layer will belong to.</p></li>
 <li><p><strong>system_packages</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Names of a set of system packages to install on the layer’s instances.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 <li><p><strong>use_ebs_optimized_instances</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to use EBS-optimized instances.</p></li>
 </ul>
 </dd>
@@ -3393,13 +3490,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>The <strong>ebs_volumes</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">mountPoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">numberOfDisks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">raidLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - For PIOPS volumes, the IOPS per disk.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mountPoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path to mount the EBS volume on the layer’s instances.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">numberOfDisks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of disks to use for the EBS volume.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">raidLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The RAID level to use for the volume.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size of the volume in gigabytes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of volume to create. This may be <code class="docutils literal notranslate"><span class="pre">standard</span></code> (the default), <code class="docutils literal notranslate"><span class="pre">io1</span></code> or <code class="docutils literal notranslate"><span class="pre">gp2</span></code>.</p></li>
 </ul>
+<dl class="attribute">
+<dt id="pulumi_aws.opsworks.StaticWebLayer.arn">
+<code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.StaticWebLayer.arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Amazon Resource Name(ARN) of the layer.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_aws.opsworks.StaticWebLayer.auto_assign_elastic_ips">
 <code class="sig-name descname">auto_assign_elastic_ips</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.StaticWebLayer.auto_assign_elastic_ips" title="Permalink to this definition">¶</a></dt>
@@ -3442,12 +3545,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p><code class="docutils literal notranslate"><span class="pre">ebs_volume</span></code> blocks, as described below, will each create an EBS volume and connect it to the layer’s instances.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">mountPoint</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">numberOfDisks</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">raidLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - For PIOPS volumes, the IOPS per disk.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mountPoint</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The path to mount the EBS volume on the layer’s instances.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">numberOfDisks</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of disks to use for the EBS volume.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">raidLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The RAID level to use for the volume.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The size of the volume in gigabytes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The type of volume to create. This may be <code class="docutils literal notranslate"><span class="pre">standard</span></code> (the default), <code class="docutils literal notranslate"><span class="pre">io1</span></code> or <code class="docutils literal notranslate"><span class="pre">gp2</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -3488,6 +3591,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.opsworks.StaticWebLayer.tags">
+<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.StaticWebLayer.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of tags to assign to the resource.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.opsworks.StaticWebLayer.use_ebs_optimized_instances">
 <code class="sig-name descname">use_ebs_optimized_instances</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.opsworks.StaticWebLayer.use_ebs_optimized_instances" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether to use EBS-optimized instances.</p>
@@ -3495,7 +3604,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="method">
 <dt id="pulumi_aws.opsworks.StaticWebLayer.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_assign_elastic_ips=None</em>, <em class="sig-param">auto_assign_public_ips=None</em>, <em class="sig-param">auto_healing=None</em>, <em class="sig-param">custom_configure_recipes=None</em>, <em class="sig-param">custom_deploy_recipes=None</em>, <em class="sig-param">custom_instance_profile_arn=None</em>, <em class="sig-param">custom_json=None</em>, <em class="sig-param">custom_security_group_ids=None</em>, <em class="sig-param">custom_setup_recipes=None</em>, <em class="sig-param">custom_shutdown_recipes=None</em>, <em class="sig-param">custom_undeploy_recipes=None</em>, <em class="sig-param">drain_elb_on_shutdown=None</em>, <em class="sig-param">ebs_volumes=None</em>, <em class="sig-param">elastic_load_balancer=None</em>, <em class="sig-param">install_updates_on_boot=None</em>, <em class="sig-param">instance_shutdown_timeout=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">stack_id=None</em>, <em class="sig-param">system_packages=None</em>, <em class="sig-param">use_ebs_optimized_instances=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.StaticWebLayer.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">auto_assign_elastic_ips=None</em>, <em class="sig-param">auto_assign_public_ips=None</em>, <em class="sig-param">auto_healing=None</em>, <em class="sig-param">custom_configure_recipes=None</em>, <em class="sig-param">custom_deploy_recipes=None</em>, <em class="sig-param">custom_instance_profile_arn=None</em>, <em class="sig-param">custom_json=None</em>, <em class="sig-param">custom_security_group_ids=None</em>, <em class="sig-param">custom_setup_recipes=None</em>, <em class="sig-param">custom_shutdown_recipes=None</em>, <em class="sig-param">custom_undeploy_recipes=None</em>, <em class="sig-param">drain_elb_on_shutdown=None</em>, <em class="sig-param">ebs_volumes=None</em>, <em class="sig-param">elastic_load_balancer=None</em>, <em class="sig-param">install_updates_on_boot=None</em>, <em class="sig-param">instance_shutdown_timeout=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">stack_id=None</em>, <em class="sig-param">system_packages=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">use_ebs_optimized_instances=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.StaticWebLayer.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing StaticWebLayer resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -3504,6 +3613,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name(ARN) of the layer.</p></li>
 <li><p><strong>auto_assign_elastic_ips</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to automatically assign an elastic IP address to the layer’s instances.</p></li>
 <li><p><strong>auto_assign_public_ips</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer’s instances.</p></li>
 <li><p><strong>auto_healing</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to enable auto-healing for the layer.</p></li>
@@ -3517,6 +3627,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A human-readable name for the layer.</p></li>
 <li><p><strong>stack_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the stack the layer will belong to.</p></li>
 <li><p><strong>system_packages</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Names of a set of system packages to install on the layer’s instances.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 <li><p><strong>use_ebs_optimized_instances</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to use EBS-optimized instances.</p></li>
 </ul>
 </dd>
@@ -3524,12 +3635,12 @@ properties used to qualify the lookup.</p>
 <p>The <strong>ebs_volumes</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">mountPoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">numberOfDisks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">raidLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - For PIOPS volumes, the IOPS per disk.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mountPoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path to mount the EBS volume on the layer’s instances.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">numberOfDisks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of disks to use for the EBS volume.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">raidLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The RAID level to use for the volume.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size of the volume in gigabytes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of volume to create. This may be <code class="docutils literal notranslate"><span class="pre">standard</span></code> (the default), <code class="docutils literal notranslate"><span class="pre">io1</span></code> or <code class="docutils literal notranslate"><span class="pre">gp2</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -3575,9 +3686,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.opsworks.UserProfile">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.opsworks.</code><code class="sig-name descname">UserProfile</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allow_self_management=None</em>, <em class="sig-param">ssh_public_key=None</em>, <em class="sig-param">ssh_username=None</em>, <em class="sig-param">user_arn=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.opsworks.UserProfile" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an OpsWorks User Profile resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_user_profile.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_user_profile.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
