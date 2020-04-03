@@ -17,7 +17,7 @@ For AWS-specific use cases, see also the [awsx]({{< relref "/docs/reference/pkg/
 
 ## Getting Started
 
-The easiest way to start with the Cloud Framework is to follow one of the tutorials for adoption:
+The easiest way to start with the Cloud Framework is to follow one of the tutorials:
 
 * [A simple serverless REST API]({{< relref "rest-api" >}}): Deploy cloud-agnostic managed REST API
 * [A simple containerized app]({{< relref "service" >}}): Deploy cloud-agnostic containerized services
