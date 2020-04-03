@@ -92,8 +92,11 @@ class Program
 
 public MyStack : Stack
 {
-    var mediaBucket = new Aws.S3.Bucket("media-bucket");
-    var contentBucket = new Aws.S3.Bucket("content-bucket");
+    public MyStack()
+    {
+        var mediaBucket = new Aws.S3.Bucket("media-bucket");
+        var contentBucket = new Aws.S3.Bucket("content-bucket");
+    }
 }
 ```
 
