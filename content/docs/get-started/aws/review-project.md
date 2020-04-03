@@ -16,6 +16,13 @@ Let's review some of the generated project files:
 
 - `Pulumi.yaml` defines the [project]({{< relref "/docs/intro/concepts/project" >}}).
 - `Pulumi.dev.yaml` contains [configuration]({{< relref "/docs/intro/concepts/config" >}}) values for the [stack]({{< relref "/docs/intro/concepts/stack" >}}) we initialized.
+
+{{% choosable language csharp %}}
+
+- `Program.cs` with a simple entry point.
+
+{{% /choosable %}}
+
 - {{< langfile >}} is the Pulumi program that defines our stack resources. Let's examine it.
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -98,25 +105,22 @@ func main() {
 {{% choosable language csharp %}}
 
 ```csharp
-using System.Collections.Generic;
-using System.Threading.Tasks;
 using Pulumi;
 using Pulumi.Aws.S3;
 
-class Program
+class MyStack : Stack
 {
-    static Task Main()
+    public MyStack()
     {
-        return Deployment.RunAsync(() => {
-            // Create an AWS resource (S3 Bucket)
-            var bucket = new Bucket("my-bucket");
+        // Create an AWS resource (S3 Bucket)
+        var bucket = new Bucket("my-bucket");
 
-            // Export the name of the bucket
-            return new Dictionary<string, object> {
-                { "bucket_name" , bucket.Id },
-            };
-        });
+        // Export the name of the bucket
+        this.BucketName = bucket.Id;
     }
+
+    [Output]
+    public Output<string> BucketName { get; set; }
 }
 ```
 

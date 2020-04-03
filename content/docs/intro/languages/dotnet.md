@@ -61,7 +61,6 @@ Before using Pulumi for .NET, you will need to install both Pulumi and .NET Core
 For example, this C# program provisions an Azure resource group and storage account:
 
 ```csharp
-using System.Collections.Generic;
 using System.Threading.Tasks;
 
 using Pulumi;
@@ -70,27 +69,29 @@ using Pulumi.Azure.Storage;
 
 class Program
 {
-    static Task<int> Main()
+    static Task<int> Main() => Deployment.RunAsync<MyStack>();
+}
+
+public MyStack : Stack
+{
+    public MyStack()
     {
-        return Deployment.RunAsync(() => {
-            // Create an Azure Resource Group
-            var resourceGroup = new ResourceGroup("resourceGroup");
+        // Create an Azure Resource Group
+        var resourceGroup = new ResourceGroup("resourceGroup");
 
-            // Create an Azure Storage Account
-            var storageAccount = new Account("storage", new AccountArgs
-            {
-                ResourceGroupName = resourceGroup.Name,
-                AccountReplicationType = "LRS",
-                AccountTier = "Standard",
-            });
-
-            // Export the connection string for the storage account
-            return new Dictionary<string, object>
-            {
-                { "connectionString", storageAccount.PrimaryConnectionString },
-            };
+        // Create an Azure Storage Account
+        var storageAccount = new Account("storage", new AccountArgs
+        {
+            ResourceGroupName = resourceGroup.Name,
+            AccountReplicationType = "LRS",
+            AccountTier = "Standard",
         });
+
+        // Export the connection string for the storage account
+        this.ConnectionString = storageAccount.PrimaryConnectionString;
     }
+
+    [Output] public Output<string> ConnectionString { get; set; }
 }
 ```
 
@@ -178,7 +179,7 @@ $ mkdir myproject && cd myproject
 $ pulumi new csharp
 ```
 
-This will create a `Pulumi.yaml` [project file]({{< relref "../concepts/project" >}}) containing some minimal metadata about your project (including a name and description which you may wish to change), an `Infra.csproj` file that holds references used by the project, and a `Program.cs` file, containing your program. The `.csproj` file can be named more appropriately depending upon the project. The name of the directory is used as the project name in `Pulumi.yaml`.
+This will create a `Pulumi.yaml` [project file]({{< relref "../concepts/project" >}}) containing some minimal metadata about your project (including a name and description which you may wish to change), an `myproject.csproj` file that holds references used by the project, a `Program.cs` file, containing the program entry point, and a `MyStack.cs` file with resource definitions. The name of the directory is used as the project name in `Pulumi.yaml` and as the `csproj` file name.
 
 To deploy your infrastructure run `pulumi up` and the Pulumi engine automatically runs `dotnet build` as part of the deployment. Pulumi will perform the operations needed to deploy the infrastructure you have declared.
 
@@ -197,7 +198,7 @@ $ mkdir myproject && cd myproject
 $ pulumi new fsharp
 ```
 
-This will create a `Pulumi.yaml` [project file]({{< relref "../concepts/project" >}}) containing some minimal metadata about your project (including a name and description which you may wish to change), an `Infra.fsproj` file that holds references used by the project, and a `Program.fs` file, containing your program. The `.fsproj` file can be named more appropriately depending upon the project. The name of the directory is used as the project name in `Pulumi.yaml`.
+This will create a `Pulumi.yaml` [project file]({{< relref "../concepts/project" >}}) containing some minimal metadata about your project (including a name and description which you may wish to change), an `myproject.fsproj` file that holds references used by the project, and a `Program.fs` file, containing your program. The name of the directory is used as the project name in `Pulumi.yaml` and as the `fsproj` file name.
 
 To deploy your infrastructure run `pulumi up` and the Pulumi engine automatically runs `dotnet build` as part of the deployment. Pulumi will perform the operations needed to deploy the infrastructure you have declared.
 
@@ -216,7 +217,7 @@ $ mkdir myproject && cd myproject
 $ pulumi new visualbasic
 ```
 
-This will create a `Pulumi.yaml` [project file]({{< relref "../concepts/project" >}}) containing some minimal metadata about your project (including a name and description which you may wish to change), an `Infra.vbproj` file that holds references used by the project, and a `Program.vb` file, containing your program. The `.vbproj` file can be named more appropriately depending upon the project. The name of the directory is used as the project name in `Pulumi.yaml`.
+This will create a `Pulumi.yaml` [project file]({{< relref "../concepts/project" >}}) containing some minimal metadata about your project (including a name and description which you may wish to change), an `myproject.vbproj` file that holds references used by the project, a `Program.vb` file, containing the program entry point, and a `MyStack.vb` file with resource definitions. The name of the directory is used as the project name in `Pulumi.yaml` and as the `vbproj` file name.
 
 To deploy your infrastructure run `pulumi up` and the Pulumi engine automatically runs `dotnet build` as part of the deployment. Pulumi will perform the operations needed to deploy the infrastructure you have declared.
 
@@ -233,7 +234,7 @@ This `visualbasic` template is cloud agnostic, and you will need to install NuGe
 
 Pulumi packages are distributed on [NuGet for download](https://www.nuget.org/packages?q=pulumi).
 
-Although you can use any editor, [Visual Studio Code](https://code.visualstudio.com/download) or [Visual Studio](https://visualstudio.microsoft.com/downloads/) will deliver full tooling support for .NET Core out-of-the-box, including auto-completion, red error markers and build errors.
+Although you can use any editor, [Visual Studio Code](https://code.visualstudio.com/download), [Visual Studio](https://visualstudio.microsoft.com/downloads/), or [Rider](https://www.jetbrains.com/rider/) will deliver full tooling support for .NET Core out-of-the-box, including auto-completion, red error markers and build errors.
 
 ![VSCode](/images/docs/quickstart/vscode-dotnet.png)
 
