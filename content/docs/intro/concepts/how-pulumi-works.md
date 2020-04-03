@@ -173,11 +173,14 @@ class Program
 
 public MyStack : Stack
 {
-    var mediaBucket = new Aws.S3.Bucket("media-bucket", new Aws.S3.BucketArgs
+    public MyStack()
     {
-        Acl = "public-read",   // add acl
-    });
-    var contentBucket = new Aws.S3.Bucket("content-bucket");
+        var mediaBucket = new Aws.S3.Bucket("media-bucket", new Aws.S3.BucketArgs
+        {
+            Acl = "public-read",   // add acl
+        });
+        var contentBucket = new Aws.S3.Bucket("content-bucket");
+    }
 }
 ```
 
@@ -243,11 +246,14 @@ class Program
 
 public MyStack : Stack
 {
-    var mediaBucket = new Aws.S3.Bucket("media-bucket", new Aws.S3.BucketArgs
+    public MyStack()
     {
-        Acl = "public-read",   // add acl
-    });
-    var contentBucket = new Aws.S3.Bucket("app-bucket");
+        var mediaBucket = new Aws.S3.Bucket("media-bucket", new Aws.S3.BucketArgs
+        {
+            Acl = "public-read",   // add acl
+        });
+        var contentBucket = new Aws.S3.Bucket("app-bucket");
+    }
 }
 ```
 
