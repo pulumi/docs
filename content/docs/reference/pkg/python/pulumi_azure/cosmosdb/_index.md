@@ -33,8 +33,8 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><strong>ip_range_filter</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – CosmosDB Firewall Support: This value specifies the set of IP addresses or IP address ranges in CIDR form to be included as the allowed list of client IP’s for a given database account. IP addresses/ranges must be comma separated and must not contain any spaces.</p></li>
 <li><p><strong>is_virtual_network_filter_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enables virtual network filtering for this Cosmos DB account.</p></li>
 <li><p><strong>kind</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the Kind of CosmosDB to create - possible values are <code class="docutils literal notranslate"><span class="pre">GlobalDocumentDB</span></code> and <code class="docutils literal notranslate"><span class="pre">MongoDB</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">GlobalDocumentDB</span></code>. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Azure region to host replicated data.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The capability to enable - Possible values are <code class="docutils literal notranslate"><span class="pre">EnableAggregationPipeline</span></code>, <code class="docutils literal notranslate"><span class="pre">EnableCassandra</span></code>, <code class="docutils literal notranslate"><span class="pre">EnableGremlin</span></code>,<code class="docutils literal notranslate"><span class="pre">EnableMongo</span></code>, <code class="docutils literal notranslate"><span class="pre">EnableTable</span></code>, <code class="docutils literal notranslate"><span class="pre">MongoDBv3.4</span></code>, and <code class="docutils literal notranslate"><span class="pre">mongoEnableDocLevelTTL</span></code>.</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the CosmosDB Account. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>offer_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the Offer Type to use for this CosmosDB Account - currently this can only be set to <code class="docutils literal notranslate"><span class="pre">Standard</span></code>.</p></li>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which the CosmosDB Account is created. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
@@ -44,7 +44,7 @@ anything, please consult the source <a class="reference external" href="https://
 </dl>
 <p>The <strong>capabilities</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The capability to enable - Possible values are <code class="docutils literal notranslate"><span class="pre">EnableAggregationPipeline</span></code>, <code class="docutils literal notranslate"><span class="pre">EnableCassandra</span></code>, <code class="docutils literal notranslate"><span class="pre">EnableGremlin</span></code>,<code class="docutils literal notranslate"><span class="pre">EnableMongo</span></code>, <code class="docutils literal notranslate"><span class="pre">EnableTable</span></code>, <code class="docutils literal notranslate"><span class="pre">MongoDBv3.4</span></code>, and <code class="docutils literal notranslate"><span class="pre">mongoEnableDocLevelTTL</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the CosmosDB Account. Changing this forces a new resource to be created.</p></li>
 </ul>
 <p>The <strong>consistency_policy</strong> object supports the following:</p>
 <ul class="simple">
@@ -68,7 +68,7 @@ anything, please consult the source <a class="reference external" href="https://
 <code class="sig-name descname">capabilities</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.cosmosdb.Account.capabilities" title="Permalink to this definition">¶</a></dt>
 <dd><p>The capabilities which should be enabled for this Cosmos DB account. Possible values are <code class="docutils literal notranslate"><span class="pre">EnableAggregationPipeline</span></code>, <code class="docutils literal notranslate"><span class="pre">EnableCassandra</span></code>, <code class="docutils literal notranslate"><span class="pre">EnableGremlin</span></code>, <code class="docutils literal notranslate"><span class="pre">EnableTable</span></code>, <code class="docutils literal notranslate"><span class="pre">MongoDBv3.4</span></code>, and <code class="docutils literal notranslate"><span class="pre">mongoEnableDocLevelTTL</span></code>.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The capability to enable - Possible values are <code class="docutils literal notranslate"><span class="pre">EnableAggregationPipeline</span></code>, <code class="docutils literal notranslate"><span class="pre">EnableCassandra</span></code>, <code class="docutils literal notranslate"><span class="pre">EnableGremlin</span></code>,<code class="docutils literal notranslate"><span class="pre">EnableMongo</span></code>, <code class="docutils literal notranslate"><span class="pre">EnableTable</span></code>, <code class="docutils literal notranslate"><span class="pre">MongoDBv3.4</span></code>, and <code class="docutils literal notranslate"><span class="pre">mongoEnableDocLevelTTL</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the name of the CosmosDB Account. Changing this forces a new resource to be created.</p></li>
 </ul>
 </dd></dl>
 
@@ -140,13 +140,13 @@ anything, please consult the source <a class="reference external" href="https://
 <dl class="attribute">
 <dt id="pulumi_azure.cosmosdb.Account.location">
 <code class="sig-name descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.cosmosdb.Account.location" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the Azure region to host replicated data.</p>
+<dd><p>Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_azure.cosmosdb.Account.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.cosmosdb.Account.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The capability to enable - Possible values are <code class="docutils literal notranslate"><span class="pre">EnableAggregationPipeline</span></code>, <code class="docutils literal notranslate"><span class="pre">EnableCassandra</span></code>, <code class="docutils literal notranslate"><span class="pre">EnableGremlin</span></code>,<code class="docutils literal notranslate"><span class="pre">EnableMongo</span></code>, <code class="docutils literal notranslate"><span class="pre">EnableTable</span></code>, <code class="docutils literal notranslate"><span class="pre">MongoDBv3.4</span></code>, and <code class="docutils literal notranslate"><span class="pre">mongoEnableDocLevelTTL</span></code>.</p>
+<dd><p>Specifies the name of the CosmosDB Account. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -233,8 +233,8 @@ properties used to qualify the lookup.</p>
 <li><p><strong>ip_range_filter</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – CosmosDB Firewall Support: This value specifies the set of IP addresses or IP address ranges in CIDR form to be included as the allowed list of client IP’s for a given database account. IP addresses/ranges must be comma separated and must not contain any spaces.</p></li>
 <li><p><strong>is_virtual_network_filter_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enables virtual network filtering for this Cosmos DB account.</p></li>
 <li><p><strong>kind</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the Kind of CosmosDB to create - possible values are <code class="docutils literal notranslate"><span class="pre">GlobalDocumentDB</span></code> and <code class="docutils literal notranslate"><span class="pre">MongoDB</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">GlobalDocumentDB</span></code>. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Azure region to host replicated data.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The capability to enable - Possible values are <code class="docutils literal notranslate"><span class="pre">EnableAggregationPipeline</span></code>, <code class="docutils literal notranslate"><span class="pre">EnableCassandra</span></code>, <code class="docutils literal notranslate"><span class="pre">EnableGremlin</span></code>,<code class="docutils literal notranslate"><span class="pre">EnableMongo</span></code>, <code class="docutils literal notranslate"><span class="pre">EnableTable</span></code>, <code class="docutils literal notranslate"><span class="pre">MongoDBv3.4</span></code>, and <code class="docutils literal notranslate"><span class="pre">mongoEnableDocLevelTTL</span></code>.</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the CosmosDB Account. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>offer_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the Offer Type to use for this CosmosDB Account - currently this can only be set to <code class="docutils literal notranslate"><span class="pre">Standard</span></code>.</p></li>
 <li><p><strong>primary_master_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Primary master key for the CosmosDB Account.</p></li>
 <li><p><strong>primary_readonly_master_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Primary read-only master Key for the CosmosDB Account.</p></li>
@@ -250,7 +250,7 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>capabilities</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The capability to enable - Possible values are <code class="docutils literal notranslate"><span class="pre">EnableAggregationPipeline</span></code>, <code class="docutils literal notranslate"><span class="pre">EnableCassandra</span></code>, <code class="docutils literal notranslate"><span class="pre">EnableGremlin</span></code>,<code class="docutils literal notranslate"><span class="pre">EnableMongo</span></code>, <code class="docutils literal notranslate"><span class="pre">EnableTable</span></code>, <code class="docutils literal notranslate"><span class="pre">MongoDBv3.4</span></code>, and <code class="docutils literal notranslate"><span class="pre">mongoEnableDocLevelTTL</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the CosmosDB Account. Changing this forces a new resource to be created.</p></li>
 </ul>
 <p>The <strong>consistency_policy</strong> object supports the following:</p>
 <ul class="simple">
@@ -656,20 +656,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <p>The <strong>conflict_resolution_policies</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">conflictResolutionPath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">conflictResolutionProcedure</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">mode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">conflictResolutionPath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The conflict resolution path in the case of LastWriterWins mode.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">conflictResolutionProcedure</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The procedure to resolve conflicts in the case of custom mode.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Indicates the conflict resolution mode. Possible values include: <code class="docutils literal notranslate"><span class="pre">LastWriterWins</span></code>, <code class="docutils literal notranslate"><span class="pre">Custom</span></code>.</p></li>
 </ul>
 <p>The <strong>index_policies</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">automatic</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">excludedPaths</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">includedPaths</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">indexingMode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">automatic</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates if the indexing policy is automatic. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">excludedPaths</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - List of paths to exclude from indexing. Required if <code class="docutils literal notranslate"><span class="pre">indexing_mode</span></code> is <code class="docutils literal notranslate"><span class="pre">Consistent</span></code> or <code class="docutils literal notranslate"><span class="pre">Lazy</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">includedPaths</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - List of paths to include in the indexing. Required if <code class="docutils literal notranslate"><span class="pre">indexing_mode</span></code> is <code class="docutils literal notranslate"><span class="pre">Consistent</span></code> or <code class="docutils literal notranslate"><span class="pre">Lazy</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">indexingMode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Indicates the indexing mode. Possible values include: <code class="docutils literal notranslate"><span class="pre">Consistent</span></code>, <code class="docutils literal notranslate"><span class="pre">Lazy</span></code>, <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p></li>
 </ul>
 <p>The <strong>unique_keys</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">paths</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">paths</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of paths to use for this unique key.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_azure.cosmosdb.GremlinGraph.account_name">
@@ -682,9 +682,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">conflict_resolution_policies</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.cosmosdb.GremlinGraph.conflict_resolution_policies" title="Permalink to this definition">¶</a></dt>
 <dd><p>The conflict resolution policy for the graph. One or more <code class="docutils literal notranslate"><span class="pre">conflict_resolution_policy</span></code> blocks as defined below. Changing this forces a new resource to be created.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">conflictResolutionPath</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">conflictResolutionProcedure</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">mode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">conflictResolutionPath</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The conflict resolution path in the case of LastWriterWins mode.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">conflictResolutionProcedure</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The procedure to resolve conflicts in the case of custom mode.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Indicates the conflict resolution mode. Possible values include: <code class="docutils literal notranslate"><span class="pre">LastWriterWins</span></code>, <code class="docutils literal notranslate"><span class="pre">Custom</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -699,10 +699,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">index_policies</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.cosmosdb.GremlinGraph.index_policies" title="Permalink to this definition">¶</a></dt>
 <dd><p>The configuration of the indexing policy. One or more <code class="docutils literal notranslate"><span class="pre">index_policy</span></code> blocks as defined below. Changing this forces a new resource to be created.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">automatic</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">excludedPaths</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">includedPaths</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">indexingMode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">automatic</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Indicates if the indexing policy is automatic. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">excludedPaths</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - List of paths to exclude from indexing. Required if <code class="docutils literal notranslate"><span class="pre">indexing_mode</span></code> is <code class="docutils literal notranslate"><span class="pre">Consistent</span></code> or <code class="docutils literal notranslate"><span class="pre">Lazy</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">includedPaths</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - List of paths to include in the indexing. Required if <code class="docutils literal notranslate"><span class="pre">indexing_mode</span></code> is <code class="docutils literal notranslate"><span class="pre">Consistent</span></code> or <code class="docutils literal notranslate"><span class="pre">Lazy</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">indexingMode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Indicates the indexing mode. Possible values include: <code class="docutils literal notranslate"><span class="pre">Consistent</span></code>, <code class="docutils literal notranslate"><span class="pre">Lazy</span></code>, <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -735,7 +735,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">unique_keys</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.cosmosdb.GremlinGraph.unique_keys" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">unique_key</span></code> blocks as defined below. Changing this forces a new resource to be created.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">paths</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">paths</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of paths to use for this unique key.</p></li>
 </ul>
 </dd></dl>
 
@@ -764,20 +764,20 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>conflict_resolution_policies</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">conflictResolutionPath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">conflictResolutionProcedure</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">mode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">conflictResolutionPath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The conflict resolution path in the case of LastWriterWins mode.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">conflictResolutionProcedure</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The procedure to resolve conflicts in the case of custom mode.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Indicates the conflict resolution mode. Possible values include: <code class="docutils literal notranslate"><span class="pre">LastWriterWins</span></code>, <code class="docutils literal notranslate"><span class="pre">Custom</span></code>.</p></li>
 </ul>
 <p>The <strong>index_policies</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">automatic</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">excludedPaths</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">includedPaths</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">indexingMode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">automatic</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates if the indexing policy is automatic. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">excludedPaths</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - List of paths to exclude from indexing. Required if <code class="docutils literal notranslate"><span class="pre">indexing_mode</span></code> is <code class="docutils literal notranslate"><span class="pre">Consistent</span></code> or <code class="docutils literal notranslate"><span class="pre">Lazy</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">includedPaths</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - List of paths to include in the indexing. Required if <code class="docutils literal notranslate"><span class="pre">indexing_mode</span></code> is <code class="docutils literal notranslate"><span class="pre">Consistent</span></code> or <code class="docutils literal notranslate"><span class="pre">Lazy</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">indexingMode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Indicates the indexing mode. Possible values include: <code class="docutils literal notranslate"><span class="pre">Consistent</span></code>, <code class="docutils literal notranslate"><span class="pre">Lazy</span></code>, <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p></li>
 </ul>
 <p>The <strong>unique_keys</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">paths</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">paths</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of paths to use for this unique key.</p></li>
 </ul>
 </dd></dl>
 
@@ -1062,7 +1062,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <p>The <strong>unique_keys</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">paths</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">paths</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of paths to use for this unique key.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_azure.cosmosdb.SqlContainer.account_name">
@@ -1111,7 +1111,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">unique_keys</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.cosmosdb.SqlContainer.unique_keys" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">unique_key</span></code> blocks as defined below. Changing this forces a new resource to be created.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">paths</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">paths</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of paths to use for this unique key.</p></li>
 </ul>
 </dd></dl>
 
@@ -1139,7 +1139,7 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>unique_keys</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">paths</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">paths</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of paths to use for this unique key.</p></li>
 </ul>
 </dd></dl>
 
