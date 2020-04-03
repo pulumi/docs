@@ -21,13 +21,13 @@ Kubernetes cluster, and building and publishing containers to private registries
 Reference documentation and examples for major cloud providers.
 
 <div class="tiles">
-    <a class="tile" href="{{< relref "/docs/reference/pkg/aws" >}}">
+    <a class="tile flex-1 p-8" href="{{< relref "/docs/reference/pkg/aws" >}}">
         <img class="h-10 mx-auto" src="/logos/tech/aws.svg" alt="AWS">
     </a>
-    <a class="tile md:mx-4 my-4 md:my-0" href="{{< relref "/docs/reference/pkg/azure" >}}">
+    <a class="tile flex-1 p-8 md:mx-4 my-4 md:my-0" href="{{< relref "/docs/reference/pkg/azure" >}}">
         <img class="h-10 mx-auto" src="/logos/tech/azure.svg" alt="Azure">
     </a>
-    <a class="tile" href="{{< relref "/docs/reference/pkg/gcp" >}}">
+    <a class="tile flex-1 p-8" href="{{< relref "/docs/reference/pkg/gcp" >}}">
         <img class="h-10 mx-auto" src="/logos/tech/gcp.svg" alt="Google Cloud">
     </a>
 </div>
