@@ -1343,9 +1343,9 @@ network.</p></li>
 </dl>
 <p>The <strong>segments</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">network_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">physicalNetwork</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">segmentation_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">network_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of physical network.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">physicalNetwork</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The physical network where this network is implemented.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">segmentation_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - An isolated segment on the physical network.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_openstack.networking.Network.admin_state_up">
@@ -1440,9 +1440,9 @@ network.</p>
 <code class="sig-name descname">segments</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.Network.segments" title="Permalink to this definition">¶</a></dt>
 <dd><p>An array of one or more provider segment objects.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">network_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">physicalNetwork</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">segmentation_id</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">network_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The type of physical network.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">physicalNetwork</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The physical network where this network is implemented.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">segmentation_id</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - An isolated segment on the physical network.</p></li>
 </ul>
 </dd></dl>
 
@@ -1543,9 +1543,9 @@ network.</p></li>
 </dl>
 <p>The <strong>segments</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">network_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">physicalNetwork</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">segmentation_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">network_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of physical network.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">physicalNetwork</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The physical network where this network is implemented.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">segmentation_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - An isolated segment on the physical network.</p></li>
 </ul>
 </dd></dl>
 
@@ -1623,10 +1623,8 @@ on the port. The structure is described below. Can be specified multiple
 times.</p></li>
 <li><p><strong>fixed_ips</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An array of desired IPs for
 this port. The structure is described below.</p></li>
-<li><p><strong>mac_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specify a specific MAC address for the port. Changing
-this creates a new port.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique name for the port. Changing this
-updates the <code class="docutils literal notranslate"><span class="pre">name</span></code> of an existing port.</p></li>
+<li><p><strong>mac_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The additional MAC address.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the DHCP option.</p></li>
 <li><p><strong>network_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the network to attach the port to. Changing
 this creates a new port.</p></li>
 <li><p><strong>no_fixed_ip</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Create a port with no fixed
@@ -1661,29 +1659,32 @@ to create a port for another tenant. Changing this creates a new port.</p></li>
 </dl>
 <p>The <strong>allowed_address_pairs</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">mac_address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specify a specific MAC address for the port. Changing
-this creates a new port.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The additional IP address.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mac_address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The additional MAC address.</p></li>
 </ul>
 <p>The <strong>binding</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">hostId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">profile</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">vifDetails</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">vifType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">vnicType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hostId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the host to allocate port on.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">profile</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Custom data to be passed as <code class="docutils literal notranslate"><span class="pre">binding:profile</span></code>. Data
+must be passed as JSON.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vifDetails</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A map of JSON strings containing additional
+details for this specific binding.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vifType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The VNIC type of the port binding.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vnicType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - VNIC type for the port. Can either be <code class="docutils literal notranslate"><span class="pre">direct</span></code>,
+<code class="docutils literal notranslate"><span class="pre">direct-physical</span></code>, <code class="docutils literal notranslate"><span class="pre">macvtap</span></code>, <code class="docutils literal notranslate"><span class="pre">normal</span></code>, <code class="docutils literal notranslate"><span class="pre">baremetal</span></code> or <code class="docutils literal notranslate"><span class="pre">virtio-forwarder</span></code>.
+Default value is <code class="docutils literal notranslate"><span class="pre">normal</span></code>.</p></li>
 </ul>
 <p>The <strong>extra_dhcp_options</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">ip_version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A unique name for the port. Changing this
-updates the <code class="docutils literal notranslate"><span class="pre">name</span></code> of an existing port.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ip_version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - IP protocol version. Defaults to 4.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the DHCP option.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Value of the DHCP option.</p></li>
 </ul>
 <p>The <strong>fixed_ips</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The additional IP address.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Subnet in which to allocate IP address for
+this port.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_openstack.networking.Port.admin_state_up">
@@ -1721,9 +1722,8 @@ explicitly and implicitly added.</p>
 addresses that can be active on this port. The structure is described
 below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">mac_address</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specify a specific MAC address for the port. Changing
-this creates a new port.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The additional IP address.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mac_address</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The additional MAC address.</p></li>
 </ul>
 </dd></dl>
 
@@ -1733,11 +1733,15 @@ this creates a new port.</p></li>
 <dd><p>The port binding allows to specify binding information
 for the port. The structure is described below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">hostId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">profile</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">vifDetails</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">vifType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">vnicType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hostId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the host to allocate port on.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">profile</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Custom data to be passed as <code class="docutils literal notranslate"><span class="pre">binding:profile</span></code>. Data
+must be passed as JSON.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vifDetails</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A map of JSON strings containing additional
+details for this specific binding.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vifType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The VNIC type of the port binding.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vnicType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - VNIC type for the port. Can either be <code class="docutils literal notranslate"><span class="pre">direct</span></code>,
+<code class="docutils literal notranslate"><span class="pre">direct-physical</span></code>, <code class="docutils literal notranslate"><span class="pre">macvtap</span></code>, <code class="docutils literal notranslate"><span class="pre">normal</span></code>, <code class="docutils literal notranslate"><span class="pre">baremetal</span></code> or <code class="docutils literal notranslate"><span class="pre">virtio-forwarder</span></code>.
+Default value is <code class="docutils literal notranslate"><span class="pre">normal</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -1782,10 +1786,9 @@ is enabled.</p>
 on the port. The structure is described below. Can be specified multiple
 times.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">ip_version</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A unique name for the port. Changing this
-updates the <code class="docutils literal notranslate"><span class="pre">name</span></code> of an existing port.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ip_version</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - IP protocol version. Defaults to 4.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Name of the DHCP option.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Value of the DHCP option.</p></li>
 </ul>
 </dd></dl>
 
@@ -1795,23 +1798,22 @@ updates the <code class="docutils literal notranslate"><span class="pre">name</s
 <dd><p>An array of desired IPs for
 this port. The structure is described below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The additional IP address.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Subnet in which to allocate IP address for
+this port.</p></li>
 </ul>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_openstack.networking.Port.mac_address">
 <code class="sig-name descname">mac_address</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.Port.mac_address" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specify a specific MAC address for the port. Changing
-this creates a new port.</p>
+<dd><p>The additional MAC address.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_openstack.networking.Port.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.Port.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>A unique name for the port. Changing this
-updates the <code class="docutils literal notranslate"><span class="pre">name</span></code> of an existing port.</p>
+<dd><p>Name of the DHCP option.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1932,10 +1934,8 @@ on the port. The structure is described below. Can be specified multiple
 times.</p></li>
 <li><p><strong>fixed_ips</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – An array of desired IPs for
 this port. The structure is described below.</p></li>
-<li><p><strong>mac_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specify a specific MAC address for the port. Changing
-this creates a new port.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique name for the port. Changing this
-updates the <code class="docutils literal notranslate"><span class="pre">name</span></code> of an existing port.</p></li>
+<li><p><strong>mac_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The additional MAC address.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the DHCP option.</p></li>
 <li><p><strong>network_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the network to attach the port to. Changing
 this creates a new port.</p></li>
 <li><p><strong>no_fixed_ip</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Create a port with no fixed
@@ -1970,29 +1970,32 @@ to create a port for another tenant. Changing this creates a new port.</p></li>
 </dl>
 <p>The <strong>allowed_address_pairs</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">mac_address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specify a specific MAC address for the port. Changing
-this creates a new port.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The additional IP address.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mac_address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The additional MAC address.</p></li>
 </ul>
 <p>The <strong>binding</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">hostId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">profile</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">vifDetails</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">vifType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">vnicType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hostId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the host to allocate port on.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">profile</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Custom data to be passed as <code class="docutils literal notranslate"><span class="pre">binding:profile</span></code>. Data
+must be passed as JSON.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vifDetails</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A map of JSON strings containing additional
+details for this specific binding.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vifType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The VNIC type of the port binding.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vnicType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - VNIC type for the port. Can either be <code class="docutils literal notranslate"><span class="pre">direct</span></code>,
+<code class="docutils literal notranslate"><span class="pre">direct-physical</span></code>, <code class="docutils literal notranslate"><span class="pre">macvtap</span></code>, <code class="docutils literal notranslate"><span class="pre">normal</span></code>, <code class="docutils literal notranslate"><span class="pre">baremetal</span></code> or <code class="docutils literal notranslate"><span class="pre">virtio-forwarder</span></code>.
+Default value is <code class="docutils literal notranslate"><span class="pre">normal</span></code>.</p></li>
 </ul>
 <p>The <strong>extra_dhcp_options</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">ip_version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A unique name for the port. Changing this
-updates the <code class="docutils literal notranslate"><span class="pre">name</span></code> of an existing port.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ip_version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - IP protocol version. Defaults to 4.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the DHCP option.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Value of the DHCP option.</p></li>
 </ul>
 <p>The <strong>fixed_ips</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The additional IP address.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Subnet in which to allocate IP address for
+this port.</p></li>
 </ul>
 </dd></dl>
 
@@ -3091,12 +3094,13 @@ Supported options are described below.</p></li>
 </dl>
 <p>The <strong>external_fixed_ips</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The IP address to set on the router.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Subnet in which the fixed IP belongs to.</p></li>
 </ul>
 <p>The <strong>vendor_options</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">setRouterGatewayAfterCreate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">setRouterGatewayAfterCreate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Boolean to control whether
+the Router gateway is assigned during creation or updated after creation.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_openstack.networking.Router.admin_state_up">
@@ -3153,8 +3157,8 @@ can be repeated. The structure is described below. An <code class="docutils lite
 has to be set in order to set this property. Changing this updates the
 external fixed IPs of the router.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The IP address to set on the router.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Subnet in which the fixed IP belongs to.</p></li>
 </ul>
 </dd></dl>
 
@@ -3218,7 +3222,8 @@ to create a router for another tenant. Changing this creates a new router.</p>
 <dd><p>Map of additional vendor-specific options.
 Supported options are described below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">setRouterGatewayAfterCreate</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">setRouterGatewayAfterCreate</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Boolean to control whether
+the Router gateway is assigned during creation or updated after creation.</p></li>
 </ul>
 </dd></dl>
 
@@ -3280,12 +3285,13 @@ Supported options are described below.</p></li>
 </dl>
 <p>The <strong>external_fixed_ips</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ip_address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The IP address to set on the router.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Subnet in which the fixed IP belongs to.</p></li>
 </ul>
 <p>The <strong>vendor_options</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">setRouterGatewayAfterCreate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">setRouterGatewayAfterCreate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Boolean to control whether
+the Router gateway is assigned during creation or updated after creation.</p></li>
 </ul>
 </dd></dl>
 
@@ -4076,18 +4082,18 @@ create a subnet for another tenant. Changing this creates a new subnet.</p></li>
 </dl>
 <p>The <strong>allocation_pools</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">end</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">start</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">end</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ending address.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">start</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The starting address.</p></li>
 </ul>
 <p>The <strong>allocation_pools_collection</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">end</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">start</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">end</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ending address.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">start</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The starting address.</p></li>
 </ul>
 <p>The <strong>host_routes</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">destination_cidr</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">next_hop</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">destination_cidr</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The destination CIDR.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">next_hop</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The next hop in the route.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_openstack.networking.Subnet.all_tags">
@@ -4106,8 +4112,8 @@ than one range of IP addresses to use with DHCP. However, each IP range
 must be from the same CIDR that the subnet is part of.
 The <code class="docutils literal notranslate"><span class="pre">allocation_pool</span></code> block is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">end</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">start</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">end</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ending address.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">start</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The starting address.</p></li>
 </ul>
 </dd></dl>
 
@@ -4118,8 +4124,8 @@ The <code class="docutils literal notranslate"><span class="pre">allocation_pool
 use with DHCP in this subnet.
 The <code class="docutils literal notranslate"><span class="pre">allocation_pools</span></code> block is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">end</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">start</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">end</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ending address.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">start</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The starting address.</p></li>
 </ul>
 </dd></dl>
 
@@ -4172,8 +4178,8 @@ with IPs from this subnet (not including local subnet route). The host_route
 object structure is documented below. Changing this updates the host routes
 for the existing subnet.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">destination_cidr</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">next_hop</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">destination_cidr</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The destination CIDR.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">next_hop</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The next hop in the route.</p></li>
 </ul>
 </dd></dl>
 
@@ -4334,18 +4340,18 @@ create a subnet for another tenant. Changing this creates a new subnet.</p></li>
 </dl>
 <p>The <strong>allocation_pools</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">end</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">start</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">end</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ending address.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">start</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The starting address.</p></li>
 </ul>
 <p>The <strong>allocation_pools_collection</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">end</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">start</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">end</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ending address.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">start</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The starting address.</p></li>
 </ul>
 <p>The <strong>host_routes</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">destination_cidr</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">next_hop</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">destination_cidr</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The destination CIDR.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">next_hop</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The next hop in the route.</p></li>
 </ul>
 </dd></dl>
 
@@ -4822,9 +4828,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 updates the name of the existing trunk.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique name for the trunk. Changing this
 updates the <code class="docutils literal notranslate"><span class="pre">name</span></code> of an existing trunk.</p></li>
-<li><p><strong>port_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the port to be used as the parent port of the
-trunk. This is the port that should be used as the compute instance network
-port. Changing this creates a new trunk.</p></li>
+<li><p><strong>port_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the port to be made a subport of the trunk.</p></li>
 <li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 networking client.
 A networking client is needed to create a trunk. If omitted, the
 <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
@@ -4839,11 +4843,9 @@ to create a trunk on behalf of another tenant. Changing this creates a new trunk
 </dl>
 <p>The <strong>sub_ports</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">port_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the port to be used as the parent port of the
-trunk. This is the port that should be used as the compute instance network
-port. Changing this creates a new trunk.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">segmentation_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">segmentationType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the port to be made a subport of the trunk.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">segmentation_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The numeric id of the subport segment.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">segmentationType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The segmentation technology to use, e.g., “vlan”.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_openstack.networking.Trunk.admin_state_up">
@@ -4877,9 +4879,7 @@ updates the <code class="docutils literal notranslate"><span class="pre">name</s
 <dl class="attribute">
 <dt id="pulumi_openstack.networking.Trunk.port_id">
 <code class="sig-name descname">port_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.networking.Trunk.port_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The ID of the port to be used as the parent port of the
-trunk. This is the port that should be used as the compute instance network
-port. Changing this creates a new trunk.</p>
+<dd><p>The ID of the port to be made a subport of the trunk.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -4897,11 +4897,9 @@ trunk.</p>
 <dd><p>The set of ports that will be made subports of the trunk.
 The structure of each subport is described below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">port_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the port to be used as the parent port of the
-trunk. This is the port that should be used as the compute instance network
-port. Changing this creates a new trunk.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">segmentation_id</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">segmentationType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the port to be made a subport of the trunk.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">segmentation_id</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The numeric id of the subport segment.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">segmentationType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The segmentation technology to use, e.g., “vlan”.</p></li>
 </ul>
 </dd></dl>
 
@@ -4938,9 +4936,7 @@ explicitly and implicitly added.</p></li>
 updates the name of the existing trunk.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique name for the trunk. Changing this
 updates the <code class="docutils literal notranslate"><span class="pre">name</span></code> of an existing trunk.</p></li>
-<li><p><strong>port_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the port to be used as the parent port of the
-trunk. This is the port that should be used as the compute instance network
-port. Changing this creates a new trunk.</p></li>
+<li><p><strong>port_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the port to be made a subport of the trunk.</p></li>
 <li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V2 networking client.
 A networking client is needed to create a trunk. If omitted, the
 <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this creates a new
@@ -4955,11 +4951,9 @@ to create a trunk on behalf of another tenant. Changing this creates a new trunk
 </dl>
 <p>The <strong>sub_ports</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">port_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the port to be used as the parent port of the
-trunk. This is the port that should be used as the compute instance network
-port. Changing this creates a new trunk.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">segmentation_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">segmentationType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the port to be made a subport of the trunk.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">segmentation_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The numeric id of the subport segment.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">segmentationType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The segmentation technology to use, e.g., “vlan”.</p></li>
 </ul>
 </dd></dl>
 
@@ -5245,6 +5239,7 @@ A Networking client is needed to retrieve a QoS policy ID. If omitted, the
 <li><p><strong>admin_state_up</strong> (<em>bool</em>) – Administrative up/down status for the router (must be “true” or “false” if provided).</p></li>
 <li><p><strong>description</strong> (<em>str</em>) – Human-readable description of the router.</p></li>
 <li><p><strong>distributed</strong> (<em>bool</em>) – Indicates whether or not to get a distributed router.</p></li>
+<li><p><strong>enable_snat</strong> (<em>bool</em>) – The value that points out if the Source NAT is enabled on the router.</p></li>
 <li><p><strong>name</strong> (<em>str</em>) – The name of the router.</p></li>
 <li><p><strong>region</strong> (<em>str</em>) – The region in which to obtain the V2 Neutron client.
 A Neutron client is needed to retrieve router ids. If omitted, the
