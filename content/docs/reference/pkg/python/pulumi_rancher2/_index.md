@@ -14289,6 +14289,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>annotations</strong> (<em>dict</em>) – (Computed) Annotations for the catalog (map)</p></li>
 <li><p><strong>name</strong> (<em>str</em>) – The app name (string)</p></li>
 <li><p><strong>project_id</strong> (<em>str</em>) – The id of the project where the app is deployed (string)</p></li>
 <li><p><strong>target_namespace</strong> (<em>str</em>) – The namespace name where the app is deployed (string)</p></li>
@@ -14393,6 +14394,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>cluster_id</strong> (<em>str</em>) – The cluster id where create cluster alert rule (string)</p></li>
+<li><p><strong>labels</strong> (<em>dict</em>) – (Computed) The cluster alert rule labels (map)</p></li>
 <li><p><strong>name</strong> (<em>str</em>) – The cluster alert rule name (string)</p></li>
 </ul>
 </dd>
@@ -14464,7 +14466,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The cluster template name (string)</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>annotations</strong> (<em>dict</em>) – (Computed) Annotations for the cluster template (map)</p></li>
+<li><p><strong>labels</strong> (<em>dict</em>) – (Computed) Labels for the cluster template (map)</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – The cluster template name (string)</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
@@ -14578,7 +14584,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the Node Template (string)</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – The name of the Node Template (string)</p></li>
+<li><p><strong>use_internal_ip_address</strong> (<em>bool</em>) – (Computed) Engine storage driver for the node template (bool)</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
@@ -14766,6 +14775,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>labels</strong> (<em>dict</em>) – (Computed) The project alert rule labels (map)</p></li>
 <li><p><strong>name</strong> (<em>str</em>) – The project alert rule name (string)</p></li>
 <li><p><strong>project_id</strong> (<em>str</em>) – The project id where create project alert rule (string)</p></li>
 </ul>
