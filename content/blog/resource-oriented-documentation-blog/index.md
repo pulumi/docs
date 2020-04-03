@@ -21,7 +21,7 @@ In short, our docs are now resource-oriented.  Each resource is presented on a s
 
 API docs for each language are still available and are deep-linked. In general, we will lead with this resource-oriented format throughout our content as a canonical, language-agnostic reference for all Pulumi resources.
 
-We've rolled this out these for AWS, Azure, and GCP, and other providers, including Kubernetes, will appear soon. 
+We've rolled this out these for AWS, Azure, and GCP, and other providers, including Kubernetes, will appear soon.
 
 We'd love your feedback on the new docs either in #docs, in GitHub, or via the <i class="fas fa-thumbs-up"></i> / <i class="fas fa-thumbs-down"></i> buttons on the site.
 
