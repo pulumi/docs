@@ -17,8 +17,9 @@ A tag is simply a key/value label that you can apply to your AWS infrastructure 
 
 Specifying a tag in your infrastructure as code is easy. Not all resources are taggable (although the most important ones are); to tag a resource, simply specify a map of key/values using the `tags` property. For example, this code declares an S3 Bucket that carries three tags that enable cost allocation reporting: `"user:Project"`, `"user:Stack"`, and `"user:Cost Center"`:
 
-{{< langchoose csharp >}}
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
 
+{{% choosable language javascript %}}
 ```javascript
 let aws = require("@pulumi/aws");
 let pulumi = require("@pulumi/pulumi");
@@ -33,7 +34,9 @@ let bucket = new aws.s3.Bucket("my-bucket", {
     },
 });
 ```
+{{% /choosable %}}
 
+{{% choosable language typescript %}}
 ```typescript
 import * as aws from "@pulumi/aws";
 import * as pulumi from "@pulumi/pulumi";
@@ -48,7 +51,9 @@ const bucket = new aws.s3.Bucket("my-bucket", {
     },
 });
 ```
+{{% /choosable %}}
 
+{{% choosable language python %}}
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -63,7 +68,9 @@ bucket = aws.s3.Bucket('my-bucket',
     },
 )
 ```
+{{% /choosable %}}
 
+{{% choosable language go %}}
 ```go
 package main
 
@@ -87,7 +94,9 @@ func main() {
     }
 }
 ```
+{{% /choosable %}}
 
+{{% choosable language csharp %}}
 ```csharp
 using Pulumi;
 using Pulumi.Aws.S3;
@@ -110,6 +119,9 @@ class Program {
     }
 }
 ```
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 In this example, we're using the project and stack names from the current project, and requiring an explicit cost center configured using `pulumi config set costCenter 11223344`. Of course, this is just for illustration purposes &mdash; we could easily used anything for these keys and values.
 
@@ -121,33 +133,45 @@ Policy as Code is a way to enforce infrastructure policies, such as ensuring we'
 
 Imagine we forgot to tag our S3 Bucket from earlier:
 
-{{< langchoose csharp >}}
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
 
+{{% choosable language javascript %}}
 ```javascript
 // Oops -- no tags!
 let bucket = new aws.s3.Bucket("my-bucket");
 ```
+{{% /choosable %}}
 
+{{% choosable language typescript %}}
 ```typescript
 // Oops -- no tags!
 const bucket = new aws.s3.Bucket("my-bucket");
 ```
+{{% /choosable %}}
 
+{{% choosable language python %}}
 ```python
 # Oops -- no tags!
 bucket = aws.s3.Bucket('my-bucket')
 ```
+{{% /choosable %}}
 
+{{% choosable language go %}}
 ```go
 // Oops -- no tags!
 _, err := s3.NewBucket(ctx, "my-bucket", nil)
 return err
 ```
+{{% /choosable %}}
 
+{{% choosable language csharp %}}
 ```csharp
 // Oops -- no tags!
 var bucket = new Bucket("my-bucket");
 ```
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 By applying the policy defined below, deployments that are missing the required tags will fail:
 
@@ -160,11 +184,13 @@ This approach not only ensures we don't forget, but if you're an infrastructure 
 This policy is ultimately defined as a simple policy pack as follows:
 
 <!--
-    NOTE: we repeat for languages that aren't TypeScript, because otherwise they'd be
-    hidden based on the above language chooser selection. We are close to being able to
-    have a Python example, however it doesn't yet support configuration.
+    NOTE: Ideally we'd add the other PaC authoring languages as they become available.
+    For now, we limit it to JavaScript and TypeScript only.
 -->
 
+{{< chooser language "javascript,typescript" local >}}
+
+{{% choosable language javascript %}}
 ```javascript
 let policy = require("@pulumi/policy");
 let isTaggable = require("../lib/taggable").isTaggable;
@@ -197,7 +223,9 @@ new policy.PolicyPack("aws-tags-policies", {
     }],
 });
 ```
+{{% /choosable %}}
 
+{{% choosable language "typescript" %}}
 ```typescript
 import * as policy from "@pulumi/policy";
 import { isTaggable } from "../lib/taggable";
@@ -234,117 +262,9 @@ interface AwsTagsPolicyConfig {
     requiredTags?: string[];
 }
 ```
+{{% /choosable %}}
 
-```python
-import * as policy from "@pulumi/policy";
-import { isTaggable } from "../lib/taggable";
-
-new policy.PolicyPack("aws-tags-policies", {
-    policies: [{
-        name: "check-required-tags",
-        description: "Ensure required tags are present on all AWS resources.",
-        configSchema: {
-            properties: {
-                requiredTags: {
-                    type: "array",
-                    items: { type: "string" },
-                },
-            },
-        },
-        validateResource: (args, reportViolation) => {
-            const config = args.getConfig<AwsTagsPolicyConfig>();
-            const requiredTags = config.requiredTags;
-            if (requiredTags && isTaggable(args.type)) {
-                const ts = args.props[tags];
-                for (const rt of requiredTags) {
-                    if (!ts || !ts[rt]) {
-                        reportViolation(
-                            `Taggable resource '${args.urn}' is missing required tag '${rt}'`);
-                    }
-                }
-            }
-        },
-    }],
-});
-
-interface AwsTagsPolicyConfig {
-    requiredTags?: string[];
-}
-```
-
-```go
-import * as policy from "@pulumi/policy";
-import { isTaggable } from "../lib/taggable";
-
-new policy.PolicyPack("aws-tags-policies", {
-    policies: [{
-        name: "check-required-tags",
-        description: "Ensure required tags are present on all AWS resources.",
-        configSchema: {
-            properties: {
-                requiredTags: {
-                    type: "array",
-                    items: { type: "string" },
-                },
-            },
-        },
-        validateResource: (args, reportViolation) => {
-            const config = args.getConfig<AwsTagsPolicyConfig>();
-            const requiredTags = config.requiredTags;
-            if (requiredTags && isTaggable(args.type)) {
-                const ts = args.props[tags];
-                for (const rt of requiredTags) {
-                    if (!ts || !ts[rt]) {
-                        reportViolation(
-                            `Taggable resource '${args.urn}' is missing required tag '${rt}'`);
-                    }
-                }
-            }
-        },
-    }],
-});
-
-interface AwsTagsPolicyConfig {
-    requiredTags?: string[];
-}
-```
-
-```csharp
-import * as policy from "@pulumi/policy";
-import { isTaggable } from "../lib/taggable";
-
-new policy.PolicyPack("aws-tags-policies", {
-    policies: [{
-        name: "check-required-tags",
-        description: "Ensure required tags are present on all AWS resources.",
-        configSchema: {
-            properties: {
-                requiredTags: {
-                    type: "array",
-                    items: { type: "string" },
-                },
-            },
-        },
-        validateResource: (args, reportViolation) => {
-            const config = args.getConfig<AwsTagsPolicyConfig>();
-            const requiredTags = config.requiredTags;
-            if (requiredTags && isTaggable(args.type)) {
-                const ts = args.props[tags];
-                for (const rt of requiredTags) {
-                    if (!ts || !ts[rt]) {
-                        reportViolation(
-                            `Taggable resource '${args.urn}' is missing required tag '${rt}'`);
-                    }
-                }
-            }
-        },
-    }],
-});
-
-interface AwsTagsPolicyConfig {
-    requiredTags?: string[];
-}
-```
+{{< /chooser >}}
 
 This project defines a _policy pack_ containing a set of _policy rules_, in this case, just one. That rule takes in a configurable set of tags to ensure exist on every taggable AWS resource. If a tag is missing, that is reported as a violation, and the deployment fails.
 
@@ -425,8 +345,9 @@ This is great &mdash; we can now rest assured that all taggable AWS resources wi
 
 To do that, let's write a function that detects taggable resources and merges in automatic tags:
 
-{{< langchoose csharp >}}
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
 
+{{% choosable language javascript %}}
 ```javascript
 let pulumi = require("@pulumi/pulumi");
 let isTaggable = require("./taggable").isTaggable;
@@ -446,7 +367,9 @@ module.exports = {
     },
 };
 ```
+{{% /choosable %}}
 
+{{% choosable language typescript %}}
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import { isTaggable } from "./taggable";
@@ -465,7 +388,9 @@ export function registerAutoTags(autoTags: Record<string, string>): void {
     });
 }
 ```
+{{% /choosable %}}
 
+{{% choosable language python %}}
 ```python
 import pulumi
 from taggable import is_taggable
@@ -481,49 +406,53 @@ def auto_tag(args, auto_tags):
         args.props['tags'] = {**(args.props['tags'] or {}), **auto_tags}
         return pulumi.ResourceTransformationResult(args.props, args.opts)
 ```
+{{% /choosable %}}
 
+{{% choosable language go %}}
 ```go
 package main
 
 import (
-	"reflect"
+    "reflect"
 
-	"github.com/pulumi/pulumi/sdk/go/pulumi"
+    "github.com/pulumi/pulumi/sdk/go/pulumi"
 )
 
 // registerAutoTags registers a global stack transformation that merges a set
 // of tags with whatever was also explicitly added to the resource definition.
 func registerAutoTags(ctx *pulumi.Context, autoTags map[string]string) {
-	ctx.RegisterStackTransformation(
-		func(args *pulumi.ResourceTransformationArgs) *pulumi.ResourceTransformationResult {
-			if isTaggable(args.Type) {
+    ctx.RegisterStackTransformation(
+        func(args *pulumi.ResourceTransformationArgs) *pulumi.ResourceTransformationResult {
+            if isTaggable(args.Type) {
                 // Use reflection to look up the Tags property and merge the auto-tags.
-				ptr := reflect.ValueOf(args.Props)
-				val := ptr.Elem()
-				tags := val.FieldByName("Tags")
+                ptr := reflect.ValueOf(args.Props)
+                val := ptr.Elem()
+                tags := val.FieldByName("Tags")
 
-				var tagsMap pulumi.Map
-				if !tags.IsZero() {
-					tagsMap = tags.Interface().(pulumi.Map)
-				} else {
-					tagsMap = pulumi.Map(map[string]pulumi.Input{})
-				}
-				for k, v := range autoTags {
-					tagsMap[k] = pulumi.String(v)
-				}
-				tags.Set(reflect.ValueOf(tagsMap))
+                var tagsMap pulumi.Map
+                if !tags.IsZero() {
+                    tagsMap = tags.Interface().(pulumi.Map)
+                } else {
+                    tagsMap = pulumi.Map(map[string]pulumi.Input{})
+                }
+                for k, v := range autoTags {
+                    tagsMap[k] = pulumi.String(v)
+                }
+                tags.Set(reflect.ValueOf(tagsMap))
 
-				return &pulumi.ResourceTransformationResult{
-					Props: args.Props,
-					Opts:  args.Opts,
-				}
-			}
-			return nil
-		},
-	)
+                return &pulumi.ResourceTransformationResult{
+                    Props: args.Props,
+                    Opts:  args.Opts,
+                }
+            }
+            return nil
+        },
+    )
 }
 ```
+{{% /choosable %}}
 
+{{% choosable language csharp %}}
 ```csharp
 static ResourceTransformation RegisterAutoTags(Dictionary<string, string> autoTags) {
     return args => {
@@ -541,9 +470,15 @@ static ResourceTransformation RegisterAutoTags(Dictionary<string, string> autoTa
     };
 }
 ```
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 Now we can go back to our main program, use this new module, remove the explicit tags, and every taggable AWS resource we create will automatically get the tags we've specified:
 
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
+
+{{% choosable language javascript %}}
 ```javascript
 let aws = require("@pulumi/aws");
 let pulumi = require("@pulumi/pulumi");
@@ -574,7 +509,9 @@ let server = new aws.ec2.Instance("web-server-www", {
     vpcSecurityGroupIds: [ group.id ],
 });
 ```
+{{% /choosable %}}
 
+{{% choosable language typescript %}}
 ```typescript
 import * as aws from "@pulumi/aws";
 import * as pulumi from "@pulumi/pulumi";
@@ -605,7 +542,9 @@ const server = new aws.ec2.Instance("web-server-www", {
     vpcSecurityGroupIds: [ group.id ],
 });
 ```
+{{% /choosable %}}
 
+{{% choosable language python %}}
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -636,7 +575,9 @@ server = aws.ec2.Instance('web-server-www',
     vpc_security_group_ids: [ group.id ],
 )
 ```
+{{% /choosable %}}
 
+{{% choosable language go %}}
 ```go
 package main
 
@@ -686,7 +627,9 @@ func main() {
     }
 }
 ```
+{{% /choosable %}}
 
+{{% choosable language csharp %}}
 ```csharp
 using Pulumi;
 using Pulumi.Aws.Ec2;
@@ -729,6 +672,9 @@ class MyStack : Stack {
     }
 }
 ```
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 Notice that we didn't specify any tags by hand for the resource definitions and yet if we run a `pulumi preview --diff`, we will see that the correct tags are actually applied automatically, thanks to the global stack transformation:
 
