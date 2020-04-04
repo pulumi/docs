@@ -9,8 +9,8 @@ block_external_search_index: true
 
 <h3>Resources</h3>
 <ul class="api">
-    <li><a href="runtimeclass"><span class="symbol resource"></span>RuntimeClass</a></li>
-    <li><a href="runtimeclasslist"><span class="symbol resource"></span>RuntimeClassList</a></li>
+    <li><a href="runtimeclass" title="RuntimeClass"><span class="symbol resource"></span>RuntimeClass</a></li>
+    <li><a href="runtimeclasslist" title="RuntimeClassList"><span class="symbol resource"></span>RuntimeClassList</a></li>
 </ul>
 
 <h3>Package Details</h3>

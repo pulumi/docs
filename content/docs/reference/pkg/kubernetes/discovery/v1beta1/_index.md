@@ -9,8 +9,8 @@ block_external_search_index: true
 
 <h3>Resources</h3>
 <ul class="api">
-    <li><a href="endpointslice"><span class="symbol resource"></span>EndpointSlice</a></li>
-    <li><a href="endpointslicelist"><span class="symbol resource"></span>EndpointSliceList</a></li>
+    <li><a href="endpointslice" title="EndpointSlice"><span class="symbol resource"></span>EndpointSlice</a></li>
+    <li><a href="endpointslicelist" title="EndpointSliceList"><span class="symbol resource"></span>EndpointSliceList</a></li>
 </ul>
 
 <h3>Package Details</h3>

@@ -9,18 +9,18 @@ block_external_search_index: true
 
 <h3>Resources</h3>
 <ul class="api">
-    <li><a href="daemonset"><span class="symbol resource"></span>DaemonSet</a></li>
-    <li><a href="daemonsetlist"><span class="symbol resource"></span>DaemonSetList</a></li>
-    <li><a href="deployment"><span class="symbol resource"></span>Deployment</a></li>
-    <li><a href="deploymentlist"><span class="symbol resource"></span>DeploymentList</a></li>
-    <li><a href="ingress"><span class="symbol resource"></span>Ingress</a></li>
-    <li><a href="ingresslist"><span class="symbol resource"></span>IngressList</a></li>
-    <li><a href="networkpolicy"><span class="symbol resource"></span>NetworkPolicy</a></li>
-    <li><a href="networkpolicylist"><span class="symbol resource"></span>NetworkPolicyList</a></li>
-    <li><a href="podsecuritypolicy"><span class="symbol resource"></span>PodSecurityPolicy</a></li>
-    <li><a href="podsecuritypolicylist"><span class="symbol resource"></span>PodSecurityPolicyList</a></li>
-    <li><a href="replicaset"><span class="symbol resource"></span>ReplicaSet</a></li>
-    <li><a href="replicasetlist"><span class="symbol resource"></span>ReplicaSetList</a></li>
+    <li><a href="daemonset" title="DaemonSet"><span class="symbol resource"></span>DaemonSet</a></li>
+    <li><a href="daemonsetlist" title="DaemonSetList"><span class="symbol resource"></span>DaemonSetList</a></li>
+    <li><a href="deployment" title="Deployment"><span class="symbol resource"></span>Deployment</a></li>
+    <li><a href="deploymentlist" title="DeploymentList"><span class="symbol resource"></span>DeploymentList</a></li>
+    <li><a href="ingress" title="Ingress"><span class="symbol resource"></span>Ingress</a></li>
+    <li><a href="ingresslist" title="IngressList"><span class="symbol resource"></span>IngressList</a></li>
+    <li><a href="networkpolicy" title="NetworkPolicy"><span class="symbol resource"></span>NetworkPolicy</a></li>
+    <li><a href="networkpolicylist" title="NetworkPolicyList"><span class="symbol resource"></span>NetworkPolicyList</a></li>
+    <li><a href="podsecuritypolicy" title="PodSecurityPolicy"><span class="symbol resource"></span>PodSecurityPolicy</a></li>
+    <li><a href="podsecuritypolicylist" title="PodSecurityPolicyList"><span class="symbol resource"></span>PodSecurityPolicyList</a></li>
+    <li><a href="replicaset" title="ReplicaSet"><span class="symbol resource"></span>ReplicaSet</a></li>
+    <li><a href="replicasetlist" title="ReplicaSetList"><span class="symbol resource"></span>ReplicaSetList</a></li>
 </ul>
 
 <h3>Package Details</h3>

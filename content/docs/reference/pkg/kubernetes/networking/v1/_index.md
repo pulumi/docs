@@ -9,8 +9,8 @@ block_external_search_index: true
 
 <h3>Resources</h3>
 <ul class="api">
-    <li><a href="networkpolicy"><span class="symbol resource"></span>NetworkPolicy</a></li>
-    <li><a href="networkpolicylist"><span class="symbol resource"></span>NetworkPolicyList</a></li>
+    <li><a href="networkpolicy" title="NetworkPolicy"><span class="symbol resource"></span>NetworkPolicy</a></li>
+    <li><a href="networkpolicylist" title="NetworkPolicyList"><span class="symbol resource"></span>NetworkPolicyList</a></li>
 </ul>
 
 <h3>Package Details</h3>

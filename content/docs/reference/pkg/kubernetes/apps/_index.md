@@ -9,9 +9,9 @@ block_external_search_index: true
 
 <h3>Modules</h3>
 <ul class="api">
-    <li><a href="apps/v1/"><span class="symbol module"></span>apps/v1</a></li>
-    <li><a href="apps/v1beta1/"><span class="symbol module"></span>apps/v1beta1</a></li>
-    <li><a href="apps/v1beta2/"><span class="symbol module"></span>apps/v1beta2</a></li>
+    <li><a href="v1/" title="v1"><span class="symbol module"></span>v1</a></li>
+    <li><a href="v1beta1/" title="v1beta1"><span class="symbol module"></span>v1beta1</a></li>
+    <li><a href="v1beta2/" title="v1beta2"><span class="symbol module"></span>v1beta2</a></li>
 </ul>
 
 <h3>Package Details</h3>

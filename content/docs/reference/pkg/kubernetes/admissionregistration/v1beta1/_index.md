@@ -9,10 +9,10 @@ block_external_search_index: true
 
 <h3>Resources</h3>
 <ul class="api">
-    <li><a href="mutatingwebhookconfiguration"><span class="symbol resource"></span>MutatingWebhookConfiguration</a></li>
-    <li><a href="mutatingwebhookconfigurationlist"><span class="symbol resource"></span>MutatingWebhookConfigurationList</a></li>
-    <li><a href="validatingwebhookconfiguration"><span class="symbol resource"></span>ValidatingWebhookConfiguration</a></li>
-    <li><a href="validatingwebhookconfigurationlist"><span class="symbol resource"></span>ValidatingWebhookConfigurationList</a></li>
+    <li><a href="mutatingwebhookconfiguration" title="MutatingWebhookConfiguration"><span class="symbol resource"></span>MutatingWebhookConfiguration</a></li>
+    <li><a href="mutatingwebhookconfigurationlist" title="MutatingWebhookConfigurationList"><span class="symbol resource"></span>MutatingWebhookConfigurationList</a></li>
+    <li><a href="validatingwebhookconfiguration" title="ValidatingWebhookConfiguration"><span class="symbol resource"></span>ValidatingWebhookConfiguration</a></li>
+    <li><a href="validatingwebhookconfigurationlist" title="ValidatingWebhookConfigurationList"><span class="symbol resource"></span>ValidatingWebhookConfigurationList</a></li>
 </ul>
 
 <h3>Package Details</h3>

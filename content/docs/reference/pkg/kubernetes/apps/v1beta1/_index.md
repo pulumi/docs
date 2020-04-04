@@ -9,12 +9,12 @@ block_external_search_index: true
 
 <h3>Resources</h3>
 <ul class="api">
-    <li><a href="controllerrevision"><span class="symbol resource"></span>ControllerRevision</a></li>
-    <li><a href="controllerrevisionlist"><span class="symbol resource"></span>ControllerRevisionList</a></li>
-    <li><a href="deployment"><span class="symbol resource"></span>Deployment</a></li>
-    <li><a href="deploymentlist"><span class="symbol resource"></span>DeploymentList</a></li>
-    <li><a href="statefulset"><span class="symbol resource"></span>StatefulSet</a></li>
-    <li><a href="statefulsetlist"><span class="symbol resource"></span>StatefulSetList</a></li>
+    <li><a href="controllerrevision" title="ControllerRevision"><span class="symbol resource"></span>ControllerRevision</a></li>
+    <li><a href="controllerrevisionlist" title="ControllerRevisionList"><span class="symbol resource"></span>ControllerRevisionList</a></li>
+    <li><a href="deployment" title="Deployment"><span class="symbol resource"></span>Deployment</a></li>
+    <li><a href="deploymentlist" title="DeploymentList"><span class="symbol resource"></span>DeploymentList</a></li>
+    <li><a href="statefulset" title="StatefulSet"><span class="symbol resource"></span>StatefulSet</a></li>
+    <li><a href="statefulsetlist" title="StatefulSetList"><span class="symbol resource"></span>StatefulSetList</a></li>
 </ul>
 
 <h3>Package Details</h3>

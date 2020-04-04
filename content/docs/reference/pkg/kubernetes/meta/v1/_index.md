@@ -9,7 +9,7 @@ block_external_search_index: true
 
 <h3>Resources</h3>
 <ul class="api">
-    <li><a href="status"><span class="symbol resource"></span>Status</a></li>
+    <li><a href="status" title="Status"><span class="symbol resource"></span>Status</a></li>
 </ul>
 
 <h3>Package Details</h3>

@@ -9,10 +9,10 @@ block_external_search_index: true
 
 <h3>Resources</h3>
 <ul class="api">
-    <li><a href="flowschema"><span class="symbol resource"></span>FlowSchema</a></li>
-    <li><a href="flowschemalist"><span class="symbol resource"></span>FlowSchemaList</a></li>
-    <li><a href="prioritylevelconfiguration"><span class="symbol resource"></span>PriorityLevelConfiguration</a></li>
-    <li><a href="prioritylevelconfigurationlist"><span class="symbol resource"></span>PriorityLevelConfigurationList</a></li>
+    <li><a href="flowschema" title="FlowSchema"><span class="symbol resource"></span>FlowSchema</a></li>
+    <li><a href="flowschemalist" title="FlowSchemaList"><span class="symbol resource"></span>FlowSchemaList</a></li>
+    <li><a href="prioritylevelconfiguration" title="PriorityLevelConfiguration"><span class="symbol resource"></span>PriorityLevelConfiguration</a></li>
+    <li><a href="prioritylevelconfigurationlist" title="PriorityLevelConfigurationList"><span class="symbol resource"></span>PriorityLevelConfigurationList</a></li>
 </ul>
 
 <h3>Package Details</h3>

@@ -9,8 +9,8 @@ block_external_search_index: true
 
 <h3>Resources</h3>
 <ul class="api">
-    <li><a href="horizontalpodautoscaler"><span class="symbol resource"></span>HorizontalPodAutoscaler</a></li>
-    <li><a href="horizontalpodautoscalerlist"><span class="symbol resource"></span>HorizontalPodAutoscalerList</a></li>
+    <li><a href="horizontalpodautoscaler" title="HorizontalPodAutoscaler"><span class="symbol resource"></span>HorizontalPodAutoscaler</a></li>
+    <li><a href="horizontalpodautoscalerlist" title="HorizontalPodAutoscalerList"><span class="symbol resource"></span>HorizontalPodAutoscalerList</a></li>
 </ul>
 
 <h3>Package Details</h3>

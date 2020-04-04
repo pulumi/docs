@@ -9,8 +9,8 @@ block_external_search_index: true
 
 <h3>Resources</h3>
 <ul class="api">
-    <li><a href="tokenrequest"><span class="symbol resource"></span>TokenRequest</a></li>
-    <li><a href="tokenreview"><span class="symbol resource"></span>TokenReview</a></li>
+    <li><a href="tokenrequest" title="TokenRequest"><span class="symbol resource"></span>TokenRequest</a></li>
+    <li><a href="tokenreview" title="TokenReview"><span class="symbol resource"></span>TokenReview</a></li>
 </ul>
 
 <h3>Package Details</h3>

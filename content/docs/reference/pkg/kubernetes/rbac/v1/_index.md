@@ -9,14 +9,14 @@ block_external_search_index: true
 
 <h3>Resources</h3>
 <ul class="api">
-    <li><a href="clusterrole"><span class="symbol resource"></span>ClusterRole</a></li>
-    <li><a href="clusterrolebinding"><span class="symbol resource"></span>ClusterRoleBinding</a></li>
-    <li><a href="clusterrolebindinglist"><span class="symbol resource"></span>ClusterRoleBindingList</a></li>
-    <li><a href="clusterrolelist"><span class="symbol resource"></span>ClusterRoleList</a></li>
-    <li><a href="role"><span class="symbol resource"></span>Role</a></li>
-    <li><a href="rolebinding"><span class="symbol resource"></span>RoleBinding</a></li>
-    <li><a href="rolebindinglist"><span class="symbol resource"></span>RoleBindingList</a></li>
-    <li><a href="rolelist"><span class="symbol resource"></span>RoleList</a></li>
+    <li><a href="clusterrole" title="ClusterRole"><span class="symbol resource"></span>ClusterRole</a></li>
+    <li><a href="clusterrolebinding" title="ClusterRoleBinding"><span class="symbol resource"></span>ClusterRoleBinding</a></li>
+    <li><a href="clusterrolebindinglist" title="ClusterRoleBindingList"><span class="symbol resource"></span>ClusterRoleBindingList</a></li>
+    <li><a href="clusterrolelist" title="ClusterRoleList"><span class="symbol resource"></span>ClusterRoleList</a></li>
+    <li><a href="role" title="Role"><span class="symbol resource"></span>Role</a></li>
+    <li><a href="rolebinding" title="RoleBinding"><span class="symbol resource"></span>RoleBinding</a></li>
+    <li><a href="rolebindinglist" title="RoleBindingList"><span class="symbol resource"></span>RoleBindingList</a></li>
+    <li><a href="rolelist" title="RoleList"><span class="symbol resource"></span>RoleList</a></li>
 </ul>
 
 <h3>Package Details</h3>

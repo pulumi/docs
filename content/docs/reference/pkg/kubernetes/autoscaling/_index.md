@@ -9,9 +9,9 @@ block_external_search_index: true
 
 <h3>Modules</h3>
 <ul class="api">
-    <li><a href="autoscaling/v1/"><span class="symbol module"></span>autoscaling/v1</a></li>
-    <li><a href="autoscaling/v2beta1/"><span class="symbol module"></span>autoscaling/v2beta1</a></li>
-    <li><a href="autoscaling/v2beta2/"><span class="symbol module"></span>autoscaling/v2beta2</a></li>
+    <li><a href="v1/" title="v1"><span class="symbol module"></span>v1</a></li>
+    <li><a href="v2beta1/" title="v2beta1"><span class="symbol module"></span>v2beta1</a></li>
+    <li><a href="v2beta2/" title="v2beta2"><span class="symbol module"></span>v2beta2</a></li>
 </ul>
 
 <h3>Package Details</h3>

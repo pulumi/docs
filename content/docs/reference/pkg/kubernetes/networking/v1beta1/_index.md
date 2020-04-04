@@ -9,10 +9,10 @@ block_external_search_index: true
 
 <h3>Resources</h3>
 <ul class="api">
-    <li><a href="ingress"><span class="symbol resource"></span>Ingress</a></li>
-    <li><a href="ingressclass"><span class="symbol resource"></span>IngressClass</a></li>
-    <li><a href="ingressclasslist"><span class="symbol resource"></span>IngressClassList</a></li>
-    <li><a href="ingresslist"><span class="symbol resource"></span>IngressList</a></li>
+    <li><a href="ingress" title="Ingress"><span class="symbol resource"></span>Ingress</a></li>
+    <li><a href="ingressclass" title="IngressClass"><span class="symbol resource"></span>IngressClass</a></li>
+    <li><a href="ingressclasslist" title="IngressClassList"><span class="symbol resource"></span>IngressClassList</a></li>
+    <li><a href="ingresslist" title="IngressList"><span class="symbol resource"></span>IngressList</a></li>
 </ul>
 
 <h3>Package Details</h3>
