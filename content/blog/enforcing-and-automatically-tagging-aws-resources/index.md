@@ -3,7 +3,7 @@ date: "2020-04-03"
 title: "Enforcing and Automatically Tagging AWS Resources"
 authors: ["joe-duffy"]
 tags: ["AWS", "policy-as-code"]
-meta_desc: "Tagging resources is an AWS best practice. In this post, learn how to enforce, and easy wasys to automate, tagging your infrastructure reliably."
+meta_desc: "Tagging resources is an AWS best practice. In this post, learn how to enforce and automate tagging your infrastructure easily and reliably."
 meta_image: "pac-tags-meta.png"
 ---
 
@@ -11,11 +11,11 @@ AWS publishes best practices for how to tag your resources for cost tracking, au
 
 ## Why Tag Your Resources?
 
-A tag is simply a key/value label that you can apply to your AWS infrastructure resources. This enables you to manage, search for, and filter resources. There aren't any predefined tags &mdash; you can use whatever makes sense for your scenario and business requirements.
+A tag is simply a key/value label that you can apply to your AWS infrastructure resources. Tags enable you to manage, search for, and filter resources. There aren't any predefined tags &mdash; you can use whatever makes sense for your scenario and business requirements.
 
-[Amazon recommends a number of tagging strategies](https://aws.amazon.com/answers/account-management/aws-tagging-strategies/), including technical tags like name and environment, automation tags like dates and security requirements, business tags like owner and cost center, and security tags for compliance. Each of these enables you to apply policies.
+[Amazon recommends many tagging strategies](https://aws.amazon.com/answers/account-management/aws-tagging-strategies/), including technical tags like name and environment, automation tags like dates and security requirements, business tags like owner and cost center, and security tags for compliance. Each of these enables you to apply policies.
 
-Specifying a tag in your infrastructure as code is easy. Not all resources are taggable (although the most important ones are); to tag a resource, simply specify a map of key/values using the `tags` property. For example, this code declares an S3 Bucket that carries three tags that enable cost allocation reporting: `"user:Project"`, `"user:Stack"`, and `"user:Cost Center"`:
+Specifying a tag in your Infrastructure as Code is easy. Not all resources are taggable (although the most important ones are); to tag a resource, specify a map of key/values using the `tags` property. For example, this code declares an S3 Bucket that carries three tags that enable cost allocation reporting: `"user:Project"`, `"user:Stack"`, and `"user:Cost Center"`:
 
 {{< langchoose csharp >}}
 
@@ -111,7 +111,7 @@ class Program {
 }
 ```
 
-In this example, we're using the project and stack names from the current project, and requiring an explicit cost center configured using `pulumi config set costCenter 11223344`. Of course, this is just for illustration purposes &mdash; we could easily used anything for these keys and values.
+In this example, we're using the project and stack names from the current project, and requiring an explicit cost center configured using `pulumi config set costCenter 11223344`. Of course, this is just for illustration purposes &mdash; we can easily use anything for these keys and values.
 
 Suppose our team requires certain tags, though: How do we ensure we don't forget them?
 
@@ -346,7 +346,7 @@ interface AwsTagsPolicyConfig {
 }
 ```
 
-This project defines a _policy pack_ containing a set of _policy rules_, in this case, just one. That rule takes in a configurable set of tags to ensure exist on every taggable AWS resource. If a tag is missing, that is reported as a violation, and the deployment fails.
+This project defines a _policy pack_ containing a set of _policy rules_, in this case, just one. That rule takes in a configurable set of tags to ensure they exist on every taggable AWS resource. If a tag is missing, a violation is reported and the deployment fails.
 
 > This leverages a library that helps to identify taggable AWS resources (see this gist for the full details). Although this policy is written in TypeScript, it can be applied to stacks written in any language.
 
@@ -354,7 +354,7 @@ At this point, we can apply our policy pack to our infrastructure project in two
 
 ### Applying Tags Enforcement in the CLI
 
-This policy pack is configurable so that you can enforce whatever tags you want to use without needing to change the pack's code. This makes it more reusable. For the CLI scenario, we will create a `policy-config.json` file that specifies those same three required tags shown above:
+This policy pack is configurable so that you can enforce arbitrary tags without needing to change the pack's code, making it reusable. For the CLI scenario, we will create a `policy-config.json` file that specifies the same three required tags shown above:
 
 ```json
 {
@@ -379,7 +379,7 @@ $ pulumi up \
 
 ### Applying Tags Enforcement in the SaaS Console
 
-It's nice to be able to use the CLI for this &mdash; and all of that is available in open source and no matter whether you're using the SaaS or not. However, it requires manually distributing policy packs and remembering to pass `--policy-pack` with the right configuration for every update.
+It's nice to be able to use the CLI for this &mdash; and all of that is available in open source, no matter whether you're using the SaaS or not. However, it requires manually distributing policy packs and remembering to pass `--policy-pack` with the right configuration for every update.
 
 The Pulumi Enterprise SaaS console lets you manage policy packs and apply them to your organization's stacks in a central way &mdash; and then every update that the pack is applied to automatically runs the policy checks. Let's give it a try.
 
@@ -399,11 +399,11 @@ This stores the policy pack in the Pulumi SaaS:
 
 ![Policy Pack Page](./pac-pack.png)
 
-From there, we can enable it in the UI. First, we will go to our organization's "POLICIES" tab:
+From there, we can enable it in the UI. First, we go to our organization's "POLICIES" tab:
 
 ![Organization Policies Page](./pac-policies.png)
 
-Every organization gets a default policy group. That's what we'll use here, however, for sophisticated scenarios, you may want multiple policy groups (for instance, to enforce different tags in your production environments than your development ones).
+Every organization gets a default policy group, and that's what we'll use here. However, for sophisticated scenarios, you may want multiple policy groups (for instance, to enforce different tags for your production environments than your development ones).
 
 Let's "ADD" the new pack. This pops a dialog we can use to select the pack, its version, and our desired Enforcement Level (we'll pick "mandatory"):
 
@@ -421,7 +421,7 @@ In all cases, after manually fixing our bucket, and adding the correct tags, the
 
 ![Tag Policy Succeeded](./tag-policy-succeed.png)
 
-This is great &mdash; we can now rest assured that all taggable AWS resources will be tagged before we actually provision them. But it sure is tedious to need to remember to add these tags to every resource and then get policy violations errors anytime we forget. One of the advantages of using Infrastructure as Code is that we can automate injection of these tags.
+This is great &mdash; we can now rest assured that all taggable AWS resources will be tagged before we provision them. But it sure is tedious to add these tags to every resource and then get policy violations errors anytime we forget. One of the advantages of using Infrastructure as Code is that we can automate the injection of these tags.
 
 To do that, let's write a function that detects taggable resources and merges in automatic tags:
 
@@ -730,11 +730,11 @@ class MyStack : Stack {
 }
 ```
 
-Notice that we didn't specify any tags by hand for the resource definitions and yet if we run a `pulumi preview --diff`, we will see that the correct tags are actually applied automatically, thanks to the global stack transformation:
+Notice that we didn't specify any tags by hand for the resource definitions and yet if we run a `pulumi preview --diff`, we see that the correct tags are applied automatically, thanks to the global stack transformation:
 
 ![Policy Pack Page](./pac-autotag.png)
 
-And running an ordinary update will now pass:
+And running an ordinary update now passes:
 
 ![Tag Policy Succeeded (Many Resources)](./tag-policy-succeed-many.png)
 
