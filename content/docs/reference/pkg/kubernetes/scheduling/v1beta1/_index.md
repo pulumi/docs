@@ -9,8 +9,8 @@ block_external_search_index: true
 
 <h3>Resources</h3>
 <ul class="api">
-    <li><a href="priorityclass"><span class="symbol resource"></span>PriorityClass</a></li>
-    <li><a href="priorityclasslist"><span class="symbol resource"></span>PriorityClassList</a></li>
+    <li><a href="priorityclass" title="PriorityClass"><span class="symbol resource"></span>PriorityClass</a></li>
+    <li><a href="priorityclasslist" title="PriorityClassList"><span class="symbol resource"></span>PriorityClassList</a></li>
 </ul>
 
 <h3>Package Details</h3>

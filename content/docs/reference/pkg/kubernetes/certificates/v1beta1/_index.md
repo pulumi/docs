@@ -9,8 +9,8 @@ block_external_search_index: true
 
 <h3>Resources</h3>
 <ul class="api">
-    <li><a href="certificatesigningrequest"><span class="symbol resource"></span>CertificateSigningRequest</a></li>
-    <li><a href="certificatesigningrequestlist"><span class="symbol resource"></span>CertificateSigningRequestList</a></li>
+    <li><a href="certificatesigningrequest" title="CertificateSigningRequest"><span class="symbol resource"></span>CertificateSigningRequest</a></li>
+    <li><a href="certificatesigningrequestlist" title="CertificateSigningRequestList"><span class="symbol resource"></span>CertificateSigningRequestList</a></li>
 </ul>
 
 <h3>Package Details</h3>

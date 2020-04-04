@@ -9,8 +9,8 @@ block_external_search_index: true
 
 <h3>Resources</h3>
 <ul class="api">
-    <li><a href="auditsink"><span class="symbol resource"></span>AuditSink</a></li>
-    <li><a href="auditsinklist"><span class="symbol resource"></span>AuditSinkList</a></li>
+    <li><a href="auditsink" title="AuditSink"><span class="symbol resource"></span>AuditSink</a></li>
+    <li><a href="auditsinklist" title="AuditSinkList"><span class="symbol resource"></span>AuditSinkList</a></li>
 </ul>
 
 <h3>Package Details</h3>

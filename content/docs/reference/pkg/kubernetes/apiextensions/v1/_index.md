@@ -9,8 +9,8 @@ block_external_search_index: true
 
 <h3>Resources</h3>
 <ul class="api">
-    <li><a href="customresourcedefinition"><span class="symbol resource"></span>CustomResourceDefinition</a></li>
-    <li><a href="customresourcedefinitionlist"><span class="symbol resource"></span>CustomResourceDefinitionList</a></li>
+    <li><a href="customresourcedefinition" title="CustomResourceDefinition"><span class="symbol resource"></span>CustomResourceDefinition</a></li>
+    <li><a href="customresourcedefinitionlist" title="CustomResourceDefinitionList"><span class="symbol resource"></span>CustomResourceDefinitionList</a></li>
 </ul>
 
 <h3>Package Details</h3>

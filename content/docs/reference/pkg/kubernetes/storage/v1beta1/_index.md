@@ -9,14 +9,14 @@ block_external_search_index: true
 
 <h3>Resources</h3>
 <ul class="api">
-    <li><a href="csidriver"><span class="symbol resource"></span>CSIDriver</a></li>
-    <li><a href="csidriverlist"><span class="symbol resource"></span>CSIDriverList</a></li>
-    <li><a href="csinode"><span class="symbol resource"></span>CSINode</a></li>
-    <li><a href="csinodelist"><span class="symbol resource"></span>CSINodeList</a></li>
-    <li><a href="storageclass"><span class="symbol resource"></span>StorageClass</a></li>
-    <li><a href="storageclasslist"><span class="symbol resource"></span>StorageClassList</a></li>
-    <li><a href="volumeattachment"><span class="symbol resource"></span>VolumeAttachment</a></li>
-    <li><a href="volumeattachmentlist"><span class="symbol resource"></span>VolumeAttachmentList</a></li>
+    <li><a href="csidriver" title="CSIDriver"><span class="symbol resource"></span>CSIDriver</a></li>
+    <li><a href="csidriverlist" title="CSIDriverList"><span class="symbol resource"></span>CSIDriverList</a></li>
+    <li><a href="csinode" title="CSINode"><span class="symbol resource"></span>CSINode</a></li>
+    <li><a href="csinodelist" title="CSINodeList"><span class="symbol resource"></span>CSINodeList</a></li>
+    <li><a href="storageclass" title="StorageClass"><span class="symbol resource"></span>StorageClass</a></li>
+    <li><a href="storageclasslist" title="StorageClassList"><span class="symbol resource"></span>StorageClassList</a></li>
+    <li><a href="volumeattachment" title="VolumeAttachment"><span class="symbol resource"></span>VolumeAttachment</a></li>
+    <li><a href="volumeattachmentlist" title="VolumeAttachmentList"><span class="symbol resource"></span>VolumeAttachmentList</a></li>
 </ul>
 
 <h3>Package Details</h3>

@@ -9,10 +9,10 @@ block_external_search_index: true
 
 <h3>Resources</h3>
 <ul class="api">
-    <li><a href="poddisruptionbudget"><span class="symbol resource"></span>PodDisruptionBudget</a></li>
-    <li><a href="poddisruptionbudgetlist"><span class="symbol resource"></span>PodDisruptionBudgetList</a></li>
-    <li><a href="podsecuritypolicy"><span class="symbol resource"></span>PodSecurityPolicy</a></li>
-    <li><a href="podsecuritypolicylist"><span class="symbol resource"></span>PodSecurityPolicyList</a></li>
+    <li><a href="poddisruptionbudget" title="PodDisruptionBudget"><span class="symbol resource"></span>PodDisruptionBudget</a></li>
+    <li><a href="poddisruptionbudgetlist" title="PodDisruptionBudgetList"><span class="symbol resource"></span>PodDisruptionBudgetList</a></li>
+    <li><a href="podsecuritypolicy" title="PodSecurityPolicy"><span class="symbol resource"></span>PodSecurityPolicy</a></li>
+    <li><a href="podsecuritypolicylist" title="PodSecurityPolicyList"><span class="symbol resource"></span>PodSecurityPolicyList</a></li>
 </ul>
 
 <h3>Package Details</h3>

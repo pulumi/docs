@@ -9,8 +9,8 @@ block_external_search_index: true
 
 <h3>Resources</h3>
 <ul class="api">
-    <li><a href="job"><span class="symbol resource"></span>Job</a></li>
-    <li><a href="joblist"><span class="symbol resource"></span>JobList</a></li>
+    <li><a href="job" title="Job"><span class="symbol resource"></span>Job</a></li>
+    <li><a href="joblist" title="JobList"><span class="symbol resource"></span>JobList</a></li>
 </ul>
 
 <h3>Package Details</h3>

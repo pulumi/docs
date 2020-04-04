@@ -9,8 +9,8 @@ block_external_search_index: true
 
 <h3>Resources</h3>
 <ul class="api">
-    <li><a href="podpreset"><span class="symbol resource"></span>PodPreset</a></li>
-    <li><a href="podpresetlist"><span class="symbol resource"></span>PodPresetList</a></li>
+    <li><a href="podpreset" title="PodPreset"><span class="symbol resource"></span>PodPreset</a></li>
+    <li><a href="podpresetlist" title="PodPresetList"><span class="symbol resource"></span>PodPresetList</a></li>
 </ul>
 
 <h3>Package Details</h3>

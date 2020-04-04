@@ -9,8 +9,8 @@ block_external_search_index: true
 
 <h3>Resources</h3>
 <ul class="api">
-    <li><a href="event"><span class="symbol resource"></span>Event</a></li>
-    <li><a href="eventlist"><span class="symbol resource"></span>EventList</a></li>
+    <li><a href="event" title="Event"><span class="symbol resource"></span>Event</a></li>
+    <li><a href="eventlist" title="EventList"><span class="symbol resource"></span>EventList</a></li>
 </ul>
 
 <h3>Package Details</h3>

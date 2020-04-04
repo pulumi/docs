@@ -9,8 +9,8 @@ block_external_search_index: true
 
 <h3>Resources</h3>
 <ul class="api">
-    <li><a href="cronjob"><span class="symbol resource"></span>CronJob</a></li>
-    <li><a href="cronjoblist"><span class="symbol resource"></span>CronJobList</a></li>
+    <li><a href="cronjob" title="CronJob"><span class="symbol resource"></span>CronJob</a></li>
+    <li><a href="cronjoblist" title="CronJobList"><span class="symbol resource"></span>CronJobList</a></li>
 </ul>
 
 <h3>Package Details</h3>

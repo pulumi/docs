@@ -9,7 +9,7 @@ block_external_search_index: true
 
 <h3>Modules</h3>
 <ul class="api">
-    <li><a href="core/v1/"><span class="symbol module"></span>core/v1</a></li>
+    <li><a href="v1/" title="v1"><span class="symbol module"></span>v1</a></li>
 </ul>
 
 <h3>Package Details</h3>

@@ -9,8 +9,8 @@ block_external_search_index: true
 
 <h3>Resources</h3>
 <ul class="api">
-    <li><a href="apiservice"><span class="symbol resource"></span>APIService</a></li>
-    <li><a href="apiservicelist"><span class="symbol resource"></span>APIServiceList</a></li>
+    <li><a href="apiservice" title="APIService"><span class="symbol resource"></span>APIService</a></li>
+    <li><a href="apiservicelist" title="APIServiceList"><span class="symbol resource"></span>APIServiceList</a></li>
 </ul>
 
 <h3>Package Details</h3>

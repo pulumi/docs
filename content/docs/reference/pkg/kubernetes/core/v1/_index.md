@@ -9,39 +9,39 @@ block_external_search_index: true
 
 <h3>Resources</h3>
 <ul class="api">
-    <li><a href="binding"><span class="symbol resource"></span>Binding</a></li>
-    <li><a href="componentstatus"><span class="symbol resource"></span>ComponentStatus</a></li>
-    <li><a href="componentstatuslist"><span class="symbol resource"></span>ComponentStatusList</a></li>
-    <li><a href="configmap"><span class="symbol resource"></span>ConfigMap</a></li>
-    <li><a href="configmaplist"><span class="symbol resource"></span>ConfigMapList</a></li>
-    <li><a href="endpoints"><span class="symbol resource"></span>Endpoints</a></li>
-    <li><a href="endpointslist"><span class="symbol resource"></span>EndpointsList</a></li>
-    <li><a href="event"><span class="symbol resource"></span>Event</a></li>
-    <li><a href="eventlist"><span class="symbol resource"></span>EventList</a></li>
-    <li><a href="limitrange"><span class="symbol resource"></span>LimitRange</a></li>
-    <li><a href="limitrangelist"><span class="symbol resource"></span>LimitRangeList</a></li>
-    <li><a href="namespace"><span class="symbol resource"></span>Namespace</a></li>
-    <li><a href="namespacelist"><span class="symbol resource"></span>NamespaceList</a></li>
-    <li><a href="node"><span class="symbol resource"></span>Node</a></li>
-    <li><a href="nodelist"><span class="symbol resource"></span>NodeList</a></li>
-    <li><a href="persistentvolume"><span class="symbol resource"></span>PersistentVolume</a></li>
-    <li><a href="persistentvolumeclaim"><span class="symbol resource"></span>PersistentVolumeClaim</a></li>
-    <li><a href="persistentvolumeclaimlist"><span class="symbol resource"></span>PersistentVolumeClaimList</a></li>
-    <li><a href="persistentvolumelist"><span class="symbol resource"></span>PersistentVolumeList</a></li>
-    <li><a href="pod"><span class="symbol resource"></span>Pod</a></li>
-    <li><a href="podlist"><span class="symbol resource"></span>PodList</a></li>
-    <li><a href="podtemplate"><span class="symbol resource"></span>PodTemplate</a></li>
-    <li><a href="podtemplatelist"><span class="symbol resource"></span>PodTemplateList</a></li>
-    <li><a href="replicationcontroller"><span class="symbol resource"></span>ReplicationController</a></li>
-    <li><a href="replicationcontrollerlist"><span class="symbol resource"></span>ReplicationControllerList</a></li>
-    <li><a href="resourcequota"><span class="symbol resource"></span>ResourceQuota</a></li>
-    <li><a href="resourcequotalist"><span class="symbol resource"></span>ResourceQuotaList</a></li>
-    <li><a href="secret"><span class="symbol resource"></span>Secret</a></li>
-    <li><a href="secretlist"><span class="symbol resource"></span>SecretList</a></li>
-    <li><a href="service"><span class="symbol resource"></span>Service</a></li>
-    <li><a href="serviceaccount"><span class="symbol resource"></span>ServiceAccount</a></li>
-    <li><a href="serviceaccountlist"><span class="symbol resource"></span>ServiceAccountList</a></li>
-    <li><a href="servicelist"><span class="symbol resource"></span>ServiceList</a></li>
+    <li><a href="binding" title="Binding"><span class="symbol resource"></span>Binding</a></li>
+    <li><a href="componentstatus" title="ComponentStatus"><span class="symbol resource"></span>ComponentStatus</a></li>
+    <li><a href="componentstatuslist" title="ComponentStatusList"><span class="symbol resource"></span>ComponentStatusList</a></li>
+    <li><a href="configmap" title="ConfigMap"><span class="symbol resource"></span>ConfigMap</a></li>
+    <li><a href="configmaplist" title="ConfigMapList"><span class="symbol resource"></span>ConfigMapList</a></li>
+    <li><a href="endpoints" title="Endpoints"><span class="symbol resource"></span>Endpoints</a></li>
+    <li><a href="endpointslist" title="EndpointsList"><span class="symbol resource"></span>EndpointsList</a></li>
+    <li><a href="event" title="Event"><span class="symbol resource"></span>Event</a></li>
+    <li><a href="eventlist" title="EventList"><span class="symbol resource"></span>EventList</a></li>
+    <li><a href="limitrange" title="LimitRange"><span class="symbol resource"></span>LimitRange</a></li>
+    <li><a href="limitrangelist" title="LimitRangeList"><span class="symbol resource"></span>LimitRangeList</a></li>
+    <li><a href="namespace" title="Namespace"><span class="symbol resource"></span>Namespace</a></li>
+    <li><a href="namespacelist" title="NamespaceList"><span class="symbol resource"></span>NamespaceList</a></li>
+    <li><a href="node" title="Node"><span class="symbol resource"></span>Node</a></li>
+    <li><a href="nodelist" title="NodeList"><span class="symbol resource"></span>NodeList</a></li>
+    <li><a href="persistentvolume" title="PersistentVolume"><span class="symbol resource"></span>PersistentVolume</a></li>
+    <li><a href="persistentvolumeclaim" title="PersistentVolumeClaim"><span class="symbol resource"></span>PersistentVolumeClaim</a></li>
+    <li><a href="persistentvolumeclaimlist" title="PersistentVolumeClaimList"><span class="symbol resource"></span>PersistentVolumeClaimList</a></li>
+    <li><a href="persistentvolumelist" title="PersistentVolumeList"><span class="symbol resource"></span>PersistentVolumeList</a></li>
+    <li><a href="pod" title="Pod"><span class="symbol resource"></span>Pod</a></li>
+    <li><a href="podlist" title="PodList"><span class="symbol resource"></span>PodList</a></li>
+    <li><a href="podtemplate" title="PodTemplate"><span class="symbol resource"></span>PodTemplate</a></li>
+    <li><a href="podtemplatelist" title="PodTemplateList"><span class="symbol resource"></span>PodTemplateList</a></li>
+    <li><a href="replicationcontroller" title="ReplicationController"><span class="symbol resource"></span>ReplicationController</a></li>
+    <li><a href="replicationcontrollerlist" title="ReplicationControllerList"><span class="symbol resource"></span>ReplicationControllerList</a></li>
+    <li><a href="resourcequota" title="ResourceQuota"><span class="symbol resource"></span>ResourceQuota</a></li>
+    <li><a href="resourcequotalist" title="ResourceQuotaList"><span class="symbol resource"></span>ResourceQuotaList</a></li>
+    <li><a href="secret" title="Secret"><span class="symbol resource"></span>Secret</a></li>
+    <li><a href="secretlist" title="SecretList"><span class="symbol resource"></span>SecretList</a></li>
+    <li><a href="service" title="Service"><span class="symbol resource"></span>Service</a></li>
+    <li><a href="serviceaccount" title="ServiceAccount"><span class="symbol resource"></span>ServiceAccount</a></li>
+    <li><a href="serviceaccountlist" title="ServiceAccountList"><span class="symbol resource"></span>ServiceAccountList</a></li>
+    <li><a href="servicelist" title="ServiceList"><span class="symbol resource"></span>ServiceList</a></li>
 </ul>
 
 <h3>Package Details</h3>

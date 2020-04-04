@@ -9,8 +9,8 @@ block_external_search_index: true
 
 <h3>Resources</h3>
 <ul class="api">
-    <li><a href="lease"><span class="symbol resource"></span>Lease</a></li>
-    <li><a href="leaselist"><span class="symbol resource"></span>LeaseList</a></li>
+    <li><a href="lease" title="Lease"><span class="symbol resource"></span>Lease</a></li>
+    <li><a href="leaselist" title="LeaseList"><span class="symbol resource"></span>LeaseList</a></li>
 </ul>
 
 <h3>Package Details</h3>

@@ -9,10 +9,10 @@ block_external_search_index: true
 
 <h3>Resources</h3>
 <ul class="api">
-    <li><a href="localsubjectaccessreview"><span class="symbol resource"></span>LocalSubjectAccessReview</a></li>
-    <li><a href="selfsubjectaccessreview"><span class="symbol resource"></span>SelfSubjectAccessReview</a></li>
-    <li><a href="selfsubjectrulesreview"><span class="symbol resource"></span>SelfSubjectRulesReview</a></li>
-    <li><a href="subjectaccessreview"><span class="symbol resource"></span>SubjectAccessReview</a></li>
+    <li><a href="localsubjectaccessreview" title="LocalSubjectAccessReview"><span class="symbol resource"></span>LocalSubjectAccessReview</a></li>
+    <li><a href="selfsubjectaccessreview" title="SelfSubjectAccessReview"><span class="symbol resource"></span>SelfSubjectAccessReview</a></li>
+    <li><a href="selfsubjectrulesreview" title="SelfSubjectRulesReview"><span class="symbol resource"></span>SelfSubjectRulesReview</a></li>
+    <li><a href="subjectaccessreview" title="SubjectAccessReview"><span class="symbol resource"></span>SubjectAccessReview</a></li>
 </ul>
 
 <h3>Package Details</h3>
