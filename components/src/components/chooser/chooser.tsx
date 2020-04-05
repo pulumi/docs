@@ -324,25 +324,25 @@ export class Chooser {
             key: "go",
             name: "Go",
             extension: "go",
-            preview: true,
+            preview: false,
         },
         {
             key: "csharp",
             name: "C#",
             extension: "cs",
-            preview: true,
+            preview: false,
         },
         {
             key: "fsharp",
             name: "F#",
             extension: "fs",
-            preview: true,
+            preview: false,
         },
         {
             key: "visualbasic",
             name: "VB",
             extension: "vb",
-            preview: true,
+            preview: false,
         }
     ];
 
