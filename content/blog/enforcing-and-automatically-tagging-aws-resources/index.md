@@ -1,9 +1,9 @@
 ---
-date: "2020-04-03"
-title: "Enforcing and Automatically Tagging AWS Resources"
+date: "2020-04-06"
+title: "Automatically Enforcing AWS Resource Tagging Policies"
 authors: ["joe-duffy"]
 tags: ["AWS", "policy-as-code"]
-meta_desc: "Tagging resources is an AWS best practice. In this post, learn how to enforce and automate tagging your infrastructure easily and reliably."
+meta_desc: "Tagging AWS resources enables advanced infrastructure policies. In this post, learn how to automate tagging AWS infrastructure easily and reliably using Infrastructure and Policy as Code."
 meta_image: "pac-tags-meta.png"
 ---
 
@@ -268,7 +268,7 @@ interface AwsTagsPolicyConfig {
 
 This project defines a _policy pack_ containing a set of _policy rules_, in this case, just one. That rule takes in a configurable set of tags to ensure they exist on every taggable AWS resource. If a tag is missing, a violation is reported and the deployment fails.
 
-> This leverages a library that helps to identify taggable AWS resources (see this gist for the full details). Although this policy is written in TypeScript, it can be applied to stacks written in any language.
+> This leverages a library that helps to identify taggable AWS resources (see [this repo for the full example code](https://github.com/joeduffy/aws-tags-example/tree/master/policy-pack-ts)). Although this policy is written in TypeScript, it can be applied to stacks written in any language.
 
 At this point, we can apply our policy pack to our infrastructure project in two ways: at the CLI or in the SaaS web console.
 
@@ -564,15 +564,15 @@ bucket = aws.s3.Bucket('my-bucket')
 
 group = aws.ec2.SecurityGroup('web-secgrp',
     ingress=[
-        { 'protocol': 'tcp', from_port: 22, to_port: 22, cidr_blocks: ['0.0.0.0/0']},
-        { 'protocol': 'tcp', from_port: 80, to_port: 80, cidr_blocks: ['0.0.0.0/0']},
+        { 'protocol': 'tcp', 'from_port': 22, 'to_port': 22, 'cidr_blocks': ['0.0.0.0/0']},
+        { 'protocol': 'tcp', 'from_port': 80, 'to_port': 80, 'cidr_blocks': ['0.0.0.0/0']},
     ],
 )
 
 server = aws.ec2.Instance('web-server-www',
-    instance_type: 't2.micro',
-    ami: 'ami-0c55b159cbfafe1f0',
-    vpc_security_group_ids: [ group.id ],
+    instance_type='t2.micro',
+    ami='ami-0c55b159cbfafe1f0',
+    vpc_security_group_ids=[ group.id ],
 )
 ```
 {{% /choosable %}}
@@ -621,11 +621,11 @@ func main() {
         _, err = ec2.NewInstance(ctx, "web-server-www", &ec2.InstanceArgs{
             InstanceType:        pulumi.String("t2.micro"),
             Ami:                 pulumi.String("ami-0c55b159cbfafe1f0"),
-            VpcSecurityGroupIds: pulumi.StringArray{grp.ID()}
+            VpcSecurityGroupIds: pulumi.StringArray{grp.ID()},
         })
         return err
     }
-}
+})
 ```
 {{% /choosable %}}
 
@@ -633,6 +633,7 @@ func main() {
 ```csharp
 using Pulumi;
 using Pulumi.Aws.Ec2;
+using Pulumi.Aws.Ec2.Inputs;
 using Pulumi.Aws.S3;
 using System.Collections.Generic;
 using System.Reflection;
@@ -654,12 +655,12 @@ class MyStack : Stack {
     {
         // Create a bunch of AWS resources -- with auto-tags!
 
-        var bucket = new Bucket("my-bucket");
+        var bucket = new Bucket("my-bucket", new BucketArgs());
 
         var grp = new SecurityGroup("web-secgrp", new SecurityGroupArgs {
             Ingress = {
                 new SecurityGroupIngressArgs {
-                    Protocol = "tcp", FromPort = 80, toPort = 80, CidrBlocks = {"0.0.0.0/0"},
+                    Protocol = "tcp", FromPort = 80, ToPort = 80, CidrBlocks = {"0.0.0.0/0"},
                 },
             }
         });
@@ -667,9 +668,11 @@ class MyStack : Stack {
         var srv = new Instance("web-server-www", new InstanceArgs {
             InstanceType = "t2.micro",
             Ami = "ami-0c55b159cbfafe1f0",
-            VpcsecurityGroupIds = { grp.Id },
+            VpcSecurityGroupIds = { grp.Id },
         });
     }
+
+    // ...
 }
 ```
 {{% /choosable %}}
@@ -688,6 +691,12 @@ Try adding some resources of your own &mdash; VPCs, EC2 instances, security grou
 
 ## In Conslusion
 
-In this post, we've seen some of the ways to enforce and ensure AWS tagging best practices. This includes manually applying tags using Infrastructure as Code, enforcing that the desired tags are applied to the relevant resources using Policy as Code, and even using some advanced techniques enabled by having real languages at our fingertips to automatically tag resources to reduce tedious manual overheads and minimize the chance of human error.
+In this post, we've seen some ways to enforce AWS tagging best practices. This includes manually applying tags using Infrastructure as Code, checking that the desired tags are applied to the relevant resources using Policy as Code, and even using some advanced techniques to automatically tag resources, reducing manual efforts and the chance of human error.
 
-To get started with Pulumi's open source Infrastructure and Policy as Code tools, try the [AWS getting started guide]({{< relref "/docs/get-started/aws" >}}). See the gist here for the full policy pack and project code. Good luck making sure your team's resources are tagged early and often with less manual effort!
+Check out these resources to get started with Pulumi's open source platform:
+
+* [AWS getting started guide]({{< relref "/docs/get-started/aws" >}})
+* [Policy as Code getting started guide]({{< relref "/docs/get-started/crossguard" >}})
+* [Full example code used in this post](https://github.com/joeduffy/aws-tags-example)
+
+Good luck making sure your team's resources are tagged early and often with less manual effort!
