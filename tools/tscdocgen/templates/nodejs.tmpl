@@ -67,17 +67,17 @@ import * as {{PackageVar}} from "{{Package}}";
 </ul>
 {{/HasResources}}
 
-{{#HasDataSources}}
-<h3>Data Sources</h3>
+{{#HasFunctions}}
+<h3>Functions</h3>
 <ul class="api">
-{{#DataSources}}
-    <li><a href="#{{{Name}}}"><span class="symbol datasource"></span>{{{Name}}}</a></li>
-{{/DataSources}}
+{{#Functions}}
+    <li><a href="#{{{Name}}}"><span class="symbol function"></span>{{{Name}}}</a></li>
+{{/Functions}}
 </ul>
-{{/HasDataSources}}
+{{/HasFunctions}}
 
 {{#HasOthers}}
-<h3>{{#HasResourcesOrDataSources}}Others{{/HasResourcesOrDataSources}}{{^HasResourcesOrDataSources}}APIs{{/HasResourcesOrDataSources}}</h3>
+<h3>{{#HasResourcesOrFunctions}}Others{{/HasResourcesOrFunctions}}{{^HasResourcesOrFunctions}}APIs{{/HasResourcesOrFunctions}}</h3>
 <ul class="api">
 {{#Others}}
     <li><a href="#{{{Name}}}"><span class="symbol api"></span>{{{Name}}}</a></li>
@@ -99,15 +99,15 @@ import * as {{PackageVar}} from "{{Package}}";
 {{/Resources}}
 {{/HasResources}}
 
-{{#HasDataSources}}
-<h2 id="data-sources">Data Sources</h2>
-{{#DataSources}}
+{{#HasFunctions}}
+<h2 id="functions">Functions</h2>
+{{#Functions}}
 {{>member}}
-{{/DataSources}}
-{{/HasDataSources}}
+{{/Functions}}
+{{/HasFunctions}}
 
 {{#HasOthers}}
-<h2 id="apis">{{#HasResourcesOrDataSources}}Others{{/HasResourcesOrDataSources}}{{^HasResourcesOrDataSources}}APIs{{/HasResourcesOrDataSources}}</h2>
+<h2 id="apis">{{#HasResourcesOrFunctions}}Others{{/HasResourcesOrFunctions}}{{^HasResourcesOrFunctions}}APIs{{/HasResourcesOrFunctions}}</h2>
 {{#Others}}
 {{>member}}
 {{/Others}}

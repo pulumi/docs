@@ -293,8 +293,8 @@ func (e *moduleEmitter) augmentNode(node *typeDocNode, parent *typeDocNode) {
 
 	if isResource(node) {
 		node.IsResource = true
-	} else if isDataSource(node) {
-		node.IsDataSource = true
+	} else if isFunction(node) {
+		node.IsFunction = true
 	}
 
 	node.DeprecatedMessage, node.IsDeprecated = getTag(node, "deprecated")
@@ -480,13 +480,13 @@ func (e *emitter) emitMarkdownModule(name string, mod *module, gitSha string, ro
 
 	// Split members between resources, data sources, and others...
 	var resources []*typeDocNode
-	var dataSources []*typeDocNode
+	var functions []*typeDocNode
 	var others []*typeDocNode
 	for _, member := range members {
 		if member.IsResource {
 			resources = append(resources, member)
-		} else if member.IsDataSource {
-			dataSources = append(dataSources, member)
+		} else if member.IsFunction {
+			functions = append(functions, member)
 		} else {
 			others = append(others, member)
 		}
@@ -496,7 +496,7 @@ func (e *emitter) emitMarkdownModule(name string, mod *module, gitSha string, ro
 	hasMembers := len(members) > 0
 	hasNamespaces := len(namespaces) > 0
 	hasResources := len(resources) > 0
-	hasDataSources := len(dataSources) > 0
+	hasFunctions := len(functions) > 0
 
 	metaDescription := "Explore "
 	if root {
@@ -507,30 +507,30 @@ func (e *emitter) emitMarkdownModule(name string, mod *module, gitSha string, ro
 
 	// To generate the code, simply render the source Mustache template, using the right set of arguments.
 	if err = indexTemplate.FRender(f, map[string]interface{}{
-		"Title":                     title,
-		"TitleTag":                  titleTag,
-		"LinkTitle":                 linktitle,
-		"MetaDescription":           metaDescription,
-		"GitSha":                    gitSha,
-		"RepoURL":                   e.repoURL,
-		"Package":                   pkg,
-		"PackageName":               e.pkgname,
-		"PackageComment":            string(pkgcomm),
-		"PackageVar":                pkgvar,
-		"Files":                     files,
-		"Modules":                   modules,
-		"HasModules":                hasModules,
-		"Members":                   members,
-		"HasMembers":                hasMembers,
-		"Namespaces":                namespaces,
-		"HasNamespaces":             hasNamespaces,
-		"Resources":                 resources,
-		"HasResources":              hasResources,
-		"DataSources":               dataSources,
-		"HasDataSources":            hasDataSources,
-		"HasResourcesOrDataSources": hasResources || hasDataSources,
-		"Others":                    others,
-		"HasOthers":                 len(others) > 0,
+		"Title":                   title,
+		"TitleTag":                titleTag,
+		"LinkTitle":               linktitle,
+		"MetaDescription":         metaDescription,
+		"GitSha":                  gitSha,
+		"RepoURL":                 e.repoURL,
+		"Package":                 pkg,
+		"PackageName":             e.pkgname,
+		"PackageComment":          string(pkgcomm),
+		"PackageVar":              pkgvar,
+		"Files":                   files,
+		"Modules":                 modules,
+		"HasModules":              hasModules,
+		"Members":                 members,
+		"HasMembers":              hasMembers,
+		"Namespaces":              namespaces,
+		"HasNamespaces":           hasNamespaces,
+		"Resources":               resources,
+		"HasResources":            hasResources,
+		"Functions":               functions,
+		"HasFunctions":            hasFunctions,
+		"HasResourcesOrFunctions": hasResources || hasFunctions,
+		"Others":                  others,
+		"HasOthers":               len(others) > 0,
 	}); err != nil {
 		return err
 	}
@@ -605,9 +605,9 @@ func isResource(node *typeDocNode) bool {
 	return false
 }
 
-// isDataSource returns true if the node is an exported function with a name that starts with lowercase "get" and has
+// isFunction returns true if the node is an exported function with a name that starts with lowercase "get" and has
 // a `pulumi.InvokeOptions` parameter.
-func isDataSource(node *typeDocNode) bool {
+func isFunction(node *typeDocNode) bool {
 	if node.Kind != typeDocFunctionNode || !node.Flags.IsExported || !strings.HasPrefix(node.Name, "get") ||
 		len(node.Signatures) != 1 || len(node.Signatures[0].Parameters) == 0 {
 		return false
@@ -1592,8 +1592,8 @@ type typeDocNode struct {
 	URLPath string
 	// IsResource is true if the node represents a Pulumi resource.
 	IsResource bool
-	// IsDataSource is true if the node represents a Pulumi data source.
-	IsDataSource bool
+	// IsFunction is true if the node represents a Pulumi function.
+	IsFunction bool
 	// IsDeprecated is true if the node has "deprecated" comment tag.
 	IsDeprecated bool
 	// The text fo the deprecated comment tag.
