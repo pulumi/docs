@@ -14,8 +14,6 @@ aliases: ["/dotnet/"]
 
 Pulumi supports infrastructure as code using any .NET Core language. You can use your favorite .NET tools &mdash; such as editors, package managers, build systems, and test frameworks &mdash; to create, deploy, and manage infrastructure on any cloud, including Azure, AWS, and Google Cloud.
 
-> **Note:** Pulumi for .NET is in preview and is under active development. We would [love your feedback](https://github.com/pulumi/pulumi/issues/new)!
-
 <a class="btn" href="https://dotnet.microsoft.com/download" target="_blank" title="Install .NET Core">INSTALL .NET CORE</a>
 
 ## Getting Started
