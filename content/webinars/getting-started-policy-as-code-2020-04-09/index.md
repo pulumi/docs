@@ -45,7 +45,7 @@ main:
     # Webinar title.
     title: "Getting Started with Policy as Code for Any Cloud"
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2020-04-09 11:00:00 -07:00
+    sortable_date: 2020-04-09T11:00:00.000-07:00
     # Duration of the webinar.
     duration: "1 hour"
     # Datetime of the webinar.

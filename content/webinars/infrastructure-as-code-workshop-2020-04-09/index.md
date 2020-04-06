@@ -47,7 +47,7 @@ main:
     # Webinar title.
     title: "Infrastructure as Code Workshop"
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2020-04-09 17:30:00 -07:00
+    sortable_date: 2020-04-09T17:30:00.000-07:00
     # Duration of the webinar.
     duration: "3 hours"
     # Datetime of the webinar.

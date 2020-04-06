@@ -47,7 +47,7 @@ main:
     # URL for embedding a URL for ungated webinars.
     youtube_url: "https://www.youtube.com/embed/5VExXUdQNSE"
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2019-02-19 10:00:00 -07:00
+    sortable_date: 2019-02-19T10:00:00.000-07:00
     # Duration of the webinar.
     duration: "38 minutes"
     # Datetime of the webinar.
