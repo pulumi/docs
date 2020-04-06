@@ -196,9 +196,9 @@ service = core.v1.Service(..., ResourceOptions(provider=provider))
 
 ```go
 import (
-	"fmt"
+  "fmt"
 
-	"github.com/pulumi/pulumi/sdk/go/pulumi"
+  "github.com/pulumi/pulumi/sdk/go/pulumi"
 )
 
 func main() {
