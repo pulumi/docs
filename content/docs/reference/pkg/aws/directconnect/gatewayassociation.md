@@ -4,14 +4,18 @@ title: "GatewayAssociation"
 block_external_search_index: true
 ---
 
+
+
 Associates a Direct Connect Gateway with a VGW or transit gateway.
 
 To create a cross-account association, create an [`aws.directconnect.GatewayAssociationProposal` resource](https://www.terraform.io/docs/providers/aws/r/dx_gateway_association_proposal.html)
 in the AWS account that owns the VGW or transit gateway and then accept the proposal in the AWS account that owns the Direct Connect Gateway
 by creating an `aws.directconnect.GatewayAssociation` resource with the `proposal_id` and `associated_gateway_owner_account_id` attributes set.
 
+{{% examples %}}
 ## Example Usage
 
+{{% example %}}
 ### VPN Gateway Association
 
 ```typescript
@@ -33,6 +37,8 @@ const exampleGatewayAssociation = new aws.directconnect.GatewayAssociation("exam
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Transit Gateway Association
 
 ```typescript
@@ -53,6 +59,8 @@ const exampleGatewayAssociation = new aws.directconnect.GatewayAssociation("exam
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Allowed Prefixes
 
 ```typescript
@@ -80,7 +88,8 @@ const exampleGatewayAssociation = new aws.directconnect.GatewayAssociation("exam
 
 A full example of how to create a VPN Gateway in one AWS account, create a Direct Connect Gateway in a second AWS account, and associate the VPN Gateway with the Direct Connect Gateway via the `aws.directconnect.GatewayAssociationProposal` and `aws.directconnect.GatewayAssociation` resources can be found in [the `./examples/dx-gateway-cross-account-vgw-association` directory within the Github Repository](https://github.com/providers/provider-aws/tree/master/examples/dx-gateway-cross-account-vgw-association).
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_gateway_association.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -1334,9 +1343,14 @@ Used for single account Direct Connect gateway associations.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

@@ -4,9 +4,13 @@ title: "GeoMatchSet"
 block_external_search_index: true
 ---
 
+
+
 Provides a WAF Geo Match Set Resource
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -26,7 +30,8 @@ const geoMatchSet = new aws.waf.GeoMatchSet("geo_match_set", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/waf_geo_match_set.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -784,9 +789,14 @@ See [docs](https://docs.aws.amazon.com/waf/latest/APIReference/API_GeoMatchConst
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

@@ -4,10 +4,14 @@ title: "GetService"
 block_external_search_index: true
 ---
 
+
+
 The ECS Service data source allows access to details of a specific
 Service within a AWS ECS Cluster.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -19,7 +23,8 @@ const example = aws_ecs_cluster_example.arn.apply(arn => aws.ecs.getService({
 }, { async: true }));
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ecs_service.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

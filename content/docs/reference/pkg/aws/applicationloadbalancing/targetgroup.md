@@ -4,12 +4,16 @@ title: "TargetGroup"
 block_external_search_index: true
 ---
 
+
+
 Provides a Target Group resource for use with Load Balancer resources.
 
 > **Note:** `aws.alb.TargetGroup` is known as `aws.lb.TargetGroup`. The functionality is identical.
 
+{{% examples %}}
 ## Example Usage
 
+{{% example %}}
 ### Instance Target Group
 
 ```typescript
@@ -26,6 +30,8 @@ const test = new aws.lb.TargetGroup("test", {
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### IP Target Group
 
 ```typescript
@@ -43,6 +49,8 @@ const ip_example = new aws.lb.TargetGroup("ip-example", {
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Lambda Target Group
 
 ```typescript
@@ -54,7 +62,8 @@ const lambda_example = new aws.lb.TargetGroup("lambda-example", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lb_target_group.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -2635,9 +2644,14 @@ You can't specify publicly routable IP addresses.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

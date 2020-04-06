@@ -4,7 +4,11 @@ title: "GetNetworkAcls"
 block_external_search_index: true
 ---
 
+
+
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 The following shows outputing all network ACL ids in a vpc.
 
@@ -50,7 +54,8 @@ const example = aws_subnet_test.id.apply(id => aws.ec2.getNetworkAcls({
 }, { async: true }));
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/network_acls.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

@@ -4,6 +4,8 @@ title: "DomainName"
 block_external_search_index: true
 ---
 
+
+
 Registers a custom domain name for use with AWS API Gateway. Additional information about this functionality
 can be found in the [API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-custom-domains.html).
 
@@ -34,8 +36,10 @@ from the validation resource where it will be available after the resource creat
 > **Note:** All arguments including the private key will be stored in the raw state as plain-text.
 [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
 
+{{% examples %}}
 ## Example Usage
 
+{{% example %}}
 ### Edge Optimized (ACM Certificate)
 
 ```typescript
@@ -60,6 +64,8 @@ const exampleRecord = new aws.route53.Record("example", {
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Edge Optimized (IAM Certificate)
 
 ```typescript
@@ -88,6 +94,8 @@ const exampleRecord = new aws.route53.Record("example", {
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Regional (ACM Certificate)
 
 ```typescript
@@ -115,6 +123,8 @@ const exampleRecord = new aws.route53.Record("example", {
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Regional (IAM Certificate)
 
 ```typescript
@@ -146,7 +156,8 @@ const exampleRecord = new aws.route53.Record("example", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_domain_name.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -2316,9 +2327,14 @@ that can be used to create a Route53 alias record for the distribution.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

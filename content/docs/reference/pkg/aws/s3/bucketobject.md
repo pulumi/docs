@@ -4,10 +4,14 @@ title: "BucketObject"
 block_external_search_index: true
 ---
 
+
+
 Provides a S3 bucket object resource.
 
+{{% examples %}}
 ## Example Usage
 
+{{% example %}}
 ### Encrypting with KMS Key
 
 ```typescript
@@ -29,6 +33,8 @@ const examplebucketObject = new aws.s3.BucketObject("examplebucket_object", {
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Server Side Encryption with S3 Default Master Key
 
 ```typescript
@@ -46,6 +52,8 @@ const examplebucketObject = new aws.s3.BucketObject("examplebucket_object", {
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Server Side Encryption with AWS-Managed Key
 
 ```typescript
@@ -63,6 +71,8 @@ const examplebucketObject = new aws.s3.BucketObject("examplebucket_object", {
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### S3 Object Lock
 
 ```typescript
@@ -89,7 +99,8 @@ const examplebucketObject = new aws.s3.BucketObject("examplebucket_object", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_bucket_object.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -2959,9 +2970,14 @@ is enabled.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

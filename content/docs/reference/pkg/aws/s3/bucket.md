@@ -4,10 +4,14 @@ title: "Bucket"
 block_external_search_index: true
 ---
 
+
+
 Provides a S3 bucket resource.
 
+{{% examples %}}
 ## Example Usage
 
+{{% example %}}
 ### Private Bucket w/ Tags
 
 ```typescript
@@ -23,6 +27,8 @@ const bucket = new aws.s3.Bucket("b", {
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Static Website Hosting
 
 ```typescript
@@ -49,6 +55,8 @@ const bucket = new aws.s3.Bucket("b", {
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Using CORS
 
 ```typescript
@@ -70,6 +78,8 @@ const bucket = new aws.s3.Bucket("b", {
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Using versioning
 
 ```typescript
@@ -84,6 +94,8 @@ const bucket = new aws.s3.Bucket("b", {
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Enable Logging
 
 ```typescript
@@ -102,6 +114,8 @@ const bucket = new aws.s3.Bucket("b", {
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Using object lifecycle
 
 ```typescript
@@ -168,6 +182,8 @@ const versioningBucket = new aws.s3.Bucket("versioning_bucket", {
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Using replication configuration
 
 ```typescript
@@ -260,6 +276,8 @@ const replicationRolePolicyAttachment = new aws.iam.RolePolicyAttachment("replic
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Enable Default Server Side Encryption
 
 ```typescript
@@ -282,6 +300,8 @@ const mybucket = new aws.s3.Bucket("mybucket", {
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Using ACL policy grants
 
 ```typescript
@@ -293,11 +313,11 @@ const bucket = new aws.s3.Bucket("bucket", {
     grants: [
         {
             id: currentUser.id,
-            permission: ["FULL_ACCESS"],
+            permissions: ["FULL_CONTROL"],
             type: "CanonicalUser",
         },
         {
-            permission: [
+            permissions: [
                 "READ",
                 "WRITE",
             ],
@@ -308,7 +328,8 @@ const bucket = new aws.s3.Bucket("bucket", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_bucket.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -3461,7 +3482,7 @@ developer guide for more information.
         <span class="property-indicator"></span>
         <span class="property-type">List<string></span>
     </dt>
-    <dd>{{% md %}}List of permissions to apply for grantee. Valid values are `READ`, `WRITE`, `READ_ACP`, `WRITE_ACP`, `FULL_ACCESS`.
+    <dd>{{% md %}}List of permissions to apply for grantee. Valid values are `READ`, `WRITE`, `READ_ACP`, `WRITE_ACP`, `FULL_CONTROL`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -3504,7 +3525,7 @@ developer guide for more information.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of permissions to apply for grantee. Valid values are `READ`, `WRITE`, `READ_ACP`, `WRITE_ACP`, `FULL_ACCESS`.
+    <dd>{{% md %}}List of permissions to apply for grantee. Valid values are `READ`, `WRITE`, `READ_ACP`, `WRITE_ACP`, `FULL_CONTROL`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -3547,7 +3568,7 @@ developer guide for more information.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of permissions to apply for grantee. Valid values are `READ`, `WRITE`, `READ_ACP`, `WRITE_ACP`, `FULL_ACCESS`.
+    <dd>{{% md %}}List of permissions to apply for grantee. Valid values are `READ`, `WRITE`, `READ_ACP`, `WRITE_ACP`, `FULL_CONTROL`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -3590,7 +3611,7 @@ developer guide for more information.
         <span class="property-indicator"></span>
         <span class="property-type">List[str]</span>
     </dt>
-    <dd>{{% md %}}List of permissions to apply for grantee. Valid values are `READ`, `WRITE`, `READ_ACP`, `WRITE_ACP`, `FULL_ACCESS`.
+    <dd>{{% md %}}List of permissions to apply for grantee. Valid values are `READ`, `WRITE`, `READ_ACP`, `WRITE_ACP`, `FULL_CONTROL`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -6520,9 +6541,14 @@ describing redirect behavior and when redirects are applied.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

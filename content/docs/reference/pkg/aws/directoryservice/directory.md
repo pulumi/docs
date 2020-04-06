@@ -4,13 +4,17 @@ title: "Directory"
 block_external_search_index: true
 ---
 
+
+
 Provides a Simple or Managed Microsoft directory in AWS Directory Service.
 
 > **Note:** All arguments including the password and customer username will be stored in the raw state as plain-text.
 [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
 
+{{% examples %}}
 ## Example Usage
 
+{{% example %}}
 ### SimpleAD
 
 ```typescript
@@ -46,6 +50,8 @@ const barDirectory = new aws.directoryservice.Directory("bar", {
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Microsoft Active Directory (MicrosoftAD)
 
 ```typescript
@@ -82,6 +88,8 @@ const barDirectory = new aws.directoryservice.Directory("bar", {
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Microsoft Active Directory Connector (ADConnector)
 
 ```typescript
@@ -117,7 +125,8 @@ const connector = new aws.directoryservice.Directory("connector", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/directory_service_directory.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -2278,9 +2287,14 @@ The following state arguments are supported:
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

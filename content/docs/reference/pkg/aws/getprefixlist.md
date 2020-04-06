@@ -4,6 +4,8 @@ title: "GetPrefixList"
 block_external_search_index: true
 ---
 
+
+
 `aws..getPrefixList` provides details about a specific prefix list (PL)
 in the current region.
 
@@ -12,7 +14,9 @@ and to obtain the CIDR blocks (IP address ranges) for the associated
 AWS service. The latter may be useful e.g. for adding network ACL
 rules.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -40,6 +44,8 @@ const privateS3NetworkAclRule = new aws.ec2.NetworkAclRule("private_s3", {
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Filter
 
 ```typescript
@@ -54,7 +60,8 @@ const test = pulumi.output(aws.getPrefixList({
 }, { async: true }));
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/prefix_list.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

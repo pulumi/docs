@@ -4,9 +4,12 @@ title: "GetSecrets"
 block_external_search_index: true
 ---
 
+
+
 Decrypt multiple secrets from data encrypted with the AWS KMS service.
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/kms_secrets.html.markdown.
+{{% examples %}}
+{{% /examples %}}
 
 
 

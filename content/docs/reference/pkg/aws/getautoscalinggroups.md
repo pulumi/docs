@@ -4,10 +4,14 @@ title: "GetAutoscalingGroups"
 block_external_search_index: true
 ---
 
+
+
 The Autoscaling Groups data source allows access to the list of AWS
 ASGs within a specific region. This will allow you to pass a list of AutoScaling Groups to other resources.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -37,7 +41,8 @@ const slackNotifications = new aws.autoscaling.Notification("slack_notifications
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/autoscaling_groups.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

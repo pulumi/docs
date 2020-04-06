@@ -4,10 +4,14 @@ title: "PolicyAttachment"
 block_external_search_index: true
 ---
 
+
+
 Provides a resource to attach an AWS Organizations policy to an organization account, root, or unit.
 
+{{% examples %}}
 ## Example Usage
 
+{{% example %}}
 ### Organization Account
 
 ```typescript
@@ -20,6 +24,8 @@ const account = new aws.organizations.PolicyAttachment("account", {
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Organization Root
 
 ```typescript
@@ -32,6 +38,8 @@ const root = new aws.organizations.PolicyAttachment("root", {
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Organization Unit
 
 ```typescript
@@ -44,7 +52,8 @@ const unit = new aws.organizations.PolicyAttachment("unit", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/organizations_policy_attachment.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -602,9 +611,14 @@ The following state arguments are supported:
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

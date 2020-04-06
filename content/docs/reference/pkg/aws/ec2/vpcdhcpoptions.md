@@ -4,9 +4,13 @@ title: "VpcDhcpOptions"
 block_external_search_index: true
 ---
 
+
+
 Provides a VPC DHCP Options resource.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 Basic usage:
 
@@ -43,6 +47,8 @@ const foo = new aws.ec2.VpcDhcpOptions("foo", {
 });
 ```
 
+{{% /example %}}
+{{% /examples %}}
 ## Remarks
 
 * Notice that all arguments are optional but you have to specify at least one argument.
@@ -50,8 +56,6 @@ const foo = new aws.ec2.VpcDhcpOptions("foo", {
 * To actually use the DHCP Options Set you need to associate it to a VPC using [`aws.ec2.VpcDhcpOptionsAssociation`](https://www.terraform.io/docs/providers/aws/r/vpc_dhcp_options_association.html).
 * If you delete a DHCP Options Set, all VPCs using it will be associated to AWS's `default` DHCP Option Set.
 * In most cases unless you're configuring your own DNS you'll want to set `domain_name_servers` to `AmazonProvidedDNS`.
-
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_dhcp_options.html.markdown.
 
 
 
@@ -1113,9 +1117,14 @@ The following state arguments are supported:
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

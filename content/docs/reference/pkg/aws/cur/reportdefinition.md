@@ -4,13 +4,17 @@ title: "ReportDefinition"
 block_external_search_index: true
 ---
 
+
+
 Manages Cost and Usage Report Definitions.
 
 > *NOTE:* The AWS Cost and Usage Report service is only available in `us-east-1` currently.
 
 > *NOTE:* If AWS Organizations is enabled, only the master account can use this resource.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -31,7 +35,8 @@ const exampleCurReportDefinition = new aws.cur.ReportDefinition("example_cur_rep
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cur_report_definition.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -1345,9 +1350,14 @@ The following state arguments are supported:
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

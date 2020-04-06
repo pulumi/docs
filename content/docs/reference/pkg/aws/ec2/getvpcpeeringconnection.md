@@ -4,10 +4,14 @@ title: "GetVpcPeeringConnection"
 block_external_search_index: true
 ---
 
+
+
 The VPC Peering Connection data source provides details about
 a specific VPC peering connection.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -30,7 +34,8 @@ const route = new aws.ec2.Route("r", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/vpc_peering_connection.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

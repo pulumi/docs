@@ -4,6 +4,8 @@ title: "GetListener"
 block_external_search_index: true
 ---
 
+
+
 > **Note:** `aws.alb.Listener` is known as `aws.lb.Listener`. The functionality is identical.
 
 Provides information about a Load Balancer Listener.
@@ -12,7 +14,9 @@ This data source can prove useful when a module accepts an LB Listener as an
 input variable and needs to know the LB it is attached to, or other
 information specific to the listener in question.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -33,7 +37,8 @@ const selected443 = selected.apply(selected => aws.lb.getListener({
 }, { async: true }));
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/lb_listener.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

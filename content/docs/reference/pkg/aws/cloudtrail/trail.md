@@ -4,14 +4,18 @@ title: "Trail"
 block_external_search_index: true
 ---
 
+
+
 Provides a CloudTrail resource.
 
 > *NOTE:* For a multi-region trail, this resource must be in the home region of the trail.
 
 > *NOTE:* For an organization trail, this resource must be in the master account of the organization.
 
+{{% examples %}}
 ## Example Usage
 
+{{% example %}}
 ### Basic
 
 Enable CloudTrail to capture all compatible management events in region.
@@ -61,6 +65,8 @@ const foobar = new aws.cloudtrail.Trail("foobar", {
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Data Event Logging
 
 CloudTrail can log [Data Events](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-management-and-data-events-with-cloudtrail.html#logging-data-events) for certain services such as S3 bucket objects and Lambda function invocations. Additional information about data event configuration can be found in the [CloudTrail API DataResource documentation](https://docs.aws.amazon.com/awscloudtrail/latest/APIReference/API_DataResource.html).
@@ -124,7 +130,8 @@ const example = new aws.cloudtrail.Trail("example", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudtrail.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -2489,9 +2496,14 @@ defined for notification of log file delivery.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

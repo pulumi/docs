@@ -4,12 +4,16 @@ title: "GetExport"
 block_external_search_index: true
 ---
 
+
+
 The CloudFormation Export data source allows access to stack
 exports specified in the [Output](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/outputs-section-structure.html) section of the Cloudformation Template using the optional Export Property.
 
  > Note: If you are trying to use a value from a Cloudformation Stack in the same deployment please use normal interpolation or Cloudformation Outputs. 
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -25,7 +29,8 @@ const web = new aws.ec2.Instance("web", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/cloudformation_export.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

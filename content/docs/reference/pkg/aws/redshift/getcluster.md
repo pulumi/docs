@@ -4,9 +4,13 @@ title: "GetCluster"
 block_external_search_index: true
 ---
 
+
+
 Provides details about a specific redshift cluster.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -36,7 +40,8 @@ const testStream = new aws.kinesis.FirehoseDeliveryStream("test_stream", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/redshift_cluster.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

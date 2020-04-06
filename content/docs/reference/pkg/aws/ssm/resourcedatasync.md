@@ -4,9 +4,13 @@ title: "ResourceDataSync"
 block_external_search_index: true
 ---
 
+
+
 Provides a SSM resource data sync.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -55,6 +59,8 @@ const foo = new aws.ssm.ResourceDataSync("foo", {
 });
 ```
 
+{{% /example %}}
+{{% /examples %}}
 ## s3_destination
 
 `s3_destination` supports the following:
@@ -64,8 +70,6 @@ const foo = new aws.ssm.ResourceDataSync("foo", {
 * `kms_key_arn` - (Optional) ARN of an encryption key for a destination in Amazon S3.
 * `prefix` - (Optional) Prefix for the bucket.
 * `sync_format` - (Optional) A supported sync format. Only JsonSerDe is currently supported. Defaults to JsonSerDe.
-
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ssm_resource_data_sync.html.markdown.
 
 
 
@@ -831,9 +835,14 @@ The following state arguments are supported:
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

@@ -4,6 +4,8 @@ title: "Cluster"
 block_external_search_index: true
 ---
 
+
+
 Provides an Elastic MapReduce Cluster, a web service that makes it easy to
 process large amounts of data efficiently. See [Amazon Elastic MapReduce Documentation](https://aws.amazon.com/documentation/elastic-mapreduce/)
 for more information.
@@ -12,7 +14,9 @@ To configure [Instance Groups](https://docs.aws.amazon.com/emr/latest/Management
 
 > Support for [Instance Fleets](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-fleets) will be made available in an upcoming release.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -133,6 +137,8 @@ Started](https://docs.aws.amazon.com/ElasticMapReduce/latest/ManagementGuide/emr
 guide for more information on these IAM roles. There is also a fully-bootable
 example this provider configuration at the bottom of this page.
 
+{{% /example %}}
+{{% example %}}
 ### Enable Debug Logging
 
 [Debug logging in EMR](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-debugging.html)
@@ -155,6 +161,8 @@ const example = new aws.emr.Cluster("example", {
 }, { ignoreChanges: ["stepConcurrencyLevel", "steps"] });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Multiple Node Master Instance Group
 
 Available in EMR version 5.23.0 and later, an EMR Cluster can be launched with three master nodes for high availability. Additional information about this functionality and its requirements can be found in the [EMR Management Guide](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-ha.html).
@@ -185,6 +193,8 @@ const exampleCluster = new aws.emr.Cluster("example", {
 });
 ```
 
+{{% /example %}}
+{{% /examples %}}
 ## core_instance_group Configuration Block
 
 Supported arguments for the `core_instance_group` configuration block:
@@ -287,8 +297,6 @@ Attributes for Hadoop job step configuration
 * `jar` - (Required) Path to a JAR file run during the step.
 * `main_class` - (Optional) Name of the main class in the specified Java file. If not specified, the JAR file should specify a Main-Class in its manifest file.
 * `properties` - (Optional) Key-Value map of Java properties that are set when the step runs. You can use these properties to pass key value pairs to your main function.
-
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/emr_cluster.html.markdown.
 
 
 
@@ -434,7 +442,7 @@ Attributes for Hadoop job step configuration
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterbootstrapaction">List&lt;Cluster<wbr>Bootstrap<wbr>Action<wbr>Args&gt;?</a></span>
     </dt>
-    <dd>{{% md %}}List of bootstrap actions that will be run before Hadoop is started on the cluster nodes. Defined below
+    <dd>{{% md %}}Ordered list of bootstrap actions that will be run before Hadoop is started on the cluster nodes. Defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -693,7 +701,7 @@ Attributes for Hadoop job step configuration
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterbootstrapaction">[]Cluster<wbr>Bootstrap<wbr>Action</a></span>
     </dt>
-    <dd>{{% md %}}List of bootstrap actions that will be run before Hadoop is started on the cluster nodes. Defined below
+    <dd>{{% md %}}Ordered list of bootstrap actions that will be run before Hadoop is started on the cluster nodes. Defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -952,7 +960,7 @@ Attributes for Hadoop job step configuration
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterbootstrapaction">Cluster<wbr>Bootstrap<wbr>Action[]?</a></span>
     </dt>
-    <dd>{{% md %}}List of bootstrap actions that will be run before Hadoop is started on the cluster nodes. Defined below
+    <dd>{{% md %}}Ordered list of bootstrap actions that will be run before Hadoop is started on the cluster nodes. Defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1211,7 +1219,7 @@ Attributes for Hadoop job step configuration
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterbootstrapaction">List[Cluster<wbr>Bootstrap<wbr>Action]</a></span>
     </dt>
-    <dd>{{% md %}}List of bootstrap actions that will be run before Hadoop is started on the cluster nodes. Defined below
+    <dd>{{% md %}}Ordered list of bootstrap actions that will be run before Hadoop is started on the cluster nodes. Defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1490,7 +1498,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterbootstrapaction">List&lt;Cluster<wbr>Bootstrap<wbr>Action&gt;?</a></span>
     </dt>
-    <dd>{{% md %}}List of bootstrap actions that will be run before Hadoop is started on the cluster nodes. Defined below
+    <dd>{{% md %}}Ordered list of bootstrap actions that will be run before Hadoop is started on the cluster nodes. Defined below.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1775,7 +1783,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterbootstrapaction">[]Cluster<wbr>Bootstrap<wbr>Action</a></span>
     </dt>
-    <dd>{{% md %}}List of bootstrap actions that will be run before Hadoop is started on the cluster nodes. Defined below
+    <dd>{{% md %}}Ordered list of bootstrap actions that will be run before Hadoop is started on the cluster nodes. Defined below.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -2060,7 +2068,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterbootstrapaction">Cluster<wbr>Bootstrap<wbr>Action[]?</a></span>
     </dt>
-    <dd>{{% md %}}List of bootstrap actions that will be run before Hadoop is started on the cluster nodes. Defined below
+    <dd>{{% md %}}Ordered list of bootstrap actions that will be run before Hadoop is started on the cluster nodes. Defined below.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -2345,7 +2353,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterbootstrapaction">List[Cluster<wbr>Bootstrap<wbr>Action]</a></span>
     </dt>
-    <dd>{{% md %}}List of bootstrap actions that will be run before Hadoop is started on the cluster nodes. Defined below
+    <dd>{{% md %}}Ordered list of bootstrap actions that will be run before Hadoop is started on the cluster nodes. Defined below.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -2758,7 +2766,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterbootstrapaction">List&lt;Cluster<wbr>Bootstrap<wbr>Action<wbr>Args&gt;?</a></span>
     </dt>
-    <dd>{{% md %}}List of bootstrap actions that will be run before Hadoop is started on the cluster nodes. Defined below
+    <dd>{{% md %}}Ordered list of bootstrap actions that will be run before Hadoop is started on the cluster nodes. Defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3043,7 +3051,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterbootstrapaction">[]Cluster<wbr>Bootstrap<wbr>Action</a></span>
     </dt>
-    <dd>{{% md %}}List of bootstrap actions that will be run before Hadoop is started on the cluster nodes. Defined below
+    <dd>{{% md %}}Ordered list of bootstrap actions that will be run before Hadoop is started on the cluster nodes. Defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3328,7 +3336,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterbootstrapaction">Cluster<wbr>Bootstrap<wbr>Action[]?</a></span>
     </dt>
-    <dd>{{% md %}}List of bootstrap actions that will be run before Hadoop is started on the cluster nodes. Defined below
+    <dd>{{% md %}}Ordered list of bootstrap actions that will be run before Hadoop is started on the cluster nodes. Defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3613,7 +3621,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clusterbootstrapaction">List[Cluster<wbr>Bootstrap<wbr>Action]</a></span>
     </dt>
-    <dd>{{% md %}}List of bootstrap actions that will be run before Hadoop is started on the cluster nodes. Defined below
+    <dd>{{% md %}}Ordered list of bootstrap actions that will be run before Hadoop is started on the cluster nodes. Defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6164,9 +6172,14 @@ The following state arguments are supported:
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

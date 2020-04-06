@@ -4,6 +4,8 @@ title: "VpcPeeringConnection"
 block_external_search_index: true
 ---
 
+
+
 Provides a resource to manage a VPC peering connection.
 
 > **NOTE on VPC Peering Connections and VPC Peering Connection Options:** This provider provides
@@ -18,13 +20,13 @@ management of the VPC Peering Connection and allows options to be set correctly 
 VPC Peering Connections use the `aws.ec2.VpcPeeringConnection` resource to manage the requester's side of the
 connection and use the `aws.ec2.VpcPeeringConnectionAccepter` resource to manage the accepter's side of the connection.
 
+{{% examples %}}
+{{% /examples %}}
 ## Notes
 
 If both VPCs are not in the same AWS account do not enable the `auto_accept` attribute.
 The accepter can manage its side of the connection using the `aws.ec2.VpcPeeringConnectionAccepter` resource
 or accept the connection manually using the AWS Management Console, AWS CLI, through SDKs, etc.
-
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_peering_connection.html.markdown.
 
 
 
@@ -1737,9 +1739,14 @@ connection.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

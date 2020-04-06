@@ -4,12 +4,16 @@ title: "IntegrationResponse"
 block_external_search_index: true
 ---
 
+
+
 Provides an HTTP Method Integration Response for an API Gateway Resource.
 
 > **Note:** Depends on having `aws.apigateway.Integration` inside your rest api. To ensure this
 you might need to add an explicit `depends_on` for clean runs.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -58,7 +62,8 @@ const myDemoIntegrationResponse = new aws.apigateway.IntegrationResponse("MyDemo
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_integration_response.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -1312,9 +1317,14 @@ For all other `HTTP` and `AWS` backends, the HTTP status code is matched.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

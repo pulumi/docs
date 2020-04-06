@@ -4,10 +4,14 @@ title: "GetElasticIp"
 block_external_search_index: true
 ---
 
+
+
 `aws.ec2.Eip` provides details about a specific Elastic IP.
 
+{{% examples %}}
 ## Example Usage
 
+{{% example %}}
 ### Search By Allocation ID (VPC only)
 
 ```typescript
@@ -19,6 +23,8 @@ const byAllocationId = pulumi.output(aws.getElasticIp({
 }, { async: true }));
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Search By Filters (EC2-Classic or VPC)
 
 ```typescript
@@ -33,6 +39,8 @@ const byFilter = pulumi.output(aws.getElasticIp({
 }, { async: true }));
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Search By Public IP (EC2-Classic or VPC)
 
 ```typescript
@@ -44,6 +52,8 @@ const byPublicIp = pulumi.output(aws.getElasticIp({
 }, { async: true }));
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Search By Tags (EC2-Classic or VPC)
 
 ```typescript
@@ -57,7 +67,8 @@ const byTags = pulumi.output(aws.getElasticIp({
 }, { async: true }));
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/eip.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

@@ -4,10 +4,14 @@ title: "Policy"
 block_external_search_index: true
 ---
 
+
+
 Provides an Application AutoScaling Policy resource.
 
+{{% examples %}}
 ## Example Usage
 
+{{% example %}}
 ### DynamoDB Table Autoscaling
 
 ```typescript
@@ -36,6 +40,8 @@ const dynamodbTableReadPolicy = new aws.appautoscaling.Policy("dynamodb_table_re
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### ECS Service Autoscaling
 
 ```typescript
@@ -67,6 +73,8 @@ const ecsPolicy = new aws.appautoscaling.Policy("ecs_policy", {
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Preserve desired count when updating an autoscaled ECS Service
 
 ```typescript
@@ -80,6 +88,8 @@ const ecsService = new aws.ecs.Service("ecs_service", {
 }, { ignoreChanges: ["desiredCount"] });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Aurora Read Replica Autoscaling
 
 ```typescript
@@ -109,6 +119,8 @@ const replicasPolicy = new aws.appautoscaling.Policy("replicas", {
 });
 ```
 
+{{% /example %}}
+{{% /examples %}}
 ## Nested fields
 
 ### `target_tracking_scaling_policy_configuration`
@@ -132,8 +144,6 @@ const replicasPolicy = new aws.appautoscaling.Policy("replicas", {
 
 * `predefined_metric_type` - (Required) The metric type.
 * `resource_label` - (Optional) Reserved for future use.
-
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appautoscaling_policy.html.markdown.
 
 
 
@@ -2306,9 +2316,14 @@ The following state arguments are supported:
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

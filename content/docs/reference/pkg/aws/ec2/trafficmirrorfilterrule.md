@@ -4,10 +4,14 @@ title: "TrafficMirrorFilterRule"
 block_external_search_index: true
 ---
 
+
+
 Provides an Traffic mirror filter rule.  
 Read [limits and considerations](https://docs.aws.amazon.com/vpc/latest/mirroring/traffic-mirroring-considerations.html) for traffic mirroring
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 To create a basic traffic mirror session
 
@@ -48,7 +52,8 @@ const rulein = new aws.ec2.TrafficMirrorFilterRule("rulein", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_traffic_mirror_filter_rule.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -1705,9 +1710,14 @@ The following state arguments are supported:
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

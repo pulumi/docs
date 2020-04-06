@@ -4,10 +4,14 @@ title: "GetTransitGateway"
 block_external_search_index: true
 ---
 
+
+
 Get information on an EC2 Transit Gateway.
 
+{{% examples %}}
 ## Example Usage
 
+{{% example %}}
 ### By Filter
 
 ```typescript
@@ -22,6 +26,8 @@ const example = pulumi.output(aws.ec2transitgateway.getTransitGateway({
 }, { async: true }));
 ```
 
+{{% /example %}}
+{{% example %}}
 ### By Identifier
 
 ```typescript
@@ -33,7 +39,8 @@ const example = pulumi.output(aws.ec2transitgateway.getTransitGateway({
 }, { async: true }));
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ec2_transit_gateway.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

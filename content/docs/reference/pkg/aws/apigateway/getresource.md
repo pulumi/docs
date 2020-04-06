@@ -4,10 +4,14 @@ title: "GetResource"
 block_external_search_index: true
 ---
 
+
+
 Use this data source to get the id of a Resource in API Gateway. 
 To fetch the Resource, you must provide the REST API id as well as the full path.  
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -22,7 +26,8 @@ const myResource = myRestApi.apply(myRestApi => aws.apigateway.getResource({
 }, { async: true }));
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/api_gateway_resource.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

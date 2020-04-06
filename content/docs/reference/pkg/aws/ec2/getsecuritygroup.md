@@ -4,13 +4,17 @@ title: "GetSecurityGroup"
 block_external_search_index: true
 ---
 
+
+
 `aws.ec2.SecurityGroup` provides details about a specific Security Group.
 
 This resource can prove useful when a module accepts a Security Group id as
 an input variable and needs to, for example, determine the id of the
 VPC that the security group belongs to.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 The following example shows how one might accept a Security Group id as a variable
 and use this data source to obtain the data necessary to create a subnet.
@@ -31,7 +35,8 @@ const subnet = new aws.ec2.Subnet("subnet", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/security_group.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

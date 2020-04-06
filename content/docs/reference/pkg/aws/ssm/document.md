@@ -4,13 +4,17 @@ title: "Document"
 block_external_search_index: true
 ---
 
+
+
 Provides an SSM Document resource
 
 > **NOTE on updating SSM documents:** Only documents with a schema version of 2.0
 or greater can update their content once created, see [SSM Schema Features][1]. To update a document with an older
 schema version you must recreate the resource.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -39,6 +43,8 @@ const foo = new aws.ssm.Document("foo", {
 });
 ```
 
+{{% /example %}}
+{{% /examples %}}
 ## attachments_source
 
 The `attachments_source` block supports the following:
@@ -57,8 +63,6 @@ The permissions mapping supports the following:
 
 * `type` - The permission type for the document. The permission type can be `Share`.
 * `account_ids` - The AWS user accounts that should have access to the document. The account IDs can either be a group of account IDs or `All`.
-
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ssm_document.html.markdown.
 
 
 
@@ -2554,9 +2558,14 @@ The following state arguments are supported:
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

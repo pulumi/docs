@@ -4,10 +4,14 @@ title: "CapacityProvider"
 block_external_search_index: true
 ---
 
+
+
 Provides an ECS cluster capacity provider. More information can be found on the [ECS Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-capacity-providers.html).
 
 > **NOTE:** The AWS API does not currently support deleting ECS cluster capacity providers. Removing this resource will only remove the state for it.
 
+{{% examples %}}
+{{% /examples %}}
 ## auto_scaling_group_provider
 
 The `auto_scaling_group_provider` block supports the following:
@@ -24,8 +28,6 @@ The `managed_scaling` block supports the following:
 * `minimum_scaling_step_size` - (Optional) The minimum step adjustment size. A number between 1 and 10,000.
 * `status` - (Optional) Whether auto scaling is managed by ECS. Valid values are `ENABLED` and `DISABLED`.
 * `target_capacity` - (Optional) The target utilization for the capacity provider. A number between 1 and 100.
-
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecs_capacity_provider.html.markdown.
 
 
 
@@ -1078,9 +1080,14 @@ The following state arguments are supported:
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

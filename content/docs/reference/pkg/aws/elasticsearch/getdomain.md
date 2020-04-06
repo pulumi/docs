@@ -4,9 +4,13 @@ title: "GetDomain"
 block_external_search_index: true
 ---
 
+
+
 Use this data source to get information about an Elasticsearch Domain
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -17,7 +21,8 @@ const myDomain = pulumi.output(aws.elasticsearch.getDomain({
 }, { async: true }));
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/elasticsearch_domain.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

@@ -4,6 +4,8 @@ title: "GetAvailabilityZones"
 block_external_search_index: true
 ---
 
+
+
 The Availability Zones data source allows access to the list of AWS
 Availability Zones which can be accessed by an AWS account within the region
 configured in the provider.
@@ -13,8 +15,10 @@ which provides some details about a specific availability zone.
 
 > When [Local Zones](https://aws.amazon.com/about-aws/global-infrastructure/localzones/) are enabled in a region, by default the API and this data source include both Local Zones and Availability Zones. To return only Availability Zones, see the example section below.
 
+{{% examples %}}
 ## Example Usage
 
+{{% example %}}
 ### By Filter
 
 All Local Zones (regardless of opt-in status):
@@ -49,7 +53,8 @@ const example = pulumi.output(aws.getAvailabilityZones({
 }, { async: true }));
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/availability_zones.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

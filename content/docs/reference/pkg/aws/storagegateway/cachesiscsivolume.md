@@ -4,16 +4,22 @@ title: "CachesIscsiVolume"
 block_external_search_index: true
 ---
 
+
+
 Manages an AWS Storage Gateway cached iSCSI volume.
 
 > **NOTE:** The gateway must have cache added (e.g. via the [`aws.storagegateway.Cache`](https://www.terraform.io/docs/providers/aws/r/storagegateway_cache.html) resource) before creating volumes otherwise the Storage Gateway API will return an error.
 
 > **NOTE:** The gateway must have an upload buffer added (e.g. via the [`aws.storagegateway.UploadBuffer`](https://www.terraform.io/docs/providers/aws/r/storagegateway_upload_buffer.html) resource) before the volume is operational to clients, however the Storage Gateway API will allow volume creation without error in that case and return volume status as `UPLOAD BUFFER NOT CONFIGURED`.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 > **NOTE:** These examples are referencing the [`aws.storagegateway.Cache`](https://www.terraform.io/docs/providers/aws/r/storagegateway_cache.html) resource `gateway_arn` attribute to ensure this provider properly adds cache before creating the volume. If you are not using this method, you may need to declare an expicit dependency (e.g. via `depends_on = ["aws_storagegateway_cache.example"]`) to ensure proper ordering.
 
+{{% /example %}}
+{{% example %}}
 ### Create Empty Cached iSCSI Volume
 
 ```typescript
@@ -28,6 +34,8 @@ const example = new aws.storagegateway.CachesIscsiVolume("example", {
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Create Cached iSCSI Volume From Snapshot
 
 ```typescript
@@ -43,6 +51,8 @@ const example = new aws.storagegateway.CachesIscsiVolume("example", {
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Create Cached iSCSI Volume From Source Volume
 
 ```typescript
@@ -58,7 +68,8 @@ const example = new aws.storagegateway.CachesIscsiVolume("example", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_cached_iscsi_volume.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -1660,9 +1671,14 @@ The following state arguments are supported:
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

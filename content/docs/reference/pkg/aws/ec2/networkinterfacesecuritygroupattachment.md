@@ -4,6 +4,8 @@ title: "NetworkInterfaceSecurityGroupAttachment"
 block_external_search_index: true
 ---
 
+
+
 This resource attaches a security group to an Elastic Network Interface (ENI).
 It can be used to attach a security group to any existing ENI, be it a
 secondary ENI or one attached as the primary interface on an instance.
@@ -18,7 +20,9 @@ one or the other.
 [1]: https://www.terraform.io/docs/providers/aws/d/instance.html
 [2]: https://www.terraform.io/docs/providers/aws/r/network_interface.html
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 The following provides a very basic example of setting up an instance (provided
 by `instance`) in the default security group, creating a security group
@@ -78,11 +82,11 @@ const sgAttachment = new aws.ec2.NetworkInterfaceSecurityGroupAttachment("sg_att
 });
 ```
 
+{{% /example %}}
+{{% /examples %}}
 ## Output Reference
 
 There are no outputs for this resource.
-
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/network_interface_sg_attachment.html.markdown.
 
 
 
@@ -640,9 +644,14 @@ The following state arguments are supported:
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

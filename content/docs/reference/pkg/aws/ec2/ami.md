@@ -4,6 +4,8 @@ title: "Ami"
 block_external_search_index: true
 ---
 
+
+
 The AMI resource allows the creation and management of a completely-custom
 *Amazon Machine Image* (AMI).
 
@@ -13,7 +15,9 @@ region, it's better to use `aws.ec2.AmiCopy` instead.
 If you just want to share an existing AMI with another AWS account,
 it's better to use `aws.ec2.AmiLaunchPermission` instead.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -33,7 +37,8 @@ const example = new aws.ec2.Ami("example", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ami.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -2458,9 +2463,14 @@ default), "io1" or "gp2".
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

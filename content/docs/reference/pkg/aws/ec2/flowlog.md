@@ -4,11 +4,15 @@ title: "FlowLog"
 block_external_search_index: true
 ---
 
+
+
 Provides a VPC/Subnet/ENI Flow Log to capture IP traffic for a specific network
 interface, subnet, or VPC. Logs are sent to a CloudWatch Log Group or a S3 Bucket.
 
+{{% examples %}}
 ## Example Usage
 
+{{% example %}}
 ### CloudWatch Logging
 
 ```typescript
@@ -60,6 +64,8 @@ const exampleRolePolicy = new aws.iam.RolePolicy("example", {
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### S3 Logging
 
 ```typescript
@@ -75,7 +81,8 @@ const exampleFlowLog = new aws.ec2.FlowLog("example", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/flow_log.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -1641,9 +1648,14 @@ minutes). Default: `600`.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

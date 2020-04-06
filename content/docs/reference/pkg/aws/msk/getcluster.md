@@ -4,9 +4,13 @@ title: "GetCluster"
 block_external_search_index: true
 ---
 
+
+
 Get information on an Amazon MSK Cluster.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -17,7 +21,8 @@ const example = pulumi.output(aws.msk.getCluster({
 }, { async: true }));
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/msk_cluster.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

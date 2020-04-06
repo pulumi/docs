@@ -4,13 +4,17 @@ title: "GetRouteTable"
 block_external_search_index: true
 ---
 
+
+
 `aws.ec2.RouteTable` provides details about a specific Route Table.
 
 This resource can prove useful when a module accepts a Subnet id as
 an input variable and needs to, for example, add a route in
 the Route Table.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 The following example shows how one might accept a Route Table id as a variable
 and use this data source to obtain the data necessary to create a route.
@@ -32,7 +36,8 @@ const route = new aws.ec2.Route("route", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/route_table.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

@@ -4,6 +4,8 @@ title: "VpcEndpointSubnetAssociation"
 block_external_search_index: true
 ---
 
+
+
 Provides a resource to create an association between a VPC endpoint and a subnet.
 
 > **NOTE on VPC Endpoints and VPC Endpoint Subnet Associations:** This provider provides
@@ -12,7 +14,9 @@ and a single `subnet_id`) and a VPC Endpoint resource with a `subnet_ids`
 attribute. Do not use the same subnet ID in both a VPC Endpoint resource and a VPC Endpoint Subnet
 Association resource. Doing so will cause a conflict of associations and will overwrite the association.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 Basic usage:
 
@@ -26,7 +30,8 @@ const snEc2 = new aws.ec2.VpcEndpointSubnetAssociation("sn_ec2", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_endpoint_subnet_association.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -584,9 +589,14 @@ The following state arguments are supported:
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

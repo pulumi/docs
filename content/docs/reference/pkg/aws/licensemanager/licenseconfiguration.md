@@ -4,11 +4,15 @@ title: "LicenseConfiguration"
 block_external_search_index: true
 ---
 
+
+
 Provides a License Manager license configuration resource.
 
 > **Note:** Removing the `license_count` attribute is not supported by the License Manager API - recreate the resource instead.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -26,6 +30,8 @@ const example = new aws.licensemanager.LicenseConfiguration("example", {
 });
 ```
 
+{{% /example %}}
+{{% /examples %}}
 ## Rules
 
 License rules should be in the format of `#RuleType=RuleValue`. Supported rule types:
@@ -37,8 +43,6 @@ License rules should be in the format of `#RuleType=RuleValue`. Supported rule t
 * `minimumSockets` - Resource must have minimum socket count in order to use the license. Default: 1
 * `maximumSockets` - Resource must have maximum socket count in order to use the license. Default: unbounded, limit: 10000
 * `allowedTenancy` - Defines where the license can be used. If set, restricts license usage to selected tenancies. Specify a comma delimited list of `EC2-Default`, `EC2-DedicatedHost`, `EC2-DedicatedInstance`
-
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/licensemanager_license_configuration.markdown.
 
 
 
@@ -1136,9 +1140,14 @@ The following state arguments are supported:
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

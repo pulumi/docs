@@ -4,9 +4,13 @@ title: "GetCluster"
 block_external_search_index: true
 ---
 
+
+
 Use this data source to get information about a CloudHSM v2 cluster
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -17,7 +21,8 @@ const cluster = pulumi.output(aws.cloudhsmv2.getCluster({
 }, { async: true }));
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/cloudhsm_v2_cluster.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

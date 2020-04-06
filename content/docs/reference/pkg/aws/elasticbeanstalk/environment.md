@@ -4,6 +4,8 @@ title: "Environment"
 block_external_search_index: true
 ---
 
+
+
 Provides an Elastic Beanstalk Environment Resource. Elastic Beanstalk allows
 you to deploy and manage applications in the AWS cloud without worrying about
 the infrastructure that runs those applications.
@@ -11,7 +13,9 @@ the infrastructure that runs those applications.
 Environments are often things such as `development`, `integration`, or
 `production`.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -26,6 +30,8 @@ const tfenvtest = new aws.elasticbeanstalk.Environment("tfenvtest", {
 });
 ```
 
+{{% /example %}}
+{{% /examples %}}
 ## Option Settings
 
 Some options can be stack-specific, check [AWS Docs](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/command-options-general.html)
@@ -64,8 +70,6 @@ const tfenvtest = new aws.elasticbeanstalk.Environment("tfenvtest", {
     solutionStackName: "64bit Amazon Linux 2015.03 v2.0.3 running Go 1.4",
 });
 ```
-
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elastic_beanstalk_environment.html.markdown.
 
 
 
@@ -3094,9 +3098,14 @@ in the application URL
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

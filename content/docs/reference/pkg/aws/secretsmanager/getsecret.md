@@ -4,10 +4,14 @@ title: "GetSecret"
 block_external_search_index: true
 ---
 
+
+
 Retrieve metadata information about a Secrets Manager secret. To retrieve a secret value, see the [`aws.secretsmanager.SecretVersion` data source](https://www.terraform.io/docs/providers/aws/d/secretsmanager_secret_version.html).
 
+{{% examples %}}
 ## Example Usage
 
+{{% example %}}
 ### ARN
 
 ```typescript
@@ -19,6 +23,8 @@ const by_arn = pulumi.output(aws.secretsmanager.getSecret({
 }, { async: true }));
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Name
 
 ```typescript
@@ -30,7 +36,8 @@ const by_name = pulumi.output(aws.secretsmanager.getSecret({
 }, { async: true }));
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/secretsmanager_secret.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

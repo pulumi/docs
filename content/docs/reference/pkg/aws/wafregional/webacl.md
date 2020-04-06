@@ -4,10 +4,14 @@ title: "WebAcl"
 block_external_search_index: true
 ---
 
+
+
 Provides a WAF Regional Web ACL Resource for use with Application Load Balancer.
 
+{{% examples %}}
 ## Example Usage
 
+{{% example %}}
 ### Regular Rule
 
 ```typescript
@@ -44,6 +48,8 @@ const wafacl = new aws.wafregional.WebAcl("wafacl", {
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Group Rule
 
 ```typescript
@@ -66,6 +72,8 @@ const example = new aws.wafregional.WebAcl("example", {
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Logging
 
 > *NOTE:* The Kinesis Firehose Delivery Stream name must begin with `aws-waf-logs-`. See the [AWS WAF Developer Guide](https://docs.aws.amazon.com/waf/latest/developerguide/logging.html) for more information about enabling WAF logging.
@@ -92,7 +100,8 @@ const example = new aws.wafregional.WebAcl("example", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_web_acl.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -1932,9 +1941,14 @@ Rules with a lower value are evaluated before rules with a higher value.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

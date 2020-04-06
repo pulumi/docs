@@ -4,6 +4,8 @@ title: "ComputeEnvironment"
 block_external_search_index: true
 ---
 
+
+
 Creates a AWS Batch compute environment. Compute environments contain the Amazon ECS container instances that are used to run containerized batch jobs.
 
 For information about AWS Batch, see [What is AWS Batch?][1] .
@@ -12,7 +14,9 @@ For information about compute environment, see [Compute Environments][2] .
 > **Note:** To prevent a race condition during environment deletion, make sure to set `depends_on` to the related `aws.iam.RolePolicyAttachment`;
 otherwise, the policy may be destroyed too soon and the compute environment will then get stuck in the `DELETING` state, see [Troubleshooting AWS Batch][3] .
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -90,7 +94,8 @@ const sampleComputeEnvironment = new aws.batch.ComputeEnvironment("sample", {
 }, { dependsOn: [awsBatchServiceRoleRolePolicyAttachment] });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/batch_compute_environment.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -2107,9 +2112,14 @@ The following state arguments are supported:
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

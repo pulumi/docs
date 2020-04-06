@@ -4,9 +4,13 @@ title: "GetNetworkInterface"
 block_external_search_index: true
 ---
 
+
+
 Use this data source to get information about a Network Interface.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -17,7 +21,8 @@ const bar = pulumi.output(aws.ec2.getNetworkInterface({
 }, { async: true }));
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/network_interface.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

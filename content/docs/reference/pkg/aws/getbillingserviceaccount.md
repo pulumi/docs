@@ -4,9 +4,13 @@ title: "GetBillingServiceAccount"
 block_external_search_index: true
 ---
 
+
+
 Use this data source to get the Account ID of the [AWS Billing and Cost Management Service Account](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-getting-started.html#step-2) for the purpose of whitelisting in S3 bucket policy.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -49,7 +53,9 @@ const billingLogs = new aws.s3.Bucket("billing_logs", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/billing_service_account.html.markdown.
+
+{{% /example %}}
+{{% /examples %}}
 
 
 

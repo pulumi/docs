@@ -4,6 +4,8 @@ title: "VirtualNode"
 block_external_search_index: true
 ---
 
+
+
 Provides an AWS App Mesh virtual node resource.
 
 ## Breaking Changes
@@ -17,8 +19,10 @@ setting `virtual_service_name` to the name of the service.
 
 The state associated with existing resources will automatically be migrated.
 
+{{% examples %}}
 ## Example Usage
 
+{{% example %}}
 ### Basic
 
 ```typescript
@@ -48,6 +52,8 @@ const serviceb1 = new aws.appmesh.VirtualNode("serviceb1", {
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### AWS Cloud Map Service Discovery
 
 ```typescript
@@ -82,6 +88,8 @@ const serviceb1 = new aws.appmesh.VirtualNode("serviceb1", {
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Listener Health Check
 
 ```typescript
@@ -119,6 +127,8 @@ const serviceb1 = new aws.appmesh.VirtualNode("serviceb1", {
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Logging
 
 ```typescript
@@ -155,7 +165,8 @@ const serviceb1 = new aws.appmesh.VirtualNode("serviceb1", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appmesh_virtual_node.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -2606,9 +2617,14 @@ Use the [`aws.servicediscovery.HttpNamespace`](https://www.terraform.io/docs/pro
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

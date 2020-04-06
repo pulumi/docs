@@ -4,14 +4,18 @@ title: "Function"
 block_external_search_index: true
 ---
 
+
+
 Provides a Lambda Function resource. Lambda allows you to trigger execution of code in response to events in AWS, enabling serverless backend solutions. The Lambda Function itself includes source code and runtime configuration.
 
 For information about Lambda and how to use it, see [What is AWS Lambda?][1]
 
 > **NOTE:** Due to [AWS Lambda improved VPC networking changes that began deploying in September 2019](https://aws.amazon.com/blogs/compute/announcing-improved-vpc-networking-for-aws-lambda-functions/), EC2 subnets and security groups associated with Lambda Functions can take up to 45 minutes to successfully delete.
 
+{{% examples %}}
 ## Example Usage
 
+{{% example %}}
 ### Basic Example
 
 ```typescript
@@ -47,6 +51,8 @@ const testLambda = new aws.lambda.Function("test_lambda", {
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Lambda Layers
 
 > **NOTE:** The `aws.lambda.LayerVersion` attribute values for `arn` and `layer_arn` were swapped in version 2.0.0 of the this provider AWS Provider. For version 1.x, use `layer_arn` references. For version 2.x, use `arn` references.
@@ -62,6 +68,8 @@ const exampleFunction = new aws.lambda.Function("example", {
 });
 ```
 
+{{% /example %}}
+{{% /examples %}}
 ## CloudWatch Logging and Permissions
 
 For more information about CloudWatch Logs for Lambda, see the [Lambda User Guide](https://docs.aws.amazon.com/lambda/latest/dg/monitoring-functions-logs.html).
@@ -114,8 +122,6 @@ package via S3 it may be useful to use the `aws.s3.BucketObject` resource to upl
 
 For larger deployment packages it is recommended by Amazon to upload via S3, since the S3 API has better support for uploading
 large files efficiently.
-
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lambda_function.html.markdown.
 
 
 
@@ -3570,9 +3576,14 @@ X-Ray for a tracing decision.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

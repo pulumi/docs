@@ -4,10 +4,14 @@ title: "Zone"
 block_external_search_index: true
 ---
 
+
+
 Manages a Route53 Hosted Zone.
 
+{{% examples %}}
 ## Example Usage
 
+{{% example %}}
 ### Public Zone
 
 ```typescript
@@ -17,6 +21,8 @@ import * as aws from "@pulumi/aws";
 const primary = new aws.route53.Zone("primary", {});
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Public Subdomain Zone
 
 For use in subdomains, note that you need to create a
@@ -47,6 +53,8 @@ const dev_ns = new aws.route53.Record("dev-ns", {
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Private Zone
 
 > **NOTE:** This provider provides both exclusive VPC associations defined in-line in this resource via `vpc` configuration blocks and a separate [Zone VPC Association](https://www.terraform.io/docs/providers/aws/r/route53_zone_association.html) resource. At this time, you cannot use in-line VPC associations in conjunction with any `aws.route53.ZoneAssociation` resources with the same zone ID otherwise it will cause a perpetual difference in plan output. You can optionally use [`ignoreChanges`](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) to manage additional associations via the `aws.route53.ZoneAssociation` resource.
@@ -64,7 +72,8 @@ const privateZone = new aws.route53.Zone("private", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_zone.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -1326,9 +1335,14 @@ Find more about delegation sets in [AWS docs](https://docs.aws.amazon.com/Route5
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

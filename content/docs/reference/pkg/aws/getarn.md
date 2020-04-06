@@ -4,9 +4,13 @@ title: "GetArn"
 block_external_search_index: true
 ---
 
+
+
 Parses an Amazon Resource Name (ARN) into its constituent parts.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -17,7 +21,8 @@ const dbInstance = pulumi.output(aws.getArn({
 }, { async: true }));
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/arn.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

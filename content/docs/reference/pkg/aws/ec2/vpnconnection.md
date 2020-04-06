@@ -4,6 +4,8 @@ title: "VpnConnection"
 block_external_search_index: true
 ---
 
+
+
 Manages an EC2 VPN connection. These objects can be connected to customer gateways, and allow you to establish tunnels between your network and Amazon.
 
 > **Note:** All arguments including `tunnel1_preshared_key` and `tunnel2_preshared_key` will be stored in the raw state as plain-text.
@@ -12,8 +14,10 @@ Manages an EC2 VPN connection. These objects can be connected to customer gatewa
 > **Note:** The CIDR blocks in the arguments `tunnel1_inside_cidr` and `tunnel2_inside_cidr` must have a prefix of /30 and be a part of a specific range.
 [Read more about this in the AWS documentation](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_VpnTunnelOptionsSpecification.html).
 
+{{% examples %}}
 ## Example Usage
 
+{{% example %}}
 ### EC2 Transit Gateway
 
 ```typescript
@@ -33,6 +37,8 @@ const exampleVpnConnection = new aws.ec2.VpnConnection("example", {
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Virtual Private Gateway
 
 ```typescript
@@ -58,7 +64,8 @@ const main = new aws.ec2.VpnConnection("main", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpn_connection.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -2819,9 +2826,14 @@ The following state arguments are supported:
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

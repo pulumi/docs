@@ -4,6 +4,8 @@ title: "ReplicationGroup"
 block_external_search_index: true
 ---
 
+
+
 Provides an ElastiCache Replication Group resource.
 For working with Memcached or single primary Redis instances (Cluster Mode Disabled), see the
 [`aws.elasticache.Cluster` resource](https://www.terraform.io/docs/providers/aws/r/elasticache_cluster.html).
@@ -16,8 +18,10 @@ actual modification has not yet taken place. You can use the
 immediately. Using `apply_immediately` can result in a brief downtime as
 servers reboots.
 
+{{% examples %}}
 ## Example Usage
 
+{{% example %}}
 ### Redis Cluster Mode Disabled
 
 To create a single shard primary with single read replica:
@@ -66,6 +70,8 @@ const replica = new aws.elasticache.Cluster("replica", {
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Redis Cluster Mode Enabled
 
 To create two shards with a primary and a single read replica each:
@@ -93,7 +99,8 @@ const baz = new aws.elasticache.ReplicationGroup("baz", {
 and unavailable on T1 node types. For T2 node types, it is only available on Redis version 3.2.4 or later with cluster mode enabled. See the [High Availability Using Replication Groups](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Replication.html) guide
 for full details on using Replication Groups.
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticache_replication_group.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -3819,9 +3826,14 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

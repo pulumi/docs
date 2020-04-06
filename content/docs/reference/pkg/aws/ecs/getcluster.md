@@ -4,10 +4,14 @@ title: "GetCluster"
 block_external_search_index: true
 ---
 
+
+
 The ECS Cluster data source allows access to details of a specific
 cluster within an AWS ECS service.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -18,7 +22,8 @@ const ecs_mongo = pulumi.output(aws.ecs.getCluster({
 }, { async: true }));
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ecs_cluster.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

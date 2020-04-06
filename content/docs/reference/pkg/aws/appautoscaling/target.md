@@ -4,10 +4,14 @@ title: "Target"
 block_external_search_index: true
 ---
 
+
+
 Provides an Application AutoScaling ScalableTarget resource. To manage policies which get attached to the target, see the [`aws.appautoscaling.Policy` resource](https://www.terraform.io/docs/providers/aws/r/appautoscaling_policy.html).
 
+{{% examples %}}
 ## Example Usage
 
+{{% example %}}
 ### DynamoDB Table Autoscaling
 
 ```typescript
@@ -24,6 +28,8 @@ const dynamodbTableReadTarget = new aws.appautoscaling.Target("dynamodb_table_re
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### DynamoDB Index Autoscaling
 
 ```typescript
@@ -40,6 +46,8 @@ const dynamodbIndexReadTarget = new aws.appautoscaling.Target("dynamodb_index_re
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### ECS Service Autoscaling
 
 ```typescript
@@ -56,6 +64,8 @@ const ecsTarget = new aws.appautoscaling.Target("ecs_target", {
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Aurora Read Replica Autoscaling
 
 ```typescript
@@ -71,7 +81,8 @@ const replicas = new aws.appautoscaling.Target("replicas", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appautoscaling_target.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -1073,9 +1084,14 @@ AutoScaling to modify your scalable target on your behalf.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+
