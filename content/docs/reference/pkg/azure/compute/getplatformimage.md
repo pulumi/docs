@@ -4,6 +4,8 @@ title: "GetPlatformImage"
 block_external_search_index: true
 ---
 
+
+
 Use this data source to access information about a Platform Image.
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/platform_image.html.markdown.

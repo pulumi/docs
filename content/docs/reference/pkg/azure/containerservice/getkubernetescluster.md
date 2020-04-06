@@ -4,6 +4,8 @@ title: "GetKubernetesCluster"
 block_external_search_index: true
 ---
 
+
+
 Use this data source to access information about an existing Managed Kubernetes Cluster (AKS).
 
 ## Example Usage

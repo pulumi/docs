@@ -4,6 +4,8 @@ title: "GetServer"
 block_external_search_index: true
 ---
 
+
+
 Use this data source to access information about an existing SQL Azure Database Server.
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/sql_server.html.markdown.

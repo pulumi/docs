@@ -4,6 +4,8 @@ title: "GetAccessPolicy"
 block_external_search_index: true
 ---
 
+
+
 Use this data source to access information about the permissions from the Management Key Vault Templates.
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/key_vault_access_policy.html.markdown.

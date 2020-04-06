@@ -4,6 +4,8 @@ title: "Probe"
 block_external_search_index: true
 ---
 
+
+
 Manages a LoadBalancer Probe Resource.
 
 > **NOTE** When using this resource, the Load Balancer needs to have a FrontEnd IP Configuration Attached
@@ -1278,9 +1280,13 @@ The following state arguments are supported:
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

@@ -4,6 +4,8 @@ title: "GetNamespaceAuthorizationRule"
 block_external_search_index: true
 ---
 
+
+
 Use this data source to access information about an existing ServiceBus Namespace Authorization Rule.
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/servicebus_namespace_authorization_rule.html.markdown.

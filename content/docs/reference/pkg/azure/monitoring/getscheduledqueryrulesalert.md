@@ -4,6 +4,8 @@ title: "GetScheduledQueryRulesAlert"
 block_external_search_index: true
 ---
 
+
+
 Use this data source to access the properties of an AlertingAction scheduled query rule.
 
 ## Example Usage

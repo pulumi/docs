@@ -4,6 +4,8 @@ title: "GetZone"
 block_external_search_index: true
 ---
 
+
+
 Use this data source to access information about an existing DNS Zone.
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/dns_zone.html.markdown.

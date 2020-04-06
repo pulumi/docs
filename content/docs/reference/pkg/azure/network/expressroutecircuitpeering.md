@@ -4,6 +4,8 @@ title: "ExpressRouteCircuitPeering"
 block_external_search_index: true
 ---
 
+
+
 Manages an ExpressRoute Circuit Peering.
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/express_route_circuit_peering.html.markdown.
@@ -1632,9 +1634,13 @@ create the Express Route Circuit Peering. Changing this forces a new resource to
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

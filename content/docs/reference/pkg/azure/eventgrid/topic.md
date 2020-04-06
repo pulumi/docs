@@ -4,6 +4,8 @@ title: "Topic"
 block_external_search_index: true
 ---
 
+
+
 Manages an EventGrid Topic
 
 > **Note:** at this time EventGrid Topic's are only available in a limited number of regions.
@@ -998,9 +1000,13 @@ The following state arguments are supported:
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

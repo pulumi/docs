@@ -4,6 +4,8 @@ title: "Service"
 block_external_search_index: true
 ---
 
+
+
 Manages a Healthcare Service.
 
 ## Example Usage
@@ -1731,9 +1733,13 @@ Authority must be registered to Azure AD and in the following format: https://{A
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

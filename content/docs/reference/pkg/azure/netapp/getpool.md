@@ -4,6 +4,8 @@ title: "GetPool"
 block_external_search_index: true
 ---
 
+
+
 Uses this data source to access information about an existing NetApp Pool.
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/netapp_pool.html.markdown.

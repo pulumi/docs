@@ -4,6 +4,8 @@ title: "GetScheduledQueryRulesLog"
 block_external_search_index: true
 ---
 
+
+
 Use this data source to access the properties of a LogToMetricAction scheduled query rule.
 
 ## Example Usage

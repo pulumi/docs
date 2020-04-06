@@ -4,6 +4,8 @@ title: "Account"
 block_external_search_index: true
 ---
 
+
+
 Manages an Azure Storage Account.
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/storage_account.html.markdown.
@@ -6401,9 +6403,13 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

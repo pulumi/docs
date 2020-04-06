@@ -4,6 +4,8 @@ title: "Extension"
 block_external_search_index: true
 ---
 
+
+
 Manages a Virtual Machine Extension to provide post deployment configuration
 and run automated tasks.
 
@@ -1409,9 +1411,13 @@ use, available versions can be found using the Azure CLI.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

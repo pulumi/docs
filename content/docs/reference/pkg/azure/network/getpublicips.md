@@ -4,6 +4,8 @@ title: "GetPublicIPs"
 block_external_search_index: true
 ---
 
+
+
 Use this data source to access information about a set of existing Public IP Addresses.
 
 ## Example Usage

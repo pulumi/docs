@@ -4,6 +4,8 @@ title: "Group"
 block_external_search_index: true
 ---
 
+
+
 Manages a Management Group.
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/management_group.html.markdown.
@@ -19,7 +21,7 @@ Manages a Management Group.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Group</span><span class="p">(resource_name, opts=None, </span>display_name=None<span class="p">, </span>group_id=None<span class="p">, </span>parent_management_group_id=None<span class="p">, </span>subscription_ids=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Group</span><span class="p">(resource_name, opts=None, </span>display_name=None<span class="p">, </span>group_id=None<span class="p">, </span>name=None<span class="p">, </span>parent_management_group_id=None<span class="p">, </span>subscription_ids=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -125,16 +127,25 @@ Manages a Management Group.
         <span class="property-indicator"></span>
         <span class="property-type">string?</span>
     </dt>
-    <dd>{{% md %}}A friendly name for this Management Group. If not specified, this'll be the same as the `group_id`.
+    <dd>{{% md %}}A friendly name for this Management Group. If not specified, this'll be the same as the `name`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span>Group<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string?</span>
     </dt>
-    <dd>{{% md %}}The UUID for this Management Group, which needs to be unique across your tenant - which will be generated if not provided. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The name or UUID for this Management Group, which needs to be unique across your tenant. A new UUID will be generated if not provided. Changing this forces a new resource to be created.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `name`{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The name or UUID for this Management Group, which needs to be unique across your tenant. A new UUID will be generated if not provided. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -168,16 +179,25 @@ Manages a Management Group.
         <span class="property-indicator"></span>
         <span class="property-type">*string</span>
     </dt>
-    <dd>{{% md %}}A friendly name for this Management Group. If not specified, this'll be the same as the `group_id`.
+    <dd>{{% md %}}A friendly name for this Management Group. If not specified, this'll be the same as the `name`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span>Group<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">*string</span>
     </dt>
-    <dd>{{% md %}}The UUID for this Management Group, which needs to be unique across your tenant - which will be generated if not provided. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The name or UUID for this Management Group, which needs to be unique across your tenant. A new UUID will be generated if not provided. Changing this forces a new resource to be created.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `name`{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The name or UUID for this Management Group, which needs to be unique across your tenant. A new UUID will be generated if not provided. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -211,16 +231,25 @@ Manages a Management Group.
         <span class="property-indicator"></span>
         <span class="property-type">string?</span>
     </dt>
-    <dd>{{% md %}}A friendly name for this Management Group. If not specified, this'll be the same as the `group_id`.
+    <dd>{{% md %}}A friendly name for this Management Group. If not specified, this'll be the same as the `name`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span>group<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string?</span>
     </dt>
-    <dd>{{% md %}}The UUID for this Management Group, which needs to be unique across your tenant - which will be generated if not provided. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The name or UUID for this Management Group, which needs to be unique across your tenant. A new UUID will be generated if not provided. Changing this forces a new resource to be created.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `name`{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The name or UUID for this Management Group, which needs to be unique across your tenant. A new UUID will be generated if not provided. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -254,16 +283,25 @@ Manages a Management Group.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A friendly name for this Management Group. If not specified, this'll be the same as the `group_id`.
+    <dd>{{% md %}}A friendly name for this Management Group. If not specified, this'll be the same as the `name`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span>group_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The UUID for this Management Group, which needs to be unique across your tenant - which will be generated if not provided. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The name or UUID for this Management Group, which needs to be unique across your tenant. A new UUID will be generated if not provided. Changing this forces a new resource to be created.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `name`{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name or UUID for this Management Group, which needs to be unique across your tenant. A new UUID will be generated if not provided. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -309,16 +347,25 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A friendly name for this Management Group. If not specified, this'll be the same as the `group_id`.
+    <dd>{{% md %}}A friendly name for this Management Group. If not specified, this'll be the same as the `name`.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span>Group<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The UUID for this Management Group, which needs to be unique across your tenant - which will be generated if not provided. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The name or UUID for this Management Group, which needs to be unique across your tenant. A new UUID will be generated if not provided. Changing this forces a new resource to be created.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `name`{{% /md %}}</p></dd>
+
+    <dt class="property-"
+            title="">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name or UUID for this Management Group, which needs to be unique across your tenant. A new UUID will be generated if not provided. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -352,16 +399,25 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A friendly name for this Management Group. If not specified, this'll be the same as the `group_id`.
+    <dd>{{% md %}}A friendly name for this Management Group. If not specified, this'll be the same as the `name`.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span>Group<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The UUID for this Management Group, which needs to be unique across your tenant - which will be generated if not provided. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The name or UUID for this Management Group, which needs to be unique across your tenant. A new UUID will be generated if not provided. Changing this forces a new resource to be created.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `name`{{% /md %}}</p></dd>
+
+    <dt class="property-"
+            title="">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name or UUID for this Management Group, which needs to be unique across your tenant. A new UUID will be generated if not provided. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -395,16 +451,25 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}A friendly name for this Management Group. If not specified, this'll be the same as the `group_id`.
+    <dd>{{% md %}}A friendly name for this Management Group. If not specified, this'll be the same as the `name`.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span>group<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The UUID for this Management Group, which needs to be unique across your tenant - which will be generated if not provided. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The name or UUID for this Management Group, which needs to be unique across your tenant. A new UUID will be generated if not provided. Changing this forces a new resource to be created.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `name`{{% /md %}}</p></dd>
+
+    <dt class="property-"
+            title="">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name or UUID for this Management Group, which needs to be unique across your tenant. A new UUID will be generated if not provided. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -438,16 +503,25 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A friendly name for this Management Group. If not specified, this'll be the same as the `group_id`.
+    <dd>{{% md %}}A friendly name for this Management Group. If not specified, this'll be the same as the `name`.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span>group_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The UUID for this Management Group, which needs to be unique across your tenant - which will be generated if not provided. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The name or UUID for this Management Group, which needs to be unique across your tenant. A new UUID will be generated if not provided. Changing this forces a new resource to be created.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `name`{{% /md %}}</p></dd>
+
+    <dt class="property-"
+            title="">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name or UUID for this Management Group, which needs to be unique across your tenant. A new UUID will be generated if not provided. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -489,7 +563,7 @@ Get an existing Group resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>display_name=None<span class="p">, </span>group_id=None<span class="p">, </span>parent_management_group_id=None<span class="p">, </span>subscription_ids=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>display_name=None<span class="p">, </span>group_id=None<span class="p">, </span>name=None<span class="p">, </span>parent_management_group_id=None<span class="p">, </span>subscription_ids=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -609,16 +683,25 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string?</span>
     </dt>
-    <dd>{{% md %}}A friendly name for this Management Group. If not specified, this'll be the same as the `group_id`.
+    <dd>{{% md %}}A friendly name for this Management Group. If not specified, this'll be the same as the `name`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span>Group<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string?</span>
     </dt>
-    <dd>{{% md %}}The UUID for this Management Group, which needs to be unique across your tenant - which will be generated if not provided. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The name or UUID for this Management Group, which needs to be unique across your tenant. A new UUID will be generated if not provided. Changing this forces a new resource to be created.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `name`{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The name or UUID for this Management Group, which needs to be unique across your tenant. A new UUID will be generated if not provided. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -652,16 +735,25 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">*string</span>
     </dt>
-    <dd>{{% md %}}A friendly name for this Management Group. If not specified, this'll be the same as the `group_id`.
+    <dd>{{% md %}}A friendly name for this Management Group. If not specified, this'll be the same as the `name`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span>Group<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">*string</span>
     </dt>
-    <dd>{{% md %}}The UUID for this Management Group, which needs to be unique across your tenant - which will be generated if not provided. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The name or UUID for this Management Group, which needs to be unique across your tenant. A new UUID will be generated if not provided. Changing this forces a new resource to be created.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `name`{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The name or UUID for this Management Group, which needs to be unique across your tenant. A new UUID will be generated if not provided. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -695,16 +787,25 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string?</span>
     </dt>
-    <dd>{{% md %}}A friendly name for this Management Group. If not specified, this'll be the same as the `group_id`.
+    <dd>{{% md %}}A friendly name for this Management Group. If not specified, this'll be the same as the `name`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span>group<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string?</span>
     </dt>
-    <dd>{{% md %}}The UUID for this Management Group, which needs to be unique across your tenant - which will be generated if not provided. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The name or UUID for this Management Group, which needs to be unique across your tenant. A new UUID will be generated if not provided. Changing this forces a new resource to be created.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `name`{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The name or UUID for this Management Group, which needs to be unique across your tenant. A new UUID will be generated if not provided. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -738,16 +839,25 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}A friendly name for this Management Group. If not specified, this'll be the same as the `group_id`.
+    <dd>{{% md %}}A friendly name for this Management Group. If not specified, this'll be the same as the `name`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span>group_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The UUID for this Management Group, which needs to be unique across your tenant - which will be generated if not provided. Changing this forces a new resource to be created.
+    <dd>{{% md %}}The name or UUID for this Management Group, which needs to be unique across your tenant. A new UUID will be generated if not provided. Changing this forces a new resource to be created.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `name`{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name or UUID for this Management Group, which needs to be unique across your tenant. A new UUID will be generated if not provided. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -780,9 +890,13 @@ The following state arguments are supported:
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+
