@@ -1,0 +1,2950 @@
+
+---
+title: "Project"
+block_external_search_index: true
+---
+
+
+
+Provides a Rancher v2 Project resource. This can be used to create projects for Rancher v2 environments and retrieve their information.
+
+> This content is derived from https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/project.html.markdown.
+
+
+
+## Create a Project Resource
+
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+
+{{% choosable language nodejs %}}
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#Project">Project</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#ProjectArgs">ProjectArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Project</span><span class="p">(resource_name, opts=None, </span>annotations=None<span class="p">, </span>cluster_id=None<span class="p">, </span>container_resource_limit=None<span class="p">, </span>description=None<span class="p">, </span>enable_project_monitoring=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>pod_security_policy_template_id=None<span class="p">, </span>project_monitoring_input=None<span class="p">, </span>resource_quota=None<span class="p">, </span>wait_for_cluster=None<span class="p">, __props__=None);</span></code></pre></div>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewProject<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#ProjectArgs">ProjectArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#Project">Project</a></span>, error)</span></code></pre></div>
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2..Project.html">Project</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.ProjectArgs.html">ProjectArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The arguments to use to populate this resource's properties.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The arguments to use to populate this resource's properties.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The arguments to use to populate this resource's properties.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
+
+{{% /choosable %}}
+
+#### Resource Arguments
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Annotations</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary<string, object>?</span>
+    </dt>
+    <dd>{{% md %}}Annotations for Node Pool object (map)
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Cluster<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The cluster id where create project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Container<wbr>Resource<wbr>Limit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectcontainerresourcelimit">Project<wbr>Container<wbr>Resource<wbr>Limit<wbr>Args?</a></span>
+    </dt>
+    <dd>{{% md %}}Default containers resource limits on project (List maxitem:1)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}A project description (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Enable<wbr>Project<wbr>Monitoring</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool?</span>
+    </dt>
+    <dd>{{% md %}}Enable built-in project monitoring. Default `false` (bool)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Labels</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary<string, object>?</span>
+    </dt>
+    <dd>{{% md %}}Labels for Node Pool object (map)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The name of the project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Default Pod Security Policy ID for the project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Project<wbr>Monitoring<wbr>Input</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectprojectmonitoringinput">Project<wbr>Project<wbr>Monitoring<wbr>Input<wbr>Args?</a></span>
+    </dt>
+    <dd>{{% md %}}Project monitoring config. Any parameter defined in [rancher-monitoring charts](https://github.com/rancher/system-charts/tree/dev/charts/rancher-monitoring) could be configured (list maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Resource<wbr>Quota</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectresourcequota">Project<wbr>Resource<wbr>Quota<wbr>Args?</a></span>
+    </dt>
+    <dd>{{% md %}}Resource quota for project. Rancher v2.1.x or higher (list maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Wait<wbr>For<wbr>Cluster</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool?</span>
+    </dt>
+    <dd>{{% md %}}Wait for cluster becomes active. Default `false` (bool)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Annotations</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}Annotations for Node Pool object (map)
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Cluster<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The cluster id where create project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Container<wbr>Resource<wbr>Limit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectcontainerresourcelimit">*Project<wbr>Container<wbr>Resource<wbr>Limit</a></span>
+    </dt>
+    <dd>{{% md %}}Default containers resource limits on project (List maxitem:1)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}A project description (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Enable<wbr>Project<wbr>Monitoring</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*bool</span>
+    </dt>
+    <dd>{{% md %}}Enable built-in project monitoring. Default `false` (bool)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Labels</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}Labels for Node Pool object (map)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The name of the project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}Default Pod Security Policy ID for the project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Project<wbr>Monitoring<wbr>Input</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectprojectmonitoringinput">*Project<wbr>Project<wbr>Monitoring<wbr>Input</a></span>
+    </dt>
+    <dd>{{% md %}}Project monitoring config. Any parameter defined in [rancher-monitoring charts](https://github.com/rancher/system-charts/tree/dev/charts/rancher-monitoring) could be configured (list maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Resource<wbr>Quota</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectresourcequota">*Project<wbr>Resource<wbr>Quota</a></span>
+    </dt>
+    <dd>{{% md %}}Resource quota for project. Rancher v2.1.x or higher (list maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Wait<wbr>For<wbr>Cluster</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*bool</span>
+    </dt>
+    <dd>{{% md %}}Wait for cluster becomes active. Default `false` (bool)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>annotations</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}?</span>
+    </dt>
+    <dd>{{% md %}}Annotations for Node Pool object (map)
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>cluster<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The cluster id where create project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>container<wbr>Resource<wbr>Limit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectcontainerresourcelimit">Project<wbr>Container<wbr>Resource<wbr>Limit?</a></span>
+    </dt>
+    <dd>{{% md %}}Default containers resource limits on project (List maxitem:1)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}A project description (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>enable<wbr>Project<wbr>Monitoring</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean?</span>
+    </dt>
+    <dd>{{% md %}}Enable built-in project monitoring. Default `false` (bool)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>labels</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}?</span>
+    </dt>
+    <dd>{{% md %}}Labels for Node Pool object (map)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The name of the project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Default Pod Security Policy ID for the project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>project<wbr>Monitoring<wbr>Input</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectprojectmonitoringinput">Project<wbr>Project<wbr>Monitoring<wbr>Input?</a></span>
+    </dt>
+    <dd>{{% md %}}Project monitoring config. Any parameter defined in [rancher-monitoring charts](https://github.com/rancher/system-charts/tree/dev/charts/rancher-monitoring) could be configured (list maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>resource<wbr>Quota</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectresourcequota">Project<wbr>Resource<wbr>Quota?</a></span>
+    </dt>
+    <dd>{{% md %}}Resource quota for project. Rancher v2.1.x or higher (list maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>wait<wbr>For<wbr>Cluster</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean?</span>
+    </dt>
+    <dd>{{% md %}}Wait for cluster becomes active. Default `false` (bool)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>annotations</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}Annotations for Node Pool object (map)
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>cluster_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The cluster id where create project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>container_<wbr>resource_<wbr>limit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectcontainerresourcelimit">Dict[Project<wbr>Container<wbr>Resource<wbr>Limit]</a></span>
+    </dt>
+    <dd>{{% md %}}Default containers resource limits on project (List maxitem:1)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A project description (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>enable_<wbr>project_<wbr>monitoring</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable built-in project monitoring. Default `false` (bool)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>labels</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}Labels for Node Pool object (map)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>pod_<wbr>security_<wbr>policy_<wbr>template_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Default Pod Security Policy ID for the project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>project_<wbr>monitoring_<wbr>input</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectprojectmonitoringinput">Dict[Project<wbr>Project<wbr>Monitoring<wbr>Input]</a></span>
+    </dt>
+    <dd>{{% md %}}Project monitoring config. Any parameter defined in [rancher-monitoring charts](https://github.com/rancher/system-charts/tree/dev/charts/rancher-monitoring) could be configured (list maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>resource_<wbr>quota</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectresourcequota">Dict[Project<wbr>Resource<wbr>Quota]</a></span>
+    </dt>
+    <dd>{{% md %}}Resource quota for project. Rancher v2.1.x or higher (list maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>wait_<wbr>for_<wbr>cluster</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Wait for cluster becomes active. Default `false` (bool)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+## Project Output Properties
+
+The following output properties are available:
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Annotations</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary<string, object></span>
+    </dt>
+    <dd>{{% md %}}Annotations for Node Pool object (map)
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Cluster<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The cluster id where create project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Container<wbr>Resource<wbr>Limit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectcontainerresourcelimit">Project<wbr>Container<wbr>Resource<wbr>Limit?</a></span>
+    </dt>
+    <dd>{{% md %}}Default containers resource limits on project (List maxitem:1)
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}A project description (string)
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Enable<wbr>Project<wbr>Monitoring</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool?</span>
+    </dt>
+    <dd>{{% md %}}Enable built-in project monitoring. Default `false` (bool)
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Labels</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary<string, object></span>
+    </dt>
+    <dd>{{% md %}}Labels for Node Pool object (map)
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Default Pod Security Policy ID for the project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Project<wbr>Monitoring<wbr>Input</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectprojectmonitoringinput">Project<wbr>Project<wbr>Monitoring<wbr>Input</a></span>
+    </dt>
+    <dd>{{% md %}}Project monitoring config. Any parameter defined in [rancher-monitoring charts](https://github.com/rancher/system-charts/tree/dev/charts/rancher-monitoring) could be configured (list maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Resource<wbr>Quota</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectresourcequota">Project<wbr>Resource<wbr>Quota?</a></span>
+    </dt>
+    <dd>{{% md %}}Resource quota for project. Rancher v2.1.x or higher (list maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Wait<wbr>For<wbr>Cluster</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool?</span>
+    </dt>
+    <dd>{{% md %}}Wait for cluster becomes active. Default `false` (bool)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Annotations</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}Annotations for Node Pool object (map)
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Cluster<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The cluster id where create project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Container<wbr>Resource<wbr>Limit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectcontainerresourcelimit">*Project<wbr>Container<wbr>Resource<wbr>Limit</a></span>
+    </dt>
+    <dd>{{% md %}}Default containers resource limits on project (List maxitem:1)
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}A project description (string)
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Enable<wbr>Project<wbr>Monitoring</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*bool</span>
+    </dt>
+    <dd>{{% md %}}Enable built-in project monitoring. Default `false` (bool)
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Labels</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}Labels for Node Pool object (map)
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}Default Pod Security Policy ID for the project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Project<wbr>Monitoring<wbr>Input</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectprojectmonitoringinput">Project<wbr>Project<wbr>Monitoring<wbr>Input</a></span>
+    </dt>
+    <dd>{{% md %}}Project monitoring config. Any parameter defined in [rancher-monitoring charts](https://github.com/rancher/system-charts/tree/dev/charts/rancher-monitoring) could be configured (list maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Resource<wbr>Quota</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectresourcequota">*Project<wbr>Resource<wbr>Quota</a></span>
+    </dt>
+    <dd>{{% md %}}Resource quota for project. Rancher v2.1.x or higher (list maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Wait<wbr>For<wbr>Cluster</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*bool</span>
+    </dt>
+    <dd>{{% md %}}Wait for cluster becomes active. Default `false` (bool)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>annotations</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}Annotations for Node Pool object (map)
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>cluster<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The cluster id where create project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>container<wbr>Resource<wbr>Limit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectcontainerresourcelimit">Project<wbr>Container<wbr>Resource<wbr>Limit?</a></span>
+    </dt>
+    <dd>{{% md %}}Default containers resource limits on project (List maxitem:1)
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}A project description (string)
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>enable<wbr>Project<wbr>Monitoring</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean?</span>
+    </dt>
+    <dd>{{% md %}}Enable built-in project monitoring. Default `false` (bool)
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>labels</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}Labels for Node Pool object (map)
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Default Pod Security Policy ID for the project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>project<wbr>Monitoring<wbr>Input</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectprojectmonitoringinput">Project<wbr>Project<wbr>Monitoring<wbr>Input</a></span>
+    </dt>
+    <dd>{{% md %}}Project monitoring config. Any parameter defined in [rancher-monitoring charts](https://github.com/rancher/system-charts/tree/dev/charts/rancher-monitoring) could be configured (list maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>resource<wbr>Quota</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectresourcequota">Project<wbr>Resource<wbr>Quota?</a></span>
+    </dt>
+    <dd>{{% md %}}Resource quota for project. Rancher v2.1.x or higher (list maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>wait<wbr>For<wbr>Cluster</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean?</span>
+    </dt>
+    <dd>{{% md %}}Wait for cluster becomes active. Default `false` (bool)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>annotations</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}Annotations for Node Pool object (map)
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>cluster_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The cluster id where create project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>container_<wbr>resource_<wbr>limit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectcontainerresourcelimit">Dict[Project<wbr>Container<wbr>Resource<wbr>Limit]</a></span>
+    </dt>
+    <dd>{{% md %}}Default containers resource limits on project (List maxitem:1)
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A project description (string)
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>enable_<wbr>project_<wbr>monitoring</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable built-in project monitoring. Default `false` (bool)
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>labels</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}Labels for Node Pool object (map)
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>pod_<wbr>security_<wbr>policy_<wbr>template_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Default Pod Security Policy ID for the project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>project_<wbr>monitoring_<wbr>input</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectprojectmonitoringinput">Dict[Project<wbr>Project<wbr>Monitoring<wbr>Input]</a></span>
+    </dt>
+    <dd>{{% md %}}Project monitoring config. Any parameter defined in [rancher-monitoring charts](https://github.com/rancher/system-charts/tree/dev/charts/rancher-monitoring) could be configured (list maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>resource_<wbr>quota</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectresourcequota">Dict[Project<wbr>Resource<wbr>Quota]</a></span>
+    </dt>
+    <dd>{{% md %}}Resource quota for project. Rancher v2.1.x or higher (list maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>wait_<wbr>for_<wbr>cluster</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Wait for cluster becomes active. Default `false` (bool)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+
+## Look up an Existing Project Resource
+
+Get an existing Project resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
+
+{{< chooser language "javascript,typescript,python,go,csharp  " / >}}
+
+{{% choosable language nodejs %}}
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#ProjectState">ProjectState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#Project">Project</a></span></code></pre></div>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>annotations=None<span class="p">, </span>cluster_id=None<span class="p">, </span>container_resource_limit=None<span class="p">, </span>description=None<span class="p">, </span>enable_project_monitoring=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>pod_security_policy_template_id=None<span class="p">, </span>project_monitoring_input=None<span class="p">, </span>resource_quota=None<span class="p">, </span>wait_for_cluster=None<span class="p">, __props__=None);</span></code></pre></div>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetProject<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#ProjectState">ProjectState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#Project">Project</a></span>, error)</span></code></pre></div>
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2..Project.html">Project</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2..ProjectState.html">ProjectState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resulting resource.</dd>
+    <dt class="property-required" title="Required">
+        <span>id</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The <em>unique</em> provider ID of the resource to lookup.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>state</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>Any extra arguments used during the lookup.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>resource_name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resulting resource.</dd>
+    <dt class="property-required" title="Optional">
+        <span>id</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The <em>unique</em> provider ID of the resource to lookup.</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resulting resource.</dd>
+    <dt class="property-required" title="Required">
+        <span>id</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The <em>unique</em> provider ID of the resource to lookup.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>state</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>Any extra arguments used during the lookup.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resulting resource.</dd>
+    <dt class="property-required" title="Required">
+        <span>id</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The <em>unique</em> provider ID of the resource to lookup.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>state</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>Any extra arguments used during the lookup.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
+
+{{% /choosable %}}
+
+The following state arguments are supported:
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Annotations</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary<string, object>?</span>
+    </dt>
+    <dd>{{% md %}}Annotations for Node Pool object (map)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cluster<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The cluster id where create project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Container<wbr>Resource<wbr>Limit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectcontainerresourcelimit">Project<wbr>Container<wbr>Resource<wbr>Limit<wbr>Args?</a></span>
+    </dt>
+    <dd>{{% md %}}Default containers resource limits on project (List maxitem:1)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}A project description (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Enable<wbr>Project<wbr>Monitoring</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool?</span>
+    </dt>
+    <dd>{{% md %}}Enable built-in project monitoring. Default `false` (bool)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Labels</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary<string, object>?</span>
+    </dt>
+    <dd>{{% md %}}Labels for Node Pool object (map)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The name of the project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Default Pod Security Policy ID for the project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Project<wbr>Monitoring<wbr>Input</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectprojectmonitoringinput">Project<wbr>Project<wbr>Monitoring<wbr>Input<wbr>Args?</a></span>
+    </dt>
+    <dd>{{% md %}}Project monitoring config. Any parameter defined in [rancher-monitoring charts](https://github.com/rancher/system-charts/tree/dev/charts/rancher-monitoring) could be configured (list maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Resource<wbr>Quota</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectresourcequota">Project<wbr>Resource<wbr>Quota<wbr>Args?</a></span>
+    </dt>
+    <dd>{{% md %}}Resource quota for project. Rancher v2.1.x or higher (list maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Wait<wbr>For<wbr>Cluster</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool?</span>
+    </dt>
+    <dd>{{% md %}}Wait for cluster becomes active. Default `false` (bool)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Annotations</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}Annotations for Node Pool object (map)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cluster<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The cluster id where create project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Container<wbr>Resource<wbr>Limit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectcontainerresourcelimit">*Project<wbr>Container<wbr>Resource<wbr>Limit</a></span>
+    </dt>
+    <dd>{{% md %}}Default containers resource limits on project (List maxitem:1)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}A project description (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Enable<wbr>Project<wbr>Monitoring</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*bool</span>
+    </dt>
+    <dd>{{% md %}}Enable built-in project monitoring. Default `false` (bool)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Labels</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}Labels for Node Pool object (map)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The name of the project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}Default Pod Security Policy ID for the project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Project<wbr>Monitoring<wbr>Input</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectprojectmonitoringinput">*Project<wbr>Project<wbr>Monitoring<wbr>Input</a></span>
+    </dt>
+    <dd>{{% md %}}Project monitoring config. Any parameter defined in [rancher-monitoring charts](https://github.com/rancher/system-charts/tree/dev/charts/rancher-monitoring) could be configured (list maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Resource<wbr>Quota</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectresourcequota">*Project<wbr>Resource<wbr>Quota</a></span>
+    </dt>
+    <dd>{{% md %}}Resource quota for project. Rancher v2.1.x or higher (list maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Wait<wbr>For<wbr>Cluster</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*bool</span>
+    </dt>
+    <dd>{{% md %}}Wait for cluster becomes active. Default `false` (bool)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>annotations</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}?</span>
+    </dt>
+    <dd>{{% md %}}Annotations for Node Pool object (map)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>cluster<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The cluster id where create project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>container<wbr>Resource<wbr>Limit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectcontainerresourcelimit">Project<wbr>Container<wbr>Resource<wbr>Limit?</a></span>
+    </dt>
+    <dd>{{% md %}}Default containers resource limits on project (List maxitem:1)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}A project description (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>enable<wbr>Project<wbr>Monitoring</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean?</span>
+    </dt>
+    <dd>{{% md %}}Enable built-in project monitoring. Default `false` (bool)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>labels</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}?</span>
+    </dt>
+    <dd>{{% md %}}Labels for Node Pool object (map)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The name of the project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Default Pod Security Policy ID for the project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>project<wbr>Monitoring<wbr>Input</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectprojectmonitoringinput">Project<wbr>Project<wbr>Monitoring<wbr>Input?</a></span>
+    </dt>
+    <dd>{{% md %}}Project monitoring config. Any parameter defined in [rancher-monitoring charts](https://github.com/rancher/system-charts/tree/dev/charts/rancher-monitoring) could be configured (list maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>resource<wbr>Quota</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectresourcequota">Project<wbr>Resource<wbr>Quota?</a></span>
+    </dt>
+    <dd>{{% md %}}Resource quota for project. Rancher v2.1.x or higher (list maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>wait<wbr>For<wbr>Cluster</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean?</span>
+    </dt>
+    <dd>{{% md %}}Wait for cluster becomes active. Default `false` (bool)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>annotations</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}Annotations for Node Pool object (map)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>cluster_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The cluster id where create project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>container_<wbr>resource_<wbr>limit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectcontainerresourcelimit">Dict[Project<wbr>Container<wbr>Resource<wbr>Limit]</a></span>
+    </dt>
+    <dd>{{% md %}}Default containers resource limits on project (List maxitem:1)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A project description (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>enable_<wbr>project_<wbr>monitoring</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable built-in project monitoring. Default `false` (bool)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>labels</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}Labels for Node Pool object (map)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>pod_<wbr>security_<wbr>policy_<wbr>template_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Default Pod Security Policy ID for the project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>project_<wbr>monitoring_<wbr>input</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectprojectmonitoringinput">Dict[Project<wbr>Project<wbr>Monitoring<wbr>Input]</a></span>
+    </dt>
+    <dd>{{% md %}}Project monitoring config. Any parameter defined in [rancher-monitoring charts](https://github.com/rancher/system-charts/tree/dev/charts/rancher-monitoring) could be configured (list maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>resource_<wbr>quota</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectresourcequota">Dict[Project<wbr>Resource<wbr>Quota]</a></span>
+    </dt>
+    <dd>{{% md %}}Resource quota for project. Rancher v2.1.x or higher (list maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>wait_<wbr>for_<wbr>cluster</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Wait for cluster becomes active. Default `false` (bool)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+
+
+
+## Supporting Types
+
+<h4>Project<wbr>Container<wbr>Resource<wbr>Limit</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ProjectContainerResourceLimit">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ProjectContainerResourceLimit">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#ProjectContainerResourceLimitArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#ProjectContainerResourceLimitOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Limits<wbr>Cpu</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Limit for limits cpu in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Limits<wbr>Memory</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Limit for limits memory in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Requests<wbr>Cpu</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Limit for requests cpu in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Requests<wbr>Memory</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Limit for requests memory in project (string)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Limits<wbr>Cpu</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}Limit for limits cpu in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Limits<wbr>Memory</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}Limit for limits memory in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Requests<wbr>Cpu</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}Limit for requests cpu in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Requests<wbr>Memory</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}Limit for requests memory in project (string)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>limits<wbr>Cpu</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Limit for limits cpu in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>limits<wbr>Memory</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Limit for limits memory in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>requests<wbr>Cpu</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Limit for requests cpu in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>requests<wbr>Memory</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Limit for requests memory in project (string)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>limits<wbr>Cpu</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Limit for limits cpu in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>limits<wbr>Memory</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Limit for limits memory in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>requests<wbr>Cpu</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Limit for requests cpu in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>requests<wbr>Memory</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Limit for requests memory in project (string)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4>Project<wbr>Project<wbr>Monitoring<wbr>Input</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ProjectProjectMonitoringInput">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ProjectProjectMonitoringInput">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#ProjectProjectMonitoringInputArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#ProjectProjectMonitoringInputOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Answers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary<string, object>?</span>
+    </dt>
+    <dd>{{% md %}}Key/value answers for monitor input (map)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Answers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}Key/value answers for monitor input (map)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>answers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}?</span>
+    </dt>
+    <dd>{{% md %}}Key/value answers for monitor input (map)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>answers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}Key/value answers for monitor input (map)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4>Project<wbr>Resource<wbr>Quota</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ProjectResourceQuota">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ProjectResourceQuota">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#ProjectResourceQuotaArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#ProjectResourceQuotaOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Namespace<wbr>Default<wbr>Limit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectresourcequotanamespacedefaultlimit">Project<wbr>Resource<wbr>Quota<wbr>Namespace<wbr>Default<wbr>Limit<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Default resource quota limit for  namespaces in project (list maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Project<wbr>Limit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectresourcequotaprojectlimit">Project<wbr>Resource<wbr>Quota<wbr>Project<wbr>Limit<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Resource quota limit for project (list maxitems:1)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Namespace<wbr>Default<wbr>Limit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectresourcequotanamespacedefaultlimit">Project<wbr>Resource<wbr>Quota<wbr>Namespace<wbr>Default<wbr>Limit</a></span>
+    </dt>
+    <dd>{{% md %}}Default resource quota limit for  namespaces in project (list maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Project<wbr>Limit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectresourcequotaprojectlimit">Project<wbr>Resource<wbr>Quota<wbr>Project<wbr>Limit</a></span>
+    </dt>
+    <dd>{{% md %}}Resource quota limit for project (list maxitems:1)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>namespace<wbr>Default<wbr>Limit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectresourcequotanamespacedefaultlimit">Project<wbr>Resource<wbr>Quota<wbr>Namespace<wbr>Default<wbr>Limit</a></span>
+    </dt>
+    <dd>{{% md %}}Default resource quota limit for  namespaces in project (list maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>project<wbr>Limit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectresourcequotaprojectlimit">Project<wbr>Resource<wbr>Quota<wbr>Project<wbr>Limit</a></span>
+    </dt>
+    <dd>{{% md %}}Resource quota limit for project (list maxitems:1)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>namespace<wbr>Default<wbr>Limit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectresourcequotanamespacedefaultlimit">Dict[Project<wbr>Resource<wbr>Quota<wbr>Namespace<wbr>Default<wbr>Limit]</a></span>
+    </dt>
+    <dd>{{% md %}}Default resource quota limit for  namespaces in project (list maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>project<wbr>Limit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectresourcequotaprojectlimit">Dict[Project<wbr>Resource<wbr>Quota<wbr>Project<wbr>Limit]</a></span>
+    </dt>
+    <dd>{{% md %}}Resource quota limit for project (list maxitems:1)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4>Project<wbr>Resource<wbr>Quota<wbr>Namespace<wbr>Default<wbr>Limit</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ProjectResourceQuotaNamespaceDefaultLimit">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ProjectResourceQuotaNamespaceDefaultLimit">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#ProjectResourceQuotaNamespaceDefaultLimitArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#ProjectResourceQuotaNamespaceDefaultLimitOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Config<wbr>Maps</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Limit for config maps in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Limits<wbr>Cpu</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Limit for limits cpu in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Limits<wbr>Memory</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Limit for limits memory in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Persistent<wbr>Volume<wbr>Claims</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Limit for persistent volume claims in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Pods</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Limit for pods in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Replication<wbr>Controllers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Limit for replication controllers in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Requests<wbr>Cpu</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Limit for requests cpu in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Requests<wbr>Memory</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Limit for requests memory in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Requests<wbr>Storage</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Limit for requests storage in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Secrets</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Limit for secrets in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Services</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Services<wbr>Load<wbr>Balancers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Limit for services load balancers in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Services<wbr>Node<wbr>Ports</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Limit for services node ports in project (string)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Config<wbr>Maps</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}Limit for config maps in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Limits<wbr>Cpu</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}Limit for limits cpu in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Limits<wbr>Memory</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}Limit for limits memory in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Persistent<wbr>Volume<wbr>Claims</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}Limit for persistent volume claims in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Pods</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}Limit for pods in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Replication<wbr>Controllers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}Limit for replication controllers in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Requests<wbr>Cpu</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}Limit for requests cpu in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Requests<wbr>Memory</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}Limit for requests memory in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Requests<wbr>Storage</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}Limit for requests storage in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Secrets</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}Limit for secrets in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Services</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Services<wbr>Load<wbr>Balancers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}Limit for services load balancers in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Services<wbr>Node<wbr>Ports</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}Limit for services node ports in project (string)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>config<wbr>Maps</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Limit for config maps in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>limits<wbr>Cpu</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Limit for limits cpu in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>limits<wbr>Memory</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Limit for limits memory in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>persistent<wbr>Volume<wbr>Claims</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Limit for persistent volume claims in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>pods</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Limit for pods in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>replication<wbr>Controllers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Limit for replication controllers in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>requests<wbr>Cpu</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Limit for requests cpu in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>requests<wbr>Memory</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Limit for requests memory in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>requests<wbr>Storage</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Limit for requests storage in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>secrets</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Limit for secrets in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>services</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>services<wbr>Load<wbr>Balancers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Limit for services load balancers in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>services<wbr>Node<wbr>Ports</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Limit for services node ports in project (string)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>config<wbr>Maps</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Limit for config maps in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>limits<wbr>Cpu</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Limit for limits cpu in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>limits<wbr>Memory</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Limit for limits memory in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>persistent<wbr>Volume<wbr>Claims</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Limit for persistent volume claims in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>pods</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Limit for pods in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>replication<wbr>Controllers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Limit for replication controllers in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>requests<wbr>Cpu</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Limit for requests cpu in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>requests<wbr>Memory</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Limit for requests memory in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>requests<wbr>Storage</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Limit for requests storage in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>secrets</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Limit for secrets in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>services</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>services<wbr>Load<wbr>Balancers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Limit for services load balancers in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>services<wbr>Node<wbr>Ports</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Limit for services node ports in project (string)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4>Project<wbr>Resource<wbr>Quota<wbr>Project<wbr>Limit</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ProjectResourceQuotaProjectLimit">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ProjectResourceQuotaProjectLimit">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#ProjectResourceQuotaProjectLimitArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#ProjectResourceQuotaProjectLimitOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Config<wbr>Maps</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Limit for config maps in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Limits<wbr>Cpu</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Limit for limits cpu in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Limits<wbr>Memory</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Limit for limits memory in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Persistent<wbr>Volume<wbr>Claims</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Limit for persistent volume claims in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Pods</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Limit for pods in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Replication<wbr>Controllers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Limit for replication controllers in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Requests<wbr>Cpu</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Limit for requests cpu in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Requests<wbr>Memory</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Limit for requests memory in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Requests<wbr>Storage</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Limit for requests storage in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Secrets</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Limit for secrets in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Services</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Services<wbr>Load<wbr>Balancers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Limit for services load balancers in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Services<wbr>Node<wbr>Ports</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Limit for services node ports in project (string)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Config<wbr>Maps</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}Limit for config maps in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Limits<wbr>Cpu</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}Limit for limits cpu in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Limits<wbr>Memory</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}Limit for limits memory in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Persistent<wbr>Volume<wbr>Claims</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}Limit for persistent volume claims in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Pods</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}Limit for pods in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Replication<wbr>Controllers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}Limit for replication controllers in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Requests<wbr>Cpu</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}Limit for requests cpu in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Requests<wbr>Memory</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}Limit for requests memory in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Requests<wbr>Storage</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}Limit for requests storage in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Secrets</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}Limit for secrets in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Services</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Services<wbr>Load<wbr>Balancers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}Limit for services load balancers in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Services<wbr>Node<wbr>Ports</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}Limit for services node ports in project (string)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>config<wbr>Maps</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Limit for config maps in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>limits<wbr>Cpu</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Limit for limits cpu in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>limits<wbr>Memory</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Limit for limits memory in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>persistent<wbr>Volume<wbr>Claims</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Limit for persistent volume claims in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>pods</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Limit for pods in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>replication<wbr>Controllers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Limit for replication controllers in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>requests<wbr>Cpu</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Limit for requests cpu in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>requests<wbr>Memory</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Limit for requests memory in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>requests<wbr>Storage</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Limit for requests storage in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>secrets</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Limit for secrets in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>services</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>services<wbr>Load<wbr>Balancers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Limit for services load balancers in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>services<wbr>Node<wbr>Ports</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Limit for services node ports in project (string)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>config<wbr>Maps</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Limit for config maps in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>limits<wbr>Cpu</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Limit for limits cpu in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>limits<wbr>Memory</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Limit for limits memory in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>persistent<wbr>Volume<wbr>Claims</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Limit for persistent volume claims in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>pods</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Limit for pods in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>replication<wbr>Controllers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Limit for replication controllers in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>requests<wbr>Cpu</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Limit for requests cpu in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>requests<wbr>Memory</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Limit for requests memory in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>requests<wbr>Storage</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Limit for requests storage in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>secrets</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Limit for secrets in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>services</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>services<wbr>Load<wbr>Balancers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Limit for services load balancers in project (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>services<wbr>Node<wbr>Ports</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Limit for services node ports in project (string)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+
+
+<h3>Package Details</h3>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-rancher2">https://github.com/pulumi/pulumi-rancher2</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+
