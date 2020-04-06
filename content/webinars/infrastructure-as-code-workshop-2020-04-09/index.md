@@ -1,6 +1,6 @@
 ---
 # Name of the webinar.
-title: "Infrastructure as Code Workshop | Kubernetes"
+title: "Infrastructure as Code Workshop"
 meta_desc: "In this workshop, Luke Hoban and the Pulumi team will show you how to tackle these challenges using Infrastructure as Code (IaC) through hands-on labs."
 
 # A featured webinar will display first in the list.
@@ -38,14 +38,14 @@ url_slug: "infrastructure-as-code-workshop-2020-04-09"
 # The content of the hero section.
 hero:
     # The title text in the hero. This also serves as the pages H1.
-    title: "Infrastructure as Code Workshop | Kubernetes"
+    title: "Infrastructure as Code Workshop"
     # The image the appears on the right hand side of the hero.
     image: "/icons/containers.svg"
 
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: "Infrastructure as Code Workshop | Kubernetes"
+    title: "Infrastructure as Code Workshop"
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
     sortable_date: 2020-04-09 17:30:00 -07:00
     # Duration of the webinar.
@@ -54,11 +54,9 @@ main:
     datetime: "THU APR 09, 2020 AT 5:30PM PDT"
     # Description of the webinar.
     description: |
-        The hardest part of Kubernetes is setting up the infrastructure: clusters, DNS, firewalls, load balancers, IAM, storage, logging, and performance monitoring, often spanning private, public, and hybrid cloud architectures.
+        In this hands-on workshop, the Pulumi team will show you how to stand up basic services using Infrastructure as Code (IaC) through a series of hands-on labs. The techniques work for any cloud --- Azure, AWS, and GCP. You’ll be able to leverage your favorite languages including Python, Go, JavaScript, TypeScript, and C# instead of YAML or domain-specific languages.
 
-        In this workshop, Luke Hoban and the Pulumi team will show you how to tackle these challenges using Infrastructure as Code (IaC) through a series of hands-on labs. The techniques work for any cloud - Azure, AWS, and GCP. You’ll be able to leverage your favorite languages including Python, Go, JavaScript, TypeScript, and C# instead of YAML or domain-specific languages.
-
-        After completing this workshop, you’ll be up and running with IaC fundamentals, modern application architectures across many clouds, and Kubernetes best-practices that are ready for production environments. You’ll also be ready to empower your development teams to be more productive - continuously deploying both their applications and infrastructure.
+        After completion of this webinar, you’ll be up and running with IaC fundamentals, modern application architectures across many clouds, and best-practices that are ready for production environments. You’ll also be ready to empower your development teams to be more productive --- continuously deploying both their applications and infrastructure.
 
         View the prerequisites for this workshop [here](https://github.com/pulumi/infrastructure-as-code-workshop/blob/master/00-installing-prerequisites.md).
 
