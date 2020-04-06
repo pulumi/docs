@@ -52,3 +52,6 @@ for REPO in "${REPOS[@]}" ; do \
     git add .
     git commit -am "Generate resource docs for pulumi-${REPO}"
 done
+
+echo "Pushing ${branch} to origin..."
+git push origin ${branch}
