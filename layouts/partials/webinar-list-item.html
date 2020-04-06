@@ -40,4 +40,8 @@
             </div>
         </div>
     </article>
+    {{ if eq .Params.featured true }}
+        {{ $listHeaderText := cond (eq .Params.pre_recorded true) "LATEST" "UPCOMING"}}
+        <p class="hidden text-2xl font-bold lg:block mt-20">{{ $listHeaderText }}</p>
+    {{ end }}
 </li>
