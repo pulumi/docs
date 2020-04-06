@@ -4,6 +4,8 @@ title: "GroupMember"
 block_external_search_index: true
 ---
 
+
+
 Manages a single Group Membership within Azure Active Directory.
 
 > **NOTE:** Do not use this resource at the same time as `azuread_group.members`.
@@ -566,9 +568,13 @@ The following state arguments are supported:
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-azuread">https://github.com/pulumi/pulumi-azuread</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

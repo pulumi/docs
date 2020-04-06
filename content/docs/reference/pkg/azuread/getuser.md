@@ -4,6 +4,8 @@ title: "GetUser"
 block_external_search_index: true
 ---
 
+
+
 Gets information about an Azure Active Directory user.
 
 > **NOTE:** If you're authenticating using a Service Principal then it must have permissions to `Read directory data` within the `Windows Azure Active Directory` API.
