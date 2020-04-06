@@ -3,7 +3,7 @@ date: "2020-04-06"
 title: "Automatically Enforcing AWS Resource Tagging Policies"
 authors: ["joe-duffy"]
 tags: ["AWS", "policy-as-code"]
-meta_desc: "Tagging AWS resources enables advanced infrastructure policies. In this post, learn how to automate tagging AWS infrastructure easily and reliably using Infrastructure and Policy as Code."
+meta_desc: "Learn how to automate AWS resource tagging using Infrastructure and Policy as Code, enabling advanced infrastructure management policies."
 meta_image: "pac-tags-meta.png"
 ---
 
