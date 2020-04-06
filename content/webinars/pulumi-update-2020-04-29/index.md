@@ -1,7 +1,7 @@
 ---
 # Name of the webinar.
 title: "Pulumi Up(date)"
-meta_desc: "Join Pulumi CEO, Joe Duffy, and the Pulumi team for a walk-through of all the improvements and modern infrastructure capabilities of Pulumi."
+meta_desc: "Join Pulumi CEO, Joe Duffy and Corey Quinn for a fun walk-through of Pulumi features and new capabilities that help tame cloud cost and complexity."
 
 # A featured webinar will display first in the list.
 featured: true
@@ -62,6 +62,8 @@ main:
     presenters:
         - name: Joe Duffy
           role: Founder & CEO, Pulumi
+        - name: Corey Quinn
+          role: Cloud Economist, The Duckbill Group
 
     # A bullet point list containing what the user will learn during the webinar.
     learn:
