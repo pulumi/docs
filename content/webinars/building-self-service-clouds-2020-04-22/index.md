@@ -1,7 +1,7 @@
 ---
 # Name of the webinar.
-title: "Getting Started with Policy as Code for Any Cloud"
-meta_desc: "Erin Krengel and Cameron Stokes will demonstrate practical examples for defining and enforcing policies on AWS, Azure and GCP."
+title: "Building Self-service Clouds with Pulumi"
+meta_desc: "Learn how Mercedes-Benz Research and Development is using Pulumi to help their development teams build self-service cloud infrastructure in this tech talk."
 
 # A featured webinar will display first in the list.
 featured: false
@@ -31,47 +31,45 @@ external: false
 
 # The url slug for the webinar landing page. If this is an external
 # webinar, use the external URL as the value here.
-url_slug: "getting-started-policy-as-code-2020-04-09"
+url_slug: "building-self-service-clouds-2020-04-22"
 
 # The content of the hero section.
 hero:
     # The title text in the hero. This also serves as the pages H1.
-    title: "Getting Started with Policy as Code for Any Cloud"
+    title: "Building Self-service Clouds with Pulumi"
     # The image the appears on the right hand side of the hero.
     image: "/icons/containers.svg"
 
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: "Getting Started with Policy as Code for Any Cloud"
+    title: "Building Self-service Clouds with Pulumi"
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2020-04-09T11:00:00.000-07:00
+    sortable_date: 2020-04-22T11:00:00.00-07:00
     # Duration of the webinar.
     duration: "1 hour"
     # Datetime of the webinar.
-    datetime: "THU APR 09, 2020 AT 11:00AM PDT"
+    datetime: "WED APR 22, 2020 AT 11:00AM PDT"
     # Description of the webinar.
     description: |
-        Poorly configured cloud infrastructure is a common source of security, reliability and cost issues that result in the types of headlines that make executive leaders cringe. The Pulumi team will show you how to enforce best practices by creating durable policies that scale from a single infrastructure stack to company-wide policies. From properly secured S3 buckets to mandated resource labels, Pulumi’s Policy as Code capabilities help you to prevent defective configurations from impacting your cloud of choice.
+        Mercedes-Benz R&D is leading the way in showing how large organizations can empower teams to rapidly innovate with new services and architectures. Carter Williamson from Mercedez-Benz will walk you through best practices that organizations of any size can follow to build high-quality, scalable infrastructure to serve geographically-diverse customers.
 
     # The webinar presenters
     presenters:
-        - name: Erin Krengel
-          role: Software Engineer, Pulumi
-        - name: Cameron Stokes
-          role: Customer Engineer, Pulumi
+        - name: Carter Williamson
+          role: Senior Infrastructure Development & Cloud Automation Engineer, Mercedes-Benz Research & Development North America Inc.
 
     # A bullet point list containing what the user will learn during the webinar.
     learn:
-        - How to create policies for resource level validation.
-        - How to create Policy Packs for orgainizing organization wide policies.
+        - How to build high-quality, scalable infrastructure to serve geographically-diverse customers.
+        - Scalable best practices that work for organizations of all sizes.
 
 # The right hand side form section.
 form:
     # GoToWebinar webinar key. This key allows us to register people for webinars via the
     # HubSpot form.
-    gotowebinar_key: "9002810409971052299"
+    gotowebinar_key: "4390193105608480523"
 
     # HubSpot form id.
-    hubspot_form_id: "5b1083f6-e034-459c-a1b6-f2bc6d900963"
+    hubspot_form_id: "34901c4f-e3e8-4ad5-96d2-f102ab26ac07"
 ---

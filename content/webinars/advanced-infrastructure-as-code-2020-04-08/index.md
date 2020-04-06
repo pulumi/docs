@@ -3,6 +3,9 @@
 title: "Advanced Infrastructure as Code"
 meta_desc: "Join us on April 08th, 2020 for a deep dive into Infrastructure as Code concepts with Pulumi engineers Paul Stack and Mikhail Shilkov."
 
+# A featured webinar will display first in the list.
+featured: false
+
 # If the video is pre-recorded or live.
 pre_recorded: false
 
@@ -10,7 +13,7 @@ pre_recorded: false
 pulumi_tv: false
 
 # The preview image will be shown on the list page.
-preview_image: "/images/webinar/advanced-iac-2020-04-08.png"
+preview_image: "/images/webinar/pulumi_workshop.png"
 
 # Webinars with unlisted as true will not be shown on the webinar list
 unlisted: false
@@ -42,9 +45,11 @@ main:
     # Webinar title.
     title: "Advanced Infrastructure as Code"
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2020-04-08 11:30:00 +01:00
+    sortable_date: 2020-04-08T11:30:00.000+02:00
+    # Duration of the webinar.
+    duration: "2 hours"
     # Datetime of the webinar.
-    datetime: "WED APR 08, 2020 AT 11:30AM to 1:30PM CET"
+    datetime: "WED APR 08, 2020 AT 11:30AM CET"
     # Description of the webinar.
     description: |
         Paul Stack and Mikhail Shilkov from Pulumi will show you how to get started mastering your preferred cloud using your favorite languages.

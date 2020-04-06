@@ -3,6 +3,9 @@
 title: "Pulumi in IoT: AWS, Mapbox and Pulumi"
 meta_desc: "Join us in the webinar to see how Pulumi supercharges Mapbox’s IoT asset tracking architecture on AWS, from API Gateway, Amazon Kinesis, to DynamoDB and S3."
 
+# A featured webinar will display first in the list.
+featured: false
+
 # If the video is pre-recorded or live.
 pre_recorded: true
 
@@ -10,7 +13,7 @@ pre_recorded: true
 pulumi_tv: false
 
 # The preview image will be shown on the list page.
-preview_image: "/images/webinar/mapbox-on-demand.png"
+preview_image: "/images/webinar/pulumi_tech_talk.png"
 
 # Webinars with unlisted as true will not be shown on the webinar list
 unlisted: false
@@ -38,7 +41,9 @@ main:
     # Webinar title.
     title: "Modernizing Logistics: How to program an asset tracking architecture using serverless technologies"
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2019-02-05 10:00:00 -07:00
+    sortable_date: 2019-02-05T10:00:00.000-07:00
+    # Duration of the webinar.
+    duration: "1 hour"
     # Datetime of the webinar.
     datetime: ""
     # Description of the webinar.

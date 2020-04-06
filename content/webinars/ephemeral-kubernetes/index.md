@@ -3,6 +3,9 @@
 title: "Ephemeral Kubernetes"
 meta_desc: "Pulumi engineer, Mike Metral, walks through workflows around around ephemeral Kubernetes."
 
+# A featured webinar will display first in the list.
+featured: false
+
 # If the video is pre-recorded or live.
 pre_recorded: true
 
@@ -44,7 +47,9 @@ main:
     # URL for embedding a URL for ungated webinars.
     youtube_url: "https://www.youtube.com/embed/2oNolWWRZXQ"
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2019-02-22 10:00:00 -07:00
+    sortable_date: 2019-02-22T10:00:00.000-07:00
+    # Duration of the webinar.
+    duration: "44 minutes"
     # Datetime of the webinar.
     datetime: ""
     # Description of the webinar.

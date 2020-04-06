@@ -1,7 +1,10 @@
 ---
 # Name of the webinar.
 title: "Pulumi Up(date)"
-meta_desc: "Join Pulumi CEO, Joe Duffy, and the Pulumi team for a walk-through of all the improvements and modern infrastructure capabilities of Pulumi."
+meta_desc: "Join Pulumi CEO, Joe Duffy and Corey Quinn for a fun walk-through of Pulumi features and new capabilities that help tame cloud cost and complexity."
+
+# A featured webinar will display first in the list.
+featured: true
 
 aliases:
     - /webinars/pulumi-v2-virtual-launch
@@ -15,7 +18,7 @@ pre_recorded: false
 pulumi_tv: false
 
 # The preview image will be shown on the list page.
-preview_image: "/images/webinar/pulumi-up(date)-2020-04-29.png"
+preview_image: "/images/webinar/pulumi_keynote.png"
 
 # Webinars with unlisted as true will not be shown on the webinar list
 unlisted: false
@@ -47,9 +50,11 @@ main:
     # Webinar title.
     title: "Pulumi Up(date)"
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2020-04-29 11:00:00 -07:00
+    sortable_date: 2020-04-29T11:00:00.000-07:00
+    # Duration of the webinar.
+    duration: "1 hour"
     # Datetime of the webinar.
-    datetime: "WED APR 29, 2020 AT 11:00AM TO 12:00PM PDT"
+    datetime: "WED APR 29, 2020 AT 11:00AM PDT"
     # Description of the webinar.
     description: |
         Pulumi 2.0 makes it easier than ever to master any cloud using your favorite languages.  Learn about new capabilities to help your team plan, build, validate, deploy and secure your cloud resources. With Pulumi’s new capabilities, you’ll spend less time fretting about complex configurations and more time delivering new infrastructure, apps, and services for your customers and stakeholders. Our improved documentation and first-class support for Python, .NET and Go means that more teams can start building, collaborating on and re-using infrastructure code.
@@ -57,6 +62,8 @@ main:
     presenters:
         - name: Joe Duffy
           role: Founder & CEO, Pulumi
+        - name: Corey Quinn
+          role: Cloud Economist, The Duckbill Group
 
     # A bullet point list containing what the user will learn during the webinar.
     learn:

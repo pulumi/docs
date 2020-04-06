@@ -3,6 +3,9 @@
 title: "Modern Cloud Infrastructure in Go"
 meta_desc: "Join us Wed, Apr 1, 2020, 6:30 PM where Evan Boyle will go over modern cloud progamming techniques using Pulumi and Go."
 
+# A featured webinar will display first in the list.
+featured: false
+
 # If the video is pre-recorded or live.
 pre_recorded: false
 
@@ -10,10 +13,10 @@ pre_recorded: false
 pulumi_tv: false
 
 # The preview image will be shown on the list page.
-preview_image: "/images/webinar/infrastructure-as-code-go-2020-04-01.png"
+preview_image: "/images/webinar/pulumi_tech_talk.png"
 
 # Webinars with unlisted as true will not be shown on the webinar list
-unlisted: false
+unlisted: true
 
 # Gated webinars will have a registration form and the user will need
 # to fill out the form before viewing.
@@ -42,9 +45,11 @@ main:
     # Webinar title.
     title: "Modern Cloud Infrastructure in Go"
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2020-04-01 18:30:00 -04:00
+    sortable_date: 2020-04-01T18:30:00.000 -04:00
+    # Duration of the webinar.
+    duration: "1.5 hours"
     # Datetime of the webinar.
-    datetime: "WED, APR 01, 2020 AT 6:30PM TO 8:00PM EDT"
+    datetime: "WED, APR 01, 2020 AT 6:30PM EDT"
     # Description of the webinar.
     description: >
         Declaratively defining, deploying, and managing infrastructure usually means breaking out of your day to day toolchain and using YAML or some sort of DSL. Learn how to automate modern infrastructure like functions, containers, and Kubernetes using Pulumi and Go. In this talk we'll explore the productivity superpowers that Pulumi brings to infrastructure:

@@ -1,15 +1,16 @@
 ---
 # Name of the webinar.
-title: "Infrastructure as Code Workshop"
-meta_desc: "In this workshop, Luke Hoban shows you the easy way to start using Infrastructure as Code through hands-on labs."
+title: "Getting Started with Infrastructure as Code"
+meta_desc: "In this hands-on workshop, the Pulumi team will show you how to stand up basic services using Infrastructure as Code (IaC) through a series of hands-on labs."
+
+url: /webinars/getting-started-with-infrastructure-as-code/on-demand
+block_external_search_index: true
 
 # A featured webinar will display first in the list.
 featured: false
 
-aliases: [ "/events/workshop-san-francisco-2020-04-09" ]
-
 # If the video is pre-recorded or live.
-pre_recorded: false
+pre_recorded: true
 
 # If the video is part of the PulumiTV series. Setting this value to true will list the video in the "PulumiTV" section.
 pulumi_tv: false
@@ -18,11 +19,11 @@ pulumi_tv: false
 preview_image: "/images/webinar/pulumi_workshop.png"
 
 # Webinars with unlisted as true will not be shown on the webinar list
-unlisted: false
+unlisted: true
 
 # Gated webinars will have a registration form and the user will need
 # to fill out the form before viewing.
-gated: true
+gated: false
 
 # The layout of the landing page.
 type: webinars
@@ -33,25 +34,26 @@ external: false
 
 # The url slug for the webinar landing page. If this is an external
 # webinar, use the external URL as the value here.
-url_slug: "infrastructure-as-code-workshop-2020-04-09"
+url_slug: "getting-started-with-infrastrcuture-as-code"
 
 # The content of the hero section.
 hero:
     # The title text in the hero. This also serves as the pages H1.
-    title: "Infrastructure as Code Workshop"
+    title: "Getting Started with Infrastructure as Code"
     # The image the appears on the right hand side of the hero.
     image: "/icons/containers.svg"
 
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: "Infrastructure as Code Workshop"
+    title: "Getting Started with Infrastructure as Code"
+    youtube_url: "https://www.youtube.com/embed/k4UpMCWxbMc"
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2020-04-09T17:30:00.000-07:00
+    sortable_date: 2020-03-30T11:30:00.000+01:00
     # Duration of the webinar.
-    duration: "90 minutes"
+    duration: "2 hours"
     # Datetime of the webinar.
-    datetime: "THU APR 09, 2020 AT 5:30PM PDT"
+    datetime: "MON MAR 30, 2020 AT 11:30AM CET"
     # Description of the webinar.
     description: |
         In this hands-on workshop, the Pulumi team will show you how to stand up basic services using Infrastructure as Code (IaC) through a series of hands-on labs. The techniques work for any cloud --- Azure, AWS, and GCP. You’ll be able to leverage your favorite languages including Python, Go, JavaScript, TypeScript, and C# instead of YAML or domain-specific languages.
@@ -62,21 +64,18 @@ main:
 
     # The webinar presenters
     presenters:
-        - name: Luke Hoban
-          role: CTO, Pulumi
+        - name: Paul Stack
+          role: Software Engineer, Pulumi
+        - name: Mikhail Shilkov
+          role: Software Engineer, Pulumi
 
     # A bullet point list containing what the user will learn during the webinar.
     learn:
-        - Infrastructure as Code fundamentals.
-        - Multi cloud architectures for moder applications.
-        - Kubernetes best practices for production environments.
+        - This is a 100-level introduction to setting up your infrastructure using Pulumi with multiple languages.
+        - Cloud programming with your favorite language.
 
 # The right hand side form section.
 form:
-    # GoToWebinar webinar key. This key allows us to register people for webinars via the
-    # HubSpot form.
-    gotowebinar_key: "9011624095200528652"
-
     # HubSpot form id.
-    hubspot_form_id: "193a2f1e-faf3-48e7-8cd4-536a5d2502fc"
+    hubspot_form_id: "190fa078-c3c0-4d80-bd9d-14428150b1af"
 ---

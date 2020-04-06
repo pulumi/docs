@@ -1,12 +1,10 @@
 ---
 # Name of the webinar.
-title: "Infrastructure as Code Workshop"
-meta_desc: "In this workshop, Luke Hoban shows you the easy way to start using Infrastructure as Code through hands-on labs."
+title: "Advanced Infrastructure as Code"
+meta_desc: "Join us on April 16th, 2020 for a deep dive into Infrastructure as Code concepts with Pulumi CTO Luke Hoban."
 
 # A featured webinar will display first in the list.
 featured: false
-
-aliases: [ "/events/workshop-san-francisco-2020-04-09" ]
 
 # If the video is pre-recorded or live.
 pre_recorded: false
@@ -33,30 +31,32 @@ external: false
 
 # The url slug for the webinar landing page. If this is an external
 # webinar, use the external URL as the value here.
-url_slug: "infrastructure-as-code-workshop-2020-04-09"
+url_slug: "advanced-infrastructure-as-code-2020-04-16"
 
 # The content of the hero section.
 hero:
     # The title text in the hero. This also serves as the pages H1.
-    title: "Infrastructure as Code Workshop"
+    title: "Advanced Infrastructure as Code"
     # The image the appears on the right hand side of the hero.
     image: "/icons/containers.svg"
 
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
-    title: "Infrastructure as Code Workshop"
+    title: "Advanced Infrastructure as Code"
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2020-04-09T17:30:00.000-07:00
+    sortable_date: 2020-04-16T11:00:00.000-07:00
     # Duration of the webinar.
     duration: "90 minutes"
     # Datetime of the webinar.
-    datetime: "THU APR 09, 2020 AT 5:30PM PDT"
+    datetime: "WED APR 08, 2020 AT 11:30AM CET"
     # Description of the webinar.
     description: |
-        In this hands-on workshop, the Pulumi team will show you how to stand up basic services using Infrastructure as Code (IaC) through a series of hands-on labs. The techniques work for any cloud --- Azure, AWS, and GCP. You’ll be able to leverage your favorite languages including Python, Go, JavaScript, TypeScript, and C# instead of YAML or domain-specific languages.
+        The hardest part of Kubernetes is setting up the infrastructure: clusters, DNS, firewalls, load balancers, IAM, storage, logging, and performance monitoring, often spanning private, public, and hybrid cloud architectures.
 
-        After completion of this webinar, you’ll be up and running with IaC fundamentals, modern application architectures across many clouds, and best-practices that are ready for production environments. You’ll also be ready to empower your development teams to be more productive --- continuously deploying both their applications and infrastructure.
+        In this workshop, Luke Hoban and the Pulumi team will show you how to tackle these challenges using Infrastructure as Code (IaC) through a series of hands-on labs. The techniques work for any cloud - Azure, AWS, and GCP. You’ll be able to leverage your favorite languages including Python, Go, JavaScript, TypeScript, and C# instead of YAML or domain-specific languages.
+
+        After completing this workshop, you’ll be up and running with IaC fundamentals, modern application architectures across many clouds, and Kubernetes best-practices that are ready for production environments. You’ll also be ready to empower your development teams to be more productive - continuously deploying both their applications and infrastructure.
 
         View the prerequisites for this workshop [here](https://github.com/pulumi/infrastructure-as-code-workshop/blob/master/00-installing-prerequisites.md).
 
@@ -71,12 +71,12 @@ main:
         - Multi cloud architectures for moder applications.
         - Kubernetes best practices for production environments.
 
-# The right hand side form section.
+# The right hand side webinar section.
 form:
     # GoToWebinar webinar key. This key allows us to register people for webinars via the
     # HubSpot form.
-    gotowebinar_key: "9011624095200528652"
+    gotowebinar_key: "6839023203910074382"
 
     # HubSpot form id.
-    hubspot_form_id: "193a2f1e-faf3-48e7-8cd4-536a5d2502fc"
+    hubspot_form_id: "65d9ad2f-df3f-4fde-ab63-b56535f0faf7"
 ---
