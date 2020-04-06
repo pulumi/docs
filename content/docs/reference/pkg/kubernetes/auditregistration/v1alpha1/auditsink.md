@@ -18,7 +18,7 @@ AuditSink represents a cluster level audit sink
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">AuditSink</span><span class="p">(resource_name, opts=None, </span>api_version=None<span class="p">, </span>kind=None<span class="p">, </span>metadata=None<span class="p">, </span>spec=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">AuditSink</span><span class="p">(resource_name, opts=None, </span>metadata=None<span class="p">, </span>spec=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -26,7 +26,7 @@ AuditSink represents a cluster level audit sink
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Kubernetes/Pulumi.Kubernetes.Auditregistration.K8s.Io/V1alpha1.AuditSink.html">AuditSink</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Kubernetes/Pulumi.Kubernetes.Auditregistration.k8s.io/v1alpha1.AuditSinkArgs.html">AuditSinkArgs</a></span>? <span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Kubernetes/Pulumi.Kubernetes.Auditregistration.k8s.io/v1alpha1.AuditSink.html">AuditSink</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Kubernetes/Pulumi.Kubernetes.Auditregistration.k8s.io/v1alpha1.AuditSinkArgs.html">AuditSinkArgs</a></span>? <span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -120,25 +120,9 @@ AuditSink represents a cluster level audit sink
 
     <dt class="property-optional"
             title="Optional">
-        <span>Api<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>Metadata</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Object<wbr>Meta<wbr>Args?</a></span>
+        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -146,7 +130,7 @@ AuditSink represents a cluster level audit sink
             title="Optional">
         <span>Spec</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#auditsinkspec">Pulumi.<wbr>Kubernetes.<wbr>Auditregistration.k8s.io/v1alpha1.<wbr>Inputs.<wbr>Audit<wbr>Sink<wbr>Spec<wbr>Args?</a></span>
+        <span class="property-type"><a href="#auditsinkspec">Audit<wbr>Sink<wbr>Spec<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Spec defines the audit configuration spec{{% /md %}}</dd>
 
@@ -156,22 +140,6 @@ AuditSink represents a cluster level audit sink
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Api<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -198,22 +166,6 @@ AuditSink represents a cluster level audit sink
 
     <dt class="property-optional"
             title="Optional">
-        <span>api<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>metadata</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#objectmeta">Object<wbr>Meta?</a></span>
@@ -234,22 +186,6 @@ AuditSink represents a cluster level audit sink
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>api_<wbr>version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -288,25 +224,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Api<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Metadata</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Outputs.<wbr>Object<wbr>Meta?</a></span>
+        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta?</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -314,7 +234,7 @@ The following output properties are available:
             title="">
         <span>Spec</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#auditsinkspec">Pulumi.<wbr>Kubernetes.<wbr>Auditregistration.k8s.io/v1alpha1.<wbr>Outputs.<wbr>Audit<wbr>Sink<wbr>Spec?</a></span>
+        <span class="property-type"><a href="#auditsinkspec">Audit<wbr>Sink<wbr>Spec?</a></span>
     </dt>
     <dd>{{% md %}}Spec defines the audit configuration spec{{% /md %}}</dd>
 
@@ -324,22 +244,6 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Api<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -366,22 +270,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>api<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>metadata</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#objectmeta">Object<wbr>Meta?</a></span>
@@ -402,22 +290,6 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>api_<wbr>version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -470,7 +342,7 @@ The following output properties are available:
             title="Optional">
         <span>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#policy">Pulumi.<wbr>Kubernetes.<wbr>Auditregistration.k8s.io/v1alpha1.<wbr>Inputs.<wbr>Policy<wbr>Args?</a></span>
+        <span class="property-type"><a href="#policy">Policy<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Policy defines the policy for selecting which events should be sent to the webhook required{{% /md %}}</dd>
 
@@ -478,7 +350,7 @@ The following output properties are available:
             title="Optional">
         <span>Webhook</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhook">Pulumi.<wbr>Kubernetes.<wbr>Auditregistration.k8s.io/v1alpha1.<wbr>Inputs.<wbr>Webhook<wbr>Args?</a></span>
+        <span class="property-type"><a href="#webhook">Webhook<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Webhook to send events required{{% /md %}}</dd>
 
@@ -575,14 +447,6 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Api<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}APIVersion defines the version of this resource that this field set applies to. The format is "group/version" just like the top-level APIVersion field. It is necessary to track the version of a field set because it cannot be automatically converted.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>Fields<wbr>Type</span>
         <span class="property-indicator"></span>
         <span class="property-type">string?</span>
@@ -627,14 +491,6 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Api<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}APIVersion defines the version of this resource that this field set applies to. The format is "group/version" just like the top-level APIVersion field. It is necessary to track the version of a field set because it cannot be automatically converted.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -685,14 +541,6 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>api<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}APIVersion defines the version of this resource that this field set applies to. The format is "group/version" just like the top-level APIVersion field. It is necessary to track the version of a field set because it cannot be automatically converted.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>fields<wbr>Type</span>
         <span class="property-indicator"></span>
         <span class="property-type">string?</span>
@@ -737,14 +585,6 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>api_<wbr>version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}APIVersion defines the version of this resource that this field set applies to. The format is "group/version" just like the top-level APIVersion field. It is necessary to track the version of a field set because it cannot be automatically converted.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -892,7 +732,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
             title="Optional">
         <span>Managed<wbr>Fields</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedfieldsentry">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Managed<wbr>Fields<wbr>Entry<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#managedfieldsentry">List&lt;Managed<wbr>Fields<wbr>Entry<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like "ci-cd". The set of fields is always in the version that the workflow used when modifying the object.{{% /md %}}</dd>
 
@@ -918,7 +758,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
             title="Optional">
         <span>Owner<wbr>References</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ownerreference">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Owner<wbr>Reference<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#ownerreference">List&lt;Owner<wbr>Reference<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller.{{% /md %}}</dd>
 
@@ -1429,14 +1269,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>Api<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}API version of the referent.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>Block<wbr>Owner<wbr>Deletion</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool?</span>
@@ -1450,14 +1282,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-type">bool?</span>
     </dt>
     <dd>{{% md %}}If true, this reference points to the managing controller.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Kind of the referent. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1484,14 +1308,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>Api<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}API version of the referent.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>Block<wbr>Owner<wbr>Deletion</span>
         <span class="property-indicator"></span>
         <span class="property-type">*bool</span>
@@ -1505,14 +1321,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-type">*bool</span>
     </dt>
     <dd>{{% md %}}If true, this reference points to the managing controller.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Kind of the referent. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1539,14 +1347,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>api<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}API version of the referent.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>block<wbr>Owner<wbr>Deletion</span>
         <span class="property-indicator"></span>
         <span class="property-type">boolean?</span>
@@ -1560,14 +1360,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-type">boolean?</span>
     </dt>
     <dd>{{% md %}}If true, this reference points to the managing controller.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Kind of the referent. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1594,14 +1386,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>api_<wbr>version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}API version of the referent.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>block<wbr>Owner<wbr>Deletion</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
@@ -1615,14 +1399,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, this reference points to the managing controller.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind of the referent. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1944,7 +1720,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
             title="Optional">
         <span>Client<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhookclientconfig">Pulumi.<wbr>Kubernetes.<wbr>Auditregistration.k8s.io/v1alpha1.<wbr>Inputs.<wbr>Webhook<wbr>Client<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#webhookclientconfig">Webhook<wbr>Client<wbr>Config<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}ClientConfig holds the connection parameters for the webhook required{{% /md %}}</dd>
 
@@ -1952,7 +1728,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
             title="Optional">
         <span>Throttle</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhookthrottleconfig">Pulumi.<wbr>Kubernetes.<wbr>Auditregistration.k8s.io/v1alpha1.<wbr>Inputs.<wbr>Webhook<wbr>Throttle<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#webhookthrottleconfig">Webhook<wbr>Throttle<wbr>Config<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Throttle holds the options for throttling the webhook{{% /md %}}</dd>
 
@@ -2059,7 +1835,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
             title="Optional">
         <span>Service</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicereference">Pulumi.<wbr>Kubernetes.<wbr>Auditregistration.k8s.io/v1alpha1.<wbr>Inputs.<wbr>Service<wbr>Reference<wbr>Args?</a></span>
+        <span class="property-type"><a href="#servicereference">Service<wbr>Reference<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}`service` is a reference to the service for this webhook. Either `service` or `url` must be specified.
 

@@ -18,7 +18,7 @@ EndpointSlice represents a subset of the endpoints that implement a service. For
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">EndpointSlice</span><span class="p">(resource_name, opts=None, </span>address_type=None<span class="p">, </span>api_version=None<span class="p">, </span>endpoints=None<span class="p">, </span>kind=None<span class="p">, </span>metadata=None<span class="p">, </span>ports=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">EndpointSlice</span><span class="p">(resource_name, opts=None, </span>address_type=None<span class="p">, </span>endpoints=None<span class="p">, </span>metadata=None<span class="p">, </span>ports=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -26,7 +26,7 @@ EndpointSlice represents a subset of the endpoints that implement a service. For
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Kubernetes/Pulumi.Kubernetes.Discovery.K8s.Io/V1beta1.EndpointSlice.html">EndpointSlice</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Kubernetes/Pulumi.Kubernetes.Discovery.k8s.io/v1beta1.EndpointSliceArgs.html">EndpointSliceArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Kubernetes/Pulumi.Kubernetes.Discovery.k8s.io/v1beta1.EndpointSlice.html">EndpointSlice</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Kubernetes/Pulumi.Kubernetes.Discovery.k8s.io/v1beta1.EndpointSliceArgs.html">EndpointSliceArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -126,35 +126,19 @@ EndpointSlice represents a subset of the endpoints that implement a service. For
     </dt>
     <dd>{{% md %}}addressType specifies the type of address carried by this EndpointSlice. All addresses in this slice must be the same type. This field is immutable after creation. The following address types are currently supported: * IPv4: Represents an IPv4 Address. * IPv6: Represents an IPv6 Address. * FQDN: Represents a Fully Qualified Domain Name.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Api<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Endpoints</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpoint">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Discovery.k8s.io/v1beta1.<wbr>Inputs.<wbr>Endpoint<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#endpoint">List&lt;Endpoint<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}endpoints is a list of unique endpoints in this slice. Each slice may include a maximum of 1000 endpoints.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>Metadata</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Object<wbr>Meta<wbr>Args?</a></span>
+        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Standard object's metadata.{{% /md %}}</dd>
 
@@ -162,7 +146,7 @@ EndpointSlice represents a subset of the endpoints that implement a service. For
             title="Optional">
         <span>Ports</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointport">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Discovery.k8s.io/v1beta1.<wbr>Inputs.<wbr>Endpoint<wbr>Port<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#endpointport">List&lt;Endpoint<wbr>Port<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}ports specifies the list of network ports exposed by each endpoint in this slice. Each port must have a unique name. When ports is empty, it indicates that there are no defined ports. When a port is defined with a nil port value, it indicates "all ports". Each slice may include a maximum of 100 ports.{{% /md %}}</dd>
 
@@ -181,14 +165,6 @@ EndpointSlice represents a subset of the endpoints that implement a service. For
     </dt>
     <dd>{{% md %}}addressType specifies the type of address carried by this EndpointSlice. All addresses in this slice must be the same type. This field is immutable after creation. The following address types are currently supported: * IPv4: Represents an IPv4 Address. * IPv6: Represents an IPv6 Address. * FQDN: Represents a Fully Qualified Domain Name.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Api<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Endpoints</span>
@@ -196,14 +172,6 @@ EndpointSlice represents a subset of the endpoints that implement a service. For
         <span class="property-type"><a href="#endpoint">[]Endpoint</a></span>
     </dt>
     <dd>{{% md %}}endpoints is a list of unique endpoints in this slice. Each slice may include a maximum of 1000 endpoints.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -236,14 +204,6 @@ EndpointSlice represents a subset of the endpoints that implement a service. For
     </dt>
     <dd>{{% md %}}addressType specifies the type of address carried by this EndpointSlice. All addresses in this slice must be the same type. This field is immutable after creation. The following address types are currently supported: * IPv4: Represents an IPv4 Address. * IPv6: Represents an IPv6 Address. * FQDN: Represents a Fully Qualified Domain Name.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>api<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>endpoints</span>
@@ -251,14 +211,6 @@ EndpointSlice represents a subset of the endpoints that implement a service. For
         <span class="property-type"><a href="#endpoint">Endpoint[]</a></span>
     </dt>
     <dd>{{% md %}}endpoints is a list of unique endpoints in this slice. Each slice may include a maximum of 1000 endpoints.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -291,14 +243,6 @@ EndpointSlice represents a subset of the endpoints that implement a service. For
     </dt>
     <dd>{{% md %}}addressType specifies the type of address carried by this EndpointSlice. All addresses in this slice must be the same type. This field is immutable after creation. The following address types are currently supported: * IPv4: Represents an IPv4 Address. * IPv6: Represents an IPv6 Address. * FQDN: Represents a Fully Qualified Domain Name.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>api_<wbr>version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>endpoints</span>
@@ -306,14 +250,6 @@ EndpointSlice represents a subset of the endpoints that implement a service. For
         <span class="property-type"><a href="#endpoint">List[Endpoint]</a></span>
     </dt>
     <dd>{{% md %}}endpoints is a list of unique endpoints in this slice. Each slice may include a maximum of 1000 endpoints.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -360,33 +296,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Api<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Endpoints</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpoint">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Discovery.k8s.io/v1beta1.<wbr>Outputs.<wbr>Endpoint&gt;?</a></span>
+        <span class="property-type"><a href="#endpoint">List&lt;Endpoint&gt;?</a></span>
     </dt>
     <dd>{{% md %}}endpoints is a list of unique endpoints in this slice. Each slice may include a maximum of 1000 endpoints.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Metadata</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Outputs.<wbr>Object<wbr>Meta?</a></span>
+        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta?</a></span>
     </dt>
     <dd>{{% md %}}Standard object's metadata.{{% /md %}}</dd>
 
@@ -394,7 +314,7 @@ The following output properties are available:
             title="">
         <span>Ports</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointport">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Discovery.k8s.io/v1beta1.<wbr>Outputs.<wbr>Endpoint<wbr>Port&gt;?</a></span>
+        <span class="property-type"><a href="#endpointport">List&lt;Endpoint<wbr>Port&gt;?</a></span>
     </dt>
     <dd>{{% md %}}ports specifies the list of network ports exposed by each endpoint in this slice. Each port must have a unique name. When ports is empty, it indicates that there are no defined ports. When a port is defined with a nil port value, it indicates "all ports". Each slice may include a maximum of 100 ports.{{% /md %}}</dd>
 
@@ -415,27 +335,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Api<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Endpoints</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpoint">[]Endpoint</a></span>
     </dt>
     <dd>{{% md %}}endpoints is a list of unique endpoints in this slice. Each slice may include a maximum of 1000 endpoints.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -470,27 +374,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>api<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>endpoints</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpoint">Endpoint[]?</a></span>
     </dt>
     <dd>{{% md %}}endpoints is a list of unique endpoints in this slice. Each slice may include a maximum of 1000 endpoints.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -525,27 +413,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>api_<wbr>version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>endpoints</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#endpoint">List[Endpoint]</a></span>
     </dt>
     <dd>{{% md %}}endpoints is a list of unique endpoints in this slice. Each slice may include a maximum of 1000 endpoints.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -606,7 +478,7 @@ The following output properties are available:
             title="Optional">
         <span>Conditions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointconditions">Pulumi.<wbr>Kubernetes.<wbr>Discovery.k8s.io/v1beta1.<wbr>Inputs.<wbr>Endpoint<wbr>Conditions<wbr>Args?</a></span>
+        <span class="property-type"><a href="#endpointconditions">Endpoint<wbr>Conditions<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}conditions contains information about the current status of the endpoint.{{% /md %}}</dd>
 
@@ -622,7 +494,7 @@ The following output properties are available:
             title="Optional">
         <span>Target<wbr>Ref</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectreference">Pulumi.<wbr>Kubernetes.<wbr>Core.<wbr>V1.<wbr>Inputs.<wbr>Object<wbr>Reference<wbr>Args?</a></span>
+        <span class="property-type"><a href="#objectreference">Object<wbr>Reference<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}targetRef is a reference to a Kubernetes object that represents this endpoint.{{% /md %}}</dd>
 
@@ -1069,14 +941,6 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Api<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}APIVersion defines the version of this resource that this field set applies to. The format is "group/version" just like the top-level APIVersion field. It is necessary to track the version of a field set because it cannot be automatically converted.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>Fields<wbr>Type</span>
         <span class="property-indicator"></span>
         <span class="property-type">string?</span>
@@ -1121,14 +985,6 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Api<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}APIVersion defines the version of this resource that this field set applies to. The format is "group/version" just like the top-level APIVersion field. It is necessary to track the version of a field set because it cannot be automatically converted.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1179,14 +1035,6 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>api<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}APIVersion defines the version of this resource that this field set applies to. The format is "group/version" just like the top-level APIVersion field. It is necessary to track the version of a field set because it cannot be automatically converted.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>fields<wbr>Type</span>
         <span class="property-indicator"></span>
         <span class="property-type">string?</span>
@@ -1231,14 +1079,6 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>api_<wbr>version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}APIVersion defines the version of this resource that this field set applies to. The format is "group/version" just like the top-level APIVersion field. It is necessary to track the version of a field set because it cannot be automatically converted.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1386,7 +1226,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
             title="Optional">
         <span>Managed<wbr>Fields</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedfieldsentry">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Managed<wbr>Fields<wbr>Entry<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#managedfieldsentry">List&lt;Managed<wbr>Fields<wbr>Entry<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like "ci-cd". The set of fields is always in the version that the workflow used when modifying the object.{{% /md %}}</dd>
 
@@ -1412,7 +1252,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
             title="Optional">
         <span>Owner<wbr>References</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ownerreference">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Owner<wbr>Reference<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#ownerreference">List&lt;Owner<wbr>Reference<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller.{{% /md %}}</dd>
 
@@ -1923,27 +1763,11 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>Api<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}API version of the referent.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>Field<wbr>Path</span>
         <span class="property-indicator"></span>
         <span class="property-type">string?</span>
     </dt>
     <dd>{{% md %}}If referring to a piece of an object instead of an entire object, this string should contain a valid JSON/Go field access statement, such as desiredState.manifest.containers[2]. For example, if the object reference is to a container within a pod, this would take on a value like: "spec.containers{name}" (where "name" refers to the name of the container that triggered the event) or if no container name is specified "spec.containers[2]" (container with index 2 in this pod). This syntax is chosen only to have some well-defined way of referencing a part of an object.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Kind of the referent. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1986,27 +1810,11 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>Api<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}API version of the referent.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>Field<wbr>Path</span>
         <span class="property-indicator"></span>
         <span class="property-type">*string</span>
     </dt>
     <dd>{{% md %}}If referring to a piece of an object instead of an entire object, this string should contain a valid JSON/Go field access statement, such as desiredState.manifest.containers[2]. For example, if the object reference is to a container within a pod, this would take on a value like: "spec.containers{name}" (where "name" refers to the name of the container that triggered the event) or if no container name is specified "spec.containers[2]" (container with index 2 in this pod). This syntax is chosen only to have some well-defined way of referencing a part of an object.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Kind of the referent. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2049,27 +1857,11 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>api<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}API version of the referent.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>field<wbr>Path</span>
         <span class="property-indicator"></span>
         <span class="property-type">string?</span>
     </dt>
     <dd>{{% md %}}If referring to a piece of an object instead of an entire object, this string should contain a valid JSON/Go field access statement, such as desiredState.manifest.containers[2]. For example, if the object reference is to a container within a pod, this would take on a value like: "spec.containers{name}" (where "name" refers to the name of the container that triggered the event) or if no container name is specified "spec.containers[2]" (container with index 2 in this pod). This syntax is chosen only to have some well-defined way of referencing a part of an object.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Kind of the referent. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2112,27 +1904,11 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>api_<wbr>version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}API version of the referent.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>field<wbr>Path</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If referring to a piece of an object instead of an entire object, this string should contain a valid JSON/Go field access statement, such as desiredState.manifest.containers[2]. For example, if the object reference is to a container within a pod, this would take on a value like: "spec.containers{name}" (where "name" refers to the name of the container that triggered the event) or if no container name is specified "spec.containers[2]" (container with index 2 in this pod). This syntax is chosen only to have some well-defined way of referencing a part of an object.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind of the referent. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2190,14 +1966,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>Api<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}API version of the referent.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>Block<wbr>Owner<wbr>Deletion</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool?</span>
@@ -2211,14 +1979,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-type">bool?</span>
     </dt>
     <dd>{{% md %}}If true, this reference points to the managing controller.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Kind of the referent. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2245,14 +2005,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>Api<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}API version of the referent.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>Block<wbr>Owner<wbr>Deletion</span>
         <span class="property-indicator"></span>
         <span class="property-type">*bool</span>
@@ -2266,14 +2018,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-type">*bool</span>
     </dt>
     <dd>{{% md %}}If true, this reference points to the managing controller.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Kind of the referent. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2300,14 +2044,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>api<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}API version of the referent.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>block<wbr>Owner<wbr>Deletion</span>
         <span class="property-indicator"></span>
         <span class="property-type">boolean?</span>
@@ -2321,14 +2057,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-type">boolean?</span>
     </dt>
     <dd>{{% md %}}If true, this reference points to the managing controller.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Kind of the referent. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2355,14 +2083,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>api_<wbr>version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}API version of the referent.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>block<wbr>Owner<wbr>Deletion</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
@@ -2376,14 +2096,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, this reference points to the managing controller.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind of the referent. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

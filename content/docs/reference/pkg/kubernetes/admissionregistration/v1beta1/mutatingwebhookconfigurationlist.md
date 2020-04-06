@@ -18,7 +18,7 @@ MutatingWebhookConfigurationList is a list of MutatingWebhookConfiguration.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">MutatingWebhookConfigurationList</span><span class="p">(resource_name, opts=None, </span>api_version=None<span class="p">, </span>items=None<span class="p">, </span>kind=None<span class="p">, </span>metadata=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">MutatingWebhookConfigurationList</span><span class="p">(resource_name, opts=None, </span>items=None<span class="p">, </span>metadata=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -26,7 +26,7 @@ MutatingWebhookConfigurationList is a list of MutatingWebhookConfiguration.
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Kubernetes/Pulumi.Kubernetes.Admissionregistration.K8s.Io/V1beta1.MutatingWebhookConfigurationList.html">MutatingWebhookConfigurationList</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Kubernetes/Pulumi.Kubernetes.Admissionregistration.k8s.io/v1beta1.MutatingWebhookConfigurationListArgs.html">MutatingWebhookConfigurationListArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Kubernetes/Pulumi.Kubernetes.Admissionregistration.k8s.io/v1beta1.MutatingWebhookConfigurationList.html">MutatingWebhookConfigurationList</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Kubernetes/Pulumi.Kubernetes.Admissionregistration.k8s.io/v1beta1.MutatingWebhookConfigurationListArgs.html">MutatingWebhookConfigurationListArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -118,35 +118,19 @@ MutatingWebhookConfigurationList is a list of MutatingWebhookConfiguration.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Api<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Items</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mutatingwebhookconfiguration">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Admissionregistration.k8s.io/v1beta1.<wbr>Inputs.<wbr>Mutating<wbr>Webhook<wbr>Configuration<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#mutatingwebhookconfiguration">List&lt;Mutating<wbr>Webhook<wbr>Configuration<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of MutatingWebhookConfiguration.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>Metadata</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listmeta">Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>List<wbr>Meta<wbr>Args?</a></span>
+        <span class="property-type"><a href="#listmeta">List<wbr>Meta<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Standard list metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
 
@@ -157,14 +141,6 @@ MutatingWebhookConfigurationList is a list of MutatingWebhookConfiguration.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Api<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Items</span>
@@ -172,14 +148,6 @@ MutatingWebhookConfigurationList is a list of MutatingWebhookConfiguration.
         <span class="property-type"><a href="#mutatingwebhookconfiguration">[]Mutating<wbr>Webhook<wbr>Configuration<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}List of MutatingWebhookConfiguration.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -196,14 +164,6 @@ MutatingWebhookConfigurationList is a list of MutatingWebhookConfiguration.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>api<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>items</span>
@@ -211,14 +171,6 @@ MutatingWebhookConfigurationList is a list of MutatingWebhookConfiguration.
         <span class="property-type"><a href="#mutatingwebhookconfiguration">Mutating<wbr>Webhook<wbr>Configuration[]</a></span>
     </dt>
     <dd>{{% md %}}List of MutatingWebhookConfiguration.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -235,14 +187,6 @@ MutatingWebhookConfigurationList is a list of MutatingWebhookConfiguration.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>api_<wbr>version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>items</span>
@@ -250,14 +194,6 @@ MutatingWebhookConfigurationList is a list of MutatingWebhookConfiguration.
         <span class="property-type"><a href="#mutatingwebhookconfiguration">List[Mutating<wbr>Webhook<wbr>Configuration]</a></span>
     </dt>
     <dd>{{% md %}}List of MutatingWebhookConfiguration.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -288,33 +224,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Api<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Items</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mutatingwebhookconfiguration">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Admissionregistration.k8s.io/v1beta1.<wbr>Outputs.<wbr>Mutating<wbr>Webhook<wbr>Configuration&gt;?</a></span>
+        <span class="property-type"><a href="#mutatingwebhookconfiguration">List&lt;Mutating<wbr>Webhook<wbr>Configuration&gt;?</a></span>
     </dt>
     <dd>{{% md %}}List of MutatingWebhookConfiguration.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Metadata</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listmeta">Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Outputs.<wbr>List<wbr>Meta?</a></span>
+        <span class="property-type"><a href="#listmeta">List<wbr>Meta?</a></span>
     </dt>
     <dd>{{% md %}}Standard list metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
 
@@ -327,27 +247,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Api<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Items</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mutatingwebhookconfiguration">[]Mutating<wbr>Webhook<wbr>Configuration<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}List of MutatingWebhookConfiguration.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -366,27 +270,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>api<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>items</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mutatingwebhookconfiguration">Mutating<wbr>Webhook<wbr>Configuration[]?</a></span>
     </dt>
     <dd>{{% md %}}List of MutatingWebhookConfiguration.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -405,27 +293,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>api_<wbr>version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>items</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mutatingwebhookconfiguration">List[Mutating<wbr>Webhook<wbr>Configuration]</a></span>
     </dt>
     <dd>{{% md %}}List of MutatingWebhookConfiguration.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -470,7 +342,7 @@ The following output properties are available:
             title="Optional">
         <span>Match<wbr>Expressions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labelselectorrequirement">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Label<wbr>Selector<wbr>Requirement<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#labelselectorrequirement">List&lt;Label<wbr>Selector<wbr>Requirement<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}matchExpressions is a list of label selector requirements. The requirements are ANDed.{{% /md %}}</dd>
 
@@ -893,14 +765,6 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>Api<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}APIVersion defines the version of this resource that this field set applies to. The format is "group/version" just like the top-level APIVersion field. It is necessary to track the version of a field set because it cannot be automatically converted.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>Fields<wbr>Type</span>
         <span class="property-indicator"></span>
         <span class="property-type">string?</span>
@@ -945,14 +809,6 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Api<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}APIVersion defines the version of this resource that this field set applies to. The format is "group/version" just like the top-level APIVersion field. It is necessary to track the version of a field set because it cannot be automatically converted.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1003,14 +859,6 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>api<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}APIVersion defines the version of this resource that this field set applies to. The format is "group/version" just like the top-level APIVersion field. It is necessary to track the version of a field set because it cannot be automatically converted.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>fields<wbr>Type</span>
         <span class="property-indicator"></span>
         <span class="property-type">string?</span>
@@ -1055,14 +903,6 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>api_<wbr>version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}APIVersion defines the version of this resource that this field set applies to. The format is "group/version" just like the top-level APIVersion field. It is necessary to track the version of a field set because it cannot be automatically converted.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1138,7 +978,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
             title="Optional">
         <span>Client<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhookclientconfig">Pulumi.<wbr>Kubernetes.<wbr>Admissionregistration.k8s.io/v1beta1.<wbr>Inputs.<wbr>Webhook<wbr>Client<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#webhookclientconfig">Webhook<wbr>Client<wbr>Config<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}ClientConfig defines how to communicate with the hook. Required{{% /md %}}</dd>
 
@@ -1176,7 +1016,7 @@ Defaults to "Exact"{{% /md %}}</dd>
             title="Optional">
         <span>Namespace<wbr>Selector</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labelselector">Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Label<wbr>Selector<wbr>Args?</a></span>
+        <span class="property-type"><a href="#labelselector">Label<wbr>Selector<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}NamespaceSelector decides whether to run the webhook on an object based on whether the namespace for that object matches the selector. If the object itself is a namespace, the matching is performed on object.metadata.labels. If the object is another cluster scoped resource, it never skips the webhook.
 
@@ -1214,7 +1054,7 @@ Default to the empty LabelSelector, which matches everything.{{% /md %}}</dd>
             title="Optional">
         <span>Object<wbr>Selector</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labelselector">Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Label<wbr>Selector<wbr>Args?</a></span>
+        <span class="property-type"><a href="#labelselector">Label<wbr>Selector<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}ObjectSelector decides whether to run the webhook based on if the object has matching labels. objectSelector is evaluated against both the oldObject and newObject that would be sent to the webhook, and is considered to match if either object matches the selector. A null object (oldObject in the case of create, or newObject in the case of delete) or an object that cannot have labels (like a DeploymentRollback or a PodProxyOptions object) is not considered to match. Use the object selector only if the webhook is opt-in, because end users may skip the admission webhook by setting the labels. Default to the empty LabelSelector, which matches everything.{{% /md %}}</dd>
 
@@ -1236,7 +1076,7 @@ Defaults to "Never".{{% /md %}}</dd>
             title="Optional">
         <span>Rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulewithoperations">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Admissionregistration.k8s.io/v1beta1.<wbr>Inputs.<wbr>Rule<wbr>With<wbr>Operations<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#rulewithoperations">List&lt;Rule<wbr>With<wbr>Operations<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}Rules describes what operations on what resources/subresources the webhook cares about. The webhook cares about an operation if it matches _any_ Rule. However, in order to prevent ValidatingAdmissionWebhooks and MutatingAdmissionWebhooks from putting the cluster in a state which cannot be recovered from without completely disabling the plugin, ValidatingAdmissionWebhooks and MutatingAdmissionWebhooks are never called on admission requests for ValidatingWebhookConfiguration and MutatingWebhookConfiguration objects.{{% /md %}}</dd>
 
@@ -1691,25 +1531,9 @@ Defaults to "Never".{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Api<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>Metadata</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Object<wbr>Meta<wbr>Args?</a></span>
+        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Standard object metadata; More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata.{{% /md %}}</dd>
 
@@ -1717,7 +1541,7 @@ Defaults to "Never".{{% /md %}}</dd>
             title="Optional">
         <span>Webhooks</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mutatingwebhook">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Admissionregistration.k8s.io/v1beta1.<wbr>Inputs.<wbr>Mutating<wbr>Webhook<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#mutatingwebhook">List&lt;Mutating<wbr>Webhook<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}Webhooks is a list of webhooks and the affected resources and operations.{{% /md %}}</dd>
 
@@ -1727,22 +1551,6 @@ Defaults to "Never".{{% /md %}}</dd>
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Api<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1769,22 +1577,6 @@ Defaults to "Never".{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>api<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>metadata</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#objectmeta">Object<wbr>Meta?</a></span>
@@ -1805,22 +1597,6 @@ Defaults to "Never".{{% /md %}}</dd>
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>api_<wbr>version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1944,7 +1720,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
             title="Optional">
         <span>Managed<wbr>Fields</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedfieldsentry">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Managed<wbr>Fields<wbr>Entry<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#managedfieldsentry">List&lt;Managed<wbr>Fields<wbr>Entry<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like "ci-cd". The set of fields is always in the version that the workflow used when modifying the object.{{% /md %}}</dd>
 
@@ -1970,7 +1746,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
             title="Optional">
         <span>Owner<wbr>References</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ownerreference">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Owner<wbr>Reference<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#ownerreference">List&lt;Owner<wbr>Reference<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller.{{% /md %}}</dd>
 
@@ -2481,14 +2257,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>Api<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}API version of the referent.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>Block<wbr>Owner<wbr>Deletion</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool?</span>
@@ -2502,14 +2270,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-type">bool?</span>
     </dt>
     <dd>{{% md %}}If true, this reference points to the managing controller.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Kind of the referent. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2536,14 +2296,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>Api<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}API version of the referent.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>Block<wbr>Owner<wbr>Deletion</span>
         <span class="property-indicator"></span>
         <span class="property-type">*bool</span>
@@ -2557,14 +2309,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-type">*bool</span>
     </dt>
     <dd>{{% md %}}If true, this reference points to the managing controller.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Kind of the referent. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2591,14 +2335,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>api<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}API version of the referent.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>block<wbr>Owner<wbr>Deletion</span>
         <span class="property-indicator"></span>
         <span class="property-type">boolean?</span>
@@ -2612,14 +2348,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-type">boolean?</span>
     </dt>
     <dd>{{% md %}}If true, this reference points to the managing controller.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Kind of the referent. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2646,14 +2374,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>api_<wbr>version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}API version of the referent.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>block<wbr>Owner<wbr>Deletion</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
@@ -2667,14 +2387,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, this reference points to the managing controller.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind of the referent. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3124,7 +2836,7 @@ Depending on the enclosing object, subresources might not be allowed. Required.{
             title="Optional">
         <span>Service</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicereference">Pulumi.<wbr>Kubernetes.<wbr>Admissionregistration.k8s.io/v1beta1.<wbr>Inputs.<wbr>Service<wbr>Reference<wbr>Args?</a></span>
+        <span class="property-type"><a href="#servicereference">Service<wbr>Reference<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}`service` is a reference to the service for this webhook. Either `service` or `url` must be specified.
 

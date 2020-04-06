@@ -18,7 +18,7 @@ Status is a return value for calls that don't return other objects.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Status</span><span class="p">(resource_name, opts=None, </span>api_version=None<span class="p">, </span>code=None<span class="p">, </span>details=None<span class="p">, </span>kind=None<span class="p">, </span>message=None<span class="p">, </span>metadata=None<span class="p">, </span>reason=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Status</span><span class="p">(resource_name, opts=None, </span>code=None<span class="p">, </span>details=None<span class="p">, </span>message=None<span class="p">, </span>metadata=None<span class="p">, </span>reason=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -26,7 +26,7 @@ Status is a return value for calls that don't return other objects.
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Kubernetes/Pulumi.Kubernetes.Meta/V1.Status.html">Status</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Kubernetes/Pulumi.Kubernetes.Meta.V1.StatusArgs.html">StatusArgs</a></span>? <span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Kubernetes/Pulumi.Kubernetes.Meta/v1.Status.html">Status</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Kubernetes/Pulumi.Kubernetes.Meta.V1.StatusArgs.html">StatusArgs</a></span>? <span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -120,14 +120,6 @@ Status is a return value for calls that don't return other objects.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Api<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>Code</span>
         <span class="property-indicator"></span>
         <span class="property-type">int?</span>
@@ -141,14 +133,6 @@ Status is a return value for calls that don't return other objects.
         <span class="property-type"><a href="#statusdetails">Status<wbr>Details<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Extended data associated with the reason.  Each reason may define its own extended details. This field is optional and the data returned is not guaranteed to conform to any schema except that defined by the reason type.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -183,14 +167,6 @@ Status is a return value for calls that don't return other objects.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Api<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>Code</span>
         <span class="property-indicator"></span>
         <span class="property-type">*int</span>
@@ -204,14 +180,6 @@ Status is a return value for calls that don't return other objects.
         <span class="property-type"><a href="#statusdetails">*Status<wbr>Details</a></span>
     </dt>
     <dd>{{% md %}}Extended data associated with the reason.  Each reason may define its own extended details. This field is optional and the data returned is not guaranteed to conform to any schema except that defined by the reason type.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -246,14 +214,6 @@ Status is a return value for calls that don't return other objects.
 
     <dt class="property-optional"
             title="Optional">
-        <span>api<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>code</span>
         <span class="property-indicator"></span>
         <span class="property-type">number?</span>
@@ -267,14 +227,6 @@ Status is a return value for calls that don't return other objects.
         <span class="property-type"><a href="#statusdetails">Status<wbr>Details?</a></span>
     </dt>
     <dd>{{% md %}}Extended data associated with the reason.  Each reason may define its own extended details. This field is optional and the data returned is not guaranteed to conform to any schema except that defined by the reason type.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -309,14 +261,6 @@ Status is a return value for calls that don't return other objects.
 
     <dt class="property-optional"
             title="Optional">
-        <span>api_<wbr>version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>code</span>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
@@ -330,14 +274,6 @@ Status is a return value for calls that don't return other objects.
         <span class="property-type"><a href="#statusdetails">Dict[Status<wbr>Details]</a></span>
     </dt>
     <dd>{{% md %}}Extended data associated with the reason.  Each reason may define its own extended details. This field is optional and the data returned is not guaranteed to conform to any schema except that defined by the reason type.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -384,14 +320,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Api<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Code</span>
         <span class="property-indicator"></span>
         <span class="property-type">int?</span>
@@ -405,14 +333,6 @@ The following output properties are available:
         <span class="property-type"><a href="#statusdetails">Status<wbr>Details?</a></span>
     </dt>
     <dd>{{% md %}}Extended data associated with the reason.  Each reason may define its own extended details. This field is optional and the data returned is not guaranteed to conform to any schema except that defined by the reason type.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -455,14 +375,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Api<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Code</span>
         <span class="property-indicator"></span>
         <span class="property-type">*int</span>
@@ -476,14 +388,6 @@ The following output properties are available:
         <span class="property-type"><a href="#statusdetails">*Status<wbr>Details</a></span>
     </dt>
     <dd>{{% md %}}Extended data associated with the reason.  Each reason may define its own extended details. This field is optional and the data returned is not guaranteed to conform to any schema except that defined by the reason type.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -526,14 +430,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>api<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>code</span>
         <span class="property-indicator"></span>
         <span class="property-type">number?</span>
@@ -547,14 +443,6 @@ The following output properties are available:
         <span class="property-type"><a href="#statusdetails">Status<wbr>Details?</a></span>
     </dt>
     <dd>{{% md %}}Extended data associated with the reason.  Each reason may define its own extended details. This field is optional and the data returned is not guaranteed to conform to any schema except that defined by the reason type.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -597,14 +485,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>api_<wbr>version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>code</span>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
@@ -618,14 +498,6 @@ The following output properties are available:
         <span class="property-type"><a href="#statusdetails">Dict[Status<wbr>Details]</a></span>
     </dt>
     <dd>{{% md %}}Extended data associated with the reason.  Each reason may define its own extended details. This field is optional and the data returned is not guaranteed to conform to any schema except that defined by the reason type.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1042,14 +914,6 @@ Examples:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The kind attribute of the resource associated with the status StatusReason. On some operations may differ from the requested resource Kind. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string?</span>
@@ -1094,14 +958,6 @@ Examples:
         <span class="property-type">*string</span>
     </dt>
     <dd>{{% md %}}The group attribute of the resource associated with the status StatusReason.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The kind attribute of the resource associated with the status StatusReason. On some operations may differ from the requested resource Kind. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1152,14 +1008,6 @@ Examples:
 
     <dt class="property-optional"
             title="Optional">
-        <span>kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The kind attribute of the resource associated with the status StatusReason. On some operations may differ from the requested resource Kind. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string?</span>
@@ -1204,14 +1052,6 @@ Examples:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The group attribute of the resource associated with the status StatusReason.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The kind attribute of the resource associated with the status StatusReason. On some operations may differ from the requested resource Kind. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

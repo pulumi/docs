@@ -18,7 +18,7 @@ NetworkPolicyList is a list of NetworkPolicy objects.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">NetworkPolicyList</span><span class="p">(resource_name, opts=None, </span>api_version=None<span class="p">, </span>items=None<span class="p">, </span>kind=None<span class="p">, </span>metadata=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">NetworkPolicyList</span><span class="p">(resource_name, opts=None, </span>items=None<span class="p">, </span>metadata=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -26,7 +26,7 @@ NetworkPolicyList is a list of NetworkPolicy objects.
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Kubernetes/Pulumi.Kubernetes.Networking.K8s.Io/V1.NetworkPolicyList.html">NetworkPolicyList</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Kubernetes/Pulumi.Kubernetes.Networking.k8s.io/v1.NetworkPolicyListArgs.html">NetworkPolicyListArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Kubernetes/Pulumi.Kubernetes.Networking.k8s.io/v1.NetworkPolicyList.html">NetworkPolicyList</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Kubernetes/Pulumi.Kubernetes.Networking.k8s.io/v1.NetworkPolicyListArgs.html">NetworkPolicyListArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -118,35 +118,19 @@ NetworkPolicyList is a list of NetworkPolicy objects.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Api<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Items</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkpolicy">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Networking.k8s.io/v1.<wbr>Inputs.<wbr>Network<wbr>Policy<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#networkpolicy">List&lt;Network<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Items is a list of schema objects.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>Metadata</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listmeta">Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>List<wbr>Meta<wbr>Args?</a></span>
+        <span class="property-type"><a href="#listmeta">List<wbr>Meta<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Standard list metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd>
 
@@ -157,14 +141,6 @@ NetworkPolicyList is a list of NetworkPolicy objects.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Api<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Items</span>
@@ -172,14 +148,6 @@ NetworkPolicyList is a list of NetworkPolicy objects.
         <span class="property-type"><a href="#networkpolicy">[]Network<wbr>Policy<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Items is a list of schema objects.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -196,14 +164,6 @@ NetworkPolicyList is a list of NetworkPolicy objects.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>api<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>items</span>
@@ -211,14 +171,6 @@ NetworkPolicyList is a list of NetworkPolicy objects.
         <span class="property-type"><a href="#networkpolicy">Network<wbr>Policy[]</a></span>
     </dt>
     <dd>{{% md %}}Items is a list of schema objects.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -235,14 +187,6 @@ NetworkPolicyList is a list of NetworkPolicy objects.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>api_<wbr>version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>items</span>
@@ -250,14 +194,6 @@ NetworkPolicyList is a list of NetworkPolicy objects.
         <span class="property-type"><a href="#networkpolicy">List[Network<wbr>Policy]</a></span>
     </dt>
     <dd>{{% md %}}Items is a list of schema objects.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -288,33 +224,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Api<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Items</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkpolicy">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Networking.k8s.io/v1.<wbr>Outputs.<wbr>Network<wbr>Policy&gt;?</a></span>
+        <span class="property-type"><a href="#networkpolicy">List&lt;Network<wbr>Policy&gt;?</a></span>
     </dt>
     <dd>{{% md %}}Items is a list of schema objects.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Metadata</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listmeta">Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Outputs.<wbr>List<wbr>Meta?</a></span>
+        <span class="property-type"><a href="#listmeta">List<wbr>Meta?</a></span>
     </dt>
     <dd>{{% md %}}Standard list metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd>
 
@@ -327,27 +247,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Api<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Items</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkpolicy">[]Network<wbr>Policy<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}Items is a list of schema objects.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -366,27 +270,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>api<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>items</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkpolicy">Network<wbr>Policy[]?</a></span>
     </dt>
     <dd>{{% md %}}Items is a list of schema objects.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -405,27 +293,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>api_<wbr>version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>items</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkpolicy">List[Network<wbr>Policy]</a></span>
     </dt>
     <dd>{{% md %}}Items is a list of schema objects.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -577,7 +449,7 @@ The following output properties are available:
             title="Optional">
         <span>Match<wbr>Expressions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labelselectorrequirement">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Label<wbr>Selector<wbr>Requirement<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#labelselectorrequirement">List&lt;Label<wbr>Selector<wbr>Requirement<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}matchExpressions is a list of label selector requirements. The requirements are ANDed.{{% /md %}}</dd>
 
@@ -1000,14 +872,6 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>Api<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}APIVersion defines the version of this resource that this field set applies to. The format is "group/version" just like the top-level APIVersion field. It is necessary to track the version of a field set because it cannot be automatically converted.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>Fields<wbr>Type</span>
         <span class="property-indicator"></span>
         <span class="property-type">string?</span>
@@ -1052,14 +916,6 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Api<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}APIVersion defines the version of this resource that this field set applies to. The format is "group/version" just like the top-level APIVersion field. It is necessary to track the version of a field set because it cannot be automatically converted.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1110,14 +966,6 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>api<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}APIVersion defines the version of this resource that this field set applies to. The format is "group/version" just like the top-level APIVersion field. It is necessary to track the version of a field set because it cannot be automatically converted.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>fields<wbr>Type</span>
         <span class="property-indicator"></span>
         <span class="property-type">string?</span>
@@ -1162,14 +1010,6 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>api_<wbr>version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}APIVersion defines the version of this resource that this field set applies to. The format is "group/version" just like the top-level APIVersion field. It is necessary to track the version of a field set because it cannot be automatically converted.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1235,25 +1075,9 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>Api<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>Metadata</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Object<wbr>Meta<wbr>Args?</a></span>
+        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd>
 
@@ -1261,7 +1085,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
             title="Optional">
         <span>Spec</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkpolicyspec">Pulumi.<wbr>Kubernetes.<wbr>Networking.k8s.io/v1.<wbr>Inputs.<wbr>Network<wbr>Policy<wbr>Spec<wbr>Args?</a></span>
+        <span class="property-type"><a href="#networkpolicyspec">Network<wbr>Policy<wbr>Spec<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Specification of the desired behavior for this NetworkPolicy.{{% /md %}}</dd>
 
@@ -1271,22 +1095,6 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Api<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1313,22 +1121,6 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>api<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>metadata</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#objectmeta">Object<wbr>Meta?</a></span>
@@ -1349,22 +1141,6 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>api_<wbr>version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1408,7 +1184,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
             title="Optional">
         <span>Ports</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkpolicyport">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Networking.k8s.io/v1.<wbr>Inputs.<wbr>Network<wbr>Policy<wbr>Port<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#networkpolicyport">List&lt;Network<wbr>Policy<wbr>Port<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}List of destination ports for outgoing traffic. Each item in this list is combined using a logical OR. If this field is empty or missing, this rule matches all ports (traffic not restricted by port). If this field is present and contains at least one item, then this rule allows traffic only if the traffic matches at least one port in the list.{{% /md %}}</dd>
 
@@ -1416,7 +1192,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
             title="Optional">
         <span>To</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkpolicypeer">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Networking.k8s.io/v1.<wbr>Inputs.<wbr>Network<wbr>Policy<wbr>Peer<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#networkpolicypeer">List&lt;Network<wbr>Policy<wbr>Peer<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}List of destinations for outgoing traffic of pods selected for this rule. Items in this list are combined using a logical OR operation. If this field is empty or missing, this rule matches all destinations (traffic not restricted by destination). If this field is present and contains at least one item, this rule allows traffic only if the traffic matches at least one item in the to list.{{% /md %}}</dd>
 
@@ -1515,7 +1291,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
             title="Optional">
         <span>From</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkpolicypeer">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Networking.k8s.io/v1.<wbr>Inputs.<wbr>Network<wbr>Policy<wbr>Peer<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#networkpolicypeer">List&lt;Network<wbr>Policy<wbr>Peer<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}List of sources which should be able to access the pods selected for this rule. Items in this list are combined using a logical OR operation. If this field is empty or missing, this rule matches all sources (traffic not restricted by source). If this field is present and contains at least one item, this rule allows traffic only if the traffic matches at least one item in the from list.{{% /md %}}</dd>
 
@@ -1523,7 +1299,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
             title="Optional">
         <span>Ports</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkpolicyport">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Networking.k8s.io/v1.<wbr>Inputs.<wbr>Network<wbr>Policy<wbr>Port<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#networkpolicyport">List&lt;Network<wbr>Policy<wbr>Port<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}List of ports which should be made accessible on the pods selected for this rule. Each item in this list is combined using a logical OR. If this field is empty or missing, this rule matches all ports (traffic not restricted by port). If this field is present and contains at least one item, then this rule allows traffic only if the traffic matches at least one port in the list.{{% /md %}}</dd>
 
@@ -1622,7 +1398,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
             title="Optional">
         <span>Ip<wbr>Block</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipblock">Pulumi.<wbr>Kubernetes.<wbr>Networking.k8s.io/v1.<wbr>Inputs.<wbr>IPBlock<wbr>Args?</a></span>
+        <span class="property-type"><a href="#ipblock">IPBlock<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}IPBlock defines policy on a particular IPBlock. If this field is set then neither of the other fields can be.{{% /md %}}</dd>
 
@@ -1630,7 +1406,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
             title="Optional">
         <span>Namespace<wbr>Selector</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labelselector">Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Label<wbr>Selector<wbr>Args?</a></span>
+        <span class="property-type"><a href="#labelselector">Label<wbr>Selector<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Selects Namespaces using cluster-scoped labels. This field follows standard label selector semantics; if present but empty, it selects all namespaces.
 
@@ -1640,7 +1416,7 @@ If PodSelector is also set, then the NetworkPolicyPeer as a whole selects the Po
             title="Optional">
         <span>Pod<wbr>Selector</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labelselector">Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Label<wbr>Selector<wbr>Args?</a></span>
+        <span class="property-type"><a href="#labelselector">Label<wbr>Selector<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}This is a label selector which selects Pods. This field follows standard label selector semantics; if present but empty, it selects all pods.
 
@@ -1884,7 +1660,7 @@ If NamespaceSelector is also set, then the NetworkPolicyPeer as a whole selects 
             title="Optional">
         <span>Egress</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkpolicyegressrule">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Networking.k8s.io/v1.<wbr>Inputs.<wbr>Network<wbr>Policy<wbr>Egress<wbr>Rule<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#networkpolicyegressrule">List&lt;Network<wbr>Policy<wbr>Egress<wbr>Rule<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}List of egress rules to be applied to the selected pods. Outgoing traffic is allowed if there are no NetworkPolicies selecting the pod (and cluster policy otherwise allows the traffic), OR if the traffic matches at least one egress rule across all of the NetworkPolicy objects whose podSelector matches the pod. If this field is empty then this NetworkPolicy limits all outgoing traffic (and serves solely to ensure that the pods it selects are isolated by default). This field is beta-level in 1.8{{% /md %}}</dd>
 
@@ -1892,7 +1668,7 @@ If NamespaceSelector is also set, then the NetworkPolicyPeer as a whole selects 
             title="Optional">
         <span>Ingress</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkpolicyingressrule">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Networking.k8s.io/v1.<wbr>Inputs.<wbr>Network<wbr>Policy<wbr>Ingress<wbr>Rule<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#networkpolicyingressrule">List&lt;Network<wbr>Policy<wbr>Ingress<wbr>Rule<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}List of ingress rules to be applied to the selected pods. Traffic is allowed to a pod if there are no NetworkPolicies selecting the pod (and cluster policy otherwise allows the traffic), OR if the traffic source is the pod's local node, OR if the traffic matches at least one ingress rule across all of the NetworkPolicy objects whose podSelector matches the pod. If this field is empty then this NetworkPolicy does not allow any traffic (and serves solely to ensure that the pods it selects are isolated by default){{% /md %}}</dd>
 
@@ -1900,7 +1676,7 @@ If NamespaceSelector is also set, then the NetworkPolicyPeer as a whole selects 
             title="Optional">
         <span>Pod<wbr>Selector</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#labelselector">Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Label<wbr>Selector<wbr>Args?</a></span>
+        <span class="property-type"><a href="#labelselector">Label<wbr>Selector<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Selects the pods to which this NetworkPolicy object applies. The array of ingress rules is applied to any pods selected by this field. Multiple network policies can select the same set of pods. In this case, the ingress rules for each are combined additively. This field is NOT optional and follows standard label selector semantics. An empty podSelector matches all pods in this namespace.{{% /md %}}</dd>
 
@@ -2135,7 +1911,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
             title="Optional">
         <span>Managed<wbr>Fields</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedfieldsentry">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Managed<wbr>Fields<wbr>Entry<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#managedfieldsentry">List&lt;Managed<wbr>Fields<wbr>Entry<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like "ci-cd". The set of fields is always in the version that the workflow used when modifying the object.{{% /md %}}</dd>
 
@@ -2161,7 +1937,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
             title="Optional">
         <span>Owner<wbr>References</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ownerreference">List&lt;Pulumi.<wbr>Kubernetes.<wbr>Meta.<wbr>V1.<wbr>Inputs.<wbr>Owner<wbr>Reference<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#ownerreference">List&lt;Owner<wbr>Reference<wbr>Args&gt;?</a></span>
     </dt>
     <dd>{{% md %}}List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller.{{% /md %}}</dd>
 
@@ -2672,14 +2448,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>Api<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}API version of the referent.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>Block<wbr>Owner<wbr>Deletion</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool?</span>
@@ -2693,14 +2461,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-type">bool?</span>
     </dt>
     <dd>{{% md %}}If true, this reference points to the managing controller.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Kind of the referent. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2727,14 +2487,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>Api<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}API version of the referent.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>Block<wbr>Owner<wbr>Deletion</span>
         <span class="property-indicator"></span>
         <span class="property-type">*bool</span>
@@ -2748,14 +2500,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-type">*bool</span>
     </dt>
     <dd>{{% md %}}If true, this reference points to the managing controller.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Kind of the referent. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2782,14 +2526,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>api<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}API version of the referent.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>block<wbr>Owner<wbr>Deletion</span>
         <span class="property-indicator"></span>
         <span class="property-type">boolean?</span>
@@ -2803,14 +2539,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-type">boolean?</span>
     </dt>
     <dd>{{% md %}}If true, this reference points to the managing controller.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Kind of the referent. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2837,14 +2565,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>api_<wbr>version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}API version of the referent.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>block<wbr>Owner<wbr>Deletion</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
@@ -2858,14 +2578,6 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, this reference points to the managing controller.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kind of the referent. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
