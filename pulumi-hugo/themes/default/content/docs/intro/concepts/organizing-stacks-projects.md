@@ -47,13 +47,13 @@ migrate to a finer grained decomposition of projects and stacks.
 
 ## Micro-Stacks
 
-At the other end of the spectrum is a pattern we call _micro-stacks_. This is the moral equivalent to microservices,
+At the other end of the spectrum is a pattern we call _micro-stacks_. This is equivalent to microservices,
 only in project and stack form. In this model, a project is broken into separately managed smaller projects, often across
 different dimensions. This approach has several advantages:
 
 * **Independence.** Although Pulumi can diff changes and make only those updates mandated by a code edit,
   certain projects sometimes deploy at radically different cadences and it makes sense to enforce this separation
-  in project structure. For instance, a service that revs every day may not be appropriate to live in the same project as
+  in the project structure. For instance, a service that revs every day may not be appropriate to live in the same project as
   critical infrastructure that changes infrequently and which demands intense scrutiny whenever it does.
 
 * **Security.** In large organizations, it's important to use RBAC to secure access to individual aspects
@@ -82,11 +82,11 @@ Here are a few, non-exhaustive, examples, of how one might go about splitting up
 
 Even with this alternative breakdown, it's likely your stack structure will mirror that described earlier. For
 each project, you are apt to have multiple environments such as production, staging, testing, etc. And, indeed,
-you may have inter-dependencies between your stacks -- something that Pulumi supports in a first class manner.
+you may have inter-dependencies between your stacks -- something that Pulumi supports in a first-class manner.
 
 ## Inter-Stack Dependencies {#inter-stack-dependencies}
 
-Let's imagine that acmecorp decides to define its cluster infrastructure in one project and consume it from another.
+Let's imagine that Acmecorp decides to define its cluster infrastructure in one project and consume it from another.
 Perhaps one project, `infra`, defines the Kubernetes cluster and another, `services`, deploys
 services into it. Let's further imagine we are doing this across three distinct environments, production, staging,
 and testing. In that case, we'll have six distinct stacks, that pair up together:
