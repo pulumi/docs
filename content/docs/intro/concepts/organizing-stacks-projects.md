@@ -124,9 +124,7 @@ pulumi.export("kubeConfig", ... a cluster's output property ...)
 {{% choosable language go %}}
 
 ```go
-// StackReference is not supported in Go currently.
-//
-// See https://github.com/pulumi/pulumi/issues/1614.
+ctx.Export("kubeConfig", /*...a cluster's output property...*/)
 ```
 
 {{% /choosable %}}
@@ -197,9 +195,21 @@ service = core.v1.Service(..., ResourceOptions(provider=provider))
 {{% choosable language go %}}
 
 ```go
-// StackReference is not supported in Go currently.
-//
-// See https://github.com/pulumi/pulumi/issues/1614.
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi/sdk/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+    org := cfg.Require("org")
+		slug := fmt.Sprintf("%v/%v/%v", org, ctx.Project(), ctx.Stack())
+		stackRef, err := pulumi.NewStackReference(ctx, slug, nil)
+  }
+
+  kubeConfig := stackRef.GetOutput(pulumi.String("kubeConfig"))
+}
 ```
 
 {{% /choosable %}}
