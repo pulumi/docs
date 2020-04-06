@@ -20,6 +20,7 @@ Specifying a tag in your Infrastructure as Code is easy. Not all resources are t
 {{< chooser language "javascript,typescript,python,go,csharp" >}}
 
 {{% choosable language javascript %}}
+
 ```javascript
 let aws = require("@pulumi/aws");
 let pulumi = require("@pulumi/pulumi");
@@ -34,9 +35,11 @@ let bucket = new aws.s3.Bucket("my-bucket", {
     },
 });
 ```
+
 {{% /choosable %}}
 
 {{% choosable language typescript %}}
+
 ```typescript
 import * as aws from "@pulumi/aws";
 import * as pulumi from "@pulumi/pulumi";
@@ -51,9 +54,11 @@ const bucket = new aws.s3.Bucket("my-bucket", {
     },
 });
 ```
+
 {{% /choosable %}}
 
 {{% choosable language python %}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -68,9 +73,11 @@ bucket = aws.s3.Bucket('my-bucket',
     },
 )
 ```
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
+
 ```go
 package main
 
@@ -94,9 +101,11 @@ func main() {
     }
 }
 ```
+
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
+
 ```csharp
 using Pulumi;
 using Pulumi.Aws.S3;
@@ -119,6 +128,7 @@ class Program {
     }
 }
 ```
+
 {{% /choosable %}}
 
 {{< /chooser >}}
@@ -136,39 +146,49 @@ Imagine we forgot to tag our S3 Bucket from earlier:
 {{< chooser language "javascript,typescript,python,go,csharp" >}}
 
 {{% choosable language javascript %}}
+
 ```javascript
 // Oops -- no tags!
 let bucket = new aws.s3.Bucket("my-bucket");
 ```
+
 {{% /choosable %}}
 
 {{% choosable language typescript %}}
+
 ```typescript
 // Oops -- no tags!
 const bucket = new aws.s3.Bucket("my-bucket");
 ```
+
 {{% /choosable %}}
 
 {{% choosable language python %}}
+
 ```python
 # Oops -- no tags!
 bucket = aws.s3.Bucket('my-bucket')
 ```
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
+
 ```go
 // Oops -- no tags!
 _, err := s3.NewBucket(ctx, "my-bucket", nil)
 return err
 ```
+
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
+
 ```csharp
 // Oops -- no tags!
 var bucket = new Bucket("my-bucket");
 ```
+
 {{% /choosable %}}
 
 {{< /chooser >}}
@@ -191,6 +211,7 @@ This policy is ultimately defined as a simple policy pack as follows:
 {{< chooser language "javascript,typescript" local >}}
 
 {{% choosable language javascript %}}
+
 ```javascript
 let policy = require("@pulumi/policy");
 let isTaggable = require("../lib/taggable").isTaggable;
@@ -223,9 +244,11 @@ new policy.PolicyPack("aws-tags-policies", {
     }],
 });
 ```
+
 {{% /choosable %}}
 
 {{% choosable language "typescript" %}}
+
 ```typescript
 import * as policy from "@pulumi/policy";
 import { isTaggable } from "../lib/taggable";
@@ -262,6 +285,7 @@ interface AwsTagsPolicyConfig {
     requiredTags?: string[];
 }
 ```
+
 {{% /choosable %}}
 
 {{< /chooser >}}
@@ -348,6 +372,7 @@ To do that, let's write a function that detects taggable resources and merges in
 {{< chooser language "javascript,typescript,python,go,csharp" >}}
 
 {{% choosable language javascript %}}
+
 ```javascript
 let pulumi = require("@pulumi/pulumi");
 let isTaggable = require("./taggable").isTaggable;
@@ -367,9 +392,11 @@ module.exports = {
     },
 };
 ```
+
 {{% /choosable %}}
 
 {{% choosable language typescript %}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import { isTaggable } from "./taggable";
@@ -388,9 +415,11 @@ export function registerAutoTags(autoTags: Record<string, string>): void {
     });
 }
 ```
+
 {{% /choosable %}}
 
 {{% choosable language python %}}
+
 ```python
 import pulumi
 from taggable import is_taggable
@@ -406,9 +435,11 @@ def auto_tag(args, auto_tags):
         args.props['tags'] = {**(args.props['tags'] or {}), **auto_tags}
         return pulumi.ResourceTransformationResult(args.props, args.opts)
 ```
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
+
 ```go
 package main
 
@@ -450,9 +481,11 @@ func registerAutoTags(ctx *pulumi.Context, autoTags map[string]string) {
     )
 }
 ```
+
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
+
 ```csharp
 static ResourceTransformation RegisterAutoTags(Dictionary<string, string> autoTags) {
     return args => {
@@ -470,6 +503,7 @@ static ResourceTransformation RegisterAutoTags(Dictionary<string, string> autoTa
     };
 }
 ```
+
 {{% /choosable %}}
 
 {{< /chooser >}}
@@ -479,6 +513,7 @@ Now we can go back to our main program, use this new module, remove the explicit
 {{< chooser language "javascript,typescript,python,go,csharp" >}}
 
 {{% choosable language javascript %}}
+
 ```javascript
 let aws = require("@pulumi/aws");
 let pulumi = require("@pulumi/pulumi");
@@ -509,9 +544,11 @@ let server = new aws.ec2.Instance("web-server-www", {
     vpcSecurityGroupIds: [ group.id ],
 });
 ```
+
 {{% /choosable %}}
 
 {{% choosable language typescript %}}
+
 ```typescript
 import * as aws from "@pulumi/aws";
 import * as pulumi from "@pulumi/pulumi";
@@ -542,9 +579,11 @@ const server = new aws.ec2.Instance("web-server-www", {
     vpcSecurityGroupIds: [ group.id ],
 });
 ```
+
 {{% /choosable %}}
 
 {{% choosable language python %}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -575,9 +614,11 @@ server = aws.ec2.Instance('web-server-www',
     vpc_security_group_ids=[ group.id ],
 )
 ```
+
 {{% /choosable %}}
 
 {{% choosable language go %}}
+
 ```go
 package main
 
@@ -627,9 +668,11 @@ func main() {
     }
 })
 ```
+
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
+
 ```csharp
 using Pulumi;
 using Pulumi.Aws.Ec2;
@@ -675,6 +718,7 @@ class MyStack : Stack {
     // ...
 }
 ```
+
 {{% /choosable %}}
 
 {{< /chooser >}}
@@ -689,7 +733,7 @@ And running an ordinary update now passes:
 
 Try adding some resources of your own &mdash; VPCs, EC2 instances, security groups, EKS clusters, anything &mdash; and it will automatically get tagged with these same cost center tags.
 
-## In Conslusion
+## In Conclusion
 
 In this post, we've seen some ways to enforce AWS tagging best practices. This includes manually applying tags using Infrastructure as Code, checking that the desired tags are applied to the relevant resources using Policy as Code, and even using some advanced techniques to automatically tag resources, reducing manual efforts and the chance of human error.
 
