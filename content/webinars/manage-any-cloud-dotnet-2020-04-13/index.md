@@ -49,7 +49,7 @@ main:
     # Webinar title.
     title: "Managing Any Cloud with .NET"
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2020-04-13T11:30:00.000+01:00
+    sortable_date: 2020-04-13T11:30:00.000+02:00
     # Duration of the webinar.
     duration: "1 hour"
     # Datetime of the webinar.

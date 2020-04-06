@@ -49,10 +49,10 @@ main:
     # Duration of the webinar.
     duration: "1 hour"
     # Datetime of the webinar.
-    datetime: ""
+    datetime: "WED APR 22, 2020 AT 11:00AM PDT"
     # Description of the webinar.
     description: |
-        Mercedes-Benz R&D is leading the way in showing how large organizations can leverage all of the clouds and empower teams to rapidly innovate with new services and architectures. Carter Williamson from Mercedez-Benz will walk you through best practices that organizations of any size can follow to build high-quality, scalable infrastructure to serve geographically-diverse customers.
+        Mercedes-Benz R&D is leading the way in showing how large organizations can empower teams to rapidly innovate with new services and architectures. Carter Williamson from Mercedez-Benz will walk you through best practices that organizations of any size can follow to build high-quality, scalable infrastructure to serve geographically-diverse customers.
 
     # The webinar presenters
     presenters:

@@ -4,7 +4,7 @@
  */
 function localizeDateTime(date) {
     var localeDate = new Date(date.getAttribute("data-datetime"));
-    var options = { timeZoneName: "short" };
+    var options = { timeZoneName: "short", weekday: 'short', year: 'numeric', month: 'long', day: 'numeric', hour: "numeric", minute: "2-digit" };
     return localeDate.toLocaleString(undefined, options);
 }
 
