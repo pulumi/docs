@@ -4,6 +4,8 @@ title: "Image"
 block_external_search_index: true
 ---
 
+
+
 Represents an Image resource.
 
 Google Compute Engine uses operating system images to create the root
@@ -2041,9 +2043,13 @@ not both to create an image.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

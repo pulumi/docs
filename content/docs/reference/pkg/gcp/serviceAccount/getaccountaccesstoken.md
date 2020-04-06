@@ -4,6 +4,8 @@ title: "GetAccountAccessToken"
 block_external_search_index: true
 ---
 
+
+
 This data source provides a google `oauth2` `access_token` for a different service account than the one initially running the script.
 
 For more information see

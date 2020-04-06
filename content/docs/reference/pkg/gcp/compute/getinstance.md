@@ -4,6 +4,8 @@ title: "GetInstance"
 block_external_search_index: true
 ---
 
+
+
 Get information about a VM instance resource within GCE. For more information see
 [the official documentation](https://cloud.google.com/compute/docs/instances)
 and

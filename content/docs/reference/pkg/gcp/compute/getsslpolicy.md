@@ -4,6 +4,8 @@ title: "GetSSLPolicy"
 block_external_search_index: true
 ---
 
+
+
 Gets an SSL Policy within GCE from its name, for use with Target HTTPS and Target SSL Proxies.
     For more information see [the official documentation](https://cloud.google.com/compute/docs/load-balancing/ssl-policies).
 

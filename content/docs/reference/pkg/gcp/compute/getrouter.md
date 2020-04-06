@@ -4,6 +4,8 @@ title: "GetRouter"
 block_external_search_index: true
 ---
 
+
+
 Get a router within GCE from its name and VPC.
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/datasource_compute_router.html.markdown.

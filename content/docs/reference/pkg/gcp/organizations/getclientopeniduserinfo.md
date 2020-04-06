@@ -4,6 +4,8 @@ title: "GetClientOpenIdUserInfo"
 block_external_search_index: true
 ---
 
+
+
 Get OpenID userinfo about the credentials used with the Google provider,
 specifically the email.
 

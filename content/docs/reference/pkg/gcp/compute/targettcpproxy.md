@@ -4,6 +4,8 @@ title: "TargetTCPProxy"
 block_external_search_index: true
 ---
 
+
+
 Represents a TargetTcpProxy resource, which is used by one or more
 global forwarding rule to route incoming TCP requests to a Backend
 service.
@@ -1173,9 +1175,13 @@ NONE.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

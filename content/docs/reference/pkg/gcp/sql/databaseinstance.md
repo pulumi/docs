@@ -4,6 +4,8 @@ title: "DatabaseInstance"
 block_external_search_index: true
 ---
 
+
+
 Creates a new Google SQL Database Instance. For more information, see the [official documentation](https://cloud.google.com/sql/),
 or the [JSON API](https://cloud.google.com/sql/docs/admin-api/v1beta4/instances).
 
@@ -4687,9 +4689,13 @@ in. Must be in the same region as this instance.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

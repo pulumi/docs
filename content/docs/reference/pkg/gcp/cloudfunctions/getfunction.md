@@ -4,6 +4,8 @@ title: "GetFunction"
 block_external_search_index: true
 ---
 
+
+
 Get information about a Google Cloud Function. For more information see
 the [official documentation](https://cloud.google.com/functions/docs/)
 and [API](https://cloud.google.com/functions/docs/apis).

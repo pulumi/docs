@@ -4,6 +4,8 @@ title: "Agent"
 block_external_search_index: true
 ---
 
+
+
 A Dialogflow agent is a virtual agent that handles conversations with your end-users. It is a natural language
 understanding module that understands the nuances of human language. Dialogflow translates end-user text or audio
 during a conversation to structured data that your apps and services can understand. You design and build a Dialogflow
@@ -1926,9 +1928,13 @@ Europe/Paris.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

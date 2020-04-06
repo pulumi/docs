@@ -4,6 +4,8 @@ title: "GetProject"
 block_external_search_index: true
 ---
 
+
+
 Use this data source to get project details.
 For more information see
 [API](https://cloud.google.com/resource-manager/reference/rest/v1/projects#Project)

@@ -4,6 +4,8 @@ title: "Instance"
 block_external_search_index: true
 ---
 
+
+
 Creates a Google Bigtable instance. For more information see
 [the official documentation](https://cloud.google.com/bigtable/) and
 [API](https://cloud.google.com/bigtable/docs/go/reference).
@@ -1114,9 +1116,13 @@ Bigtable instances are noted on the [Cloud Bigtable locations page](https://clou
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

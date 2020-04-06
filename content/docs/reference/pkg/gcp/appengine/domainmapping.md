@@ -4,6 +4,8 @@ title: "DomainMapping"
 block_external_search_index: true
 ---
 
+
+
 A domain serving an App Engine application.
 
 
@@ -1234,9 +1236,13 @@ configuration in order to serve the application via this domain mapping.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

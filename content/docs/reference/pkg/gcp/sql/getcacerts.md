@@ -4,6 +4,8 @@ title: "GetCaCerts"
 block_external_search_index: true
 ---
 
+
+
 Get all of the trusted Certificate Authorities (CAs) for the specified SQL database instance. For more information see the
 [official documentation](https://cloud.google.com/sql/)
 and

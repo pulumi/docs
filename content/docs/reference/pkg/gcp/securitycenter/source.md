@@ -4,6 +4,8 @@ title: "Source"
 block_external_search_index: true
 ---
 
+
+
 A Cloud Security Command Center's (Cloud SCC) finding source. A finding
 source is an entity or a mechanism that can produce a finding. A source is
 like a container of findings that come from the same scanner, logger,
@@ -778,9 +780,13 @@ contain letters, digits, spaces, hyphens, and underscores, and can be no longer 
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

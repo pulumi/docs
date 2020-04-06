@@ -4,6 +4,8 @@ title: "ObjectAccessControl"
 block_external_search_index: true
 ---
 
+
+
 The ObjectAccessControls resources represent the Access Control Lists
 (ACLs) for objects within Google Cloud Storage. ACLs let you specify
 who has access to your data and to what extent.
@@ -1294,9 +1296,13 @@ domain-{{domain}} (such as "domain-example.com") * project-team-{{projectId}} * 
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

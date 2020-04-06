@@ -4,6 +4,8 @@ title: "RecordSet"
 block_external_search_index: true
 ---
 
+
+
 Manages a set of DNS records within Google Cloud DNS. For more information see [the official documentation](https://cloud.google.com/dns/records/) and
 [API](https://cloud.google.com/dns/api/v1/resourceRecordSets).
 
@@ -1038,9 +1040,13 @@ whose meaning depends on the DNS type. For TXT record, if the string data contai
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

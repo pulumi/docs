@@ -4,6 +4,8 @@ title: "Hl7StoreIamPolicy"
 block_external_search_index: true
 ---
 
+
+
 Three different resources help you manage your IAM policy for Healthcare HL7v2 store. Each of these resources serves a different use case:
 
 * `gcp.healthcare.Hl7StoreIamPolicy`: Authoritative. Sets the IAM policy for the HL7v2 store and replaces any existing policy already attached.
@@ -692,9 +694,13 @@ a `gcp.organizations.getIAMPolicy` data source.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

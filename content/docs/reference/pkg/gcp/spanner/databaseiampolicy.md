@@ -4,6 +4,8 @@ title: "DatabaseIAMPolicy"
 block_external_search_index: true
 ---
 
+
+
 Three different resources help you manage your IAM policy for a Spanner database. Each of these resources serves a different use case:
 
 * `gcp.spanner.DatabaseIAMPolicy`: Authoritative. Sets the IAM policy for the database and replaces any existing policy already attached.
@@ -887,9 +889,13 @@ is not provided, the provider project is used.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

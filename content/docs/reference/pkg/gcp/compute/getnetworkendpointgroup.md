@@ -4,6 +4,8 @@ title: "GetNetworkEndpointGroup"
 block_external_search_index: true
 ---
 
+
+
 Use this data source to access a Network Endpoint Group's attributes.
 
 The NEG may be found by providing either a `self_link`, or a `name` and a `zone`.

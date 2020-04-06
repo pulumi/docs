@@ -4,6 +4,8 @@ title: "GetManagedZone"
 block_external_search_index: true
 ---
 
+
+
 Provides access to a zone's attributes within Google Cloud DNS.
 For more information see
 [the official documentation](https://cloud.google.com/dns/zones/)

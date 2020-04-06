@@ -4,6 +4,8 @@ title: "Subnetwork"
 block_external_search_index: true
 ---
 
+
+
 A VPC network is a virtual version of the traditional physical networks
 that exist within and between physical data centers. A VPC network
 provides connectivity for your Compute Engine virtual machine (VM)
@@ -2320,9 +2322,13 @@ section](https://www.terraform.io/docs/configuration/attr-as-blocks.html#definin
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

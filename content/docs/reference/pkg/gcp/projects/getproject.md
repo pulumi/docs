@@ -4,6 +4,8 @@ title: "GetProject"
 block_external_search_index: true
 ---
 
+
+
 Retrieve information about a set of projects based on a filter. See the
 [REST API](https://cloud.google.com/resource-manager/reference/rest/v1/projects/list)
 for more details.

@@ -4,6 +4,8 @@ title: "GetNotificationChannel"
 block_external_search_index: true
 ---
 
+
+
 A NotificationChannel is a medium through which an alert is delivered
 when a policy violation is detected. Examples of channels include email, SMS,
 and third-party messaging applications. Fields containing sensitive information

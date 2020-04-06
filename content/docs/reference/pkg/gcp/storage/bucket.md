@@ -4,6 +4,8 @@ title: "Bucket"
 block_external_search_index: true
 ---
 
+
+
 Creates a new bucket in Google cloud storage service (GCS).
 Once a bucket has been created, its location can't be changed.
 [ACLs](https://cloud.google.com/storage/docs/access-control/lists) can be applied
@@ -3411,9 +3413,13 @@ resource is not found.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

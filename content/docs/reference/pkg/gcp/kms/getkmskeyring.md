@@ -4,6 +4,8 @@ title: "GetKMSKeyRing"
 block_external_search_index: true
 ---
 
+
+
 Provides access to Google Cloud Platform KMS KeyRing. For more information see
 [the official documentation](https://cloud.google.com/kms/docs/object-hierarchy#key_ring)
 and

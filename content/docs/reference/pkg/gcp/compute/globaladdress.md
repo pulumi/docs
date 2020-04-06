@@ -4,6 +4,8 @@ title: "GlobalAddress"
 block_external_search_index: true
 ---
 
+
+
 Represents a Global Address resource. Global addresses are used for
 HTTP(S) load balancing.
 
@@ -1760,9 +1762,13 @@ be set when using an Internal address.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

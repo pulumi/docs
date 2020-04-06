@@ -4,6 +4,8 @@ title: "GetIAMPolicy"
 block_external_search_index: true
 ---
 
+
+
 Generates an IAM policy document that may be referenced by and applied to
 other Google Cloud Platform resources, such as the `gcp.organizations.Project` resource.
 

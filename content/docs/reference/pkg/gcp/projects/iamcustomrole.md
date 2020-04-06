@@ -4,6 +4,8 @@ title: "IAMCustomRole"
 block_external_search_index: true
 ---
 
+
+
 Allows management of a customized Cloud IAM project role. For more information see
 [the official documentation](https://cloud.google.com/iam/docs/understanding-custom-roles)
 and
@@ -1114,9 +1116,13 @@ List of possible stages is [here](https://cloud.google.com/iam/reference/rest/v1
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

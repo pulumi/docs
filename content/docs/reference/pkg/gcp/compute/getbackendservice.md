@@ -4,6 +4,8 @@ title: "GetBackendService"
 block_external_search_index: true
 ---
 
+
+
 Provide access to a Backend Service's attribute. For more information
 see [the official documentation](https://cloud.google.com/compute/docs/load-balancing/http/backend-service)
 and the [API](https://cloud.google.com/compute/docs/reference/latest/backendServices).

@@ -4,6 +4,8 @@ title: "RegionBackendService"
 block_external_search_index: true
 ---
 
+
+
 A Region Backend Service defines a regionally-scoped group of virtual
 machines that will serve traffic for load balancing.
 
@@ -5010,9 +5012,13 @@ errors if used with the GA API.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

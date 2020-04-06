@@ -4,6 +4,8 @@ title: "IamAuditConfig"
 block_external_search_index: true
 ---
 
+
+
 Allows management of audit logging config for a given service for a Google Cloud Platform Organization.
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_organization_iam_audit_config.html.markdown.
@@ -876,9 +878,13 @@ Each entry can have one of the following values:
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

@@ -4,6 +4,8 @@ title: "Disk"
 block_external_search_index: true
 ---
 
+
+
 Persistent disks are durable storage devices that function similarly to
 the physical disks in a desktop or a server. Compute Engine manages the
 hardware behind these devices to ensure data redundancy and optimize
@@ -3179,9 +3181,13 @@ recreated under the same name, the source snapshot ID would identify the exact v
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

@@ -4,6 +4,8 @@ title: "Service"
 block_external_search_index: true
 ---
 
+
+
 Allows management of a single API service for an existing Google Cloud Platform project. 
 
 For a list of services available, visit the
@@ -795,9 +797,13 @@ If `false` or unset, an error will be generated if any enabled services depend o
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

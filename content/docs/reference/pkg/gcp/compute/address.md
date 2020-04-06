@@ -4,6 +4,8 @@ title: "Address"
 block_external_search_index: true
 ---
 
+
+
 Represents an Address resource.
 
 Each virtual machine instance has an ephemeral internal IP address and,
@@ -1844,9 +1846,13 @@ subnetwork's IP range. This field can only be used with INTERNAL type with GCE_E
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

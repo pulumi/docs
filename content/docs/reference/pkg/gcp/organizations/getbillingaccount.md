@@ -4,6 +4,8 @@ title: "GetBillingAccount"
 block_external_search_index: true
 ---
 
+
+
 Use this data source to get information about a Google Billing Account.
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/google_billing_account.html.markdown.

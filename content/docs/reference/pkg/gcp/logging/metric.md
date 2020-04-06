@@ -4,6 +4,8 @@ title: "Metric"
 block_external_search_index: true
 ---
 
+
+
 Logs-based metric can also be used to extract values from logs and create a a distribution
 of the values. The distribution records the statistics of the extracted values along with
 an optional histogram of the values as specified by the bucket options.
@@ -2204,9 +2206,13 @@ to specify a regex that does not include exactly one capture group.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

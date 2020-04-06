@@ -4,6 +4,8 @@ title: "GetRegionInstanceGroup"
 block_external_search_index: true
 ---
 
+
+
 Get a Compute Region Instance Group within GCE.
 For more information, see [the official documentation](https://cloud.google.com/compute/docs/instance-groups/distributing-instances-with-regional-instance-groups) and [API](https://cloud.google.com/compute/docs/reference/latest/regionInstanceGroups).
 

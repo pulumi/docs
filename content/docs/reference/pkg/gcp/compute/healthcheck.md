@@ -4,6 +4,8 @@ title: "HealthCheck"
 block_external_search_index: true
 ---
 
+
+
 Health Checks determine whether instances are responsive and able to do work.
 They are an important part of a comprehensive load balancing configuration,
 as they enable monitoring instances behind load balancers.
@@ -3213,9 +3215,13 @@ have greater value than checkIntervalSec.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

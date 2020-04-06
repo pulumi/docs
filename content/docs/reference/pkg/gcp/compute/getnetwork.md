@@ -4,6 +4,8 @@ title: "GetNetwork"
 block_external_search_index: true
 ---
 
+
+
 Get a network within GCE from its name.
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/datasource_compute_network.html.markdown.

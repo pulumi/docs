@@ -4,6 +4,8 @@ title: "GetOrganization"
 block_external_search_index: true
 ---
 
+
+
 Use this data source to get information about a Google Cloud Organization.
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/google_organization.html.markdown.

@@ -4,6 +4,8 @@ title: "GetNodeTypes"
 block_external_search_index: true
 ---
 
+
+
 Provides available node types for Compute Engine sole-tenant nodes in a zone
 for a given project. For more information, see [the official documentation](https://cloud.google.com/compute/docs/nodes/#types) and [API](https://cloud.google.com/compute/docs/reference/rest/v1/nodeTypes).
 

@@ -4,6 +4,8 @@ title: "GetAccount"
 block_external_search_index: true
 ---
 
+
+
 Get the service account from a project. For more information see
 the official [API](https://cloud.google.com/compute/docs/access/service-accounts) documentation.
 

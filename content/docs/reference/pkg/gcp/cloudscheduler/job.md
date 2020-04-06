@@ -4,6 +4,8 @@ title: "Job"
 block_external_search_index: true
 ---
 
+
+
 A scheduled job that can publish a pubsub message or a http request
 every X interval of time, using crontab format string.
 
@@ -2782,9 +2784,13 @@ tz database.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

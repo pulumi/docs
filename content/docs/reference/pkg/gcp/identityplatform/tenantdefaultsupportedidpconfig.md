@@ -4,6 +4,8 @@ title: "TenantDefaultSupportedIdpConfig"
 block_external_search_index: true
 ---
 
+
+
 Configurations options for the tenant for authenticating with a the standard set of Identity Toolkit-trusted IDPs.
 
 You must enable the
@@ -1096,9 +1098,13 @@ If it is not provided, the provider project is used.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

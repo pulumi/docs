@@ -4,6 +4,8 @@ title: "ProjectDefaultNetworkTier"
 block_external_search_index: true
 ---
 
+
+
 Configures the Google Compute Engine
 [Default Network Tier](https://cloud.google.com/network-tiers/docs/using-network-service-tiers#setting_the_tier_for_all_resources_in_a_project)
 for a project.
@@ -593,9 +595,13 @@ is not provided, the provider project is used.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

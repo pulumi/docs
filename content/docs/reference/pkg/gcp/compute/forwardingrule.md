@@ -4,6 +4,8 @@ title: "ForwardingRule"
 block_external_search_index: true
 ---
 
+
+
 A ForwardingRule resource. A ForwardingRule resource specifies which pool
 of target virtual machines to forward a packet to if it matches the given
 [IPAddress, IPProtocol, portRange] tuple.
@@ -3189,9 +3191,13 @@ rule. The forwarded traffic must be of a type appropriate to the target object.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

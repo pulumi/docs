@@ -4,6 +4,8 @@ title: "JobIAMBinding"
 block_external_search_index: true
 ---
 
+
+
 Three different resources help you manage IAM policies on dataproc jobs. Each of these resources serves a different use case:
 
 * `gcp.dataproc.JobIAMPolicy`: Authoritative. Sets the IAM policy for the job and replaces any existing policy already attached.
@@ -1232,9 +1234,13 @@ is not provided, the provider will use a default.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

@@ -4,6 +4,8 @@ title: "InstanceGroup"
 block_external_search_index: true
 ---
 
+
+
 Creates a group of dissimilar Compute Engine virtual machine instances.
 For more information, see [the official documentation](https://cloud.google.com/compute/docs/instance-groups/#unmanaged_instance_groups)
 and [API](https://cloud.google.com/compute/docs/reference/latest/instanceGroups)
@@ -1466,9 +1468,13 @@ is not provided, the provider project is used.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

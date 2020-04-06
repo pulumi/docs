@@ -4,6 +4,8 @@ title: "GetInstanceGroup"
 block_external_search_index: true
 ---
 
+
+
 Get a Compute Instance Group within GCE.
 For more information, see [the official documentation](https://cloud.google.com/compute/docs/instance-groups/#unmanaged_instance_groups)
 and [API](https://cloud.google.com/compute/docs/reference/latest/instanceGroups)
