@@ -15,6 +15,7 @@ A Pulumi package for creating and managing CloudAMQP resources.
 > distributed under [MIT](https://mit-license.org/). If you encounter a bug or missing feature,
 > first check the [`pulumi/pulumi-cloudamqp` repo](https://github.com/pulumi/pulumi-cloudamqp/issues); however, if that doesn't turn up anything,
 > please consult the source [`cloudamqp/terraform-provider-cloudamqp` repo](https://github.com/cloudamqp/terraform-provider-cloudamqp/issues).
+
 <h3>Resources</h3>
 <ul class="api">
     <li><a href="alarm" title="Alarm"><span class="symbol resource"></span>Alarm</a></li>
