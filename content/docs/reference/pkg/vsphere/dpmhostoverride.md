@@ -21,6 +21,56 @@ connections.
 
 > **NOTE:** vSphere DRS requires a vSphere Enterprise Plus license.
 
+## Example Usage
+
+The following example creates a compute cluster comprised of three hosts,
+making use of the
+[`vsphere..ComputeCluster`][tf-vsphere-compute-cluster-resource] resource. DPM
+will be disabled in the cluster as it is the default setting, but we override
+the setting of the first host referenced by the
+[`vsphere..Host`][tf-vsphere-host-data-source] data source (`esxi1`) by using
+the `vsphere..DpmHostOverride` resource so it will be powered off when the
+cluster does not need it to service virtual machines.
+
+[tf-vsphere-compute-cluster-resource]: /docs/providers/vsphere/r/compute_cluster.html
+[tf-vsphere-host-data-source]: /docs/providers/vsphere/d/host.html
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as vsphere from "@pulumi/vsphere";
+
+const config = new pulumi.Config();
+const datacenter = config.get("datacenter") || "dc1";
+const hosts = config.get("hosts") || [
+    "esxi1",
+    "esxi2",
+    "esxi3",
+];
+
+const dc = pulumi.output(vsphere.getDatacenter({
+    name: datacenter,
+}, { async: true }));
+const hostsHost: pulumi.Output<vsphere.GetHostResult>[] = [];
+for (let i = 0; i < hosts.length; i++) {
+    hostsHost.push(dc.apply(dc => vsphere.getHost({
+        datacenterId: dc.id,
+        name: hosts[i],
+    }, { async: true })));
+}
+const computeCluster = new vsphere.ComputeCluster("compute_cluster", {
+    datacenterId: dc.id,
+    drsAutomationLevel: "fullyAutomated",
+    drsEnabled: true,
+    hostSystemIds: hostsHost.map(v => v.id),
+});
+const dpmHostOverride = new vsphere.DpmHostOverride("dpm_host_override", {
+    computeClusterId: computeCluster.id,
+    dpmAutomationLevel: "automated",
+    dpmEnabled: true,
+    hostSystemId: hostsHost[0].id,
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/dpm_host_override.html.markdown.
 
 

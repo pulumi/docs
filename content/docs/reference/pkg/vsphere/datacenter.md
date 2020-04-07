@@ -9,6 +9,28 @@ block_external_search_index: true
 Provides a VMware vSphere datacenter resource. This can be used as the primary
 container of inventory objects such as hosts and virtual machines.
 
+## Example Usages
+
+**Create datacenter on the root folder:**
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as vsphere from "@pulumi/vsphere";
+
+const prodDatacenter = new vsphere.Datacenter("prod_datacenter", {});
+```
+
+**Create datacenter on a subfolder:**
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as vsphere from "@pulumi/vsphere";
+
+const researchDatacenter = new vsphere.Datacenter("research_datacenter", {
+    folder: "/research/",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/datacenter.html.markdown.
 
 

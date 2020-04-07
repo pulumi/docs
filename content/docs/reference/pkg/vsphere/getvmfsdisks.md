@@ -13,6 +13,26 @@ datastores based off a set of discovered disks.
 
 [data-source-vmfs-datastore]: /docs/providers/vsphere/r/vmfs_datastore.html
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as vsphere from "@pulumi/vsphere";
+
+const datacenter = pulumi.output(vsphere.getDatacenter({
+    name: "dc1",
+}, { async: true }));
+const host = datacenter.apply(datacenter => vsphere.getHost({
+    datacenterId: datacenter.id,
+    name: "esxi1",
+}, { async: true }));
+const available = host.apply(host => vsphere.getVmfsDisks({
+    filter: "mpx.vmhba1:C0:T[12]:L0",
+    hostSystemId: host.id,
+    rescan: true,
+}, { async: true }));
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/vmfs_disks.html.markdown.
 
 

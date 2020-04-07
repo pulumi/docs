@@ -21,6 +21,68 @@ connections.
 
 > **NOTE:** vSphere DRS requires a vSphere Enterprise Plus license.
 
+## Example Usage
+
+The example below creates a virtual machine in a cluster using the
+[`vsphere..VirtualMachine`][tf-vsphere-vm-resource] resource, creating the
+virtual machine in the cluster looked up by the
+[`vsphere..ComputeCluster`][tf-vsphere-cluster-data-source] data source, but also
+pinning the VM to a host defined by the
+[`vsphere..Host`][tf-vsphere-host-data-source] data source, which is assumed to
+be a host within the cluster. To ensure that the VM stays on this host and does
+not need to be migrated back at any point in time, an override is entered using
+the `vsphere..DrsVmOverride` resource that disables DRS for this virtual
+machine, ensuring that it does not move.
+
+[tf-vsphere-vm-resource]: /docs/providers/vsphere/r/virtual_machine.html
+[tf-vsphere-cluster-data-source]: /docs/providers/vsphere/d/compute_cluster.html
+[tf-vsphere-host-data-source]: /docs/providers/vsphere/d/host.html
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as vsphere from "@pulumi/vsphere";
+
+const dc = pulumi.output(vsphere.getDatacenter({
+    name: "dc1",
+}, { async: true }));
+const datastore = dc.apply(dc => vsphere.getDatastore({
+    datacenterId: dc.id,
+    name: "datastore1",
+}, { async: true }));
+const cluster = dc.apply(dc => vsphere.getComputeCluster({
+    datacenterId: dc.id,
+    name: "cluster1",
+}, { async: true }));
+const host = dc.apply(dc => vsphere.getHost({
+    datacenterId: dc.id,
+    name: "esxi1",
+}, { async: true }));
+const network = dc.apply(dc => vsphere.getNetwork({
+    datacenterId: dc.id,
+    name: "network1",
+}, { async: true }));
+const vm = new vsphere.VirtualMachine("vm", {
+    datastoreId: datastore.id,
+    disks: [{
+        label: "disk0",
+        size: 20,
+    }],
+    guestId: "other3xLinux64Guest",
+    hostSystemId: host.id,
+    memory: 2048,
+    networkInterfaces: [{
+        networkId: network.id,
+    }],
+    numCpus: 2,
+    resourcePoolId: cluster.resourcePoolId,
+});
+const drsVmOverride = new vsphere.DrsVmOverride("drs_vm_override", {
+    computeClusterId: cluster.id,
+    drsEnabled: false,
+    virtualMachineId: vm.id,
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/drs_vm_override.html.markdown.
 
 

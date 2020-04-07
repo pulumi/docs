@@ -10,6 +10,17 @@ The `vsphere..Folder` data source can be used to get the general attributes of a
 vSphere inventory folder. Paths are absolute and include must include the
 datacenter.  
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as vsphere from "@pulumi/vsphere";
+
+const folder = pulumi.output(vsphere.getFolder({
+    path: "/dc1/datastore/folder1",
+}, { async: true }));
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/folder.html.markdown.
 
 

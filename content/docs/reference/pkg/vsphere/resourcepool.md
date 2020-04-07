@@ -14,6 +14,32 @@ page][ref-vsphere-resource_pools].
 
 [ref-vsphere-resource_pools]: https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.resmgmt.doc/GUID-60077B40-66FF-4625-934A-641703ED7601.html
 
+## Example Usage
+
+The following example sets up a resource pool in a compute cluster which uses
+the default settings for CPU and memory reservations, shares, and limits. The
+compute cluster needs to already exist in vSphere.  
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as vsphere from "@pulumi/vsphere";
+
+const config = new pulumi.Config();
+const datacenter = config.get("datacenter") || "dc1";
+const cluster = config.get("cluster") || "cluster1";
+
+const dc = pulumi.output(vsphere.getDatacenter({
+    name: datacenter,
+}, { async: true }));
+const computeCluster = dc.apply(dc => vsphere.getComputeCluster({
+    datacenterId: dc.id,
+    name: cluster,
+}, { async: true }));
+const resourcePool = new vsphere.ResourcePool("resource_pool", {
+    parentResourcePoolId: computeCluster.resourcePoolId,
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/resource_pool.html.markdown.
 
 

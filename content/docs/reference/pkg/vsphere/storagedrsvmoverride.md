@@ -17,6 +17,68 @@ page][ref-vsphere-datastore-clusters].
 
 [ref-vsphere-datastore-clusters]: https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.resmgmt.doc/GUID-598DF695-107E-406B-9C95-0AF961FC227A.html
 
+## Example Usage
+
+The example below builds on the [Storage DRS
+example][tf-vsphere-vm-storage-drs-example] in the `vsphere..VirtualMachine`
+resource. However, rather than use the output of the
+[`vsphere..DatastoreCluster` data
+source][tf-vsphere-datastore-cluster-data-source] for the location of the
+virtual machine, we instead get what is assumed to be a member datastore using
+the [`vsphere..getDatastore` data source][tf-vsphere-datastore-data-source] and put
+the virtual machine there instead. We then use the
+`vsphere..StorageDrsVmOverride` resource to ensure that Storage DRS does not
+apply to this virtual machine, and hence the VM will never be migrated off of
+the datastore.
+
+[tf-vsphere-vm-storage-drs-example]: /docs/providers/vsphere/r/virtual_machine.html#using-storage-drs
+[tf-vsphere-datastore-cluster-data-source]: /docs/providers/vsphere/d/datastore_cluster.html
+[tf-vsphere-datastore-data-source]: /docs/providers/vsphere/d/datastore.html
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as vsphere from "@pulumi/vsphere";
+
+const dc = pulumi.output(vsphere.getDatacenter({
+    name: "dc1",
+}, { async: true }));
+const datastoreCluster = dc.apply(dc => vsphere.getDatastoreCluster({
+    datacenterId: dc.id,
+    name: "datastore-cluster1",
+}, { async: true }));
+const memberDatastore = dc.apply(dc => vsphere.getDatastore({
+    datacenterId: dc.id,
+    name: "datastore-cluster1-member1",
+}, { async: true }));
+const pool = dc.apply(dc => vsphere.getResourcePool({
+    datacenterId: dc.id,
+    name: "cluster1/Resources",
+}, { async: true }));
+const network = dc.apply(dc => vsphere.getNetwork({
+    datacenterId: dc.id,
+    name: "public",
+}, { async: true }));
+const vm = new vsphere.VirtualMachine("vm", {
+    datastoreId: memberDatastore.id,
+    disks: [{
+        label: "disk0",
+        size: 20,
+    }],
+    guestId: "other3xLinux64Guest",
+    memory: 1024,
+    networkInterfaces: [{
+        networkId: network.id,
+    }],
+    numCpus: 2,
+    resourcePoolId: pool.id,
+});
+const drsVmOverride = new vsphere.StorageDrsVmOverride("drs_vm_override", {
+    datastoreClusterId: datastoreCluster.id,
+    sdrsEnabled: "false",
+    virtualMachineId: vm.id,
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/storage_drs_vm_override.html.markdown.
 
 

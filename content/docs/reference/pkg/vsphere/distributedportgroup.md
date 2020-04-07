@@ -26,6 +26,116 @@ portgroups, see [this page][ref-vsphere-dvportgroup].
 > **NOTE:** This resource requires vCenter and is not available on direct ESXi
 connections.
 
+## Example Usage
+
+The configuration below builds on the example given in the
+[`vsphere..DistributedVirtualSwitch`][distributed-virtual-switch] resource by
+adding the `vsphere..DistributedPortGroup` resource, attaching itself to the
+DVS created here and assigning VLAN ID 1000.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as vsphere from "@pulumi/vsphere";
+
+const config = new pulumi.Config();
+const esxiHosts = config.get("esxiHosts") || [
+    "esxi1",
+    "esxi2",
+    "esxi3",
+];
+const networkInterfaces = config.get("networkInterfaces") || [
+    "vmnic0",
+    "vmnic1",
+    "vmnic2",
+    "vmnic3",
+];
+
+const dc = pulumi.output(vsphere.getDatacenter({
+    name: "dc1",
+}, { async: true }));
+const host: pulumi.Output<vsphere.GetHostResult>[] = [];
+for (let i = 0; i < esxiHosts.length; i++) {
+    host.push(dc.apply(dc => vsphere.getHost({
+        datacenterId: dc.id,
+        name: esxiHosts[i],
+    }, { async: true })));
+}
+const dvs = new vsphere.DistributedVirtualSwitch("dvs", {
+    activeUplinks: [
+        "uplink1",
+        "uplink2",
+    ],
+    datacenterId: dc.id,
+    hosts: [
+        {
+            devices: networkInterfaces,
+            hostSystemId: host[0].id,
+        },
+        {
+            devices: networkInterfaces,
+            hostSystemId: host[1].id,
+        },
+        {
+            devices: networkInterfaces,
+            hostSystemId: host[2].id,
+        },
+    ],
+    standbyUplinks: [
+        "uplink3",
+        "uplink4",
+    ],
+    uplinks: [
+        "uplink1",
+        "uplink2",
+        "uplink3",
+        "uplink4",
+    ],
+});
+const pg = new vsphere.DistributedPortGroup("pg", {
+    distributedVirtualSwitchUuid: dvs.id,
+    vlanId: 1000,
+});
+```
+
+### Overriding DVS policies
+
+All of the [default port policies][dvs-default-port-policies] available in the
+`vsphere..DistributedVirtualSwitch` resource can be overridden on the port
+group level by specifying new settings for them.
+
+[dvs-default-port-policies]: /docs/providers/vsphere/r/distributed_virtual_switch.html#default-port-group-policy-arguments
+
+As an example, we also take this example from the
+`vsphere..DistributedVirtualSwitch` resource where we manually specify our
+uplink count and uplink order. While the DVS has a default policy of using the
+first uplink as an active uplink and the second one as a standby, the
+overridden port group policy means that both uplinks will be used as active
+uplinks in this specific port group.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as vsphere from "@pulumi/vsphere";
+
+const dvs = new vsphere.DistributedVirtualSwitch("dvs", {
+    activeUplinks: ["tfup1"],
+    datacenterId: vsphere_datacenter_dc.id,
+    standbyUplinks: ["tfup2"],
+    uplinks: [
+        "tfup1",
+        "tfup2",
+    ],
+});
+const pg = new vsphere.DistributedPortGroup("pg", {
+    activeUplinks: [
+        "tfup1",
+        "tfup2",
+    ],
+    distributedVirtualSwitchUuid: dvs.id,
+    standbyUplinks: [],
+    vlanId: 1000,
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/distributed_port_group.html.markdown.
 
 

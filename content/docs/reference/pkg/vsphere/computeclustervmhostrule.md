@@ -30,6 +30,81 @@ connections.
 
 > **NOTE:** vSphere DRS requires a vSphere Enterprise Plus license.
 
+## Example Usage
+
+The example below creates a virtual machine in a cluster using the
+[`vsphere..VirtualMachine`][tf-vsphere-vm-resource] resource in a cluster
+looked up by the [`vsphere..ComputeCluster`][tf-vsphere-cluster-data-source]
+data source. It then creates a group with this virtual machine. It also creates
+a host group off of the host looked up via the
+[`vsphere..Host`][tf-vsphere-host-data-source] data source. Finally, this
+virtual machine is configured to run specifically on that host via a
+`vsphere..ComputeClusterVmHostRule` resource.
+
+[tf-vsphere-vm-resource]: /docs/providers/vsphere/r/virtual_machine.html
+[tf-vsphere-host-data-source]: /docs/providers/vsphere/d/host.html
+
+> Note how `vm_group_name` and
+`affinity_host_group_name` are sourced off of the
+`name` attributes from the
+[`vsphere..ComputeClusterVmGroup`][tf-vsphere-cluster-vm-group-resource] and
+[`vsphere..ComputeClusterHostGroup`][tf-vsphere-cluster-host-group-resource]
+resources. This is to ensure that the rule is not created before the groups
+exist, which may not possibly happen in the event that the names came from a
+"static" source such as a variable.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as vsphere from "@pulumi/vsphere";
+
+const dc = pulumi.output(vsphere.getDatacenter({
+    name: "dc1",
+}, { async: true }));
+const datastore = dc.apply(dc => vsphere.getDatastore({
+    datacenterId: dc.id,
+    name: "datastore1",
+}, { async: true }));
+const cluster = dc.apply(dc => vsphere.getComputeCluster({
+    datacenterId: dc.id,
+    name: "cluster1",
+}, { async: true }));
+const host = dc.apply(dc => vsphere.getHost({
+    datacenterId: dc.id,
+    name: "esxi1",
+}, { async: true }));
+const network = dc.apply(dc => vsphere.getNetwork({
+    datacenterId: dc.id,
+    name: "network1",
+}, { async: true }));
+const vm = new vsphere.VirtualMachine("vm", {
+    datastoreId: datastore.id,
+    disks: [{
+        label: "disk0",
+        size: 20,
+    }],
+    guestId: "other3xLinux64Guest",
+    memory: 2048,
+    networkInterfaces: [{
+        networkId: network.id,
+    }],
+    numCpus: 2,
+    resourcePoolId: cluster.resourcePoolId,
+});
+const clusterVmGroup = new vsphere.ComputeClusterVmGroup("cluster_vm_group", {
+    computeClusterId: cluster.id,
+    virtualMachineIds: [vm.id],
+});
+const clusterHostGroup = new vsphere.ComputeClusterHostGroup("cluster_host_group", {
+    computeClusterId: cluster.id,
+    hostSystemIds: [host.id],
+});
+const clusterVmHostRule = new vsphere.ComputeClusterVmHostRule("cluster_vm_host_rule", {
+    affinityHostGroupName: clusterHostGroup.name,
+    computeClusterId: cluster.id,
+    vmGroupName: clusterVmGroup.name,
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster_vm_host_rule.html.markdown.
 
 

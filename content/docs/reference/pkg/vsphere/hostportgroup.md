@@ -16,6 +16,72 @@ For an overview on vSphere networking concepts, see [this page][ref-vsphere-net-
 [host-virtual-switch]: /docs/providers/vsphere/r/host_virtual_switch.html
 [ref-vsphere-net-concepts]: https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.networking.doc/GUID-2B11DBB8-CB3C-4AFF-8885-EFEA0FC562F4.html
 
+## Example Usages
+
+**Create a virtual switch and bind a port group to it:**
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as vsphere from "@pulumi/vsphere";
+
+const datacenter = pulumi.output(vsphere.getDatacenter({
+    name: "dc1",
+}, { async: true }));
+const esxiHost = datacenter.apply(datacenter => vsphere.getHost({
+    datacenterId: datacenter.id,
+    name: "esxi1",
+}, { async: true }));
+const switchHostVirtualSwitch = new vsphere.HostVirtualSwitch("switch", {
+    activeNics: ["vmnic0"],
+    hostSystemId: esxiHost.id,
+    networkAdapters: [
+        "vmnic0",
+        "vmnic1",
+    ],
+    standbyNics: ["vmnic1"],
+});
+const pg = new vsphere.HostPortGroup("pg", {
+    hostSystemId: esxiHost.id,
+    virtualSwitchName: switchHostVirtualSwitch.name,
+});
+```
+
+**Create a port group with VLAN set and some overrides:**
+
+This example sets the trunk mode VLAN (`4095`, which passes through all tags)
+and sets
+[`allow_promiscuous`](https://www.terraform.io/docs/providers/vsphere/r/host_virtual_switch.html#allow_promiscuous)
+to ensure that all traffic is seen on the port. The latter setting overrides
+the implicit default of `false` set on the virtual switch.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as vsphere from "@pulumi/vsphere";
+
+const datacenter = pulumi.output(vsphere.getDatacenter({
+    name: "dc1",
+}, { async: true }));
+const esxiHost = datacenter.apply(datacenter => vsphere.getHost({
+    datacenterId: datacenter.id,
+    name: "esxi1",
+}, { async: true }));
+const switchHostVirtualSwitch = new vsphere.HostVirtualSwitch("switch", {
+    activeNics: ["vmnic0"],
+    hostSystemId: esxiHost.id,
+    networkAdapters: [
+        "vmnic0",
+        "vmnic1",
+    ],
+    standbyNics: ["vmnic1"],
+});
+const pg = new vsphere.HostPortGroup("pg", {
+    allowPromiscuous: true,
+    hostSystemId: esxiHost.id,
+    virtualSwitchName: switchHostVirtualSwitch.name,
+    vlanId: 4095,
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/host_port_group.html.markdown.
 
 

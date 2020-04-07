@@ -13,6 +13,17 @@ data source.
 
 [data-source-vsphere-host]: /docs/providers/vsphere/d/host.html
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as vsphere from "@pulumi/vsphere";
+
+const datacenter = pulumi.output(vsphere.getDatacenter({
+    name: "dc1",
+}, { async: true }));
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/datacenter.html.markdown.
 
 

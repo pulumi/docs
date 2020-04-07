@@ -6,18 +6,6 @@ block_external_search_index: true
 
 
 
-The `vsphere..DistributedVirtualSwitch` data source can be used to discover
-the ID and uplink data of a of a vSphere distributed virtual switch (DVS). This
-can then be used with resources or data sources that require a DVS, such as the
-[`vsphere..DistributedPortGroup`][distributed-port-group] resource, for which
-an example is shown below.
-
-[distributed-port-group]: /docs/providers/vsphere/r/distributed_port_group.html
-
-> **NOTE:** This data source requires vCenter and is not available on direct
-ESXi connections.
-
-> This content is derived from https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/distributed_virtual_switch.html.markdown.
 
 
 

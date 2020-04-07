@@ -14,6 +14,80 @@ page][ref-vsphere-vapp].
 
 [ref-vsphere-vapp]: https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.vm_admin.doc/GUID-2A95EBB8-1779-40FA-B4FB-4D0845750879.html
 
+## Example Usage
+
+The basic example below sets up a vApp container in a compute cluster which uses
+the default settings for CPU and memory reservations, shares, and limits. The
+compute cluster needs to already exist in vSphere.  
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as vsphere from "@pulumi/vsphere";
+
+const config = new pulumi.Config();
+const datacenter = config.get("datacenter") || "dc1";
+const cluster = config.get("cluster") || "cluster1";
+
+const dc = pulumi.output(vsphere.getDatacenter({
+    name: datacenter,
+}, { async: true }));
+const computeCluster = dc.apply(dc => vsphere.getComputeCluster({
+    datacenterId: dc.id,
+    name: cluster,
+}, { async: true }));
+const vappContainer = new vsphere.VappContainer("vapp_container", {
+    parentResourcePoolId: computeCluster.id,
+});
+```
+
+### Example with virtual machine
+
+The below example builds off the basic example, but includes a virtual machine
+in the new vApp container. To accomplish this, the `resource_pool_id` of the
+virtual machine is set to the `id` of the vApp container.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as vsphere from "@pulumi/vsphere";
+
+const config = new pulumi.Config();
+const datacenter = config.get("datacenter") || "dc1";
+const cluster = config.get("cluster") || "cluster1";
+
+const dc = pulumi.output(vsphere.getDatacenter({
+    name: datacenter,
+}, { async: true }));
+const computeCluster = dc.apply(dc => vsphere.getComputeCluster({
+    datacenterId: dc.id,
+    name: cluster,
+}, { async: true }));
+const network = dc.apply(dc => vsphere.getNetwork({
+    datacenterId: dc.id,
+    name: "network1",
+}, { async: true }));
+const datastore = dc.apply(dc => vsphere.getDatastore({
+    datacenterId: dc.id,
+    name: "datastore1",
+}, { async: true }));
+const vappContainer = new vsphere.VappContainer("vapp_container", {
+    parentResourcePoolId: computeCluster.id,
+});
+const vm = new vsphere.VirtualMachine("vm", {
+    datastoreId: datastore.id,
+    disks: [{
+        label: "disk0",
+        size: 1,
+    }],
+    guestId: "ubuntu64Guest",
+    memory: 1024,
+    networkInterfaces: [{
+        networkId: network.id,
+    }],
+    numCpus: 2,
+    resourcePoolId: vappContainer.id,
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/vapp_container.html.markdown.
 
 

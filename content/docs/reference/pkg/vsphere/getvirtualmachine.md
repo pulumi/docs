@@ -14,6 +14,21 @@ reads the guest ID so that can be supplied as well.
 
 [docs-virtual-machine-resource]: /docs/providers/vsphere/r/virtual_machine.html
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as vsphere from "@pulumi/vsphere";
+
+const datacenter = pulumi.output(vsphere.getDatacenter({
+    name: "dc1",
+}, { async: true }));
+const template = datacenter.apply(datacenter => vsphere.getVirtualMachine({
+    datacenterId: datacenter.id,
+    name: "test-vm-template",
+}, { async: true }));
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/virtual_machine.html.markdown.
 
 

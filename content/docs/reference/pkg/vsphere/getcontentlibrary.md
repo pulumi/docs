@@ -11,6 +11,17 @@ The `vsphere..ContentLibrary` data source can be used to discover the ID of a Co
 > **NOTE:** This resource requires vCenter and is not available on direct ESXi
 connections.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as vsphere from "@pulumi/vsphere";
+
+const library = pulumi.output(vsphere.getContentLibrary({
+    name: "Content Library Test",
+}, { async: true }));
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/content_library.html.markdown.
 
 

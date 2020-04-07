@@ -33,6 +33,59 @@ connections.
 
 > **NOTE:** vSphere DRS requires a vSphere Enterprise Plus license.
 
+## Example Usage
+
+The example below creates two virtual machines in a cluster using the
+[`vsphere..VirtualMachine`][tf-vsphere-vm-resource] resource, creating the
+virtual machines in the cluster looked up by the
+[`vsphere..ComputeCluster`][tf-vsphere-cluster-data-source] data source. It
+then creates an affinity rule for these two virtual machines, ensuring they
+will run on the same host whenever possible.
+
+[tf-vsphere-vm-resource]: /docs/providers/vsphere/r/virtual_machine.html
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as vsphere from "@pulumi/vsphere";
+
+const dc = pulumi.output(vsphere.getDatacenter({
+    name: "dc1",
+}, { async: true }));
+const datastore = dc.apply(dc => vsphere.getDatastore({
+    datacenterId: dc.id,
+    name: "datastore1",
+}, { async: true }));
+const cluster = dc.apply(dc => vsphere.getComputeCluster({
+    datacenterId: dc.id,
+    name: "cluster1",
+}, { async: true }));
+const network = dc.apply(dc => vsphere.getNetwork({
+    datacenterId: dc.id,
+    name: "network1",
+}, { async: true }));
+const vm: vsphere.VirtualMachine[] = [];
+for (let i = 0; i < 2; i++) {
+    vm.push(new vsphere.VirtualMachine(`vm-${i}`, {
+        datastoreId: datastore.id,
+        disks: [{
+            label: "disk0",
+            size: 20,
+        }],
+        guestId: "other3xLinux64Guest",
+        memory: 2048,
+        networkInterfaces: [{
+            networkId: network.id,
+        }],
+        numCpus: 2,
+        resourcePoolId: cluster.resourcePoolId,
+    }));
+}
+const clusterVmAffinityRule = new vsphere.ComputeClusterVmAffinityRule("cluster_vm_affinity_rule", {
+    computeClusterId: cluster.id,
+    virtualMachineIds: vm.map(v => v.id),
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster_vm_affinity_rule.html.markdown.
 
 

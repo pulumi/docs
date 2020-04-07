@@ -6,18 +6,6 @@ block_external_search_index: true
 
 
 
-The `vsphere..Tag` resource can be used to create and manage tags, which allow
-you to attach metadata to objects in the vSphere inventory to make these
-objects more sortable and searchable.
-
-For more information about tags, click [here][ext-tags-general].
-
-[ext-tags-general]: https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.vcenterhost.doc/GUID-E8E854DD-AA97-4E0C-8419-CE84F93C4058.html
-
-> **NOTE:** Tagging support is unsupported on direct ESXi connections and
-requires vCenter 6.0 or higher.
-
-> This content is derived from https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/tag.html.markdown.
 
 
 

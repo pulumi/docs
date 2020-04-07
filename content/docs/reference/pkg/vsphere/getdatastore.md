@@ -13,6 +13,21 @@ want to use to create virtual machines in using the
 
 [docs-virtual-machine-resource]: /docs/providers/vsphere/r/virtual_machine.html
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as vsphere from "@pulumi/vsphere";
+
+const datacenter = pulumi.output(vsphere.getDatacenter({
+    name: "dc1",
+}, { async: true }));
+const datastore = datacenter.apply(datacenter => vsphere.getDatastore({
+    datacenterId: datacenter.id,
+    name: "datastore1",
+}, { async: true }));
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/datastore.html.markdown.
 
 

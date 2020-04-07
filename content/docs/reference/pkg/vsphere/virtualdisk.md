@@ -14,6 +14,21 @@ block with the [`attach`][docs-vsphere-virtual-machine-disk-attach] parameter.
 [docs-vsphere-virtual-machine]: /docs/providers/vsphere/r/virtual_machine.html
 [docs-vsphere-virtual-machine-disk-attach]: /docs/providers/vsphere/r/virtual_machine.html#attach
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as vsphere from "@pulumi/vsphere";
+
+const myDisk = new vsphere.VirtualDisk("myDisk", {
+    datacenter: "Datacenter",
+    datastore: "local",
+    size: 2,
+    type: "thin",
+    vmdkPath: "myDisk.vmdk",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/virtual_disk.html.markdown.
 
 

@@ -25,6 +25,84 @@ resource.
 > **NOTE:** This resource requires vCenter and is not available on direct ESXi
 connections.
 
+## Example Usage
+
+The example below creates two virtual machine in a cluster using the
+[`vsphere..VirtualMachine`][tf-vsphere-vm-resource] resource in a cluster
+looked up by the [`vsphere..ComputeCluster`][tf-vsphere-cluster-data-source]
+data source. It then creates a group with this virtual machine. Two groups are created, each with one of the created VMs. Finally, a rule is created to ensure that `vm1` starts before `vm2`.
+
+[tf-vsphere-vm-resource]: /docs/providers/vsphere/r/virtual_machine.html
+
+> Note how `dependency_vm_group_name` and
+`vm_group_name` are sourced off of the `name` attributes from
+the [`vsphere..ComputeClusterVmGroup`][tf-vsphere-cluster-vm-group-resource]
+resource. This is to ensure that the rule is not created before the groups
+exist, which may not possibly happen in the event that the names came from a
+"static" source such as a variable.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as vsphere from "@pulumi/vsphere";
+
+const dc = pulumi.output(vsphere.getDatacenter({
+    name: "dc1",
+}, { async: true }));
+const datastore = dc.apply(dc => vsphere.getDatastore({
+    datacenterId: dc.id,
+    name: "datastore1",
+}, { async: true }));
+const cluster = dc.apply(dc => vsphere.getComputeCluster({
+    datacenterId: dc.id,
+    name: "cluster1",
+}, { async: true }));
+const network = dc.apply(dc => vsphere.getNetwork({
+    datacenterId: dc.id,
+    name: "network1",
+}, { async: true }));
+const vm1 = new vsphere.VirtualMachine("vm1", {
+    datastoreId: datastore.id,
+    disks: [{
+        label: "disk0",
+        size: 20,
+    }],
+    guestId: "other3xLinux64Guest",
+    memory: 2048,
+    networkInterfaces: [{
+        networkId: network.id,
+    }],
+    numCpus: 2,
+    resourcePoolId: cluster.resourcePoolId,
+});
+const vm2 = new vsphere.VirtualMachine("vm2", {
+    datastoreId: datastore.id,
+    disks: [{
+        label: "disk0",
+        size: 20,
+    }],
+    guestId: "other3xLinux64Guest",
+    memory: 2048,
+    networkInterfaces: [{
+        networkId: network.id,
+    }],
+    numCpus: 2,
+    resourcePoolId: cluster.resourcePoolId,
+});
+const clusterVmGroup1 = new vsphere.ComputeClusterVmGroup("cluster_vm_group1", {
+    computeClusterId: cluster.id,
+    virtualMachineIds: [vm1.id],
+});
+const clusterVmGroup2 = new vsphere.ComputeClusterVmGroup("cluster_vm_group2", {
+    computeClusterId: cluster.id,
+    virtualMachineIds: [vm2.id],
+});
+const clusterVmDependencyRule = new vsphere.ComputeClusterVmDependencyRule("cluster_vm_dependency_rule", {
+    computeClusterId: cluster.id,
+    dependencyVmGroupName: clusterVmGroup1.name,
+    vmGroupName: clusterVmGroup2.name,
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster_vm_dependency_rule.html.markdown.
 
 

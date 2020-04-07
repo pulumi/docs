@@ -13,6 +13,17 @@ require a storage policy.
 > **NOTE:** Storage policy support is unsupported on direct ESXi connections and
 requires vCenter 6.0 or higher.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as vsphere from "@pulumi/vsphere";
+
+const policy = pulumi.output(vsphere.getPolicy({
+    name: "policy1",
+}, { async: true }));
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/storage_policy.html.markdown.
 
 

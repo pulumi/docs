@@ -26,6 +26,51 @@ connections.
 
 > **NOTE:** vSphere DRS requires a vSphere Enterprise Plus license.
 
+## Example Usage
+
+The example below is the exact same configuration as the
+[example][tf-vsphere-cluster-resource-example] in the
+[`vsphere..ComputeCluster`][tf-vsphere-cluster-resource] resource, but in
+addition, it creates a host group with the same hosts that get put into the
+cluster.
+
+[tf-vsphere-cluster-resource-example]: /docs/providers/vsphere/r/compute_cluster.html#example-usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as vsphere from "@pulumi/vsphere";
+
+const config = new pulumi.Config();
+const datacenter = config.get("datacenter") || "dc1";
+const hosts = config.get("hosts") || [
+    "esxi1",
+    "esxi2",
+    "esxi3",
+];
+
+const dc = pulumi.output(vsphere.getDatacenter({
+    name: datacenter,
+}, { async: true }));
+const hostsHost: pulumi.Output<vsphere.GetHostResult>[] = [];
+for (let i = 0; i < hosts.length; i++) {
+    hostsHost.push(dc.apply(dc => vsphere.getHost({
+        datacenterId: dc.id,
+        name: hosts[i],
+    }, { async: true })));
+}
+const computeCluster = new vsphere.ComputeCluster("compute_cluster", {
+    datacenterId: dc.id,
+    drsAutomationLevel: "fullyAutomated",
+    drsEnabled: true,
+    haEnabled: true,
+    hostSystemIds: hostsHost.map(v => v.id),
+});
+const clusterHostGroup = new vsphere.ComputeClusterHostGroup("cluster_host_group", {
+    computeClusterId: computeCluster.id,
+    hostSystemIds: hostsHost.map(v => v.id),
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster_host_group.html.markdown.
 
 

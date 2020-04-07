@@ -19,6 +19,66 @@ For more information on vSphere HA, see [this page][ref-vsphere-ha-clusters].
 > **NOTE:** This resource requires vCenter and is not available on direct ESXi
 connections.
 
+## Example Usage
+
+The example below creates a virtual machine in a cluster using the
+[`vsphere..VirtualMachine`][tf-vsphere-vm-resource] resource, creating the
+virtual machine in the cluster looked up by the
+[`vsphere..ComputeCluster`][tf-vsphere-cluster-data-source] data source.
+
+Considering a scenario where this virtual machine is of high value to the
+application or organization for which it does its work, it's been determined in
+the event of a host failure, that this should be one of the first virtual
+machines to be started by vSphere HA during recovery. Hence, its
+`ha_vm_restart_priority` as been set to `highest`,
+which, assuming that the default restart priority is `medium` and no other
+virtual machine has been assigned the `highest` priority, will mean that this
+VM will be started before any other virtual machine in the event of host
+failure.
+
+[tf-vsphere-vm-resource]: /docs/providers/vsphere/r/virtual_machine.html
+[tf-vsphere-cluster-data-source]: /docs/providers/vsphere/d/compute_cluster.html
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as vsphere from "@pulumi/vsphere";
+
+const dc = pulumi.output(vsphere.getDatacenter({
+    name: "dc1",
+}, { async: true }));
+const datastore = dc.apply(dc => vsphere.getDatastore({
+    datacenterId: dc.id,
+    name: "datastore1",
+}, { async: true }));
+const cluster = dc.apply(dc => vsphere.getComputeCluster({
+    datacenterId: dc.id,
+    name: "cluster1",
+}, { async: true }));
+const network = dc.apply(dc => vsphere.getNetwork({
+    datacenterId: dc.id,
+    name: "network1",
+}, { async: true }));
+const vm = new vsphere.VirtualMachine("vm", {
+    datastoreId: datastore.id,
+    disks: [{
+        label: "disk0",
+        size: 20,
+    }],
+    guestId: "other3xLinux64Guest",
+    memory: 2048,
+    networkInterfaces: [{
+        networkId: network.id,
+    }],
+    numCpus: 2,
+    resourcePoolId: cluster.resourcePoolId,
+});
+const haVmOverride = new vsphere.HaVmOverride("ha_vm_override", {
+    computeClusterId: cluster.id,
+    haVmRestartPriority: "highest",
+    virtualMachineId: vm.id,
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/ha_vm_override.html.markdown.
 
 
