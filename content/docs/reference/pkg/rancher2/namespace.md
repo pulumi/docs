@@ -8,6 +8,65 @@ block_external_search_index: true
 
 Provides a Rancher v2 Namespace resource. This can be used to create namespaces for Rancher v2 environments and retrieve their information.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as rancher2 from "@pulumi/rancher2";
+
+// Create a new rancher2 Namespace
+const foo = new rancher2.Namespace("foo", {
+    containerResourceLimit: {
+        limitsCpu: "20m",
+        limitsMemory: "20Mi",
+        requestsCpu: "1m",
+        requestsMemory: "1Mi",
+    },
+    description: "foo namespace",
+    projectId: "<PROJECT_ID>",
+    resourceQuota: {
+        limit: {
+            limitsCpu: "100m",
+            limitsMemory: "100Mi",
+            requestsStorage: "1Gi",
+        },
+    },
+});
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as rancher2 from "@pulumi/rancher2";
+
+// Create a new rancher2 Cluster 
+const foo_custom = new rancher2.Cluster("foo-custom", {
+    description: "Foo rancher2 custom cluster",
+    rkeConfig: {
+        network: {
+            plugin: "canal",
+        },
+    },
+});
+// Create a new rancher2 Namespace assigned to default cluster project
+const foo = new rancher2.Namespace("foo", {
+    containerResourceLimit: {
+        limitsCpu: "20m",
+        limitsMemory: "20Mi",
+        requestsCpu: "1m",
+        requestsMemory: "1Mi",
+    },
+    description: "foo namespace",
+    projectId: foo_custom.defaultProjectId,
+    resourceQuota: {
+        limit: {
+            limitsCpu: "100m",
+            limitsMemory: "100Mi",
+            requestsStorage: "1Gi",
+        },
+    },
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/namespace.html.markdown.
 
 

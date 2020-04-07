@@ -8,6 +8,24 @@ block_external_search_index: true
 
 Provides a Rancher v2 Global Role Binding resource. This can be used to create Global Role Bindings for Rancher v2 environments and retrieve their information.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as rancher2 from "@pulumi/rancher2";
+
+// Create a new rancher2 Global Role Binding using user_id
+const foo = new rancher2.GlobalRoleBinding("foo", {
+    globalRoleId: "admin",
+    userId: "user-XXXXX",
+});
+// Create a new rancher2 Global Role Binding using group_principal_id
+const foo2 = new rancher2.GlobalRoleBinding("foo2", {
+    globalRoleId: "admin",
+    groupPrincipalId: "local://g-XXXXX",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/globalRole.html.markdown.
 
 

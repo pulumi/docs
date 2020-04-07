@@ -8,6 +8,17 @@ block_external_search_index: true
 
 Use this data source to retrieve information about a Rancher v2 cluster.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as rancher2 from "@pulumi/rancher2";
+
+const foo_custom = pulumi.output(rancher2.getCluster({
+    name: "foo-custom",
+}, { async: true }));
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/cluster.html.markdown.
 
 

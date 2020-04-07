@@ -8,6 +8,18 @@ block_external_search_index: true
 
 Use this data source to retrieve information about a Rancher v2 Node Pool resource.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as rancher2 from "@pulumi/rancher2";
+
+const foo = rancher2_cluster_foo_custom.id.apply(id => rancher2.getNodePool({
+    clusterId: id,
+    name: "foo",
+}, { async: true }));
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/nodePool.html.markdown.
 
 

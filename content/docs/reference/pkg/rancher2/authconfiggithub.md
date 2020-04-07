@@ -10,6 +10,19 @@ Provides a Rancher v2 Auth Config Github resource. This can be used to configure
 
 In addition to the built-in local auth, only one external auth config provider can be enabled at a time. 
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as rancher2 from "@pulumi/rancher2";
+
+// Create a new rancher2 Auth Config Github
+const github = new rancher2.AuthConfigGithub("github", {
+    clientId: "<GITHUB_CLIENT_ID>",
+    clientSecret: "<GITHUB_CLIENT_SECRET>",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/authConfigGithub.html.markdown.
 
 

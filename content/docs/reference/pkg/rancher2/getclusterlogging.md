@@ -8,6 +8,17 @@ block_external_search_index: true
 
 Use this data source to retrieve information about a Rancher v2 Cluster Logging.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as rancher2 from "@pulumi/rancher2";
+
+const foo = pulumi.output(rancher2.getClusterLogging({
+    clusterId: "<cluster_id>",
+}, { async: true }));
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/clusterLogging.html.markdown.
 
 

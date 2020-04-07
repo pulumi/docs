@@ -8,6 +8,25 @@ block_external_search_index: true
 
 Provides a Rancher v2 Cluster Driver resource. This can be used to create Cluster Driver for Rancher v2.2.x Kontainer Engine clusters and retrieve their information.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as rancher2 from "@pulumi/rancher2";
+
+// Create a new Rancher2 Cluster Driver
+const foo = new rancher2.ClusterDriver("foo", {
+    active: true,
+    builtin: false,
+    checksum: "0x0",
+    description: "Foo description",
+    externalId: "foo_external",
+    uiUrl: "local://ui",
+    url: "local://",
+    whitelistDomains: ["*.foo.com"],
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/clusterDriver.html.markdown.
 
 

@@ -8,6 +8,25 @@ block_external_search_index: true
 
 Provides a Rancher v2 Cluster Logging resource. This can be used to configure Cluster Logging for Rancher v2 environments and retrieve their information.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as rancher2 from "@pulumi/rancher2";
+
+// Create a new Rancher2 Cluster Logging
+const foo = new rancher2.ClusterLogging("foo", {
+    clusterId: "<cluster_id>",
+    kind: "syslog",
+    syslogConfig: {
+        endpoint: "<syslog_endpoint>",
+        protocol: "udp",
+        severity: "notice",
+        sslVerify: false,
+    },
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/clusterLogging.html.markdown.
 
 

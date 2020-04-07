@@ -14,6 +14,20 @@ There are 2 kind of tokens:
 
 Tokens can't be updated once created. Any diff in token data will recreate the token. If any token expire, Rancher2 provider will generate a diff to regenerate it.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as rancher2 from "@pulumi/rancher2";
+
+// Create a new rancher2 Token scoped
+const foo = new rancher2.Token("foo", {
+    clusterId: "<cluster-id>",
+    description: "foo token",
+    ttl: 1200,
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/token.html.markdown.
 
 

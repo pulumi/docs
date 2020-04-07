@@ -6,9 +6,6 @@ block_external_search_index: true
 
 
 
-Provides a Rancher v2 Node Pool resource. This can be used to create Node Pool, using Node template for Rancher v2 RKE clusters and retrieve their information.
-
-> This content is derived from https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/nodePool.html.markdown.
 
 
 

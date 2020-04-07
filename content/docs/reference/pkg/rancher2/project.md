@@ -8,6 +8,87 @@ block_external_search_index: true
 
 Provides a Rancher v2 Project resource. This can be used to create projects for Rancher v2 environments and retrieve their information.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as rancher2 from "@pulumi/rancher2";
+
+// Create a new rancher2 Project
+const foo = new rancher2.Project("foo", {
+    clusterId: "<CLUSTER_ID>",
+    containerResourceLimit: {
+        limitsCpu: "20m",
+        limitsMemory: "20Mi",
+        requestsCpu: "1m",
+        requestsMemory: "1Mi",
+    },
+    resourceQuota: {
+        namespaceDefaultLimit: {
+            limitsCpu: "2000m",
+            limitsMemory: "500Mi",
+            requestsStorage: "1Gi",
+        },
+        projectLimit: {
+            limitsCpu: "2000m",
+            limitsMemory: "2000Mi",
+            requestsStorage: "2Gi",
+        },
+    },
+});
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as rancher2 from "@pulumi/rancher2";
+
+// Create a new rancher2 Project enabling and customizing monitoring
+const foo = new rancher2.Project("foo", {
+    clusterId: "<CLUSTER_ID>",
+    containerResourceLimit: {
+        limitsCpu: "20m",
+        limitsMemory: "20Mi",
+        requestsCpu: "1m",
+        requestsMemory: "1Mi",
+    },
+    enableProjectMonitoring: true,
+    projectMonitoringInput: {
+        answers: {
+            "exporter-kubelets.https": true,
+            "exporter-node.enabled": true,
+            "exporter-node.ports.metrics.port": 9796,
+            "exporter-node.resources.limits.cpu": "200m",
+            "exporter-node.resources.limits.memory": "200Mi",
+            "grafana.persistence.enabled": false,
+            "grafana.persistence.size": "10Gi",
+            "grafana.persistence.storageClass": "default",
+            "operator.resources.limits.memory": "500Mi",
+            "prometheus.persistence.enabled": "false",
+            "prometheus.persistence.size": "50Gi",
+            "prometheus.persistence.storageClass": "default",
+            "prometheus.persistent.useReleaseName": "true",
+            "prometheus.resources.core.limits.cpu": "1000m",
+            "prometheus.resources.core.limits.memory": "1500Mi",
+            "prometheus.resources.core.requests.cpu": "750m",
+            "prometheus.resources.core.requests.memory": "750Mi",
+            "prometheus.retention": "12h",
+        },
+    },
+    resourceQuota: {
+        namespaceDefaultLimit: {
+            limitsCpu: "2000m",
+            limitsMemory: "500Mi",
+            requestsStorage: "1Gi",
+        },
+        projectLimit: {
+            limitsCpu: "2000m",
+            limitsMemory: "2000Mi",
+            requestsStorage: "2Gi",
+        },
+    },
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/project.html.markdown.
 
 

@@ -12,6 +12,18 @@ On create, if setting already exists, provider will import it and update its val
 
 On destroy, if setting is a system setting like `server-url`, provider'll not delete it from Rancher, it'll just update setting value to default and remove it from tfstate. 
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as rancher2 from "@pulumi/rancher2";
+
+// Create a new rancher2 Setting
+const foo = new rancher2.Setting("foo", {
+    value: "<VALUE>",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/setting.html.markdown.
 
 

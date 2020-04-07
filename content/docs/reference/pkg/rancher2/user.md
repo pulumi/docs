@@ -10,6 +10,25 @@ Provides a Rancher v2 User resource. This can be used to create Users for Ranche
 
 When a Rancher User is created, it doesn't have a global role binding. At least, `user-base` global role binding in needed in order to enable user login.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as rancher2 from "@pulumi/rancher2";
+
+// Create a new rancher2 User
+const fooUser = new rancher2.User("foo", {
+    enabled: true,
+    password: "changeme",
+    username: "foo",
+});
+// Create a new rancher2 global_role_binding for User
+const fooGlobalRoleBinding = new rancher2.GlobalRoleBinding("foo", {
+    globalRoleId: "user-base",
+    userId: fooUser.id,
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/user.html.markdown.
 
 

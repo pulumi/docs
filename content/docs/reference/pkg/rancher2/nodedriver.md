@@ -8,6 +8,25 @@ block_external_search_index: true
 
 Provides a Rancher v2 Node Driver resource. This can be used to create Node Driver for Rancher v2 RKE clusters and retrieve their information.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as rancher2 from "@pulumi/rancher2";
+
+// Create a new rancher2 Node Driver
+const foo = new rancher2.NodeDriver("foo", {
+    active: true,
+    builtin: false,
+    checksum: "0x0",
+    description: "Foo description",
+    externalId: "foo_external",
+    uiUrl: "local://ui",
+    url: "local://",
+    whitelistDomains: ["*.foo.com"],
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/nodeDriver.html.markdown.
 
 

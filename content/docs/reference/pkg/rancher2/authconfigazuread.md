@@ -10,6 +10,24 @@ Provides a Rancher v2 Auth Config AzureAD resource. This can be used to configur
 
 In addition to the built-in local auth, only one external auth config provider can be enabled at a time.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as rancher2 from "@pulumi/rancher2";
+
+// Create a new rancher2 Auth Config AzureAD
+const azuread = new rancher2.AuthConfigAzureAd("azuread", {
+    applicationId: "<AZUREAD_APP_ID>",
+    applicationSecret: "<AZUREAD_APP_SECRET>",
+    authEndpoint: "<AZUREAD_AUTH_ENDPOINT>",
+    graphEndpoint: "<AZUREAD_GRAPH_ENDPOINT>",
+    rancherUrl: "<RANCHER_URL>",
+    tenantId: "<AZUREAD_TENANT_ID>",
+    tokenEndpoint: "<AZUREAD_TOKEN_ENDPOINT>",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/authConfigAzureAD.html.markdown.
 
 
