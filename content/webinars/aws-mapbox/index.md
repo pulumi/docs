@@ -13,7 +13,7 @@ pre_recorded: true
 pulumi_tv: false
 
 # The preview image will be shown on the list page.
-preview_image: "/images/webinar/pulumi_tech_talk.png"
+preview_image: "/images/webinar/pulumi_tech_talk.jpg"
 
 # Webinars with unlisted as true will not be shown on the webinar list
 unlisted: false
