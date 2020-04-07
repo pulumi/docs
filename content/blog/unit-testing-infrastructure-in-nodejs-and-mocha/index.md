@@ -9,7 +9,7 @@ meta_image: "meta.png"
 
 {{% notes type="warning" %}}
     Some parts of this blog post are out-of-date. Please refer to our
-    <a href="{{< relref "/docs/guides/testing" >}}">Testing Guide</a> for updated overview and tutorials.
+    <a href="{{< relref "/docs/guides/testing" >}}">Testing Guide</a> for the updated overview and tutorials.
 {{% /notes %}}
 
 Testing your infrastructure using familiar tools like Node.js's Mocha
