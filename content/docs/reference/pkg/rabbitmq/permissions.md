@@ -9,6 +9,28 @@ block_external_search_index: true
 The ``rabbitmq..Permissions`` resource creates and manages a user's set of
 permissions.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as rabbitmq from "@pulumi/rabbitmq";
+
+const testVHost = new rabbitmq.VHost("test", {});
+const testUser = new rabbitmq.User("test", {
+    password: "foobar",
+    tags: ["administrator"],
+});
+const testPermissions = new rabbitmq.Permissions("test", {
+    permissions: {
+        configure: ".*",
+        read: ".*",
+        write: ".*",
+    },
+    user: testUser.name,
+    vhost: testVHost.name,
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-rabbitmq/blob/master/website/docs/r/permissions.html.markdown.
 
 

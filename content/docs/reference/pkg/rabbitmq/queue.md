@@ -8,6 +8,65 @@ block_external_search_index: true
 
 The ``rabbitmq..Queue`` resource creates and manages a queue.
 
+## Example Usage
+
+### Basic Example
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as rabbitmq from "@pulumi/rabbitmq";
+
+const testVHost = new rabbitmq.VHost("test", {});
+const guest = new rabbitmq.Permissions("guest", {
+    permissions: {
+        configure: ".*",
+        read: ".*",
+        write: ".*",
+    },
+    user: "guest",
+    vhost: testVHost.name,
+});
+const testQueue = new rabbitmq.Queue("test", {
+    settings: {
+        autoDelete: true,
+        durable: false,
+    },
+    vhost: guest.vhost,
+});
+```
+
+### Example With JSON Arguments
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as rabbitmq from "@pulumi/rabbitmq";
+
+const config = new pulumi.Config();
+const arguments = config.get("arguments") || `{
+  "x-message-ttl": 5000
+}
+`;
+
+const testVHost = new rabbitmq.VHost("test", {});
+const guest = new rabbitmq.Permissions("guest", {
+    permissions: {
+        configure: ".*",
+        read: ".*",
+        write: ".*",
+    },
+    user: "guest",
+    vhost: testVHost.name,
+});
+const testQueue = new rabbitmq.Queue("test", {
+    settings: {
+        argumentsJson: arguments,
+        autoDelete: true,
+        durable: false,
+    },
+    vhost: guest.vhost,
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-rabbitmq/blob/master/website/docs/r/queue.html.markdown.
 
 

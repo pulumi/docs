@@ -9,6 +9,35 @@ block_external_search_index: true
 The ``rabbitmq..Policy`` resource creates and manages policies for exchanges
 and queues.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as rabbitmq from "@pulumi/rabbitmq";
+
+const testVHost = new rabbitmq.VHost("test", {});
+const guest = new rabbitmq.Permissions("guest", {
+    permissions: {
+        configure: ".*",
+        read: ".*",
+        write: ".*",
+    },
+    user: "guest",
+    vhost: testVHost.name,
+});
+const testPolicy = new rabbitmq.Policy("test", {
+    policy: {
+        applyTo: "all",
+        definition: {
+            "ha-mode": "all",
+        },
+        pattern: ".*",
+        priority: 0,
+    },
+    vhost: guest.vhost,
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-rabbitmq/blob/master/website/docs/r/policy.html.markdown.
 
 

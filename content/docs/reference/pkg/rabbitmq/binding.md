@@ -9,6 +9,46 @@ block_external_search_index: true
 The ``rabbitmq..Binding`` resource creates and manages a binding relationship
 between a queue an exchange.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as rabbitmq from "@pulumi/rabbitmq";
+
+const testVHost = new rabbitmq.VHost("test", {});
+const guest = new rabbitmq.Permissions("guest", {
+    permissions: {
+        configure: ".*",
+        read: ".*",
+        write: ".*",
+    },
+    user: "guest",
+    vhost: testVHost.name,
+});
+const testExchange = new rabbitmq.Exchange("test", {
+    settings: {
+        autoDelete: true,
+        durable: false,
+        type: "fanout",
+    },
+    vhost: guest.vhost,
+});
+const testQueue = new rabbitmq.Queue("test", {
+    settings: {
+        autoDelete: false,
+        durable: true,
+    },
+    vhost: guest.vhost,
+});
+const testBinding = new rabbitmq.Binding("test", {
+    destination: testQueue.name,
+    destinationType: "queue",
+    routingKey: "#",
+    source: testExchange.name,
+    vhost: testVHost.name,
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-rabbitmq/blob/master/website/docs/r/binding.html.markdown.
 
 

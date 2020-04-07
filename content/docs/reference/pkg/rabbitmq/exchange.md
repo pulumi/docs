@@ -8,6 +8,32 @@ block_external_search_index: true
 
 The ``rabbitmq..Exchange`` resource creates and manages an exchange.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as rabbitmq from "@pulumi/rabbitmq";
+
+const testVHost = new rabbitmq.VHost("test", {});
+const guest = new rabbitmq.Permissions("guest", {
+    permissions: {
+        configure: ".*",
+        read: ".*",
+        write: ".*",
+    },
+    user: "guest",
+    vhost: testVHost.name,
+});
+const testExchange = new rabbitmq.Exchange("test", {
+    settings: {
+        autoDelete: true,
+        durable: false,
+        type: "fanout",
+    },
+    vhost: guest.vhost,
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-rabbitmq/blob/master/website/docs/r/exchange.html.markdown.
 
 

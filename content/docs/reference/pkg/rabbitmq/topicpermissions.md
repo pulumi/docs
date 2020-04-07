@@ -9,6 +9,28 @@ block_external_search_index: true
 The ``rabbitmq..TopicPermissions`` resource creates and manages a user's set of
 topic permissions.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as rabbitmq from "@pulumi/rabbitmq";
+
+const testVHost = new rabbitmq.VHost("test", {});
+const testUser = new rabbitmq.User("test", {
+    password: "foobar",
+    tags: ["administrator"],
+});
+const testTopicPermissions = new rabbitmq.TopicPermissions("test", {
+    permissions: [{
+        exchange: "amq.topic",
+        read: ".*",
+        write: ".*",
+    }],
+    user: testUser.name,
+    vhost: testVHost.name,
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-rabbitmq/blob/master/website/docs/r/topic-permissions.html.markdown.
 
 
