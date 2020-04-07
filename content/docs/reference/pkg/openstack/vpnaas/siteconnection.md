@@ -8,6 +8,23 @@ block_external_search_index: true
 
 Manages a V2 Neutron IPSec site connection resource within OpenStack.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as openstack from "@pulumi/openstack";
+
+const conn1 = new openstack.vpnaas.SiteConnection("conn_1", {
+    ikepolicyId: openstack_vpnaas_ike_policy_v2_policy_2.id,
+    ipsecpolicyId: openstack_vpnaas_ipsec_policy_v2_policy_1.id,
+    localEpGroupId: openstack_vpnaas_endpoint_group_v2_group_2.id,
+    peerAddress: "192.168.10.1",
+    peerEpGroupId: openstack_vpnaas_endpoint_group_v2_group_1.id,
+    psk: "secret",
+    vpnserviceId: openstack_vpnaas_service_v2_service_1.id,
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/vpnaas_site_connection_v2.html.markdown.
 
 

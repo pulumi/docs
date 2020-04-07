@@ -8,6 +8,27 @@ block_external_search_index: true
 
 Manages a V1 DB configuration resource within OpenStack.
 
+## Example Usage
+
+### Configuration
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as openstack from "@pulumi/openstack";
+
+const test = new openstack.database.Configuration("test", {
+    configurations: [{
+        name: "max_connections",
+        value: "200",
+    }],
+    datastore: {
+        type: "mysql",
+        version: "mysql-5.7",
+    },
+    description: "description",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/db_configuration_v1.html.markdown.
 
 

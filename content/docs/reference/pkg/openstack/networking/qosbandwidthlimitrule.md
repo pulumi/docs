@@ -8,6 +8,25 @@ block_external_search_index: true
 
 Manages a V2 Neutron QoS bandwidth limit rule resource within OpenStack.
 
+## Example Usage
+
+### Create a QoS Policy with some bandwidth limit rule
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as openstack from "@pulumi/openstack";
+
+const qosPolicy1 = new openstack.networking.QosPolicy("qos_policy_1", {
+    description: "bw_limit",
+});
+const bwLimitRule1 = new openstack.networking.QosBandwidthLimitRule("bw_limit_rule_1", {
+    direction: "egress",
+    maxBurstKbps: 300,
+    maxKbps: 3000,
+    qosPolicyId: qosPolicy1.id,
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_qos_bandwidth_limit_rule_v2.html.markdown.
 
 

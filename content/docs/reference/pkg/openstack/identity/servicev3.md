@@ -10,6 +10,17 @@ Manages a V3 Service resource within OpenStack Keystone.
 
 > **Note:** This usually requires admin privileges.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as openstack from "@pulumi/openstack";
+
+const service1 = new openstack.identity.ServiceV3("service_1", {
+    type: "custom",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/identity_service_v3.html.markdown.
 
 

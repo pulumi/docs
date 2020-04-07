@@ -8,6 +8,17 @@ block_external_search_index: true
 
 Use this data source to get the ID of an available OpenStack DNS zone.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as openstack from "@pulumi/openstack";
+
+const zone1 = pulumi.output(openstack.dns.getDnsZone({
+    name: "example.com",
+}, { async: true }));
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/dns_zone_v2.html.markdown.
 
 

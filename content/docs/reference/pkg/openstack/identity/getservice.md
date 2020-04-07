@@ -10,6 +10,17 @@ Use this data source to get the ID of an OpenStack service.
 
 > **Note:** This usually requires admin privileges.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as openstack from "@pulumi/openstack";
+
+const service1 = pulumi.output(openstack.identity.getService({
+    name: "keystone",
+}, { async: true }));
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/identity_service_v3.html.markdown.
 
 

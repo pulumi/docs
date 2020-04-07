@@ -8,6 +8,21 @@ block_external_search_index: true
 
 Use this data source to get the ID of an available OpenStack image.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as openstack from "@pulumi/openstack";
+
+const ubuntu = pulumi.output(openstack.images.getImage({
+    mostRecent: true,
+    name: "Ubuntu 16.04",
+    properties: {
+        key: "value",
+    },
+}, { async: true }));
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/images_image_v2.html.markdown.
 
 

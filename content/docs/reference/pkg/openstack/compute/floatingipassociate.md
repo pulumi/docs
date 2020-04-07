@@ -9,6 +9,59 @@ block_external_search_index: true
 Associate a floating IP to an instance. This can be used instead of the
 `floating_ip` options in `openstack.compute.Instance`.
 
+## Example Usage
+
+### Automatically detect the correct network
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as openstack from "@pulumi/openstack";
+
+const instance1 = new openstack.compute.Instance("instance_1", {
+    flavorId: "3",
+    imageId: "ad091b52-742f-469e-8f3c-fd81cadf0743",
+    keyPair: "my_key_pair_name",
+    securityGroups: ["default"],
+});
+const fip1FloatingIp = new openstack.networking.FloatingIp("fip_1", {
+    pool: "my_pool",
+});
+const fip1FloatingIpAssociate = new openstack.compute.FloatingIpAssociate("fip_1", {
+    floatingIp: fip1FloatingIp.address,
+    instanceId: instance1.id,
+});
+```
+
+### Explicitly set the network to attach to
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as openstack from "@pulumi/openstack";
+
+const instance1 = new openstack.compute.Instance("instance_1", {
+    flavorId: "3",
+    imageId: "ad091b52-742f-469e-8f3c-fd81cadf0743",
+    keyPair: "my_key_pair_name",
+    networks: [
+        {
+            name: "my_network",
+        },
+        {
+            name: "default",
+        },
+    ],
+    securityGroups: ["default"],
+});
+const fip1FloatingIp = new openstack.networking.FloatingIp("fip_1", {
+    pool: "my_pool",
+});
+const fip1FloatingIpAssociate = new openstack.compute.FloatingIpAssociate("fip_1", {
+    fixedIp: instance1.networks.apply(networks => networks[1].fixedIpV4!),
+    floatingIp: fip1FloatingIp.address,
+    instanceId: instance1.id,
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_floatingip_associate_v2.html.markdown.
 
 

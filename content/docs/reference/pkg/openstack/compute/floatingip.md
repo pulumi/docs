@@ -14,6 +14,17 @@ been deprecated. Unless you are using an older OpenStack environment, it is
 recommended to use the `openstack.networking.FloatingIp`
 resource instead, which uses the OpenStack Networking API.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as openstack from "@pulumi/openstack";
+
+const floatip1 = new openstack.compute.FloatingIp("floatip_1", {
+    pool: "public",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_floatingip_v2.html.markdown.
 
 

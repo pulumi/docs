@@ -8,6 +8,99 @@ block_external_search_index: true
 
 Manages a V1 Barbican container resource within OpenStack.
 
+## Example Usage
+
+### Simple secret
+
+The container with the TLS certificates, which can be used by the loadbalancer HTTPS listener.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as fs from "fs";
+import * as openstack from "@pulumi/openstack";
+
+const certificate1 = new openstack.keymanager.SecretV1("certificate_1", {
+    payload: fs.readFileSync("cert.pem", "utf-8"),
+    payloadContentType: "text/plain",
+    secretType: "certificate",
+});
+const privateKey1 = new openstack.keymanager.SecretV1("private_key_1", {
+    payload: fs.readFileSync("cert-key.pem", "utf-8"),
+    payloadContentType: "text/plain",
+    secretType: "private",
+});
+const intermediate1 = new openstack.keymanager.SecretV1("intermediate_1", {
+    payload: fs.readFileSync("intermediate-ca.pem", "utf-8"),
+    payloadContentType: "text/plain",
+    secretType: "certificate",
+});
+const tls1 = new openstack.keymanager.ContainerV1("tls_1", {
+    secretRefs: [
+        {
+            name: "certificate",
+            secretRef: certificate1.secretRef,
+        },
+        {
+            name: "private_key",
+            secretRef: privateKey1.secretRef,
+        },
+        {
+            name: "intermediates",
+            secretRef: intermediate1.secretRef,
+        },
+    ],
+    type: "certificate",
+});
+const subnet1 = pulumi.output(openstack.networking.getSubnet({
+    name: "my-subnet",
+}, { async: true }));
+const lb1 = new openstack.loadbalancer.LoadBalancer("lb_1", {
+    vipSubnetId: subnet1.id,
+});
+const listener1 = new openstack.loadbalancer.Listener("listener_1", {
+    defaultTlsContainerRef: tls1.containerRef,
+    loadbalancerId: lb1.id,
+    protocol: "TERMINATED_HTTPS",
+    protocolPort: 443,
+});
+```
+
+### Container with the ACL
+
+> **Note** Only read ACLs are supported
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as openstack from "@pulumi/openstack";
+
+const tls1 = new openstack.keymanager.ContainerV1("tls_1", {
+    acl: {
+        read: {
+            projectAccess: false,
+            users: [
+                "userid1",
+                "userid2",
+            ],
+        },
+    },
+    secretRefs: [
+        {
+            name: "certificate",
+            secretRef: openstack_keymanager_secret_v1_certificate_1.secretRef,
+        },
+        {
+            name: "private_key",
+            secretRef: openstack_keymanager_secret_v1_private_key_1.secretRef,
+        },
+        {
+            name: "intermediates",
+            secretRef: openstack_keymanager_secret_v1_intermediate_1.secretRef,
+        },
+    ],
+    type: "certificate",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/keymanager_container_v1.html.markdown.
 
 

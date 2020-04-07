@@ -8,6 +8,17 @@ block_external_search_index: true
 
 Use this data source to get the ID of an available OpenStack Magnum cluster.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as openstack from "@pulumi/openstack";
+
+const cluster1 = pulumi.output(openstack.containerinfra.getCluster({
+    name: "cluster_1",
+}, { async: true }));
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/containerinfra_cluster_v1.html.markdown.
 
 

@@ -8,6 +8,30 @@ block_external_search_index: true
 
 Creates a routing entry on a OpenStack V2 subnet.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as openstack from "@pulumi/openstack";
+
+const router1 = new openstack.networking.Router("router_1", {
+    adminStateUp: true,
+});
+const network1 = new openstack.networking.Network("network_1", {
+    adminStateUp: true,
+});
+const subnet1 = new openstack.networking.Subnet("subnet_1", {
+    cidr: "192.168.199.0/24",
+    ipVersion: 4,
+    networkId: network1.id,
+});
+const subnetRoute1 = new openstack.networking.SubnetRoute("subnet_route_1", {
+    destinationCidr: "10.0.1.0/24",
+    nextHop: "192.168.199.254",
+    subnetId: subnet1.id,
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_subnet_route_v2.html.markdown.
 
 

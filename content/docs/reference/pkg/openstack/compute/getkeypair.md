@@ -8,6 +8,17 @@ block_external_search_index: true
 
 Use this data source to get the ID and public key of an OpenStack keypair.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as openstack from "@pulumi/openstack";
+
+const kp = pulumi.output(openstack.compute.getKeypair({
+    name: "sand",
+}, { async: true }));
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/compute_keypair_v2.html.markdown.
 
 

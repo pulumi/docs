@@ -8,6 +8,59 @@ block_external_search_index: true
 
 Manages a V1 container object resource within OpenStack.
 
+## Example Usage
+
+### Example with simple content
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as openstack from "@pulumi/openstack";
+
+const container1 = new openstack.objectstorage.Container("container_1", {
+    contentType: "application/json",
+    metadata: {
+        test: "true",
+    },
+    region: "RegionOne",
+});
+const doc1 = new openstack.objectstorage.ContainerObject("doc_1", {
+    containerName: container1.name,
+    content: `               {
+                 "foo" : "bar"
+               }
+`,
+    contentType: "application/json",
+    metadata: {
+        test: "true",
+    },
+    region: "RegionOne",
+});
+```
+
+### Example with content from file
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as openstack from "@pulumi/openstack";
+
+const container1 = new openstack.objectstorage.Container("container_1", {
+    contentType: "application/json",
+    metadata: {
+        test: "true",
+    },
+    region: "RegionOne",
+});
+const doc1 = new openstack.objectstorage.ContainerObject("doc_1", {
+    containerName: container1.name,
+    contentType: "application/json",
+    metadata: {
+        test: "true",
+    },
+    region: "RegionOne",
+    source: "./default.json",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/objectstorage_object_v1.html.markdown.
 
 

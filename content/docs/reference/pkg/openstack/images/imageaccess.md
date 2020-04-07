@@ -9,6 +9,57 @@ block_external_search_index: true
 Manages members for the shared OpenStack Glance V2 Image within the source
 project, which owns the Image.
 
+## Example Usage
+
+### Unprivileged user
+
+Create a shared image and propose a membership to the
+`bed6b6cbb86a4e2d8dc2735c2f1000e4` project ID.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as openstack from "@pulumi/openstack";
+
+const rancheros = new openstack.images.Image("rancheros", {
+    containerFormat: "bare",
+    diskFormat: "qcow2",
+    imageSourceUrl: "https://releases.rancher.com/os/latest/rancheros-openstack.img",
+    properties: {
+        key: "value",
+    },
+    visibility: "shared",
+});
+const rancherosMember = new openstack.images.ImageAccess("rancheros_member", {
+    imageId: rancheros.id,
+    memberId: "bed6b6cbb86a4e2d8dc2735c2f1000e4",
+});
+```
+
+### Privileged user
+
+Create a shared image and set a membership to the
+`bed6b6cbb86a4e2d8dc2735c2f1000e4` project ID.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as openstack from "@pulumi/openstack";
+
+const rancheros = new openstack.images.Image("rancheros", {
+    containerFormat: "bare",
+    diskFormat: "qcow2",
+    imageSourceUrl: "https://releases.rancher.com/os/latest/rancheros-openstack.img",
+    properties: {
+        key: "value",
+    },
+    visibility: "shared",
+});
+const rancherosMember = new openstack.images.ImageAccess("rancheros_member", {
+    imageId: rancheros.id,
+    memberId: "bed6b6cbb86a4e2d8dc2735c2f1000e4",
+    status: "accepted",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/images_image_access_v2.html.markdown.
 
 

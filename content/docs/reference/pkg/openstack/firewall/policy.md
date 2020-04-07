@@ -8,6 +8,34 @@ block_external_search_index: true
 
 Manages a v1 firewall policy resource within OpenStack.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as openstack from "@pulumi/openstack";
+
+const rule1 = new openstack.firewall.Rule("rule_1", {
+    action: "deny",
+    description: "drop TELNET traffic",
+    destinationPort: "23",
+    enabled: true,
+    protocol: "tcp",
+});
+const rule2 = new openstack.firewall.Rule("rule_2", {
+    action: "deny",
+    description: "drop NTP traffic",
+    destinationPort: "123",
+    enabled: false,
+    protocol: "udp",
+});
+const policy1 = new openstack.firewall.Policy("policy_1", {
+    rules: [
+        rule1.id,
+        rule2.id,
+    ],
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/fw_policy_v1.html.markdown.
 
 

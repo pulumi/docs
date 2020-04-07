@@ -8,6 +8,22 @@ block_external_search_index: true
 
 Manages a V2 Image resource within OpenStack Glance.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as openstack from "@pulumi/openstack";
+
+const rancheros = new openstack.images.Image("rancheros", {
+    containerFormat: "bare",
+    diskFormat: "qcow2",
+    imageSourceUrl: "https://releases.rancher.com/os/latest/rancheros-openstack.img",
+    properties: {
+        key: "value",
+    },
+});
+```
+
 ## Notes
 
 ### Properties

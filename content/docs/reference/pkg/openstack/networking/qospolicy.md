@@ -8,6 +8,19 @@ block_external_search_index: true
 
 Manages a V2 Neutron QoS policy resource within OpenStack.
 
+## Example Usage
+
+### Create a QoS Policy
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as openstack from "@pulumi/openstack";
+
+const qosPolicy1 = new openstack.networking.QosPolicy("qos_policy_1", {
+    description: "bw_limit",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_qos_policy_v2.html.markdown.
 
 

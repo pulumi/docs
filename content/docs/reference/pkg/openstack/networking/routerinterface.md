@@ -8,6 +8,29 @@ block_external_search_index: true
 
 Manages a V2 router interface resource within OpenStack.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as openstack from "@pulumi/openstack";
+
+const network1 = new openstack.networking.Network("network_1", {
+    adminStateUp: true,
+});
+const subnet1 = new openstack.networking.Subnet("subnet_1", {
+    cidr: "192.168.199.0/24",
+    ipVersion: 4,
+    networkId: network1.id,
+});
+const router1 = new openstack.networking.Router("router_1", {
+    externalNetworkId: "f67f0d72-0ddf-11e4-9d95-e1f29f417e2f",
+});
+const routerInterface1 = new openstack.networking.RouterInterface("router_interface_1", {
+    routerId: router1.id,
+    subnetId: subnet1.id,
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_router_interface_v2.html.markdown.
 
 

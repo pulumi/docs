@@ -20,6 +20,23 @@ If a network is marked as external during creation, it now implicitly creates
 a wildcard RBAC policy granting everyone access to preserve previous behavior
 before this feature was added.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as openstack from "@pulumi/openstack";
+
+const network1 = new openstack.networking.Network("network_1", {
+    adminStateUp: true,
+});
+const rbacPolicy1 = new openstack.networking.RbacPolicyV2("rbac_policy_1", {
+    action: "access_as_shared",
+    objectId: network1.id,
+    objectType: "network",
+    targetTenant: "20415a973c9e45d3917f078950644697",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_rbac_policy_v2.html.markdown.
 
 

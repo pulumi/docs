@@ -9,6 +9,118 @@ block_external_search_index: true
 Attaches a Block Storage Volume to an Instance using the OpenStack
 Compute (Nova) v2 API.
 
+## Example Usage
+
+### Basic attachment of a single volume to a single instance
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as openstack from "@pulumi/openstack";
+
+const volume1 = new openstack.blockstorage.VolumeV2("volume_1", {
+    size: 1,
+});
+const instance1 = new openstack.compute.Instance("instance_1", {
+    securityGroups: ["default"],
+});
+const va1 = new openstack.compute.VolumeAttach("va_1", {
+    instanceId: instance1.id,
+    volumeId: volume1.id,
+});
+```
+
+### Attaching multiple volumes to a single instance
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as openstack from "@pulumi/openstack";
+
+const volumes: openstack.blockstorage.VolumeV2[] = [];
+for (let i = 0; i < 2; i++) {
+    volumes.push(new openstack.blockstorage.VolumeV2(`volumes-${i}`, {
+        size: 1,
+    }));
+}
+const instance1 = new openstack.compute.Instance("instance_1", {
+    securityGroups: ["default"],
+});
+const attachments: openstack.compute.VolumeAttach[] = [];
+for (let i = 0; i < 2; i++) {
+    attachments.push(new openstack.compute.VolumeAttach(`attachments-${i}`, {
+        instanceId: instance1.id,
+        volumeId: pulumi.all(volumes.map(v => v.id)).apply(id => id.map(v => v)[i]),
+    }));
+}
+
+export const volume_devices = attachments.map(v => v.device);
+```
+
+Note that the above example will not guarantee that the volumes are attached in
+a deterministic manner. The volumes will be attached in a seemingly random
+order.
+
+If you want to ensure that the volumes are attached in a given order, create
+explicit dependencies between the volumes, such as:
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as openstack from "@pulumi/openstack";
+
+const volumes: openstack.blockstorage.VolumeV2[] = [];
+for (let i = 0; i < 2; i++) {
+    volumes.push(new openstack.blockstorage.VolumeV2(`volumes-${i}`, {
+        size: 1,
+    }));
+}
+const instance1 = new openstack.compute.Instance("instance_1", {
+    securityGroups: ["default"],
+});
+const attach1 = new openstack.compute.VolumeAttach("attach_1", {
+    instanceId: instance1.id,
+    volumeId: volumes[0].id,
+});
+const attach2 = new openstack.compute.VolumeAttach("attach_2", {
+    instanceId: instance1.id,
+    volumeId: volumes[1].id,
+}, { dependsOn: [attach1] });
+
+export const volume_devices = openstack_compute_volume_attach_v2_attachments.map(v => v.device);
+```
+
+### Using Multiattach-enabled volumes
+
+Multiattach Volumes are dependent upon your OpenStack cloud and not all
+clouds support multiattach.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as openstack from "@pulumi/openstack";
+
+const volume1 = new openstack.blockstorage.Volume("volume_1", {
+    multiattach: true,
+    size: 1,
+});
+const instance1 = new openstack.compute.Instance("instance_1", {
+    securityGroups: ["default"],
+});
+const instance2 = new openstack.compute.Instance("instance_2", {
+    securityGroups: ["default"],
+});
+const va1 = new openstack.compute.VolumeAttach("va_1", {
+    instanceId: instance1.id,
+    multiattach: true,
+    volumeId: openstack_blockstorage_volume_v2_volume_1.id,
+});
+const va2 = new openstack.compute.VolumeAttach("va_2", {
+    instanceId: instance2.id,
+    multiattach: true,
+    volumeId: openstack_blockstorage_volume_v2_volume_1.id,
+}, { dependsOn: [va1] });
+```
+
+It is recommended to use `depends_on` for the attach resources
+to enforce the volume attachments to happen one at a time.
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_volume_attach_v2.html.markdown.
 
 

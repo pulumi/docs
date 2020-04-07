@@ -10,6 +10,26 @@ Manages a V2 neutron security group rule resource within OpenStack.
 Unlike Nova security groups, neutron separates the group from the rules
 and also allows an admin to target a specific tenant_id.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as openstack from "@pulumi/openstack";
+
+const secgroup1 = new openstack.networking.SecGroup("secgroup_1", {
+    description: "My neutron security group",
+});
+const secgroupRule1 = new openstack.networking.SecGroupRule("secgroup_rule_1", {
+    direction: "ingress",
+    ethertype: "IPv4",
+    portRangeMax: 22,
+    portRangeMin: 22,
+    protocol: "tcp",
+    remoteIpPrefix: "0.0.0.0/0",
+    securityGroupId: secgroup1.id,
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_secgroup_rule_v2.html.markdown.
 
 

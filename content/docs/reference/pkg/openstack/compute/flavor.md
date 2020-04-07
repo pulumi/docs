@@ -8,6 +8,23 @@ block_external_search_index: true
 
 Manages a V2 flavor resource within OpenStack.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as openstack from "@pulumi/openstack";
+
+const test_flavor = new openstack.compute.Flavor("test-flavor", {
+    disk: 20,
+    extraSpecs: {
+        "hw:cpu_policy": "CPU-POLICY",
+        "hw:cpu_thread_policy": "CPU-THREAD-POLICY",
+    },
+    ram: 8096,
+    vcpus: 2,
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_flavor_v2.html.markdown.
 
 

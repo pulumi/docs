@@ -8,6 +8,17 @@ block_external_search_index: true
 
 Use this data source to get the ID of an available Barbican container.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as openstack from "@pulumi/openstack";
+
+const example = pulumi.output(openstack.keymanager.getContainer({
+    name: "my_container",
+}, { async: true }));
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/keymanager_container_v1.html.markdown.
 
 

@@ -8,6 +8,38 @@ block_external_search_index: true
 
 Manages a V1 stack resource within OpenStack.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as openstack from "@pulumi/openstack";
+
+const stack1 = new openstack.orchestration.StackV1("stack_1", {
+    disableRollback: true,
+    environmentOpts: {
+        Bin: "\n",
+    },
+    parameters: {
+        length: 4,
+    },
+    templateOpts: {
+        Bin: `heat_template_version: 2013-05-23
+parameters:
+  length:
+    type: number
+resources:
+  test_res:
+    type: OS::Heat::TestResource
+  random:
+    type: OS::Heat::RandomString
+    properties:
+      length: {get_param: length}
+`,
+    },
+    timeout: 30,
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/orchestration_stack_v1.html.markdown.
 
 

@@ -8,6 +8,23 @@ block_external_search_index: true
 
 Manages a V2 Neutron QoS minimum bandwidth rule resource within OpenStack.
 
+## Example Usage
+
+### Create a QoS Policy with some minimum bandwidth rule
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as openstack from "@pulumi/openstack";
+
+const qosPolicy1 = new openstack.networking.QosPolicy("qos_policy_1", {
+    description: "min_kbps",
+});
+const minimumBandwidthRule1 = new openstack.networking.QosMinimumBandwidthRule("minimum_bandwidth_rule_1", {
+    minKbps: 200,
+    qosPolicyId: qosPolicy1.id,
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_qos_minimum_bandwidth_rule_v2.html.markdown.
 
 

@@ -8,6 +8,46 @@ block_external_search_index: true
 
 Manages a V2 Neutron network resource within OpenStack.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as openstack from "@pulumi/openstack";
+
+const network1 = new openstack.networking.Network("network_1", {
+    adminStateUp: true,
+});
+const subnet1 = new openstack.networking.Subnet("subnet_1", {
+    cidr: "192.168.199.0/24",
+    ipVersion: 4,
+    networkId: network1.id,
+});
+const secgroup1 = new openstack.compute.SecGroup("secgroup_1", {
+    description: "a security group",
+    rules: [{
+        cidr: "0.0.0.0/0",
+        fromPort: 22,
+        ipProtocol: "tcp",
+        toPort: 22,
+    }],
+});
+const port1 = new openstack.networking.Port("port_1", {
+    adminStateUp: true,
+    fixedIps: [{
+        ipAddress: "192.168.199.10",
+        subnetId: subnet1.id,
+    }],
+    networkId: network1.id,
+    securityGroupIds: [secgroup1.id],
+});
+const instance1 = new openstack.compute.Instance("instance_1", {
+    networks: [{
+        port: port1.id,
+    }],
+    securityGroups: [secgroup1.name],
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_network_v2.html.markdown.
 
 

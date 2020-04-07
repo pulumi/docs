@@ -8,6 +8,36 @@ block_external_search_index: true
 
 Manages a V1 Magnum cluster template resource within OpenStack.
 
+## Example Usage
+
+### Create a Cluster template
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as openstack from "@pulumi/openstack";
+
+const clustertemplate1 = new openstack.containerinfra.ClusterTemplate("clustertemplate_1", {
+    coe: "kubernetes",
+    dnsNameserver: "1.1.1.1",
+    dockerStorageDriver: "devicemapper",
+    dockerVolumeSize: 10,
+    flavor: "m1.small",
+    floatingIpEnabled: false,
+    image: "Fedora-Atomic-27",
+    labels: {
+        influx_grafana_dashboard_enabled: "true",
+        kube_dashboard_enabled: "true",
+        kube_tag: "1.11.1",
+        prometheus_monitoring: "true",
+    },
+    masterFlavor: "m1.medium",
+    masterLbEnabled: true,
+    networkDriver: "flannel",
+    serverType: "vm",
+    volumeDriver: "cinder",
+});
+```
+
 ## Argument reference
 
 The following arguments are supported:

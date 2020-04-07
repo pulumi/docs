@@ -20,6 +20,26 @@ different cloud provider.
 This does not actually attach a volume to an instance. Please use
 the `openstack.compute.VolumeAttach` resource for that.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as openstack from "@pulumi/openstack";
+
+const volume1 = new openstack.blockstorage.VolumeV2("volume_1", {
+    size: 1,
+});
+const va1 = new openstack.blockstorage.VolumeAttachV2("va_1", {
+    device: "auto",
+    hostName: "devstack",
+    initiator: "iqn.1993-08.org.debian:01:e9861fb1859",
+    ipAddress: "192.168.255.10",
+    osType: "linux2",
+    platform: "x86_64",
+    volumeId: volume1.id,
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/blockstorage_volume_attach_v2.html.markdown.
 
 

@@ -8,6 +8,33 @@ block_external_search_index: true
 
 Use this resource to configure a share.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as openstack from "@pulumi/openstack";
+
+const network1 = new openstack.networking.Network("network_1", {
+    adminStateUp: true,
+});
+const subnet1 = new openstack.networking.Subnet("subnet_1", {
+    cidr: "192.168.199.0/24",
+    ipVersion: 4,
+    networkId: network1.id,
+});
+const sharenetwork1 = new openstack.sharedfilesystem.ShareNetwork("sharenetwork_1", {
+    description: "test share network with security services",
+    neutronNetId: network1.id,
+    neutronSubnetId: subnet1.id,
+});
+const share1 = new openstack.sharedfilesystem.Share("share_1", {
+    description: "test share description",
+    shareNetworkId: sharenetwork1.id,
+    shareProto: "NFS",
+    size: 1,
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/sharedfilesystem_share_v2.html.markdown.
 
 

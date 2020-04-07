@@ -8,6 +8,101 @@ block_external_search_index: true
 
 Manages a V1 load balancer pool resource within OpenStack.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as openstack from "@pulumi/openstack";
+
+const pool1 = new openstack.loadbalancer.PoolV1("pool_1", {
+    lbMethod: "ROUND_ROBIN",
+    lbProvider: "haproxy",
+    monitorIds: ["67890"],
+    protocol: "HTTP",
+    subnetId: "12345",
+});
+```
+
+## Complete Load Balancing Stack Example
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as openstack from "@pulumi/openstack";
+
+const network1 = new openstack.networking.Network("network_1", {
+    adminStateUp: true,
+});
+const subnet1 = new openstack.networking.Subnet("subnet_1", {
+    cidr: "192.168.199.0/24",
+    ipVersion: 4,
+    networkId: network1.id,
+});
+const secgroup1 = new openstack.compute.SecGroup("secgroup_1", {
+    description: "Rules for secgroup_1",
+    rules: [
+        {
+            cidr: "0.0.0.0/0",
+            fromPort: -1,
+            ipProtocol: "icmp",
+            toPort: -1,
+        },
+        {
+            cidr: "0.0.0.0/0",
+            fromPort: 80,
+            ipProtocol: "tcp",
+            toPort: 80,
+        },
+    ],
+});
+const instance1 = new openstack.compute.Instance("instance_1", {
+    networks: [{
+        uuid: network1.id,
+    }],
+    securityGroups: [
+        "default",
+        secgroup1.name,
+    ],
+});
+const instance2 = new openstack.compute.Instance("instance_2", {
+    networks: [{
+        uuid: network1.id,
+    }],
+    securityGroups: [
+        "default",
+        secgroup1.name,
+    ],
+});
+const monitor1 = new openstack.loadbalancer.MonitorV1("monitor_1", {
+    adminStateUp: "true",
+    delay: 30,
+    maxRetries: 3,
+    timeout: 5,
+    type: "TCP",
+});
+const pool1 = new openstack.loadbalancer.PoolV1("pool_1", {
+    lbMethod: "ROUND_ROBIN",
+    monitorIds: [monitor1.id],
+    protocol: "TCP",
+    subnetId: subnet1.id,
+});
+const member1 = new openstack.loadbalancer.MemberV1("member_1", {
+    address: instance1.accessIpV4,
+    poolId: pool1.id,
+    port: 80,
+});
+const member2 = new openstack.loadbalancer.MemberV1("member_2", {
+    address: instance2.accessIpV4,
+    poolId: pool1.id,
+    port: 80,
+});
+const vip1 = new openstack.loadbalancer.Vip("vip_1", {
+    poolId: pool1.id,
+    port: 80,
+    protocol: "TCP",
+    subnetId: subnet1.id,
+});
+```
+
 ## Notes
 
 The `member` block is deprecated in favor of the `openstack.loadbalancer.MemberV1` resource.

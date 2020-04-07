@@ -8,6 +8,29 @@ block_external_search_index: true
 
 Manages a DNS record set in the OpenStack DNS Service.
 
+## Example Usage
+
+### Automatically detect the correct network
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as openstack from "@pulumi/openstack";
+
+const exampleZone = new openstack.dns.Zone("example_zone", {
+    description: "a zone",
+    email: "email2@example.com",
+    ttl: 6000,
+    type: "PRIMARY",
+});
+const rsExampleCom = new openstack.dns.RecordSet("rs_example_com", {
+    description: "An example record set",
+    records: ["10.0.0.1"],
+    ttl: 3000,
+    type: "A",
+    zoneId: exampleZone.id,
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/dns_recordset_v2.html.markdown.
 
 

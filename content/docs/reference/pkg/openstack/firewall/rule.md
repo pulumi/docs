@@ -8,6 +8,21 @@ block_external_search_index: true
 
 Manages a v1 firewall rule resource within OpenStack.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as openstack from "@pulumi/openstack";
+
+const rule1 = new openstack.firewall.Rule("rule_1", {
+    action: "deny",
+    description: "drop TELNET traffic",
+    destinationPort: "23",
+    enabled: true,
+    protocol: "tcp",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/fw_rule_v1.html.markdown.
 
 

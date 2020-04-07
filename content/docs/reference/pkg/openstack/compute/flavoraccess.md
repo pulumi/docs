@@ -13,6 +13,25 @@ this resource.
 
 ---
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as openstack from "@pulumi/openstack";
+
+const project1 = new openstack.identity.Project("project_1", {});
+const flavor1 = new openstack.compute.Flavor("flavor_1", {
+    disk: 20,
+    isPublic: false,
+    ram: 8096,
+    vcpus: 2,
+});
+const access1 = new openstack.compute.FlavorAccess("access_1", {
+    flavorId: flavor1.id,
+    tenantId: project1.id,
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_flavor_access_v2.html.markdown.
 
 

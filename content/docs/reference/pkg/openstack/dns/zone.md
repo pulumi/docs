@@ -8,6 +8,22 @@ block_external_search_index: true
 
 Manages a DNS zone in the OpenStack DNS Service.
 
+## Example Usage
+
+### Automatically detect the correct network
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as openstack from "@pulumi/openstack";
+
+const example_com = new openstack.dns.Zone("example.com", {
+    description: "An example zone",
+    email: "jdoe@example.com",
+    ttl: 3000,
+    type: "PRIMARY",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/dns_zone_v2.html.markdown.
 
 

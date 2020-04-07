@@ -8,6 +8,19 @@ block_external_search_index: true
 
 Manages a V1 load balancer member resource within OpenStack.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as openstack from "@pulumi/openstack";
+
+const member1 = new openstack.loadbalancer.MemberV1("member_1", {
+    address: "192.168.0.10",
+    poolId: "d9415786-5f1a-428b-b35f-2f1523e146d2",
+    port: 80,
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/lb_member_v1.html.markdown.
 
 

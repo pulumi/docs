@@ -8,6 +8,17 @@ block_external_search_index: true
 
 Use this data source to get firewall policy information of an available OpenStack firewall policy.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as openstack from "@pulumi/openstack";
+
+const policy = pulumi.output(openstack.firewall.getPolicy({
+    name: "tf_test_policy",
+}, { async: true }));
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/fw_policy_v1.html.markdown.
 
 

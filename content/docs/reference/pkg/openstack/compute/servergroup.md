@@ -8,6 +8,17 @@ block_external_search_index: true
 
 Manages a V2 Server Group resource within OpenStack.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as openstack from "@pulumi/openstack";
+
+const test_sg = new openstack.compute.ServerGroup("test-sg", {
+    policies: ["anti-affinity"],
+});
+```
+
 ## Policies
 
 * `affinity` - All instances/servers launched in this group will be hosted on

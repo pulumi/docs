@@ -8,6 +8,25 @@ block_external_search_index: true
 
 Manages a V1 container resource within OpenStack.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as openstack from "@pulumi/openstack";
+
+const container1 = new openstack.objectstorage.Container("container_1", {
+    contentType: "application/json",
+    metadata: {
+        test: "true",
+    },
+    region: "RegionOne",
+    versioning: {
+        location: "tf-test-container-versions",
+        type: "versions",
+    },
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/objectstorage_container_v1.html.markdown.
 
 

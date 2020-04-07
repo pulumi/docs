@@ -8,6 +8,20 @@ block_external_search_index: true
 
 Manages a V1 load balancer vip resource within OpenStack.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as openstack from "@pulumi/openstack";
+
+const vip1 = new openstack.loadbalancer.Vip("vip_1", {
+    poolId: "67890",
+    port: 80,
+    protocol: "HTTP",
+    subnetId: "12345",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/lb_vip_v1.html.markdown.
 
 

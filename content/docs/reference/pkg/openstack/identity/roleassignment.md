@@ -11,6 +11,24 @@ Manages a V3 Role assignment within OpenStack Keystone.
 Note: You _must_ have admin privileges in your OpenStack cloud to use
 this resource.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as openstack from "@pulumi/openstack";
+
+const project1 = new openstack.identity.Project("project_1", {});
+const user1 = new openstack.identity.User("user_1", {
+    defaultProjectId: project1.id,
+});
+const role1 = new openstack.identity.Role("role_1", {});
+const roleAssignment1 = new openstack.identity.RoleAssignment("role_assignment_1", {
+    projectId: project1.id,
+    roleId: role1.id,
+    userId: user1.id,
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/identity_role_assignment_v3.html.markdown.
 
 

@@ -8,6 +8,21 @@ block_external_search_index: true
 
 Manages a V1 load balancer monitor resource within OpenStack.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as openstack from "@pulumi/openstack";
+
+const monitor1 = new openstack.loadbalancer.MonitorV1("monitor_1", {
+    adminStateUp: "true",
+    delay: 30,
+    maxRetries: 3,
+    timeout: 5,
+    type: "PING",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/lb_monitor_v1.html.markdown.
 
 

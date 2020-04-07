@@ -8,6 +8,18 @@ block_external_search_index: true
 
 Manages a V2 member resource within OpenStack.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as openstack from "@pulumi/openstack";
+
+const member1 = new openstack.loadbalancer.Member("member_1", {
+    address: "192.168.199.23",
+    protocolPort: 8080,
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/lb_member_v2.html.markdown.
 
 

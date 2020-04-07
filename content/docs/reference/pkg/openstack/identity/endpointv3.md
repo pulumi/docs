@@ -10,6 +10,22 @@ Manages a V3 Endpoint resource within OpenStack Keystone.
 
 > **Note:** This usually requires admin privileges.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as openstack from "@pulumi/openstack";
+
+const service1 = new openstack.identity.ServiceV3("service_1", {
+    type: "my-service-type",
+});
+const endpoint1 = new openstack.identity.EndpointV3("endpoint_1", {
+    endpointRegion: service1.region,
+    serviceId: service1.id,
+    url: "http://my-endpoint",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/identity_endpoint_v3.html.markdown.
 
 

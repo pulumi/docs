@@ -9,6 +9,17 @@ block_external_search_index: true
 Use this data source to get a list of Openstack Port IDs matching the
 specified criteria.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as openstack from "@pulumi/openstack";
+
+const ports = pulumi.output(openstack.networking.getPortIds({
+    name: "port",
+}, { async: true }));
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_port_ids_v2.html.markdown.
 
 

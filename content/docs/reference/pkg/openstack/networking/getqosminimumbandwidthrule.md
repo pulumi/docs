@@ -8,6 +8,17 @@ block_external_search_index: true
 
 Use this data source to get the ID of an available OpenStack QoS minimum bandwidth rule.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as openstack from "@pulumi/openstack";
+
+const qosMinBwRule1 = pulumi.output(openstack.networking.getQosMinimumBandwidthRule({
+    minKbps: 2000,
+}, { async: true }));
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/networking_qos_minimum_bandwidth_rule_v2.html.markdown.
 
 

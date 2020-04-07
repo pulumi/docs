@@ -8,6 +8,18 @@ block_external_search_index: true
 
 Manages a V2 router resource within OpenStack.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as openstack from "@pulumi/openstack";
+
+const router1 = new openstack.networking.Router("router_1", {
+    adminStateUp: true,
+    externalNetworkId: "f67f0d72-0ddf-11e4-9d95-e1f29f417e2f",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_router_v2.html.markdown.
 
 

@@ -8,6 +8,19 @@ block_external_search_index: true
 
 Manages a V1 volume resource within OpenStack.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as openstack from "@pulumi/openstack";
+
+const volume1 = new openstack.blockstorage.VolumeV1("volume_1", {
+    description: "first test volume",
+    region: "RegionOne",
+    size: 3,
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/blockstorage_volume_v1.html.markdown.
 
 

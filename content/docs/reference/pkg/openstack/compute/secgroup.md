@@ -14,6 +14,31 @@ recommended to use the `openstack.networking.SecGroup`
 and `openstack.networking.SecGroupRule`
 resources instead, which uses the OpenStack Networking API.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as openstack from "@pulumi/openstack";
+
+const secgroup1 = new openstack.compute.SecGroup("secgroup_1", {
+    description: "my security group",
+    rules: [
+        {
+            cidr: "0.0.0.0/0",
+            fromPort: 22,
+            ipProtocol: "tcp",
+            toPort: 22,
+        },
+        {
+            cidr: "0.0.0.0/0",
+            fromPort: 80,
+            ipProtocol: "tcp",
+            toPort: 80,
+        },
+    ],
+});
+```
+
 ## Notes
 
 ### ICMP Rules
@@ -25,6 +50,22 @@ import * as pulumi from "@pulumi/pulumi";
 ```
 
 A list of ICMP types and codes can be found [here](https://en.wikipedia.org/wiki/Internet_Control_Message_Protocol#Control_messages).
+
+### Referencing Security Groups
+
+When referencing a security group in a configuration (for example, a configuration creates a new security group and then needs to apply it to an instance being created in the same configuration), it is currently recommended to reference the security group by name and not by ID, like this:
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as openstack from "@pulumi/openstack";
+
+const test_server = new openstack.compute.Instance("test-server", {
+    flavorId: "3",
+    imageId: "ad091b52-742f-469e-8f3c-fd81cadf0743",
+    keyPair: "my_key_pair_name",
+    securityGroups: [openstack_compute_secgroup_v2_secgroup_1.name],
+});
+```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_secgroup_v2.html.markdown.
 

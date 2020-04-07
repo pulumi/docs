@@ -9,6 +9,130 @@ block_external_search_index: true
 Attaches a Network Interface (a Port) to an Instance using the OpenStack
 Compute (Nova) v2 API.
 
+## Example Usage
+
+### Basic Attachment
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as openstack from "@pulumi/openstack";
+
+const network1 = new openstack.networking.Network("network_1", {
+    adminStateUp: true,
+});
+const instance1 = new openstack.compute.Instance("instance_1", {
+    securityGroups: ["default"],
+});
+const ai1 = new openstack.compute.InterfaceAttach("ai_1", {
+    instanceId: instance1.id,
+    networkId: openstack_networking_port_v2_network_1.id,
+});
+```
+
+### Attachment Specifying a Fixed IP
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as openstack from "@pulumi/openstack";
+
+const network1 = new openstack.networking.Network("network_1", {
+    adminStateUp: true,
+});
+const instance1 = new openstack.compute.Instance("instance_1", {
+    securityGroups: ["default"],
+});
+const ai1 = new openstack.compute.InterfaceAttach("ai_1", {
+    fixedIp: "10.0.10.10",
+    instanceId: instance1.id,
+    networkId: openstack_networking_port_v2_network_1.id,
+});
+```
+
+
+### Attachment Using an Existing Port
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as openstack from "@pulumi/openstack";
+
+const network1 = new openstack.networking.Network("network_1", {
+    adminStateUp: true,
+});
+const port1 = new openstack.networking.Port("port_1", {
+    adminStateUp: true,
+    networkId: network1.id,
+});
+const instance1 = new openstack.compute.Instance("instance_1", {
+    securityGroups: ["default"],
+});
+const ai1 = new openstack.compute.InterfaceAttach("ai_1", {
+    instanceId: instance1.id,
+    portId: port1.id,
+});
+```
+
+### Attaching Multiple Interfaces
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as openstack from "@pulumi/openstack";
+
+const network1 = new openstack.networking.Network("network_1", {
+    adminStateUp: true,
+});
+const ports: openstack.networking.Port[] = [];
+for (let i = 0; i < 2; i++) {
+    ports.push(new openstack.networking.Port(`ports-${i}`, {
+        adminStateUp: true,
+        networkId: network1.id,
+    }));
+}
+const instance1 = new openstack.compute.Instance("instance_1", {
+    securityGroups: ["default"],
+});
+const attachments: openstack.compute.InterfaceAttach[] = [];
+for (let i = 0; i < 2; i++) {
+    attachments.push(new openstack.compute.InterfaceAttach(`attachments-${i}`, {
+        instanceId: instance1.id,
+        portId: pulumi.all(ports.map(v => v.id)).apply(id => id.map(v => v)[i]),
+    }));
+}
+```
+
+Note that the above example will not guarantee that the ports are attached in
+a deterministic manner. The ports will be attached in a seemingly random
+order.
+
+If you want to ensure that the ports are attached in a given order, create
+explicit dependencies between the ports, such as:
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as openstack from "@pulumi/openstack";
+
+const network1 = new openstack.networking.Network("network_1", {
+    adminStateUp: true,
+});
+const ports: openstack.networking.Port[] = [];
+for (let i = 0; i < 2; i++) {
+    ports.push(new openstack.networking.Port(`ports-${i}`, {
+        adminStateUp: true,
+        networkId: network1.id,
+    }));
+}
+const instance1 = new openstack.compute.Instance("instance_1", {
+    securityGroups: ["default"],
+});
+const ai1 = new openstack.compute.InterfaceAttach("ai_1", {
+    instanceId: instance1.id,
+    portId: pulumi.all(ports.map(v => v.id)).apply(id => id.map(v => v)[0]),
+});
+const ai2 = new openstack.compute.InterfaceAttach("ai_2", {
+    instanceId: instance1.id,
+    portId: pulumi.all(ports.map(v => v.id)).apply(id => id.map(v => v)[1]),
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_interface_attach_v2.html.markdown.
 
 

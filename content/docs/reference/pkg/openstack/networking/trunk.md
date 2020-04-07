@@ -8,6 +8,47 @@ block_external_search_index: true
 
 Manages a networking V2 trunk resource within OpenStack.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as openstack from "@pulumi/openstack";
+
+const network1 = new openstack.networking.Network("network_1", {
+    adminStateUp: true,
+});
+const subnet1 = new openstack.networking.Subnet("subnet_1", {
+    cidr: "192.168.1.0/24",
+    enableDhcp: true,
+    ipVersion: 4,
+    networkId: network1.id,
+    noGateway: true,
+});
+const parentPort1 = new openstack.networking.Port("parent_port_1", {
+    adminStateUp: true,
+    networkId: network1.id,
+}, { dependsOn: [subnet1] });
+const subport1 = new openstack.networking.Port("subport_1", {
+    adminStateUp: true,
+    networkId: network1.id,
+}, { dependsOn: [subnet1] });
+const trunk1 = new openstack.networking.Trunk("trunk_1", {
+    adminStateUp: true,
+    portId: parentPort1.id,
+    subPorts: [{
+        portId: subport1.id,
+        segmentationId: 1,
+        segmentationType: "vlan",
+    }],
+});
+const instance1 = new openstack.compute.Instance("instance_1", {
+    networks: [{
+        port: trunk1.portId,
+    }],
+    securityGroups: ["default"],
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_trunk_v2.html.markdown.
 
 

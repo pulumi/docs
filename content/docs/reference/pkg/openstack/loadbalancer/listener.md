@@ -8,6 +8,22 @@ block_external_search_index: true
 
 Manages a V2 listener resource within OpenStack.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as openstack from "@pulumi/openstack";
+
+const listener1 = new openstack.loadbalancer.Listener("listener_1", {
+    insertHeaders: {
+        "X-Forwarded-For": "true",
+    },
+    loadbalancerId: "d9415786-5f1a-428b-b35f-2f1523e146d2",
+    protocol: "HTTP",
+    protocolPort: 8080,
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/lb_listener_v2.html.markdown.
 
 

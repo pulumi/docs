@@ -8,6 +8,21 @@ block_external_search_index: true
 
 Manages a V1 DB user resource within OpenStack.
 
+## Example Usage
+
+### User
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as openstack from "@pulumi/openstack";
+
+const basic = new openstack.database.User("basic", {
+    databases: ["testdb"],
+    instance: openstack_db_instance_v1_basic.id,
+    password: "password",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/db_user_v1.html.markdown.
 
 

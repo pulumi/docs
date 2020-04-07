@@ -8,6 +8,42 @@ block_external_search_index: true
 
 Manages a Load Balancer L7 Policy resource within OpenStack.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as openstack from "@pulumi/openstack";
+
+const network1 = new openstack.networking.Network("network_1", {
+    adminStateUp: true,
+});
+const subnet1 = new openstack.networking.Subnet("subnet_1", {
+    cidr: "192.168.199.0/24",
+    ipVersion: 4,
+    networkId: network1.id,
+});
+const loadbalancer1 = new openstack.loadbalancer.LoadBalancer("loadbalancer_1", {
+    vipSubnetId: subnet1.id,
+});
+const listener1 = new openstack.loadbalancer.Listener("listener_1", {
+    loadbalancerId: loadbalancer1.id,
+    protocol: "HTTP",
+    protocolPort: 8080,
+});
+const pool1 = new openstack.loadbalancer.Pool("pool_1", {
+    lbMethod: "ROUND_ROBIN",
+    loadbalancerId: loadbalancer1.id,
+    protocol: "HTTP",
+});
+const l7policy1 = new openstack.loadbalancer.L7PolicyV2("l7policy_1", {
+    action: "REDIRECT_TO_POOL",
+    description: "test l7 policy",
+    listenerId: listener1.id,
+    position: 1,
+    redirectPoolId: pool1.id,
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/lb_l7policy_v2.html.markdown.
 
 

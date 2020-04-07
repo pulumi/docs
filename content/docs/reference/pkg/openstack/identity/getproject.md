@@ -8,6 +8,17 @@ block_external_search_index: true
 
 Use this data source to get the ID of an OpenStack project.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as openstack from "@pulumi/openstack";
+
+const project1 = pulumi.output(openstack.identity.getProject({
+    name: "demo",
+}, { async: true }));
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/identity_project_v3.html.markdown.
 
 

@@ -6,22 +6,6 @@ block_external_search_index: true
 
 
 
-Manages a V2 VM instance resource within OpenStack.
-
-## Importing instances
-
-Importing instances can be tricky, since the nova api does not offer all
-information provided at creation time for later retrieval.
-Network interface attachment order, and number and sizes of ephemeral
-disks are examples of this.
-
-### Importing an instance with multiple emphemeral disks
-
-The importer cannot read the emphemeral disk configuration
-of an instance, so just specify image_id as in the configuration 
-of the basic instance example.
-
-> This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_instance_v2.html.markdown.
 
 
 
