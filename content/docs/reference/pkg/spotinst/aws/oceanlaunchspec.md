@@ -8,6 +8,38 @@ block_external_search_index: true
 
 Provides a custom Spotinst Ocean AWS Launch Spec resource.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as spotinst from "@pulumi/spotinst";
+
+const example = new spotinst.aws.OceanLaunchSpec("example", {
+    autoscaleHeadrooms: [{
+        cpuPerUnit: 1000,
+        gpuPerUnit: 0,
+        memoryPerUnit: 2048,
+        numOfUnits: 5,
+    }],
+    iamInstanceProfile: "iam-profile",
+    imageId: "ami-123456",
+    labels: [{
+        key: "fakeKey",
+        value: "fakeValue",
+    }],
+    oceanId: "o-123456",
+    rootVolumeSize: 30,
+    securityGroups: ["sg-987654321"],
+    subnetIds: ["subnet-1234"],
+    taints: [{
+        effect: "NoExecute",
+        key: "taint key updated",
+        value: "taint value updated",
+    }],
+    userData: "echo hello world",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/ocean_aws_launch_spec.html.markdown.
 
 

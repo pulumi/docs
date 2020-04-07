@@ -8,6 +8,68 @@ block_external_search_index: true
 
 Provides a Spotinst Ocean AWS resource.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as spotinst from "@pulumi/spotinst";
+
+const example = new spotinst.aws.Ocean("example", {
+    associatePublicIpAddress: true,
+    // --- AUTOSCALER -----------------
+    autoscaler: {
+        autoscaleCooldown: 300,
+        autoscaleDown: {
+            evaluationPeriods: 300,
+        },
+        autoscaleHeadroom: {
+            cpuPerUnit: 1024,
+            gpuPerUnit: 1,
+            memoryPerUnit: 512,
+            numOfUnits: 2,
+        },
+        autoscaleIsAutoConfig: false,
+        autoscaleIsEnabled: false,
+        resourceLimits: {
+            maxMemoryGib: 20,
+            maxVcpu: 1024,
+        },
+    },
+    controllerId: "fakeClusterId",
+    desiredCapacity: 2,
+    drainingTimeout: 120,
+    // --- STRATEGY --------------------
+    fallbackToOndemand: true,
+    iamInstanceProfile: "iam-profile",
+    // --- LAUNCH CONFIGURATION --------------
+    imageId: "ami-123456",
+    keyName: "fake key",
+    loadBalancers: [
+        {
+            arn: "arn:aws:elasticloadbalancing:us-west-2:fake-arn",
+            type: "TARGET_GROUP",
+        },
+        {
+            name: "AntonK",
+            type: "CLASSIC",
+        },
+    ],
+    maxSize: 2,
+    minSize: 1,
+    region: "us-west-2",
+    rootVolumeSize: 20,
+    securityGroups: ["sg-987654321"],
+    spotPercentage: 100,
+    subnetIds: ["subnet-123456789"],
+    userData: "echo hello world",
+    utilizeReservedInstances: false,
+    whitelists: [
+        "t1.micro",
+        "m1.small",
+    ],
+});
+```
+
 ## Update Policy
 
 * `update_policy` - (Optional)

@@ -8,6 +8,30 @@ block_external_search_index: true
 
 Provides a custom Spotinst Ocean ECS Launch Spec resource.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as spotinst from "@pulumi/spotinst";
+
+const example = new spotinst.ecs.OceanLaunchSpec("example", {
+    attributes: [{
+        key: "fakeKey",
+        value: "fakeValue",
+    }],
+    autoscaleHeadrooms: [{
+        cpuPerUnit: 1000,
+        memoryPerUnit: 2048,
+        numOfUnits: 5,
+    }],
+    iamInstanceProfile: "iam-profile",
+    imageId: "ami-123456",
+    oceanId: "o-123456",
+    securityGroupIds: ["awseb-12345"],
+    userData: "echo hello world",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/ocean_ecs_launch_spec.html.markdown.
 
 

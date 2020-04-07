@@ -6,20 +6,6 @@ block_external_search_index: true
 
 
 
-Provides a Spotinst Ocean ECS resource.
-
-## Update Policy
-
-* `update_policy` - (Optional) While used, you can control whether the group should perform a deployment after an update to the configuration.
-    * `should_roll` - (Required) Enables the roll.
-    * `roll_config` - (Required) 
-        * `batch_size_percentage` - (Required) Sets the percentage of the instances to deploy in each batch.
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-
-> This content is derived from https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/ocean_ecs.html.markdown.
 
 
 

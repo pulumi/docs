@@ -8,6 +8,37 @@ block_external_search_index: true
 
 Provides a custom Spotinst Ocean GKE Launch Spec resource.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as spotinst from "@pulumi/spotinst";
+
+const example = new spotinst.gke.OceanLaunchSpec("example", {
+    autoscaleHeadrooms: [{
+        cpuPerUnit: 1000,
+        gpuPerUnit: 0,
+        memoryPerUnit: 2048,
+        numOfUnits: 5,
+    }],
+    labels: [{
+        key: "labelKey",
+        value: "labelVal",
+    }],
+    metadatas: [{
+        key: "gci-update-strategy",
+        value: "update_disabled",
+    }],
+    oceanId: "o-123456",
+    sourceImage: "image",
+    taints: [{
+        effect: "taintEffect",
+        key: "taintKey",
+        value: "taintVal",
+    }],
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/ocean_gke_launch_spec.html.markdown.
 
 

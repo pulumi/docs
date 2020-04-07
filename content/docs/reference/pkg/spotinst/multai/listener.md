@@ -8,6 +8,32 @@ block_external_search_index: true
 
 Provides a Spotinst Multai Listener.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as spotinst from "@pulumi/spotinst";
+
+const myListener = new spotinst.multai.Listener("my_listener", {
+    balancerId: "b-12345",
+    name: "foo",
+    port: 1337,
+    protocol: "http",
+    tags: [{
+        key: "env",
+        value: "prod",
+    }],
+    tlsConfig: {
+        certificateIds: ["ce-12345"],
+        cipherSuites: [""],
+        maxVersion: "TLS12",
+        minVersion: "TLS10",
+        preferServerCipherSuites: true,
+        sessionTicketsDisabled: false,
+    },
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/multai_listener.html.markdown.
 
 

@@ -8,6 +8,34 @@ block_external_search_index: true
 
 Provides a Spotinst Multai Target Set.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as spotinst from "@pulumi/spotinst";
+
+const myTargetSet = new spotinst.multai.TargetSet("my_target_set", {
+    balancerId: "b-12345",
+    deploymentId: "dp-12345",
+    healthCheck: {
+        healthyThreshold: 3,
+        interval: 20,
+        path: "/",
+        port: 3001,
+        protocol: "http",
+        timeout: 5,
+        unhealthyThreshold: 3,
+    },
+    port: 1338,
+    protocol: "http",
+    tags: [{
+        key: "env",
+        value: "prod",
+    }],
+    weight: 2,
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/multai_target_set.html.markdown.
 
 

@@ -6,68 +6,6 @@ block_external_search_index: true
 
 
 
-Provides a Spotinst Elastigroup GKE resource. Please see [Importing a GKE cluster](https://api.spotinst.com/elastigroup-for-google-cloud/tutorials/import-a-gke-cluster-as-an-elastigroup/) for detailed information.
-
-
-## Third-Party Integrations
-
-* `integration_gke` - (Required) Describes the GKE integration.
-
-    * `location` - (Optional) The location of your GKE cluster.
-    * `cluster_id` - (Optional) The GKE cluster ID you wish to import.
-    * `autoscale_is_enabled` -  (Optional, Default: `false`) Specifies whether the auto scaling feature is enabled.
-    * `autoscale_is_autoconfig` - (Optional, Default: `false`) Enabling the automatic auto-scaler functionality. For more information please see: .
-    * `autoscale_cooldown` - (Optional, Default: `300`) The amount of time, in seconds, after a scaling activity completes before any further trigger-related scaling activities can start.
-    
-    * `autoscale_headroom` - (Optional) Headroom for the cluster.
-        * `cpu_per_unit` - (Optional, Default: `0`) Cpu units for compute.
-        * `memory_per_unit` - (Optional, Default: `0`) RAM units for compute.
-        * `num_of_units` - (Optional, Default: `0`) Amount of units for compute.
-    
-    * `autoscale_down` - (Optional) Enabling scale down.
-        * `evaluation_periods` - (Optional, Default: `5`) Amount of cooldown evaluation periods for scale down.
-    
-    * `autoscale_labels` - (Optional) Labels to assign to the resource.
-        * `key` - (Optional) The label name.
-        * `value` - (Optional) The label value.
-    
-            
-Usage:
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-
-<a id="diff-suppressed-parameters"></a>
-## Diff-suppressed Parameters
-
-The following parameters are created remotely and imported. The diffs have been suppressed in order to maintain plan legibility. You may update the values of these
-imported parameters by defining them in your template with your desired new value (including null values).
-
-* `backend_services`
-    * `service_name`
-    * `location_type`
-    * `scheme`
-    * `named_port`
-        * `port_name`
-        * `ports`
-* `labels`
-    * `key`
-    * `value`
-* `metadata`
-    * `key`
-    * `value`
-* `tags`
-    * `key`
-    * `value`
-* `service_account`
-* `ip_forwarding`
-* `fallback_to_od`
-* `subnets`
-    * `region`
-    * `subnet_name`
-
-> This content is derived from https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/elastigroup_gke.html.markdown.
 
 
 

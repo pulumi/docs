@@ -8,6 +8,28 @@ block_external_search_index: true
 
 Provides a Spotinst subscription resource.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as spotinst from "@pulumi/spotinst";
+
+// Create a Subscription
+const default_subscription = new spotinst.Subscription("default-subscription", {
+    endpoint: "http://endpoint.com",
+    eventType: "AWS_EC2_INSTANCE_LAUNCH",
+    format: {
+        event: "%event%",
+        instance_id: "%instance-id%",
+        resource_id: "%resource-id%",
+        resource_name: "%resource-name%",
+        tags: "foo,baz,baz",
+    },
+    protocol: "http",
+    resourceId: spotinst_elastigroup_aws_my_eg.id,
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/subscription.html.markdown.
 
 

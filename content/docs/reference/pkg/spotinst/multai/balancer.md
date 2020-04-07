@@ -8,6 +8,25 @@ block_external_search_index: true
 
 Provides a Spotinst Multai Balancer.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as spotinst from "@pulumi/spotinst";
+
+const myBalancer = new spotinst.multai.Balancer("my_balancer", {
+    connectionTimeouts: {
+        draining: 10,
+        idle: 10,
+    },
+    scheme: "internal",
+    tags: [{
+        key: "env",
+        value: "prod",
+    }],
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/multai_balancer.html.markdown.
 
 

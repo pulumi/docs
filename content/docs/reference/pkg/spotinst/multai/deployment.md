@@ -8,6 +8,15 @@ block_external_search_index: true
 
 Provides a Spotinst Multai Deployment.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as spotinst from "@pulumi/spotinst";
+
+const myDeployment = new spotinst.multai.Deployment("my_deployment", {});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/multai_deployment.html.markdown.
 
 

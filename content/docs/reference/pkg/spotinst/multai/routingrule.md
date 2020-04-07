@@ -8,6 +8,24 @@ block_external_search_index: true
 
 Provides a Spotinst Multai Routing Rule.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as spotinst from "@pulumi/spotinst";
+
+const myRoutingRule = new spotinst.multai.RoutingRule("my_routing_rule", {
+    balancerId: "b-12345",
+    listenerId: "l-98765",
+    route: "Path(`/bar`)",
+    strategy: "LEASTCONN",
+    tags: [{
+        key: "env",
+        value: "prod",
+    }],
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/multai_routing_rule.html.markdown.
 
 

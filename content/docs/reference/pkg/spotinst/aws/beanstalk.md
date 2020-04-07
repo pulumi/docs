@@ -8,6 +8,44 @@ block_external_search_index: true
 
 Provides a Spotinst AWS group resource using Elastic Beanstalk.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as spotinst from "@pulumi/spotinst";
+
+const elastigoup_aws_beanstalk = new spotinst.aws.Beanstalk("elastigoup-aws-beanstalk", {
+    beanstalkEnvironmentId: "e-example",
+    beanstalkEnvironmentName: "example-env",
+    deploymentPreferences: {
+        automaticRoll: true,
+        batchSizePercentage: 100,
+        gracePeriod: 90,
+        strategies: [{
+            action: "REPLACE_SERVER",
+            shouldDrainInstances: true,
+        }],
+    },
+    desiredCapacity: 0,
+    instanceTypesSpots: [
+        "t2.micro",
+        "t2.medium",
+        "t2.large",
+    ],
+    managedActions: {
+        platformUpdate: {
+            performAt: "timeWindow",
+            timeWindow: "Mon:23:50-Tue:00:20",
+            updateLevel: "minorAndPatch",
+        },
+    },
+    maxSize: 1,
+    minSize: 0,
+    product: "Linux/UNIX",
+    region: "us-west-2",
+});
+```
+
 ## Scheduled Tasks
 
 Each `scheduled_task` supports the following:
