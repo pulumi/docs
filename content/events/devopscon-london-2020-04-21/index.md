@@ -14,9 +14,9 @@ event:
     # The event address
     location: "239 Vauxhall Bridge Rd, Pimlico, London SW1V 1EQ, United Kingdom"
     # The start date of an event. Format YYYY-MM-DD
-    start_date: "2020-04-21"
+    start_date: "2020-08-31"
     # The end date of an event. Format YYYY-MM-DD
-    end_date: "2020-04-24"
+    end_date: "2020-09-03"
     # The event description shown on the event list page.
     description: "The Conference for Continuous Delivery, DevOps, Microservices, Containers, Cloud and Lean Business."
     # The external registration url for the event list page.
