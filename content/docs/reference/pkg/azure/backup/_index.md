@@ -7,6 +7,7 @@ block_external_search_index: true
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 
+
 <h3>Resources</h3>
 <ul class="api">
     <li><a href="containerstorageaccount" title="ContainerStorageAccount"><span class="symbol resource"></span>ContainerStorageAccount</a></li>
