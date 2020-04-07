@@ -18,6 +18,22 @@ Three different resources help you manage your IAM policy for KMS crypto key. Ea
 
 With IAM Conditions:
 
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const admin = pulumi.output(gcp.organizations.getIAMPolicy({
+    bindings: [{
+        condition: {
+            description: "Expiring at midnight of 2019-12-31",
+            expression: "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+            title: "expires_after_2019_12_31",
+        },
+        members: ["user:jane@example.com"],
+        role: "roles/cloudkms.cryptoKeyEncrypter",
+    }],
+}, { async: true }));
+```
 
 With IAM Conditions:
 

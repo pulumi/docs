@@ -10,6 +10,39 @@ Creates a Google Bigtable instance. For more information see
 [the official documentation](https://cloud.google.com/bigtable/) and
 [API](https://cloud.google.com/bigtable/docs/go/reference).
 
+
+## Example Usage - Production Instance
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const production_instance = new gcp.bigtable.Instance("production-instance", {
+    clusters: [{
+        clusterId: "tf-instance-cluster",
+        numNodes: 3,
+        storageType: "HDD",
+        zone: "us-central1-b",
+    }],
+});
+```
+
+## Example Usage - Development Instance
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const development_instance = new gcp.bigtable.Instance("development-instance", {
+    clusters: [{
+        clusterId: "tf-instance-cluster",
+        storageType: "HDD",
+        zone: "us-central1-b",
+    }],
+    instanceType: "DEVELOPMENT",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/bigtable_instance.html.markdown.
 
 

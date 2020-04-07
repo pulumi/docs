@@ -13,6 +13,21 @@ Creates a new object inside an existing bucket in Google cloud storage service (
 and 
 [API](https://cloud.google.com/storage/docs/json_api/v1/objects).
 
+
+## Example Usage
+
+Example creating a public object in an existing `image-store` bucket.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const picture = new gcp.storage.BucketObject("picture", {
+    bucket: "image-store",
+    source: new pulumi.asset.FileAsset("/images/nature/garden-tiger-moth.jpg"),
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_bucket_object.html.markdown.
 
 

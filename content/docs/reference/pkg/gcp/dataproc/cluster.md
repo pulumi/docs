@@ -14,6 +14,100 @@ Manages a Cloud Dataproc cluster resource within GCP. For more information see
 `labels`,`cluster_config.worker_config.num_instances` and `cluster_config.preemptible_worker_config.num_instances` are non-updatable. Changing others will cause recreation of the
 whole cluster!
 
+## Example Usage - Basic
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const simplecluster = new gcp.dataproc.Cluster("simplecluster", {
+    region: "us-central1",
+});
+```
+
+## Example Usage - Advanced
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const mycluster = new gcp.dataproc.Cluster("mycluster", {
+    clusterConfig: {
+        gceClusterConfig: {
+            serviceAccountScopes: [
+                "https://www.googleapis.com/auth/monitoring",
+                "useraccounts-ro",
+                "storage-rw",
+                "logging-write",
+            ],
+            tags: [
+                "foo",
+                "bar",
+            ],
+        },
+        // You can define multiple initialization_action blocks
+        initializationActions: [{
+            script: "gs://dataproc-initialization-actions/stackdriver/stackdriver.sh",
+            timeoutSec: 500,
+        }],
+        masterConfig: {
+            diskConfig: {
+                bootDiskSizeGb: 15,
+                bootDiskType: "pd-ssd",
+            },
+            machineType: "n1-standard-1",
+            numInstances: 1,
+        },
+        preemptibleWorkerConfig: {
+            numInstances: 0,
+        },
+        // Override or set some custom properties
+        softwareConfig: {
+            imageVersion: "1.3.7-deb9",
+            overrideProperties: {
+                "dataproc:dataproc.allow.zero.workers": "true",
+            },
+        },
+        stagingBucket: "dataproc-staging-bucket",
+        workerConfig: {
+            diskConfig: {
+                bootDiskSizeGb: 15,
+                numLocalSsds: 1,
+            },
+            machineType: "n1-standard-1",
+            minCpuPlatform: "Intel Skylake",
+            numInstances: 2,
+        },
+    },
+    labels: {
+        foo: "bar",
+    },
+    region: "us-central1",
+});
+```
+
+## Example Usage - Using a GPU accelerator
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const acceleratedCluster = new gcp.dataproc.Cluster("accelerated_cluster", {
+    clusterConfig: {
+        gceClusterConfig: {
+            zone: "us-central1-a",
+        },
+        masterConfig: {
+            accelerators: [{
+                acceleratorCount: 1,
+                acceleratorType: "nvidia-tesla-k80",
+            }],
+        },
+    },
+    region: "us-central1",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/dataproc_cluster.html.markdown.
 
 

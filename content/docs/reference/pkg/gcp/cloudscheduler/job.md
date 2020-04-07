@@ -20,6 +20,48 @@ To get more information about Job, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/scheduler/)
 
+## Example Usage - Scheduler Job Http
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const job = new gcp.cloudscheduler.Job("job", {
+    attemptDeadline: "320s",
+    description: "test http job",
+    httpTarget: {
+        httpMethod: "POST",
+        uri: "https://example.com/ping",
+    },
+    schedule: "*/8 * * * *",
+    timeZone: "America/New_York",
+});
+```
+## Example Usage - Scheduler Job App Engine
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const job = new gcp.cloudscheduler.Job("job", {
+    appEngineHttpTarget: {
+        appEngineRouting: {
+            instance: "my-instance-001",
+            service: "web",
+            version: "prod",
+        },
+        httpMethod: "POST",
+        relativeUri: "/ping",
+    },
+    attemptDeadline: "320s",
+    description: "test app engine job",
+    schedule: "*/4 * * * *",
+    timeZone: "Europe/London",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloud_scheduler_job.html.markdown.
 
 

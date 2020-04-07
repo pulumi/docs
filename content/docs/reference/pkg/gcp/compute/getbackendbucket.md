@@ -8,6 +8,17 @@ block_external_search_index: true
 
 Get information about a BackendBucket.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const my_backend_bucket = pulumi.output(gcp.compute.getBackendBucket({
+    name: "my-backend",
+}, { async: true }));
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/datasource_google_compute_backend_bucket.html.markdown.
 
 

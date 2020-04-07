@@ -12,6 +12,23 @@ You must enable the
 [Google Identity Platform](https://console.cloud.google.com/marketplace/details/google-cloud-platform/customer-identity) in
 the marketplace prior to using this resource.
 
+
+
+## Example Usage - Identity Platform Default Supported Idp Config Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const idpConfig = new gcp.identityplatform.DefaultSupportedIdpConfig("idp_config", {
+    clientId: "client-id",
+    clientSecret: "secret",
+    enabled: true,
+    idpId: "playgames.google.com",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/identity_platform_default_supported_idp_config.html.markdown.
 
 

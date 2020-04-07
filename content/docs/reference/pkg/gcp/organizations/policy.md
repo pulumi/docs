@@ -11,6 +11,74 @@ Allows management of Organization policies for a Google Organization. For more i
 documentation](https://cloud.google.com/resource-manager/docs/organization-policy/overview) and
 [API](https://cloud.google.com/resource-manager/reference/rest/v1/organizations/setOrgPolicy).
 
+## Example Usage
+
+To set policy with a [boolean constraint](https://cloud.google.com/resource-manager/docs/organization-policy/quickstart-boolean-constraints):
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const serialPortPolicy = new gcp.organizations.Policy("serial_port_policy", {
+    booleanPolicy: {
+        enforced: true,
+    },
+    constraint: "compute.disableSerialPortAccess",
+    orgId: "123456789",
+});
+```
+
+
+To set a policy with a [list constraint](https://cloud.google.com/resource-manager/docs/organization-policy/quickstart-list-constraints):
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const servicesPolicy = new gcp.organizations.Policy("services_policy", {
+    constraint: "serviceuser.services",
+    listPolicy: {
+        allow: {
+            all: true,
+        },
+    },
+    orgId: "123456789",
+});
+```
+
+Or to deny some services, use the following instead:
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const servicesPolicy = new gcp.organizations.Policy("services_policy", {
+    constraint: "serviceuser.services",
+    listPolicy: {
+        deny: {
+            values: ["cloudresourcemanager.googleapis.com"],
+        },
+        suggestedValue: "compute.googleapis.com",
+    },
+    orgId: "123456789",
+});
+```
+
+To restore the default organization policy, use the following instead:
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const servicesPolicy = new gcp.organizations.Policy("services_policy", {
+    constraint: "serviceuser.services",
+    orgId: "123456789",
+    restorePolicy: {
+        default: true,
+    },
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_organization_policy.html.markdown.
 
 

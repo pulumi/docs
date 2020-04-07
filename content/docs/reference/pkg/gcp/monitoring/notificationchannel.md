@@ -31,6 +31,40 @@ To get more information about NotificationChannel, see:
     * [Notification Options](https://cloud.google.com/monitoring/support/notification-options)
     * [Monitoring API Documentation](https://cloud.google.com/monitoring/api/v3/)
 
+## Example Usage - Notification Channel Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const basic = new gcp.monitoring.NotificationChannel("basic", {
+    displayName: "Test Notification Channel",
+    labels: {
+        email_address: "fake_email@blahblah.com",
+    },
+    type: "email",
+});
+```
+## Example Usage - Notification Channel Sensitive
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultNotificationChannel = new gcp.monitoring.NotificationChannel("default", {
+    displayName: "Test Slack Channel",
+    labels: {
+        channel_name: "#foobar",
+    },
+    sensitiveLabels: {
+        authToken: "one",
+    },
+    type: "slack",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/monitoring_notification_channel.html.markdown.
 
 

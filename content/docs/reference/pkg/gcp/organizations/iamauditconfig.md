@@ -8,6 +8,22 @@ block_external_search_index: true
 
 Allows management of audit logging config for a given service for a Google Cloud Platform Organization.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const config = new gcp.organizations.IamAuditConfig("config", {
+    auditLogConfigs: [{
+        exemptedMembers: ["user:joebloggs@hashicorp.com"],
+        logType: "DATA_READ",
+    }],
+    orgId: "your-organization-id",
+    service: "allServices",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_organization_iam_audit_config.html.markdown.
 
 

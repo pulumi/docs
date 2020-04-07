@@ -29,6 +29,42 @@ To get more information about Environments, see:
   * **Environments create Google Cloud Storage buckets that do not get cleaned up automatically** on environment 
     deletion. [More about Composer's use of Cloud Storage](https://cloud.google.com/composer/docs/concepts/cloud-storage).
 
+## Example Usage
+
+### Basic Usage
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const test = new gcp.composer.Environment("test", {
+    region: "us-central1",
+});
+```
+
+### With Software (Airflow) Config
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const test = new gcp.composer.Environment("test", {
+    config: {
+        softwareConfig: {
+            airflowConfigOverrides: {
+                "core-load_example": "True",
+            },
+            envVariables: {
+                FOO: "bar",
+            },
+            pypiPackages: {
+                numpy: "",
+                scipy: "==1.1.0",
+            },
+        },
+    },
+    region: "us-central1",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/composer_environment.html.markdown.
 
 

@@ -18,6 +18,20 @@ To get more information about Source, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/binary-authorization/)
 
+## Example Usage - Scc Source Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const customSource = new gcp.securitycenter.Source("custom_source", {
+    description: "My custom Cloud Security Command Center Finding Source",
+    displayName: "My Source",
+    organization: "123456789",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/scc_source.html.markdown.
 
 

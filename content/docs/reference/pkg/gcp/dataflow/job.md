@@ -10,6 +10,22 @@ Creates a job on Dataflow, which is an implementation of Apache Beam running on 
 the official documentation for
 [Beam](https://beam.apache.org) and [Dataflow](https://cloud.google.com/dataflow/).
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const bigDataJob = new gcp.dataflow.Job("big_data_job", {
+    parameters: {
+        baz: "qux",
+        foo: "bar",
+    },
+    tempGcsLocation: "gs://my-bucket/tmp_dir",
+    templateGcsPath: "gs://my-bucket/templates/template_file",
+});
+```
+
 ## Note on "destroy" / "apply"
 
 There are many types of Dataflow jobs.  Some Dataflow jobs run constantly, getting new data from (e.g.) a GCS bucket, and outputting data continuously.  Some jobs process a set amount of data then terminate.  All jobs can fail while running due to programming errors or other issues.  In this way, Dataflow jobs are different from most other Google resources.

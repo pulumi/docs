@@ -15,6 +15,33 @@ To get more information about Topic, see:
 * How-to Guides
     * [Managing Topics](https://cloud.google.com/pubsub/docs/admin#managing_topics)
 
+## Example Usage - Pubsub Topic Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const example = new gcp.pubsub.Topic("example", {
+    labels: {
+        foo: "bar",
+    },
+});
+```
+## Example Usage - Pubsub Topic Geo Restricted
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const example = new gcp.pubsub.Topic("example", {
+    messageStoragePolicy: {
+        allowedPersistenceRegions: ["europe-west3"],
+    },
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/pubsub_topic.html.markdown.
 
 

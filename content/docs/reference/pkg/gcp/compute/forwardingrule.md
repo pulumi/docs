@@ -17,6 +17,44 @@ To get more information about ForwardingRule, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/compute/docs/load-balancing/network/forwarding-rules)
 
+## Example Usage - Forwarding Rule Global Internallb
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const hc = new gcp.compute.HealthCheck("hc", {
+    checkIntervalSec: 1,
+    tcpHealthCheck: {
+        port: 80,
+    },
+    timeoutSec: 1,
+});
+const backend = new gcp.compute.RegionBackendService("backend", {
+    healthChecks: hc.selfLink,
+    region: "us-central1",
+});
+const defaultNetwork = new gcp.compute.Network("default", {
+    autoCreateSubnetworks: false,
+});
+const defaultSubnetwork = new gcp.compute.Subnetwork("default", {
+    ipCidrRange: "10.0.0.0/16",
+    network: defaultNetwork.selfLink,
+    region: "us-central1",
+});
+// Forwarding rule for Internal Load Balancing
+const defaultForwardingRule = new gcp.compute.ForwardingRule("default", {
+    allPorts: true,
+    allowGlobalAccess: true,
+    backendService: backend.selfLink,
+    loadBalancingScheme: "INTERNAL",
+    network: defaultNetwork.name,
+    region: "us-central1",
+    subnetwork: defaultSubnetwork.name,
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_forwarding_rule.html.markdown.
 
 

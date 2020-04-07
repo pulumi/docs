@@ -30,6 +30,41 @@ To get more information about Image, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/compute/docs/images)
 
+## Example Usage - Image Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const example = new gcp.compute.Image("example", {
+    rawDisk: {
+        source: "https://storage.googleapis.com/bosh-cpi-artifacts/bosh-stemcell-3262.4-google-kvm-ubuntu-trusty-go_agent-raw.tar.gz",
+    },
+});
+```
+## Example Usage - Image Guest Os
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const example = new gcp.compute.Image("example", {
+    guestOsFeatures: [
+        {
+            type: "SECURE_BOOT",
+        },
+        {
+            type: "MULTI_IP_SUBNET",
+        },
+    ],
+    rawDisk: {
+        source: "https://storage.googleapis.com/bosh-cpi-artifacts/bosh-stemcell-3262.4-google-kvm-ubuntu-trusty-go_agent-raw.tar.gz",
+    },
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_image.html.markdown.
 
 

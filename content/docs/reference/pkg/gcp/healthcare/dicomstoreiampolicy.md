@@ -16,6 +16,32 @@ Three different resources help you manage your IAM policy for Healthcare DICOM s
 
 > **Note:** `gcp.healthcare.DicomStoreIamBinding` resources **can be** used in conjunction with `gcp.healthcare.DicomStoreIamMember` resources **only if** they do not grant privilege to the same role.
 
+## google\_healthcare\_dicom\_store\_iam\_binding
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const dicomStore = new gcp.healthcare.DicomStoreIamBinding("dicom_store", {
+    dicomStoreId: "your-dicom-store-id",
+    members: ["user:jane@example.com"],
+    role: "roles/editor",
+});
+```
+
+## google\_healthcare\_dicom\_store\_iam\_member
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const dicomStore = new gcp.healthcare.DicomStoreIamMember("dicom_store", {
+    dicomStoreId: "your-dicom-store-id",
+    member: "user:jane@example.com",
+    role: "roles/editor",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_dicom_store_iam.html.markdown.
 
 

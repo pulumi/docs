@@ -18,6 +18,23 @@ To get more information about RouterBgpPeer, see:
 * How-to Guides
     * [Google Cloud Router](https://cloud.google.com/router/docs/)
 
+## Example Usage - Router Peer Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const peer = new gcp.compute.RouterPeer("peer", {
+    advertisedRoutePriority: 100,
+    interface: "interface-1",
+    peerAsn: 65513,
+    peerIpAddress: "169.254.1.2",
+    region: "us-central1",
+    router: "my-router",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_router_bgp_peer.html.markdown.
 
 

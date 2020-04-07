@@ -17,6 +17,33 @@ To get more information about Index, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/firestore/docs/query-data/indexing)
 
+## Example Usage - Firestore Index Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const my_index = new gcp.firestore.Index("my-index", {
+    collection: "chatrooms",
+    fields: [
+        {
+            fieldPath: "name",
+            order: "ASCENDING",
+        },
+        {
+            fieldPath: "description",
+            order: "DESCENDING",
+        },
+        {
+            fieldPath: "__name__",
+            order: "DESCENDING",
+        },
+    ],
+    project: "my-project-name",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/firestore_index.html.markdown.
 
 

@@ -16,6 +16,32 @@ Three different resources help you manage your IAM policy for Healthcare dataset
 
 > **Note:** `gcp.healthcare.DatasetIamBinding` resources **can be** used in conjunction with `gcp.healthcare.DatasetIamMember` resources **only if** they do not grant privilege to the same role.
 
+## google\_healthcare\_dataset\_iam\_binding
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const dataset = new gcp.healthcare.DatasetIamBinding("dataset", {
+    datasetId: "your-dataset-id",
+    members: ["user:jane@example.com"],
+    role: "roles/editor",
+});
+```
+
+## google\_healthcare\_dataset\_iam\_member
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const dataset = new gcp.healthcare.DatasetIamMember("dataset", {
+    datasetId: "your-dataset-id",
+    member: "user:jane@example.com",
+    role: "roles/editor",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_dataset_iam.html.markdown.
 
 

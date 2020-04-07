@@ -17,6 +17,19 @@ an existing Google Cloud Platform Organization.
     Use `pulumi import` and inspect the `output to ensure
     your existing members are preserved.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const binding = new gcp.organizations.IAMBinding("binding", {
+    members: ["user:alice@gmail.com"],
+    orgId: "123456789",
+    role: "roles/browser",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_organization_iam_binding.html.markdown.
 
 

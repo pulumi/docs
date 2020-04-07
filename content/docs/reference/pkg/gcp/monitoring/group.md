@@ -18,6 +18,19 @@ To get more information about Group, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/monitoring/groups/)
 
+## Example Usage - Monitoring Group Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const basic = new gcp.monitoring.Group("basic", {
+    displayName: "tf-test MonitoringGroup",
+    filter: "resource.metadata.region=\"europe-west2\"",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/monitoring_group.html.markdown.
 
 

@@ -19,6 +19,34 @@ Three different resources help you manage your IAM policy for a Spanner database
 
 > **Note:** `gcp.spanner.DatabaseIAMBinding` resources **can be** used in conjunction with `gcp.spanner.DatabaseIAMMember` resources **only if** they do not grant privilege to the same role.
 
+## google\_spanner\_database\_iam\_binding
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const database = new gcp.spanner.DatabaseIAMBinding("database", {
+    database: "your-database-name",
+    instance: "your-instance-name",
+    members: ["user:jane@example.com"],
+    role: "roles/compute.networkUser",
+});
+```
+
+## google\_spanner\_database\_iam\_member
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const database = new gcp.spanner.DatabaseIAMMember("database", {
+    database: "your-database-name",
+    instance: "your-instance-name",
+    member: "user:jane@example.com",
+    role: "roles/compute.networkUser",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/spanner_database_iam.html.markdown.
 
 

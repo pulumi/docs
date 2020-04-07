@@ -19,6 +19,32 @@ Three different resources help you manage your IAM policy for a Spanner instance
 
 > **Note:** `gcp.spanner.InstanceIAMBinding` resources **can be** used in conjunction with `gcp.spanner.InstanceIAMMember` resources **only if** they do not grant privilege to the same role.
 
+## google\_spanner\_instance\_iam\_binding
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const instance = new gcp.spanner.InstanceIAMBinding("instance", {
+    instance: "your-instance-name",
+    members: ["user:jane@example.com"],
+    role: "roles/compute.networkUser",
+});
+```
+
+## google\_spanner\_instance\_iam\_member
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const instance = new gcp.spanner.InstanceIAMMember("instance", {
+    instance: "your-instance-name",
+    member: "user:jane@example.com",
+    role: "roles/compute.networkUser",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/spanner_instance_iam.html.markdown.
 
 

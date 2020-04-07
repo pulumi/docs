@@ -8,6 +8,58 @@ block_external_search_index: true
 
 A policy that can be attached to a resource to specify or schedule actions on that resource.
 
+
+
+## Example Usage - Resource Policy Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const foo = new gcp.compute.ResourcePolicy("foo", {
+    region: "us-central1",
+    snapshotSchedulePolicy: {
+        schedule: {
+            dailySchedule: {
+                daysInCycle: 1,
+                startTime: "04:00",
+            },
+        },
+    },
+});
+```
+## Example Usage - Resource Policy Full
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const bar = new gcp.compute.ResourcePolicy("bar", {
+    region: "us-central1",
+    snapshotSchedulePolicy: {
+        retentionPolicy: {
+            maxRetentionDays: 10,
+            onSourceDiskDelete: "KEEP_AUTO_SNAPSHOTS",
+        },
+        schedule: {
+            hourlySchedule: {
+                hoursInCycle: 20,
+                startTime: "23:00",
+            },
+        },
+        snapshotProperties: {
+            guestFlush: true,
+            labels: {
+                my_label: "value",
+            },
+            storageLocations: "us",
+        },
+    },
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_resource_policy.html.markdown.
 
 

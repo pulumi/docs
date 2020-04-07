@@ -15,6 +15,16 @@ To get more information about Network, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/vpc/docs/vpc)
 
+## Example Usage - Network Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const vpcNetwork = new gcp.compute.Network("vpc_network", {});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_network.html.markdown.
 
 

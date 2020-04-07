@@ -16,6 +16,32 @@ Three different resources help you manage your IAM policy for Healthcare HL7v2 s
 
 > **Note:** `gcp.healthcare.Hl7StoreIamBinding` resources **can be** used in conjunction with `gcp.healthcare.Hl7StoreIamMember` resources **only if** they do not grant privilege to the same role.
 
+## google\_healthcare\_hl7\_v2\_store\_iam\_binding
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const hl7V2Store = new gcp.healthcare.Hl7StoreIamBinding("hl7_v2_store", {
+    hl7V2StoreId: "your-hl7-v2-store-id",
+    members: ["user:jane@example.com"],
+    role: "roles/editor",
+});
+```
+
+## google\_healthcare\_hl7\_v2\_store\_iam\_member
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const hl7V2Store = new gcp.healthcare.Hl7StoreIamMember("hl7_v2_store", {
+    hl7V2StoreId: "your-hl7-v2-store-id",
+    member: "user:jane@example.com",
+    role: "roles/editor",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_hl7_v2_store_iam.html.markdown.
 
 

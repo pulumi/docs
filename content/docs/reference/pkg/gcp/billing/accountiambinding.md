@@ -17,6 +17,19 @@ an existing Google Cloud Platform Billing Account.
     Use `pulumi import` and inspect the output to ensure
     your existing members are preserved.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const binding = new gcp.billing.AccountIamBinding("binding", {
+    billingAccountId: "00AA00-000AAA-00AA0A",
+    members: ["user:alice@gmail.com"],
+    role: "roles/billing.viewer",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_billing_account_iam_binding.html.markdown.
 
 

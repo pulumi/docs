@@ -20,6 +20,18 @@ To get more information about KeyRing, see:
 * How-to Guides
     * [Creating a key ring](https://cloud.google.com/kms/docs/creating-keys#create_a_key_ring)
 
+## Example Usage - Kms Key Ring Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const example_keyring = new gcp.kms.KeyRing("example-keyring", {
+    location: "global",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/kms_key_ring.html.markdown.
 
 

@@ -12,6 +12,24 @@ You must enable the
 [Google Identity Platform](https://console.cloud.google.com/marketplace/details/google-cloud-platform/customer-identity) in
 the marketplace prior to using this resource.
 
+
+
+## Example Usage - Identity Platform Oauth Idp Config Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const oauthIdpConfig = new gcp.identityplatform.OauthIdpConfig("oauth_idp_config", {
+    clientId: "client-id",
+    clientSecret: "secret",
+    displayName: "Display Name",
+    enabled: true,
+    issuer: "issuer",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/identity_platform_oauth_idp_config.html.markdown.
 
 

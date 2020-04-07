@@ -15,6 +15,21 @@ To get more information about DomainMapping, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/appengine/docs/standard/python/mapping-custom-domains)
 
+## Example Usage - App Engine Domain Mapping Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const domainMapping = new gcp.appengine.DomainMapping("domain_mapping", {
+    domainName: "verified-domain.com",
+    sslSettings: {
+        sslManagementType: "AUTOMATIC",
+    },
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/app_engine_domain_mapping.html.markdown.
 
 

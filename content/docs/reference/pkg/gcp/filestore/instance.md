@@ -17,6 +17,27 @@ To get more information about Instance, see:
     * [Use with Kubernetes](https://cloud.google.com/filestore/docs/accessing-fileshares)
     * [Copying Data In/Out](https://cloud.google.com/filestore/docs/copying-data)
 
+## Example Usage - Filestore Instance Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const instance = new gcp.filestore.Instance("instance", {
+    fileShares: {
+        capacityGb: 2660,
+        name: "share1",
+    },
+    networks: [{
+        modes: ["MODE_IPV4"],
+        network: "default",
+    }],
+    tier: "PREMIUM",
+    zone: "us-central1-b",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/filestore_instance.html.markdown.
 
 

@@ -23,6 +23,20 @@ To get more information about HttpsHealthCheck, see:
 * How-to Guides
     * [Adding Health Checks](https://cloud.google.com/compute/docs/load-balancing/health-checks#legacy_health_checks)
 
+## Example Usage - Https Health Check Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultHttpsHealthCheck = new gcp.compute.HttpsHealthCheck("default", {
+    checkIntervalSec: 1,
+    requestPath: "/health_check",
+    timeoutSec: 1,
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_https_health_check.html.markdown.
 
 

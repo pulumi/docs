@@ -8,6 +8,20 @@ block_external_search_index: true
 
 A named resource to which messages are sent by publishers.
 
+
+
+## Example Usage - Queue Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultQueue = new gcp.cloudtasks.Queue("default", {
+    location: "us-central1",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloud_tasks_queue.html.markdown.
 
 

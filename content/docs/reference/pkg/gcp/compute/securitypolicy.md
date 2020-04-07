@@ -10,6 +10,40 @@ A Security Policy defines an IP blacklist or whitelist that protects load balanc
 see the [official documentation](https://cloud.google.com/armor/docs/configure-security-policies)
 and the [API](https://cloud.google.com/compute/docs/reference/rest/beta/securityPolicies).
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const policy = new gcp.compute.SecurityPolicy("policy", {
+    rules: [
+        {
+            action: "deny(403)",
+            description: "Deny access to IPs in 9.9.9.0/24",
+            match: {
+                config: {
+                    srcIpRanges: ["9.9.9.0/24"],
+                },
+                versionedExpr: "SRC_IPS_V1",
+            },
+            priority: 1000,
+        },
+        {
+            action: "allow",
+            description: "default rule",
+            match: {
+                config: {
+                    srcIpRanges: ["*"],
+                },
+                versionedExpr: "SRC_IPS_V1",
+            },
+            priority: 2147483647,
+        },
+    ],
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_security_policy.html.markdown.
 
 

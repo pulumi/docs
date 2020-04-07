@@ -12,6 +12,23 @@ Cloud Console and appears the same as a regular Cloud SQL instance, but it
 contains no data, requires no configuration or maintenance, and does not
 affect billing. You cannot update the source representation instance.
 
+
+
+## Example Usage - Sql Source Representation Instance Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const instance = new gcp.sql.SourceRepresentationInstance("instance", {
+    databaseVersion: "MYSQL_5_7",
+    host: "10.20.30.40",
+    port: 3306,
+    region: "us-central1",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/sql_source_representation_instance.html.markdown.
 
 

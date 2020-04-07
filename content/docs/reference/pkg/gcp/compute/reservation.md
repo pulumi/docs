@@ -22,6 +22,25 @@ To get more information about Reservation, see:
 * How-to Guides
     * [Reserving zonal resources](https://cloud.google.com/compute/docs/instances/reserving-zonal-resources)
 
+## Example Usage - Reservation Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const gceReservation = new gcp.compute.Reservation("gce_reservation", {
+    specificReservation: {
+        count: 1,
+        instanceProperties: {
+            machineType: "n2-standard-2",
+            minCpuPlatform: "Intel Cascade Lake",
+        },
+    },
+    zone: "us-central1-a",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_reservation.html.markdown.
 
 

@@ -16,6 +16,32 @@ Three different resources help you manage your IAM policy for pubsub subscriptio
 
 > **Note:** `gcp.pubsub.SubscriptionIAMBinding` resources **can be** used in conjunction with `gcp.pubsub.SubscriptionIAMMember` resources **only if** they do not grant privilege to the same role.
 
+## google\_pubsub\_subscription\_iam\_binding
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const editor = new gcp.pubsub.SubscriptionIAMBinding("editor", {
+    members: ["user:jane@example.com"],
+    role: "roles/editor",
+    subscription: "your-subscription-name",
+});
+```
+
+## google\_pubsub\_subscription\_iam\_member
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const editor = new gcp.pubsub.SubscriptionIAMMember("editor", {
+    member: "user:jane@example.com",
+    role: "roles/editor",
+    subscription: "your-subscription-name",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/pubsub_subscription_iam.html.markdown.
 
 

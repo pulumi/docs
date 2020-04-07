@@ -12,6 +12,20 @@ Allows management of a [Google Cloud Platform service account](https://cloud.goo
 errors when you try to apply ACLs to service accounts immediately after
 creation.
 
+## Example Usage
+
+This snippet creates a service account in a project.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const serviceAccount = new gcp.serviceAccount.Account("service_account", {
+    accountId: "service_account_id",
+    displayName: "Service Account",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_service_account.html.markdown.
 
 

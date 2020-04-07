@@ -11,6 +11,47 @@ Manages a VM instance resource within GCE. For more information see
 and
 [API](https://cloud.google.com/compute/docs/reference/latest/instances).
 
+
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultInstance = new gcp.compute.Instance("default", {
+    bootDisk: {
+        initializeParams: {
+            image: "debian-cloud/debian-9",
+        },
+    },
+    machineType: "n1-standard-1",
+    metadata: {
+        foo: "bar",
+    },
+    metadataStartupScript: "echo hi > /test.txt",
+    networkInterfaces: [{
+        accessConfigs: [{}],
+        network: "default",
+    }],
+    // Local SSD disk
+    scratchDisks: [{
+        interface: "SCSI",
+    }],
+    serviceAccount: {
+        scopes: [
+            "userinfo-email",
+            "compute-ro",
+            "storage-ro",
+        ],
+    },
+    tags: [
+        "foo",
+        "bar",
+    ],
+    zone: "us-central1-a",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_instance.html.markdown.
 
 

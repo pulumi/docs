@@ -16,6 +16,32 @@ Three different resources help you manage IAM policies on dataproc clusters. Eac
 
 > **Note:** `gcp.dataproc.ClusterIAMBinding` resources **can be** used in conjunction with `gcp.dataproc.ClusterIAMMember` resources **only if** they do not grant privilege to the same role.
 
+## google\_pubsub\_subscription\_iam\_binding
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const editor = new gcp.dataproc.ClusterIAMBinding("editor", {
+    cluster: "your-dataproc-cluster",
+    members: ["user:jane@example.com"],
+    role: "roles/editor",
+});
+```
+
+## google\_pubsub\_subscription\_iam\_member
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const editor = new gcp.dataproc.ClusterIAMMember("editor", {
+    cluster: "your-dataproc-cluster",
+    member: "user:jane@example.com",
+    role: "roles/editor",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/dataproc_cluster_iam.html.markdown.
 
 
