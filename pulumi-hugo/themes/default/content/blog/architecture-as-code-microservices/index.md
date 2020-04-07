@@ -2,14 +2,15 @@
 title: "Architecture as Code: Microservices"
 date: 2020-04-07
 meta_desc: "Build microservices with reusable components created with common programming languages and Pulumi"
-meta_image: meta.png
+meta_image: microservices.png
 authors:
     - sophia-parafina
 tags:
     - microservices
 ---
 
-What you put here will appear on the index page. In most cases, you'll also want to add a Read More link after this paragraph (though technically, that's optional). To do that, just add an HTML comment like the one below.
+This article is the third in a series about Architecture as Code. The [first article]({{ relref "/blog/architecture-as-code-intro">}}) provided an overview of virtual machines, microservices, serverless, and Kubernetes. The [second]({{< relref "/blog/architecture-as-code-vm" >}}) one went in-depth on deploying virtual machines as reusable components. In this third installment, we'll look at microservices and how to implement them as reusable components with Pulumi.
+
 
 <!--more-->
 
@@ -21,9 +22,9 @@ Each service is an application unto itself that must be written, configured, and
 
 In the following sections, we'll discuss how to organize an application as microservices using stacks in Pulumi and how to configure the stacks so they can talk to each other. Also, we'll look at an example application and show how to create reusable components to build microservices.
 
-## Projects and Stacks 
+## Projects and Stacks
 
-Pulumi is organized around [Projects]({{< "/docs/intro/concepts/project/" >}}) and [Stacks]({{< relref "/docs/intro/concepts/stack" >}}).  A Project specifies the runtime to use, which determines where to find the program to execute during deployment. A Stack is an independent instance of a Pulumi program used to denote different phases of development (such as development, staging, and production) or feature branches (such as new-feature-dev). 
+Pulumi is organized around [Projects]({{< relref "/docs/intro/concepts/project" >}}) and [Stacks]({{< relref "/docs/intro/concepts/stack" >}}).  A Project specifies the runtime to use, which determines where to find the program to execute during deployment. A Stack is an independent instance of a Pulumi program used to denote different phases of development (such as development, staging, and production) or feature branches (such as new-feature-dev).
 
 Monolithic stacks are a common way to structure a project. A single project defines the infrastructure and resources for an entire service. However, Pulumi also supports deploying microservices as individual stacks within a project. Because microservices represent a specific business capability, having stacks for each service allows teams to work independently of each other. Separate stacks can enforce security policies through Role-Based Access Control, and each service can be built and deployed independently of other components.
 
@@ -31,9 +32,9 @@ Microservices deployed as stacks communicate with each other through the StackRe
 
 ## A Microservices Application Infrastructure
 
-We'll use the [AWS Stack Reference example](https://github.com/pulumi/examples/tree/master/aws-stackreference-architecture) to illustrate how Pulumi uses Architecture as Code to create reusable components and deployment frameworks. We’ve previously [blogged]({{< relref "blog/architect-aws-application-infra-with-pulumi-stack-references” >}}) about this example and covered the code in some detail.
+We'll use the [AWS Stack Reference example](https://github.com/pulumi/examples/tree/master/aws-stackreference-architecture) to illustrate how Pulumi uses Architecture as Code to create reusable components and deployment frameworks. We’ve previously [blogged]({{< relref "blog/architect-aws-application-infra-with-pulumi-stack-references" >}}) about this example and covered the code in some detail.
 
-Let's examine how it creates reusable components for building out resources. First up is the [VPC class](https://github.com/pulumi/examples/blob/master/aws-stackreference-architecture/networking/src/vpc.ts) in the [networking stack](https://github.com/pulumi/examples/tree/master/aws-stackreference-architecture/networking). 
+Let's examine how it creates reusable components for building out resources. First up is the [VPC class](https://github.com/pulumi/examples/blob/master/aws-stackreference-architecture/networking/src/vpc.ts) in the [networking stack](https://github.com/pulumi/examples/tree/master/aws-stackreference-architecture/networking).
 
 In the networking service, [`vpc.ts](https://github.com/pulumi/examples/blob/master/aws-stackreference-architecture/networking/src/vpc.ts) creates a TypeScript class that extends Pulumi ComponentResource. A ComponentResource abstracts one or more children that do not require custom create, read, update, and delete operations for provisioning. We can add the related resources to the correct parent to build out the class.
 
@@ -98,4 +99,8 @@ $ aws-stackreference-architecture >> .git/info/sparse-checkout
 $ git pull origin master
 ```
 
-Follow the instructions to deploy the application. One caveat, when deploying the network microservice, set the number of availability zones to a minimum of two, e.g., `pulumi config set azCount 2	`. Experiment with the example by adding data to the database and adding your REST application as a container. Add a web client to submit requests and display them. Let us know if you have questions on [Community Slack](https://pulumi-community.slack.com/) or send a tweet to show off your application.
+Follow the instructions to deploy the application. One caveat, when deploying the network microservice, set the number of availability zones to a minimum of two, e.g., `pulumi config set azCount 2`. Experiment with the example by adding data to the database and adding your REST application as a container. Add a web client to submit requests and display them. Let us know if you have questions on [Community Slack](https://pulumi-community.slack.com/) or send a tweet to show off your application.
+
+To learn more about stacks, watch [Mike Metral's](https://twitter.com/mikemetral) presentation on [PulumiTV](https://www.youtube.com/channel/UC2Dhyn4Ev52YSbcpfnfP0Mw).
+
+{{< youtube "629luaYjwMQ" >}}
