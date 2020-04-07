@@ -6,9 +6,6 @@ block_external_search_index: true
 
 
 
-Provides a DNSimple record resource.
-
-> This content is derived from https://github.com/terraform-providers/terraform-provider-dnsimple/blob/master/website/docs/r/record.html.markdown.
 
 
 
