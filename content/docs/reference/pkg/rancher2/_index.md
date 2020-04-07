@@ -15,6 +15,7 @@ A Pulumi package for creating and managing rancher2 resources.
 > distributed under [MPL 2.0](https://www.mozilla.org/en-US/MPL/2.0/). If you encounter a bug or missing feature,
 > first check the [`pulumi/pulumi-rancher2` repo](https://github.com/pulumi/pulumi-rancher2/issues); however, if that doesn't turn up anything,
 > please consult the source [`terraform-providers/terraform-provider-rancher2` repo](https://github.com/terraform-providers/terraform-provider-rancher2/issues).
+
 <h3>Resources</h3>
 <ul class="api">
     <li><a href="activedirectory" title="ActiveDirectory"><span class="symbol resource"></span>ActiveDirectory</a></li>
