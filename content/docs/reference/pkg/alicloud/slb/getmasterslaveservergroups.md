@@ -10,6 +10,19 @@ This data source provides the master slave server groups related to a server loa
 
 > **NOTE:** Available in 1.54.0+
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const sampleDs = alicloud_slb_sample_slb.id.apply(id => alicloud.slb.getMasterSlaveServerGroups({
+    loadBalancerId: id,
+}, { async: true }));
+
+export const firstSlbServerGroupId = sampleDs.groups[0].id;
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_master_slave_server_groups.html.markdown.
 
 

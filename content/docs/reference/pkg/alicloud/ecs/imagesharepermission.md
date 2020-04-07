@@ -16,6 +16,18 @@ Manage image sharing permissions. You can share your custom image to other Aliba
 
 > **NOTE:** Available in 1.68.0+.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const defaultImageSharePermission = new alicloud.ecs.ImageSharePermission("default", {
+    accountId: "1234567890",
+    imageId: "m-bp1gxyh***",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/image_share_permission.html.markdown.
 
 

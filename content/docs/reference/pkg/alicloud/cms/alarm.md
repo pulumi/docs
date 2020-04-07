@@ -6,10 +6,6 @@ block_external_search_index: true
 
 
 
-This resource provides a alarm rule resource and it can be used to monitor several cloud services according different metrics.
-Details for [alarm rule](https://www.alibabacloud.com/help/doc-detail/28608.htm).
-
-> This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cms_alarm.html.markdown.
 
 
 

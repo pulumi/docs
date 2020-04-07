@@ -12,6 +12,63 @@ For example, a CEN instance is bound to a bandwidth package of 20 Mbps and  the 
 
 For information about CEN and how to use it, see [Cross-region interconnection bandwidth](https://www.alibabacloud.com/help/doc-detail/65983.htm)
 
+## Example Usage
+
+Basic Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const config = new pulumi.Config();
+const name = config.get("name") || "tf-testAccCenBandwidthLimitConfig";
+
+const fra = new alicloud.Provider("fra", {
+    region: "eu-central-1",
+});
+const sh = new alicloud.Provider("sh", {
+    region: "cn-shanghai",
+});
+const vpc1 = new alicloud.vpc.Network("vpc1", {
+    cidrBlock: "192.168.0.0/16",
+}, { provider: fra });
+const vpc2 = new alicloud.vpc.Network("vpc2", {
+    cidrBlock: "172.16.0.0/12",
+}, { provider: sh });
+const cen = new alicloud.cen.Instance("cen", {
+    description: "tf-testAccCenBandwidthLimitConfigDescription",
+});
+const bwp = new alicloud.cen.BandwidthPackage("bwp", {
+    bandwidth: 5,
+    geographicRegionIds: [
+        "Europe",
+        "China",
+    ],
+});
+const bwpAttach = new alicloud.cen.BandwidthPackageAttachment("bwp_attach", {
+    bandwidthPackageId: bwp.id,
+    instanceId: cen.id,
+});
+const vpcAttach1 = new alicloud.cen.InstanceAttachment("vpc_attach_1", {
+    childInstanceId: vpc1.id,
+    childInstanceRegionId: "eu-central-1",
+    instanceId: cen.id,
+});
+const vpcAttach2 = new alicloud.cen.InstanceAttachment("vpc_attach_2", {
+    childInstanceId: vpc2.id,
+    childInstanceRegionId: "cn-shanghai",
+    instanceId: cen.id,
+});
+const foo = new alicloud.cen.BandwidthLimit("foo", {
+    bandwidthLimit: 4,
+    instanceId: cen.id,
+    regionIds: [
+        "eu-central-1",
+        "cn-shanghai",
+    ],
+}, { dependsOn: [bwpAttach, vpcAttach1, vpcAttach2] });
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cen_bandwidth_limit.html.markdown.
 
 

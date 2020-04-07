@@ -10,6 +10,24 @@ This data source provides available alarm resources.
 
 > **NOTE** Available in 1.72.0+
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const alarmDs = pulumi.output(alicloud.EssAlarm({
+    ids: [
+        "alarm_id1",
+        "alarm_id2",
+    ],
+    nameRegex: "alarm_name",
+    scalingGroupId: "scaling_group_id",
+}, { async: true }));
+
+export const firstScalingRule = alicloud_alarms_alarm_ds.configurations.0.id;
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ess_alarms.html.markdown.
 
 

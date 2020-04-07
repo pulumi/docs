@@ -8,6 +8,22 @@ block_external_search_index: true
 
 The VPN customers gateways data source lists a number of VPN customer gateways resource information owned by an Alicloud account.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const foo = pulumi.output(alicloud.vpn.getCustomerGateways({
+    ids: [
+        "fake-id1",
+        "fake-id2",
+    ],
+    nameRegex: "testAcc*",
+    outputFile: "/tmp/cgws",
+}, { async: true }));
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/vpn_customer_gateways.html.markdown.
 
 

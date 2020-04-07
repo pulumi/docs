@@ -9,6 +9,24 @@ block_external_search_index: true
 The `alicloud.rds.getInstances` data source provides a collection of RDS instances available in Alibaba Cloud account.
 Filters support regular expression for the instance name, searches by tags, and other filters which are listed below.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const dbInstancesDs = pulumi.output(alicloud.rds.getInstances({
+    nameRegex: "data-\\d+",
+    status: "Running",
+    tags: {
+        size: "tiny",
+        type: "database",
+    },
+}, { async: true }));
+
+export const firstDbInstanceId = dbInstancesDs.instances[0].id;
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/db_instances.html.markdown.
 
 

@@ -10,6 +10,23 @@ Provides a CEN bandwidth package resource. The CEN bandwidth package is an abstr
 
 For information about CEN and how to use it, see [Manage bandwidth packages](https://www.alibabacloud.com/help/doc-detail/65982.htm).
 
+## Example Usage
+
+Basic Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const foo = new alicloud.cen.BandwidthPackage("foo", {
+    bandwidth: 5,
+    geographicRegionIds: [
+        "China",
+        "Asia-Pacific",
+    ],
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cen_bandwidth_package.html.markdown.
 
 

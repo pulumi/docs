@@ -8,6 +8,19 @@ block_external_search_index: true
 
 This data source provides an alias for the Alibaba Cloud account.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const aliasDs = pulumi.output(alicloud.ram.getAccountAliases({
+    outputFile: "alias.txt",
+}, { async: true }));
+
+export const accountAlias = aliasDs.accountAlias;
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ram_account_aliases.html.markdown.
 
 

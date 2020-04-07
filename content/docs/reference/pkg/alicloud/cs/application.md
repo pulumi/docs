@@ -15,6 +15,26 @@ Each application can contain one or more services.
 
 > **NOTE:** At present, this resource only support swarm cluster.
 
+## Example Usage
+
+Basic Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+import * as fs from "fs";
+
+const app = new alicloud.cs.Application("app", {
+    clusterName: "my-first-swarm",
+    environment: {
+        EXTERNAL_URL: "123.123.123.123:8080",
+    },
+    latestImage: true,
+    template: fs.readFileSync("wordpress.yml", "utf-8"),
+    version: "1.2",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cs_application.html.markdown.
 
 

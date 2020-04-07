@@ -8,6 +8,29 @@ block_external_search_index: true
 
 This data source provides a list of VSwitches owned by an Alibaba Cloud account.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const config = new pulumi.Config();
+const name = config.get("name") || "vswitchDatasourceName";
+
+const defaultZones = pulumi.output(alicloud.getZones({ async: true }));
+const vpc = new alicloud.vpc.Network("vpc", {
+    cidrBlock: "172.16.0.0/16",
+});
+const vswitch = new alicloud.vpc.Switch("vswitch", {
+    availabilityZone: defaultZones.zones[0].id,
+    cidrBlock: "172.16.0.0/24",
+    vpcId: vpc.id,
+});
+const defaultSwitches = vswitch.name.apply(name => alicloud.vpc.getSwitches({
+    nameRegex: name,
+}, { async: true }));
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/vswitches.html.markdown.
 
 

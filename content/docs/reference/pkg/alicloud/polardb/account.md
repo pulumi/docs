@@ -10,6 +10,43 @@ Provides a PolarDB account resource and used to manage databases.
 
 > **NOTE:** Available in v1.67.0+. 
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const config = new pulumi.Config();
+const creation = config.get("creation") || "PolarDB";
+const name = config.get("name") || "polardbaccountmysql";
+
+const defaultZones = pulumi.output(alicloud.getZones({
+    availableResourceCreation: creation,
+}, { async: true }));
+const defaultNetwork = new alicloud.vpc.Network("default", {
+    cidrBlock: "172.16.0.0/16",
+});
+const defaultSwitch = new alicloud.vpc.Switch("default", {
+    availabilityZone: defaultZones.zones[0].id,
+    cidrBlock: "172.16.0.0/24",
+    vpcId: defaultNetwork.id,
+});
+const cluster = new alicloud.polardb.Cluster("cluster", {
+    dbNodeClass: "polar.mysql.x4.large",
+    dbType: "MySQL",
+    dbVersion: "8.0",
+    description: name,
+    payType: "PostPaid",
+    vswitchId: defaultSwitch.id,
+});
+const account = new alicloud.rds.Account("account", {
+    accountDescription: name,
+    accountName: "tftestnormal",
+    accountPassword: "Test12345",
+    dbClusterId: alicloud_db_instance_cluster.id,
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/polardb_account.html.markdown.
 
 

@@ -19,6 +19,95 @@ You can add forwarding rules to a listener to forward requests based on the doma
 
 > **NOTE:** Only rule's virtual server group can be modified.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const config = new pulumi.Config();
+const name = config.get("name") || "slbrulebasicconfig";
+
+const defaultZones = pulumi.output(alicloud.getZones({
+    availableDiskCategory: "cloud_efficiency",
+    availableResourceCreation: "VSwitch",
+}, { async: true }));
+const defaultInstanceTypes = defaultZones.apply(defaultZones => alicloud.ecs.getInstanceTypes({
+    availabilityZone: defaultZones.zones[0].id,
+    cpuCoreCount: 1,
+    memorySize: 2,
+}, { async: true }));
+const defaultImages = pulumi.output(alicloud.ecs.getImages({
+    mostRecent: true,
+    nameRegex: "^ubuntu_18.*64",
+    owners: "system",
+}, { async: true }));
+const defaultNetwork = new alicloud.vpc.Network("default", {
+    cidrBlock: "172.16.0.0/16",
+});
+const defaultSwitch = new alicloud.vpc.Switch("default", {
+    availabilityZone: defaultZones.zones[0].id,
+    cidrBlock: "172.16.0.0/16",
+    vpcId: defaultNetwork.id,
+});
+const defaultSecurityGroup = new alicloud.ecs.SecurityGroup("default", {
+    vpcId: defaultNetwork.id,
+});
+const defaultInstance = new alicloud.ecs.Instance("default", {
+    availabilityZone: defaultZones.zones[0].id,
+    imageId: defaultImages.images[0].id,
+    instanceChargeType: "PostPaid",
+    instanceName: name,
+    instanceType: defaultInstanceTypes.instanceTypes[0].id,
+    internetChargeType: "PayByTraffic",
+    internetMaxBandwidthOut: 10,
+    securityGroups: defaultSecurityGroup.id,
+    systemDiskCategory: "cloud_efficiency",
+    vswitchId: defaultSwitch.id,
+});
+const defaultLoadBalancer = new alicloud.slb.LoadBalancer("default", {
+    vswitchId: defaultSwitch.id,
+});
+const defaultListener = new alicloud.slb.Listener("default", {
+    backendPort: 22,
+    bandwidth: 5,
+    frontendPort: 22,
+    healthCheckConnectPort: 20,
+    loadBalancerId: defaultLoadBalancer.id,
+    protocol: "http",
+});
+const defaultServerGroup = new alicloud.slb.ServerGroup("default", {
+    loadBalancerId: defaultLoadBalancer.id,
+    servers: [{
+        port: 80,
+        serverIds: defaultInstance.id,
+        weight: 100,
+    }],
+});
+const defaultRule = new alicloud.slb.Rule("default", {
+    cookie: "23ffsa",
+    cookieTimeout: 100,
+    domain: "*.aliyun.com",
+    frontendPort: defaultListener.frontendPort,
+    healthCheck: "on",
+    healthCheckConnectPort: 80,
+    healthCheckDomain: "test",
+    healthCheckHttpCode: "http_2xx",
+    healthCheckInterval: 10,
+    healthCheckTimeout: 30,
+    healthCheckUri: "/test",
+    healthyThreshold: 3,
+    listenerSync: "off",
+    loadBalancerId: defaultLoadBalancer.id,
+    scheduler: "rr",
+    serverGroupId: defaultServerGroup.id,
+    stickySession: "on",
+    stickySessionType: "server",
+    unhealthyThreshold: 5,
+    url: "/image",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_rule.html.markdown.
 
 

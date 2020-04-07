@@ -10,6 +10,34 @@ This data source provides a list of ONS Topics in an Alibaba Cloud account accor
 
 > **NOTE:** Available in 1.53.0+
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const config = new pulumi.Config();
+const name = config.get("name") || "onsInstanceName";
+const topic = config.get("topic") || "onsTopicDatasourceName";
+
+const defaultInstance = new alicloud.rocketmq.Instance("default", {
+    remark: "default_ons_instance_remark",
+});
+const defaultTopic = new alicloud.rocketmq.Topic("default", {
+    instanceId: defaultInstance.id,
+    messageType: 0,
+    remark: "dafault_ons_topic_remark",
+    topic: topic,
+});
+const topicsDs = defaultTopic.instanceId.apply(instanceId => alicloud.rocketmq.getTopics({
+    instanceId: instanceId,
+    nameRegex: topic,
+    outputFile: "topics.txt",
+}, { async: true }));
+
+export const firstTopicName = topicsDs.topics[0].topic;
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ons_topics.html.markdown.
 
 

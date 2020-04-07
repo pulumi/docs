@@ -11,6 +11,20 @@ Filters support regular expression for the cluster description, searches by tags
 
 > **NOTE:** Available in v1.66.0+.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const polardbClustersDs = pulumi.output(alicloud.polardb.getClusters({
+    descriptionRegex: "pc-\\w+",
+    status: "Running",
+}, { async: true }));
+
+export const firstPolardbClusterId = polardbClustersDs.clusters[0].id;
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/polardb_clusters.html.markdown.
 
 

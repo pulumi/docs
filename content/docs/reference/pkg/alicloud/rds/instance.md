@@ -10,6 +10,73 @@ Provides an RDS instance resource. A DB instance is an isolated database
 environment in the cloud. A DB instance can contain multiple user-created
 databases.
 
+## Example Usage
+
+### Create a RDS MySQL instance
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const config = new pulumi.Config();
+const name = config.get("name") || "dbInstanceconfig";
+const creation = config.get("creation") || "Rds";
+
+const defaultZones = pulumi.output(alicloud.getZones({
+    availableResourceCreation: creation,
+}, { async: true }));
+const defaultNetwork = new alicloud.vpc.Network("default", {
+    cidrBlock: "172.16.0.0/16",
+});
+const defaultSwitch = new alicloud.vpc.Switch("default", {
+    availabilityZone: defaultZones.zones[0].id,
+    cidrBlock: "172.16.0.0/24",
+    vpcId: defaultNetwork.id,
+});
+const defaultInstance = new alicloud.rds.Instance("default", {
+    engine: "MySQL",
+    engineVersion: "5.6",
+    instanceChargeType: "Postpaid",
+    instanceName: name,
+    instanceStorage: 30,
+    instanceType: "rds.mysql.s2.large",
+    monitoringPeriod: 60,
+    vswitchId: defaultSwitch.id,
+});
+```
+
+### Create a RDS MySQL instance with specific parameters
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const defaultNetwork = new alicloud.vpc.Network("default", {
+    cidrBlock: "172.16.0.0/16",
+});
+const defaultSwitch = new alicloud.vpc.Switch("default", {
+    availabilityZone: alicloud_zones_default.zones.0.id,
+    cidrBlock: "172.16.0.0/24",
+    vpcId: defaultNetwork.id,
+});
+const defaultInstance = new alicloud.rds.Instance("default", {
+    dbInstanceClass: "rds.mysql.t1.small",
+    dbInstanceStorage: "10",
+    engine: "MySQL",
+    engineVersion: "5.6",
+    parameters: [
+        {
+            name: "innodb_large_prefix",
+            value: "ON",
+        },
+        {
+            name: "connect_timeout",
+            value: "50",
+        },
+    ],
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/db_instance.html.markdown.
 
 

@@ -8,6 +8,45 @@ block_external_search_index: true
 
 Provides a RAM Group Policy attachment resource. 
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+// Create a RAM Group Policy attachment.
+const group = new alicloud.ram.Group("group", {
+    comments: "this is a group comments.",
+    force: true,
+});
+const policy = new alicloud.ram.Policy("policy", {
+    description: "this is a policy test",
+    document: `    {
+      "Statement": [
+        {
+          "Action": [
+            "oss:ListObjects",
+            "oss:GetObject"
+          ],
+          "Effect": "Allow",
+          "Resource": [
+            "acs:oss:*:*:mybucket",
+            "acs:oss:*:*:mybucket/*"
+          ]
+        }
+      ],
+        "Version": "1"
+    }
+  `,
+    force: true,
+});
+const attach = new alicloud.ram.GroupPolicyAttachment("attach", {
+    groupName: group.name,
+    policyName: policy.name,
+    policyType: policy.type,
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ram_group_policy_attachment.html.markdown.
 
 

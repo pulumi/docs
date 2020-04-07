@@ -10,6 +10,21 @@ This data source provides a list Container Registry namespaces on Alibaba Cloud.
 
 > **NOTE:** Available in v1.35.0+
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+// Declare the data source
+const myNamespaces = pulumi.output(alicloud.cr.getNamespaces({
+    nameRegex: "my-namespace",
+    outputFile: "my-namespace-json",
+}, { async: true }));
+
+export const output = myNamespaces.namespaces;
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/cr_namespaces.html.markdown.
 
 

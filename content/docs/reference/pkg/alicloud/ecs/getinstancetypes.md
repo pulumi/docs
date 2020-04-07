@@ -12,6 +12,22 @@ This data source provides the ECS instance types of Alibaba Cloud.
 
 > **NOTE:** If one instance type is sold out, it will not be exported.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+// Declare the data source
+const typesDs = pulumi.output(alicloud.ecs.getInstanceTypes({
+    cpuCoreCount: 1,
+    memorySize: 2,
+}, { async: true }));
+const instance = new alicloud.ecs.Instance("instance", {
+    instanceType: typesDs.instanceTypes[0].id,
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/instance_types.html.markdown.
 
 

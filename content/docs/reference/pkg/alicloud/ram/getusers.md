@@ -8,6 +8,23 @@ block_external_search_index: true
 
 This data source provides a list of RAM users in an Alibaba Cloud account according to the specified filters.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const usersDs = pulumi.output(alicloud.ram.getUsers({
+    groupName: "group1",
+    nameRegex: "^user",
+    outputFile: "users.txt",
+    policyName: "AliyunACSDefaultAccess",
+    policyType: "Custom",
+}, { async: true }));
+
+export const firstUserId = usersDs.users[0].id;
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ram_users.html.markdown.
 
 

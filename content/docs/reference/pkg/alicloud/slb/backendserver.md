@@ -10,6 +10,73 @@ Add a group of backend servers (ECS or ENI instance) to the Server Load Balancer
 
 > **NOTE:** Available in 1.53.0+
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const config = new pulumi.Config();
+const name = config.get("name") || "slbbackendservertest";
+
+const defaultZones = pulumi.output(alicloud.getZones({
+    availableDiskCategory: "cloud_efficiency",
+    availableResourceCreation: "VSwitch",
+}, { async: true }));
+const defaultInstanceTypes = defaultZones.apply(defaultZones => alicloud.ecs.getInstanceTypes({
+    availabilityZone: defaultZones.zones[0].id,
+    cpuCoreCount: 1,
+    memorySize: 2,
+}, { async: true }));
+const defaultImages = pulumi.output(alicloud.ecs.getImages({
+    mostRecent: true,
+    nameRegex: "^ubuntu_18.*64",
+    owners: "system",
+}, { async: true }));
+const defaultNetwork = new alicloud.vpc.Network("default", {
+    cidrBlock: "172.16.0.0/16",
+});
+const defaultSwitch = new alicloud.vpc.Switch("default", {
+    availabilityZone: defaultZones.zones[0].id,
+    cidrBlock: "172.16.0.0/16",
+    vpcId: defaultNetwork.id,
+});
+const defaultSecurityGroup = new alicloud.ecs.SecurityGroup("default", {
+    vpcId: defaultNetwork.id,
+});
+const defaultInstance: alicloud.ecs.Instance[] = [];
+for (let i = 0; i < 2; i++) {
+    defaultInstance.push(new alicloud.ecs.Instance(`default-${i}`, {
+        availabilityZone: defaultZones.zones[0].id,
+        imageId: defaultImages.images[0].id,
+        instanceChargeType: "PostPaid",
+        instanceName: name,
+        instanceType: defaultInstanceTypes.instanceTypes[0].id,
+        internetChargeType: "PayByTraffic",
+        internetMaxBandwidthOut: 10,
+        securityGroups: defaultSecurityGroup.id,
+        systemDiskCategory: "cloud_efficiency",
+        vswitchId: defaultSwitch.id,
+    }));
+}
+const defaultLoadBalancer = new alicloud.slb.LoadBalancer("default", {
+    vswitchId: defaultSwitch.id,
+});
+const defaultBackendServer = new alicloud.slb.BackendServer("default", {
+    backendServers: [
+        {
+            serverId: defaultInstance[0].id,
+            weight: 100,
+        },
+        {
+            serverId: defaultInstance[1].id,
+            weight: 100,
+        },
+    ],
+    loadBalancerId: defaultLoadBalancer.id,
+});
+```
+
 ## Block servers
 
 The servers mapping supports the following:

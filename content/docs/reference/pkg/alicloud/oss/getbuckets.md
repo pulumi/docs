@@ -8,6 +8,19 @@ block_external_search_index: true
 
 This data source provides the OSS buckets of the current Alibaba Cloud user.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const ossBucketsDs = pulumi.output(alicloud.oss.getBuckets({
+    nameRegex: "sample_oss_bucket",
+}, { async: true }));
+
+export const firstOssBucketName = ossBucketsDs.buckets[0].name;
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/oss_buckets.html.markdown.
 
 

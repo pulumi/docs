@@ -14,6 +14,24 @@ BGP-Line Anti-DDoS instance resource. "Ddoscoo" is the short term of this produc
 
 > **NOTE:** Available in 1.37.0+ .
 
+## Example Usage
+
+Basic Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const newInstance = new alicloud.dns.DdosCooInstance("newInstance", {
+    bandwidth: "30",
+    baseBandwidth: "30",
+    domainCount: "50",
+    period: 1,
+    portCount: "50",
+    serviceBandwidth: "100",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ddoscoo_instance.html.markdown.
 
 

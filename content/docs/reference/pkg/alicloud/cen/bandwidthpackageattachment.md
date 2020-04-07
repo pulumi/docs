@@ -8,6 +8,31 @@ block_external_search_index: true
 
 Provides a CEN bandwidth package attachment resource. The resource can be used to bind a bandwidth package to a specified CEN instance.
 
+## Example Usage
+
+Basic Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+// Create a new bandwidth package attachment and use it to attach a bandwidth package to a new CEN
+const cen = new alicloud.cen.Instance("cen", {
+    description: "tf-testAccCenBandwidthPackageAttachmentDescription",
+});
+const bwp = new alicloud.cen.BandwidthPackage("bwp", {
+    bandwidth: 20,
+    geographicRegionIds: [
+        "China",
+        "Asia-Pacific",
+    ],
+});
+const foo = new alicloud.cen.BandwidthPackageAttachment("foo", {
+    bandwidthPackageId: bwp.id,
+    instanceId: cen.id,
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cen_bandwidth_package_attachment.html.markdown.
 
 

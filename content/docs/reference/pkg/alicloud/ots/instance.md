@@ -9,6 +9,23 @@ block_external_search_index: true
 This resource will help you to manager a [Table Store](https://www.alibabacloud.com/help/doc-detail/27280.htm) Instance.
 It is foundation of creating data table.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+// Create an OTS instance
+const foo = new alicloud.ots.Instance("foo", {
+    accessedBy: "Vpc",
+    description: "for table",
+    tags: {
+        Created: "TF",
+        For: "Building table",
+    },
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ots_instance.html.markdown.
 
 

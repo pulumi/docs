@@ -10,6 +10,23 @@ Provides a network acl resource to add network acls.
 
 > **NOTE:** Available in 1.43.0+. Currently, the resource are only available in Hongkong(cn-hongkong), India(ap-south-1), and Indonesia(ap-southeast-1) regions.
 
+## Example Usage
+
+Basic Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const defaultNetwork = new alicloud.vpc.Network("default", {
+    cidrBlock: "172.16.0.0/12",
+});
+const defaultNetworkAcl = new alicloud.vpc.NetworkAcl("default", {
+    description: "network_acl",
+    vpcId: defaultNetwork.id,
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/network_acl.html.markdown.
 
 

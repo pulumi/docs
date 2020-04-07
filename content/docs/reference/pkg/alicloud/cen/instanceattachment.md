@@ -6,9 +6,6 @@ block_external_search_index: true
 
 
 
-Provides a CEN child instance attachment resource.
-
-> This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cen_instance_attachment.html.markdown.
 
 
 

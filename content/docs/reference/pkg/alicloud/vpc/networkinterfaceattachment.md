@@ -10,6 +10,70 @@ Provides an Alicloud ECS Elastic Network Interface Attachment as a resource to a
 
 For information about Elastic Network Interface and how to use it, see [Elastic Network Interface](https://www.alibabacloud.com/help/doc-detail/58496.html).
 
+## Example Usage
+
+Bacis Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const config = new pulumi.Config();
+const name = config.get("name") || "networkInterfaceAttachment";
+const number = config.get("number") || "2";
+
+const vpc = new alicloud.vpc.Network("vpc", {
+    cidrBlock: "192.168.0.0/24",
+});
+const defaultZones = pulumi.output(alicloud.getZones({
+    availableResourceCreation: "VSwitch",
+}, { async: true }));
+const vswitch = new alicloud.vpc.Switch("vswitch", {
+    availabilityZone: defaultZones.zones[0].id,
+    cidrBlock: "192.168.0.0/24",
+    vpcId: vpc.id,
+});
+const group = new alicloud.ecs.SecurityGroup("group", {
+    vpcId: vpc.id,
+});
+const instanceType = defaultZones.apply(defaultZones => alicloud.ecs.getInstanceTypes({
+    availabilityZone: defaultZones.zones[0].id,
+    eniAmount: 2,
+}, { async: true }));
+const defaultImages = pulumi.output(alicloud.ecs.getImages({
+    mostRecent: true,
+    nameRegex: "^ubuntu_18.*64",
+    owners: "system",
+}, { async: true }));
+const instance: alicloud.ecs.Instance[] = [];
+for (let i = 0; i < number; i++) {
+    instance.push(new alicloud.ecs.Instance(`instance-${i}`, {
+        availabilityZone: defaultZones.zones[0].id,
+        imageId: defaultImages.images[0].id,
+        instanceName: name,
+        instanceType: instanceType.instanceTypes[0].id,
+        internetMaxBandwidthOut: 10,
+        securityGroups: [group.id],
+        systemDiskCategory: "cloud_efficiency",
+        vswitchId: vswitch.id,
+    }));
+}
+const interfaceNetworkInterface: alicloud.vpc.NetworkInterface[] = [];
+for (let i = 0; i < number; i++) {
+    interfaceNetworkInterface.push(new alicloud.vpc.NetworkInterface(`interface-${i}`, {
+        securityGroups: [group.id],
+        vswitchId: vswitch.id,
+    }));
+}
+const attachment: alicloud.vpc.NetworkInterfaceAttachment[] = [];
+for (let i = 0; i < number; i++) {
+    attachment.push(new alicloud.vpc.NetworkInterfaceAttachment(`attachment-${i}`, {
+        instanceId: pulumi.all(instance.map(v => v.id)).apply(id => id.map(v => v)[i]),
+        networkInterfaceId: pulumi.all(interfaceNetworkInterface.map(v => v.id)).apply(id => id.map(v => v)[i]),
+    }));
+}
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/network_interface_attachment.html.markdown.
 
 

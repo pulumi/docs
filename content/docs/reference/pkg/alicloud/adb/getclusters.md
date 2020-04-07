@@ -11,6 +11,20 @@ Filters support regular expression for the cluster description, searches by tags
 
 > **NOTE:** Available in v1.71.0+.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const adbClustersDs = pulumi.output(alicloud.adb.getClusters({
+    descriptionRegex: "am-\\w+",
+    status: "Running",
+}, { async: true }));
+
+export const firstAdbClusterId = adbClustersDs.clusters[0].id;
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/adb_clusters.html.markdown.
 
 

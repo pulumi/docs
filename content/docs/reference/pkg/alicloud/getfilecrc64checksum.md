@@ -10,6 +10,19 @@ This data source compute file crc64 checksum.
 
 > **NOTE:** Available in 1.59.0+.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const defaultFileCrc64Checksum = pulumi.output(alicloud.getFileCrc64Checksum({
+    filename: "exampleFileName",
+}, { async: true }));
+
+export const fileCrc64Checksum = alicloud_file_crc64_checksum_defualt.checksum;
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/file_crc64_checksum.html.markdown.
 
 

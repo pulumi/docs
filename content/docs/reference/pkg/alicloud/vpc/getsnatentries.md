@@ -10,6 +10,45 @@ This data source provides a list of Snat Entries owned by an Alibaba Cloud accou
 
 > **NOTE:** Available in 1.37.0+.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const config = new pulumi.Config();
+const name = config.get("name") || "snat-entry-example-name";
+
+const defaultZones = pulumi.output(alicloud.getZones({
+    availableResourceCreation: "VSwitch",
+}, { async: true }));
+const fooNetwork = new alicloud.vpc.Network("foo", {
+    cidrBlock: "172.16.0.0/12",
+});
+const fooSwitch = new alicloud.vpc.Switch("foo", {
+    availabilityZone: defaultZones.zones[0].id,
+    cidrBlock: "172.16.0.0/21",
+    vpcId: fooNetwork.id,
+});
+const fooNatGateway = new alicloud.vpc.NatGateway("foo", {
+    specification: "Small",
+    vpcId: fooNetwork.id,
+});
+const fooEip = new alicloud.ecs.Eip("foo", {});
+const fooEipAssociation = new alicloud.ecs.EipAssociation("foo", {
+    allocationId: fooEip.id,
+    instanceId: fooNatGateway.id,
+});
+const fooSnatEntry = new alicloud.vpc.SnatEntry("foo", {
+    snatIp: fooEip.ipAddress,
+    snatTableId: fooNatGateway.snatTableIds,
+    sourceVswitchId: fooSwitch.id,
+});
+const fooSnatEntries = fooSnatEntry.snatTableId.apply(snatTableId => alicloud.vpc.getSnatEntries({
+    snatTableId: snatTableId,
+}, { async: true }));
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/snat_entries.html.markdown.
 
 

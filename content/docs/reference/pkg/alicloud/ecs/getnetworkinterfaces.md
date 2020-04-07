@@ -10,6 +10,69 @@ Use this data source to get a list of elastic network interfaces according to th
 
 For information about elastic network interface and how to use it, see [Elastic Network Interface](https://www.alibabacloud.com/help/doc-detail/58496.html)
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const config = new pulumi.Config();
+const name = config.get("name") || "networkInterfacesName";
+
+const vpc = new alicloud.vpc.Network("vpc", {
+    cidrBlock: "192.168.0.0/24",
+});
+const defaultZones = pulumi.output(alicloud.getZones({
+    availableResourceCreation: "VSwitch",
+}, { async: true }));
+const vswitch = new alicloud.vpc.Switch("vswitch", {
+    availabilityZone: defaultZones.zones[0].id,
+    cidrBlock: "192.168.0.0/24",
+    vpcId: vpc.id,
+});
+const group = new alicloud.ecs.SecurityGroup("group", {
+    vpcId: vpc.id,
+});
+const interfaceNetworkInterface = new alicloud.vpc.NetworkInterface("interface", {
+    description: "Basic test",
+    privateIp: "192.168.0.2",
+    securityGroups: [group.id],
+    tags: {
+        "TF-VER": "0.11.3",
+    },
+    vswitchId: vswitch.id,
+});
+const instance = new alicloud.ecs.Instance("instance", {
+    availabilityZone: defaultZones.zones[0].id,
+    imageId: "centos_7_04_64_20G_alibase_201701015.vhd",
+    instanceName: name,
+    instanceType: "ecs.e3.xlarge",
+    internetMaxBandwidthOut: 10,
+    securityGroups: [group.id],
+    systemDiskCategory: "cloud_efficiency",
+    vswitchId: vswitch.id,
+});
+const attachment = new alicloud.vpc.NetworkInterfaceAttachment("attachment", {
+    instanceId: instance.id,
+    networkInterfaceId: interfaceNetworkInterface.id,
+});
+const defaultNetworkInterfaces = pulumi.all([attachment.networkInterfaceId, instance.id, group.id, vpc.id, vswitch.id]).apply(([networkInterfaceId, instanceId, groupId, vpcId, vswitchId]) => alicloud.ecs.getNetworkInterfaces({
+    ids: [networkInterfaceId],
+    instanceId: instanceId,
+    nameRegex: "tf-testAccNetworkInterfacesBasic%d",
+    privateIp: "192.168.0.2",
+    securityGroupId: groupId,
+    tags: {
+        "TF-VER": "0.11.3",
+    },
+    type: "Secondary",
+    vpcId: vpcId,
+    vswitchId: vswitchId,
+}, { async: true }));
+
+export const eni0Name = defaultNetworkInterfaces.interfaces[0].name;
+```
+
 ##  Argument Reference
 
 The following arguments are supported:

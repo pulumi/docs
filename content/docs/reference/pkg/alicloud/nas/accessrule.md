@@ -12,6 +12,27 @@ When NAS is activated, the Default VPC Permission Group is automatically generat
 
 > **NOTE:** Available in v1.34.0+.
 
+## Example Usage
+
+Basic Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const fooAccessGroup = new alicloud.nas.AccessGroup("foo", {
+    description: "tf-testAccNasConfig",
+    type: "Vpc",
+});
+const fooAccessRule = new alicloud.nas.AccessRule("foo", {
+    accessGroupName: fooAccessGroup.id,
+    priority: 2,
+    rwAccessType: "RDWR",
+    sourceCidrIp: "168.1.1.0/16",
+    userAccessType: "no_squash",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/nas_access_rule.html.markdown.
 
 

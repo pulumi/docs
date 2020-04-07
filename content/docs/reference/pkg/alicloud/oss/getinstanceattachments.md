@@ -8,6 +8,21 @@ block_external_search_index: true
 
 This data source provides the ots instance attachments of the current Alibaba Cloud user.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const attachmentsDs = pulumi.output(alicloud.oss.getInstanceAttachments({
+    instanceName: "sample-instance",
+    nameRegex: "testvpc",
+    outputFile: "attachments.txt",
+}, { async: true }));
+
+export const firstOtsAttachmentId = attachmentsDs.attachments[0].id;
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ots_instance_attachments.html.markdown.
 
 

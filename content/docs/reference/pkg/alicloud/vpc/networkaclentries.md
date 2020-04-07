@@ -14,6 +14,61 @@ Provides a network acl entries resource to create ingress and egress entries.
 
 > **NOTE:** Using this resource need to open a whitelist.
 
+## Example Usage
+
+Basic Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const config = new pulumi.Config();
+const name = config.get("name") || "NetworkAclEntries";
+
+const defaultZones = pulumi.output(alicloud.getZones({
+    availableResourceCreation: "VSwitch",
+}, { async: true }));
+const defaultNetwork = new alicloud.vpc.Network("default", {
+    cidrBlock: "172.16.0.0/12",
+});
+const defaultNetworkAcl = new alicloud.vpc.NetworkAcl("default", {
+    vpcId: defaultNetwork.id,
+});
+const defaultSwitch = new alicloud.vpc.Switch("default", {
+    availabilityZone: defaultZones.zones[0].id,
+    cidrBlock: "172.16.0.0/21",
+    vpcId: defaultNetwork.id,
+});
+const defaultNetworkAclAttachment = new alicloud.vpc.NetworkAclAttachment("default", {
+    networkAclId: defaultNetworkAcl.id,
+    resources: [{
+        resourceId: defaultSwitch.id,
+        resourceType: "VSwitch",
+    }],
+});
+const defaultNetworkAclEntries = new alicloud.vpc.NetworkAclEntries("default", {
+    egresses: [{
+        description: name,
+        destinationCidrIp: "0.0.0.0/32",
+        entryType: "custom",
+        name: name,
+        policy: "accept",
+        port: "-1/-1",
+        protocol: "all",
+    }],
+    ingresses: [{
+        description: name,
+        entryType: "custom",
+        name: name,
+        policy: "accept",
+        port: "-1/-1",
+        protocol: "all",
+        sourceCidrIp: "0.0.0.0/32",
+    }],
+    networkAclId: defaultNetworkAcl.id,
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/network_acl_entries.html.markdown.
 
 

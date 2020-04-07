@@ -8,6 +8,22 @@ block_external_search_index: true
 
 This data source provides a list of RAM policies in an Alibaba Cloud account according to the specified filters.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const policiesDs = pulumi.output(alicloud.ram.getPolicies({
+    groupName: "group1",
+    outputFile: "policies.txt",
+    type: "System",
+    userName: "user1",
+}, { async: true }));
+
+export const firstPolicyName = policiesDs.policies[0].name;
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ram_policies.html.markdown.
 
 

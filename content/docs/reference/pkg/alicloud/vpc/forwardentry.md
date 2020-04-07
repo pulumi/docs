@@ -8,6 +8,47 @@ block_external_search_index: true
 
 Provides a forward resource.
 
+## Example Usage
+
+Basic Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const config = new pulumi.Config();
+const name = config.get("name") || "forward-entry-example-name";
+
+const defaultZones = pulumi.output(alicloud.getZones({
+    availableResourceCreation: "VSwitch",
+}, { async: true }));
+const defaultNetwork = new alicloud.vpc.Network("default", {
+    cidrBlock: "172.16.0.0/12",
+});
+const defaultSwitch = new alicloud.vpc.Switch("default", {
+    availabilityZone: defaultZones.zones[0].id,
+    cidrBlock: "172.16.0.0/21",
+    vpcId: defaultNetwork.id,
+});
+const defaultNatGateway = new alicloud.vpc.NatGateway("default", {
+    specification: "Small",
+    vpcId: defaultNetwork.id,
+});
+const defaultEip = new alicloud.ecs.Eip("default", {});
+const defaultEipAssociation = new alicloud.ecs.EipAssociation("default", {
+    allocationId: defaultEip.id,
+    instanceId: defaultNatGateway.id,
+});
+const defaultForwardEntry = new alicloud.vpc.ForwardEntry("default", {
+    externalIp: defaultEip.ipAddress,
+    externalPort: "80",
+    forwardTableId: defaultNatGateway.forwardTableIds,
+    internalIp: "172.16.0.3",
+    internalPort: "8080",
+    ipProtocol: "tcp",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/forward_entry.html.markdown.
 
 

@@ -10,6 +10,40 @@ Provides an RDS instance backup policy resource and used to configure instance b
 
 > **NOTE:** Each DB instance has a backup policy and it will be set default values when destroying the resource.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const config = new pulumi.Config();
+const creation = config.get("creation") || "Rds";
+const name = config.get("name") || "dbbackuppolicybasic";
+
+const defaultZones = pulumi.output(alicloud.getZones({
+    availableResourceCreation: creation,
+}, { async: true }));
+const defaultNetwork = new alicloud.vpc.Network("default", {
+    cidrBlock: "172.16.0.0/16",
+});
+const defaultSwitch = new alicloud.vpc.Switch("default", {
+    availabilityZone: defaultZones.zones[0].id,
+    cidrBlock: "172.16.0.0/24",
+    vpcId: defaultNetwork.id,
+});
+const instance = new alicloud.rds.Instance("instance", {
+    engine: "MySQL",
+    engineVersion: "5.6",
+    instanceName: name,
+    instanceStorage: 10,
+    instanceType: "rds.mysql.s1.small",
+    vswitchId: defaultSwitch.id,
+});
+const policy = new alicloud.rds.BackupPolicy("policy", {
+    instanceId: instance.id,
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/db_backup_policy.html.markdown.
 
 

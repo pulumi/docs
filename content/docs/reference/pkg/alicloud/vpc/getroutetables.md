@@ -10,6 +10,29 @@ This data source provides a list of Route Tables owned by an Alibaba Cloud accou
 
 > **NOTE:** Available in 1.36.0+.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const config = new pulumi.Config();
+const name = config.get("name") || "route-tables-datasource-example-name";
+
+const fooNetwork = new alicloud.vpc.Network("foo", {
+    cidrBlock: "172.16.0.0/12",
+});
+const fooRouteTable = new alicloud.vpc.RouteTable("foo", {
+    description: name,
+    vpcId: fooNetwork.id,
+});
+const fooRouteTables = fooRouteTable.id.apply(id => alicloud.vpc.getRouteTables({
+    ids: [id],
+}, { async: true }));
+
+export const routeTableIds = fooRouteTables.ids!;
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/route_tables.html.markdown.
 
 

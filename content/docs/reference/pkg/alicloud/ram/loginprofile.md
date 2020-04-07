@@ -8,6 +8,27 @@ block_external_search_index: true
 
 Provides a RAM User Login Profile resource.
 
+
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+// Create a RAM login profile.
+const user = new alicloud.ram.User("user", {
+    comments: "yoyoyo",
+    displayName: "user_display_name",
+    email: "hello.uuu@aaa.com",
+    force: true,
+    mobile: "86-18688888888",
+});
+const profile = new alicloud.ram.LoginProfile("profile", {
+    password: "Yourpassword1234",
+    userName: user.name,
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ram_login_profile.html.markdown.
 
 

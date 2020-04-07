@@ -10,6 +10,21 @@ This data source provides a list of ALIKAFKA Sasl users in an Alibaba Cloud acco
 
 > **NOTE:** Available in 1.66.0+
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const saslUsersDs = pulumi.output(alicloud.actiontrail.getSaslUsers({
+    instanceId: "xxx",
+    nameRegex: "username",
+    outputFile: "saslUsers.txt",
+}, { async: true }));
+
+export const firstSaslUsername = saslUsersDs.users[0].username;
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/alikafka_sasl_users.html.markdown.
 
 

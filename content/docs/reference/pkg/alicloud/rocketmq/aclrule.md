@@ -14,6 +14,31 @@ For information about Sag Acl Rule and how to use it, see [What is access contro
 
 > **NOTE:** Only the following regions support create Cloud Connect Network. [`cn-shanghai`, `cn-shanghai-finance-1`, `cn-hongkong`, `ap-southeast-1`, `ap-southeast-2`, `ap-southeast-3`, `ap-southeast-5`, `ap-northeast-1`, `eu-central-1`]
 
+## Example Usage
+
+Basic Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const defaultAcl = new alicloud.rocketmq.Acl("default", {
+    sagCount: "0",
+});
+const defaultAclRule = new alicloud.rocketmq.AclRule("default", {
+    aclId: defaultAcl.id,
+    description: "tf-testSagAclRule",
+    destCidr: "192.168.1.0/24",
+    destPortRange: "-1/-1",
+    direction: "in",
+    ipProtocol: "ALL",
+    policy: "accept",
+    priority: 1,
+    sourceCidr: "10.10.1.0/24",
+    sourcePortRange: "-1/-1",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/sag_acl_rule.html.markdown.
 
 

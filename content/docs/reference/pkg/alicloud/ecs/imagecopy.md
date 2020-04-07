@@ -16,6 +16,23 @@ Copies a custom image from one region to another. You can use copied images to p
 
 > **NOTE:** Available in 1.66.0+.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const defaultImageCopy = new alicloud.ecs.ImageCopy("default", {
+    description: "test-image",
+    imageName: "test-image",
+    sourceImageId: "m-bp1gxyhdswlsn18tu***",
+    sourceRegionId: "cn-hangzhou",
+    tags: {
+        FinanceDept: "FinanceDeptJoshua",
+    },
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/image_copy.html.markdown.
 
 

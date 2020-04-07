@@ -8,6 +8,39 @@ block_external_search_index: true
 
 This resource will help you to bind a VPC to an OTS instance.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+// Create an OTS instance
+const fooInstance = new alicloud.ots.Instance("foo", {
+    accessedBy: "Vpc",
+    description: "for table",
+    tags: {
+        Created: "TF",
+        For: "Building table",
+    },
+});
+const fooZones = pulumi.output(alicloud.getZones({
+    availableResourceCreation: "VSwitch",
+}, { async: true }));
+const fooNetwork = new alicloud.vpc.Network("foo", {
+    cidrBlock: "172.16.0.0/16",
+});
+const fooSwitch = new alicloud.vpc.Switch("foo", {
+    availabilityZone: fooZones.zones[0].id,
+    cidrBlock: "172.16.1.0/24",
+    vpcId: fooNetwork.id,
+});
+const fooInstanceAttachment = new alicloud.ots.InstanceAttachment("foo", {
+    instanceName: fooInstance.name,
+    vpcName: "attachment1",
+    vswitchId: fooSwitch.id,
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ots_instance_attachment.html.markdown.
 
 

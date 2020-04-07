@@ -16,6 +16,25 @@ Creates a custom image. You can then use a custom image to create ECS instances 
 
 > **NOTE:**  Available in 1.64.0+
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const defaultImage = new alicloud.ecs.Image("default", {
+    architecture: "x86_64",
+    description: "test-image",
+    imageName: "test-image",
+    instanceId: "i-bp1g6zv0ce8oghu7k***",
+    platform: "CentOS",
+    resourceGroupId: "rg-bp67acfmxazb4ph***",
+    tags: {
+        FinanceDept: "FinanceDeptJoshua",
+    },
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/image.html.markdown.
 
 

@@ -14,6 +14,19 @@ For more information about how to use it, see [RocketMQ Instance Management API]
 
 > **NOTE:** Available in 1.51.0+
 
+## Example Usage
+
+Basic Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const example = new alicloud.rocketmq.Instance("example", {
+    remark: "tf-example-ons-instance-remark",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ons_instance.html.markdown.
 
 

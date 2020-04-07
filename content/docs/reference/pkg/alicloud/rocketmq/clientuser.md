@@ -14,6 +14,24 @@ For information about Sag ClientUser and how to use it, see [What is Sag ClientU
 
 > **NOTE:** Only the following regions support. [`cn-shanghai`, `cn-shanghai-finance-1`, `cn-hongkong`, `ap-southeast-1`, `ap-southeast-2`, `ap-southeast-3`, `ap-southeast-5`, `ap-northeast-1`, `eu-central-1`]
 
+## Example Usage
+
+Basic Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const defaultClientUser = new alicloud.rocketmq.ClientUser("default", {
+    bandwidth: 20,
+    clientIp: "192.1.10.0",
+    password: "xxxxxxx",
+    sagId: "sag-xxxxx",
+    userMail: "tftest-xxxxx@test.com",
+    userName: "th-username-xxxxx",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/sag_client_user.html.markdown.
 
 

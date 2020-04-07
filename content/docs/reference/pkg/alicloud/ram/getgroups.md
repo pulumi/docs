@@ -8,6 +8,21 @@ block_external_search_index: true
 
 This data source provides a list of RAM Groups in an Alibaba Cloud account according to the specified filters.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const groupsDs = pulumi.output(alicloud.ram.getGroups({
+    nameRegex: "^group[0-9]*",
+    outputFile: "groups.txt",
+    userName: "user1",
+}, { async: true }));
+
+export const firstGroupName = groupsDs.groups[0].name;
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ram_groups.html.markdown.
 
 

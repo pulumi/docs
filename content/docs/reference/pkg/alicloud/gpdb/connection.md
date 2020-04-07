@@ -13,6 +13,41 @@ Provides a connection resource to allocate an Internet connection string for ins
 > **NOTE:** Each instance will allocate a intranet connection string automatically and its prefix is instance ID.
  To avoid unnecessary conflict, please specified a internet connection prefix before applying the resource.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const config = new pulumi.Config();
+const creation = config.get("creation") || "Gpdb";
+const name = config.get("name") || "gpdbConnectionBasic";
+
+const defaultZones = pulumi.output(alicloud.getZones({
+    availableResourceCreation: creation,
+}, { async: true }));
+const defaultNetwork = new alicloud.vpc.Network("default", {
+    cidrBlock: "172.16.0.0/16",
+});
+const defaultSwitch = new alicloud.vpc.Switch("default", {
+    availabilityZone: defaultZones.zones[0].id,
+    cidrBlock: "172.16.0.0/24",
+    vpcId: defaultNetwork.id,
+});
+const defaultInstance = new alicloud.gpdb.Instance("default", {
+    description: name,
+    engine: "gpdb",
+    engineVersion: "4.3",
+    instanceClass: "gpdb.group.segsdx2",
+    instanceGroupCount: "2",
+    vswitchId: defaultSwitch.id,
+});
+const defaultConnection = new alicloud.gpdb.Connection("default", {
+    connectionPrefix: "testAbc",
+    instanceId: defaultInstance.id,
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/gpdb_connection.html.markdown.
 
 

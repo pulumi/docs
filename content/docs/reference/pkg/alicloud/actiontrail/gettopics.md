@@ -10,6 +10,21 @@ This data source provides a list of ALIKAFKA Topics in an Alibaba Cloud account 
 
 > **NOTE:** Available in 1.56.0+
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const topicsDs = pulumi.output(alicloud.actiontrail.getTopics({
+    instanceId: "xxx",
+    nameRegex: "alikafkaTopicName",
+    outputFile: "topics.txt",
+}, { async: true }));
+
+export const firstTopicName = topicsDs.topics[0].topic;
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/alikafka_topics.html.markdown.
 
 

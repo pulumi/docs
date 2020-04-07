@@ -11,6 +11,23 @@ system disk types available in Alibaba Cloud account when create a emr cluster.
 
 > **NOTE:** Available in 1.60.0+
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const defaultDiskTypes = pulumi.output(alicloud.emr.getDiskTypes({
+    clusterType: "HADOOP",
+    destinationResource: "DataDisk",
+    instanceChargeType: "PostPaid",
+    instanceType: "ecs.g5.xlarge",
+    zoneId: "cn-huhehaote-a",
+}, { async: true }));
+
+export const dataDiskType = defaultDiskTypes.types[0].value;
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/emr_disk_types.html.markdown.
 
 

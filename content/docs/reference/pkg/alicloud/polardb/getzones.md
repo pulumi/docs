@@ -10,6 +10,16 @@ This data source provides availability zones for PolarDB that can be accessed by
 
 > **NOTE:** Available in v1.74.0+.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+// Declare the data source
+const zonesIds = pulumi.output(alicloud.polardb.getZones({ async: true }));
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/polardb_zones.html.markdown.
 
 

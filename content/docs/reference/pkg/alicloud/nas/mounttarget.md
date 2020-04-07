@@ -16,6 +16,33 @@ Provides a Nas Mount Target resource.
 and it only can be achieved by creating a classic mount target mannually.
 See [Add a mount point](https://www.alibabacloud.com/help/doc-detail/60431.htm) and [Why do I need RAM permissions to create a mount point in a classic network](https://www.alibabacloud.com/help/faq-detail/42176.htm).
 
+## Example Usage
+
+Basic Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const fooFileSystem = new alicloud.nas.FileSystem("foo", {
+    description: "tf-testAccNasConfigFs",
+    protocolType: "NFS",
+    storageType: "Performance",
+});
+const fooAccessGroup = new alicloud.nas.AccessGroup("foo", {
+    description: "tf-testAccNasConfig",
+    type: "Classic",
+});
+const bar = new alicloud.nas.AccessGroup("bar", {
+    description: "tf-testAccNasConfig-2",
+    type: "Classic",
+});
+const fooMountTarget = new alicloud.nas.MountTarget("foo", {
+    accessGroupName: fooAccessGroup.id,
+    fileSystemId: fooFileSystem.id,
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/nas_mount_target.html.markdown.
 
 

@@ -10,6 +10,75 @@ This data source provides a list of Route Entries owned by an Alibaba Cloud acco
 
 > **NOTE:** Available in 1.37.0+.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const config = new pulumi.Config();
+const name = config.get("name") || "tf-testAccRouteEntryConfig";
+
+const defaultZones = pulumi.output(alicloud.getZones({
+    availableResourceCreation: "VSwitch",
+}, { async: true }));
+const defaultInstanceTypes = defaultZones.apply(defaultZones => alicloud.ecs.getInstanceTypes({
+    availabilityZone: defaultZones.zones[0].id,
+    cpuCoreCount: 1,
+    memorySize: 2,
+}, { async: true }));
+const defaultImages = pulumi.output(alicloud.ecs.getImages({
+    mostRecent: true,
+    nameRegex: "^ubuntu_18.*64",
+    owners: "system",
+}, { async: true }));
+const fooNetwork = new alicloud.vpc.Network("foo", {
+    cidrBlock: "10.1.0.0/21",
+});
+const fooSwitch = new alicloud.vpc.Switch("foo", {
+    availabilityZone: defaultZones.zones[0].id,
+    cidrBlock: "10.1.1.0/24",
+    vpcId: fooNetwork.id,
+});
+const tfTestFoo = new alicloud.ecs.SecurityGroup("tf_test_foo", {
+    description: "foo",
+    vpcId: fooNetwork.id,
+});
+const fooInstance = new alicloud.ecs.Instance("foo", {
+    allocatePublicIp: true,
+    imageId: defaultImages.images[0].id,
+    // series III
+    instanceChargeType: "PostPaid",
+    instanceName: name,
+    instanceType: defaultInstanceTypes.instanceTypes[0].id,
+    internetChargeType: "PayByTraffic",
+    internetMaxBandwidthOut: 5,
+    // cn-beijing
+    securityGroups: [tfTestFoo.id],
+    systemDiskCategory: "cloud_efficiency",
+    vswitchId: fooSwitch.id,
+});
+const fooRouteEntry = new alicloud.vpc.RouteEntry("foo", {
+    destinationCidrblock: "172.11.1.1/32",
+    nexthopId: fooInstance.id,
+    nexthopType: "Instance",
+    routeTableId: fooNetwork.routeTableId,
+});
+const ingress = new alicloud.ecs.SecurityGroupRule("ingress", {
+    cidrIp: "0.0.0.0/0",
+    ipProtocol: "tcp",
+    nicType: "intranet",
+    policy: "accept",
+    portRange: "22/22",
+    priority: 1,
+    securityGroupId: tfTestFoo.id,
+    type: "ingress",
+});
+const fooRouteEntries = fooRouteEntry.routeTableId.apply(routeTableId => alicloud.vpc.getRouteEntries({
+    routeTableId: routeTableId,
+}, { async: true }));
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/route_entries.html.markdown.
 
 

@@ -16,6 +16,27 @@ This resource will help you to manager cluster-autoscaler in Kubernetes Cluster.
 
 > **NOTE:** Available in 1.65.0+.
 
+## Example Usage
+
+cluster-autoscaler in Kubernetes Cluster
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const defaultKubernetesAutoscaler = new alicloud.cs.KubernetesAutoscaler("default", {
+    clusterId: var_cluster_id,
+    coolDownDuration: var_cool_down_duration,
+    deferScaleInDuration: var_defer_scale_in_duration,
+    nodepools: [{
+        id: "scaling_group_id",
+        labels: "a=b",
+        taints: "c=d:NoSchedule",
+    }],
+    utilization: var_utilization,
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cs_kubernetes_autoscaler.html.markdown.
 
 

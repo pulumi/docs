@@ -8,6 +8,20 @@ block_external_search_index: true
 
 This data source provides CEN Bandwidth Packages available to the user.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const bwp = pulumi.output(alicloud.cen.getBandwidthPackages({
+    instanceId: "cen-id1",
+    nameRegex: "^foo",
+}, { async: true }));
+
+export const firstCenBandwidthPackageId = bwp.packages[0].id;
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/cen_bandwidth_packages.html.markdown.
 
 

@@ -10,6 +10,27 @@ This data source provides a list of ONS Instances in an Alibaba Cloud account ac
 
 > **NOTE:** Available in 1.52.0+
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const config = new pulumi.Config();
+const name = config.get("name") || "onsInstanceDatasourceName";
+
+const defaultInstance = new alicloud.rocketmq.Instance("default", {
+    remark: "default_ons_instance_remark",
+});
+const instancesDs = pulumi.all([defaultInstance.id, defaultInstance.name]).apply(([id, name]) => alicloud.rocketmq.getInstances({
+    ids: [id],
+    nameRegex: name,
+    outputFile: "instances.txt",
+}, { async: true }));
+
+export const firstInstanceId = instancesDs.instances[0].instanceId;
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ons_instances.html.markdown.
 
 

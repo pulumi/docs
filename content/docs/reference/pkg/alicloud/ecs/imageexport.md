@@ -16,6 +16,19 @@ Export a custom image to the OSS bucket in the same region as the custom image.
 
 > **NOTE:** Available in 1.68.0+.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const defaultImageExport = new alicloud.ecs.ImageExport("default", {
+    imageId: "m-bp1gxy***",
+    ossBucket: "ecsimageexportconfig",
+    ossPrefix: "ecsExport",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/image_export.html.markdown.
 
 

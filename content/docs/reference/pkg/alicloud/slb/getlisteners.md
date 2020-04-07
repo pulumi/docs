@@ -8,6 +8,19 @@ block_external_search_index: true
 
 This data source provides the listeners related to a server load balancer of the current Alibaba Cloud user.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const sampleDs = alicloud_slb_sample_slb.id.apply(id => alicloud.slb.getListeners({
+    loadBalancerId: id,
+}, { async: true }));
+
+export const firstSlbListenerProtocol = sampleDs.slbListeners[0].protocol;
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_listeners.html.markdown.
 
 

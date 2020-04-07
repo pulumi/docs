@@ -8,6 +8,17 @@ block_external_search_index: true
 
 This data source provides a list of EIPs (Elastic IP address) owned by an Alibaba Cloud account.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const eipsDs = pulumi.output(alicloud.ecs.getEips({ async: true }));
+
+export const firstEipId = eipsDs.eips[0].id;
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/eips.html.markdown.
 
 

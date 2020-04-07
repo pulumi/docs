@@ -8,6 +8,49 @@ block_external_search_index: true
 
 Provides a backup policy for ApsaraDB Redis / Memcache instance resource. 
 
+## Example Usage
+
+Basic Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const config = new pulumi.Config();
+const creation = config.get("creation") || "KVStore";
+const multiAz = config.get("multiAz") || "false";
+const name = config.get("name") || "kvstorebackuppolicyvpc";
+
+const defaultZones = pulumi.output(alicloud.getZones({
+    availableResourceCreation: creation,
+}, { async: true }));
+const defaultNetwork = new alicloud.vpc.Network("default", {
+    cidrBlock: "172.16.0.0/16",
+});
+const defaultSwitch = new alicloud.vpc.Switch("default", {
+    availabilityZone: defaultZones.zones[0].id,
+    cidrBlock: "172.16.0.0/24",
+    vpcId: defaultNetwork.id,
+});
+const defaultInstance = new alicloud.kvstore.Instance("default", {
+    engineVersion: "2.8",
+    instanceClass: "Memcache",
+    instanceName: name,
+    instanceType: "memcache.master.small.default",
+    privateIp: "172.16.0.10",
+    securityIps: ["10.0.0.1"],
+    vswitchId: defaultSwitch.id,
+});
+const defaultBackupPolicy = new alicloud.kvstore.BackupPolicy("default", {
+    backupPeriods: [
+        "Tuesday",
+        "Wednesday",
+    ],
+    backupTime: "10:00Z-11:00Z",
+    instanceId: defaultInstance.id,
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/kvstore_backup_policy.html.markdown.
 
 

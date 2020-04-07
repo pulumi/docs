@@ -10,6 +10,21 @@ This data source provides a list Container Registry repositories on Alibaba Clou
 
 > **NOTE:** Available in v1.35.0+
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+// Declare the data source
+const myRepos = pulumi.output(alicloud.cr.getRepos({
+    nameRegex: "my-repos",
+    outputFile: "my-repo-json",
+}, { async: true }));
+
+export const output = myRepos.repos;
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/cr_repos.html.markdown.
 
 

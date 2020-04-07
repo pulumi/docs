@@ -16,6 +16,22 @@ For information about DRDS and how to use it, see [What is DRDS](https://www.ali
 
 > **NOTE:** Currently, this resource only support `Domestic Site Account`.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const defaultInstance = new alicloud.drds.Instance("default", {
+    description: "drds instance",
+    instanceChargeType: "PostPaid",
+    instanceSeries: "drds.sn1.4c8g",
+    specification: "drds.sn1.4c8g.8C16G",
+    vswitchId: "vsw-bp1jlu3swk8rq2yoi40ey",
+    zoneId: "cn-hangzhou-e",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/drds_instance.html.markdown.
 
 

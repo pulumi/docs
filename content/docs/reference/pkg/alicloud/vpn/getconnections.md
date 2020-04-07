@@ -8,6 +8,20 @@ block_external_search_index: true
 
 The VPN connections data source lists lots of VPN connections resource information owned by an Alicloud account.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const foo = pulumi.output(alicloud.vpn.getConnections({
+    customerGatewayId: "fake-cgw-id",
+    ids: ["fake-conn-id"],
+    outputFile: "/tmp/vpnconn",
+    vpnGatewayId: "fake-vpn-id",
+}, { async: true }));
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/vpn_connections.html.markdown.
 
 

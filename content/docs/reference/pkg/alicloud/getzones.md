@@ -11,6 +11,23 @@ This data source provides availability zones that can be accessed by an Alibaba 
 
 > **NOTE:** If one zone is sold out, it will not be exported.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+// Declare the data source
+const zonesDs = pulumi.output(alicloud.getZones({
+    availableDiskCategory: "cloud_ssd",
+    availableInstanceType: "ecs.n4.large",
+}, { async: true }));
+// Create an ECS instance with the first matched zone
+const instance = new alicloud.ecs.Instance("instance", {
+    availabilityZone: zonesDs.zones[0].id,
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/zones.html.markdown.
 
 

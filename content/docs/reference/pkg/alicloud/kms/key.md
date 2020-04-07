@@ -8,6 +8,21 @@ block_external_search_index: true
 
 A kms key can help user to protect data security in the transmission process.
 
+## Example Usage
+
+Basic Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const key = new alicloud.kms.Key("key", {
+    deletionWindowInDays: 7,
+    description: "Hello KMS",
+    isEnabled: true,
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/kms_key.html.markdown.
 
 

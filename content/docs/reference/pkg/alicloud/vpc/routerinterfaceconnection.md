@@ -17,6 +17,50 @@ After that, all of the two router interfaces will be active.
 
 > **NOTE:** Please remember to add a `depends_on` clause in the router interface connection from the InitiatingSide to the AcceptingSide, because the connection from the AcceptingSide to the InitiatingSide must be done first.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const config = new pulumi.Config();
+const region = config.get("region") || "cn-hangzhou";
+const name = config.get("name") || "alicloudRouterInterfaceConnectionBasic";
+
+const fooNetwork = new alicloud.vpc.Network("foo", {
+    cidrBlock: "172.16.0.0/12",
+});
+const barNetwork = new alicloud.vpc.Network("bar", {
+    cidrBlock: "192.168.0.0/16",
+});
+const initiate = new alicloud.vpc.RouterInterface("initiate", {
+    description: name,
+    instanceChargeType: "PostPaid",
+    oppositeRegion: region,
+    role: "InitiatingSide",
+    routerId: fooNetwork.routerId,
+    routerType: "VRouter",
+    specification: "Large.2",
+});
+const opposite = new alicloud.vpc.RouterInterface("opposite", {
+    description: `${name}-opposite`,
+    oppositeRegion: region,
+    role: "AcceptingSide",
+    routerId: barNetwork.routerId,
+    routerType: "VRouter",
+    specification: "Large.1",
+});
+const barRouterInterfaceConnection = new alicloud.vpc.RouterInterfaceConnection("bar", {
+    interfaceId: opposite.id,
+    oppositeInterfaceId: initiate.id,
+});
+// A integrated router interface connection tunnel requires both InitiatingSide and AcceptingSide configuring opposite router interface.
+const fooRouterInterfaceConnection = new alicloud.vpc.RouterInterfaceConnection("foo", {
+    interfaceId: initiate.id,
+    oppositeInterfaceId: opposite.id,
+}, { dependsOn: [barRouterInterfaceConnection] });
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/router_interface_connection.html.markdown.
 
 

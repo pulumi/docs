@@ -11,6 +11,27 @@ instance types available in Alibaba Cloud account when create a emr cluster.
 
 > **NOTE:** Available in 1.59.0+
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const defaultInstanceTypes = pulumi.output(alicloud.emr.getInstanceTypes({
+    clusterType: "HADOOP",
+    destinationResource: "InstanceType",
+    instanceChargeType: "PostPaid",
+    instanceType: "ecs.g5.2xlarge",
+    supportLocalStorage: false,
+    supportNodeTypes: [
+        "MASTER",
+        "CORE",
+    ],
+}, { async: true }));
+
+export const firstInstanceType = defaultInstanceTypes.types[0].id;
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/emr_instance_types.html.markdown.
 
 

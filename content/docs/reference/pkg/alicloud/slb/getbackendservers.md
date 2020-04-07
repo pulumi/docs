@@ -10,6 +10,19 @@ This data source provides the server load balancer backend servers related to a 
 
 > **NOTE:** Available in 1.53.0+
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const sampleDs = alicloud_slb_sample_slb.id.apply(id => alicloud.SlbBeckendServers({
+    loadBalancerId: id,
+}, { async: true }));
+
+export const firstSlbBackendServerId = sampleDs.backendServers.0.id;
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_backend_servers.html.markdown.
 
 

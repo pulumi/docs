@@ -12,6 +12,18 @@ For information about snapshot and how to use it, see [Snapshot](https://www.ali
 
 > **NOTE:**  Available in 1.40.0+.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const snapshots = pulumi.output(alicloud.ecs.getSnapshots({
+    ids: ["s-123456890abcdef"],
+    nameRegex: "tf-testAcc-snapshot",
+}, { async: true }));
+```
+
 ##  Argument Reference
 
 The following arguments are supported:

@@ -8,6 +8,48 @@ block_external_search_index: true
 
 Provides a RAM User Policy attachment resource. 
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+// Create a RAM User Policy attachment.
+const user = new alicloud.ram.User("user", {
+    comments: "yoyoyo",
+    displayName: "user_display_name",
+    email: "hello.uuu@aaa.com",
+    force: true,
+    mobile: "86-18688888888",
+});
+const policy = new alicloud.ram.Policy("policy", {
+    description: "this is a policy test",
+    document: `  {
+    "Statement": [
+      {
+        "Action": [
+          "oss:ListObjects",
+          "oss:GetObject"
+        ],
+        "Effect": "Allow",
+        "Resource": [
+          "acs:oss:*:*:mybucket",
+          "acs:oss:*:*:mybucket/*"
+        ]
+      }
+    ],
+      "Version": "1"
+  }
+  `,
+    force: true,
+});
+const attach = new alicloud.ram.UserPolicyAttachment("attach", {
+    policyName: policy.name,
+    policyType: policy.type,
+    userName: user.name,
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ram_user_policy_attachment.html.markdown.
 
 

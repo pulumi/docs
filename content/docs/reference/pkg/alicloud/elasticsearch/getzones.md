@@ -10,6 +10,16 @@ This data source provides availability zones for Elasticsearch that can be acces
 
 > **NOTE:** Available in v1.73.0+.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+// Declare the data source
+const zonesIds = pulumi.output(alicloud.elasticsearch.getZones({ async: true }));
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/elasticsearch_zones.html.markdown.
 
 

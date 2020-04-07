@@ -10,6 +10,19 @@ Provides a CEN instance resource. Cloud Enterprise Network (CEN) is a service th
 
 For information about CEN and how to use it, see [What is Cloud Enterprise Network](https://www.alibabacloud.com/help/doc-detail/59870.htm).
 
+## Example Usage
+
+Basic Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const cen = new alicloud.cen.Instance("cen", {
+    description: "an example for cen",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cen_instance.html.markdown.
 
 

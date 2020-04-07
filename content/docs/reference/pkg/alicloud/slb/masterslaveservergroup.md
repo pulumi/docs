@@ -22,6 +22,109 @@ A master slave server group contains two ECS instances. The master slave server 
 
 > **NOTE:** Available in 1.54.0+
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const config = new pulumi.Config();
+const name = config.get("name") || "tf-testAccSlbMasterSlaveServerGroupVpc";
+const number = config.get("number") || "1";
+
+const defaultZones = pulumi.output(alicloud.getZones({
+    availableDiskCategory: "cloud_efficiency",
+    availableResourceCreation: "VSwitch",
+}, { async: true }));
+const defaultInstanceTypes = defaultZones.apply(defaultZones => alicloud.ecs.getInstanceTypes({
+    availabilityZone: defaultZones.zones[0].id,
+    eniAmount: 2,
+}, { async: true }));
+const image = pulumi.output(alicloud.ecs.getImages({
+    mostRecent: true,
+    nameRegex: "^ubuntu_18.*64",
+    owners: "system",
+}, { async: true }));
+const mainNetwork = new alicloud.vpc.Network("main", {
+    cidrBlock: "172.16.0.0/16",
+});
+const mainSwitch = new alicloud.vpc.Switch("main", {
+    availabilityZone: defaultZones.zones[0].id,
+    cidrBlock: "172.16.0.0/16",
+    vpcId: mainNetwork.id,
+});
+const groupSecurityGroup = new alicloud.ecs.SecurityGroup("group", {
+    vpcId: mainNetwork.id,
+});
+const instanceInstance: alicloud.ecs.Instance[] = [];
+for (let i = 0; i < 2; i++) {
+    instanceInstance.push(new alicloud.ecs.Instance(`instance-${i}`, {
+        availabilityZone: defaultZones.zones[0].id,
+        imageId: image.images[0].id,
+        instanceChargeType: "PostPaid",
+        instanceName: name,
+        instanceType: defaultInstanceTypes.instanceTypes[0].id,
+        internetChargeType: "PayByTraffic",
+        internetMaxBandwidthOut: 10,
+        securityGroups: [groupSecurityGroup.id],
+        systemDiskCategory: "cloud_efficiency",
+        vswitchId: mainSwitch.id,
+    }));
+}
+const instanceLoadBalancer = new alicloud.slb.LoadBalancer("instance", {
+    specification: "slb.s2.small",
+    vswitchId: mainSwitch.id,
+});
+const defaultNetworkInterface: alicloud.vpc.NetworkInterface[] = [];
+for (let i = 0; i < number; i++) {
+    defaultNetworkInterface.push(new alicloud.vpc.NetworkInterface(`default-${i}`, {
+        securityGroups: [groupSecurityGroup.id],
+        vswitchId: mainSwitch.id,
+    }));
+}
+const defaultNetworkInterfaceAttachment: alicloud.vpc.NetworkInterfaceAttachment[] = [];
+for (let i = 0; i < number; i++) {
+    defaultNetworkInterfaceAttachment.push(new alicloud.vpc.NetworkInterfaceAttachment(`default-${i}`, {
+        instanceId: instanceInstance[0].id,
+        networkInterfaceId: pulumi.all(defaultNetworkInterface.map(v => v.id)).apply(id => id.map(v => v)[i]),
+    }));
+}
+const groupMasterSlaveServerGroup = new alicloud.slb.MasterSlaveServerGroup("group", {
+    loadBalancerId: instanceLoadBalancer.id,
+    servers: [
+        {
+            port: 100,
+            serverId: instanceInstance[0].id,
+            serverType: "Master",
+            weight: 100,
+        },
+        {
+            port: 100,
+            serverId: instanceInstance[1].id,
+            serverType: "Slave",
+            weight: 100,
+        },
+    ],
+});
+const tcp = new alicloud.slb.Listener("tcp", {
+    bandwidth: 10,
+    establishedTimeout: 600,
+    frontendPort: 22,
+    healthCheckConnectPort: 20,
+    healthCheckHttpCode: "http_2xx",
+    healthCheckInterval: 5,
+    healthCheckTimeout: 8,
+    healthCheckType: "tcp",
+    healthCheckUri: "/console",
+    healthyThreshold: 8,
+    loadBalancerId: instanceLoadBalancer.id,
+    masterSlaveServerGroupId: groupMasterSlaveServerGroup.id,
+    persistenceTimeout: 3600,
+    protocol: "tcp",
+    unhealthyThreshold: 8,
+});
+```
+
 ## Block servers
 
 The servers mapping supports the following:

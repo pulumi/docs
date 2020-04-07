@@ -8,6 +8,38 @@ block_external_search_index: true
 
 Provides a resource to put a object(content or file) to a oss bucket.
 
+## Example Usage
+
+### Uploading a file to a bucket
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const object_source = new alicloud.oss.BucketObject("object-source", {
+    bucket: "your_bucket_name",
+    key: "new_object_key",
+    source: "path/to/file",
+});
+```
+
+### Uploading a content to a bucket
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const example = new alicloud.oss.Bucket("example", {
+    acl: "public-read",
+    bucket: "your_bucket_name",
+});
+const object_content = new alicloud.oss.BucketObject("object-content", {
+    bucket: example.bucket,
+    content: "the content that you want to upload.",
+    key: "new_object_key",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/oss_bucket_object.html.markdown.
 
 

@@ -10,6 +10,21 @@ This data source provides a list Container Service Managed Kubernetes Clusters o
 
 > **NOTE:** Available in v1.35.0+
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+// Declare the data source
+const k8sClusters = pulumi.output(alicloud.cs.getManagedKubernetesClusters({
+    nameRegex: "my-first-k8s",
+    outputFile: "my-first-k8s-json",
+}, { async: true }));
+
+export const output = k8sClusters.clusters;
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/cs_managed_kubernetes_clusters.html.markdown.
 
 

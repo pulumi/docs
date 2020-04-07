@@ -26,6 +26,63 @@ Attaches/Detaches vserver groups to a specified scaling group.
 
 > **NOTE:** Resource `alicloud.ess.ScalingGroupVServerGroups` is available in 1.53.0+.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const config = new pulumi.Config();
+const name = config.get("name") || "testAccEssVserverGroupsAttachment";
+
+const defaultZones = pulumi.output(alicloud.getZones({
+    availableDiskCategory: "cloud_efficiency",
+    availableResourceCreation: "VSwitch",
+}, { async: true }));
+const defaultNetwork = new alicloud.vpc.Network("default", {
+    cidrBlock: "172.16.0.0/16",
+});
+const defaultSwitch = new alicloud.vpc.Switch("default", {
+    availabilityZone: defaultZones.zones[0].id,
+    cidrBlock: "172.16.0.0/24",
+    vpcId: defaultNetwork.id,
+});
+const defaultLoadBalancer = new alicloud.slb.LoadBalancer("default", {
+    vswitchId: defaultSwitch.id,
+});
+const defaultServerGroup = new alicloud.slb.ServerGroup("default", {
+    loadBalancerId: defaultLoadBalancer.id,
+});
+const defaultListener: alicloud.slb.Listener[] = [];
+for (let i = 0; i < 2; i++) {
+    defaultListener.push(new alicloud.slb.Listener(`default-${i}`, {
+        backendPort: 22,
+        bandwidth: 10,
+        frontendPort: 22,
+        healthCheckType: "tcp",
+        loadBalancerId: defaultLoadBalancer.id.apply(id => id[i]),
+        protocol: "tcp",
+    }));
+}
+const defaultScalingGroup = new alicloud.ess.ScalingGroup("default", {
+    maxSize: 2,
+    minSize: 2,
+    scalingGroupName: name,
+    vswitchIds: [defaultSwitch.id],
+}, { dependsOn: [...defaultListener] });
+const defaultScalingGroupVServerGroups = new alicloud.ess.ScalingGroupVServerGroups("default", {
+    scalingGroupId: defaultScalingGroup.id,
+    vserverGroups: [{
+        loadbalancerId: defaultLoadBalancer.id,
+        vserverAttributes: [{
+            port: 100,
+            vserverGroupId: defaultServerGroup.id,
+            weight: 60,
+        }],
+    }],
+});
+```
+
 ## Block vserver_group
 
 the vserver_group supports the following:

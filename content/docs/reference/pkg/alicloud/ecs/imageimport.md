@@ -14,6 +14,27 @@ Import a copy of your local on-premise file to ECS, and appear as a custom repla
 
 > **NOTE:** Available in 1.69.0+.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const thisImageImport = new alicloud.ecs.ImageImport("this", {
+    architecture: "x86_64",
+    description: "test import image",
+    diskDeviceMappings: [{
+        diskImageSize: 5,
+        ossBucket: "testimportimage",
+        ossObject: "root.img",
+    }],
+    imageName: "test-import-image",
+    licenseType: "Auto",
+    osType: "linux",
+    platform: "Ubuntu",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/image_import.html.markdown.
 
 

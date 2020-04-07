@@ -10,6 +10,22 @@ This data source provides the Market product items of Alibaba Cloud.
 
 > **NOTE:** Available in 1.64.0+
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const defaultProducts = pulumi.output(alicloud.marketplace.getProducts({
+    categoryId: "53690006",
+    productType: "SERVICE",
+    sort: "created_on-desc",
+}, { async: true }));
+
+export const firstProductCode = defaultProducts.productItems.0.code;
+export const productCodes = defaultProducts.ids!;
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/market_products.html.markdown.
 
 

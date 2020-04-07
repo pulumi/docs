@@ -10,6 +10,22 @@ This data source provides a list of Common Bandwidth Packages owned by an Alibab
 
 > **NOTE:** Available in 1.36.0+.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const fooCommonBandwithPackage = new alicloud.vpc.CommonBandwithPackage("foo", {
+    bandwidth: 2,
+    description: "tf-testAcc-CommonBandwidthPackage",
+});
+const fooCommonBandwidthPackages = fooCommonBandwithPackage.id.apply(id => alicloud.vpc.getCommonBandwidthPackages({
+    ids: [id],
+    nameRegex: "^tf-testAcc.*",
+}, { async: true }));
+```
+
 ## Public ip addresses Block
   
   The public ip addresses mapping supports the following:

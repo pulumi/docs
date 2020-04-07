@@ -10,6 +10,21 @@ This data source provides the ots tables of the current Alibaba Cloud user.
 
 > **NOTE:** Available in v1.40.0+.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const tablesDs = pulumi.output(alicloud.oss.getTables({
+    instanceName: "sample-instance",
+    nameRegex: "sample-table",
+    outputFile: "tables.txt",
+}, { async: true }));
+
+export const firstTableId = tablesDs.tables[0].id;
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ots_tables.html.markdown.
 
 

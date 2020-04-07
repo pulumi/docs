@@ -11,6 +11,24 @@ main versions available in Alibaba Cloud account when create a emr cluster.
 
 > **NOTE:** Available in 1.59.0+
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const defaultMainVersions = pulumi.output(alicloud.emr.getMainVersions({
+    clusterTypes: [
+        "HADOOP",
+        "ZOOKEEPER",
+    ],
+    emrVersion: "EMR-3.22.0",
+}, { async: true }));
+
+export const firstMainVersion = defaultMainVersions.mainVersions[0].emrVersion;
+export const thisClusterTypes = defaultMainVersions.mainVersions[0].clusterTypes;
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/emr_main_versions.html.markdown.
 
 

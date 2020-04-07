@@ -13,6 +13,57 @@ Provides an ALIKAFKA sasl acl resource.
 > **NOTE:**  Only the following regions support create alikafka sasl user.
 [`cn-hangzhou`,`cn-beijing`,`cn-shenzhen`,`cn-shanghai`,`cn-qingdao`,`cn-hongkong`,`cn-huhehaote`,`cn-zhangjiakou`,`ap-southeast-1`,`ap-south-1`,`ap-southeast-5`]
 
+## Example Usage
+
+Basic Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const config = new pulumi.Config();
+const username = config.get("username") || "testusername";
+const password = config.get("password") || "testpassword";
+
+const defaultZones = pulumi.output(alicloud.getZones({
+    availableResourceCreation: "VSwitch",
+}, { async: true }));
+const defaultNetwork = new alicloud.vpc.Network("default", {
+    cidrBlock: "172.16.0.0/12",
+});
+const defaultSwitch = new alicloud.vpc.Switch("default", {
+    availabilityZone: defaultZones.zones[0].id,
+    cidrBlock: "172.16.0.0/24",
+    vpcId: defaultNetwork.id,
+});
+const defaultInstance = new alicloud.alikafka.Instance("default", {
+    deployType: 5,
+    diskSize: 500,
+    diskType: 1,
+    ioMax: 20,
+    topicQuota: 50,
+    vswitchId: defaultSwitch.id,
+});
+const defaultTopic = new alicloud.alikafka.Topic("default", {
+    instanceId: defaultInstance.id,
+    remark: "topic-remark",
+    topic: "test-topic",
+});
+const defaultSaslUser = new alicloud.alikafka.SaslUser("default", {
+    instanceId: defaultInstance.id,
+    password: password,
+    username: username,
+});
+const defaultSaslAcl = new alicloud.alikafka.SaslAcl("default", {
+    aclOperationType: "Write",
+    aclResourceName: defaultTopic.topic,
+    aclResourcePatternType: "LITERAL",
+    aclResourceType: "Topic",
+    instanceId: defaultInstance.id,
+    username: defaultSaslUser.username,
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/alikafka_sasl_acl.html.markdown.
 
 

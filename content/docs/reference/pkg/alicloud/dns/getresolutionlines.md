@@ -10,6 +10,20 @@ This data source provides a list of DNS Resolution Lines in an Alibaba Cloud acc
 
 > **NOTE:** Available in 1.60.0.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const resolutionLinesDs = pulumi.output(alicloud.dns.getResolutionLines({
+    lineCodes: ["cn_unicom_shanxi"],
+    outputFile: "support_lines.txt",
+}, { async: true }));
+
+export const firstLineCode = resolutionLinesDs.lines[0].lineCode;
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/dns_resolution_lines.html.markdown.
 
 

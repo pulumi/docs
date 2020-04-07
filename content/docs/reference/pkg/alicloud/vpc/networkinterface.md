@@ -12,6 +12,37 @@ For information about Elastic Network Interface and how to use it, see [Elastic 
 
 > **NOTE** Only one of private_ips or private_ips_count can be specified when assign private IPs. 
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const config = new pulumi.Config();
+const name = config.get("name") || "networkInterfaceName";
+
+const vpc = new alicloud.vpc.Network("vpc", {
+    cidrBlock: "192.168.0.0/24",
+});
+const defaultZones = pulumi.output(alicloud.getZones({
+    availableResourceCreation: "VSwitch",
+}, { async: true }));
+const vswitch = new alicloud.vpc.Switch("vswitch", {
+    availabilityZone: defaultZones.zones[0].id,
+    cidrBlock: "192.168.0.0/24",
+    vpcId: vpc.id,
+});
+const group = new alicloud.ecs.SecurityGroup("group", {
+    vpcId: vpc.id,
+});
+const defaultNetworkInterface = new alicloud.vpc.NetworkInterface("default", {
+    privateIp: "192.168.0.2",
+    privateIpsCount: 3,
+    securityGroups: [group.id],
+    vswitchId: vswitch.id,
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/network_interface.html.markdown.
 
 

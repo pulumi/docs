@@ -10,6 +10,20 @@ This data source provides FileSystems available to the user.
 
 > NOTE: Available in 1.35.0+
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const fs = alicloud_nas_file_system_foo.description.apply(description => alicloud.nas.getFileSystems({
+    description: description,
+    protocolType: "NFS",
+}, { async: true }));
+
+export const alicloudNasFileSystemsId = fs.systems[0].id;
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/nas_file_systems.html.markdown.
 
 

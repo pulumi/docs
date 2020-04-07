@@ -8,6 +8,20 @@ block_external_search_index: true
 
 The SSL-VPN servers data source lists lots of SSL-VPN servers resource information owned by an Alicloud account.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const foo = pulumi.output(alicloud.vpc.getSslVpnServers({
+    ids: ["fake-server-id"],
+    nameRegex: "^foo",
+    outputFile: "/tmp/sslserver",
+    vpnGatewayId: "fake-vpn-id",
+}, { async: true }));
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ssl_vpn_servers.html.markdown.
 
 

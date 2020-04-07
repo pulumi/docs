@@ -8,6 +8,21 @@ block_external_search_index: true
 
 This data source provides a list of KMS keys in an Alibaba Cloud account according to the specified filters.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+// Declare the data source
+const kmsKeysDs = pulumi.output(alicloud.kms.getKeys({
+    descriptionRegex: "Hello KMS",
+    outputFile: "kms_keys.json",
+}, { async: true }));
+
+export const firstKeyId = kmsKeysDs.keys[0].id;
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/kms_keys.html.markdown.
 
 

@@ -10,6 +10,42 @@ This data source provides a list of ALIKAFKA Instances in an Alibaba Cloud accou
 
 > **NOTE:** Available in 1.59.0+
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const config = new pulumi.Config();
+const instanceName = config.get("instanceName") || "alikafkaInstanceName";
+
+const defaultZones = pulumi.output(alicloud.getZones({
+    availableResourceCreation: "VSwitch",
+}, { async: true }));
+const defaultNetwork = new alicloud.vpc.Network("default", {
+    cidrBlock: "172.16.0.0/12",
+});
+const defaultSwitch = new alicloud.vpc.Switch("default", {
+    availabilityZone: defaultZones.zones[0].id,
+    cidrBlock: "172.16.0.0/24",
+    vpcId: defaultNetwork.id,
+});
+const defaultInstance = new alicloud.alikafka.Instance("default", {
+    deployType: 4,
+    diskSize: 500,
+    diskType: 1,
+    ioMax: 20,
+    topicQuota: 50,
+    vswitchId: defaultSwitch.id,
+});
+const instancesDs = pulumi.output(alicloud.actiontrail.getInstances({
+    nameRegex: "alikafkaInstanceName",
+    outputFile: "instances.txt",
+}, { async: true }));
+
+export const firstInstanceName = instancesDs.instances[0].name;
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/alikafka_instances.html.markdown.
 
 

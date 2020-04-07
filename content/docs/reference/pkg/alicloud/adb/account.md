@@ -10,6 +10,45 @@ Provides a [ADB](https://www.alibabacloud.com/help/product/92664.htm) account re
 
 > **NOTE:** Available in v1.71.0+. 
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const config = new pulumi.Config();
+const creation = config.get("creation") || "ADB";
+const name = config.get("name") || "adbaccountmysql";
+
+const defaultZones = pulumi.output(alicloud.getZones({
+    availableResourceCreation: creation,
+}, { async: true }));
+const defaultNetwork = new alicloud.vpc.Network("default", {
+    cidrBlock: "172.16.0.0/16",
+});
+const defaultSwitch = new alicloud.vpc.Switch("default", {
+    availabilityZone: defaultZones.zones[0].id,
+    cidrBlock: "172.16.0.0/24",
+    vpcId: defaultNetwork.id,
+});
+const cluster = new alicloud.adb.Cluster("cluster", {
+    dbClusterCategory: "Cluster",
+    dbClusterVersion: "3.0",
+    dbNodeClass: "C8",
+    dbNodeCount: 2,
+    dbNodeStorage: 200,
+    description: name,
+    payType: "PostPaid",
+    vswitchId: defaultSwitch.id,
+});
+const account = new alicloud.rds.Account("account", {
+    accountDescription: name,
+    accountName: "tftestnormal",
+    accountPassword: "Test12345",
+    dbClusterId: alicloud_db_instance_instance.id,
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/adb_account.html.markdown.
 
 

@@ -10,6 +10,67 @@ Provides an ECS Launch Template resource.
 
 For information about Launch Template and how to use it, see [Launch Template](https://www.alibabacloud.com/help/doc-detail/73916.html).
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const images = pulumi.output(alicloud.ecs.getImages({
+    owners: "system",
+}, { async: true }));
+const instances = pulumi.output(alicloud.ecs.getInstances({ async: true }));
+const template = new alicloud.ecs.LaunchTemplate("template", {
+    dataDisks: [
+        {
+            description: "test1",
+            name: "disk1",
+        },
+        {
+            description: "test2",
+            name: "disk2",
+        },
+    ],
+    description: "test1",
+    hostName: "tf-test-host",
+    imageId: images.images[0].id,
+    instanceChargeType: "PrePaid",
+    instanceName: "tf-instance-name",
+    instanceType: instances.instances[0].instanceType,
+    internetChargeType: "PayByBandwidth",
+    internetMaxBandwidthIn: 5,
+    internetMaxBandwidthOut: 0,
+    ioOptimized: "none",
+    keyPairName: "test-key-pair",
+    networkInterfaces: {
+        description: "hello1",
+        name: "eth0",
+        primaryIp: "10.0.0.2",
+        securityGroupId: "xxxx",
+        vswitchId: "xxxxxxx",
+    },
+    networkType: "vpc",
+    ramRoleName: "xxxxx",
+    resourceGroupId: "rg-zkdfjahg9zxncv0",
+    securityEnhancementStrategy: "Active",
+    securityGroupId: "sg-zxcvj0lasdf102350asdf9a",
+    spotPriceLimit: 5,
+    spotStrategy: "SpotWithPriceLimit",
+    systemDiskCategory: "cloud_ssd",
+    systemDiskDescription: "test disk",
+    systemDiskName: "hello",
+    systemDiskSize: 40,
+    tags: {
+        tag1: "hello",
+        tag2: "world",
+    },
+    userdata: "xxxxxxxxxxxxxx",
+    vpcId: "vpc-asdfnbg0as8dfk1nb2",
+    vswitchId: "sw-ljkngaksdjfj0nnasdf",
+    zoneId: "beijing-a",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/launch_template.html.markdown.
 
 

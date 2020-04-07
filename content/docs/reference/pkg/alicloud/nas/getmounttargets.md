@@ -10,6 +10,20 @@ This data source provides MountTargets available to the user.
 
 > NOTE: Available in 1.35.0+
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const mt = pulumi.output(alicloud.nas.getMountTargets({
+    accessGroupName: "tf-testAccNasConfig",
+    fileSystemId: "1a2sc4d",
+}, { async: true }));
+
+export const alicloudNasMountTargetsId = mt.targets[0].id;
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/nas_mount_targets.html.markdown.
 
 

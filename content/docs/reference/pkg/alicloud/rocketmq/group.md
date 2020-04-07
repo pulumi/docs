@@ -12,6 +12,28 @@ For more information about how to use it, see [RocketMQ Group Management API](ht
 
 > **NOTE:** Available in 1.53.0+
 
+## Example Usage
+
+Basic Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const config = new pulumi.Config();
+const name = config.get("name") || "onsInstanceName";
+const groupId = config.get("groupId") || "GID-onsGroupDatasourceName";
+
+const defaultInstance = new alicloud.rocketmq.Instance("default", {
+    remark: "default_ons_instance_remark",
+});
+const defaultGroup = new alicloud.rocketmq.Group("default", {
+    groupId: groupId,
+    instanceId: defaultInstance.id,
+    remark: "dafault_ons_group_remark",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ons_group.html.markdown.
 
 

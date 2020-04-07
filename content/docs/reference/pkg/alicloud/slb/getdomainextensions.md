@@ -10,6 +10,19 @@ This data source provides the domain extensions associated with a server load ba
 
 > **NOTE:** Available in 1.60.0+
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const foo = pulumi.output(alicloud.slb.getDomainExtensions({
+    frontendPort: Number.parseFloat("fake-port"),
+    ids: ["fake-de-id"],
+    loadBalancerId: "fake-lb-id",
+}, { async: true }));
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_domain_extensions.html.markdown.
 
 

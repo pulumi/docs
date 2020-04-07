@@ -10,6 +10,67 @@ Provides a key pair attachment resource to bind key pair for several ECS instanc
 
 > **NOTE:** After the key pair is attached with sone instances, there instances must be rebooted to make the key pair affect.
 
+## Example Usage
+
+Basic Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const config = new pulumi.Config();
+const name = config.get("name") || "keyPairAttachmentName";
+
+const defaultZones = pulumi.output(alicloud.getZones({
+    availableDiskCategory: "cloud_ssd",
+    availableResourceCreation: "VSwitch",
+}, { async: true }));
+const type = defaultZones.apply(defaultZones => alicloud.ecs.getInstanceTypes({
+    availabilityZone: defaultZones.zones[0].id,
+    cpuCoreCount: 1,
+    memorySize: 2,
+}, { async: true }));
+const images = pulumi.output(alicloud.ecs.getImages({
+    mostRecent: true,
+    nameRegex: "^ubuntu_18.*64",
+    owners: "system",
+}, { async: true }));
+const vpc = new alicloud.vpc.Network("vpc", {
+    cidrBlock: "10.1.0.0/21",
+});
+const vswitch = new alicloud.vpc.Switch("vswitch", {
+    availabilityZone: defaultZones.zones[0].id,
+    cidrBlock: "10.1.1.0/24",
+    vpcId: vpc.id,
+});
+const group = new alicloud.ecs.SecurityGroup("group", {
+    description: "New security group",
+    vpcId: vpc.id,
+});
+const instance: alicloud.ecs.Instance[] = [];
+for (let i = 0; i < 2; i++) {
+    instance.push(new alicloud.ecs.Instance(`instance-${i}`, {
+        imageId: images.images[0].id,
+        instanceChargeType: "PostPaid",
+        instanceName: `${name}-${(i + 1)}`,
+        instanceType: type.instanceTypes[0].id,
+        internetChargeType: "PayByTraffic",
+        internetMaxBandwidthOut: 5,
+        password: "Test12345",
+        securityGroups: [group.id],
+        systemDiskCategory: "cloud_ssd",
+        vswitchId: vswitch.id,
+    }));
+}
+const pair = new alicloud.ecs.KeyPair("pair", {
+    keyName: name,
+});
+const attachment = new alicloud.ecs.KeyPairAttachment("attachment", {
+    instanceIds: instance.map(v => v.id),
+    keyName: pair.id,
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/key_pair_attachment.html.markdown.
 
 

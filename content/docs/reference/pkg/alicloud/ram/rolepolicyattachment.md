@@ -8,6 +8,61 @@ block_external_search_index: true
 
 Provides a RAM Role attachment resource.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+// Create a RAM Role Policy attachment.
+const role = new alicloud.ram.Role("role", {
+    description: "this is a role test.",
+    document: `    {
+      "Statement": [
+        {
+          "Action": "sts:AssumeRole",
+          "Effect": "Allow",
+          "Principal": {
+            "Service": [
+              "apigateway.aliyuncs.com", 
+              "ecs.aliyuncs.com"
+            ]
+          }
+        }
+      ],
+      "Version": "1"
+    }
+    `,
+    force: true,
+});
+const policy = new alicloud.ram.Policy("policy", {
+    description: "this is a policy test",
+    document: `  {
+    "Statement": [
+      {
+        "Action": [
+          "oss:ListObjects",
+          "oss:GetObject"
+        ],
+        "Effect": "Allow",
+        "Resource": [
+          "acs:oss:*:*:mybucket",
+          "acs:oss:*:*:mybucket/*"
+        ]
+      }
+    ],
+      "Version": "1"
+  }
+  `,
+    force: true,
+});
+const attach = new alicloud.ram.RolePolicyAttachment("attach", {
+    policyName: policy.name,
+    policyType: policy.type,
+    roleName: role.name,
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ram_role_policy_attachment.html.markdown.
 
 

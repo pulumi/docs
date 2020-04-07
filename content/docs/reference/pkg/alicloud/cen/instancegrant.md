@@ -10,6 +10,43 @@ Provides a CEN child instance grant resource, which allow you to authorize a VPC
 
 For more information about how to use it, see [Attach a network in a different account](https://www.alibabacloud.com/help/doc-detail/73645.htm). 
 
+## Example Usage
+
+Basic Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const config = new pulumi.Config();
+const name = config.get("name") || "tf-testAccCenInstanceGrantBasic";
+
+// Create a new instance-grant and use it to grant one child instance of account1 to a new CEN of account 2.
+const account1 = new alicloud.Provider("account1", {
+    accessKey: "access123",
+    secretKey: "secret123",
+});
+const account2 = new alicloud.Provider("account2", {
+    accessKey: "access456",
+    secretKey: "secret456",
+});
+const cen = new alicloud.cen.Instance("cen", {}, { provider: account2 });
+const vpc = new alicloud.vpc.Network("vpc", {
+    cidrBlock: "192.168.0.0/16",
+}, { provider: account1 });
+const fooInstanceGrant = new alicloud.cen.InstanceGrant("foo", {
+    cenId: cen.id,
+    cenOwnerId: "uid2",
+    childInstanceId: vpc.id,
+}, { provider: account1 });
+const fooInstanceAttachment = new alicloud.cen.InstanceAttachment("foo", {
+    childInstanceId: vpc.id,
+    childInstanceOwnerId: "uid1",
+    childInstanceRegionId: "cn-qingdao",
+    instanceId: cen.id,
+}, { provider: account2, dependsOn: [fooInstanceGrant] });
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cen_instance_grant.html.markdown.
 
 

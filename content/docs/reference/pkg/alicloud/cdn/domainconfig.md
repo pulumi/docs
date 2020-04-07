@@ -12,6 +12,37 @@ For information about domain config and how to use it, see [Batch set config](ht
 
 > **NOTE:** Available in v1.34.0+.
 
+## Example Usage
+
+Basic Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+// Create a new Domain config.
+const domain = new alicloud.cdn.DomainNew("domain", {
+    cdnType: "web",
+    domainName: "tf-testacc%d.xiaozhu.com",
+    scope: "overseas",
+    sources: {
+        content: "1.1.1.1",
+        port: 80,
+        priority: 20,
+        type: "ipaddr",
+        weight: 15,
+    },
+});
+const config = new alicloud.cdn.DomainConfig("config", {
+    domainName: domain.domainName,
+    functionArgs: [{
+        argName: "ip_list",
+        argValue: "110.110.110.110",
+    }],
+    functionName: "ip_allow_list_set",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cdn_domain_config.html.markdown.
 
 

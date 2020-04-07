@@ -8,6 +8,21 @@ block_external_search_index: true
 
 This data source provides the Function Compute triggers of the current Alibaba Cloud user.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const fcTriggersDs = pulumi.output(alicloud.fc.getTriggers({
+    functionName: "sample_function",
+    nameRegex: "sample_fc_trigger",
+    serviceName: "sample_service",
+}, { async: true }));
+
+export const firstFcTriggerName = fcTriggersDs.triggers[0].name;
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/fc_triggers.html.markdown.
 
 

@@ -10,6 +10,52 @@ Provides a ESS notification resource. More about Ess notification, see [Autoscal
 
 > **NOTE:** Available in 1.55.0+
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const config = new pulumi.Config();
+const name = config.get("name") || "tf-testAccEssNotification-%d";
+
+const defaultRegions = pulumi.output(alicloud.getRegions({
+    current: true,
+}, { async: true }));
+const defaultAccount = pulumi.output(alicloud.getAccount({ async: true }));
+const defaultZones = pulumi.output(alicloud.getZones({
+    availableDiskCategory: "cloud_efficiency",
+    availableResourceCreation: "VSwitch",
+}, { async: true }));
+const defaultNetwork = new alicloud.vpc.Network("default", {
+    cidrBlock: "172.16.0.0/16",
+});
+const defaultSwitch = new alicloud.vpc.Switch("default", {
+    availabilityZone: defaultZones.zones[0].id,
+    cidrBlock: "172.16.0.0/24",
+    vpcId: defaultNetwork.id,
+});
+const defaultScalingGroup = new alicloud.ess.ScalingGroup("default", {
+    maxSize: 1,
+    minSize: 1,
+    removalPolicies: [
+        "OldestInstance",
+        "NewestInstance",
+    ],
+    scalingGroupName: name,
+    vswitchIds: [defaultSwitch.id],
+});
+const defaultQueue = new alicloud.mns.Queue("default", {});
+const defaultNotification = new alicloud.ess.Notification("default", {
+    notificationArn: pulumi.interpolate`acs:ess:${defaultRegions.regions[0].id}:${defaultAccount.id}:queue/${defaultQueue.name}`,
+    notificationTypes: [
+        "AUTOSCALING:SCALE_OUT_SUCCESS",
+        "AUTOSCALING:SCALE_OUT_ERROR",
+    ],
+    scalingGroupId: defaultScalingGroup.id,
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ess_notification.html.markdown.
 
 

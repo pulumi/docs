@@ -14,6 +14,25 @@ For information about Sag DnatEntry and how to use it, see [What is Sag DnatEntr
 
 > **NOTE:** Only the following regions suppor. [`cn-shanghai`, `cn-shanghai-finance-1`, `cn-hongkong`, `ap-southeast-1`, `ap-southeast-2`, `ap-southeast-3`, `ap-southeast-5`, `ap-northeast-1`, `eu-central-1`]
 
+## Example Usage
+
+Basic Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const defaultDnatEntry = new alicloud.rocketmq.DnatEntry("default", {
+    externalIp: "1.0.0.2",
+    externalPort: "1",
+    internalIp: "10.0.0.2",
+    internalPort: "20",
+    ipProtocol: "tcp",
+    sagId: "sag-3rb1t3iagy3w0zgwy9",
+    type: "Intranet",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/sag_dnat_entry.html.markdown.
 
 

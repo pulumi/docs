@@ -8,6 +8,85 @@ block_external_search_index: true
 
 Provides a RAM role attachment resource to bind role for several ECS instances.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const config = new pulumi.Config();
+const name = config.get("name") || "ecsInstanceVPCExample";
+
+const defaultZones = pulumi.output(alicloud.getZones({
+    availableDiskCategory: "cloud_efficiency",
+    availableResourceCreation: "VSwitch",
+}, { async: true }));
+const defaultInstanceTypes = defaultZones.apply(defaultZones => alicloud.ecs.getInstanceTypes({
+    availabilityZone: defaultZones.zones[0].id,
+    cpuCoreCount: 2,
+    memorySize: 4,
+}, { async: true }));
+const defaultImages = pulumi.output(alicloud.ecs.getImages({
+    mostRecent: true,
+    nameRegex: "^ubuntu_18.*64",
+    owners: "system",
+}, { async: true }));
+const defaultNetwork = new alicloud.vpc.Network("default", {
+    cidrBlock: "172.16.0.0/16",
+});
+const defaultSwitch = new alicloud.vpc.Switch("default", {
+    availabilityZone: defaultZones.zones[0].id,
+    cidrBlock: "172.16.0.0/24",
+    vpcId: defaultNetwork.id,
+});
+const defaultSecurityGroup = new alicloud.ecs.SecurityGroup("default", {
+    vpcId: defaultNetwork.id,
+});
+const defaultSecurityGroupRule = new alicloud.ecs.SecurityGroupRule("default", {
+    cidrIp: "172.16.0.0/24",
+    ipProtocol: "tcp",
+    nicType: "intranet",
+    policy: "accept",
+    portRange: "22/22",
+    priority: 1,
+    securityGroupId: defaultSecurityGroup.id,
+    type: "ingress",
+});
+const foo = new alicloud.ecs.Instance("foo", {
+    imageId: defaultImages.images[0].id,
+    instanceName: name,
+    instanceType: defaultInstanceTypes.instanceTypes[0].id,
+    internetChargeType: "PayByTraffic",
+    internetMaxBandwidthOut: 5,
+    securityGroups: [defaultSecurityGroup.id],
+    systemDiskCategory: "cloud_efficiency",
+    vswitchId: defaultSwitch.id,
+});
+const role = new alicloud.ram.Role("role", {
+    description: "this is a test",
+    document: `  {
+    "Statement": [
+      {
+        "Action": "sts:AssumeRole",
+        "Effect": "Allow",
+        "Principal": {
+          "Service": [
+            "ecs.aliyuncs.com"
+          ]
+        }
+      }
+    ],
+    "Version": "1"
+  }
+  `,
+    force: true,
+});
+const attach = new alicloud.ram.RoleAttachment("attach", {
+    instanceIds: [foo.id],
+    roleName: role.name,
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ram_role_attachment.html.markdown.
 
 

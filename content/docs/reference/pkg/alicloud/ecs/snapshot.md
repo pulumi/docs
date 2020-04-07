@@ -10,6 +10,21 @@ Provides an ECS snapshot resource.
 
 For information about snapshot and how to use it, see [Snapshot](https://www.alibabacloud.com/help/doc-detail/25460.html).
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const snapshot = new alicloud.ecs.Snapshot("snapshot", {
+    description: "this snapshot is created for testing",
+    diskId: alicloud_disk_attachment_instance_attachment.diskId,
+    tags: {
+        version: "1.2",
+    },
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/snapshot.html.markdown.
 
 

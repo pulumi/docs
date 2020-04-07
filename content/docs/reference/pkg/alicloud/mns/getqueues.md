@@ -8,6 +8,19 @@ block_external_search_index: true
 
 This data source provides a list of MNS queues in an Alibaba Cloud account according to the specified parameters.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const queues = pulumi.output(alicloud.mns.getQueues({
+    namePrefix: "tf-",
+}, { async: true }));
+
+export const firstQueueId = queues.queues[0].id;
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/mns_queues.html.markdown.
 
 

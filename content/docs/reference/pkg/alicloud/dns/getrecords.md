@@ -8,6 +8,23 @@ block_external_search_index: true
 
 This data source provides a list of DNS Domain Records in an Alibaba Cloud account according to the specified filters.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const recordsDs = pulumi.output(alicloud.dns.getRecords({
+    domainName: "xiaozhu.top",
+    hostRecordRegex: "^@",
+    isLocked: false,
+    outputFile: "records.txt",
+    type: "A",
+}, { async: true }));
+
+export const firstRecordId = recordsDs.records[0].recordId;
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/dns_records.html.markdown.
 
 

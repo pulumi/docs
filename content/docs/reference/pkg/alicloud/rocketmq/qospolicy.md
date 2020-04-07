@@ -15,6 +15,29 @@ For information about Sag Qos Policy and how to use it, see [What is Qos Policy]
 
 > **NOTE:** Only the following regions support. [`cn-shanghai`, `cn-shanghai-finance-1`, `cn-hongkong`, `ap-southeast-1`, `ap-southeast-2`, `ap-southeast-3`, `ap-southeast-5`, `ap-northeast-1`, `eu-central-1`]
 
+## Example Usage
+
+Basic Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const defaultQos = new alicloud.rocketmq.Qos("default", {});
+const defaultQosPolicy = new alicloud.rocketmq.QosPolicy("default", {
+    description: "tf-testSagQosPolicyDescription",
+    destCidr: "10.10.0.0/24",
+    destPortRange: "-1/-1",
+    endTime: "2019-10-26T16:41:33+0800",
+    ipProtocol: "ALL",
+    priority: 1,
+    qosId: defaultQos.id,
+    sourceCidr: "192.168.0.0/24",
+    sourcePortRange: "-1/-1",
+    startTime: "2019-10-25T16:41:33+0800",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/sag_qos_policy.html.markdown.
 
 

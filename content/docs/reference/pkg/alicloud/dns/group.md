@@ -8,6 +8,16 @@ block_external_search_index: true
 
 Provides a DNS Group resource.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+// Add a new Domain group.
+const group = new alicloud.dns.Group("group", {});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/dns_group.html.markdown.
 
 

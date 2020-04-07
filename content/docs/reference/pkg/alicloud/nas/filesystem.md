@@ -14,6 +14,21 @@ For information about NAS file system and how to use it, see [Manage file system
 
 > **NOTE:** Available in v1.33.0+.
 
+## Example Usage
+
+Basic Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const foo = new alicloud.nas.FileSystem("foo", {
+    description: "tf-testAccNasConfig",
+    protocolType: "NFS",
+    storageType: "Performance",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/nas_file_system.html.markdown.
 
 

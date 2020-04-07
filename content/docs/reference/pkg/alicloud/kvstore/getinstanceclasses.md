@@ -10,6 +10,26 @@ This data source provides the KVStore instance classes resource available info o
 
 > **NOTE:** Available in v1.49.0+
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const resourcesZones = pulumi.output(alicloud.getZones({
+    availableResourceCreation: "KVStore",
+}, { async: true }));
+const resourcesInstanceClasses = resourcesZones.apply(resourcesZones => alicloud.kvstore.getInstanceClasses({
+    engine: "Redis",
+    engineVersion: "5.0",
+    instanceChargeType: "PrePaid",
+    outputFile: "./classes.txt",
+    zoneId: resourcesZones.zones[0].id,
+}, { async: true }));
+
+export const firstKvstoreInstanceClass = resourcesInstanceClasses.instanceClasses;
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/kvstore_instance_classes.html.markdown.
 
 

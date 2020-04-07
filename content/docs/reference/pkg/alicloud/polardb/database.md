@@ -10,6 +10,26 @@ Provides a PolarDB database resource. A DB database deployed in a DB cluster. A 
 
 > **NOTE:** Available in v1.66.0+.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const cluster = new alicloud.polardb.Cluster("cluster", {
+    dbNodeClass: var_clusterclass,
+    dbType: "MySQL",
+    dbVersion: "8.0",
+    description: "testDB",
+    payType: "PostPaid",
+    vswitchId: "polar.mysql.x4.large",
+});
+const defaultDatabase = new alicloud.polardb.Database("default", {
+    dbClusterId: cluster.id,
+    dbName: "tftestdatabase",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/polardb_database.html.markdown.
 
 

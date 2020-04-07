@@ -10,6 +10,36 @@ The `alicloud.ecs.getSecurityGroupRules` data source provides a collection of se
 Each collection item represents a single `ingress` or `egress` permission rule.
 The ID of the security group can be provided via a variable or the result from the other data source `alicloud.ecs.getSecurityGroups`.
 
+## Example Usage
+
+The following example shows how to obtain details about a security group rule and how to pass its data to an instance at launch time.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const config = new pulumi.Config();
+// Get the security group id from a variable
+const securityGroupId = config.require("securityGroupId");
+
+// Or get it from the alicloud.ecs.getSecurityGroups data source.
+// Please note that the data source arguments must be enough to filter results to one security group.
+const groupsDs = pulumi.output(alicloud.ecs.getSecurityGroups({
+    nameRegex: "api",
+}, { async: true }));
+// Filter the security group rule by group
+const ingressRulesDs = groupsDs.apply(groupsDs => alicloud.ecs.getSecurityGroupRules({
+    direction: "ingress",
+    groupId: groupsDs.groups[0].id,
+    ipProtocol: "TCP",
+    nicType: "internet",
+}, { async: true }));
+// Pass port_range to the backend service
+const backend = new alicloud.ecs.Instance("backend", {
+    userData: pulumi.interpolate`config_service.sh --portrange=${ingressRulesDs.rules[0].portRange}`,
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/security_group_rules.html.markdown.
 
 

@@ -8,6 +8,19 @@ block_external_search_index: true
 
 This data source provides Alibaba Cloud regions.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const currentRegionDs = pulumi.output(alicloud.getRegions({
+    current: true,
+}, { async: true }));
+
+export const currentRegionId = currentRegionDs.regions[0].id;
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/regions.html.markdown.
 
 

@@ -8,6 +8,40 @@ block_external_search_index: true
 
 Provides a RAM Group membership resource. 
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+// Create a RAM Group membership.
+const group = new alicloud.ram.Group("group", {
+    comments: "this is a group comments.",
+    force: true,
+});
+const user = new alicloud.ram.User("user", {
+    comments: "yoyoyo",
+    displayName: "user_display_name",
+    email: "hello.uuu@aaa.com",
+    force: true,
+    mobile: "86-18688888888",
+});
+const user1 = new alicloud.ram.User("user1", {
+    comments: "yoyoyo",
+    displayName: "user_display_name1",
+    email: "hello.uuu@aaa.com",
+    force: true,
+    mobile: "86-18688888889",
+});
+const membership = new alicloud.ram.GroupMembership("membership", {
+    groupName: group.name,
+    userNames: [
+        user.name,
+        user1.name,
+    ],
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ram_group_membership.html.markdown.
 
 

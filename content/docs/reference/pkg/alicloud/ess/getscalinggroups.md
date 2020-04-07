@@ -8,6 +8,23 @@ block_external_search_index: true
 
 This data source provides available scaling group resources. 
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const scalinggroupsDs = pulumi.output(alicloud.ess.getScalingGroups({
+    ids: [
+        "scaling_group_id1",
+        "scaling_group_id2",
+    ],
+    nameRegex: "scaling_group_name",
+}, { async: true }));
+
+export const firstScalingGroup = scalinggroupsDs.groups[0].id;
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ess_scaling_groups.html.markdown.
 
 

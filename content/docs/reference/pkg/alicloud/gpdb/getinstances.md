@@ -11,6 +11,21 @@ Filters support regular expression for the instance name or availability_zone.
 
 > **NOTE:**  Available in 1.47.0+
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const gpdb = pulumi.output(alicloud.gpdb.getInstances({
+    availabilityZone: "cn-beijing-c",
+    nameRegex: "gp-.+\\d+",
+    outputFile: "instances.txt",
+}, { async: true }));
+
+export const instanceId = gpdb.instances[0].id;
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/gpdb_instances.html.markdown.
 
 

@@ -12,6 +12,20 @@ In NAS, the permission group acts as a whitelist that allows you to restrict fil
 
 > **NOTE:** Available in v1.33.0+.
 
+## Example Usage
+
+Basic Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const foo = new alicloud.nas.AccessGroup("foo", {
+    description: "test_AccessG",
+    type: "Classic",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/nas_access_group.html.markdown.
 
 

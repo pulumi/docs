@@ -8,6 +8,19 @@ block_external_search_index: true
 
 This data source lists a number of Private Zones resource information owned by an Alibaba Cloud account.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const pvtzZonesDs = alicloud_pvtz_zone_basic.zoneName.apply(zoneName => alicloud.pvtz.getZones({
+    keyword: zoneName,
+}, { async: true }));
+
+export const firstZoneId = pvtzZonesDs.zones[0].id;
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/pvtz_zones.html.markdown.
 
 

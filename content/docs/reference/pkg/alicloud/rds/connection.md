@@ -11,6 +11,41 @@ Provides an RDS connection resource to allocate an Internet connection string fo
 > **NOTE:** Each RDS instance will allocate a intranet connnection string automatically and its prifix is RDS instance ID.
  To avoid unnecessary conflict, please specified a internet connection prefix before applying the resource.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const config = new pulumi.Config();
+const creation = config.get("creation") || "Rds";
+const name = config.get("name") || "dbconnectionbasic";
+
+const defaultZones = pulumi.output(alicloud.getZones({
+    availableResourceCreation: creation,
+}, { async: true }));
+const defaultNetwork = new alicloud.vpc.Network("default", {
+    cidrBlock: "172.16.0.0/16",
+});
+const defaultSwitch = new alicloud.vpc.Switch("default", {
+    availabilityZone: defaultZones.zones[0].id,
+    cidrBlock: "172.16.0.0/24",
+    vpcId: defaultNetwork.id,
+});
+const instance = new alicloud.rds.Instance("instance", {
+    engine: "MySQL",
+    engineVersion: "5.6",
+    instanceName: name,
+    instanceStorage: 10,
+    instanceType: "rds.mysql.t1.small",
+    vswitchId: defaultSwitch.id,
+});
+const foo = new alicloud.rds.Connection("foo", {
+    connectionPrefix: "testabc",
+    instanceId: instance.id,
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/db_connection.html.markdown.
 
 

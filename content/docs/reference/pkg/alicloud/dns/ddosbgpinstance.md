@@ -12,6 +12,22 @@ Anti-DDoS Advanced instance resource. "Ddosbgp" is the short term of this produc
 
 > **NOTE:** Available in 1.57.0+ .
 
+## Example Usage
+
+Basic Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const instance = new alicloud.dns.DdosBgpInstance("instance", {
+    bandwidth: 201,
+    baseBandwidth: 20,
+    ipCount: 100,
+    ipType: "IPv4",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ddosbgp_instance.html.markdown.
 
 

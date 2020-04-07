@@ -14,6 +14,23 @@ For information about Cloud Connect Network Attachment and how to use it, see [W
 
 > **NOTE:** Only the following regions support. [`cn-shanghai`, `cn-shanghai-finance-1`, `cn-hongkong`, `ap-southeast-1`, `ap-southeast-2`, `ap-southeast-3`, `ap-southeast-5`, `ap-northeast-1`, `eu-central-1`]
 
+## Example Usage
+
+Basic Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const ccn = new alicloud.cloudconnect.Network("ccn", {
+    isDefault: true,
+});
+const defaultNetworkAttachment = new alicloud.cloudconnect.NetworkAttachment("default", {
+    ccnId: ccn.id,
+    sagId: "sag-xxxxx",
+}, { dependsOn: [ccn] });
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cloud_connect_network_attachment.html.markdown.
 
 

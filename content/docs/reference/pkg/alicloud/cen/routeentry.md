@@ -10,6 +10,75 @@ Provides a CEN route entry resource. Cloud Enterprise Network (CEN) supports pub
 
 For information about CEN route entries publishment and how to use it, see [Manage network routes](https://www.alibabacloud.com/help/doc-detail/86980.htm).
 
+## Example Usage
+
+Basic Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const config = new pulumi.Config();
+const name = config.get("name") || "tf-testAccCenRouteEntryConfig";
+
+const hz = new alicloud.Provider("hz", {
+    region: "cn-hangzhou",
+});
+const defaultZones = pulumi.output(alicloud.getZones({
+    availableDiskCategory: "cloud_efficiency",
+    availableResourceCreation: "VSwitch",
+}, { provider: hz, async: true }));
+const defaultInstanceTypes = defaultZones.apply(defaultZones => alicloud.ecs.getInstanceTypes({
+    availabilityZone: defaultZones.zones[0].id,
+    cpuCoreCount: 1,
+    memorySize: 2,
+}, { provider: hz, async: true }));
+const defaultImages = pulumi.output(alicloud.ecs.getImages({
+    mostRecent: true,
+    nameRegex: "^ubuntu_18.*64",
+    owners: "system",
+}, { provider: hz, async: true }));
+const vpc = new alicloud.vpc.Network("vpc", {
+    cidrBlock: "172.16.0.0/12",
+}, { provider: hz });
+const defaultSwitch = new alicloud.vpc.Switch("default", {
+    availabilityZone: defaultZones.zones[0].id,
+    cidrBlock: "172.16.0.0/21",
+    vpcId: vpc.id,
+}, { provider: hz });
+const defaultSecurityGroup = new alicloud.ecs.SecurityGroup("default", {
+    description: "foo",
+    vpcId: vpc.id,
+}, { provider: hz });
+const defaultInstance = new alicloud.ecs.Instance("default", {
+    imageId: defaultImages.images[0].id,
+    instanceName: name,
+    instanceType: defaultInstanceTypes.instanceTypes[0].id,
+    internetChargeType: "PayByTraffic",
+    internetMaxBandwidthOut: 5,
+    securityGroups: [defaultSecurityGroup.id],
+    systemDiskCategory: "cloud_efficiency",
+    vswitchId: defaultSwitch.id,
+}, { provider: hz });
+const cen = new alicloud.cen.Instance("cen", {});
+const attach = new alicloud.cen.InstanceAttachment("attach", {
+    childInstanceId: vpc.id,
+    childInstanceRegionId: "cn-hangzhou",
+    instanceId: cen.id,
+}, { dependsOn: [defaultSwitch] });
+const route = new alicloud.vpc.RouteEntry("route", {
+    destinationCidrblock: "11.0.0.0/16",
+    nexthopId: defaultInstance.id,
+    nexthopType: "Instance",
+    routeTableId: vpc.routeTableId,
+}, { provider: hz });
+const foo = new alicloud.cen.RouteEntry("foo", {
+    cidrBlock: route.destinationCidrblock,
+    instanceId: cen.id,
+    routeTableId: vpc.routeTableId,
+}, { provider: hz, dependsOn: [attach] });
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cen_route_entry.html.markdown.
 
 

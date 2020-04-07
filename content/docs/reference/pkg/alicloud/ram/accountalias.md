@@ -8,6 +8,19 @@ block_external_search_index: true
 
 Provides a RAM cloud account alias.
 
+
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+// Create a alias for cloud account.
+const alias = new alicloud.ram.AccountAlias("alias", {
+    accountAlias: "hallo",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ram_account_alias.html.markdown.
 
 

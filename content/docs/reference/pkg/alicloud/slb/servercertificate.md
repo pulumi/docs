@@ -12,6 +12,40 @@ For information about slb and how to use it, see [What is Server Load Balancer](
 
 For information about Server Certificate and how to use it, see [Configure Server Certificate](https://www.alibabacloud.com/help/doc-detail/85968.htm).
 
+
+## Example Usage
+
+* using server_certificate/private content as string example
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+// create a server certificate
+const foo = new alicloud.slb.ServerCertificate("foo", {
+    privateKey: `-----BEGIN RSA PRIVATE KEY-----
+MIICXAIBAAKBgQDO0knDrlNdiys******ErVpjsckAaOW/JDG5PCSwkaMxk=
+-----END RSA PRIVATE KEY-----`,
+    serverCertificate: `-----BEGIN CERTIFICATE-----
+MIIDRjCCAq+gAwIBAgI+OuMs******XTtI90EAxEG/bJJyOm5LqoiA=
+-----END CERTIFICATE-----`,
+});
+```
+
+* using server_certificate/private file example
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+import * as fs from "fs";
+
+// create a server certificate
+const foo = new alicloud.slb.ServerCertificate("foo", {
+    privateKey: fs.readFileSync(`./private_key.pem`, "utf-8"),
+    serverCertificate: fs.readFileSync(`./server_certificate.pem`, "utf-8"),
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_server_certificate.html.markdown.
 
 

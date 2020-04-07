@@ -12,6 +12,26 @@ This resource will help you to manager a Swarm Cluster.
 
 > **NOTE:** Swarm cluster only supports VPC network and you can specify a VPC network by filed `vswitch_id`.
 
+## Example Usage
+
+Basic Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const myCluster = new alicloud.cs.Swarm("my_cluster", {
+    cidrBlock: "172.18.0.0/24",
+    diskCategory: "cloud_efficiency",
+    diskSize: 20,
+    imageId: var_image_id,
+    instanceType: "ecs.n4.small",
+    nodeNumber: 2,
+    password: "Yourpassword1234",
+    vswitchId: var_vswitch_id,
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cs_swarm.html.markdown.
 
 

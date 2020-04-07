@@ -10,6 +10,26 @@ This data source provides the KVStore instance engines resource available info o
 
 > **NOTE:** Available in v1.51.0+
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const resourcesZones = pulumi.output(alicloud.getZones({
+    availableResourceCreation: "KVStore",
+}, { async: true }));
+const resourcesInstanceEngines = resourcesZones.apply(resourcesZones => alicloud.kvstore.getInstanceEngines({
+    engine: "Redis",
+    engineVersion: "5.0",
+    instanceChargeType: "PrePaid",
+    outputFile: "./engines.txt",
+    zoneId: resourcesZones.zones[0].id,
+}, { async: true }));
+
+export const firstKvstoreInstanceClass = resourcesInstanceEngines.instanceEngines[0].engine;
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/kvstore_instance_engines.html.markdown.
 
 

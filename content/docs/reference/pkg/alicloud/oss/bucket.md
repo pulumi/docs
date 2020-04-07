@@ -10,6 +10,179 @@ Provides a resource to create a oss bucket and set its attribution.
 
 > **NOTE:** The bucket namespace is shared by all users of the OSS system. Please set bucket name as unique as possible.
 
+
+## Example Usage
+
+Private Bucket
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const bucket_acl = new alicloud.oss.Bucket("bucket-acl", {
+    acl: "private",
+    bucket: "bucket-170309-acl",
+});
+```
+
+Static Website
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const bucket_website = new alicloud.oss.Bucket("bucket-website", {
+    bucket: "bucket-170309-website",
+    website: {
+        errorDocument: "error.html",
+        indexDocument: "index.html",
+    },
+});
+```
+
+Enable Logging
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const bucket_target = new alicloud.oss.Bucket("bucket-target", {
+    acl: "public-read",
+    bucket: "bucket-170309-acl",
+});
+const bucket_logging = new alicloud.oss.Bucket("bucket-logging", {
+    bucket: "bucket-170309-logging",
+    logging: {
+        targetBucket: bucket_target.id,
+        targetPrefix: "log/",
+    },
+});
+```
+
+Referer configuration
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const bucket_referer = new alicloud.oss.Bucket("bucket-referer", {
+    acl: "private",
+    bucket: "bucket-170309-referer",
+    refererConfig: {
+        allowEmpty: false,
+        referers: [
+            "http://www.aliyun.com",
+            "https://www.aliyun.com",
+        ],
+    },
+});
+```
+
+Set lifecycle rule
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const bucket_lifecycle = new alicloud.oss.Bucket("bucket-lifecycle", {
+    acl: "public-read",
+    bucket: "bucket-170309-lifecycle",
+    lifecycleRules: [{
+        enabled: true,
+        id: "rule-days-transition",
+        prefix: "path3/",
+        transitions: [
+            {
+                createdBeforeDate: "2020-11-11",
+                storageClass: "IA",
+            },
+            {
+                createdBeforeDate: "2021-11-11",
+                storageClass: "Archive",
+            },
+        ],
+    }],
+});
+```
+
+Set bucket policy 
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const bucket_policy = new alicloud.oss.Bucket("bucket-policy", {
+    acl: "private",
+    bucket: "bucket-170309-policy",
+    policy: `  {"Statement":
+      [{"Action":
+          ["oss:PutObject", "oss:GetObject", "oss:DeleteBucket"],
+        "Effect":"Allow",
+        "Resource":
+            ["acs:oss:*:*:*"]}],
+   "Version":"1"}
+  `,
+});
+```
+
+IA Bucket
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const bucket_storageclass = new alicloud.oss.Bucket("bucket-storageclass", {
+    bucket: "bucket-170309-storageclass",
+    storageClass: "IA",
+});
+```
+
+Set bucket server-side encryption rule 
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const bucket_sserule = new alicloud.oss.Bucket("bucket-sserule", {
+    acl: "private",
+    bucket: "bucket-170309-sserule",
+    serverSideEncryptionRule: {
+        sseAlgorithm: "AES256",
+    },
+});
+```
+
+Set bucket tags 
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const bucket_tags = new alicloud.oss.Bucket("bucket-tags", {
+    acl: "private",
+    bucket: "bucket-170309-tags",
+    tags: {
+        key1: "value1",
+        key2: "value2",
+    },
+});
+```
+
+Enable bucket versioning 
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const bucket_versioning = new alicloud.oss.Bucket("bucket-versioning", {
+    acl: "private",
+    bucket: "bucket-170309-versioning",
+    versioning: {
+        status: "Enabled",
+    },
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/oss_bucket.html.markdown.
 
 

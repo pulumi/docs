@@ -6,15 +6,6 @@ block_external_search_index: true
 
 
 
-The Logtail access service is a log collection agent provided by Log Service.
-You can use Logtail to collect logs from servers such as Alibaba Cloud Elastic
-Compute Service (ECS) instances in real time in the Log Service console. [Refer to details](https://www.alibabacloud.com/help/doc-detail/29058.htm)
-
-This resource amis to attach one logtail configure to a machine group.
-
-> **NOTE:** One logtail configure can be attached to multiple machine groups and one machine group can attach several logtail configures.
-
-> This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/logtail_attachment.html.markdown.
 
 
 

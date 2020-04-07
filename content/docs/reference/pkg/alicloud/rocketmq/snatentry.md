@@ -14,6 +14,21 @@ For information about Sag SnatEntry and how to use it, see [What is Sag SnatEntr
 
 > **NOTE:** Only the following regions support. [`cn-shanghai`, `cn-shanghai-finance-1`, `cn-hongkong`, `ap-southeast-1`, `ap-southeast-2`, `ap-southeast-3`, `ap-southeast-5`, `ap-northeast-1`, `eu-central-1`]
 
+## Example Usage
+
+Basic Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const defaultSnatEntry = new alicloud.rocketmq.SnatEntry("default", {
+    cidrBlock: "192.168.7.0/24",
+    sagId: "sag-3rb1t3iagy3w0zgwy9",
+    snatIp: "192.0.0.2",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/sag_snat_entry.html.markdown.
 
 

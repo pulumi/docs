@@ -8,6 +8,20 @@ block_external_search_index: true
 
 The SSL-VPN client certificates data source lists lots of SSL-VPN client certificates resource information owned by an Alicloud account.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const foo = pulumi.output(alicloud.vpc.getSslVpnClientCerts({
+    ids: ["fake-cert-id"],
+    nameRegex: "^foo",
+    outputFile: "/tmp/clientcert",
+    sslVpnServerId: "fake-server-id",
+}, { async: true }));
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ssl_vpn_client_certs.html.markdown.
 
 

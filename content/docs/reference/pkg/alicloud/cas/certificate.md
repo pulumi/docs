@@ -14,6 +14,20 @@ Provides a CAS Certificate resource.
 
 > **NOTE:** Available in 1.35.0+ .
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+import * as fs from "fs";
+
+// Add a new Certificate.
+const cert = new alicloud.cas.Certificate("cert", {
+    cert: fs.readFileSync(`./test.crt`, "utf-8"),
+    key: fs.readFileSync(`./test.key`, "utf-8"),
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cas_certificate.html.markdown.
 
 

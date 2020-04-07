@@ -17,6 +17,64 @@ For information about listener and how to use it, to see the following:
 * [Configure a TCP Listener](https://www.alibabacloud.com/help/doc-detail/27594.htm).
 * [Configure a UDP Listener](https://www.alibabacloud.com/help/doc-detail/27595.htm).
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const config = new pulumi.Config();
+const name = config.get("name") || "testcreatehttplistener";
+const ipVersion = config.get("ipVersion") || "ipv4";
+
+const defaultLoadBalancer = new alicloud.slb.LoadBalancer("default", {
+    internet: true,
+    internetChargeType: "PayByTraffic",
+});
+const defaultAcl = new alicloud.slb.Acl("default", {
+    entryLists: [
+        {
+            comment: "first",
+            entry: "10.10.10.0/24",
+        },
+        {
+            comment: "second",
+            entry: "168.10.10.0/24",
+        },
+    ],
+    ipVersion: ipVersion,
+});
+const defaultListener = new alicloud.slb.Listener("default", {
+    aclId: defaultAcl.id,
+    aclStatus: "on",
+    aclType: "white",
+    backendPort: 80,
+    bandwidth: 10,
+    cookie: "testslblistenercookie",
+    cookieTimeout: 86400,
+    frontendPort: 80,
+    healthCheck: "on",
+    healthCheckConnectPort: 20,
+    healthCheckDomain: "ali.com",
+    healthCheckHttpCode: "http_2xx,http_3xx",
+    healthCheckInterval: 5,
+    healthCheckTimeout: 8,
+    healthCheckUri: "/cons",
+    healthyThreshold: 8,
+    idleTimeout: 30,
+    loadBalancerId: defaultLoadBalancer.id,
+    protocol: "http",
+    requestTimeout: 80,
+    stickySession: "on",
+    stickySessionType: "insert",
+    unhealthyThreshold: 8,
+    xForwardedFor: {
+        retriveSlbId: true,
+        retriveSlbIp: true,
+    },
+});
+```
+
 ## Listener fields and protocol mapping
 
 load balance support 4 protocal to listen on, they are `http`,`https`,`tcp`,`udp`, the every listener support which portocal following:

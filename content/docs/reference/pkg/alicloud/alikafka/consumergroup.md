@@ -13,6 +13,42 @@ Provides an ALIKAFKA consumer group resource.
 > **NOTE:**  Only the following regions support create alikafka consumer group.
 [`cn-hangzhou`,`cn-beijing`,`cn-shenzhen`,`cn-shanghai`,`cn-qingdao`,`cn-hongkong`,`cn-huhehaote`,`cn-zhangjiakou`,`ap-southeast-1`,`ap-south-1`,`ap-southeast-5`]
 
+## Example Usage
+
+Basic Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const config = new pulumi.Config();
+const consumerId = config.get("consumerId") || "CID-alikafkaGroupDatasourceName";
+
+const defaultZones = pulumi.output(alicloud.getZones({
+    availableResourceCreation: "VSwitch",
+}, { async: true }));
+const defaultNetwork = new alicloud.vpc.Network("default", {
+    cidrBlock: "172.16.0.0/12",
+});
+const defaultSwitch = new alicloud.vpc.Switch("default", {
+    availabilityZone: defaultZones.zones[0].id,
+    cidrBlock: "172.16.0.0/24",
+    vpcId: defaultNetwork.id,
+});
+const defaultInstance = new alicloud.alikafka.Instance("default", {
+    deployType: 5,
+    diskSize: 500,
+    diskType: 1,
+    ioMax: 20,
+    topicQuota: 50,
+    vswitchId: defaultSwitch.id,
+});
+const defaultConsumerGroup = new alicloud.alikafka.ConsumerGroup("default", {
+    consumerId: consumerId,
+    instanceId: defaultInstance.id,
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/alikafka_consumer_group.html.markdown.
 
 
