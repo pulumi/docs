@@ -10,6 +10,7 @@ menu:
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A Pulumi package for creating and managing Amazon Web Services (AWS) cloud resources.
+
 <h3>Modules</h3>
 <ul class="api">
     <li><a href="accessanalyzer/" title="accessanalyzer"><span class="symbol module"></span>accessanalyzer</a></li>
