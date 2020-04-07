@@ -23,7 +23,7 @@ In the following sections, we'll discuss how to organize an application as micro
 
 ## Projects and Stacks 
 
-Pulumi is organized around [Projects]({{< “/docs/intro/concepts/project/” >}}) and [Stacks]({{< relref “/docs/intro/concepts/stack” >}}).  A Project specifies the runtime to use, which determines where to find the program to execute during deployment. A Stack is an independent instance of a Pulumi program used to denote different phases of development (such as development, staging, and production) or feature branches (such as new-feature-dev). 
+Pulumi is organized around [Projects]({{< "/docs/intro/concepts/project/" >}}) and [Stacks]({{< relref "/docs/intro/concepts/stack" >}}).  A Project specifies the runtime to use, which determines where to find the program to execute during deployment. A Stack is an independent instance of a Pulumi program used to denote different phases of development (such as development, staging, and production) or feature branches (such as new-feature-dev). 
 
 Monolithic stacks are a common way to structure a project. A single project defines the infrastructure and resources for an entire service. However, Pulumi also supports deploying microservices as individual stacks within a project. Because microservices represent a specific business capability, having stacks for each service allows teams to work independently of each other. Separate stacks can enforce security policies through Role-Based Access Control, and each service can be built and deployed independently of other components.
 
@@ -31,7 +31,7 @@ Microservices deployed as stacks communicate with each other through the StackRe
 
 ## A Microservices Application Infrastructure
 
-We'll use the [AWS Stack Reference example](https://github.com/pulumi/examples/tree/master/aws-stackreference-architecture) to illustrate how Pulumi uses Architecture as Code to create reusable components and deployment frameworks. We’ve previously [blogged]({{< relref “blog/architect-aws-application-infra-with-pulumi-stack-references” >}}) about this example and covered the code in some detail.
+We'll use the [AWS Stack Reference example](https://github.com/pulumi/examples/tree/master/aws-stackreference-architecture) to illustrate how Pulumi uses Architecture as Code to create reusable components and deployment frameworks. We’ve previously [blogged]({{< relref "blog/architect-aws-application-infra-with-pulumi-stack-references” >}}) about this example and covered the code in some detail.
 
 Let's examine how it creates reusable components for building out resources. First up is the [VPC class](https://github.com/pulumi/examples/blob/master/aws-stackreference-architecture/networking/src/vpc.ts) in the [networking stack](https://github.com/pulumi/examples/tree/master/aws-stackreference-architecture/networking). 
 
