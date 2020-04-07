@@ -49,13 +49,14 @@ used across all cloud platforms:
 {{% choosable language "javascript,typescript" %}}
 * [**Pulumi SDK** (`@pulumi/pulumi`)]({{< relref "nodejs/pulumi/pulumi" >}})
 * [**Docker** (`@pulumi/docker`)]({{< relref "nodejs/pulumi/docker" >}})
-* [**Policy** (`@pulumi/policy`) <span class="badge badge-preview">PREVIEW</span>]({{< relref "nodejs/pulumi/policy" >}})
+* [**Policy** (`@pulumi/policy`)]({{< relref "nodejs/pulumi/policy" >}})
 * [**Random** (`@pulumi/random`)]({{< relref "nodejs/pulumi/random" >}})
 {{% /choosable %}}
 
 {{% choosable language python %}}
 * [**Pulumi SDK** (`pulumi`)]({{< relref "python/pulumi" >}})
 * [**Docker** (`pulumi_docker`)]({{< relref "python/pulumi_docker" >}})
+* [**Policy** (`pulumi_policy`)]({{< relref "python/pulumi_policy" >}})
 * [**Random** (`pulumi_random`)]({{< relref "python/pulumi_random" >}})
 {{% /choosable %}}
 
