@@ -10,6 +10,23 @@ block_external_search_index: true
 
 Resource should be named with their "full path". The full path is the combination of the partition + name of the resource, for example /Common/my-snatpool. 
 
+
+## Example Usage
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as f5bigip from "@pulumi/f5bigip";
+
+const snatpoolSanjose = new f5bigip.ltm.SnatPool("snatpool_sanjose", {
+    members: [
+        "191.1.1.1",
+        "194.2.2.2",
+    ],
+    name: "/Common/snatpool_sanjose",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_ltm_snatpool.html.markdown.
 
 

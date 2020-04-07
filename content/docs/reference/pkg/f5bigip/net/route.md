@@ -10,6 +10,21 @@ block_external_search_index: true
 
 For resources should be named with their "full path". The full path is the combination of the partition + name of the resource. For example /Common/my-pool.
 
+
+## Example Usage
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as f5bigip from "@pulumi/f5bigip";
+
+const route2 = new f5bigip.net.Route("route2", {
+    gw: "1.1.1.2",
+    name: "external-route",
+    network: "10.10.10.0/24",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_net_route.html.markdown.
 
 

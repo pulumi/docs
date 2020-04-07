@@ -9,6 +9,19 @@ block_external_search_index: true
 `f5bigip..Do` provides details about bigip do resource
 
 This resource is helpful to configure do declarative JSON on BIG-IP.
+## Example Usage
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as f5bigip from "@pulumi/f5bigip";
+import * as fs from "fs";
+
+const do_example = new f5bigip.Do("do-example", {
+    doJson: fs.readFileSync("example.json", "utf-8"),
+    tenantName: "sample_test1",
+});
+```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_do.html.markdown.
 

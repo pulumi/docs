@@ -7,6 +7,22 @@ block_external_search_index: true
 
 
 `f5bigip.sys.Provision` provides details bout how to enable "ilx", "asm" "apm" resource on BIG-IP
+## Example Usage
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as f5bigip from "@pulumi/f5bigip";
+
+const test_provision = new f5bigip.sys.Provision("test-provision", {
+    cpuRatio: 0,
+    diskRatio: 0,
+    fullPath: "asm",
+    level: "none",
+    memoryRatio: 0,
+    name: "TEST_ASM_PROVISION_NAME",
+});
+```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_sys_provision.html.markdown.
 

@@ -8,6 +8,24 @@ block_external_search_index: true
 
 `f5bigip.sys.Dns` Configures DNS server on F5 BIG-IP
 
+
+
+
+## Example Usage
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as f5bigip from "@pulumi/f5bigip";
+
+const dns1 = new f5bigip.sys.Dns("dns1", {
+    description: "/Common/DNS1",
+    nameServers: ["1.1.1.1"],
+    numberOfDots: 2,
+    searches: ["f5.com"],
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_sys_dns.html.markdown.
 
 

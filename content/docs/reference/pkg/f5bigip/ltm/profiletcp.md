@@ -10,6 +10,25 @@ block_external_search_index: true
 
 For resources should be named with their "full path". The full path is the combination of the partition + name of the resource. For example /Common/my-pool.
 
+## Example Usage
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as f5bigip from "@pulumi/f5bigip";
+
+const sanjose_tcp_lan_profile = new f5bigip.ltm.ProfileTcp("sanjose-tcp-lan-profile", {
+    closeWaitTimeout: 5,
+    deferredAccept: "enabled",
+    fastOpen: "enabled",
+    finwait2timeout: 5,
+    finwaitTimeout: 300,
+    idleTimeout: 200,
+    keepaliveInterval: 1700,
+    name: "sanjose-tcp-lan-profile",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_ltm_profile_tcp.html.markdown.
 
 

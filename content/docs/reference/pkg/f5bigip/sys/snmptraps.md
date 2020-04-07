@@ -7,6 +7,21 @@ block_external_search_index: true
 
 
 `f5bigip.sys.SnmpTraps` provides details bout how to enable snmp_traps resource on BIG-IP
+## Example Usage
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as f5bigip from "@pulumi/f5bigip";
+
+const snmpTraps = new f5bigip.sys.SnmpTraps("snmp_traps", {
+    community: "f5community",
+    description: "Setup snmp traps",
+    host: "195.10.10.1",
+    name: "snmptraps",
+    port: 111,
+});
+```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_sys_snmp_traps.html.markdown.
 

@@ -10,6 +10,30 @@ block_external_search_index: true
 
 Resource should be named with their "full path". The full path is the combination of the partition + name of the resource, for example /Common/my-datagroup.
 
+
+## Example Usage
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as f5bigip from "@pulumi/f5bigip";
+
+const datagroup = new f5bigip.ltm.DataGroup("datagroup", {
+    name: "/Common/dgx2",
+    records: [
+        {
+            data: "pool1",
+            name: "abc.com",
+        },
+        {
+            data: "123",
+            name: "test",
+        },
+    ],
+    type: "string",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_ltm_datagroup.html.markdown.
 
 

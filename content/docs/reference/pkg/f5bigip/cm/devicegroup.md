@@ -8,6 +8,30 @@ block_external_search_index: true
 
 `f5bigip.cm.DeviceGroup` A device group is a collection of BIG-IP devices that are configured to securely synchronize their BIG-IP configuration data, and fail over when needed.
 
+
+## Example Usage
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as f5bigip from "@pulumi/f5bigip";
+
+const myNewDevicegroup = new f5bigip.cm.DeviceGroup("my_new_devicegroup", {
+    autoSync: "enabled",
+    devices: [
+        {
+            name: "bigip1.cisco.com",
+        },
+        {
+            name: "bigip200.f5.com",
+        },
+    ],
+    fullLoadOnSync: "true",
+    name: "sanjose_devicegroup",
+    type: "sync-only",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/bigip_cm_devicegroup.html.markdown.
 
 
