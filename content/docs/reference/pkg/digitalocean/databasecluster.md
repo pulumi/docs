@@ -8,6 +8,50 @@ block_external_search_index: true
 
 Provides a DigitalOcean database cluster resource.
 
+## Example Usage
+
+### Create a new PostgreSQL database cluster
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as digitalocean from "@pulumi/digitalocean";
+
+const postgres_example = new digitalocean.DatabaseCluster("postgres-example", {
+    engine: "pg",
+    nodeCount: 1,
+    region: "nyc1",
+    size: "db-s-1vcpu-1gb",
+    version: "11",
+});
+```
+
+### Create a new MySQL database cluster
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as digitalocean from "@pulumi/digitalocean";
+
+const mysql_example = new digitalocean.DatabaseCluster("mysql-example", {
+    engine: "mysql",
+    nodeCount: 1,
+    region: "nyc1",
+    size: "db-s-1vcpu-1gb",
+    version: "8",
+});
+```
+
+### Create a new Redis database cluster
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as digitalocean from "@pulumi/digitalocean";
+
+const redis_example = new digitalocean.DatabaseCluster("redis-example", {
+    engine: "redis",
+    nodeCount: 1,
+    region: "nyc1",
+    size: "db-s-1vcpu-1gb",
+    version: "5",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/database_cluster.html.markdown.
 
 

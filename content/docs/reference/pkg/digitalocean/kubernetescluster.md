@@ -8,6 +8,50 @@ block_external_search_index: true
 
 Provides a DigitalOcean Kubernetes cluster resource. This can be used to create, delete, and modify clusters. For more information see the [official documentation](https://www.digitalocean.com/docs/kubernetes/).
 
+## Example Usage
+
+### Basic Example
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as digitalocean from "@pulumi/digitalocean";
+
+const foo = new digitalocean.KubernetesCluster("foo", {
+    nodePool: {
+        name: "worker-pool",
+        nodeCount: 3,
+        size: "s-2vcpu-2gb",
+    },
+    region: "nyc1",
+    // Grab the latest version slug from `doctl kubernetes options versions`
+    version: "1.15.5-do.1",
+});
+```
+
+### Autoscaling Example
+
+Node pools may also be configured to [autoscale](https://www.digitalocean.com/docs/kubernetes/how-to/autoscale/).
+For example:
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as digitalocean from "@pulumi/digitalocean";
+
+const foo = new digitalocean.KubernetesCluster("foo", {
+    nodePool: {
+        autoScale: true,
+        maxNodes: 5,
+        minNodes: 1,
+        name: "autoscale-worker-pool",
+        size: "s-2vcpu-2gb",
+    },
+    region: "nyc1",
+    version: "1.15.5-do.1",
+});
+```
+
+Note that, while individual node pools may scale to 0, a cluster must always include at least one node.
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/kubernetes_cluster.html.markdown.
 
 

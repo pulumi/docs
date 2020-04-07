@@ -23,6 +23,48 @@ example:
 
 For more information, See [An Introduction to DigitalOcean Spaces](https://www.digitalocean.com/community/tutorials/an-introduction-to-digitalocean-spaces)
 
+## Example Usage
+
+### Create a New Bucket
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as digitalocean from "@pulumi/digitalocean";
+
+const foobar = new digitalocean.SpacesBucket("foobar", {
+    region: "nyc3",
+});
+```
+
+### Create a New Bucket With CORS Rules
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as digitalocean from "@pulumi/digitalocean";
+
+const foobar = new digitalocean.SpacesBucket("foobar", {
+    corsRules: [
+        {
+            allowedHeaders: ["*"],
+            allowedMethods: ["GET"],
+            allowedOrigins: ["*"],
+            maxAgeSeconds: 3000,
+        },
+        {
+            allowedHeaders: ["*"],
+            allowedMethods: [
+                "PUT",
+                "POST",
+                "DELETE",
+            ],
+            allowedOrigins: ["https://www.example.com"],
+            maxAgeSeconds: 3000,
+        },
+    ],
+    region: "nyc3",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/spaces_bucket.html.markdown.
 
 

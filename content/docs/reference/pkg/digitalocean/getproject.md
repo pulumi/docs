@@ -9,6 +9,18 @@ block_external_search_index: true
 Get information on a single DigitalOcean project. If neither the `id` nor `name` attributes are provided,
 then this data source returns the default project.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as digitalocean from "@pulumi/digitalocean";
+
+const defaultProject = pulumi.output(digitalocean.getProject({ async: true }));
+const staging = pulumi.output(digitalocean.getProject({
+    name: "My Staging Project",
+}, { async: true }));
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/project.html.md.
 
 

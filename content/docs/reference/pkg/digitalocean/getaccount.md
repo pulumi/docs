@@ -8,6 +8,17 @@ block_external_search_index: true
 
 Get information on your DigitalOcean account.
 
+## Example Usage
+
+Get the account:
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as digitalocean from "@pulumi/digitalocean";
+
+const example = pulumi.output(digitalocean.getAccount({ async: true }));
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/account.html.md.
 
 
