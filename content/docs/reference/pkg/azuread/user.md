@@ -10,6 +10,20 @@ Manages a User within Azure Active Directory.
 
 > **NOTE:** If you're authenticating using a Service Principal then it must have permissions to `Directory.ReadWrite.All` within the `Windows Azure Active Directory` API.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azuread from "@pulumi/azuread";
+
+const example = new azuread.User("example", {
+    displayName: "J. Doe",
+    mailNickname: "jdoe",
+    password: "SecretP@sswd99!",
+    userPrincipalName: "jdo@hashicorp.com",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/r/user.html.markdown.
 
 
