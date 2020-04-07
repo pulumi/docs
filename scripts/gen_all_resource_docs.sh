@@ -47,7 +47,7 @@ if [ $branch = "master" ]; then
 fi
 
 for REPO in "${REPOS[@]}" ; do \
-    ./scripts/gen_resource_docs.sh $REPO
+    ./scripts/gen_resource_docs.sh $REPO true
 
     git add .
     git commit -am "Generate resource docs for pulumi-${REPO}"

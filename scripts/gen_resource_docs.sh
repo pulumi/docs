@@ -4,7 +4,13 @@
 
 set -o nounset -o errexit -o pipefail
 
+# The first argument is the override for the repo for which this script will generate the resource docs. 
 REPO_OVERRIDE=${1:-}
+# Pass a 2nd argument (value does not matter) to indicate that the resource plugin must be installed.
+# The latest release tag (not beta or dev) is used as the version to install the plugin. 
+INSTALL_RESOURCE_PLUGIN=${2:-}
+# Pass a 3rd argument to override the resource plugin version installed by this script.
+INSTALL_RESOURCE_PLUGIN_VERSION=${3:-}
 
 PACKDIR="./content/docs/reference/pkg"
 ABSOLUTEPACKDIR="$(pwd)/content/docs/reference/pkg"
@@ -35,7 +41,19 @@ generate_docs() {
     echo -e "\033[0;93mPulling changes\033[0m"
     git checkout master >/dev/null
     git pull origin master >/dev/null
-    popd
+
+    if [ -n "${INSTALL_RESOURCE_PLUGIN:-}" ]; then
+        git fetch --tags
+        plugin_version=$(git describe --tags `git rev-list --max-count=1 --tags --not --tags='*-dev' --tags='*beta*'`)
+        if [ -n "${INSTALL_RESOURCE_PLUGIN_VERSION:-}" ]; then
+            plugin_version=${INSTALL_RESOURCE_PLUGIN_VERSION}
+        else if [[ ${plugin_version} = sdk* ]]
+            plugin_version=${plugin_version:4}
+        fi
+        echo "Installing resource plugin for ${provider}. Version: ${plugin_version}"
+        pulumi plugin install resource ${provider} ${plugin_version}
+        popd
+    fi
 
     echo "Removing the ${PACKDIR}/${provider} dir..."
     rm -rf "${PACKDIR}/${provider}"
