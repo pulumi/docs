@@ -14,7 +14,7 @@ Use this data source to access the properties of an AlertingAction scheduled que
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const example = pulumi.output(azure.MonitorScheduledQueryRulesAlert({
+const example = pulumi.output(azure.monitoring.getScheduledQueryRulesAlert({
     name: "tfex-queryrule",
     resourceGroupName: "example-rg",
 }, { async: true }));

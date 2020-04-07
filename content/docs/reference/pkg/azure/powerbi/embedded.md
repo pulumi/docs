@@ -17,10 +17,9 @@ import * as azure from "@pulumi/azure";
 const exampleResourceGroup = new azure.core.ResourceGroup("example", {
     location: "West Europe",
 });
-const examplePowerbiEmbedded = new azure.PowerbiEmbedded("example", {
+const exampleEmbedded = new azure.powerbi.Embedded("example", {
     administrators: ["azsdktest@microsoft.com"],
     location: exampleResourceGroup.location,
-    name: "example-powerbi",
     resourceGroupName: exampleResourceGroup.name,
     skuName: "A1",
 });
