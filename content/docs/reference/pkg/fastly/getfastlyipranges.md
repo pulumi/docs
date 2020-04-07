@@ -8,6 +8,24 @@ block_external_search_index: true
 
 Use this data source to get the [IP ranges][1] of Fastly edge nodes.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+import * as fastly from "@pulumi/fastly";
+
+const fastlyFastlyIpRanges = pulumi.output(fastly.getFastlyIpRanges({ async: true }));
+const fromFastly = new aws.ec2.SecurityGroup("from_fastly", {
+    ingress: [{
+        cidrBlocks: fastlyFastlyIpRanges.cidrBlocks,
+        fromPort: 443,
+        protocol: "tcp",
+        toPort: 443,
+    }],
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-fastly/blob/master/website/docs/d/ip_ranges.html.markdown.
 
 
