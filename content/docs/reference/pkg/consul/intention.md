@@ -14,6 +14,37 @@ that will be created in the future when creating intentions. This resource can b
 in conjunction with the `consul..Service` datasource when referencing services
 registered on nodes that have a running Consul agent.
 
+## Example Usage
+
+Create a simplest intention with static service names:
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as consul from "@pulumi/consul";
+
+const database = new consul.Intention("database", {
+    action: "allow",
+    destinationName: "db",
+    sourceName: "api",
+});
+```
+
+Referencing a known service via a datasource:
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as consul from "@pulumi/consul";
+
+const database = new consul.Intention("database", {
+    action: "allow",
+    destinationName: consul_service_pg.name,
+    sourceName: "api",
+});
+const pg = pulumi.output(consul.getService({
+    name: "postgresql",
+}, { async: true }));
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-consul/blob/master/website/docs/r/intention.html.markdown.
 
 

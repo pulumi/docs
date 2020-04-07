@@ -13,6 +13,28 @@ for more information.
 Registers a node or service with the [Consul Catalog](https://www.consul.io/docs/agent/http/catalog.html#catalog_register).
 Currently, defining health checks is not supported.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as consul from "@pulumi/consul";
+
+const app = new consul.CatalogEntry("app", {
+    address: "192.168.10.10",
+    node: "foobar",
+    services: [{
+        address: "127.0.0.1",
+        id: "redis1",
+        name: "redis",
+        port: 8000,
+        tags: [
+            "master",
+            "v1",
+        ],
+    }],
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-consul/blob/master/website/docs/r/catalog_entry.html.markdown.
 
 

@@ -14,6 +14,22 @@ Provides access to the agent service data in Consul. This can be used to
 define a service associated with a particular agent. Currently, defining
 health checks for an agent service is not supported.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as consul from "@pulumi/consul";
+
+const app = new consul.AgentService("app", {
+    address: "www.google.com",
+    port: 80,
+    tags: [
+        "tag0",
+        "tag1",
+    ],
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-consul/blob/master/website/docs/r/agent_service.html.markdown.
 
 

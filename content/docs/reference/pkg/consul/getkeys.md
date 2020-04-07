@@ -9,6 +9,29 @@ block_external_search_index: true
 The `consul..Keys` resource reads values from the Consul key/value store.
 This is a powerful way dynamically set values in templates.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+import * as consul from "@pulumi/consul";
+
+const appKeys = pulumi.output(consul.getKeys({
+    datacenter: "nyc1",
+    // Read the launch AMI from Consul
+    keys: [{
+        default: "ami-1234",
+        name: "ami",
+        path: "service/app/launch_ami",
+    }],
+    token: "abcd",
+}, { async: true }));
+// Start our instance with the dynamic ami value
+const appInstance = new aws.ec2.Instance("app", {
+    ami: appKeys.var.ami,
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-consul/blob/master/website/docs/d/keys.html.markdown.
 
 

@@ -14,6 +14,17 @@ The `consul..getAgentConfig` data source returns
 [configuration data](https://www.consul.io/api/agent.html#read-configuration)
 from the agent specified in the `provider`.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as consul from "@pulumi/consul";
+
+const remoteAgent = pulumi.output(consul.getAgentConfig({ async: true }));
+
+export const consulVersion = remoteAgent.version;
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-consul/blob/master/website/docs/d/agent_config.html.markdown.
 
 

@@ -8,6 +8,26 @@ block_external_search_index: true
 
 Starting with Consul 1.5.0, the consul..AclRole can be used to managed Consul ACL roles.
 
+
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as consul from "@pulumi/consul";
+
+const read_policy = new consul.AclPolicy("read-policy", {
+    datacenters: ["dc1"],
+    rules: "node \"\" { policy = \"read\" }",
+});
+const read = new consul.AclRole("read", {
+    description: "bar",
+    policies: [read_policy.id],
+    serviceIdentities: [{
+        serviceName: "foo",
+    }],
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-consul/blob/master/website/docs/r/acl_role.markdown.
 
 

@@ -10,6 +10,17 @@ The `consul..getAutopilotHealth` data source returns
 [autopilot health information](https://www.consul.io/api/operator/autopilot.html#read-health)
 about the current Consul cluster.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as consul from "@pulumi/consul";
+
+const read = pulumi.output(consul.getAutopilotHealth({ async: true }));
+
+export const health = read.healthy;
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-consul/blob/master/website/docs/d/autopilot_health.html.markdown.
 
 

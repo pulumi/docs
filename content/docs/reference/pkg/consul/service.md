@@ -14,6 +14,69 @@ with a [local agent](https://www.consul.io/docs/agent/basics.html).
 If the Consul agent is running on the node where this service is registered, it is
 not recommended to use this resource.
 
+## Example Usage
+
+Creating a new node with the service:
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as consul from "@pulumi/consul";
+
+const compute = new consul.Node("compute", {
+    address: "www.google.com",
+});
+const google = new consul.Service("google", {
+    node: compute.name,
+    port: 80,
+    tags: ["tag0"],
+});
+```
+
+Utilizing an existing known node:
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as consul from "@pulumi/consul";
+
+const google = new consul.Service("google", {
+    node: "google",
+    port: 443,
+});
+```
+
+Register an health-check:
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as consul from "@pulumi/consul";
+
+const redis = new consul.Service("redis", {
+    checks: [{
+        checkId: "service:redis1",
+        deregisterCriticalServiceAfter: "30s",
+        headers: [
+            {
+                name: "foo",
+                values: ["test"],
+            },
+            {
+                name: "bar",
+                values: ["test"],
+            },
+        ],
+        http: "https://www.hashicorptest.com",
+        interval: "5s",
+        method: "PUT",
+        name: "Redis health check",
+        status: "passing",
+        timeout: "1s",
+        tlsSkipVerify: false,
+    }],
+    node: "redis",
+    port: 6379,
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-consul/blob/master/website/docs/r/service.html.markdown.
 
 

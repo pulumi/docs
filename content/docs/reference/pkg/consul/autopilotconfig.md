@@ -12,6 +12,19 @@ of Consul to automatically manage Consul servers.
 It includes to automatically cleanup dead servers, monitor the status of the Raft
 cluster and stable server introduction.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as consul from "@pulumi/consul";
+
+const config = new consul.AutopilotConfig("config", {
+    cleanupDeadServers: false,
+    lastContactThreshold: "1s",
+    maxTrailingLogs: 500,
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-consul/blob/master/website/docs/r/autopilot_config.html.markdown.
 
 

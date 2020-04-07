@@ -9,6 +9,26 @@ block_external_search_index: true
 Starting with Consul 1.5.0, the consul..AclAuthMethod resource can be used to
 managed Consul ACL auth methods.
 
+
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as consul from "@pulumi/consul";
+
+const minikube = new consul.AclAuthMethod("minikube", {
+    config: {
+        CACert: `-----BEGIN CERTIFICATE-----
+...-----END CERTIFICATE-----
+`,
+        Host: "https://192.0.2.42:8443",
+        ServiceAccountJWT: "eyJhbGciOiJSUzI1NiIsImtpZCI6IiJ9...",
+    },
+    description: "dev minikube cluster",
+    type: "kubernetes",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-consul/blob/master/website/docs/r/acl_auth_method.markdown.
 
 
