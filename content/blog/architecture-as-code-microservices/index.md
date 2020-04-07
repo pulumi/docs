@@ -72,7 +72,7 @@ export interface VpcArgs {
 }
 ```
 
-Finally, we need to be able to peer VPCs so that the services can communicate with each other. We can take advantage of Typescript's [member function](https://www.typescriptlang.org/docs/handbook/classes.html#public-private-and-protected-modifiers) to implement peering.
+Finally, we need to be able to peer VPCs so that the services can communicate with each other. We can take advantage of TypeScript's [member function](https://www.typescriptlang.org/docs/handbook/classes.html#public-private-and-protected-modifiers) to implement peering.
 
 ```ts
 public configurePeering(args: PeerToArgs) {
