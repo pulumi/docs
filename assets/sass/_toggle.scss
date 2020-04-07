@@ -1,0 +1,29 @@
+.form-switch {
+    @apply relative select-none w-12 leading-normal;
+}
+
+.form-switch-checkbox {
+    @apply hidden;
+}
+
+.form-switch-label {
+    @apply block overflow-hidden cursor-pointer bg-gray-300 border-2 border-orange-500 rounded-full h-4 shadow-inner;
+
+    transition: background-color 0.2s ease-in;
+}
+.form-switch-label:before {
+    @apply absolute block bg-white inset-y-0 w-6 border-2 border-orange-500 rounded-full -ml-1;
+    right: 50%;
+    content: "";
+    transition: all 0.2s ease-in;
+}
+
+.form-switch-checkbox:checked + .form-switch-label,
+.form-switch-checkbox:checked + .form-switch-label:before {
+}
+.form-switch-checkbox:checked + .form-switch-label {
+    @apply bg-orange-500 shadow-none;
+}
+.form-switch-checkbox:checked + .form-switch-label:before {
+    @apply right-0;
+}

@@ -1,8 +1,8 @@
 {{ define "hero" }}
     <header class="header-hero">
         <div class="container mx-auto text-center flex-col max-w-2xl">
-            <h1>Pulumi for every team and individual.</h1>
-            <p>
+            <h1>Plans for every team and individual.</h1>
+            <p class="text-gray-400">
                 Whether you're using open source, our free Community Edition, or using
                 Pulumi in your team or entire organization, we have a solution for you.
             </p>
@@ -12,7 +12,7 @@
 
 {{ define "main" }}
     <section class="bg-purple-800 pt-12 text-white px-4 justify-center text-center" id="editions">
-        <div class="container mx-auto lg:flex justify-center pb-8 hidden lg:block">
+        <div class="container mx-auto lg:flex justify-center pb-4 hidden lg:block">
             <div class="lg:w-3/4 pr-1">
                 <div class="container" style="border-bottom: 2px solid #a48bb3">
                     <p class="text-purple-200 text-sm font-bold">
@@ -43,20 +43,33 @@
                 </div>
             </div>
         </div>
+        <div class="container mx-auto lg:flex justify-center pb-2 hidden lg:block">
+            <div class="mb-2">
+                <label class="text-xs text-purple-100 pr-2" for="billing-period">Monthly</label>
+                <div class="form-switch inline-block align-middle">
+                    <input type="checkbox" name="billing-period" id="billing-period" checked class="form-switch-checkbox" />
+                    <label class="form-switch-label" for="billing-period"></label>
+                </div>
+                <label class="text-xs text-purple-100 pl-2" for="billing-period">Annually</label>
+            </div>
+        </div>
         <div class="container mx-auto lg:flex justify-center">
             <div class="bg-white rounded py-8 px-8 lg:w-1/4 mb-4 lg:mb-0" id="community-edition">
                 <div class="text-center flex flex-col justify-between h-full">
                     <div class="text-lg text-purple-500 font-bold">COMMUNITY</div>
                     <div class="text-black font-display font-bold text-3xl">$0</div>
-                    <div class="text-sm">&nbsp;</div>
                     <p class="text-sm text-gray-700">
                         The basics of Pulumi infrastructure as code
                         for unlimited individual use.
                     </p>
                     <ul class="list-none mt-0 mb-auto mx-auto justify-center text-left text-sm text-gray-700 px-0">
                         <li class="flex items-center">
+                            <i class="w-8 text-center fas fa-user-friends text-blue-500"></i>
+                            <span class="flex-1"><strong>1</strong> team member</span>
+                        </li>
+                        <li class="flex items-center">
                             <i class="w-8 text-center fas fa-check-square text-blue-500"></i>
-                            <span class="flex-1">Any cloud</span>
+                            <span class="flex-1">Any cloud and language</span>
                         </li>
                         <li class="flex items-center">
                             <i class="w-8 text-center fas fa-check-square text-blue-500"></i>
@@ -68,19 +81,11 @@
                         </li>
                         <li class="flex items-center">
                             <i class="w-8 text-center fas fa-check-square text-blue-500"></i>
-                            <span class="flex-1">Deployment history</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="w-8 text-center fas fa-check-square text-blue-500"></i>
                             <span class="flex-1">Secrets management</span>
                         </li>
                         <li class="flex items-center">
                             <i class="w-8 text-center fas fa-check-square text-blue-500"></i>
                             <span class="flex-1">CI/CD integrations</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="w-8 text-center fas fa-heart text-blue-500"></i>
-                            <span class="flex-1">Free forever</span>
                         </li>
                     </ul>
                     <a data-track="community" class="text-center btn btn-lg btn-blue mx-auto mt-8 py-4 px-6" href="{{ relref . "/docs/get-started" }}">Get Started</a>
@@ -89,23 +94,26 @@
             <div class="bg-white rounded py-8 px-8 lg:mx-5 lg:w-1/4 lg:mr-3 mb-4 lg:mb-0" id="team-edition">
                 <div class="text-center flex flex-col justify-between h-full">
                     <div class="text-lg text-purple-500 font-bold">TEAM STARTER</div>
-                    <div class="text-black font-display font-bold text-3xl">$50</div>
-                    <div class="text-sm text-gray-700 font-bold">per month, 3 users included</div>
+                    <div class="text-black font-display font-bold text-3xl">
+                        <span class="billing-price-annually">$50</span>
+                        <span class="billing-price-monthly hidden">$60</span>
+                        <span class="text-sm text-gray-700 font-bold">/mo</span>
+                    </div>
                     <p class="text-sm text-gray-700">
                         For teams just starting to collaborate on shared projects.
                     </p>
                     <ul class="list-none mt-0 mb-auto mx-auto justify-center text-left text-sm text-gray-700 px-0">
                         <li class="flex items-center">
-                            <i class="w-8 text-center fas fa-arrow-left text-blue-500"></i>
+                            <i class="w-8 text-center fas fa-user-friends text-orange-500"></i>
+                            <span class="flex-1"><strong>3</strong> team members</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="w-8 text-center fas fa-arrow-left text-orange-500"></i>
                             <span class="flex-1">Everything in Community</span>
                         </li>
                         <li class="flex items-center">
                             <i class="w-8 text-center fas fa-check-square text-orange-500"></i>
-                            <span class="flex-1">Includes 3 users</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="w-8 text-center fas fa-check-square text-orange-500"></i>
-                            <span class="flex-1">1 <a data-track="team-starter" href="{{ relref . "/docs/intro/console/accounts-and-organizations/organizations" }}">organization</a></span>
+                            <span class="flex-1">1 organization</span>
                         </li>
                         <li class="flex items-center">
                             <i class="w-8 text-center fas fa-check-square text-orange-500"></i>
@@ -119,32 +127,40 @@
                             <i class="w-8 text-center fas fa-check-square text-orange-500"></i>
                             <span class="flex-1">Team activity dashboard</span>
                         </li>
-                        <li class="flex items-center">
-                            <i class="w-8 text-center fas fa-heart text-orange-500"></i>
-                            <span class="flex-1">Try it free for 14 days</span>
-                        </li>
                     </ul>
                     <a data-track="team-starter" class="text-center btn btn-lg btn-orange mx-auto mt-8 py-4 px-6" href="https://app.pulumi.com/site/organizations/add">
-                        Start Your Free Trial
+                        Start 14-Day Free Trial
                     </a>
                 </div>
             </div>
             <div class="bg-white rounded py-8 px-8 lg:mx-5 lg:ml-2 lg:w-1/4 mb-4 lg:mb-0">
                 <div class="text-center flex flex-col justify-between h-full">
                     <div class="text-lg text-purple-500 font-bold">TEAM PRO</div>
-                    <div class="text-black font-display font-bold text-3xl">$75</div>
-                    <div class="text-sm text-gray-700 font-bold">per user/month</div>
+                    <div class="text-black font-display font-bold text-3xl">
+                        <span class="billing-price-annually">$225</span>
+                        <span class="billing-price-monthly hidden">$270</span>
+                        <span class="text-sm text-gray-700 font-bold">/mo</span>
+                    </div>
                     <p class="text-sm text-gray-700">
                         For medium to large teams with many people and projects.
                     </p>
                     <ul class="list-none mt-0 mb-auto mx-auto justify-center text-left text-sm text-gray-700 px-0">
                         <li class="flex items-center">
-                            <i class="w-8 text-center fas fa-arrow-left text-orange-500"></i>
-                            <span class="flex-1">Everything in Team Starter</span>
+                            <i class="w-8 text-center fas fa-user-friends text-orange-500"></i>
+                            <span class="flex-1">
+                                <strong>3-25</strong> team members
+                                <span class="tooltip pl-1">
+                                    <span class="tooltip-text">
+                                        The first 3 team members are included, and additional
+                                        users are available for $75/mo each.
+                                    </span>
+                                    <i class="w-8 fas fa-question-circle text-gray-500"></i>
+                                </span>
+                            </span>
                         </li>
                         <li class="flex items-center">
-                            <i class="w-8 text-center fas fa-check-square text-orange-500"></i>
-                            <span class="flex-1">Up to 25 users</span>
+                            <i class="w-8 text-center fas fa-arrow-left text-orange-500"></i>
+                            <span class="flex-1">Everything in Team Starter</span>
                         </li>
                         <li class="flex items-center">
                             <i class="w-8 text-center fas fa-check-square text-orange-500"></i>
@@ -162,13 +178,9 @@
                             <i class="w-8 text-center fas fa-check-square text-orange-500"></i>
                             <span class="flex-1">12×5 support available</span>
                         </li>
-                        <li class="flex items-center">
-                            <i class="w-8 text-center fas fa-heart text-orange-500"></i>
-                            <span class="flex-1">Try it free for 14 days</span>
-                        </li>
                     </ul>
                     <a data-track="team-pro" class="text-center btn btn-lg btn-orange mx-auto mt-8 py-4 px-6" href="https://app.pulumi.com/site/organizations/add">
-                        Start Your Free Trial
+                        Start 14-Day Free Trial
                     </a>
                 </div>
             </div>
@@ -176,26 +188,34 @@
                 <div class="text-center flex flex-col justify-between h-full">
                     <div class="text-lg text-purple-500 font-bold">ENTERPRISE</div>
                     <div class="text-black font-display font-bold text-3xl">Custom</div>
-                    <div class="text-sm">&nbsp;</div>
                     <p class="text-sm text-gray-700">
                         For organizations with advanced security and deployment needs.
                     </p>
                     <ul class="list-none mt-0 mb-auto mx-auto justify-center text-left text-sm text-gray-700 px-0">
                         <li class="flex items-center">
+                            <i class="w-8 text-center fas fa-user-friends text-purple-500"></i>
+                            <span class="flex-1">
+                                <strong>10+</strong> team members
+                                <span class="tooltip pl-1">
+                                    <span class="tooltip-text">
+                                        The first 10 team members are included, and additional
+                                        users are available with custom pricing.
+                                    </span>
+                                    <i class="w-8 fas fa-question-circle text-gray-500"></i>
+                                </span>
+                            </span>
+                        </li>
+                        <li class="flex items-center">
                             <i class="w-8 text-center fas fa-arrow-left text-purple-500"></i>
                             <span class="flex-1">Everything in Team Pro</span>
                         </li>
                         <li class="flex items-center">
-                            <i class="w-8 text-center fas fa-infinity text-purple-500"></i>
-                            <span class="flex-1">Unlimited users</span>
+                            <i class="w-8 text-center fas fa-check-square text-purple-500"></i>
+                            <span class="flex-1">SAML/SSO</span>
                         </li>
                         <li class="flex items-center">
                             <i class="w-8 text-center fas fa-check-square text-purple-500"></i>
                             <span class="flex-1">Organization policies</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="w-8 text-center fas fa-check-square text-purple-500"></i>
-                            <span class="flex-1">SAML/SSO</span>
                         </li>
                         <li class="flex items-center">
                             <i class="w-8 text-center fas fa-check-square text-purple-500"></i>
@@ -204,10 +224,6 @@
                         <li class="flex items-center">
                             <i class="w-8 text-center fas fa-check-square text-purple-500"></i>
                             <span class="flex-1">24×7 support available</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="w-8 text-center fas fa-heart text-purple-500"></i>
-                            <span class="flex-1">Custom trials available</span>
                         </li>
                     </ul>
                     <a data-track="enterprise" class="text-center btn btn-lg btn-purple mx-auto mt-8 py-4 px-6" href="#contact">Contact Us</a>
@@ -258,20 +274,20 @@
 
             <div class="pricing-item">
                 <span class="pricing-item-label">Price</span>
-                <span class="pricing-item-value">$50/mo</span>
-                <span class="pricing-item-value">Starting at $225/mo</span>
+                <span class="pricing-item-value">$50/mo (annual) / $60/mo (monthly)</span>
+                <span class="pricing-item-value">$225/mo (annual) / $270/mo (monthly)</span>
                 <span class="pricing-item-value">Custom (<a data-track="grid-pricing" class="link" href="#contact">Contact Us</a>)</span>
             </div>
             <div class="pricing-item">
                 <span class="pricing-item-label">Team Members</span>
-                <span class="pricing-item-value">3 Included</span>
-                <span class="pricing-item-value">Up to 25 (Minimum 3)</span>
-                <span class="pricing-item-value">Unlimited (Minimum 10)</span>
+                <span class="pricing-item-value">3</span>
+                <span class="pricing-item-value">3-25</span>
+                <span class="pricing-item-value">10+</span>
             </div>
             <div class="pricing-item">
                 <span class="pricing-item-label">Extra Team Members</span>
                 <span class="pricing-item-value"><i class="fas fa-times text-grey"></i></span>
-                <span class="pricing-item-value">$75/user/mo</span>
+                <span class="pricing-item-value">$75/mo (annual) / $90/mo (monthly)</span>
                 <span class="pricing-item-value">Custom (<a data-track="grid-team-members" class="link" href="#contact">Contact Us</a>)</span>
             </div>
             <div class="pricing-item">
