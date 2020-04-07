@@ -11,6 +11,15 @@ server.
 
 > **Note:** MySQL introduced roles in version 8. They do not work on MySQL 5 and lower.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as mysql from "@pulumi/mysql";
+
+const developer = new mysql.Role("developer", {});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-mysql/blob/master/website/docs/r/role.html.markdown.
 
 

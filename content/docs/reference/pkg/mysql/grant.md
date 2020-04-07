@@ -9,6 +9,65 @@ block_external_search_index: true
 The ``mysql..Grant`` resource creates and manages privileges given to
 a user on a MySQL server.
 
+## Granting Privileges to a User
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as mysql from "@pulumi/mysql";
+
+const jdoeUser = new mysql.User("jdoe", {
+    host: "example.com",
+    plaintextPassword: "password",
+    user: "jdoe",
+});
+const jdoeGrant = new mysql.Grant("jdoe", {
+    database: "app",
+    host: jdoeUser.host,
+    privileges: [
+        "SELECT",
+        "UPDATE",
+    ],
+    user: jdoeUser.user,
+});
+```
+
+## Granting Privileges to a Role
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as mysql from "@pulumi/mysql";
+
+const developerRole = new mysql.Role("developer", {});
+const developerGrant = new mysql.Grant("developer", {
+    database: "app",
+    privileges: [
+        "SELECT",
+        "UPDATE",
+    ],
+    role: developerRole.name,
+});
+```
+
+## Adding a Role to a User
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as mysql from "@pulumi/mysql";
+
+const jdoe = new mysql.User("jdoe", {
+    host: "example.com",
+    plaintextPassword: "password",
+    user: "jdoe",
+});
+const developerRole = new mysql.Role("developer", {});
+const developerGrant = new mysql.Grant("developer", {
+    database: "app",
+    host: jdoe.host,
+    roles: [developerRole.name],
+    user: jdoe.user,
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-mysql/blob/master/website/docs/r/grant.html.markdown.
 
 
