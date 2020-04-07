@@ -15,6 +15,7 @@ A Pulumi package for creating and managing mysql cloud resources.
 > distributed under [MPL 2.0](https://www.mozilla.org/en-US/MPL/2.0/). If you encounter a bug or missing feature,
 > first check the [`pulumi/pulumi-mysql` repo](https://github.com/pulumi/pulumi-mysql/issues); however, if that doesn't turn up anything,
 > please consult the source [`terraform-providers/terraform-provider-mysql` repo](https://github.com/terraform-providers/terraform-provider-mysql/issues).
+
 <h3>Resources</h3>
 <ul class="api">
     <li><a href="database" title="Database"><span class="symbol resource"></span>Database</a></li>
