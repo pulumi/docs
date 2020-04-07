@@ -15,6 +15,7 @@ A Pulumi package for creating and managing vault cloud resources.
 > distributed under [MPL 2.0](https://www.mozilla.org/en-US/MPL/2.0/). If you encounter a bug or missing feature,
 > first check the [`pulumi/pulumi-vault` repo](https://github.com/pulumi/pulumi-vault/issues); however, if that doesn't turn up anything,
 > please consult the source [`terraform-providers/terraform-provider-vault` repo](https://github.com/terraform-providers/terraform-provider-vault/issues).
+
 <h3>Modules</h3>
 <ul class="api">
     <li><a href="alicloud/" title="alicloud"><span class="symbol module"></span>alicloud</a></li>
