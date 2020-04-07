@@ -8,6 +8,18 @@ block_external_search_index: true
 
 Use this resource to create and manage New Relic alert policies.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as newrelic from "@pulumi/newrelic";
+
+const foo = new newrelic.AlertPolicy("foo", {
+    incidentPreference: "PER_POLICY", // PER_POLICY is default
+});
+```
+See additional examples.
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/alert_policy.html.markdown.
 
 

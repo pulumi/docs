@@ -8,6 +8,23 @@ block_external_search_index: true
 
 Use this resource to create and manage New Relic alert policies.
 
+## Example Usage
+
+##### Email
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as newrelic from "@pulumi/newrelic";
+
+const foo = new newrelic.AlertChannel("foo", {
+    config: {
+        includeJsonAttachment: "1",
+        recipients: "foo@example.com",
+    },
+    type: "email",
+});
+```
+See additional examples.
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/alert_channel.html.markdown.
 
 
