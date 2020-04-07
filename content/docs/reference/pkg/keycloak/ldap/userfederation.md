@@ -15,6 +15,35 @@ from a directory system such as LDAP or Active Directory. Federated users
 will exist within the realm and will be able to log in to clients. Federated
 users can have their attributes defined using mappers.
 
+### Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as keycloak from "@pulumi/keycloak";
+
+const realm = new keycloak.Realm("realm", {
+    enabled: true,
+    realm: "test",
+});
+const ldapUserFederation = new keycloak.ldap.UserFederation("ldap_user_federation", {
+    bindCredential: "admin",
+    bindDn: "cn=admin,dc=example,dc=org",
+    connectionTimeout: "5s",
+    connectionUrl: "ldap://openldap",
+    enabled: true,
+    rdnLdapAttribute: "cn",
+    readTimeout: "10s",
+    realmId: realm.id,
+    userObjectClasses: [
+        "simpleSecurityObject",
+        "organizationalRole",
+    ],
+    usernameLdapAttribute: "cn",
+    usersDn: "dc=example,dc=org",
+    uuidLdapAttribute: "entryDN",
+});
+```
+
 ### Argument Reference
 
 The following arguments are supported:

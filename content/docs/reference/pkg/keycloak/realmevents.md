@@ -10,6 +10,30 @@ block_external_search_index: true
 
 Allows for managing Realm Events settings within Keycloak.
 
+### Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as keycloak from "@pulumi/keycloak";
+
+const realm = new keycloak.Realm("realm", {
+    realm: "test",
+});
+const realmEvents = new keycloak.RealmEvents("realm_events", {
+    adminEventsDetailsEnabled: true,
+    adminEventsEnabled: true,
+    // When omitted or left empty, keycloak will enable all event types
+    enabledEventTypes: [
+        "LOGIN",
+        "LOGOUT",
+    ],
+    eventsEnabled: true,
+    eventsExpiration: 3600,
+    eventsListeners: ["jboss-logging"],
+    realmId: realm.id,
+});
+```
+
 ### Argument Reference
 
 The following arguments are supported:

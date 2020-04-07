@@ -14,6 +14,38 @@ federated via LDAP.
 The LDAP user attribute mapper can be used to map a single LDAP attribute
 to an attribute on the Keycloak user model.
 
+### Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as keycloak from "@pulumi/keycloak";
+
+const realm = new keycloak.Realm("realm", {
+    enabled: true,
+    realm: "test",
+});
+const ldapUserFederation = new keycloak.ldap.UserFederation("ldap_user_federation", {
+    bindCredential: "admin",
+    bindDn: "cn=admin,dc=example,dc=org",
+    connectionUrl: "ldap://openldap",
+    rdnLdapAttribute: "cn",
+    realmId: realm.id,
+    userObjectClasses: [
+        "simpleSecurityObject",
+        "organizationalRole",
+    ],
+    usernameLdapAttribute: "cn",
+    usersDn: "dc=example,dc=org",
+    uuidLdapAttribute: "entryDN",
+});
+const ldapUserAttributeMapper = new keycloak.ldap.UserAttributeMapper("ldap_user_attribute_mapper", {
+    ldapAttribute: "bar",
+    ldapUserFederationId: ldapUserFederation.id,
+    realmId: realm.id,
+    userModelAttribute: "foo",
+});
+```
+
 ### Argument Reference
 
 The following arguments are supported:

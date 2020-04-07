@@ -19,6 +19,33 @@ Attributes can also be defined on Groups.
 Groups can also be federated from external data sources, such as LDAP or Active Directory.
 This resource **should not** be used to manage groups that were created this way.
 
+### Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as keycloak from "@pulumi/keycloak";
+
+const realm = new keycloak.Realm("realm", {
+    enabled: true,
+    realm: "my-realm",
+});
+const parentGroup = new keycloak.Group("parent_group", {
+    realmId: realm.id,
+});
+const childGroup = new keycloak.Group("child_group", {
+    parentId: parentGroup.id,
+    realmId: realm.id,
+});
+const childGroupWithOptionalAttributes = new keycloak.Group("child_group_with_optional_attributes", {
+    attributes: {
+        key1: "value1",
+        key2: "value2",
+    },
+    parentId: parentGroup.id,
+    realmId: realm.id,
+});
+```
+
 ### Argument Reference
 
 The following arguments are supported:

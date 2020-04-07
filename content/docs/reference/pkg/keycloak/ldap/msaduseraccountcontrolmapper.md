@@ -16,6 +16,37 @@ to LDAP user federation providers that are pulling from AD, and it can propagate
 AD user state to Keycloak in order to enforce settings like expired passwords
 or disabled accounts.
 
+### Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as keycloak from "@pulumi/keycloak";
+
+const realm = new keycloak.Realm("realm", {
+    enabled: true,
+    realm: "test",
+});
+const ldapUserFederation = new keycloak.ldap.UserFederation("ldap_user_federation", {
+    bindCredential: "admin",
+    bindDn: "cn=admin,dc=example,dc=org",
+    connectionUrl: "ldap://my-ad-server",
+    rdnLdapAttribute: "cn",
+    realmId: realm.id,
+    userObjectClasses: [
+        "person",
+        "organizationalPerson",
+        "user",
+    ],
+    usernameLdapAttribute: "cn",
+    usersDn: "dc=example,dc=org",
+    uuidLdapAttribute: "objectGUID",
+});
+const msadUserAccountControlMapper = new keycloak.ldap.MsadUserAccountControlMapper("msad_user_account_control_mapper", {
+    ldapUserFederationId: ldapUserFederation.id,
+    realmId: realm.id,
+});
+```
+
 ### Argument Reference
 
 The following arguments are supported:

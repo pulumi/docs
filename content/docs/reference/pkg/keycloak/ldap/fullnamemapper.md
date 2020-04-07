@@ -14,6 +14,37 @@ via LDAP.
 The LDAP full name mapper can map a user's full name from an LDAP attribute
 to the first and last name attributes of a Keycloak user.
 
+### Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as keycloak from "@pulumi/keycloak";
+
+const realm = new keycloak.Realm("realm", {
+    enabled: true,
+    realm: "test",
+});
+const ldapUserFederation = new keycloak.ldap.UserFederation("ldap_user_federation", {
+    bindCredential: "admin",
+    bindDn: "cn=admin,dc=example,dc=org",
+    connectionUrl: "ldap://openldap",
+    rdnLdapAttribute: "cn",
+    realmId: realm.id,
+    userObjectClasses: [
+        "simpleSecurityObject",
+        "organizationalRole",
+    ],
+    usernameLdapAttribute: "cn",
+    usersDn: "dc=example,dc=org",
+    uuidLdapAttribute: "entryDN",
+});
+const ldapFullNameMapper = new keycloak.ldap.FullNameMapper("ldap_full_name_mapper", {
+    ldapFullNameAttribute: "cn",
+    ldapUserFederationId: ldapUserFederation.id,
+    realmId: realm.id,
+});
+```
+
 ### Argument Reference
 
 The following arguments are supported:

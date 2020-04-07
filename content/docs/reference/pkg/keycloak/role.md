@@ -13,6 +13,90 @@ Allows for creating and managing roles within Keycloak.
 Roles allow you define privileges within Keycloak and map them to users
 and groups.
 
+### Example Usage (Realm role)
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as keycloak from "@pulumi/keycloak";
+
+const realm = new keycloak.Realm("realm", {
+    enabled: true,
+    realm: "my-realm",
+});
+const realmRole = new keycloak.Role("realm_role", {
+    description: "My Realm Role",
+    realmId: realm.id,
+});
+```
+
+### Example Usage (Client role)
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as keycloak from "@pulumi/keycloak";
+
+const realm = new keycloak.Realm("realm", {
+    enabled: true,
+    realm: "my-realm",
+});
+const client = new keycloak.openid.Client("client", {
+    accessType: "BEARER-ONLY",
+    clientId: "client",
+    enabled: true,
+    realmId: realm.id,
+});
+const clientRole = new keycloak.Role("client_role", {
+    clientId: keycloak_client_client.id,
+    description: "My Client Role",
+    realmId: realm.id,
+});
+```
+
+### Example Usage (Composite role)
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as keycloak from "@pulumi/keycloak";
+
+const realm = new keycloak.Realm("realm", {
+    enabled: true,
+    realm: "my-realm",
+});
+const createRole = new keycloak.Role("create_role", {
+    realmId: realm.id,
+});
+const readRole = new keycloak.Role("read_role", {
+    realmId: realm.id,
+});
+const updateRole = new keycloak.Role("update_role", {
+    realmId: realm.id,
+});
+const deleteRole = new keycloak.Role("delete_role", {
+    realmId: realm.id,
+});
+const client = new keycloak.openid.Client("client", {
+    accessType: "BEARER-ONLY",
+    clientId: "client",
+    enabled: true,
+    realmId: realm.id,
+});
+const clientRole = new keycloak.Role("client_role", {
+    clientId: keycloak_client_client.id,
+    description: "My Client Role",
+    realmId: realm.id,
+});
+const adminRole = new keycloak.Role("admin_role", {
+    compositeRoles: [
+        "{keycloak_role.create_role.id}",
+        "{keycloak_role.read_role.id}",
+        "{keycloak_role.update_role.id}",
+        "{keycloak_role.delete_role.id}",
+        "{keycloak_role.client_role.id}",
+    ],
+    realmId: realm.id,
+});
+```
+
 ### Argument Reference
 
 The following arguments are supported:

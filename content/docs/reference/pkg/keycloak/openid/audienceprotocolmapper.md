@@ -15,6 +15,50 @@ Audience protocol mappers allow you add audiences to the `aud` claim
 within issued tokens. The audience can be a custom string, or it can be
 mapped to the ID of a pre-existing client.
 
+### Example Usage (Client)
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as keycloak from "@pulumi/keycloak";
+
+const realm = new keycloak.Realm("realm", {
+    enabled: true,
+    realm: "my-realm",
+});
+const openidClient = new keycloak.openid.Client("openid_client", {
+    accessType: "CONFIDENTIAL",
+    clientId: "test-client",
+    enabled: true,
+    realmId: realm.id,
+    validRedirectUris: ["http://localhost:8080/openid-callback"],
+});
+const audienceMapper = new keycloak.openid.AudienceProtocolMapper("audience_mapper", {
+    clientId: openidClient.id,
+    includedCustomAudience: "foo",
+    realmId: realm.id,
+});
+```
+
+### Example Usage (Client Scope)
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as keycloak from "@pulumi/keycloak";
+
+const realm = new keycloak.Realm("realm", {
+    enabled: true,
+    realm: "my-realm",
+});
+const clientScope = new keycloak.openid.ClientScope("client_scope", {
+    realmId: realm.id,
+});
+const audienceMapper = new keycloak.openid.AudienceProtocolMapper("audience_mapper", {
+    clientScopeId: clientScope.id,
+    includedCustomAudience: "foo",
+    realmId: realm.id,
+});
+```
+
 ### Argument Reference
 
 The following arguments are supported:

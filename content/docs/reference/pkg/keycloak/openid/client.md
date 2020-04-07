@@ -14,6 +14,25 @@ Clients are entities that can use Keycloak for user authentication. Typically,
 clients are applications that redirect users to Keycloak for authentication
 in order to take advantage of Keycloak's user sessions for SSO.
 
+### Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as keycloak from "@pulumi/keycloak";
+
+const realm = new keycloak.Realm("realm", {
+    enabled: true,
+    realm: "my-realm",
+});
+const openidClient = new keycloak.openid.Client("openid_client", {
+    accessType: "CONFIDENTIAL",
+    clientId: "test-client",
+    enabled: true,
+    realmId: realm.id,
+    validRedirectUris: ["http://localhost:8080/openid-callback"],
+});
+```
+
 ### Argument Reference
 
 The following arguments are supported:

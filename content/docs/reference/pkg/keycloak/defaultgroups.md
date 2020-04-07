@@ -13,6 +13,25 @@ Allows for managing a realm's default groups.
 Note that you should not use `keycloak..DefaultGroups` with a group with memberships managed
 by `keycloak..GroupMemberships`.
 
+### Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as keycloak from "@pulumi/keycloak";
+
+const realm = new keycloak.Realm("realm", {
+    enabled: true,
+    realm: "my-realm",
+});
+const group = new keycloak.Group("group", {
+    realmId: realm.id,
+});
+const defaultDefaultGroups = new keycloak.DefaultGroups("default", {
+    groupIds: [group.id],
+    realmId: realm.id,
+});
+```
+
 ### Argument Reference
 
 The following arguments are supported:

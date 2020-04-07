@@ -11,6 +11,31 @@ block_external_search_index: true
 This data source can be used to fetch properties of a Keycloak group for
 usage with other resources, such as `keycloak..GroupRoles`.
 
+### Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as keycloak from "@pulumi/keycloak";
+
+const realm = new keycloak.Realm("realm", {
+    enabled: true,
+    realm: "my-realm",
+});
+const offlineAccess = realm.id.apply(id => keycloak.getRole({
+    name: "offline_access",
+    realmId: id,
+}, { async: true }));
+const group = realm.id.apply(id => keycloak.getGroup({
+    name: "group",
+    realmId: id,
+}, { async: true }));
+const groupRoles = new keycloak.GroupRoles("group_roles", {
+    groupId: group.id,
+    realmId: realm.id,
+    roles: [offlineAccess.id],
+});
+```
+
 ### Argument Reference
 
 The following arguments are supported:

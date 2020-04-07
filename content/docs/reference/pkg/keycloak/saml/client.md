@@ -14,6 +14,28 @@ Clients are entities that can use Keycloak for user authentication. Typically,
 clients are applications that redirect users to Keycloak for authentication
 in order to take advantage of Keycloak's user sessions for SSO.
 
+### Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as fs from "fs";
+import * as keycloak from "@pulumi/keycloak";
+
+const realm = new keycloak.Realm("realm", {
+    enabled: true,
+    realm: "my-realm",
+});
+const samlClient = new keycloak.saml.Client("saml_client", {
+    clientId: "test-saml-client",
+    includeAuthnStatement: true,
+    realmId: realm.id,
+    signAssertions: true,
+    signDocuments: false,
+    signingCertificate: fs.readFileSync("saml-cert.pem", "utf-8"),
+    signingPrivateKey: fs.readFileSync("saml-key.pem", "utf-8"),
+});
+```
+
 ### Argument Reference
 
 The following arguments are supported:

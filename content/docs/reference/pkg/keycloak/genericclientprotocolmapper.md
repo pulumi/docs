@@ -17,6 +17,34 @@ There are two uses cases for using this resource:
 Due to the generic nature of this mapper, it is less user-friendly and more prone to configuration errors. 
 Therefore, if possible, a specific mapper should be used.
 
+### Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as keycloak from "@pulumi/keycloak";
+
+const realm = new keycloak.Realm("realm", {
+    enabled: true,
+    realm: "my-realm",
+});
+const samlClient = new keycloak.saml.Client("saml_client", {
+    clientId: "test-client",
+    realmId: realm.id,
+});
+const samlHardcodeAttributeMapper = new keycloak.GenericClientProtocolMapper("saml_hardcode_attribute_mapper", {
+    clientId: samlClient.id,
+    config: {
+        "attribute.name": "name",
+        "attribute.nameformat": "Basic",
+        "attribute.value": "value",
+        "friendly.name": "display name",
+    },
+    protocol: "saml",
+    protocolMapper: "saml-hardcode-attribute-mapper",
+    realmId: realm.id,
+});
+```
+
 ### Argument Reference
 
 The following arguments are supported:

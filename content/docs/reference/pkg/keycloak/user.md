@@ -14,6 +14,38 @@ This resource was created primarily to enable the acceptance tests for the `keyc
 Creating users within Keycloak is not recommended. Instead, users should be federated from external sources
 by configuring user federation providers or identity providers.
 
+### Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as keycloak from "@pulumi/keycloak";
+
+const realm = new keycloak.Realm("realm", {
+    enabled: true,
+    realm: "my-realm",
+});
+const user = new keycloak.User("user", {
+    email: "bob@domain.com",
+    enabled: true,
+    firstName: "Bob",
+    lastName: "Bobson",
+    realmId: realm.id,
+    username: "bob",
+});
+const userWithInitialPassword = new keycloak.User("user_with_initial_password", {
+    email: "alice@domain.com",
+    enabled: true,
+    firstName: "Alice",
+    initialPassword: {
+        temporary: true,
+        value: "some password",
+    },
+    lastName: "Aliceberg",
+    realmId: realm.id,
+    username: "alice",
+});
+```
+
 ### Argument Reference
 
 The following arguments are supported:

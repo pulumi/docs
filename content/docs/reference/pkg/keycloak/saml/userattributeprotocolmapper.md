@@ -16,6 +16,29 @@ for a user within Keycloak to an attribute in a SAML assertion. Protocol mappers
 can be defined for a single client, or they can be defined for a client scope which
 can be shared between multiple different clients.
 
+### Example Usage (Client)
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as keycloak from "@pulumi/keycloak";
+
+const realm = new keycloak.Realm("realm", {
+    enabled: true,
+    realm: "my-realm",
+});
+const samlClient = new keycloak.saml.Client("saml_client", {
+    clientId: "test-saml-client",
+    realmId: keycloak_realm_test.id,
+});
+const samlUserAttributeMapper = new keycloak.saml.UserAttributeProtocolMapper("saml_user_attribute_mapper", {
+    clientId: samlClient.id,
+    realmId: keycloak_realm_test.id,
+    samlAttributeName: "displayName",
+    samlAttributeNameFormat: "Unspecified",
+    userAttribute: "displayName",
+});
+```
+
 ### Argument Reference
 
 The following arguments are supported:

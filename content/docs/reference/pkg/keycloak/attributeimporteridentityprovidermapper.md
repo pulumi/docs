@@ -10,6 +10,20 @@ block_external_search_index: true
 
 Allows to create and manage identity provider mappers within Keycloak.
 
+### Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as keycloak from "@pulumi/keycloak";
+
+const testMapper = new keycloak.AttributeImporterIdentityProviderMapper("test_mapper", {
+    attributeName: "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname",
+    identityProviderAlias: "idp_alias",
+    realm: "my-realm",
+    userAttribute: "lastName",
+});
+```
+
 ### Argument Reference
 
 The following arguments are supported:

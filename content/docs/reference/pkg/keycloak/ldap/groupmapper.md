@@ -15,6 +15,43 @@ The LDAP group mapper can be used to map an LDAP user's groups from some DN
 to Keycloak groups. This group mapper will also create the groups within Keycloak
 if they do not already exist.
 
+### Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as keycloak from "@pulumi/keycloak";
+
+const realm = new keycloak.Realm("realm", {
+    enabled: true,
+    realm: "test",
+});
+const ldapUserFederation = new keycloak.ldap.UserFederation("ldap_user_federation", {
+    bindCredential: "admin",
+    bindDn: "cn=admin,dc=example,dc=org",
+    connectionUrl: "ldap://openldap",
+    rdnLdapAttribute: "cn",
+    realmId: realm.id,
+    userObjectClasses: [
+        "simpleSecurityObject",
+        "organizationalRole",
+    ],
+    usernameLdapAttribute: "cn",
+    usersDn: "dc=example,dc=org",
+    uuidLdapAttribute: "entryDN",
+});
+const ldapGroupMapper = new keycloak.ldap.GroupMapper("ldap_group_mapper", {
+    groupNameLdapAttribute: "cn",
+    groupObjectClasses: ["groupOfNames"],
+    ldapGroupsDn: "dc=example,dc=org",
+    ldapUserFederationId: ldapUserFederation.id,
+    memberofLdapAttribute: "memberOf",
+    membershipAttributeType: "DN",
+    membershipLdapAttribute: "member",
+    membershipUserLdapAttribute: "cn",
+    realmId: realm.id,
+});
+```
+
 ### Argument Reference
 
 The following arguments are supported:

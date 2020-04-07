@@ -16,6 +16,48 @@ to the OpenID Connect `name` claim in a token. Protocol mappers can be defined
 for a single client, or they can be defined for a client scope which can
 be shared between multiple different clients.
 
+### Example Usage (Client)
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as keycloak from "@pulumi/keycloak";
+
+const realm = new keycloak.Realm("realm", {
+    enabled: true,
+    realm: "my-realm",
+});
+const openidClient = new keycloak.openid.Client("openid_client", {
+    accessType: "CONFIDENTIAL",
+    clientId: "test-client",
+    enabled: true,
+    realmId: realm.id,
+    validRedirectUris: ["http://localhost:8080/openid-callback"],
+});
+const fullNameMapper = new keycloak.openid.FullNameProtocolMapper("full_name_mapper", {
+    clientId: openidClient.id,
+    realmId: realm.id,
+});
+```
+
+### Example Usage (Client Scope)
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as keycloak from "@pulumi/keycloak";
+
+const realm = new keycloak.Realm("realm", {
+    enabled: true,
+    realm: "my-realm",
+});
+const clientScope = new keycloak.openid.ClientScope("client_scope", {
+    realmId: realm.id,
+});
+const fullNameMapper = new keycloak.openid.FullNameProtocolMapper("full_name_mapper", {
+    clientScopeId: clientScope.id,
+    realmId: realm.id,
+});
+```
+
 ### Argument Reference
 
 The following arguments are supported:

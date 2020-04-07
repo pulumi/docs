@@ -12,6 +12,27 @@ Allows to create and manage SAML Identity Providers within Keycloak.
 
 SAML (Security Assertion Markup Language) identity providers allows to authenticate through a third-party system, using SAML standard.
 
+### Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as keycloak from "@pulumi/keycloak";
+
+const realmIdentityProvider = new keycloak.saml.IdentityProvider("realm_identity_provider", {
+    alias: "my-idp",
+    backchannelSupported: true,
+    forceAuthn: true,
+    postBindingAuthnRequest: true,
+    postBindingLogout: true,
+    postBindingResponse: true,
+    realm: "my-realm",
+    singleLogoutServiceUrl: "https://domain.com/adfs/ls/?wa=wsignout1.0",
+    singleSignOnServiceUrl: "https://domain.com/adfs/ls/",
+    storeToken: false,
+    trustEmail: true,
+});
+```
+
 ### Argument Reference
 
 The following arguments are supported:
