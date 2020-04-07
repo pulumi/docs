@@ -7,6 +7,11 @@ meta_desc: "This post shows how to use Node.js, the Mocha test framework, and th
 meta_image: "meta.png"
 ---
 
+<div class="note note-warning" role="alert">
+    <p>
+        Some parts of this blog post are out-of-date. Please refer to our <b><a href="https://www.pulumi.com/docs/guides/testing/">Testing Guide</a></b> for updated overview and tutorials.
+    </p>
+</div>
 
 Testing your infrastructure using familiar tools like Node.js's Mocha
 framework allows you to ensure configuration is correct before provisioning,
