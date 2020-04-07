@@ -10,6 +10,48 @@ Provides a Linode Volume resource.  This can be used to create, modify, and dele
 
 For more information, see [How to Use Block Storage with Your Linode](https://www.linode.com/docs/platform/block-storage/how-to-use-block-storage-with-your-linode/) and the [Linode APIv4 docs](https://developers.linode.com/api/v4#operation/createVolume).
 
+## Example Usage
+
+The following example shows how one might use this resource to configure a Block Storage Volume attached to a Linode Instance.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as linode from "@pulumi/linode";
+
+const foobaz = new linode.Instance("foobaz", {
+    region: "us-west",
+    rootPass: "3X4mp13",
+    tags: ["foobaz"],
+    type: "g6-nanode-1",
+});
+const foobar = new linode.Volume("foobar", {
+    label: "foo-volume",
+    linodeId: foobaz.id,
+    region: foobaz.region,
+});
+```
+
+Volumes can also be attached using the Linode Instance config device map.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as linode from "@pulumi/linode";
+
+const foo = new linode.Instance("foo", {
+    configs: [{
+        devices: {
+            sda: {
+                volumeId: 123,
+            },
+        },
+        kernel: "linode/latest-64bit",
+        label: "boot-existing-volume",
+    }],
+    region: "us-east",
+    type: "g6-nanode-1",
+});
+```
+
 ## Attributes
 
 This resource exports the following attributes:

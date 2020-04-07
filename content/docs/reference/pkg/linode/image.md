@@ -10,6 +10,31 @@ Provides a Linode Image resource.  This can be used to create, modify, and delet
 
 For more information, see [Linode's documentation on Images](https://www.linode.com/docs/platform/disk-images/linode-images/) and the [Linode APIv4 docs](https://developers.linode.com/api/v4#operation/createImage).
 
+## Example Usage
+
+The following example shows how one might use this resource to create an Image from a Linode Instance Disk and then deploy a new Linode Instance in another region using that Image.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as linode from "@pulumi/linode";
+
+const foo = new linode.Instance("foo", {
+    region: "us-central",
+    type: "g6-nanode-1",
+});
+const bar = new linode.Image("bar", {
+    description: "Image taken from foo",
+    diskId: foo.disks.apply(disks => disks[0].id),
+    label: "foo-sda-image",
+    linodeId: foo.id,
+});
+const barBased = new linode.Instance("bar_based", {
+    image: bar.id,
+    region: "eu-west",
+    type: foo.type,
+});
+```
+
 ## Attributes
 
 This resource exports the following attributes:

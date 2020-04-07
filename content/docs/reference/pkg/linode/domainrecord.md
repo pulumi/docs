@@ -9,6 +9,27 @@ block_external_search_index: true
 Provides a Linode Domain Record resource.  This can be used to create, modify, and delete Linodes Domain Records.
 For more information, see [DNS Manager](https://www.linode.com/docs/platform/manager/dns-manager/) and the [Linode APIv4 docs](https://developers.linode.com/api/v4#operation/createDomainRecord).
 
+## Example Usage
+
+The following example shows how one might use this resource to configure a Domain Record attached to a Linode Domain.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as linode from "@pulumi/linode";
+
+const foobarDomain = new linode.Domain("foobar", {
+    domain: "foobar.example",
+    soaEmail: "example@foobar.example",
+    type: "master",
+});
+const foobarDomainRecord = new linode.DomainRecord("foobar", {
+    domainId: foobarDomain.id,
+    name: "www",
+    recordType: "CNAME",
+    target: "foobar.example",
+});
+```
+
 ## Attributes
 
 This resource exports no additional attributes.

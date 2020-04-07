@@ -8,6 +8,19 @@ block_external_search_index: true
 
 Provides information about a Linode Object Storage Cluster
 
+## Example Usage
+
+The following example shows how one might use this data source to access information about a Linode Object Storage Cluster.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as linode from "@pulumi/linode";
+
+const primary = pulumi.output(linode.getObjectStorageCluster({
+    id: "us-east-1",
+}, { async: true }));
+```
+
 ## Attributes
 
 The Linode Object Storage Cluster resource exports the following attributes:

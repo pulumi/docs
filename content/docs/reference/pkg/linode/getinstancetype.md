@@ -8,6 +8,19 @@ block_external_search_index: true
 
 Provides information about a Linode instance type
 
+## Example Usage
+
+The following example shows how one might use this data source to access information about a Linode Instance type.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as linode from "@pulumi/linode";
+
+const defaultInstanceType = pulumi.output(linode.getInstanceType({
+    id: "g6-standard-2",
+}, { async: true }));
+```
+
 ## Attributes
 
 The Linode Instance Type resource exports the following attributes:

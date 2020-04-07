@@ -8,6 +8,19 @@ block_external_search_index: true
 
 Provides information about a Linode Volume.
 
+## Example Usage
+
+The following example shows how one might use this data source to access information about a Linode Volume.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as linode from "@pulumi/linode";
+
+const foo = pulumi.output(linode.getVolume({
+    id: 1234567,
+}, { async: true }));
+```
+
 ## Attributes
 
 The Linode Volume resource exports the following attributes:

@@ -8,6 +8,19 @@ block_external_search_index: true
 
 Provides a Linode Object Storage Key resource. This can be used to create, modify, and delete Linodes Object Storage Keys.
 
+## Example Usage
+
+The following example shows how one might use this resource to create an Object Storage Key.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as linode from "@pulumi/linode";
+
+const foo = new linode.ObjectStorageKey("foo", {
+    label: "image-access",
+});
+```
+
 ## Attributes
 
 This resource exports the following attributes:

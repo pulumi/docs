@@ -8,6 +8,19 @@ block_external_search_index: true
 
 Provides information about a Linode user
 
+## Example Usage
+
+The following example shows how one might use this data source to access information about a Linode user.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as linode from "@pulumi/linode";
+
+const foo = pulumi.output(linode.getUser({
+    username: "foo",
+}, { async: true }));
+```
+
 ## Attributes
 
 The Linode User resource exports the following attributes:

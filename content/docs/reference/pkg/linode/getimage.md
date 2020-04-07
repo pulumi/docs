@@ -8,6 +8,19 @@ block_external_search_index: true
 
 Provides information about a Linode image
 
+## Example Usage
+
+The following example shows how one might use this data source to access information about a Linode image.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as linode from "@pulumi/linode";
+
+const k8Master = pulumi.output(linode.getImage({
+    id: "linode/debian8",
+}, { async: true }));
+```
+
 ## Attributes
 
 The Linode Image resource exports the following attributes:

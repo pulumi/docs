@@ -8,6 +8,17 @@ block_external_search_index: true
 
 Provides information about a Linode profile.
 
+## Example Usage
+
+The following example shows how one might use this data source to access profile details.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as linode from "@pulumi/linode";
+
+const profile = pulumi.output(linode.getProfile({ async: true }));
+```
+
 ## Attributes
 
 The Linode Profile resource exports the following attributes:

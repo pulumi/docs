@@ -8,6 +8,19 @@ block_external_search_index: true
 
 `linode..getRegion` provides details about a specific Linode region.
 
+## Example Usage
+
+The following example shows how the resource might be used to obtain additional information about a Linode region.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as linode from "@pulumi/linode";
+
+const region = pulumi.output(linode.getRegion({
+    id: "us-east",
+}, { async: true }));
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/d/region.html.md.
 
 

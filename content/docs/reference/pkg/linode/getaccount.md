@@ -10,6 +10,17 @@ Provides information about a Linode account.
 
 This data source should not be used in conjuction with the `LINODE_DEBUG` option.  See the [debugging notes](https://www.terraform.io/docs/providers/linode/index.html#debugging) for more details.
 
+## Example Usage
+
+The following example shows how one might use this data source to access account details.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as linode from "@pulumi/linode";
+
+const account = pulumi.output(linode.getAccount({ async: true }));
+```
+
 ## Attributes
 
 The Linode Account resource exports the following attributes:
