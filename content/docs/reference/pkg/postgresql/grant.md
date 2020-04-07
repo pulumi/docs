@@ -10,6 +10,21 @@ The ``postgresql..Grant`` resource creates and manages privileges given to a use
 
 > **Note:** This resource needs Postgresql version 9 or above.
 
+## Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as postgresql from "@pulumi/postgresql";
+
+const readonlyTables = new postgresql.Grant("readonly_tables", {
+    database: "test_db",
+    objectType: "table",
+    privileges: ["SELECT"],
+    role: "test_role",
+    schema: "public",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/r/postgresql_grant.html.markdown.
 
 

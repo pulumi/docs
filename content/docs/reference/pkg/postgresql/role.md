@@ -22,6 +22,24 @@ and all but the final ``postgresql..Role`` must specify a `skip_drop_role`.
 > **Note:** All arguments including role name and password will be stored in the raw state as plain-text.
 [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
 
+## Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as postgresql from "@pulumi/postgresql";
+
+const myRole = new postgresql.Role("my_role", {
+    login: true,
+    password: "mypass",
+});
+const myReplicationRole = new postgresql.Role("my_replication_role", {
+    connectionLimit: 5,
+    login: true,
+    password: "md5c98cbfeb6a347a47eb8e96cfb4c4b890",
+    replication: true,
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/r/postgresql_role.html.markdown.
 
 

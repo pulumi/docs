@@ -10,6 +10,22 @@ The ``postgresql..Database`` resource creates and manages [database
 objects](https://www.postgresql.org/docs/current/static/managing-databases.html)
 within a PostgreSQL server instance.
 
+
+## Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as postgresql from "@pulumi/postgresql";
+
+const myDb = new postgresql.Database("my_db", {
+    allowConnections: true,
+    connectionLimit: -1,
+    lcCollate: "C",
+    owner: "my_role",
+    template: "template0",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/r/postgresql_database.html.markdown.
 
 

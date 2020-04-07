@@ -9,6 +9,16 @@ block_external_search_index: true
 The ``postgresql..Extension`` resource creates and manages an extension on a PostgreSQL
 server.
 
+
+## Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as postgresql from "@pulumi/postgresql";
+
+const myExtension = new postgresql.Extension("my_extension", {});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/r/postgresql_extension.html.markdown.
 
 

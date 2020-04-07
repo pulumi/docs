@@ -10,6 +10,22 @@ The ``postgresql..DefaultPrivileges`` resource creates and manages default privi
 
 > **Note:** This resource needs Postgresql version 9 or above.
 
+## Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as postgresql from "@pulumi/postgresql";
+
+const readOnlyTables = new postgresql.DefaultPrivileges("read_only_tables", {
+    database: "test_db",
+    objectType: "table",
+    owner: "db_owner",
+    privileges: ["SELECT"],
+    role: "test_role",
+    schema: "public",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/r/postgresql_default_privileges.html.markdown.
 
 
