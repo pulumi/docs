@@ -35,7 +35,7 @@ We'll use the [AWS Stack Reference example](https://github.com/pulumi/examples/t
 
 Let's examine how it creates reusable components for building out resources. First up is the [VPC class](https://github.com/pulumi/examples/blob/master/aws-stackreference-architecture/networking/src/vpc.ts) in the [networking stack](https://github.com/pulumi/examples/tree/master/aws-stackreference-architecture/networking).
 
-In the networking service, [`vpc.ts](https://github.com/pulumi/examples/blob/master/aws-stackreference-architecture/networking/src/vpc.ts) creates a TypeScript class that extends Pulumi ComponentResource. A ComponentResource abstracts one or more children that do not require custom create, read, update, and delete operations for provisioning. We can add the related resources to the correct parent to build out the class.
+In the networking service, [vpc.ts](https://github.com/pulumi/examples/blob/master/aws-stackreference-architecture/networking/src/vpc.ts) creates a TypeScript class that extends Pulumi [ComponentResource](https://www.pulumi.com/docs/intro/concepts/programming-model/#resources). A ComponentResource abstracts one or more children that do not require custom create, read, update, and delete operations for provisioning. We can add the related resources to the correct parent to build out the class.
 
 ```ts
 export class Vpc extends ComponentResource {
