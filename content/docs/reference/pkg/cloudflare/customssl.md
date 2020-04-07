@@ -8,6 +8,28 @@ block_external_search_index: true
 
 Provides a Cloudflare custom ssl resource.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as cloudflare from "@pulumi/cloudflare";
+
+const config = new pulumi.Config();
+const cloudflareZoneId = config.get("cloudflareZoneId") || "1d5fdc9e88c8a8c4518b068cd94331fe";
+
+// Add a custom ssl certificate to the domain
+const foossl = new cloudflare.CustomSsl("foossl", {
+    customSslOptions: {
+        bundle_method: "ubiquitous",
+        certificate: "-----INSERT CERTIFICATE-----",
+        geo_restrictions: "us",
+        private_key: "-----INSERT PRIVATE KEY-----",
+        type: "legacy_custom",
+    },
+    zoneId: cloudflareZoneId,
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/custom_ssl.html.markdown.
 
 

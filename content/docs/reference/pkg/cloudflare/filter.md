@@ -8,6 +8,19 @@ block_external_search_index: true
 
 Filter expressions that can be referenced across multiple features, e.g. Firewall Rule. The expression format is similar to [Wireshark Display Filter](https://www.wireshark.org/docs/man-pages/wireshark-filter.html).
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as cloudflare from "@pulumi/cloudflare";
+
+const wordpress = new cloudflare.Filter("wordpress", {
+    description: "Wordpress break-in attempts that are outside of the office",
+    expression: "(http.request.uri.path ~ \".*wp-login.php\" or http.request.uri.path ~ \".*xmlrpc.php\") and ip.src ne 192.0.2.1",
+    zoneId: "d41d8cd98f00b204e9800998ecf8427e",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/filter.markdown.
 
 

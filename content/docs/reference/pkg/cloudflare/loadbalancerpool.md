@@ -8,6 +8,33 @@ block_external_search_index: true
 
 Provides a Cloudflare Load Balancer pool resource. This provides a pool of origins that can be used by a Cloudflare Load Balancer. Note that the load balancing feature must be enabled in your Cloudflare account before you can use this resource.
 
+
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as cloudflare from "@pulumi/cloudflare";
+
+const foo = new cloudflare.LoadBalancerPool("foo", {
+    description: "example load balancer pool",
+    enabled: false,
+    minimumOrigins: 1,
+    name: "example-pool",
+    notificationEmail: "someone@example.com",
+    origins: [
+        {
+            address: "192.0.2.1",
+            enabled: false,
+            name: "example-1",
+        },
+        {
+            address: "192.0.2.2",
+            name: "example-2",
+        },
+    ],
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/load_balancer_pool.html.markdown.
 
 

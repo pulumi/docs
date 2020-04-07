@@ -8,6 +8,20 @@ block_external_search_index: true
 
 Provides a resource which manages Cloudflare custom error pages.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as cloudflare from "@pulumi/cloudflare";
+
+const basicChallenge = new cloudflare.CustomPages("basic_challenge", {
+    state: "customized",
+    type: "basic_challenge",
+    url: "https://example.com/challenge.html",
+    zoneId: "d41d8cd98f00b204e9800998ecf8427e",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/custom_pages.html.markdown.
 
 

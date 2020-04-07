@@ -8,6 +8,34 @@ block_external_search_index: true
 
 Use this data source to look up [Zone][1] records.
 
+## Example Usage
+
+The example below matches all `active` zones that begin with `example.` and are not paused. The matched zones are then
+locked down using the `cloudflare..ZoneLockdown` resource.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as cloudflare from "@pulumi/cloudflare";
+
+const test = pulumi.output(cloudflare.getZones({
+    filter: {
+        name: "example.*",
+        paused: false,
+        status: "active",
+    },
+}, { async: true }));
+const endpointLockdown = new cloudflare.ZoneLockdown("endpoint_lockdown", {
+    configurations: [{
+        target: "ip",
+        value: "198.51.100.4",
+    }],
+    description: "Restrict access to these endpoints to requests from a known IP address",
+    paused: false,
+    urls: ["api.mysite.com/some/endpoint*"],
+    zone: test.apply(test => (<any>test.zones[0])["name"]),
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/d/zones.html.md.
 
 

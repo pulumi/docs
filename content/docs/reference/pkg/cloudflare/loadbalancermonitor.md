@@ -8,6 +8,47 @@ block_external_search_index: true
 
 If you're using Cloudflare's Load Balancing to load-balance across multiple origin servers or data centers, you configure one of these Monitors to actively check the availability of those servers over HTTP(S) or TCP.
 
+## Example Usage
+
+### HTTP Monitor
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as cloudflare from "@pulumi/cloudflare";
+
+const httpMonitor = new cloudflare.LoadBalancerMonitor("http_monitor", {
+    allowInsecure: false,
+    description: "example http load balancer",
+    expectedBody: "alive",
+    expectedCodes: "2xx",
+    followRedirects: true,
+    headers: [{
+        header: "Host",
+        values: ["example.com"],
+    }],
+    interval: 60,
+    method: "GET",
+    path: "/health",
+    retries: 5,
+    timeout: 7,
+    type: "http",
+});
+```
+
+### TCP Monitor
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as cloudflare from "@pulumi/cloudflare";
+
+const tcpMonitor = new cloudflare.LoadBalancerMonitor("tcp_monitor", {
+    description: "example tcp load balancer",
+    interval: 60,
+    method: "connection_established",
+    retries: 5,
+    timeout: 7,
+    type: "tcp",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/load_balancer_monitor.html.markdown.
 
 

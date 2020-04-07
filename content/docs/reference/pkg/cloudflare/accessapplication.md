@@ -10,6 +10,20 @@ Provides a Cloudflare Access Application resource. Access Applications
 are used to restrict access to a whole application using an
 authorisation gateway managed by Cloudflare.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as cloudflare from "@pulumi/cloudflare";
+
+const stagingApp = new cloudflare.AccessApplication("staging_app", {
+    domain: "staging.example.com",
+    name: "staging application",
+    sessionDuration: "24h",
+    zoneId: "1d5fdc9e88c8a8c4518b068cd94331fe",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/access_application.html.markdown.
 
 

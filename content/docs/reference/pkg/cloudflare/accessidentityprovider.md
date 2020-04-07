@@ -9,6 +9,50 @@ block_external_search_index: true
 Provides a Cloudflare Access Identity Provider resource. Identity Providers are
 used as an authentication or authorisation source within Access.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as cloudflare from "@pulumi/cloudflare";
+
+// one time pin
+const pinLogin = new cloudflare.AccessIdentityProvider("pin_login", {
+    accountId: "1d5fdc9e88c8a8c4518b068cd94331fe",
+    name: "PIN login",
+    type: "onetimepin",
+});
+// oauth
+const githubOauth = new cloudflare.AccessIdentityProvider("github_oauth", {
+    accountId: "1d5fdc9e88c8a8c4518b068cd94331fe",
+    configs: [{
+        clientId: "example",
+        clientSecret: "secret_key",
+    }],
+    name: "GitHub OAuth",
+    type: "github",
+});
+// saml
+const jumpcloudSaml = new cloudflare.AccessIdentityProvider("jumpcloud_saml", {
+    accountId: "1d5fdc9e88c8a8c4518b068cd94331fe",
+    configs: [{
+        attributes: [
+            "email",
+            "username",
+        ],
+        idpPublicCert: `MIIDpDCCAoygAwIBAgIGAV2ka+55MA0GCSqGSIb3DQEBCwUAMIGSMQswCQ...GF/Q2/MHadws97cZg
+uTnQyuOqPuHbnN83d/2l1NSYKCbHt24o`,
+        issuerUrl: "jumpcloud",
+        signRequest: false,
+        ssoTargetUrl: "https://sso.myexample.jumpcloud.com/saml2/cloudflareaccess",
+    }],
+    name: "JumpCloud SAML",
+    type: "saml",
+});
+```
+
+Please refer to the [developers.cloudflare.com Access documentation][access_identity_provider_guide]
+for full reference on what is available and how to configure your provider.
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/access_identity_provider.html.markdown.
 
 

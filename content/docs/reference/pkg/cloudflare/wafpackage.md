@@ -8,6 +8,20 @@ block_external_search_index: true
 
 Provides a Cloudflare WAF rule package resource for a particular zone. This can be used to configure firewall behaviour for pre-defined firewall packages.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as cloudflare from "@pulumi/cloudflare";
+
+const owasp = new cloudflare.WafPackage("owasp", {
+    actionMode: "simulate",
+    packageId: "a25a9a7e9c00afc1fb2e0245519d725b",
+    sensitivity: "medium",
+    zoneId: "ae36f999674d196762efcc5abb06b345",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/waf_package.html.markdown.
 
 

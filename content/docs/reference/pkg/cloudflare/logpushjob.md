@@ -8,6 +8,22 @@ block_external_search_index: true
 
 Provides a resource which manages Cloudflare logpush jobs.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as cloudflare from "@pulumi/cloudflare";
+
+const exampleJob = new cloudflare.LogpushJob("example_job", {
+    destinationConf: "s3://my-bucket-path?region=us-west-2",
+    enabled: true,
+    logpullOptions: "fields=RayID,ClientIP,EdgeStartTimestamp&timestamps=rfc3339",
+    name: "My-logpush-job",
+    ownershipChallenge: "00000000000000000",
+    zoneId: "d41d8cd98f00b204e9800998ecf8427e",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/logpush_job.html.markdown.
 
 

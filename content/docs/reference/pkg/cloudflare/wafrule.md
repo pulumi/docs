@@ -8,6 +8,19 @@ block_external_search_index: true
 
 Provides a Cloudflare WAF rule resource for a particular zone. This can be used to configure firewall behaviour for pre-defined firewall rules.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as cloudflare from "@pulumi/cloudflare";
+
+const _100000 = new cloudflare.WafRule("100000", {
+    mode: "simulate",
+    ruleId: "100000",
+    zoneId: "ae36f999674d196762efcc5abb06b345",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/waf_rule.html.markdown.
 
 

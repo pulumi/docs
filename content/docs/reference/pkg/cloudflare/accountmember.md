@@ -8,6 +8,21 @@ block_external_search_index: true
 
 Provides a resource which manages Cloudflare account members.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as cloudflare from "@pulumi/cloudflare";
+
+const exampleUser = new cloudflare.AccountMember("example_user", {
+    emailAddress: "user@example.com",
+    roleIds: [
+        "68b329da9893e34099c7d8ad5cb9c940",
+        "d784fa8b6d98d27699781bd9a7cf19f0",
+    ],
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/account_member.markdown.
 
 

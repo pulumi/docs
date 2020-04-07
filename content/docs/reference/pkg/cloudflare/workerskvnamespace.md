@@ -8,6 +8,17 @@ block_external_search_index: true
 
 Provides a Workers KV Namespace
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as cloudflare from "@pulumi/cloudflare";
+
+const example = new cloudflare.WorkersKvNamespace("example", {
+    title: "test-namespace",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/workers_kv_namespace.html.markdown.
 
 
