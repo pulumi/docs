@@ -47,7 +47,7 @@ generate_docs() {
         plugin_version=$(git describe --tags `git rev-list --max-count=1 --tags --not --tags='*-dev' --tags='*beta*'`)
         if [ -n "${INSTALL_RESOURCE_PLUGIN_VERSION:-}" ]; then
             plugin_version=${INSTALL_RESOURCE_PLUGIN_VERSION}
-        else if [[ ${plugin_version} = sdk* ]]
+        elif [[ ${plugin_version} = sdk* ]]; then
             plugin_version=${plugin_version:4}
         fi
         echo "Installing resource plugin for ${provider}. Version: ${plugin_version}"
