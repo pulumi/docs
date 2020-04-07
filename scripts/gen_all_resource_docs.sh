@@ -53,5 +53,15 @@ for REPO in "${REPOS[@]}" ; do \
     git commit -am "Generate resource docs for pulumi-${REPO}"
 done
 
-echo "Pushing ${branch} to origin..."
-git push origin ${branch}
+while true; do
+    read -p "Push commits to origin?" yn
+    case $yn in
+        [Yy]* )
+            echo "Pushing ${branch} to origin..."
+            git push origin ${branch}
+            break
+            ;;
+        [Nn]* ) echo "Exiting. You said No."; exit;;
+        * ) echo "Please answer yes or no.";;
+    esac
+done
