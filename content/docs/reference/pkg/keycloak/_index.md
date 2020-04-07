@@ -15,6 +15,7 @@ A Pulumi package for creating and managing keycloak cloud resources.
 > distributed under [MIT](https://mit-license.org/). If you encounter a bug or missing feature,
 > first check the [`pulumi/pulumi-keycloak` repo](https://github.com/pulumi/pulumi-keycloak/issues); however, if that doesn't turn up anything,
 > please consult the source [`mrparkers/terraform-provider-keycloak` repo](https://github.com/mrparkers/terraform-provider-keycloak/issues).
+
 <h3>Modules</h3>
 <ul class="api">
     <li><a href="authentication/" title="authentication"><span class="symbol module"></span>authentication</a></li>
