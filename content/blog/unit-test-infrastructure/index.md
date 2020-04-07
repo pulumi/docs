@@ -6,7 +6,7 @@ meta_image: tdd.png
 authors:
     - sophia-parafina
 tags:
-    - unit testing
+    - testing
     - test driven development
 ---
 
