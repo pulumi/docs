@@ -8,6 +8,19 @@ block_external_search_index: true
 
 Provides a resource to manage organization resource in Packet.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as packet from "@pulumi/packet";
+
+// Create a new Project
+const tfOrganization1 = new packet.Organization("tf_organization_1", {
+    description: "quux",
+    name: "foobar",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/organization.html.markdown.
 
 
