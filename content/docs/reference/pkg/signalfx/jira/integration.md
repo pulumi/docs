@@ -10,6 +10,27 @@ SignalFx Jira integrations. For help with this integration see [Integration with
 
 > **NOTE** When managing integrations you'll need to use an admin token to authenticate the SignalFx provider. Otherwise you'll receive a 4xx error.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as signalfx from "@pulumi/signalfx";
+
+const jiraMyteamXX = new signalfx.jira.Integration("jira_myteamXX", {
+    apiToken: "abc123",
+    assigneeDisplayName: "Testy Testerson",
+    assigneeName: "testytesterson",
+    authMethod: "EmailAndToken",
+    baseUrl: "https://www.example.com",
+    enabled: false,
+    issueType: "Story",
+    password: "paasword",
+    projectKey: "TEST",
+    userEmail: "yoosername@example.com",
+    username: "yoosername",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/jira_integration.html.markdown.
 
 

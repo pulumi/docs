@@ -10,6 +10,24 @@ SignalFx Webhook integration.
 
 > **NOTE** When managing integrations you'll need to use an admin token to authenticate the SignalFx provider. Otherwise you'll receive a 4xx error.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as signalfx from "@pulumi/signalfx";
+
+const webhookMyteam = new signalfx.WebhookResource("webhook_myteam", {
+    enabled: true,
+    headers: [{
+        headerKey: "some_header",
+        headerValue: "value_for_that_header",
+    }],
+    name: "Webhook - My Team",
+    sharedSecret: "abc1234",
+    url: "https://www.example.com",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/webhook_integration.html.markdown.
 
 

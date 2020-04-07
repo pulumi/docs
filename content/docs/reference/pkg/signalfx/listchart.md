@@ -10,6 +10,49 @@ This chart type displays current data values in a list format.
 
 The name of each value in the chart reflects the name of the plot and any associated dimensions. We recommend you click the Pencil icon and give the plot a meaningful name, as in plot B below. Otherwise, just the raw metric name will be displayed on the chart, as in plot A below.
 
+
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as signalfx from "@pulumi/signalfx";
+
+const mylistchart0 = new signalfx.ListChart("mylistchart0", {
+    colorBy: "Metric",
+    description: "Very cool List Chart",
+    disableSampling: true,
+    legendOptionsFields: [
+        {
+            enabled: false,
+            property: "collector",
+        },
+        {
+            enabled: true,
+            property: "cluster_name",
+        },
+        {
+            enabled: true,
+            property: "role",
+        },
+        {
+            enabled: false,
+            property: "collector",
+        },
+        {
+            enabled: false,
+            property: "host",
+        },
+    ],
+    maxDelay: 2,
+    maxPrecision: 2,
+    programText: `myfilters = filter("cluster_name", "prod") and filter("role", "search")
+data("cpu.total.idle", filter=myfilters).publish()
+`,
+    refreshInterval: 1,
+    sortBy: "-value",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/list_chart.html.markdown.
 
 

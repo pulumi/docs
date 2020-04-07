@@ -10,6 +10,18 @@ SignalFx PagerDuty integrations
 
 > **NOTE** When managing integrations you'll need to use an admin token to authenticate the SignalFx provider. Otherwise you'll receive a 4xx error.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as signalfx from "@pulumi/signalfx";
+
+const pagerdutyMyteam = new signalfx.pagerduty.Integration("pagerduty_myteam", {
+    apiKey: "1234567890",
+    enabled: true,
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/pagerduty_integration.html.markdown.
 
 

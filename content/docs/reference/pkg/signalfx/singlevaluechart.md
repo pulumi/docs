@@ -10,6 +10,25 @@ This chart type displays a single number in a large font, representing the curre
 
 If the time period is in the past, the number represents the value of the metric near the end of the time period.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as signalfx from "@pulumi/signalfx";
+
+const mysvchart0 = new signalfx.SingleValueChart("mysvchart0", {
+    colorBy: "Dimension",
+    description: "Very cool Single Value Chart",
+    isTimestampHidden: true,
+    maxDelay: 2,
+    maxPrecision: 2,
+    programText: `myfilters = filter("cluster_name", "prod") and filter("role", "search")
+data("cpu.total.idle", filter=myfilters).publish()
+`,
+    refreshInterval: 1,
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/single_value_chart.html.markdown.
 
 

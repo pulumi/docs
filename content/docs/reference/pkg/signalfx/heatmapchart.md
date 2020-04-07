@@ -8,6 +8,33 @@ block_external_search_index: true
 
 This chart type displays the specified plot in a heatmap fashion. This format is similar to the [Infrastructure Navigator](https://signalfx-product-docs.readthedocs-hosted.com/en/latest/built-in-content/infra-nav.html#infra), with squares representing each source for the selected metric, and the color of each square representing the value range of the metric.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as signalfx from "@pulumi/signalfx";
+
+const myheatmapchart0 = new signalfx.HeatmapChart("myheatmapchart0", {
+    // You must specify one of `color_range` or `color_scale`
+    colorRange: {
+        color: "#ff0000",
+        maxValue: 100,
+        minValue: 0,
+    },
+    description: "Very cool Heatmap",
+    disableSampling: true,
+    groupBies: [
+        "hostname",
+        "host",
+    ],
+    hideTimestamp: true,
+    programText: `myfilters = filter("cluster_name", "prod") and filter("role", "search")
+data("cpu.total.idle", filter=myfilters).publish()
+`,
+    sortBy: "+host",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/heatmap_chart.html.markdown.
 
 

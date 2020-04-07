@@ -10,6 +10,32 @@ SignalFx Azure integrations. For help with this integration see [Monitoring Micr
 
 > **NOTE** When managing integrations you'll need to use an admin token to authenticate the SignalFx provider. Otherwise you'll receive a 4xx error.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as signalfx from "@pulumi/signalfx";
+
+const azureMyteam = new signalfx.azure.Integration("azure_myteam", {
+    enabled: true,
+    resource: [{
+        signalfxAzureIntegration: [{
+            azureMyteamXX: [{
+                appId: "YYY",
+                enabled: false,
+                environment: "azure",
+                name: "AzureFoo",
+                pollRate: 300,
+                secretKey: "XXX",
+                services: ["microsoft.sql/servers/elasticpools"],
+                subscriptions: ["sub-guid-here"],
+                tenantId: "ZZZ",
+            }],
+        }],
+    }],
+});
+```
+
 ## Service Names
 
 Fields that expect an Azure service will work with one of: "microsoft.sql/servers/elasticpools" "microsoft.storage/storageaccounts" "microsoft.storage/storageaccountsservices/tableservices" "microsoft.storage/storageaccountsservices/blobservices" "microsoft.storage/storageaccounts/queueservices" "microsoft.storage/storageaccounts/fileservices" "microsoft.compute/virtualmachinescalesets" "microsoft.compute/virtualmachinescalesets/virtualmachines" "microsoft.compute/virtualmachines" "microsoft.devices/iothubs" "microsoft.eventHub/namespaces" "microsoft.batch/batchaccounts" "microsoft.sql/servers/databases" "microsoft.cache/redis" "microsoft.logic/workflows".
