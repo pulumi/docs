@@ -8,6 +8,17 @@ block_external_search_index: true
 
 Use this data source to retrieve a "Default" policy from Okta. This same thing can be achieved using the `okta.policy.getPolicy` with `name = "Default"`, this is simply a shortcut.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as okta from "@pulumi/okta";
+
+const example = pulumi.output(okta.policy.getDefaultPolicy({
+    type: "PASSWORD",
+}, { async: true }));
+```
+
 > This content is derived from https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/default_policy.html.markdown.
 
 

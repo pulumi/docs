@@ -10,6 +10,34 @@ Creates an SAML Application.
 
 This resource allows you to create and configure an SAML Application.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as okta from "@pulumi/okta";
+
+const example = new okta.app.Saml("example", {
+    attributeStatements: [{
+        filterType: "REGEX",
+        filterValue: ".*",
+        name: "groups",
+        type: "GROUP",
+    }],
+    audience: "http://example.com/audience",
+    authnContextClassRef: "urn:oasis:names:tc:SAML:2.0:ac:classes:PasswordProtectedTransport",
+    destination: "http://example.com",
+    digestAlgorithm: "SHA256",
+    honorForceAuthn: false,
+    label: "example",
+    recipient: "http://example.com",
+    responseSigned: true,
+    signatureAlgorithm: "RSA_SHA256",
+    ssoUrl: "http://example.com",
+    subjectNameIdFormat: "urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress",
+    subjectNameIdTemplate: "${user.userName}",
+});
+```
+
 > This content is derived from https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_saml.html.markdown.
 
 

@@ -10,6 +10,17 @@ Creates a SAML Identity Provider Signing Key.
 
 This resource allows you to create and configure a SAML Identity Provider Signing Key.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as okta from "@pulumi/okta";
+
+const example = new okta.idp.SamlKey("example", {
+    x5cs: [okta_app_saml_example.certificate],
+});
+```
+
 > This content is derived from https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/idp_saml_signing_key.html.markdown.
 
 

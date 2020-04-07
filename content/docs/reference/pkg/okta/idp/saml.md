@@ -10,6 +10,26 @@ Creates a SAML Identity Provider.
 
 This resource allows you to create and configure a SAML Identity Provider.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as okta from "@pulumi/okta";
+
+const example = new okta.idp.Saml("example", {
+    acsBinding: "HTTP-POST",
+    acsType: "INSTANCE",
+    issuer: "https://idp.example.com",
+    kid: okta_idp_saml_key_test.id,
+    requestSignatureScope: "REQUEST",
+    responseSignatureScope: "ANY",
+    ssoBinding: "HTTP-POST",
+    ssoDestination: "https://idp.example.com",
+    ssoUrl: "https://idp.example.com",
+    usernameTemplate: "idpuser.email",
+});
+```
+
 > This content is derived from https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/idp_saml.html.markdown.
 
 

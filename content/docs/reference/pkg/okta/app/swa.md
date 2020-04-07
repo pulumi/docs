@@ -10,6 +10,21 @@ Creates an SWA Application.
 
 This resource allows you to create and configure an SWA Application.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as okta from "@pulumi/okta";
+
+const example = new okta.app.Swa("example", {
+    buttonField: "btn-login",
+    label: "example",
+    passwordField: "txtbox-password",
+    url: "https://example.com/login.html",
+    usernameField: "txtbox-username",
+});
+```
+
 > This content is derived from https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_swa.html.markdown.
 
 

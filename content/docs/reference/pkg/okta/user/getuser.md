@@ -8,6 +8,26 @@ block_external_search_index: true
 
 Use this data source to retrieve a users from Okta.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as okta from "@pulumi/okta";
+
+const example = pulumi.output(okta.user.getUser({
+    searches: [
+        {
+            name: "profile.firstName",
+            value: "John",
+        },
+        {
+            name: "profile.lastName",
+            value: "Doe",
+        },
+    ],
+}, { async: true }));
+```
+
 > This content is derived from https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/user.html.markdown.
 
 

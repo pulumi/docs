@@ -10,6 +10,20 @@ Creates an Okta Group Rule.
 
 This resource allows you to create and configure an Okta Group Rule.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as okta from "@pulumi/okta";
+
+const example = new okta.group.Rule("example", {
+    expressionType: "urn:okta:expression:1.0",
+    expressionValue: "String.startsWith(user.firstName,\"andy\")",
+    groupAssignments: ["<group id>"],
+    status: "ACTIVE",
+});
+```
+
 > This content is derived from https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/group_rule.html.markdown.
 
 

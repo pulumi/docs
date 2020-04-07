@@ -8,6 +8,17 @@ block_external_search_index: true
 
 Use this data source to retrieve an auth server from Okta.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as okta from "@pulumi/okta";
+
+const example = pulumi.output(okta.auth.getServer({
+    name: "Example Auth",
+}, { async: true }));
+```
+
 > This content is derived from https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/auth_server.html.markdown.
 
 

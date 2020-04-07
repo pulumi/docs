@@ -10,6 +10,20 @@ Creates a Password Policy.
 
 This resource allows you to create and configure a Password Policy.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as okta from "@pulumi/okta";
+
+const example = new okta.policy.Password("example", {
+    description: "Example",
+    groupsIncludeds: [okta_group_everyone.id],
+    passwordHistoryCount: 4,
+    status: "ACTIVE",
+});
+```
+
 > This content is derived from https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/policy_password.html.markdown.
 
 

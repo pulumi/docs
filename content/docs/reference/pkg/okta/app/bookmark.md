@@ -10,6 +10,18 @@ Creates a Bookmark Application.
 
 This resource allows you to create and configure a Bookmark Application.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as okta from "@pulumi/okta";
+
+const example = new okta.app.Bookmark("example", {
+    label: "Example",
+    url: "https://example.com",
+});
+```
+
 > This content is derived from https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_bookmark.html.markdown.
 
 

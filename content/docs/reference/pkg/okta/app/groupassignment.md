@@ -16,6 +16,22 @@ __When using this resource, make sure to add the following `lifefycle` argument 
 import * as pulumi from "@pulumi/pulumi";
 ```
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as okta from "@pulumi/okta";
+
+const example = new okta.app.GroupAssignment("example", {
+    appId: "<app id>",
+    groupId: "<group id>",
+    profile: `{
+  "<app_profile_field>": "<value>"
+}
+`,
+});
+```
+
 > This content is derived from https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_group_assignment.html.markdown.
 
 

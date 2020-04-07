@@ -10,6 +10,22 @@ Creates an MFA Policy.
 
 This resource allows you to create and configure an MFA Policy.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as okta from "@pulumi/okta";
+
+const example = new okta.policy.Mfa("example", {
+    description: "Example",
+    groupsIncludeds: [okta_group_everyone.id],
+    oktaOtp: {
+        enroll: "REQUIRED",
+    },
+    status: "ACTIVE",
+});
+```
+
 > This content is derived from https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/policy_mfa.html.markdown.
 
 

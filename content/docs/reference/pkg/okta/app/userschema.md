@@ -10,6 +10,23 @@ Creates an Application User Schema property.
 
 This resource allows you to create and configure a custom user schema property and associate it with an application.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as okta from "@pulumi/okta";
+
+const example = new okta.app.UserSchema("example", {
+    appId: "<app id>",
+    description: "My custom property name",
+    index: "customPropertyName",
+    master: "OKTA",
+    scope: "SELF",
+    title: "customPropertyName",
+    type: "string",
+});
+```
+
 > This content is derived from https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_user_schema.html.markdown.
 
 

@@ -10,6 +10,22 @@ Creates a User Schema property.
 
 This resource allows you to create and configure a custom user schema property.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as okta from "@pulumi/okta";
+
+const example = new okta.user.Schema("example", {
+    description: "My custom property name",
+    index: "customPropertyName",
+    master: "OKTA",
+    scope: "SELF",
+    title: "customPropertyName",
+    type: "string",
+});
+```
+
 > This content is derived from https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/user_schema.html.markdown.
 
 

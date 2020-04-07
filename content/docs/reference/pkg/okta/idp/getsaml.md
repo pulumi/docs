@@ -8,6 +8,17 @@ block_external_search_index: true
 
 Use this data source to retrieve a SAML IdP from Okta.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as okta from "@pulumi/okta";
+
+const example = pulumi.output(okta.idp.getSaml({
+    label: "Example App",
+}, { async: true }));
+```
+
 > This content is derived from https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/idp_saml.html.markdown.
 
 

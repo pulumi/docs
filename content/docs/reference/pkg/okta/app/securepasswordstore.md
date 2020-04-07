@@ -10,6 +10,21 @@ Creates a Secure Password Store Application.
 
 This resource allows you to create and configure a Secure Password Store Application.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as okta from "@pulumi/okta";
+
+const example = new okta.app.SecurePasswordStore("example", {
+    credentialsScheme: "ADMIN_SETS_CREDENTIALS",
+    label: "example",
+    passwordField: "pass",
+    url: "http://test.com",
+    usernameField: "user",
+});
+```
+
 > This content is derived from https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/app_secure_password_store.html.markdown.
 
 

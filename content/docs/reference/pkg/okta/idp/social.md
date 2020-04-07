@@ -10,6 +10,27 @@ Creates an Social Identity Provider.
 
 This resource allows you to create and configure an Social Identity Provider.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as okta from "@pulumi/okta";
+
+const example = new okta.idp.Social("example", {
+    clientId: "abcd123",
+    clientSecret: "abcd123",
+    matchAttribute: "customfieldId",
+    matchType: "CUSTOM_ATTRIBUTE",
+    protocolType: "OAUTH2",
+    scopes: [
+        "public_profile",
+        "email",
+    ],
+    type: "FACEBOOK",
+    usernameTemplate: "idpuser.email",
+});
+```
+
 > This content is derived from https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/idp_social.html.markdown.
 
 

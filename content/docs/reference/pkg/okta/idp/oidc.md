@@ -10,6 +10,31 @@ Creates an OIDC Identity Provider.
 
 This resource allows you to create and configure an OIDC Identity Provider.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as okta from "@pulumi/okta";
+
+const example = new okta.idp.Oidc("example", {
+    acsBinding: "HTTP-POST",
+    acsType: "INSTANCE",
+    authorizationBinding: "HTTP-REDIRECT",
+    authorizationUrl: "https://idp.example.com/authorize",
+    clientId: "efg456",
+    clientSecret: "efg456",
+    issuerUrl: "https://id.example.com",
+    jwksBinding: "HTTP-REDIRECT",
+    jwksUrl: "https://idp.example.com/keys",
+    scopes: ["openid"],
+    tokenBinding: "HTTP-POST",
+    tokenUrl: "https://idp.example.com/token",
+    userInfoBinding: "HTTP-REDIRECT",
+    userInfoUrl: "https://idp.example.com/userinfo",
+    usernameTemplate: "idpuser.email",
+});
+```
+
 > This content is derived from https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/idp_oidc.html.markdown.
 
 

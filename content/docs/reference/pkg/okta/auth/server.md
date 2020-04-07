@@ -10,6 +10,20 @@ Creates an Authorization Server.
 
 This resource allows you to create and configure an Authorization Server.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as okta from "@pulumi/okta";
+
+const example = new okta.auth.Server("example", {
+    audiences: ["api://example"],
+    description: "My Example Auth Server",
+    issuerMode: "CUSTOM_URL",
+    status: "ACTIVE",
+});
+```
+
 > This content is derived from https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/auth_server.html.markdown.
 
 

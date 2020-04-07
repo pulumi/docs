@@ -8,6 +8,15 @@ block_external_search_index: true
 
 Use this data source to retrieve the Everyone group from Okta. The same can be achieved with the `okta.group.Group` data source with `name = "Everyone"`. This is simply a shortcut.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as okta from "@pulumi/okta";
+
+const example = pulumi.output(okta.group.getEveryoneGroup({ async: true }));
+```
+
 > This content is derived from https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/everyone_group.html.markdown.
 
 

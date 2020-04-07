@@ -10,6 +10,28 @@ Creates an inline hook.
 
 This resource allows you to create and configure an inline hook.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as okta from "@pulumi/okta";
+
+const example = new okta.inline.Hook("example", {
+    auth: {
+        key: "Authorization",
+        type: "HEADER",
+        value: "secret",
+    },
+    channel: {
+        method: "POST",
+        uri: "https://example.com/test",
+        version: "1.0.0",
+    },
+    type: "com.okta.oauth2.tokens.transform",
+    version: "1.0.1",
+});
+```
+
 > This content is derived from https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/inline_hook.html.markdown.
 
 

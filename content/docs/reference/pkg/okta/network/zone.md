@@ -10,6 +10,25 @@ Creates an Okta Network Zone.
 
 This resource allows you to create and configure an Okta Network Zone.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as okta from "@pulumi/okta";
+
+const example = new okta.network.Zone("example", {
+    gateways: [
+        "1.2.3.4/24",
+        "2.3.4.5-2.3.4.15",
+    ],
+    proxies: [
+        "2.2.3.4/24",
+        "3.3.4.5-3.3.4.15",
+    ],
+    type: "IP",
+});
+```
+
 > This content is derived from https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/network_zone.html.markdown.
 
 

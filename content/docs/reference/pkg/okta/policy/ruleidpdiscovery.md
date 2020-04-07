@@ -10,6 +10,26 @@ Creates an IdP Discovery Policy Rule.
 
 This resource allows you to create and configure an IdP Discovery Policy Rule.
 
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as okta from "@pulumi/okta";
+
+const example = new okta.policy.RuleIdpDiscovery("example", {
+    idpId: "<idp id>",
+    idpType: "SAML2",
+    policyid: "<policy id>",
+    priority: 1,
+    userIdentifierAttribute: "company",
+    userIdentifierPatterns: [{
+        matchType: "EQUALS",
+        value: "Articulate",
+    }],
+    userIdentifierType: "ATTRIBUTE",
+});
+```
+
 > This content is derived from https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/policy_rule_idp_discovery.html.markdown.
 
 
