@@ -15,6 +15,7 @@ A Pulumi package for creating and managing RabbitMQ resources.
 > distributed under [MPL 2.0](https://www.mozilla.org/en-US/MPL/2.0/). If you encounter a bug or missing feature,
 > first check the [`pulumi/pulumi-rabbitmq` repo](https://github.com/pulumi/pulumi-rabbitmq/issues); however, if that doesn't turn up anything,
 > please consult the source [`terraform-providers/terraform-provider-rabbitmq` repo](https://github.com/terraform-providers/terraform-provider-rabbitmq/issues).
+
 <h3>Resources</h3>
 <ul class="api">
     <li><a href="binding" title="Binding"><span class="symbol resource"></span>Binding</a></li>
