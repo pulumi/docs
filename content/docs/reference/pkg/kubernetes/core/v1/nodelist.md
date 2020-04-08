@@ -588,7 +588,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>kubelet<wbr>Config<wbr>Key</span>
+        <span>kubelet_<wbr>config_<wbr>key</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -612,7 +612,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource<wbr>Version</span>
+        <span>resource_<wbr>version</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -802,7 +802,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Port</span>
+        <span>port</span>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
@@ -955,7 +955,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>continue</span>
+        <span>continue_</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -963,7 +963,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>remaining<wbr>Item<wbr>Count</span>
+        <span>remaining_<wbr>item_<wbr>count</span>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
@@ -971,7 +971,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource<wbr>Version</span>
+        <span>resource_<wbr>version</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -979,7 +979,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>self<wbr>Link</span>
+        <span>self_<wbr>link</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -1740,7 +1740,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>config<wbr>Map</span>
+        <span>config_<wbr>map</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configmapnodeconfigsource">Dict[Config<wbr>Map<wbr>Node<wbr>Config<wbr>Source]</a></span>
     </dt>
@@ -1911,7 +1911,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>last<wbr>Known<wbr>Good</span>
+        <span>last_<wbr>known_<wbr>good</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodeconfigsource">Dict[Node<wbr>Config<wbr>Source]</a></span>
     </dt>
@@ -1986,7 +1986,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>kubelet<wbr>Endpoint</span>
+        <span>kubelet_<wbr>endpoint</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#daemonendpoint">Dict[Daemon<wbr>Endpoint]</a></span>
     </dt>
@@ -2205,7 +2205,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>config<wbr>Source</span>
+        <span>config_<wbr>source</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodeconfigsource">Dict[Node<wbr>Config<wbr>Source]</a></span>
     </dt>
@@ -2213,7 +2213,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>external<wbr>ID</span>
+        <span>external_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -2221,7 +2221,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>pod<wbr>CIDR</span>
+        <span>pod_<wbr>cidr</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -2229,7 +2229,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>pod<wbr>CIDRs</span>
+        <span>pod_<wbr>cid_<wbr>rs</span>
         <span class="property-indicator"></span>
         <span class="property-type">List[str]</span>
     </dt>
@@ -2237,7 +2237,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>provider<wbr>ID</span>
+        <span>provider_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -2608,7 +2608,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>daemon<wbr>Endpoints</span>
+        <span>daemon_<wbr>endpoints</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodedaemonendpoints">Dict[Node<wbr>Daemon<wbr>Endpoints]</a></span>
     </dt>
@@ -2624,7 +2624,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>node<wbr>Info</span>
+        <span>node_<wbr>info</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodesysteminfo">Dict[Node<wbr>System<wbr>Info]</a></span>
     </dt>
@@ -2640,7 +2640,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>volumes<wbr>Attached</span>
+        <span>volumes_<wbr>attached</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#attachedvolume">List[Attached<wbr>Volume]</a></span>
     </dt>
@@ -2648,7 +2648,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>volumes<wbr>In<wbr>Use</span>
+        <span>volumes_<wbr>in_<wbr>use</span>
         <span class="property-indicator"></span>
         <span class="property-type">List[str]</span>
     </dt>
@@ -2947,7 +2947,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>boot<wbr>ID</span>
+        <span>boot_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -2955,7 +2955,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>container<wbr>Runtime<wbr>Version</span>
+        <span>container_<wbr>runtime_<wbr>version</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -2963,7 +2963,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>kernel<wbr>Version</span>
+        <span>kernel_<wbr>version</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -2971,7 +2971,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>kube<wbr>Proxy<wbr>Version</span>
+        <span>kube_<wbr>proxy_<wbr>version</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -2979,7 +2979,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>kubelet<wbr>Version</span>
+        <span>kubelet_<wbr>version</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -2987,7 +2987,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>machine<wbr>ID</span>
+        <span>machine_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -2995,7 +2995,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>operating<wbr>System</span>
+        <span>operating_<wbr>system</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -3003,7 +3003,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>os<wbr>Image</span>
+        <span>os_<wbr>image</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -3011,7 +3011,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>system<wbr>UUID</span>
+        <span>system_<wbr>uuid</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -3502,7 +3502,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>cluster<wbr>Name</span>
+        <span>cluster_<wbr>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -3510,7 +3510,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>creation<wbr>Timestamp</span>
+        <span>creation_<wbr>timestamp</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -3520,7 +3520,7 @@ Populated by the system. Read-only. Null for lists. More info: https://git.k8s.i
 
     <dt class="property-optional"
             title="Optional">
-        <span>deletion<wbr>Grace<wbr>Period<wbr>Seconds</span>
+        <span>deletion_<wbr>grace_<wbr>period_<wbr>seconds</span>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
@@ -3528,7 +3528,7 @@ Populated by the system. Read-only. Null for lists. More info: https://git.k8s.i
 
     <dt class="property-optional"
             title="Optional">
-        <span>deletion<wbr>Timestamp</span>
+        <span>deletion_<wbr>timestamp</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -3546,7 +3546,7 @@ Populated by the system when a graceful deletion is requested. Read-only. More i
 
     <dt class="property-optional"
             title="Optional">
-        <span>generate<wbr>Name</span>
+        <span>generate_<wbr>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -3574,7 +3574,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>managed<wbr>Fields</span>
+        <span>managed_<wbr>fields</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedfieldsentry">List[Managed<wbr>Fields<wbr>Entry]</a></span>
     </dt>
@@ -3600,7 +3600,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 
     <dt class="property-optional"
             title="Optional">
-        <span>owner<wbr>References</span>
+        <span>owner_<wbr>references</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ownerreference">List[Owner<wbr>Reference]</a></span>
     </dt>
@@ -3608,7 +3608,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource<wbr>Version</span>
+        <span>resource_<wbr>version</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -3618,7 +3618,7 @@ Populated by the system. Read-only. Value must be treated as opaque by clients a
 
     <dt class="property-optional"
             title="Optional">
-        <span>self<wbr>Link</span>
+        <span>self_<wbr>link</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>

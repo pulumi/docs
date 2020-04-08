@@ -491,7 +491,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>fs<wbr>Type</span>
+        <span>fs_<wbr>type</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -507,7 +507,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>read<wbr>Only</span>
+        <span>read_<wbr>only</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
@@ -515,7 +515,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>volume<wbr>ID</span>
+        <span>volume_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -686,7 +686,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>caching<wbr>Mode</span>
+        <span>caching_<wbr>mode</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -694,7 +694,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>disk<wbr>Name</span>
+        <span>disk_<wbr>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -702,7 +702,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>disk<wbr>URI</span>
+        <span>disk_<wbr>uri</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -710,7 +710,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>fs<wbr>Type</span>
+        <span>fs_<wbr>type</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -718,7 +718,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>read<wbr>Only</span>
+        <span>read_<wbr>only</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
@@ -865,7 +865,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>read<wbr>Only</span>
+        <span>read_<wbr>only</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
@@ -873,7 +873,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>secret<wbr>Name</span>
+        <span>secret_<wbr>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -881,7 +881,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>secret<wbr>Namespace</span>
+        <span>secret_<wbr>namespace</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -889,7 +889,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>share<wbr>Name</span>
+        <span>share_<wbr>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -1156,7 +1156,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>controller<wbr>Expand<wbr>Secret<wbr>Ref</span>
+        <span>controller_<wbr>expand_<wbr>secret_<wbr>ref</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretreference">Dict[Secret<wbr>Reference]</a></span>
     </dt>
@@ -1164,7 +1164,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>controller<wbr>Publish<wbr>Secret<wbr>Ref</span>
+        <span>controller_<wbr>publish_<wbr>secret_<wbr>ref</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretreference">Dict[Secret<wbr>Reference]</a></span>
     </dt>
@@ -1180,7 +1180,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>fs<wbr>Type</span>
+        <span>fs_<wbr>type</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -1188,7 +1188,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>node<wbr>Publish<wbr>Secret<wbr>Ref</span>
+        <span>node_<wbr>publish_<wbr>secret_<wbr>ref</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretreference">Dict[Secret<wbr>Reference]</a></span>
     </dt>
@@ -1196,7 +1196,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>node<wbr>Stage<wbr>Secret<wbr>Ref</span>
+        <span>node_<wbr>stage_<wbr>secret_<wbr>ref</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretreference">Dict[Secret<wbr>Reference]</a></span>
     </dt>
@@ -1204,7 +1204,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>read<wbr>Only</span>
+        <span>read_<wbr>only</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
@@ -1212,7 +1212,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>volume<wbr>Attributes</span>
+        <span>volume_<wbr>attributes</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -1220,7 +1220,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>volume<wbr>Handle</span>
+        <span>volume_<wbr>handle</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -1431,7 +1431,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>read<wbr>Only</span>
+        <span>read_<wbr>only</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
@@ -1439,7 +1439,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>secret<wbr>File</span>
+        <span>secret_<wbr>file</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -1447,7 +1447,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>secret<wbr>Ref</span>
+        <span>secret_<wbr>ref</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretreference">Dict[Secret<wbr>Reference]</a></span>
     </dt>
@@ -1602,7 +1602,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>fs<wbr>Type</span>
+        <span>fs_<wbr>type</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -1610,7 +1610,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>read<wbr>Only</span>
+        <span>read_<wbr>only</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
@@ -1618,7 +1618,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>secret<wbr>Ref</span>
+        <span>secret_<wbr>ref</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretreference">Dict[Secret<wbr>Reference]</a></span>
     </dt>
@@ -1626,7 +1626,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>volume<wbr>ID</span>
+        <span>volume_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -1797,7 +1797,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>fs<wbr>Type</span>
+        <span>fs_<wbr>type</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -1813,7 +1813,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>read<wbr>Only</span>
+        <span>read_<wbr>only</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
@@ -1821,7 +1821,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>target<wbr>WWNs</span>
+        <span>target_<wbr>ww_<wbr>ns</span>
         <span class="property-indicator"></span>
         <span class="property-type">List[str]</span>
     </dt>
@@ -2008,7 +2008,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>fs<wbr>Type</span>
+        <span>fs_<wbr>type</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -2024,7 +2024,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>read<wbr>Only</span>
+        <span>read_<wbr>only</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
@@ -2032,7 +2032,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>secret<wbr>Ref</span>
+        <span>secret_<wbr>ref</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretreference">Dict[Secret<wbr>Reference]</a></span>
     </dt>
@@ -2131,7 +2131,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>dataset<wbr>Name</span>
+        <span>dataset_<wbr>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -2139,7 +2139,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>dataset<wbr>UUID</span>
+        <span>dataset_<wbr>uuid</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -2286,7 +2286,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>fs<wbr>Type</span>
+        <span>fs_<wbr>type</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -2302,7 +2302,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>pd<wbr>Name</span>
+        <span>pd_<wbr>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -2310,7 +2310,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>read<wbr>Only</span>
+        <span>read_<wbr>only</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
@@ -2465,7 +2465,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>endpoints<wbr>Namespace</span>
+        <span>endpoints_<wbr>namespace</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -2481,7 +2481,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>read<wbr>Only</span>
+        <span>read_<wbr>only</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
@@ -2903,7 +2903,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>chap<wbr>Auth<wbr>Discovery</span>
+        <span>chap_<wbr>auth_<wbr>discovery</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
@@ -2911,7 +2911,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>chap<wbr>Auth<wbr>Session</span>
+        <span>chap_<wbr>auth_<wbr>session</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
@@ -2919,7 +2919,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>fs<wbr>Type</span>
+        <span>fs_<wbr>type</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -2927,7 +2927,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>initiator<wbr>Name</span>
+        <span>initiator_<wbr>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -2943,7 +2943,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>iscsi<wbr>Interface</span>
+        <span>iscsi_<wbr>interface</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -2967,7 +2967,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>read<wbr>Only</span>
+        <span>read_<wbr>only</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
@@ -2975,7 +2975,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>secret<wbr>Ref</span>
+        <span>secret_<wbr>ref</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretreference">Dict[Secret<wbr>Reference]</a></span>
     </dt>
@@ -2983,7 +2983,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>target<wbr>Portal</span>
+        <span>target_<wbr>portal</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -3082,7 +3082,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>fs<wbr>Type</span>
+        <span>fs_<wbr>type</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -3424,7 +3424,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>read<wbr>Only</span>
+        <span>read_<wbr>only</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
@@ -3507,7 +3507,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>node<wbr>Selector<wbr>Terms</span>
+        <span>node_<wbr>selector_<wbr>terms</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodeselectorterm">List[Node<wbr>Selector<wbr>Term]</a></span>
     </dt>
@@ -3745,7 +3745,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>match<wbr>Expressions</span>
+        <span>match_<wbr>expressions</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodeselectorrequirement">List[Node<wbr>Selector<wbr>Requirement]</a></span>
     </dt>
@@ -4244,7 +4244,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>cluster<wbr>Name</span>
+        <span>cluster_<wbr>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -4252,7 +4252,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>creation<wbr>Timestamp</span>
+        <span>creation_<wbr>timestamp</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -4262,7 +4262,7 @@ Populated by the system. Read-only. Null for lists. More info: https://git.k8s.i
 
     <dt class="property-optional"
             title="Optional">
-        <span>deletion<wbr>Grace<wbr>Period<wbr>Seconds</span>
+        <span>deletion_<wbr>grace_<wbr>period_<wbr>seconds</span>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
@@ -4270,7 +4270,7 @@ Populated by the system. Read-only. Null for lists. More info: https://git.k8s.i
 
     <dt class="property-optional"
             title="Optional">
-        <span>deletion<wbr>Timestamp</span>
+        <span>deletion_<wbr>timestamp</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -4288,7 +4288,7 @@ Populated by the system when a graceful deletion is requested. Read-only. More i
 
     <dt class="property-optional"
             title="Optional">
-        <span>generate<wbr>Name</span>
+        <span>generate_<wbr>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -4316,7 +4316,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>managed<wbr>Fields</span>
+        <span>managed_<wbr>fields</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedfieldsentry">List[Managed<wbr>Fields<wbr>Entry]</a></span>
     </dt>
@@ -4342,7 +4342,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 
     <dt class="property-optional"
             title="Optional">
-        <span>owner<wbr>References</span>
+        <span>owner_<wbr>references</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ownerreference">List[Owner<wbr>Reference]</a></span>
     </dt>
@@ -4350,7 +4350,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource<wbr>Version</span>
+        <span>resource_<wbr>version</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -4360,7 +4360,7 @@ Populated by the system. Read-only. Value must be treated as opaque by clients a
 
     <dt class="property-optional"
             title="Optional">
-        <span>self<wbr>Link</span>
+        <span>self_<wbr>link</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -4543,7 +4543,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>field<wbr>Path</span>
+        <span>field_<wbr>path</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -4567,7 +4567,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource<wbr>Version</span>
+        <span>resource_<wbr>version</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -5517,7 +5517,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>access<wbr>Modes</span>
+        <span>access_<wbr>modes</span>
         <span class="property-indicator"></span>
         <span class="property-type">List[str]</span>
     </dt>
@@ -5525,7 +5525,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>aws<wbr>Elastic<wbr>Block<wbr>Store</span>
+        <span>aws_<wbr>elastic_<wbr>block_<wbr>store</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#awselasticblockstorevolumesource">Dict[AWSElastic<wbr>Block<wbr>Store<wbr>Volume<wbr>Source]</a></span>
     </dt>
@@ -5533,7 +5533,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>azure<wbr>Disk</span>
+        <span>azure_<wbr>disk</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azurediskvolumesource">Dict[Azure<wbr>Disk<wbr>Volume<wbr>Source]</a></span>
     </dt>
@@ -5541,7 +5541,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>azure<wbr>File</span>
+        <span>azure_<wbr>file</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azurefilepersistentvolumesource">Dict[Azure<wbr>File<wbr>Persistent<wbr>Volume<wbr>Source]</a></span>
     </dt>
@@ -5573,7 +5573,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>claim<wbr>Ref</span>
+        <span>claim_<wbr>ref</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#objectreference">Dict[Object<wbr>Reference]</a></span>
     </dt>
@@ -5597,7 +5597,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>flex<wbr>Volume</span>
+        <span>flex_<wbr>volume</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexpersistentvolumesource">Dict[Flex<wbr>Persistent<wbr>Volume<wbr>Source]</a></span>
     </dt>
@@ -5613,7 +5613,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>gce<wbr>Persistent<wbr>Disk</span>
+        <span>gce_<wbr>persistent_<wbr>disk</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gcepersistentdiskvolumesource">Dict[GCEPersistent<wbr>Disk<wbr>Volume<wbr>Source]</a></span>
     </dt>
@@ -5629,7 +5629,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>host<wbr>Path</span>
+        <span>host_<wbr>path</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hostpathvolumesource">Dict[Host<wbr>Path<wbr>Volume<wbr>Source]</a></span>
     </dt>
@@ -5669,7 +5669,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>node<wbr>Affinity</span>
+        <span>node_<wbr>affinity</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#volumenodeaffinity">Dict[Volume<wbr>Node<wbr>Affinity]</a></span>
     </dt>
@@ -5677,7 +5677,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>persistent<wbr>Volume<wbr>Reclaim<wbr>Policy</span>
+        <span>persistent_<wbr>volume_<wbr>reclaim_<wbr>policy</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -5685,7 +5685,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>photon<wbr>Persistent<wbr>Disk</span>
+        <span>photon_<wbr>persistent_<wbr>disk</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#photonpersistentdiskvolumesource">Dict[Photon<wbr>Persistent<wbr>Disk<wbr>Volume<wbr>Source]</a></span>
     </dt>
@@ -5693,7 +5693,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>portworx<wbr>Volume</span>
+        <span>portworx_<wbr>volume</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#portworxvolumesource">Dict[Portworx<wbr>Volume<wbr>Source]</a></span>
     </dt>
@@ -5717,7 +5717,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>scale<wbr>IO</span>
+        <span>scale_<wbr>io</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scaleiopersistentvolumesource">Dict[Scale<wbr>IOPersistent<wbr>Volume<wbr>Source]</a></span>
     </dt>
@@ -5725,7 +5725,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>storage<wbr>Class<wbr>Name</span>
+        <span>storage_<wbr>class_<wbr>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -5741,7 +5741,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>volume<wbr>Mode</span>
+        <span>volume_<wbr>mode</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -5749,7 +5749,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>vsphere<wbr>Volume</span>
+        <span>vsphere_<wbr>volume</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vspherevirtualdiskvolumesource">Dict[Vsphere<wbr>Virtual<wbr>Disk<wbr>Volume<wbr>Source]</a></span>
     </dt>
@@ -5848,7 +5848,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>fs<wbr>Type</span>
+        <span>fs_<wbr>type</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -5856,7 +5856,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>pd<wbr>ID</span>
+        <span>pd_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -5979,7 +5979,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>fs<wbr>Type</span>
+        <span>fs_<wbr>type</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -5987,7 +5987,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>read<wbr>Only</span>
+        <span>read_<wbr>only</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
@@ -5995,7 +5995,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>volume<wbr>ID</span>
+        <span>volume_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -6198,7 +6198,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>read<wbr>Only</span>
+        <span>read_<wbr>only</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
@@ -6473,7 +6473,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>fs<wbr>Type</span>
+        <span>fs_<wbr>type</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -6513,7 +6513,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>read<wbr>Only</span>
+        <span>read_<wbr>only</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
@@ -6521,7 +6521,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>secret<wbr>Ref</span>
+        <span>secret_<wbr>ref</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretreference">Dict[Secret<wbr>Reference]</a></span>
     </dt>
@@ -6820,7 +6820,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>fs<wbr>Type</span>
+        <span>fs_<wbr>type</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -6836,7 +6836,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>protection<wbr>Domain</span>
+        <span>protection_<wbr>domain</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -6844,7 +6844,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>read<wbr>Only</span>
+        <span>read_<wbr>only</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
@@ -6852,7 +6852,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>secret<wbr>Ref</span>
+        <span>secret_<wbr>ref</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretreference">Dict[Secret<wbr>Reference]</a></span>
     </dt>
@@ -6860,7 +6860,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>ssl<wbr>Enabled</span>
+        <span>ssl_<wbr>enabled</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
@@ -6868,7 +6868,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>storage<wbr>Mode</span>
+        <span>storage_<wbr>mode</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -6876,7 +6876,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>storage<wbr>Pool</span>
+        <span>storage_<wbr>pool</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -6892,7 +6892,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>volume<wbr>Name</span>
+        <span>volume_<wbr>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -7170,7 +7170,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>fs<wbr>Type</span>
+        <span>fs_<wbr>type</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -7178,7 +7178,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>read<wbr>Only</span>
+        <span>read_<wbr>only</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
@@ -7186,7 +7186,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>secret<wbr>Ref</span>
+        <span>secret_<wbr>ref</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#objectreference">Dict[Object<wbr>Reference]</a></span>
     </dt>
@@ -7194,7 +7194,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>volume<wbr>Name</span>
+        <span>volume_<wbr>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -7202,7 +7202,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>volume<wbr>Namespace</span>
+        <span>volume_<wbr>namespace</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -7301,7 +7301,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>inline<wbr>Volume<wbr>Spec</span>
+        <span>inline_<wbr>volume_<wbr>spec</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#persistentvolumespec">Dict[Persistent<wbr>Volume<wbr>Spec]</a></span>
     </dt>
@@ -7309,7 +7309,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>persistent<wbr>Volume<wbr>Name</span>
+        <span>persistent_<wbr>volume_<wbr>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -7440,7 +7440,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>node<wbr>Name</span>
+        <span>node_<wbr>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -7595,7 +7595,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>attach<wbr>Error</span>
+        <span>attach_<wbr>error</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#volumeerror">Dict[Volume<wbr>Error]</a></span>
     </dt>
@@ -7611,7 +7611,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>attachment<wbr>Metadata</span>
+        <span>attachment_<wbr>metadata</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -7619,7 +7619,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>detach<wbr>Error</span>
+        <span>detach_<wbr>error</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#volumeerror">Dict[Volume<wbr>Error]</a></span>
     </dt>
@@ -7948,7 +7948,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>fs<wbr>Type</span>
+        <span>fs_<wbr>type</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -7956,7 +7956,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>storage<wbr>Policy<wbr>ID</span>
+        <span>storage_<wbr>policy_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -7964,7 +7964,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>storage<wbr>Policy<wbr>Name</span>
+        <span>storage_<wbr>policy_<wbr>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -7972,7 +7972,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>volume<wbr>Path</span>
+        <span>volume_<wbr>path</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>

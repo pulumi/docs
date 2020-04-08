@@ -516,7 +516,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>match<wbr>Expressions</span>
+        <span>match_<wbr>expressions</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#labelselectorrequirement">List[Label<wbr>Selector<wbr>Requirement]</a></span>
     </dt>
@@ -524,7 +524,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>match<wbr>Labels</span>
+        <span>match_<wbr>labels</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -1233,7 +1233,7 @@ If PodSelector is also set, then the NetworkPolicyPeer as a whole selects the Po
 
     <dt class="property-optional"
             title="Optional">
-        <span>pod<wbr>Selector</span>
+        <span>pod_<wbr>selector</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#labelselector">Dict[Label<wbr>Selector]</a></span>
     </dt>
@@ -1505,7 +1505,7 @@ If NamespaceSelector is also set, then the NetworkPolicyPeer as a whole selects 
 
     <dt class="property-optional"
             title="Optional">
-        <span>pod<wbr>Selector</span>
+        <span>pod_<wbr>selector</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#labelselector">Dict[Label<wbr>Selector]</a></span>
     </dt>
@@ -1513,7 +1513,7 @@ If NamespaceSelector is also set, then the NetworkPolicyPeer as a whole selects 
 
     <dt class="property-optional"
             title="Optional">
-        <span>policy<wbr>Types</span>
+        <span>policy_<wbr>types</span>
         <span class="property-indicator"></span>
         <span class="property-type">List[str]</span>
     </dt>
@@ -2004,7 +2004,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>cluster<wbr>Name</span>
+        <span>cluster_<wbr>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -2012,7 +2012,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>creation<wbr>Timestamp</span>
+        <span>creation_<wbr>timestamp</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -2022,7 +2022,7 @@ Populated by the system. Read-only. Null for lists. More info: https://git.k8s.i
 
     <dt class="property-optional"
             title="Optional">
-        <span>deletion<wbr>Grace<wbr>Period<wbr>Seconds</span>
+        <span>deletion_<wbr>grace_<wbr>period_<wbr>seconds</span>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
@@ -2030,7 +2030,7 @@ Populated by the system. Read-only. Null for lists. More info: https://git.k8s.i
 
     <dt class="property-optional"
             title="Optional">
-        <span>deletion<wbr>Timestamp</span>
+        <span>deletion_<wbr>timestamp</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -2048,7 +2048,7 @@ Populated by the system when a graceful deletion is requested. Read-only. More i
 
     <dt class="property-optional"
             title="Optional">
-        <span>generate<wbr>Name</span>
+        <span>generate_<wbr>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -2076,7 +2076,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>managed<wbr>Fields</span>
+        <span>managed_<wbr>fields</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedfieldsentry">List[Managed<wbr>Fields<wbr>Entry]</a></span>
     </dt>
@@ -2102,7 +2102,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 
     <dt class="property-optional"
             title="Optional">
-        <span>owner<wbr>References</span>
+        <span>owner_<wbr>references</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ownerreference">List[Owner<wbr>Reference]</a></span>
     </dt>
@@ -2110,7 +2110,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource<wbr>Version</span>
+        <span>resource_<wbr>version</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -2120,7 +2120,7 @@ Populated by the system. Read-only. Value must be treated as opaque by clients a
 
     <dt class="property-optional"
             title="Optional">
-        <span>self<wbr>Link</span>
+        <span>self_<wbr>link</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>

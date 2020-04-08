@@ -10,6 +10,7 @@ menu:
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A Pulumi package for creating and managing Kubernetes resources.
+
 <h3>Modules</h3>
 <ul class="api">
     <li><a href="admissionregistration/" title="admissionregistration"><span class="symbol module"></span>admissionregistration</a></li>

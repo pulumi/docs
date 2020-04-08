@@ -385,7 +385,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>timeout<wbr>Seconds</span>
+        <span>timeout_<wbr>seconds</span>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
@@ -538,7 +538,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>continue</span>
+        <span>continue_</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -546,7 +546,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>remaining<wbr>Item<wbr>Count</span>
+        <span>remaining_<wbr>item_<wbr>count</span>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
@@ -554,7 +554,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource<wbr>Version</span>
+        <span>resource_<wbr>version</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -562,7 +562,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>self<wbr>Link</span>
+        <span>self_<wbr>link</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -1440,7 +1440,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>cluster<wbr>Name</span>
+        <span>cluster_<wbr>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -1448,7 +1448,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>creation<wbr>Timestamp</span>
+        <span>creation_<wbr>timestamp</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -1458,7 +1458,7 @@ Populated by the system. Read-only. Null for lists. More info: https://git.k8s.i
 
     <dt class="property-optional"
             title="Optional">
-        <span>deletion<wbr>Grace<wbr>Period<wbr>Seconds</span>
+        <span>deletion_<wbr>grace_<wbr>period_<wbr>seconds</span>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
@@ -1466,7 +1466,7 @@ Populated by the system. Read-only. Null for lists. More info: https://git.k8s.i
 
     <dt class="property-optional"
             title="Optional">
-        <span>deletion<wbr>Timestamp</span>
+        <span>deletion_<wbr>timestamp</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -1484,7 +1484,7 @@ Populated by the system when a graceful deletion is requested. Read-only. More i
 
     <dt class="property-optional"
             title="Optional">
-        <span>generate<wbr>Name</span>
+        <span>generate_<wbr>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -1512,7 +1512,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>managed<wbr>Fields</span>
+        <span>managed_<wbr>fields</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedfieldsentry">List[Managed<wbr>Fields<wbr>Entry]</a></span>
     </dt>
@@ -1538,7 +1538,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 
     <dt class="property-optional"
             title="Optional">
-        <span>owner<wbr>References</span>
+        <span>owner_<wbr>references</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ownerreference">List[Owner<wbr>Reference]</a></span>
     </dt>
@@ -1546,7 +1546,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource<wbr>Version</span>
+        <span>resource_<wbr>version</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -1556,7 +1556,7 @@ Populated by the system. Read-only. Value must be treated as opaque by clients a
 
     <dt class="property-optional"
             title="Optional">
-        <span>self<wbr>Link</span>
+        <span>self_<wbr>link</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -2524,7 +2524,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>cluster<wbr>IP</span>
+        <span>cluster_<wbr>ip</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -2532,7 +2532,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>external<wbr>IPs</span>
+        <span>external_<wbr>i_<wbr>ps</span>
         <span class="property-indicator"></span>
         <span class="property-type">List[str]</span>
     </dt>
@@ -2540,7 +2540,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>external<wbr>Name</span>
+        <span>external_<wbr>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -2548,7 +2548,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>external<wbr>Traffic<wbr>Policy</span>
+        <span>external_<wbr>traffic_<wbr>policy</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -2556,7 +2556,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>health<wbr>Check<wbr>Node<wbr>Port</span>
+        <span>health_<wbr>check_<wbr>node_<wbr>port</span>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
@@ -2564,7 +2564,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>ip<wbr>Family</span>
+        <span>ip_<wbr>family</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -2572,7 +2572,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>load<wbr>Balancer<wbr>IP</span>
+        <span>load_<wbr>balancer_<wbr>ip</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -2580,7 +2580,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>load<wbr>Balancer<wbr>Source<wbr>Ranges</span>
+        <span>load_<wbr>balancer_<wbr>source_<wbr>ranges</span>
         <span class="property-indicator"></span>
         <span class="property-type">List[str]</span>
     </dt>
@@ -2596,7 +2596,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>publish<wbr>Not<wbr>Ready<wbr>Addresses</span>
+        <span>publish_<wbr>not_<wbr>ready_<wbr>addresses</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
@@ -2612,7 +2612,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>session<wbr>Affinity</span>
+        <span>session_<wbr>affinity</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -2620,7 +2620,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>session<wbr>Affinity<wbr>Config</span>
+        <span>session_<wbr>affinity_<wbr>config</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sessionaffinityconfig">Dict[Session<wbr>Affinity<wbr>Config]</a></span>
     </dt>
@@ -2628,7 +2628,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>topology<wbr>Keys</span>
+        <span>topology_<wbr>keys</span>
         <span class="property-indicator"></span>
         <span class="property-type">List[str]</span>
     </dt>
@@ -2711,7 +2711,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>load<wbr>Balancer</span>
+        <span>load_<wbr>balancer</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#loadbalancerstatus">Dict[Load<wbr>Balancer<wbr>Status]</a></span>
     </dt>
@@ -2786,7 +2786,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>client<wbr>IP</span>
+        <span>client_<wbr>ip</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clientipconfig">Dict[Client<wbr>IPConfig]</a></span>
     </dt>

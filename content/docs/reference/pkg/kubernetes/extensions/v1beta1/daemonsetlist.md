@@ -457,7 +457,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>fs<wbr>Type</span>
+        <span>fs_<wbr>type</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -473,7 +473,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>read<wbr>Only</span>
+        <span>read_<wbr>only</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
@@ -481,7 +481,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>volume<wbr>ID</span>
+        <span>volume_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -604,7 +604,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>node<wbr>Affinity</span>
+        <span>node_<wbr>affinity</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodeaffinity">Dict[Node<wbr>Affinity]</a></span>
     </dt>
@@ -612,7 +612,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>pod<wbr>Affinity</span>
+        <span>pod_<wbr>affinity</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#podaffinity">Dict[Pod<wbr>Affinity]</a></span>
     </dt>
@@ -620,7 +620,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>pod<wbr>Anti<wbr>Affinity</span>
+        <span>pod_<wbr>anti_<wbr>affinity</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#podantiaffinity">Dict[Pod<wbr>Anti<wbr>Affinity]</a></span>
     </dt>
@@ -791,7 +791,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>caching<wbr>Mode</span>
+        <span>caching_<wbr>mode</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -799,7 +799,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>disk<wbr>Name</span>
+        <span>disk_<wbr>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -807,7 +807,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>disk<wbr>URI</span>
+        <span>disk_<wbr>uri</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -815,7 +815,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>fs<wbr>Type</span>
+        <span>fs_<wbr>type</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -823,7 +823,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>read<wbr>Only</span>
+        <span>read_<wbr>only</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
@@ -946,7 +946,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>read<wbr>Only</span>
+        <span>read_<wbr>only</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
@@ -954,7 +954,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>secret<wbr>Name</span>
+        <span>secret_<wbr>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -962,7 +962,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>share<wbr>Name</span>
+        <span>share_<wbr>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -1141,7 +1141,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>fs<wbr>Type</span>
+        <span>fs_<wbr>type</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -1149,7 +1149,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>node<wbr>Publish<wbr>Secret<wbr>Ref</span>
+        <span>node_<wbr>publish_<wbr>secret_<wbr>ref</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#localobjectreference">Dict[Local<wbr>Object<wbr>Reference]</a></span>
     </dt>
@@ -1157,7 +1157,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>read<wbr>Only</span>
+        <span>read_<wbr>only</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
@@ -1165,7 +1165,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>volume<wbr>Attributes</span>
+        <span>volume_<wbr>attributes</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -1483,7 +1483,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>read<wbr>Only</span>
+        <span>read_<wbr>only</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
@@ -1491,7 +1491,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>secret<wbr>File</span>
+        <span>secret_<wbr>file</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -1499,7 +1499,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>secret<wbr>Ref</span>
+        <span>secret_<wbr>ref</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#localobjectreference">Dict[Local<wbr>Object<wbr>Reference]</a></span>
     </dt>
@@ -1654,7 +1654,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>fs<wbr>Type</span>
+        <span>fs_<wbr>type</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -1662,7 +1662,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>read<wbr>Only</span>
+        <span>read_<wbr>only</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
@@ -1670,7 +1670,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>secret<wbr>Ref</span>
+        <span>secret_<wbr>ref</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#localobjectreference">Dict[Local<wbr>Object<wbr>Reference]</a></span>
     </dt>
@@ -1678,7 +1678,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>volume<wbr>ID</span>
+        <span>volume_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -2837,7 +2837,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>env<wbr>From</span>
+        <span>env_<wbr>from</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#envfromsource">List[Env<wbr>From<wbr>Source]</a></span>
     </dt>
@@ -2909,7 +2909,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>security<wbr>Context</span>
+        <span>security_<wbr>context</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securitycontext">Dict[Security<wbr>Context]</a></span>
     </dt>
@@ -2973,7 +2973,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>volume<wbr>Mounts</span>
+        <span>volume_<wbr>mounts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#volumemount">List[Volume<wbr>Mount]</a></span>
     </dt>
@@ -3160,7 +3160,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>host<wbr>IP</span>
+        <span>host_<wbr>ip</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -3721,7 +3721,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>min<wbr>Ready<wbr>Seconds</span>
+        <span>min_<wbr>ready_<wbr>seconds</span>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
@@ -3729,7 +3729,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>revision<wbr>History<wbr>Limit</span>
+        <span>revision_<wbr>history_<wbr>limit</span>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
@@ -3753,7 +3753,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>template<wbr>Generation</span>
+        <span>template_<wbr>generation</span>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
@@ -3761,7 +3761,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>update<wbr>Strategy</span>
+        <span>update_<wbr>strategy</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#daemonsetupdatestrategy">Dict[Daemon<wbr>Set<wbr>Update<wbr>Strategy]</a></span>
     </dt>
@@ -4052,7 +4052,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>collision<wbr>Count</span>
+        <span>collision_<wbr>count</span>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
@@ -4068,7 +4068,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>current<wbr>Number<wbr>Scheduled</span>
+        <span>current_<wbr>number_<wbr>scheduled</span>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
@@ -4076,7 +4076,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>desired<wbr>Number<wbr>Scheduled</span>
+        <span>desired_<wbr>number_<wbr>scheduled</span>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
@@ -4084,7 +4084,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>number<wbr>Available</span>
+        <span>number_<wbr>available</span>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
@@ -4092,7 +4092,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>number<wbr>Misscheduled</span>
+        <span>number_<wbr>misscheduled</span>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
@@ -4100,7 +4100,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>number<wbr>Ready</span>
+        <span>number_<wbr>ready</span>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
@@ -4108,7 +4108,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>number<wbr>Unavailable</span>
+        <span>number_<wbr>unavailable</span>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
@@ -4116,7 +4116,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>observed<wbr>Generation</span>
+        <span>observed_<wbr>generation</span>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
@@ -4124,7 +4124,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>updated<wbr>Number<wbr>Scheduled</span>
+        <span>updated_<wbr>number_<wbr>scheduled</span>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
@@ -4223,7 +4223,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>rolling<wbr>Update</span>
+        <span>rolling_<wbr>update</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rollingupdatedaemonset">Dict[Rolling<wbr>Update<wbr>Daemon<wbr>Set]</a></span>
     </dt>
@@ -4830,7 +4830,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>secret<wbr>Ref</span>
+        <span>secret_<wbr>ref</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretenvsource">Dict[Secret<wbr>Env<wbr>Source]</a></span>
     </dt>
@@ -5767,7 +5767,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>env<wbr>From</span>
+        <span>env_<wbr>from</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#envfromsource">List[Env<wbr>From<wbr>Source]</a></span>
     </dt>
@@ -5839,7 +5839,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>security<wbr>Context</span>
+        <span>security_<wbr>context</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#securitycontext">Dict[Security<wbr>Context]</a></span>
     </dt>
@@ -5911,7 +5911,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>volume<wbr>Mounts</span>
+        <span>volume_<wbr>mounts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#volumemount">List[Volume<wbr>Mount]</a></span>
     </dt>
@@ -6165,7 +6165,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>fs<wbr>Type</span>
+        <span>fs_<wbr>type</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -6181,7 +6181,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>read<wbr>Only</span>
+        <span>read_<wbr>only</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
@@ -6189,7 +6189,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>target<wbr>WWNs</span>
+        <span>target_<wbr>ww_<wbr>ns</span>
         <span class="property-indicator"></span>
         <span class="property-type">List[str]</span>
     </dt>
@@ -6376,7 +6376,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>fs<wbr>Type</span>
+        <span>fs_<wbr>type</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -6392,7 +6392,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>read<wbr>Only</span>
+        <span>read_<wbr>only</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
@@ -6400,7 +6400,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>secret<wbr>Ref</span>
+        <span>secret_<wbr>ref</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#localobjectreference">Dict[Local<wbr>Object<wbr>Reference]</a></span>
     </dt>
@@ -6499,7 +6499,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>dataset<wbr>Name</span>
+        <span>dataset_<wbr>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -6507,7 +6507,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>dataset<wbr>UUID</span>
+        <span>dataset_<wbr>uuid</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -6654,7 +6654,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>fs<wbr>Type</span>
+        <span>fs_<wbr>type</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -6670,7 +6670,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>pd<wbr>Name</span>
+        <span>pd_<wbr>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -6678,7 +6678,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>read<wbr>Only</span>
+        <span>read_<wbr>only</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
@@ -6956,7 +6956,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>read<wbr>Only</span>
+        <span>read_<wbr>only</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
@@ -7934,7 +7934,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>chap<wbr>Auth<wbr>Discovery</span>
+        <span>chap_<wbr>auth_<wbr>discovery</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
@@ -7942,7 +7942,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>chap<wbr>Auth<wbr>Session</span>
+        <span>chap_<wbr>auth_<wbr>session</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
@@ -7950,7 +7950,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>fs<wbr>Type</span>
+        <span>fs_<wbr>type</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -7958,7 +7958,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>initiator<wbr>Name</span>
+        <span>initiator_<wbr>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -7974,7 +7974,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>iscsi<wbr>Interface</span>
+        <span>iscsi_<wbr>interface</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -7998,7 +7998,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>read<wbr>Only</span>
+        <span>read_<wbr>only</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
@@ -8006,7 +8006,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>secret<wbr>Ref</span>
+        <span>secret_<wbr>ref</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#localobjectreference">Dict[Local<wbr>Object<wbr>Reference]</a></span>
     </dt>
@@ -8014,7 +8014,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>target<wbr>Portal</span>
+        <span>target_<wbr>portal</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -8252,7 +8252,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>match<wbr>Expressions</span>
+        <span>match_<wbr>expressions</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#labelselectorrequirement">List[Label<wbr>Selector<wbr>Requirement]</a></span>
     </dt>
@@ -8260,7 +8260,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>match<wbr>Labels</span>
+        <span>match_<wbr>labels</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -8659,7 +8659,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>continue</span>
+        <span>continue_</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -8667,7 +8667,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>remaining<wbr>Item<wbr>Count</span>
+        <span>remaining_<wbr>item_<wbr>count</span>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
@@ -8675,7 +8675,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource<wbr>Version</span>
+        <span>resource_<wbr>version</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -8683,7 +8683,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>self<wbr>Link</span>
+        <span>self_<wbr>link</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -9094,7 +9094,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>read<wbr>Only</span>
+        <span>read_<wbr>only</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
@@ -9201,7 +9201,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>preferred<wbr>During<wbr>Scheduling<wbr>Ignored<wbr>During<wbr>Execution</span>
+        <span>preferred_<wbr>during_<wbr>scheduling_<wbr>ignored_<wbr>during_<wbr>execution</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preferredschedulingterm">List[Preferred<wbr>Scheduling<wbr>Term]</a></span>
     </dt>
@@ -9209,7 +9209,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>required<wbr>During<wbr>Scheduling<wbr>Ignored<wbr>During<wbr>Execution</span>
+        <span>required_<wbr>during_<wbr>scheduling_<wbr>ignored_<wbr>during_<wbr>execution</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodeselector">Dict[Node<wbr>Selector]</a></span>
     </dt>
@@ -9284,7 +9284,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>node<wbr>Selector<wbr>Terms</span>
+        <span>node_<wbr>selector_<wbr>terms</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodeselectorterm">List[Node<wbr>Selector<wbr>Term]</a></span>
     </dt>
@@ -9522,7 +9522,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>match<wbr>Expressions</span>
+        <span>match_<wbr>expressions</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodeselectorrequirement">List[Node<wbr>Selector<wbr>Requirement]</a></span>
     </dt>
@@ -9605,7 +9605,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>field<wbr>Path</span>
+        <span>field_<wbr>path</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -10096,7 +10096,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>cluster<wbr>Name</span>
+        <span>cluster_<wbr>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -10104,7 +10104,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>creation<wbr>Timestamp</span>
+        <span>creation_<wbr>timestamp</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -10114,7 +10114,7 @@ Populated by the system. Read-only. Null for lists. More info: https://git.k8s.i
 
     <dt class="property-optional"
             title="Optional">
-        <span>deletion<wbr>Grace<wbr>Period<wbr>Seconds</span>
+        <span>deletion_<wbr>grace_<wbr>period_<wbr>seconds</span>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
@@ -10122,7 +10122,7 @@ Populated by the system. Read-only. Null for lists. More info: https://git.k8s.i
 
     <dt class="property-optional"
             title="Optional">
-        <span>deletion<wbr>Timestamp</span>
+        <span>deletion_<wbr>timestamp</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -10140,7 +10140,7 @@ Populated by the system when a graceful deletion is requested. Read-only. More i
 
     <dt class="property-optional"
             title="Optional">
-        <span>generate<wbr>Name</span>
+        <span>generate_<wbr>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -10168,7 +10168,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>managed<wbr>Fields</span>
+        <span>managed_<wbr>fields</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedfieldsentry">List[Managed<wbr>Fields<wbr>Entry]</a></span>
     </dt>
@@ -10194,7 +10194,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 
     <dt class="property-optional"
             title="Optional">
-        <span>owner<wbr>References</span>
+        <span>owner_<wbr>references</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ownerreference">List[Owner<wbr>Reference]</a></span>
     </dt>
@@ -10202,7 +10202,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource<wbr>Version</span>
+        <span>resource_<wbr>version</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -10212,7 +10212,7 @@ Populated by the system. Read-only. Value must be treated as opaque by clients a
 
     <dt class="property-optional"
             title="Optional">
-        <span>self<wbr>Link</span>
+        <span>self_<wbr>link</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -10502,7 +10502,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>read<wbr>Only</span>
+        <span>read_<wbr>only</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
@@ -10601,7 +10601,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>fs<wbr>Type</span>
+        <span>fs_<wbr>type</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -10609,7 +10609,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>pd<wbr>ID</span>
+        <span>pd_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -10708,7 +10708,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>preferred<wbr>During<wbr>Scheduling<wbr>Ignored<wbr>During<wbr>Execution</span>
+        <span>preferred_<wbr>during_<wbr>scheduling_<wbr>ignored_<wbr>during_<wbr>execution</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#weightedpodaffinityterm">List[Weighted<wbr>Pod<wbr>Affinity<wbr>Term]</a></span>
     </dt>
@@ -10716,7 +10716,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>required<wbr>During<wbr>Scheduling<wbr>Ignored<wbr>During<wbr>Execution</span>
+        <span>required_<wbr>during_<wbr>scheduling_<wbr>ignored_<wbr>during_<wbr>execution</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#podaffinityterm">List[Pod<wbr>Affinity<wbr>Term]</a></span>
     </dt>
@@ -10954,7 +10954,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>preferred<wbr>During<wbr>Scheduling<wbr>Ignored<wbr>During<wbr>Execution</span>
+        <span>preferred_<wbr>during_<wbr>scheduling_<wbr>ignored_<wbr>during_<wbr>execution</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#weightedpodaffinityterm">List[Weighted<wbr>Pod<wbr>Affinity<wbr>Term]</a></span>
     </dt>
@@ -10962,7 +10962,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>required<wbr>During<wbr>Scheduling<wbr>Ignored<wbr>During<wbr>Execution</span>
+        <span>required_<wbr>during_<wbr>scheduling_<wbr>ignored_<wbr>during_<wbr>execution</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#podaffinityterm">List[Pod<wbr>Affinity<wbr>Term]</a></span>
     </dt>
@@ -11562,7 +11562,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>fs<wbr>Group</span>
+        <span>fs_<wbr>group</span>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
@@ -11574,7 +11574,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>fs<wbr>Group<wbr>Change<wbr>Policy</span>
+        <span>fs_<wbr>group_<wbr>change_<wbr>policy</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -11582,7 +11582,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>run<wbr>As<wbr>Group</span>
+        <span>run_<wbr>as_<wbr>group</span>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
@@ -11590,7 +11590,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>run<wbr>As<wbr>Non<wbr>Root</span>
+        <span>run_<wbr>as_<wbr>non_<wbr>root</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
@@ -11598,7 +11598,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>run<wbr>As<wbr>User</span>
+        <span>run_<wbr>as_<wbr>user</span>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
@@ -11606,7 +11606,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>se<wbr>Linux<wbr>Options</span>
+        <span>se_<wbr>linux_<wbr>options</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#selinuxoptions">Dict[SELinux<wbr>Options]</a></span>
     </dt>
@@ -11614,7 +11614,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>supplemental<wbr>Groups</span>
+        <span>supplemental_<wbr>groups</span>
         <span class="property-indicator"></span>
         <span class="property-type">List[Integer]</span>
     </dt>
@@ -11630,7 +11630,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>windows<wbr>Options</span>
+        <span>windows_<wbr>options</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowssecuritycontextoptions">Dict[Windows<wbr>Security<wbr>Context<wbr>Options]</a></span>
     </dt>
@@ -12497,7 +12497,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>active<wbr>Deadline<wbr>Seconds</span>
+        <span>active_<wbr>deadline_<wbr>seconds</span>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
@@ -12529,7 +12529,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>dns<wbr>Config</span>
+        <span>dns_<wbr>config</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#poddnsconfig">Dict[Pod<wbr>DNSConfig]</a></span>
     </dt>
@@ -12537,7 +12537,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>dns<wbr>Policy</span>
+        <span>dns_<wbr>policy</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -12545,7 +12545,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>enable<wbr>Service<wbr>Links</span>
+        <span>enable_<wbr>service_<wbr>links</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
@@ -12553,7 +12553,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>ephemeral<wbr>Containers</span>
+        <span>ephemeral_<wbr>containers</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ephemeralcontainer">List[Ephemeral<wbr>Container]</a></span>
     </dt>
@@ -12561,7 +12561,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>host<wbr>Aliases</span>
+        <span>host_<wbr>aliases</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hostalias">List[Host<wbr>Alias]</a></span>
     </dt>
@@ -12569,7 +12569,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>host<wbr>IPC</span>
+        <span>host_<wbr>ipc</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
@@ -12577,7 +12577,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>host<wbr>Network</span>
+        <span>host_<wbr>network</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
@@ -12585,7 +12585,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>host<wbr>PID</span>
+        <span>host_<wbr>pid</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
@@ -12609,7 +12609,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>init<wbr>Containers</span>
+        <span>init_<wbr>containers</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#container">List[Container]</a></span>
     </dt>
@@ -12617,7 +12617,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>node<wbr>Name</span>
+        <span>node_<wbr>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -12625,7 +12625,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>node<wbr>Selector</span>
+        <span>node_<wbr>selector</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
     </dt>
@@ -12657,7 +12657,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>priority<wbr>Class<wbr>Name</span>
+        <span>priority_<wbr>class_<wbr>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -12665,7 +12665,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>readiness<wbr>Gates</span>
+        <span>readiness_<wbr>gates</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#podreadinessgate">List[Pod<wbr>Readiness<wbr>Gate]</a></span>
     </dt>
@@ -12673,7 +12673,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>restart<wbr>Policy</span>
+        <span>restart_<wbr>policy</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -12681,7 +12681,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>runtime<wbr>Class<wbr>Name</span>
+        <span>runtime_<wbr>class_<wbr>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -12689,7 +12689,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>scheduler<wbr>Name</span>
+        <span>scheduler_<wbr>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -12697,7 +12697,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>security<wbr>Context</span>
+        <span>security_<wbr>context</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#podsecuritycontext">Dict[Pod<wbr>Security<wbr>Context]</a></span>
     </dt>
@@ -12705,7 +12705,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>service<wbr>Account</span>
+        <span>service_<wbr>account</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -12713,7 +12713,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>service<wbr>Account<wbr>Name</span>
+        <span>service_<wbr>account_<wbr>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -12721,7 +12721,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>share<wbr>Process<wbr>Namespace</span>
+        <span>share_<wbr>process_<wbr>namespace</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
@@ -12737,7 +12737,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>termination<wbr>Grace<wbr>Period<wbr>Seconds</span>
+        <span>termination_<wbr>grace_<wbr>period_<wbr>seconds</span>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
@@ -12753,7 +12753,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>topology<wbr>Spread<wbr>Constraints</span>
+        <span>topology_<wbr>spread_<wbr>constraints</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#topologyspreadconstraint">List[Topology<wbr>Spread<wbr>Constraint]</a></span>
     </dt>
@@ -12991,7 +12991,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>fs<wbr>Type</span>
+        <span>fs_<wbr>type</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -12999,7 +12999,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>read<wbr>Only</span>
+        <span>read_<wbr>only</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
@@ -13007,7 +13007,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>volume<wbr>ID</span>
+        <span>volume_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -13413,7 +13413,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>timeout<wbr>Seconds</span>
+        <span>timeout_<wbr>seconds</span>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
@@ -13723,7 +13723,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>read<wbr>Only</span>
+        <span>read_<wbr>only</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
@@ -13998,7 +13998,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>fs<wbr>Type</span>
+        <span>fs_<wbr>type</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -14038,7 +14038,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>read<wbr>Only</span>
+        <span>read_<wbr>only</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
@@ -14046,7 +14046,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>secret<wbr>Ref</span>
+        <span>secret_<wbr>ref</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#localobjectreference">Dict[Local<wbr>Object<wbr>Reference]</a></span>
     </dt>
@@ -14375,7 +14375,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Unavailable</span>
+        <span>max_<wbr>unavailable</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -14837,7 +14837,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>fs<wbr>Type</span>
+        <span>fs_<wbr>type</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -14853,7 +14853,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>protection<wbr>Domain</span>
+        <span>protection_<wbr>domain</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -14861,7 +14861,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>read<wbr>Only</span>
+        <span>read_<wbr>only</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
@@ -14869,7 +14869,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>secret<wbr>Ref</span>
+        <span>secret_<wbr>ref</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#localobjectreference">Dict[Local<wbr>Object<wbr>Reference]</a></span>
     </dt>
@@ -14877,7 +14877,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>ssl<wbr>Enabled</span>
+        <span>ssl_<wbr>enabled</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
@@ -14885,7 +14885,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>storage<wbr>Mode</span>
+        <span>storage_<wbr>mode</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -14893,7 +14893,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>storage<wbr>Pool</span>
+        <span>storage_<wbr>pool</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -14909,7 +14909,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>volume<wbr>Name</span>
+        <span>volume_<wbr>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -15465,7 +15465,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>secret<wbr>Name</span>
+        <span>secret_<wbr>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -15756,7 +15756,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow<wbr>Privilege<wbr>Escalation</span>
+        <span>allow_<wbr>privilege_<wbr>escalation</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
@@ -15788,7 +15788,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>read<wbr>Only<wbr>Root<wbr>Filesystem</span>
+        <span>read_<wbr>only_<wbr>root_<wbr>filesystem</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
@@ -15796,7 +15796,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>run<wbr>As<wbr>Group</span>
+        <span>run_<wbr>as_<wbr>group</span>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
@@ -15804,7 +15804,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>run<wbr>As<wbr>Non<wbr>Root</span>
+        <span>run_<wbr>as_<wbr>non_<wbr>root</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
@@ -15812,7 +15812,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>run<wbr>As<wbr>User</span>
+        <span>run_<wbr>as_<wbr>user</span>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
@@ -15820,7 +15820,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>se<wbr>Linux<wbr>Options</span>
+        <span>se_<wbr>linux_<wbr>options</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#selinuxoptions">Dict[SELinux<wbr>Options]</a></span>
     </dt>
@@ -15828,7 +15828,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>windows<wbr>Options</span>
+        <span>windows_<wbr>options</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#windowssecuritycontextoptions">Dict[Windows<wbr>Security<wbr>Context<wbr>Options]</a></span>
     </dt>
@@ -15959,7 +15959,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>expiration<wbr>Seconds</span>
+        <span>expiration_<wbr>seconds</span>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
@@ -16138,7 +16138,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>fs<wbr>Type</span>
+        <span>fs_<wbr>type</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -16146,7 +16146,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>read<wbr>Only</span>
+        <span>read_<wbr>only</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
@@ -16154,7 +16154,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>secret<wbr>Ref</span>
+        <span>secret_<wbr>ref</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#localobjectreference">Dict[Local<wbr>Object<wbr>Reference]</a></span>
     </dt>
@@ -16162,7 +16162,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>volume<wbr>Name</span>
+        <span>volume_<wbr>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -16170,7 +16170,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>volume<wbr>Namespace</span>
+        <span>volume_<wbr>namespace</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -17505,7 +17505,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>aws<wbr>Elastic<wbr>Block<wbr>Store</span>
+        <span>aws_<wbr>elastic_<wbr>block_<wbr>store</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#awselasticblockstorevolumesource">Dict[AWSElastic<wbr>Block<wbr>Store<wbr>Volume<wbr>Source]</a></span>
     </dt>
@@ -17513,7 +17513,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>azure<wbr>Disk</span>
+        <span>azure_<wbr>disk</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azurediskvolumesource">Dict[Azure<wbr>Disk<wbr>Volume<wbr>Source]</a></span>
     </dt>
@@ -17521,7 +17521,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>azure<wbr>File</span>
+        <span>azure_<wbr>file</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#azurefilevolumesource">Dict[Azure<wbr>File<wbr>Volume<wbr>Source]</a></span>
     </dt>
@@ -17545,7 +17545,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>config<wbr>Map</span>
+        <span>config_<wbr>map</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configmapvolumesource">Dict[Config<wbr>Map<wbr>Volume<wbr>Source]</a></span>
     </dt>
@@ -17585,7 +17585,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>flex<wbr>Volume</span>
+        <span>flex_<wbr>volume</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flexvolumesource">Dict[Flex<wbr>Volume<wbr>Source]</a></span>
     </dt>
@@ -17601,7 +17601,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>gce<wbr>Persistent<wbr>Disk</span>
+        <span>gce_<wbr>persistent_<wbr>disk</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gcepersistentdiskvolumesource">Dict[GCEPersistent<wbr>Disk<wbr>Volume<wbr>Source]</a></span>
     </dt>
@@ -17625,7 +17625,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>host<wbr>Path</span>
+        <span>host_<wbr>path</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hostpathvolumesource">Dict[Host<wbr>Path<wbr>Volume<wbr>Source]</a></span>
     </dt>
@@ -17665,7 +17665,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>photon<wbr>Persistent<wbr>Disk</span>
+        <span>photon_<wbr>persistent_<wbr>disk</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#photonpersistentdiskvolumesource">Dict[Photon<wbr>Persistent<wbr>Disk<wbr>Volume<wbr>Source]</a></span>
     </dt>
@@ -17673,7 +17673,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>portworx<wbr>Volume</span>
+        <span>portworx_<wbr>volume</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#portworxvolumesource">Dict[Portworx<wbr>Volume<wbr>Source]</a></span>
     </dt>
@@ -17705,7 +17705,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>scale<wbr>IO</span>
+        <span>scale_<wbr>io</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#scaleiovolumesource">Dict[Scale<wbr>IOVolume<wbr>Source]</a></span>
     </dt>
@@ -17729,7 +17729,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>vsphere<wbr>Volume</span>
+        <span>vsphere_<wbr>volume</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#vspherevirtualdiskvolumesource">Dict[Vsphere<wbr>Virtual<wbr>Disk<wbr>Volume<wbr>Source]</a></span>
     </dt>
@@ -18055,7 +18055,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>read<wbr>Only</span>
+        <span>read_<wbr>only</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
@@ -18218,7 +18218,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>config<wbr>Map</span>
+        <span>config_<wbr>map</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configmapprojection">Dict[Config<wbr>Map<wbr>Projection]</a></span>
     </dt>
@@ -18389,7 +18389,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>fs<wbr>Type</span>
+        <span>fs_<wbr>type</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -18397,7 +18397,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>storage<wbr>Policy<wbr>ID</span>
+        <span>storage_<wbr>policy_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -18405,7 +18405,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>storage<wbr>Policy<wbr>Name</span>
+        <span>storage_<wbr>policy_<wbr>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -18413,7 +18413,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>volume<wbr>Path</span>
+        <span>volume_<wbr>path</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -18643,7 +18643,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>gmsa<wbr>Credential<wbr>Spec</span>
+        <span>gmsa_<wbr>credential_<wbr>spec</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -18651,7 +18651,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>gmsa<wbr>Credential<wbr>Spec<wbr>Name</span>
+        <span>gmsa_<wbr>credential_<wbr>spec_<wbr>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -18659,7 +18659,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
     <dt class="property-optional"
             title="Optional">
-        <span>run<wbr>As<wbr>User<wbr>Name</span>
+        <span>run_<wbr>as_<wbr>user_<wbr>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
