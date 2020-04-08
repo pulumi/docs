@@ -4,9 +4,24 @@ title: "Ingress"
 block_external_search_index: true
 ---
 
-extensions/v1beta1/Ingress is deprecated by networking/v1beta1/Ingress and not supported by Kubernetes v1.20+ clusters.
+
 
 Ingress is a collection of rules that allow inbound connections to reach the endpoints defined by a backend. An Ingress can be configured to give services externally-reachable urls, load balance traffic, terminate SSL, offer name based virtual hosting etc. 
+
+This resource waits until its status is ready before registering success
+for create/update, and populating output properties from the current state of the resource.
+The following conditions are used to determine whether the resource creation has
+succeeded or failed:
+
+1.  Ingress object exists.
+2.  Endpoint objects exist with matching names for each Ingress path (except when Service
+    type is ExternalName).
+3.  Ingress entry exists for '.status.loadBalancer.ingress'.
+
+If the Ingress has not reached a Ready state after 10 minutes, it will
+time out and mark the resource update as Failed. You can override the default timeout value
+by setting the 'customTimeouts' option on the resource.
+<p class="resource-deprecated">Deprecated: {{% md %}}extensions/v1beta1/Ingress is deprecated by networking/v1beta1/Ingress and not supported by Kubernetes v1.20&#43; clusters.{{% /md %}}</p>
 
 
 ## Create a Ingress Resource
@@ -644,7 +659,7 @@ Implementations are required to support all path types. Defaults to Implementati
             title="Optional">
         <span>Service<wbr>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Union<double, string>?</span>
+        <span class="property-type">Union&lt;double, string&gt;?</span>
     </dt>
     <dd>{{% md %}}Specifies the port of the referenced service.{{% /md %}}</dd>
 
@@ -1148,7 +1163,7 @@ Host can be "precise" which is a domain name without the terminating dot of a ne
             title="Optional">
         <span>Hosts</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;?</span>
     </dt>
     <dd>{{% md %}}Hosts are a list of hosts included in the TLS certificate. The values in this list must match the name/s used in the tlsSecret. Defaults to the wildcard host setting for the loadbalancer controller fulfilling this Ingress, if left unspecified.{{% /md %}}</dd>
 
@@ -1445,7 +1460,7 @@ Host can be "precise" which is a domain name without the terminating dot of a ne
             title="Optional">
         <span>Fields<wbr>V1</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;?</span>
     </dt>
     <dd>{{% md %}}FieldsV1 holds the first JSON version format as described in the "FieldsV1" type.{{% /md %}}</dd>
 
@@ -1640,7 +1655,7 @@ Host can be "precise" which is a domain name without the terminating dot of a ne
             title="Optional">
         <span>Annotations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;?</span>
     </dt>
     <dd>{{% md %}}Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations{{% /md %}}</dd>
 
@@ -1684,7 +1699,7 @@ Populated by the system when a graceful deletion is requested. Read-only. More i
             title="Optional">
         <span>Finalizers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;?</span>
     </dt>
     <dd>{{% md %}}Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. Finalizers may be processed and removed in any order.  Order is NOT enforced because it introduces significant risk of stuck finalizers. finalizers is a shared field, any actor with permission can reorder it. If the finalizer list is processed in order, then this can lead to a situation in which the component responsible for the first finalizer in the list is waiting for a signal (field value, external system, or other) produced by a component responsible for a finalizer later in the list, resulting in a deadlock. Without enforced ordering finalizers are free to order amongst themselves and are not vulnerable to ordering changes in the list.{{% /md %}}</dd>
 
@@ -1712,7 +1727,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
             title="Optional">
         <span>Labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;?</span>
     </dt>
     <dd>{{% md %}}Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels{{% /md %}}</dd>
 
