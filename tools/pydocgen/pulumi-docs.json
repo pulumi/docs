@@ -170,6 +170,12 @@
       "terraform_provider_name": "postgresql"
     },
     {
+      "name": "Pulumi Policy",
+      "package_name": "pulumi_policy",
+      "pulumi_provider_name": "policy",
+      "terraform_provider_name": ""
+    },
+    {
       "name": "Pulumi Kubernetes",
       "package_name": "pulumi_kubernetes",
       "pulumi_provider_name": "kubernetes",
