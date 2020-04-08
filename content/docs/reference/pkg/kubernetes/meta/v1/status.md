@@ -687,7 +687,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>continue</span>
+        <span>continue_</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -695,7 +695,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>remaining<wbr>Item<wbr>Count</span>
+        <span>remaining_<wbr>item_<wbr>count</span>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
@@ -703,7 +703,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource<wbr>Version</span>
+        <span>resource_<wbr>version</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -711,7 +711,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>self<wbr>Link</span>
+        <span>self_<wbr>link</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -1063,7 +1063,7 @@ Examples:
 
     <dt class="property-optional"
             title="Optional">
-        <span>retry<wbr>After<wbr>Seconds</span>
+        <span>retry_<wbr>after_<wbr>seconds</span>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>

@@ -575,7 +575,7 @@ Examples: `/foo` would allow `/foo`, `/foo/` and `/foo/bar` `/foo` would not all
 
     <dt class="property-optional"
             title="Optional">
-        <span>read<wbr>Only</span>
+        <span>read_<wbr>only</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
@@ -1049,7 +1049,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>continue</span>
+        <span>continue_</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -1057,7 +1057,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>remaining<wbr>Item<wbr>Count</span>
+        <span>remaining_<wbr>item_<wbr>count</span>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
@@ -1065,7 +1065,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource<wbr>Version</span>
+        <span>resource_<wbr>version</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -1073,7 +1073,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>self<wbr>Link</span>
+        <span>self_<wbr>link</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -1769,7 +1769,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>cluster<wbr>Name</span>
+        <span>cluster_<wbr>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -1777,7 +1777,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>creation<wbr>Timestamp</span>
+        <span>creation_<wbr>timestamp</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -1787,7 +1787,7 @@ Populated by the system. Read-only. Null for lists. More info: https://git.k8s.i
 
     <dt class="property-optional"
             title="Optional">
-        <span>deletion<wbr>Grace<wbr>Period<wbr>Seconds</span>
+        <span>deletion_<wbr>grace_<wbr>period_<wbr>seconds</span>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
@@ -1795,7 +1795,7 @@ Populated by the system. Read-only. Null for lists. More info: https://git.k8s.i
 
     <dt class="property-optional"
             title="Optional">
-        <span>deletion<wbr>Timestamp</span>
+        <span>deletion_<wbr>timestamp</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -1813,7 +1813,7 @@ Populated by the system when a graceful deletion is requested. Read-only. More i
 
     <dt class="property-optional"
             title="Optional">
-        <span>generate<wbr>Name</span>
+        <span>generate_<wbr>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -1841,7 +1841,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>managed<wbr>Fields</span>
+        <span>managed_<wbr>fields</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedfieldsentry">List[Managed<wbr>Fields<wbr>Entry]</a></span>
     </dt>
@@ -1867,7 +1867,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 
     <dt class="property-optional"
             title="Optional">
-        <span>owner<wbr>References</span>
+        <span>owner_<wbr>references</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ownerreference">List[Owner<wbr>Reference]</a></span>
     </dt>
@@ -1875,7 +1875,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource<wbr>Version</span>
+        <span>resource_<wbr>version</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -1885,7 +1885,7 @@ Populated by the system. Read-only. Value must be treated as opaque by clients a
 
     <dt class="property-optional"
             title="Optional">
-        <span>self<wbr>Link</span>
+        <span>self_<wbr>link</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -2814,7 +2814,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 
     <dt class="property-optional"
             title="Optional">
-        <span>allow<wbr>Privilege<wbr>Escalation</span>
+        <span>allow_<wbr>privilege_<wbr>escalation</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
@@ -2822,7 +2822,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 
     <dt class="property-optional"
             title="Optional">
-        <span>allowed<wbr>CSIDrivers</span>
+        <span>allowed_<wbr>csi_<wbr>drivers</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#allowedcsidriver">List[Allowed<wbr>CSIDriver]</a></span>
     </dt>
@@ -2830,7 +2830,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 
     <dt class="property-optional"
             title="Optional">
-        <span>allowed<wbr>Capabilities</span>
+        <span>allowed_<wbr>capabilities</span>
         <span class="property-indicator"></span>
         <span class="property-type">List[str]</span>
     </dt>
@@ -2838,7 +2838,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 
     <dt class="property-optional"
             title="Optional">
-        <span>allowed<wbr>Flex<wbr>Volumes</span>
+        <span>allowed_<wbr>flex_<wbr>volumes</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#allowedflexvolume">List[Allowed<wbr>Flex<wbr>Volume]</a></span>
     </dt>
@@ -2846,7 +2846,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 
     <dt class="property-optional"
             title="Optional">
-        <span>allowed<wbr>Host<wbr>Paths</span>
+        <span>allowed_<wbr>host_<wbr>paths</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#allowedhostpath">List[Allowed<wbr>Host<wbr>Path]</a></span>
     </dt>
@@ -2854,7 +2854,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 
     <dt class="property-optional"
             title="Optional">
-        <span>allowed<wbr>Proc<wbr>Mount<wbr>Types</span>
+        <span>allowed_<wbr>proc_<wbr>mount_<wbr>types</span>
         <span class="property-indicator"></span>
         <span class="property-type">List[str]</span>
     </dt>
@@ -2862,7 +2862,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 
     <dt class="property-optional"
             title="Optional">
-        <span>allowed<wbr>Unsafe<wbr>Sysctls</span>
+        <span>allowed_<wbr>unsafe_<wbr>sysctls</span>
         <span class="property-indicator"></span>
         <span class="property-type">List[str]</span>
     </dt>
@@ -2872,7 +2872,7 @@ Examples: e.g. "foo/*" allows "foo/bar", "foo/baz", etc. e.g. "foo.*" allows "fo
 
     <dt class="property-optional"
             title="Optional">
-        <span>default<wbr>Add<wbr>Capabilities</span>
+        <span>default_<wbr>add_<wbr>capabilities</span>
         <span class="property-indicator"></span>
         <span class="property-type">List[str]</span>
     </dt>
@@ -2880,7 +2880,7 @@ Examples: e.g. "foo/*" allows "foo/bar", "foo/baz", etc. e.g. "foo.*" allows "fo
 
     <dt class="property-optional"
             title="Optional">
-        <span>default<wbr>Allow<wbr>Privilege<wbr>Escalation</span>
+        <span>default_<wbr>allow_<wbr>privilege_<wbr>escalation</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
@@ -2888,7 +2888,7 @@ Examples: e.g. "foo/*" allows "foo/bar", "foo/baz", etc. e.g. "foo.*" allows "fo
 
     <dt class="property-optional"
             title="Optional">
-        <span>forbidden<wbr>Sysctls</span>
+        <span>forbidden_<wbr>sysctls</span>
         <span class="property-indicator"></span>
         <span class="property-type">List[str]</span>
     </dt>
@@ -2898,7 +2898,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 
     <dt class="property-optional"
             title="Optional">
-        <span>fs<wbr>Group</span>
+        <span>fs_<wbr>group</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#fsgroupstrategyoptions">Dict[FSGroup<wbr>Strategy<wbr>Options]</a></span>
     </dt>
@@ -2906,7 +2906,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 
     <dt class="property-optional"
             title="Optional">
-        <span>host<wbr>IPC</span>
+        <span>host_<wbr>ipc</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
@@ -2914,7 +2914,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 
     <dt class="property-optional"
             title="Optional">
-        <span>host<wbr>Network</span>
+        <span>host_<wbr>network</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
@@ -2922,7 +2922,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 
     <dt class="property-optional"
             title="Optional">
-        <span>host<wbr>PID</span>
+        <span>host_<wbr>pid</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
@@ -2930,7 +2930,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 
     <dt class="property-optional"
             title="Optional">
-        <span>host<wbr>Ports</span>
+        <span>host_<wbr>ports</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#hostportrange">List[Host<wbr>Port<wbr>Range]</a></span>
     </dt>
@@ -2946,7 +2946,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 
     <dt class="property-optional"
             title="Optional">
-        <span>read<wbr>Only<wbr>Root<wbr>Filesystem</span>
+        <span>read_<wbr>only_<wbr>root_<wbr>filesystem</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
@@ -2954,7 +2954,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 
     <dt class="property-optional"
             title="Optional">
-        <span>required<wbr>Drop<wbr>Capabilities</span>
+        <span>required_<wbr>drop_<wbr>capabilities</span>
         <span class="property-indicator"></span>
         <span class="property-type">List[str]</span>
     </dt>
@@ -2962,7 +2962,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 
     <dt class="property-optional"
             title="Optional">
-        <span>run<wbr>As<wbr>Group</span>
+        <span>run_<wbr>as_<wbr>group</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#runasgroupstrategyoptions">Dict[Run<wbr>As<wbr>Group<wbr>Strategy<wbr>Options]</a></span>
     </dt>
@@ -2970,7 +2970,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 
     <dt class="property-optional"
             title="Optional">
-        <span>run<wbr>As<wbr>User</span>
+        <span>run_<wbr>as_<wbr>user</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#runasuserstrategyoptions">Dict[Run<wbr>As<wbr>User<wbr>Strategy<wbr>Options]</a></span>
     </dt>
@@ -2978,7 +2978,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 
     <dt class="property-optional"
             title="Optional">
-        <span>runtime<wbr>Class</span>
+        <span>runtime_<wbr>class</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#runtimeclassstrategyoptions">Dict[Runtime<wbr>Class<wbr>Strategy<wbr>Options]</a></span>
     </dt>
@@ -2986,7 +2986,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 
     <dt class="property-optional"
             title="Optional">
-        <span>se<wbr>Linux</span>
+        <span>se_<wbr>linux</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#selinuxstrategyoptions">Dict[SELinux<wbr>Strategy<wbr>Options]</a></span>
     </dt>
@@ -2994,7 +2994,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 
     <dt class="property-optional"
             title="Optional">
-        <span>supplemental<wbr>Groups</span>
+        <span>supplemental_<wbr>groups</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#supplementalgroupsstrategyoptions">Dict[Supplemental<wbr>Groups<wbr>Strategy<wbr>Options]</a></span>
     </dt>
@@ -3315,7 +3315,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 
     <dt class="property-optional"
             title="Optional">
-        <span>allowed<wbr>Runtime<wbr>Class<wbr>Names</span>
+        <span>allowed_<wbr>runtime_<wbr>class_<wbr>names</span>
         <span class="property-indicator"></span>
         <span class="property-type">List[str]</span>
     </dt>
@@ -3323,7 +3323,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 
     <dt class="property-optional"
             title="Optional">
-        <span>default<wbr>Runtime<wbr>Class<wbr>Name</span>
+        <span>default_<wbr>runtime_<wbr>class_<wbr>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -3601,7 +3601,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 
     <dt class="property-optional"
             title="Optional">
-        <span>se<wbr>Linux<wbr>Options</span>
+        <span>se_<wbr>linux_<wbr>options</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#selinuxoptions">Dict[SELinux<wbr>Options]</a></span>
     </dt>

@@ -703,7 +703,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>conversion<wbr>Review<wbr>Versions</span>
+        <span>conversion_<wbr>review_<wbr>versions</span>
         <span class="property-indicator"></span>
         <span class="property-type">List[str]</span>
     </dt>
@@ -720,7 +720,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>webhook<wbr>Client<wbr>Config</span>
+        <span>webhook_<wbr>client_<wbr>config</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#webhookclientconfig">Dict[Webhook<wbr>Client<wbr>Config]</a></span>
     </dt>
@@ -1102,7 +1102,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>list<wbr>Kind</span>
+        <span>list_<wbr>kind</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -1118,7 +1118,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>short<wbr>Names</span>
+        <span>short_<wbr>names</span>
         <span class="property-indicator"></span>
         <span class="property-type">List[str]</span>
     </dt>
@@ -1417,7 +1417,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>additional<wbr>Printer<wbr>Columns</span>
+        <span>additional_<wbr>printer_<wbr>columns</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customresourcecolumndefinition">List[Custom<wbr>Resource<wbr>Column<wbr>Definition]</a></span>
     </dt>
@@ -1449,7 +1449,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>preserve<wbr>Unknown<wbr>Fields</span>
+        <span>preserve_<wbr>unknown_<wbr>fields</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
@@ -1612,7 +1612,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>accepted<wbr>Names</span>
+        <span>accepted_<wbr>names</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customresourcedefinitionnames">Dict[Custom<wbr>Resource<wbr>Definition<wbr>Names]</a></span>
     </dt>
@@ -1628,7 +1628,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>stored<wbr>Versions</span>
+        <span>stored_<wbr>versions</span>
         <span class="property-indicator"></span>
         <span class="property-type">List[str]</span>
     </dt>
@@ -1823,7 +1823,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>additional<wbr>Printer<wbr>Columns</span>
+        <span>additional_<wbr>printer_<wbr>columns</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customresourcecolumndefinition">List[Custom<wbr>Resource<wbr>Column<wbr>Definition]</a></span>
     </dt>
@@ -1986,7 +1986,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>label<wbr>Selector<wbr>Path</span>
+        <span>label_<wbr>selector_<wbr>path</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -1994,7 +1994,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>spec<wbr>Replicas<wbr>Path</span>
+        <span>spec_<wbr>replicas_<wbr>path</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -2002,7 +2002,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>status<wbr>Replicas<wbr>Path</span>
+        <span>status_<wbr>replicas_<wbr>path</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -2184,7 +2184,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>open<wbr>APIV3Schema</span>
+        <span>open_<wbr>apiv3_<wbr>schema</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jsonschemaprops">Dict[JSONSchema<wbr>Props]</a></span>
     </dt>
@@ -3479,7 +3479,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>additional<wbr>Items</span>
+        <span>additional_<wbr>items</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -3487,7 +3487,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>additional<wbr>Properties</span>
+        <span>additional_<wbr>properties</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -3495,7 +3495,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>all<wbr>Of</span>
+        <span>all_<wbr>of</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jsonschemaprops">List[JSONSchema<wbr>Props]</a></span>
     </dt>
@@ -3503,7 +3503,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>any<wbr>Of</span>
+        <span>any_<wbr>of</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jsonschemaprops">List[JSONSchema<wbr>Props]</a></span>
     </dt>
@@ -3559,7 +3559,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>exclusive<wbr>Maximum</span>
+        <span>exclusive_<wbr>maximum</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
@@ -3567,7 +3567,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>exclusive<wbr>Minimum</span>
+        <span>exclusive_<wbr>minimum</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
@@ -3575,7 +3575,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>external<wbr>Docs</span>
+        <span>external_<wbr>docs</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#externaldocumentation">Dict[External<wbr>Documentation]</a></span>
     </dt>
@@ -3609,7 +3609,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Items</span>
+        <span>max_<wbr>items</span>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
@@ -3617,7 +3617,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Length</span>
+        <span>max_<wbr>length</span>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
@@ -3625,7 +3625,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>Properties</span>
+        <span>max_<wbr>properties</span>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
@@ -3641,7 +3641,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>min<wbr>Items</span>
+        <span>min_<wbr>items</span>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
@@ -3649,7 +3649,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>min<wbr>Length</span>
+        <span>min_<wbr>length</span>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
@@ -3657,7 +3657,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>min<wbr>Properties</span>
+        <span>min_<wbr>properties</span>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
@@ -3673,7 +3673,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>multiple<wbr>Of</span>
+        <span>multiple_<wbr>of</span>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
@@ -3697,7 +3697,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>one<wbr>Of</span>
+        <span>one_<wbr>of</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jsonschemaprops">List[JSONSchema<wbr>Props]</a></span>
     </dt>
@@ -3713,7 +3713,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>pattern<wbr>Properties</span>
+        <span>pattern_<wbr>properties</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, JSONSchemaProps]</span>
     </dt>
@@ -3769,7 +3769,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>unique<wbr>Items</span>
+        <span>unique_<wbr>items</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
@@ -4544,7 +4544,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>cluster<wbr>Name</span>
+        <span>cluster_<wbr>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -4552,7 +4552,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>creation<wbr>Timestamp</span>
+        <span>creation_<wbr>timestamp</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -4562,7 +4562,7 @@ Populated by the system. Read-only. Null for lists. More info: https://git.k8s.i
 
     <dt class="property-optional"
             title="Optional">
-        <span>deletion<wbr>Grace<wbr>Period<wbr>Seconds</span>
+        <span>deletion_<wbr>grace_<wbr>period_<wbr>seconds</span>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
@@ -4570,7 +4570,7 @@ Populated by the system. Read-only. Null for lists. More info: https://git.k8s.i
 
     <dt class="property-optional"
             title="Optional">
-        <span>deletion<wbr>Timestamp</span>
+        <span>deletion_<wbr>timestamp</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -4588,7 +4588,7 @@ Populated by the system when a graceful deletion is requested. Read-only. More i
 
     <dt class="property-optional"
             title="Optional">
-        <span>generate<wbr>Name</span>
+        <span>generate_<wbr>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -4616,7 +4616,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
 
     <dt class="property-optional"
             title="Optional">
-        <span>managed<wbr>Fields</span>
+        <span>managed_<wbr>fields</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedfieldsentry">List[Managed<wbr>Fields<wbr>Entry]</a></span>
     </dt>
@@ -4642,7 +4642,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 
     <dt class="property-optional"
             title="Optional">
-        <span>owner<wbr>References</span>
+        <span>owner_<wbr>references</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ownerreference">List[Owner<wbr>Reference]</a></span>
     </dt>
@@ -4650,7 +4650,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource<wbr>Version</span>
+        <span>resource_<wbr>version</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -4660,7 +4660,7 @@ Populated by the system. Read-only. Value must be treated as opaque by clients a
 
     <dt class="property-optional"
             title="Optional">
-        <span>self<wbr>Link</span>
+        <span>self_<wbr>link</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -5173,7 +5173,7 @@ Attempting to use a user or basic auth e.g. "user:password@" is not allowed. Fra
 
     <dt class="property-optional"
             title="Optional">
-        <span>ca<wbr>Bundle</span>
+        <span>ca_<wbr>bundle</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
