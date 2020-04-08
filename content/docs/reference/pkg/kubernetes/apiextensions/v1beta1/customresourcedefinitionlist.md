@@ -3588,7 +3588,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>additional_<wbr>items</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[JSONSchema<wbr>Props] | boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3596,7 +3596,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>additional_<wbr>properties</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[JSONSchema<wbr>Props] | boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3636,7 +3636,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>dependencies</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, JSONSchema<wbr>Props, Array<String>>]</span>
+        <span class="property-type">Dict[JSONSchema<wbr>Props] | List[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3710,7 +3710,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>items</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[JSONSchema<wbr>Props] | List[Any]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

@@ -1622,7 +1622,7 @@ If NamespaceSelector is also set, then the NetworkPolicyPeer as a whole selects 
             title="Optional">
         <span>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">number | string</span>
     </dt>
     <dd>{{% md %}}The port on the given protocol. This can either be a numerical or named port on a pod. If this field is not provided, this matches all port names and numbers.{{% /md %}}</dd>
 

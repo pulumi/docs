@@ -844,7 +844,7 @@ Implementations are required to support all path types. Defaults to Implementati
             title="Optional">
         <span>service_<wbr>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">number | string</span>
     </dt>
     <dd>{{% md %}}Specifies the port of the referenced service.{{% /md %}}</dd>
 
