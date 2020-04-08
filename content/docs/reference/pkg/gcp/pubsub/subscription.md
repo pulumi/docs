@@ -4,6 +4,8 @@ title: "Subscription"
 block_external_search_index: true
 ---
 
+
+
 A named resource representing the stream of messages from a single,
 specific topic, to be delivered to the subscribing application.
 
@@ -1934,9 +1936,13 @@ backlog, even if they are acknowledged, until they fall out of the messageRetent
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

@@ -4,9 +4,13 @@ title: "GetApplication"
 block_external_search_index: true
 ---
 
+
+
 Retrieve information about an Elastic Beanstalk Application.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -20,7 +24,8 @@ export const arn = example.arn;
 export const description = example.description;
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/elastic_beanstalk_application.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

@@ -4,6 +4,8 @@ title: "InstanceIamBinding"
 block_external_search_index: true
 ---
 
+
+
 Three different resources help you manage IAM policies on bigtable instances. Each of these resources serves a different use case:
 
 * `gcp.bigtable.InstanceIamPolicy`: Authoritative. Sets the IAM policy for the instance and replaces any existing policy already attached.
@@ -13,6 +15,32 @@ Three different resources help you manage IAM policies on bigtable instances. Ea
 > **Note:** `gcp.bigtable.InstanceIamPolicy` **cannot** be used in conjunction with `gcp.bigtable.InstanceIamBinding` and `gcp.bigtable.InstanceIamMember` or they will fight over what your policy should be. In addition, be careful not to accidentally unset ownership of the instance as `gcp.bigtable.InstanceIamPolicy` replaces the entire policy.
 
 > **Note:** `gcp.bigtable.InstanceIamBinding` resources **can be** used in conjunction with `gcp.bigtable.InstanceIamMember` resources **only if** they do not grant privilege to the same role.
+
+## google\_bigtable\_instance\_iam\_binding
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const editor = new gcp.bigtable.InstanceIamBinding("editor", {
+    instance: "your-bigtable-instance",
+    members: ["user:jane@example.com"],
+    role: "roles/editor",
+});
+```
+
+## google\_bigtable\_instance\_iam\_member
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const editor = new gcp.bigtable.InstanceIamMember("editor", {
+    instance: "your-bigtable-instance",
+    member: "user:jane@example.com",
+    role: "roles/editor",
+});
+```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/bigtable_instance_iam.html.markdown.
 
@@ -1124,9 +1152,13 @@ is not provided, a default will be supplied.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

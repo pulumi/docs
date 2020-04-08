@@ -4,6 +4,8 @@ title: "ClusterInstance"
 block_external_search_index: true
 ---
 
+
+
 Provides an DocDB Cluster Resource Instance. A Cluster Instance Resource defines
 attributes that are specific to a single instance in a [DocDB Cluster][1].
 
@@ -13,7 +15,9 @@ meta-parameter to make multiple instances and join them all to the same DocDB
 Cluster, or you may specify different Cluster Instance resources with various
 `instance_class` sizes.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -39,7 +43,8 @@ for (let i = 0; i < 2; i++) {
 }
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/docdb_cluster_instance.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -2569,9 +2574,14 @@ Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

@@ -4,9 +4,13 @@ title: "GetRepository"
 block_external_search_index: true
 ---
 
+
+
 The CodeCommit Repository data source allows the ARN, Repository ID, Repository URL for HTTP and Repository URL for SSH to be retrieved for an CodeCommit repository.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -17,7 +21,8 @@ const test = pulumi.output(aws.codecommit.getRepository({
 }, { async: true }));
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/codecommit_repository.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

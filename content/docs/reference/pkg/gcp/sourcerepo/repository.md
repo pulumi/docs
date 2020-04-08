@@ -4,6 +4,8 @@ title: "Repository"
 block_external_search_index: true
 ---
 
+
+
 A repository (or repo) is a Git repository storing versioned source content.
 
 
@@ -12,6 +14,16 @@ To get more information about Repository, see:
 * [API documentation](https://cloud.google.com/source-repositories/docs/reference/rest/v1/projects.repos)
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/source-repositories/)
+
+## Example Usage - Sourcerepo Repository Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const my_repo = new gcp.sourcerepo.Repository("my-repo", {});
+```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/sourcerepo_repository.html.markdown.
 
@@ -983,9 +995,13 @@ If it is not provided, the provider project is used.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

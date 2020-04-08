@@ -4,6 +4,8 @@ title: "ServerCertificate"
 block_external_search_index: true
 ---
 
+
+
 Provides an IAM Server Certificate resource to upload Server Certificates.
 Certs uploaded to IAM can easily work with other AWS services such as:
 
@@ -18,7 +20,9 @@ Certificates][2] in AWS Documentation.
 > **Note:** All arguments including the private key will be stored in the raw state as plain-text.
 [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 **Using certs on file:**
 
@@ -83,7 +87,8 @@ const ourapp = new aws.elb.LoadBalancer("ourapp", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iam_server_certificate.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -1277,9 +1282,14 @@ See [IAM Identifiers][1] for more details on IAM Paths.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

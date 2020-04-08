@@ -4,10 +4,14 @@ title: "Domain"
 block_external_search_index: true
 ---
 
+
+
 Manages an AWS Elasticsearch Domain.
 
+{{% examples %}}
 ## Example Usage
 
+{{% example %}}
 ### Basic Usage
 
 ```typescript
@@ -28,6 +32,8 @@ const example = new aws.elasticsearch.Domain("example", {
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Access Policy
 
 > See also: [`aws.elasticsearch.DomainPolicy` resource](https://www.terraform.io/docs/providers/aws/r/elasticsearch_domain_policy.html)
@@ -60,6 +66,8 @@ const example = new aws.elasticsearch.Domain("example", {
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Log Publishing to CloudWatch Logs
 
 ```typescript
@@ -96,6 +104,8 @@ const exampleDomain = new aws.elasticsearch.Domain("example", {
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### VPC based ES
 
 ```typescript
@@ -168,7 +178,8 @@ const esDomain = new aws.elasticsearch.Domain("es", {
 }, { dependsOn: [esServiceLinkedRole] });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticsearch_domain.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -3833,9 +3844,14 @@ snapshot of the indices in the domain.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

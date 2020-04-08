@@ -4,10 +4,24 @@ title: "ProjectMetadataItem"
 block_external_search_index: true
 ---
 
+
+
 Manages a single key/value pair on metadata common to all instances for
 a project in GCE. Using `gcp.compute.ProjectMetadataItem` lets you
 manage a single key/value setting in the provider rather than the entire
 project metadata map.
+
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultProjectMetadataItem = new gcp.compute.ProjectMetadataItem("default", {
+    key: "my_metadata",
+    value: "my_value",
+});
+```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_project_metadata_item.html.markdown.
 
@@ -687,9 +701,13 @@ is not provided, the provider project is used.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

@@ -4,12 +4,16 @@ title: "GetKey"
 block_external_search_index: true
 ---
 
+
+
 Use this data source to get detailed information about
 the specified KMS Key with flexible key id input.
 This can be useful to reference key alias
 without having to hard code the ARN as input.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -20,7 +24,8 @@ const foo = pulumi.output(aws.kms.getKey({
 }, { async: true }));
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/kms_key.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

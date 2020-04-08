@@ -4,6 +4,8 @@ title: "BucketAccessControl"
 block_external_search_index: true
 ---
 
+
+
 Bucket ACLs can be managed authoritatively using the
 `storage_bucket_acl` resource. Do not use these two resources in conjunction to manage the same bucket.
 
@@ -874,9 +876,13 @@ members of the Google Apps for Business domain example.com, the entity would be 
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

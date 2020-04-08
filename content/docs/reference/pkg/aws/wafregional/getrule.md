@@ -4,9 +4,13 @@ title: "GetRule"
 block_external_search_index: true
 ---
 
+
+
 `aws.wafregional.Rule` Retrieves a WAF Regional Rule Resource Id.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -17,7 +21,8 @@ const example = pulumi.output(aws.wafregional.getRule({
 }, { async: true }));
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/wafregional_rule.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

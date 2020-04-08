@@ -4,9 +4,13 @@ title: "EventTarget"
 block_external_search_index: true
 ---
 
+
+
 Provides a CloudWatch Event Target resource.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -46,6 +50,8 @@ const yada = new aws.cloudwatch.EventTarget("yada", {
 });
 ```
 
+{{% /example %}}
+{{% /examples %}}
 ## Example SSM Document Usage
 
 ```typescript
@@ -204,8 +210,6 @@ const ecsScheduledTask = new aws.cloudwatch.EventTarget("ecs_scheduled_task", {
     rule: aws_cloudwatch_event_rule_every_hour.name,
 });
 ```
-
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudwatch_event_target.html.markdown.
 
 
 
@@ -2845,9 +2849,14 @@ that is used for extracting part of the matched event when passing it to the tar
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

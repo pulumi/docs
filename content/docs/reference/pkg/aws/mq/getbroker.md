@@ -4,9 +4,13 @@ title: "GetBroker"
 block_external_search_index: true
 ---
 
+
+
 Provides information about a MQ Broker.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -24,7 +28,8 @@ const byName = pulumi.output(aws.mq.getBroker({
 }, { async: true }));
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/mq_broker.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

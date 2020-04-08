@@ -4,6 +4,8 @@ title: "GetRegions"
 block_external_search_index: true
 ---
 
+
+
 Provides access to available Google Compute regions for a given project.
 See more about [regions and regions](https://cloud.google.com/compute/docs/regions-zones/) in the upstream docs.
 

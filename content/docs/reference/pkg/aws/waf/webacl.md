@@ -4,9 +4,13 @@ title: "WebAcl"
 block_external_search_index: true
 ---
 
+
+
 Provides a WAF Web ACL Resource
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -42,6 +46,8 @@ const wafAcl = new aws.waf.WebAcl("waf_acl", {
 }, { dependsOn: [ipset, wafrule] });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Logging
 
 > *NOTE:* The Kinesis Firehose Delivery Stream name must begin with `aws-waf-logs-` and be located in `us-east-1` region. See the [AWS WAF Developer Guide](https://docs.aws.amazon.com/waf/latest/developerguide/logging.html) for more information about enabling WAF logging.
@@ -69,7 +75,8 @@ const example = new aws.waf.WebAcl("example", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/waf_web_acl.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -1909,9 +1916,14 @@ Rules with a lower value are evaluated before rules with a higher value.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

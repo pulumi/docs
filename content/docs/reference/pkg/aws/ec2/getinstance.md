@@ -4,10 +4,14 @@ title: "GetInstance"
 block_external_search_index: true
 ---
 
+
+
 Use this data source to get the ID of an Amazon EC2 Instance for use in other
 resources.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -28,7 +32,8 @@ const foo = pulumi.output(aws.ec2.getInstance({
 }, { async: true }));
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/instance.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

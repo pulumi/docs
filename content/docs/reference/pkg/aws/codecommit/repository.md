@@ -4,13 +4,17 @@ title: "Repository"
 block_external_search_index: true
 ---
 
+
+
 Provides a CodeCommit Repository Resource.
 
 > **NOTE on CodeCommit Availability**: The CodeCommit is not yet rolled out
 in all regions - available regions are listed
 [the AWS Docs](https://docs.aws.amazon.com/general/latest/gr/rande.html#codecommit_region).
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -22,7 +26,8 @@ const test = new aws.codecommit.Repository("test", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/codecommit_repository.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -1084,9 +1089,14 @@ The following state arguments are supported:
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

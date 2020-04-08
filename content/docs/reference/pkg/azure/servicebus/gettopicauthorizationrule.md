@@ -4,6 +4,8 @@ title: "GetTopicAuthorizationRule"
 block_external_search_index: true
 ---
 
+
+
 Use this data source to access information about a ServiceBus Topic Authorization Rule within a ServiceBus Topic.
 
 ## Example Usage

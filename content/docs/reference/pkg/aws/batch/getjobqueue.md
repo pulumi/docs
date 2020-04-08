@@ -4,10 +4,14 @@ title: "GetJobQueue"
 block_external_search_index: true
 ---
 
+
+
 The Batch Job Queue data source allows access to details of a specific
 job queue within AWS Batch.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -18,7 +22,8 @@ const test_queue = pulumi.output(aws.batch.getJobQueue({
 }, { async: true }));
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/batch_job_queue.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

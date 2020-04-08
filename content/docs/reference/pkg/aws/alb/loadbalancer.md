@@ -4,12 +4,16 @@ title: "LoadBalancer"
 block_external_search_index: true
 ---
 
+
+
 Provides a Load Balancer resource.
 
 > **Note:** `aws.alb.LoadBalancer` is known as `aws.lb.LoadBalancer`. The functionality is identical.
 
+{{% examples %}}
 ## Example Usage
 
+{{% example %}}
 ### Application Load Balancer
 
 ```typescript
@@ -33,6 +37,8 @@ const test = new aws.lb.LoadBalancer("test", {
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Network Load Balancer
 
 ```typescript
@@ -50,6 +56,8 @@ const test = new aws.lb.LoadBalancer("test", {
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Specifying Elastic IPs
 
 ```typescript
@@ -71,7 +79,8 @@ const example = new aws.lb.LoadBalancer("example", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lb.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -2728,9 +2737,14 @@ for load balancers of type `network` will force a recreation of the resource.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

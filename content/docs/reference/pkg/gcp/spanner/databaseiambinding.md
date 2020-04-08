@@ -4,6 +4,8 @@ title: "DatabaseIAMBinding"
 block_external_search_index: true
 ---
 
+
+
 Three different resources help you manage your IAM policy for a Spanner database. Each of these resources serves a different use case:
 
 * `gcp.spanner.DatabaseIAMPolicy`: Authoritative. Sets the IAM policy for the database and replaces any existing policy already attached.
@@ -16,6 +18,34 @@ Three different resources help you manage your IAM policy for a Spanner database
 > **Note:** `gcp.spanner.DatabaseIAMPolicy` **cannot** be used in conjunction with `gcp.spanner.DatabaseIAMBinding` and `gcp.spanner.DatabaseIAMMember` or they will fight over what your policy should be.
 
 > **Note:** `gcp.spanner.DatabaseIAMBinding` resources **can be** used in conjunction with `gcp.spanner.DatabaseIAMMember` resources **only if** they do not grant privilege to the same role.
+
+## google\_spanner\_database\_iam\_binding
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const database = new gcp.spanner.DatabaseIAMBinding("database", {
+    database: "your-database-name",
+    instance: "your-instance-name",
+    members: ["user:jane@example.com"],
+    role: "roles/compute.networkUser",
+});
+```
+
+## google\_spanner\_database\_iam\_member
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const database = new gcp.spanner.DatabaseIAMMember("database", {
+    database: "your-database-name",
+    instance: "your-instance-name",
+    member: "user:jane@example.com",
+    role: "roles/compute.networkUser",
+});
+```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/spanner_database_iam.html.markdown.
 
@@ -1235,9 +1265,13 @@ is not provided, the provider project is used.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

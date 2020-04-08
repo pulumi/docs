@@ -4,10 +4,14 @@ title: "Inventory"
 block_external_search_index: true
 ---
 
+
+
 Provides a S3 bucket [inventory configuration](https://docs.aws.amazon.com/AmazonS3/latest/dev/storage-inventory.html) resource.
 
+{{% examples %}}
 ## Example Usage
 
+{{% example %}}
 ### Add inventory configuration
 
 ```typescript
@@ -31,6 +35,8 @@ const testInventory = new aws.s3.Inventory("test", {
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Add inventory configuration with S3 bucket object prefix
 
 ```typescript
@@ -58,7 +64,8 @@ const test_prefix = new aws.s3.Inventory("test-prefix", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_bucket_inventory.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -1935,9 +1942,14 @@ Valid values: `Size`, `LastModifiedDate`, `StorageClass`, `ETag`, `IsMultipartUp
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

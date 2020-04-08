@@ -4,6 +4,8 @@ title: "Tenant"
 block_external_search_index: true
 ---
 
+
+
 Tenant configuration in a multi-tenant project.
 
 You must enable the
@@ -12,6 +14,21 @@ the marketplace prior to using this resource.
 
 You must [enable multi-tenancy](https://cloud.google.com/identity-platform/docs/multi-tenancy-quickstart) via
 the Cloud Console prior to creating tenants.
+
+
+
+## Example Usage - Identity Platform Tenant Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const tenant = new gcp.identityplatform.Tenant("tenant", {
+    allowPasswordSignup: true,
+    displayName: "tenant",
+});
+```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/identity_platform_tenant.html.markdown.
 
@@ -991,9 +1008,13 @@ If it is not provided, the provider project is used.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

@@ -4,6 +4,8 @@ title: "NetworkEndpointGroup"
 block_external_search_index: true
 ---
 
+
+
 Network endpoint groups (NEGs) are zonal resources that represent
 collections of IP address and port combinations for GCP resources within a
 single subnet. Each IP address and port combination is called a network
@@ -1420,9 +1422,13 @@ If it is not provided, the provider project is used.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

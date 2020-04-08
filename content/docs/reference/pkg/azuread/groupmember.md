@@ -4,9 +4,27 @@ title: "GroupMember"
 block_external_search_index: true
 ---
 
+
+
 Manages a single Group Membership within Azure Active Directory.
 
 > **NOTE:** Do not use this resource at the same time as `azuread_group.members`.
+
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azuread from "@pulumi/azuread";
+
+const exampleUser = pulumi.output(azuread.getUser({
+    userPrincipalName: "jdoe@hashicorp.com",
+}, { async: true }));
+const exampleGroup = new azuread.Group("example", {});
+const exampleGroupMember = new azuread.GroupMember("example", {
+    groupObjectId: exampleGroup.id,
+    memberObjectId: exampleUser.id,
+});
+```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/r/group_member.markdown.
 
@@ -566,9 +584,13 @@ The following state arguments are supported:
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-azuread">https://github.com/pulumi/pulumi-azuread</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

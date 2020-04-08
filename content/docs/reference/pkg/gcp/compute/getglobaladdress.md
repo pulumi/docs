@@ -4,6 +4,8 @@ title: "GetGlobalAddress"
 block_external_search_index: true
 ---
 
+
+
 Get the IP address from a static address reserved for a Global Forwarding Rule which are only used for HTTP load balancing. For more information see
 the official [API](https://cloud.google.com/compute/docs/reference/latest/globalAddresses) documentation.
 

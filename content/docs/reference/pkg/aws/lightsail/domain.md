@@ -4,6 +4,8 @@ title: "Domain"
 block_external_search_index: true
 ---
 
+
+
 Creates a domain resource for the specified domain (e.g., example.com).
 You cannot register a new domain name using Lightsail. You must register
 a domain name using Amazon Route 53 or another domain name registrar.
@@ -22,8 +24,6 @@ const domainTest = new aws.lightsail.Domain("domain_test", {
     domainName: "mydomain.com",
 });
 ```
-
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lightsail_domain.html.markdown.
 
 
 
@@ -545,9 +545,14 @@ The following state arguments are supported:
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

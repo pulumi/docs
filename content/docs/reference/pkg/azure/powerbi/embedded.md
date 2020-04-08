@@ -4,6 +4,8 @@ title: "Embedded"
 block_external_search_index: true
 ---
 
+
+
 Manages a PowerBI Embedded.
 
 ## Example Usage
@@ -15,10 +17,9 @@ import * as azure from "@pulumi/azure";
 const exampleResourceGroup = new azure.core.ResourceGroup("example", {
     location: "West Europe",
 });
-const examplePowerbiEmbedded = new azure.PowerbiEmbedded("example", {
+const exampleEmbedded = new azure.powerbi.Embedded("example", {
     administrators: ["azsdktest@microsoft.com"],
     location: exampleResourceGroup.location,
-    name: "example-powerbi",
     resourceGroupName: exampleResourceGroup.name,
     skuName: "A1",
 });
@@ -1014,9 +1015,13 @@ The following state arguments are supported:
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

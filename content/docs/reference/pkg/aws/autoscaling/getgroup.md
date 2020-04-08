@@ -4,9 +4,13 @@ title: "GetGroup"
 block_external_search_index: true
 ---
 
+
+
 Use this data source to get information on an existing autoscaling group.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -17,7 +21,8 @@ const foo = pulumi.output(aws.autoscaling.getGroup({
 }, { async: true }));
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/autoscaling_group.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

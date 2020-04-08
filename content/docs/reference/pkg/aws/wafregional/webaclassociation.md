@@ -4,6 +4,8 @@ title: "WebAclAssociation"
 block_external_search_index: true
 ---
 
+
+
 Manages an association with WAF Regional Web ACL.
 
 > **Note:** An Application Load Balancer can only be associated with one WAF Regional WebACL.
@@ -146,8 +148,6 @@ const association = new aws.wafregional.WebAclAssociation("association", {
     webAclId: fooWebAcl.id,
 });
 ```
-
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_web_acl_association.html.markdown.
 
 
 
@@ -705,9 +705,14 @@ The following state arguments are supported:
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

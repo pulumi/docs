@@ -4,10 +4,14 @@ title: "GetVpnGateway"
 block_external_search_index: true
 ---
 
+
+
 The VPN Gateway data source provides details about
 a specific VPN gateway.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -23,7 +27,8 @@ const selected = pulumi.output(aws.ec2.getVpnGateway({
 export const vpnGatewayId = selected.id!;
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/vpn_gateway.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

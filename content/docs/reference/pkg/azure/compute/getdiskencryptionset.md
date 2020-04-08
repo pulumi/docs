@@ -4,6 +4,8 @@ title: "GetDiskEncryptionSet"
 block_external_search_index: true
 ---
 
+
+
 Use this data source to access information about an existing Disk Encryption Set.
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/disk_encryption_set.html.markdown.

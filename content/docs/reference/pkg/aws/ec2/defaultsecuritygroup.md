@@ -4,6 +4,8 @@ title: "DefaultSecurityGroup"
 block_external_search_index: true
 ---
 
+
+
 Provides a resource to manage the default AWS Security Group.
 
 For EC2 Classic accounts, each region comes with a Default Security Group.
@@ -97,8 +99,6 @@ manage this Security Group, but this provider cannot destroy it. Removing this r
 from your configuration will remove it from your statefile and management, but
 will not destroy the Security Group. All ingress or egress rules will be left as
 they are at the time of removal. You can resume managing them via the AWS Console.
-
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_security_group.html.markdown.
 
 
 
@@ -1971,9 +1971,14 @@ modified, added, or removed.** It will be left in its current state
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

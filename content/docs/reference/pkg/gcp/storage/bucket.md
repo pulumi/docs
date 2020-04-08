@@ -4,6 +4,8 @@ title: "Bucket"
 block_external_search_index: true
 ---
 
+
+
 Creates a new bucket in Google cloud storage service (GCS).
 Once a bucket has been created, its location can't be changed.
 [ACLs](https://cloud.google.com/storage/docs/access-control/lists) can be applied
@@ -16,6 +18,56 @@ and
 
 **Note**: If the project id is not set on the resource or in the provider block it will be dynamically
 determined which will require enabling the compute api.
+
+
+## Example Usage - creating a private bucket in standard storage, in the EU region. Bucket configured as static website and CORS configurations
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const static_site = new gcp.storage.Bucket("static-site", {
+    bucketPolicyOnly: true,
+    cors: [{
+        maxAgeSeconds: 3600,
+        methods: [
+            "GET",
+            "HEAD",
+            "PUT",
+            "POST",
+            "DELETE",
+        ],
+        origins: ["http://image-store.com"],
+        responseHeaders: ["*"],
+    }],
+    forceDestroy: true,
+    location: "EU",
+    website: {
+        mainPageSuffix: "index.html",
+        notFoundPage: "404.html",
+    },
+});
+```
+
+## Example Usage - Life cycle settings for storage bucket objects
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const auto_expire = new gcp.storage.Bucket("auto-expire", {
+    forceDestroy: true,
+    lifecycleRules: [{
+        action: {
+            type: "Delete",
+        },
+        condition: {
+            age: 3,
+        },
+    }],
+    location: "US",
+});
+```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_bucket.html.markdown.
 
@@ -3411,9 +3463,13 @@ resource is not found.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

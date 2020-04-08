@@ -4,12 +4,16 @@ title: "WindowsFileSystem"
 block_external_search_index: true
 ---
 
+
+
 Manages a FSx Windows File System. See the [FSx Windows Guide](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/what-is.html) for more information.
 
 > **NOTE:** Either the `active_directory_id` argument or `self_managed_active_directory` configuration block must be specified.
 
+{{% examples %}}
 ## Example Usage
 
+{{% example %}}
 ### Using AWS Directory Service
 
 Additional information for using AWS Directory Service with Windows File Systems can be found in the [FSx Windows Guide](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/fsx-aws-managed-ad.html).
@@ -27,6 +31,8 @@ const example = new aws.fsx.WindowsFileSystem("example", {
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Using a Self-Managed Microsoft Active Directory
 
 Additional information for using AWS Directory Service with Windows File Systems can be found in the [FSx Windows Guide](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/self-managed-AD.html).
@@ -52,7 +58,8 @@ const example = new aws.fsx.WindowsFileSystem("example", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/fsx_windows_file_system.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -2422,9 +2429,14 @@ The following state arguments are supported:
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

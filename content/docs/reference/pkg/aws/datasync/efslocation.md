@@ -4,11 +4,15 @@ title: "EfsLocation"
 block_external_search_index: true
 ---
 
+
+
 Manages an AWS DataSync EFS Location.
 
 > **NOTE:** The EFS File System must have a mounted EFS Mount Target before creating this resource.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -25,7 +29,8 @@ const example = new aws.datasync.EfsLocation("example", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/datasync_location_efs.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -1055,9 +1060,14 @@ The following state arguments are supported:
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

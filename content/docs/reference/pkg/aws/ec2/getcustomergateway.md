@@ -4,9 +4,13 @@ title: "GetCustomerGateway"
 block_external_search_index: true
 ---
 
+
+
 Get an existing AWS Customer Gateway.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -30,7 +34,8 @@ const transit = new aws.ec2.VpnConnection("transit", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/customer_gateway.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

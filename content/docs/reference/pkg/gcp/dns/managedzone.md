@@ -4,6 +4,8 @@ title: "ManagedZone"
 block_external_search_index: true
 ---
 
+
+
 A zone is a subtree of the DNS namespace under one administrative
 responsibility. A ManagedZone is a resource that represents a DNS zone
 hosted by the Cloud DNS service.
@@ -2518,9 +2520,13 @@ Cloud resources. Must be one of: 'public', 'private'.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

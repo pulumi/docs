@@ -4,6 +4,8 @@ title: "Project"
 block_external_search_index: true
 ---
 
+
+
 A Google Cloud Firebase instance. This enables Firebase resources on a given google project.
 Since a FirebaseProject is actually also a GCP Project, a FirebaseProject uses underlying GCP
 identifiers (most importantly, the projectId) as its own for easy interop with GCP APIs.
@@ -622,9 +624,13 @@ If it is not provided, the provider project is used.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

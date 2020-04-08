@@ -4,6 +4,8 @@ title: "KeyPair"
 block_external_search_index: true
 ---
 
+
+
 Provides a Lightsail Key Pair, for use with Lightsail Instances. These key pairs
 are separate from EC2 Key Pairs, and must be created or imported for use with
 Lightsail.
@@ -42,8 +44,6 @@ const lgKeyPair = new aws.lightsail.KeyPair("lg_key_pair", {
     publicKey: fs.readFileSync("~/.ssh/id_rsa.pub", "utf-8"),
 });
 ```
-
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lightsail_key_pair.html.markdown.
 
 
 
@@ -1233,9 +1233,14 @@ imported into Lightsail
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

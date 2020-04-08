@@ -4,6 +4,8 @@ title: "Connector"
 block_external_search_index: true
 ---
 
+
+
 Serverless VPC Access connector resource.
 
 
@@ -12,6 +14,20 @@ To get more information about Connector, see:
 * [API documentation](https://cloud.google.com/vpc/docs/reference/vpcaccess/rest/v1/projects.locations.connectors)
 * How-to Guides
     * [Configuring Serverless VPC Access](https://cloud.google.com/vpc/docs/configure-serverless-vpc-access)
+
+## Example Usage - VPC Access Connector
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const connector = new gcp.vpcaccess.Connector("connector", {
+    ipCidrRange: "10.8.0.0/28",
+    network: "default",
+    region: "us-central1",
+});
+```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/vpc_access_connector.html.markdown.
 
@@ -1267,9 +1283,13 @@ If it is not provided, the provider project is used.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

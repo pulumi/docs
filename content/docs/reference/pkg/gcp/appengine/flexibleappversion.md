@@ -4,6 +4,8 @@ title: "FlexibleAppVersion"
 block_external_search_index: true
 ---
 
+
+
 Flexible App Version resource to create a new version of flexible GAE Application. Based on Google Compute Engine,
 the App Engine flexible environment automatically scales your app up and down while also balancing the load.
 Learn about the differences between the standard environment and the flexible environment
@@ -6695,9 +6697,13 @@ numbers, or hyphens. Reserved names,"default", "latest", and any name with the p
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

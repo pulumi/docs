@@ -4,10 +4,14 @@ title: "GetSecretVersion"
 block_external_search_index: true
 ---
 
+
+
 Retrieve information about a Secrets Manager secret version, including its secret value. To retrieve secret metadata, see the [`aws.secretsmanager.Secret` data source](https://www.terraform.io/docs/providers/aws/d/secretsmanager_secret.html).
 
+{{% examples %}}
 ## Example Usage
 
+{{% example %}}
 ### Retrieve Current Secret Version
 
 By default, this data sources retrieves information based on the `AWSCURRENT` staging label.
@@ -21,6 +25,8 @@ const example = aws_secretsmanager_secret_example.id.apply(id => aws.secretsmana
 }, { async: true }));
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Retrieve Specific Secret Version
 
 ```typescript
@@ -33,7 +39,8 @@ const by_version_stage = aws_secretsmanager_secret_example.id.apply(id => aws.se
 }, { async: true }));
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/secretsmanager_secret_version.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

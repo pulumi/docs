@@ -4,6 +4,8 @@ title: "AlertPolicy"
 block_external_search_index: true
 ---
 
+
+
 A description of the conditions under which some aspect of your system is
 considered to be "unhealthy" and the ways to notify people or services
 about this state.
@@ -14,6 +16,34 @@ To get more information about AlertPolicy, see:
 * [API documentation](https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.alertPolicies)
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/monitoring/alerts/)
+
+## Example Usage - Monitoring Alert Policy Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const alertPolicy = new gcp.monitoring.AlertPolicy("alert_policy", {
+    combiner: "OR",
+    conditions: [{
+        conditionThreshold: {
+            aggregations: [{
+                alignmentPeriod: "60s",
+                perSeriesAligner: "ALIGN_RATE",
+            }],
+            comparison: "COMPARISON_GT",
+            duration: "60s",
+            filter: "metric.type=\"compute.googleapis.com/instance/disk/write_bytes_count\" AND resource.type=\"gce_instance\"",
+        },
+        displayName: "test condition",
+    }],
+    displayName: "My Alert Policy",
+    userLabels: {
+        foo: "bar",
+    },
+});
+```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/monitoring_alert_policy.html.markdown.
 
@@ -3092,9 +3122,13 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

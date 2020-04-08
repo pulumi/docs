@@ -4,6 +4,8 @@ title: "GetResources"
 block_external_search_index: true
 ---
 
+
+
 Use this data source to access information about existing resources.
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/resources.html.markdown.

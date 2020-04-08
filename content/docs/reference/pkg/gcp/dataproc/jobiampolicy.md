@@ -4,6 +4,8 @@ title: "JobIAMPolicy"
 block_external_search_index: true
 ---
 
+
+
 Three different resources help you manage IAM policies on dataproc jobs. Each of these resources serves a different use case:
 
 * `gcp.dataproc.JobIAMPolicy`: Authoritative. Sets the IAM policy for the job and replaces any existing policy already attached.
@@ -13,6 +15,32 @@ Three different resources help you manage IAM policies on dataproc jobs. Each of
 > **Note:** `gcp.dataproc.JobIAMPolicy` **cannot** be used in conjunction with `gcp.dataproc.JobIAMBinding` and `gcp.dataproc.JobIAMMember` or they will fight over what your policy should be. In addition, be careful not to accidentally unset ownership of the job as `gcp.dataproc.JobIAMPolicy` replaces the entire policy.
 
 > **Note:** `gcp.dataproc.JobIAMBinding` resources **can be** used in conjunction with `gcp.dataproc.JobIAMMember` resources **only if** they do not grant privilege to the same role.
+
+## google\_pubsub\_subscription\_iam\_binding
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const editor = new gcp.dataproc.JobIAMBinding("editor", {
+    jobId: "your-dataproc-job",
+    members: ["user:jane@example.com"],
+    role: "roles/editor",
+});
+```
+
+## google\_pubsub\_subscription\_iam\_member
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const editor = new gcp.dataproc.JobIAMMember("editor", {
+    jobId: "your-dataproc-job",
+    member: "user:jane@example.com",
+    role: "roles/editor",
+});
+```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/dataproc_job_iam.html.markdown.
 
@@ -872,9 +900,13 @@ is not provided, the provider will use a default.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

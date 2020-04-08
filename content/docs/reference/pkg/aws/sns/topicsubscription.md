@@ -4,6 +4,8 @@ title: "TopicSubscription"
 block_external_search_index: true
 ---
 
+
+
   Provides a resource for subscribing to SNS topics. Requires that an SNS topic exist for the subscription to attach to.
 This resource allows you to automatically place messages sent to SNS topics in SQS queues, send them as HTTP(S) POST requests
 to a given endpoint, send SMS messages, or notify devices / applications. The most likely use case will
@@ -17,7 +19,8 @@ probably be SQS queues.
 
 > **NOTE:** If SNS topic and SQS queue are in different AWS accounts and different AWS regions it is important to recognize that the subscription needs to be initiated from the account with the SQS queue but in the region of the SNS topic.
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sns_topic_subscription.html.markdown.
+{{% examples %}}
+{{% /examples %}}
 
 
 
@@ -1295,9 +1298,14 @@ The following state arguments are supported:
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

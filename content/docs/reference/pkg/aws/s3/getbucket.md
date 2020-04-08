@@ -4,13 +4,17 @@ title: "GetBucket"
 block_external_search_index: true
 ---
 
+
+
 Provides details about a specific S3 bucket.
 
 This resource may prove useful when setting up a Route53 record, or an origin for a CloudFront
 Distribution.
 
+{{% examples %}}
 ## Example Usage
 
+{{% example %}}
 ### Route53 Record
 
 ```typescript
@@ -34,6 +38,8 @@ const example = new aws.route53.Record("example", {
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### CloudFront Origin
 
 ```typescript
@@ -51,7 +57,8 @@ const test = new aws.cloudfront.Distribution("test", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/s3_bucket.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

@@ -4,6 +4,8 @@ title: "GetLoadBalancer"
 block_external_search_index: true
 ---
 
+
+
 Provides information about a "classic" Elastic Load Balancer (ELB).
 See [LB Data Source](https://www.terraform.io/docs/providers/aws/d/lb.html) if you are looking for "v2"
 Application Load Balancer (ALB) or Network Load Balancer (NLB).
@@ -12,7 +14,9 @@ This data source can prove useful when a module accepts an LB as an input
 variable and needs to, for example, determine the security groups associated
 with it, etc.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -26,7 +30,8 @@ const test = pulumi.output(aws.elb.getLoadBalancer({
 }, { async: true }));
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/elb.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

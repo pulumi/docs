@@ -4,6 +4,8 @@ title: "PolicySetDefinition"
 block_external_search_index: true
 ---
 
+
+
 Manages a policy set definition.
 
 > **NOTE:**  Policy set definitions (also known as policy initiatives) do not take effect until they are assigned to a scope using a Policy Set Assignment.
@@ -514,7 +516,7 @@ The following output properties are available:
             title="">
         <span>Metadata</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The metadata for the policy set definition. This is a json object representing additional metadata that should be stored with the policy definition.
 {{% /md %}}</dd>
@@ -593,7 +595,7 @@ The following output properties are available:
             title="">
         <span>Metadata</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The metadata for the policy set definition. This is a json object representing additional metadata that should be stored with the policy definition.
 {{% /md %}}</dd>
@@ -672,7 +674,7 @@ The following output properties are available:
             title="">
         <span>metadata</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The metadata for the policy set definition. This is a json object representing additional metadata that should be stored with the policy definition.
 {{% /md %}}</dd>
@@ -1248,9 +1250,13 @@ The following state arguments are supported:
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

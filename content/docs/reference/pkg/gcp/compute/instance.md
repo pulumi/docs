@@ -4,10 +4,53 @@ title: "Instance"
 block_external_search_index: true
 ---
 
+
+
 Manages a VM instance resource within GCE. For more information see
 [the official documentation](https://cloud.google.com/compute/docs/instances)
 and
 [API](https://cloud.google.com/compute/docs/reference/latest/instances).
+
+
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultInstance = new gcp.compute.Instance("default", {
+    bootDisk: {
+        initializeParams: {
+            image: "debian-cloud/debian-9",
+        },
+    },
+    machineType: "n1-standard-1",
+    metadata: {
+        foo: "bar",
+    },
+    metadataStartupScript: "echo hi > /test.txt",
+    networkInterfaces: [{
+        accessConfigs: [{}],
+        network: "default",
+    }],
+    // Local SSD disk
+    scratchDisks: [{
+        interface: "SCSI",
+    }],
+    serviceAccount: {
+        scopes: [
+            "userinfo-email",
+            "compute-ro",
+            "storage-ro",
+        ],
+    },
+    tags: [
+        "foo",
+        "bar",
+    ],
+    zone: "us-central1-a",
+});
+```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_instance.html.markdown.
 
@@ -6240,9 +6283,13 @@ short names are supported. To allow full access to all Cloud APIs, use the
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

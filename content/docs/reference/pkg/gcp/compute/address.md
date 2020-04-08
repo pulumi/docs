@@ -4,6 +4,8 @@ title: "Address"
 block_external_search_index: true
 ---
 
+
+
 Represents an Address resource.
 
 Each virtual machine instance has an ephemeral internal IP address and,
@@ -25,6 +27,28 @@ To get more information about Address, see:
 * How-to Guides
     * [Reserving a Static External IP Address](https://cloud.google.com/compute/docs/instances-and-network)
     * [Reserving a Static Internal IP Address](https://cloud.google.com/compute/docs/ip-addresses/reserve-static-internal-ip-address)
+
+## Example Usage - Address Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const ipAddress = new gcp.compute.Address("ip_address", {});
+```
+## Example Usage - Address With Gce Endpoint
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const internalWithGceEndpoint = new gcp.compute.Address("internal_with_gce_endpoint", {
+    addressType: "INTERNAL",
+    purpose: "GCE_ENDPOINT",
+});
+```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_address.html.markdown.
 
@@ -1844,9 +1868,13 @@ subnetwork's IP range. This field can only be used with INTERNAL type with GCE_E
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

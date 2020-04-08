@@ -4,6 +4,8 @@ title: "GetIAMPolicy"
 block_external_search_index: true
 ---
 
+
+
 Generates an IAM policy document that may be referenced by and applied to
 other Google Cloud Platform resources, such as the `gcp.organizations.Project` resource.
 
@@ -11,6 +13,38 @@ other Google Cloud Platform resources, such as the `gcp.organizations.Project` r
 See the [setIamPolicy docs](https://cloud.google.com/resource-manager/reference/rest/v1/projects/setIamPolicy)
 for a list of these restrictions.
 
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const admin = pulumi.output(gcp.organizations.getIAMPolicy({
+    auditConfigs: [{
+        auditLogConfigs: [
+            {
+                exemptedMembers: ["user:you@domain.com"],
+                logType: "DATA_READ",
+            },
+            {
+                logType: "DATA_WRITE",
+            },
+            {
+                logType: "ADMIN_READ",
+            },
+        ],
+        service: "cloudkms.googleapis.com",
+    }],
+    bindings: [
+        {
+            members: ["serviceAccount:your-custom-sa@your-project.iam.gserviceaccount.com"],
+            role: "roles/compute.instanceAdmin",
+        },
+        {
+            members: ["user:alice@gmail.com"],
+            role: "roles/storage.objectViewer",
+        },
+    ],
+}, { async: true }));
+```
 
 This data source is used to define IAM policies to apply to other resources.
 Currently, defining a policy through a datasource and referencing that policy

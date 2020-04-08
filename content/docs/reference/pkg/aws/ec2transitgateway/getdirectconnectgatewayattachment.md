@@ -4,10 +4,14 @@ title: "GetDirectConnectGatewayAttachment"
 block_external_search_index: true
 ---
 
+
+
 Get information on an EC2 Transit Gateway's attachment to a Direct Connect Gateway.
 
+{{% examples %}}
 ## Example Usage
 
+{{% example %}}
 ### By Transit Gateway and Direct Connect Gateway Identifiers
 
 ```typescript
@@ -20,7 +24,8 @@ const example = pulumi.all([aws_dx_gateway_example.id, aws_ec2_transit_gateway_e
 }, { async: true }));
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ec2_transit_gateway_dx_gateway_attachment.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

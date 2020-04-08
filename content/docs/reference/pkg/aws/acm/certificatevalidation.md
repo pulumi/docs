@@ -4,6 +4,8 @@ title: "CertificateValidation"
 block_external_search_index: true
 ---
 
+
+
 This resource represents a successful validation of an ACM certificate in concert
 with other resources.
 
@@ -14,8 +16,10 @@ deploy the required validation records and wait for validation to complete.
 > **WARNING:** This resource implements a part of the validation workflow. It does not represent a real-world entity in AWS, therefore changing or deleting this resource on its own has no immediate effect.
 
 
+{{% examples %}}
 ## Example Usage
 
+{{% example %}}
 ### DNS Validation with Route 53
 
 ```typescript
@@ -47,6 +51,8 @@ const frontEnd = new aws.lb.Listener("front_end", {
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Alternative Domains DNS Validation with Route 53
 
 ```typescript
@@ -104,6 +110,8 @@ const frontEnd = new aws.lb.Listener("front_end", {
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Email Validation
 
 In this situation, the resource is simply a waiter for manual email approval of ACM certificates.
@@ -121,7 +129,8 @@ const certCertificateValidation = new aws.acm.CertificateValidation("cert", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/acm_certificate_validation.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -679,9 +688,14 @@ The following state arguments are supported:
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

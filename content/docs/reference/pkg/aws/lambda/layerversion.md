@@ -4,11 +4,15 @@ title: "LayerVersion"
 block_external_search_index: true
 ---
 
+
+
 Provides a Lambda Layer Version resource. Lambda Layers allow you to reuse shared bits of code across multiple lambda functions.
 
 For information about Lambda Layers and how to use them, see [AWS Lambda Layers][1]
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -21,6 +25,8 @@ const lambdaLayer = new aws.lambda.LayerVersion("lambda_layer", {
 });
 ```
 
+{{% /example %}}
+{{% /examples %}}
 ## Specifying the Deployment Package
 
 AWS Lambda Layers expect source code to be provided as a deployment package whose structure varies depending on which `compatible_runtimes` this layer specifies.
@@ -32,8 +38,6 @@ package via S3 it may be useful to use the `aws.s3.BucketObject` resource to upl
 
 For larger deployment packages it is recommended by Amazon to upload via S3, since the S3 API has better support for uploading
 large files efficiently.
-
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lambda_layer_version.html.markdown.
 
 
 
@@ -1707,9 +1711,14 @@ The following state arguments are supported:
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

@@ -4,12 +4,16 @@ title: "GetSnapshot"
 block_external_search_index: true
 ---
 
+
+
 Use this data source to get information about a DB Snapshot for use when provisioning DB instances
 
 > **NOTE:** This data source does not apply to snapshots created on Aurora DB clusters.
 See the [`aws.rds.ClusterSnapshot` data source](https://www.terraform.io/docs/providers/aws/d/db_cluster_snapshot.html) for DB Cluster snapshots.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -38,7 +42,8 @@ const dev = new aws.rds.Instance("dev", {
 }, { ignoreChanges: ["snapshotIdentifier"] });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/db_snapshot.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

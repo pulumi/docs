@@ -4,6 +4,8 @@ title: "IAMCustomRole"
 block_external_search_index: true
 ---
 
+
+
 Allows management of a customized Cloud IAM organization role. For more information see
 [the official documentation](https://cloud.google.com/iam/docs/understanding-custom-roles)
 and
@@ -15,6 +17,27 @@ and
  after 7 days, but it can take up to 30 more days (i.e. between 7 and 37 days after deletion) before the role name is
  made available again. This means a deleted role that has been deleted for more than 7 days cannot be changed at all
  by the provider, and new roles cannot share that name.
+ 
+## Example Usage
+
+This snippet creates a customized IAM organization role.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const my_custom_role = new gcp.organizations.IAMCustomRole("my-custom-role", {
+    description: "A description",
+    orgId: "123456789",
+    permissions: [
+        "iam.roles.list",
+        "iam.roles.create",
+        "iam.roles.delete",
+    ],
+    roleId: "myCustomRole",
+    title: "My Custom Role",
+});
+```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_organization_iam_custom_role.html.markdown.
 
@@ -1102,9 +1125,13 @@ List of possible stages is [here](https://cloud.google.com/iam/reference/rest/v1
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

@@ -4,9 +4,13 @@ title: "EventRule"
 block_external_search_index: true
 ---
 
+
+
 Provides a CloudWatch Event Rule resource.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -43,7 +47,8 @@ const defaultTopicPolicy = new aws.sns.TopicPolicy("default", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudwatch_event_rule.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -1357,9 +1362,14 @@ For example, `cron(0 20 * * ? *)` or `rate(5 minutes)`.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

@@ -4,12 +4,16 @@ title: "Gateway"
 block_external_search_index: true
 ---
 
+
+
 Manages an AWS Storage Gateway file, tape, or volume gateway in the provider region.
 
 > NOTE: The Storage Gateway API requires the gateway to be connected to properly return information after activation. If you are receiving `The specified gateway is not connected` errors during resource creation (gateway activation), ensure your gateway instance meets the [Storage Gateway requirements](https://docs.aws.amazon.com/storagegateway/latest/userguide/Requirements.html).
 
+{{% examples %}}
 ## Example Usage
 
+{{% example %}}
 ### File Gateway
 
 ```typescript
@@ -24,6 +28,8 @@ const example = new aws.storagegateway.Gateway("example", {
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Tape Gateway
 
 ```typescript
@@ -40,6 +46,8 @@ const example = new aws.storagegateway.Gateway("example", {
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Volume Gateway (Cached)
 
 ```typescript
@@ -54,6 +62,8 @@ const example = new aws.storagegateway.Gateway("example", {
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Volume Gateway (Stored)
 
 ```typescript
@@ -68,7 +78,8 @@ const example = new aws.storagegateway.Gateway("example", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_gateway.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -1886,9 +1897,14 @@ The following state arguments are supported:
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

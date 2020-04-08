@@ -4,9 +4,31 @@ title: "ApplicationPassword"
 block_external_search_index: true
 ---
 
+
+
 Manages a Password associated with an Application within Azure Active Directory.
 
 > **NOTE:** If you're authenticating using a Service Principal then it must have permissions to both `Read and write all applications` and `Sign in and read user profile` within the `Windows Azure Active Directory` API.
+
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azuread from "@pulumi/azuread";
+
+const exampleApplication = new azuread.Application("example", {
+    availableToOtherTenants: false,
+    homepage: "http://homepage",
+    identifierUris: ["http://uri"],
+    oauth2AllowImplicitFlow: true,
+    replyUrls: ["http://replyurl"],
+});
+const exampleApplicationPassword = new azuread.ApplicationPassword("example", {
+    applicationId: exampleApplication.id,
+    endDate: "2099-01-01T01:02:03Z",
+    value: "VT=uSgbTanZhyz@%nL9Hpd+Tfay_MRV#",
+});
+```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/r/application_password.html.markdown.
 
@@ -1094,9 +1116,13 @@ The following state arguments are supported:
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-azuread">https://github.com/pulumi/pulumi-azuread</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

@@ -4,9 +4,13 @@ title: "GetLayerVersion"
 block_external_search_index: true
 ---
 
+
+
 Provides information about a Lambda Layer Version.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -20,7 +24,8 @@ const existing = pulumi.output(aws.lambda.getLayerVersion({
 }, { async: true }));
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/lambda_layer_version.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

@@ -4,9 +4,13 @@ title: "GetRule"
 block_external_search_index: true
 ---
 
+
+
 `aws.waf.Rule` Retrieves a WAF Rule Resource Id.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -17,7 +21,8 @@ const example = pulumi.output(aws.waf.getRule({
 }, { async: true }));
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/waf_rule.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

@@ -4,11 +4,15 @@ title: "GetZone"
 block_external_search_index: true
 ---
 
+
+
 `aws.route53.Zone` provides details about a specific Route 53 Hosted Zone.
 
 This data source allows to find a Hosted Zone ID given Hosted Zone name and certain search criteria.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 The following example shows how to get a Hosted Zone from its name and from this data how to create a Record Set.
 
@@ -30,7 +34,8 @@ const www = new aws.route53.Record("www", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/route53_zone.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

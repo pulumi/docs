@@ -4,9 +4,13 @@ title: "GetLaunchTemplate"
 block_external_search_index: true
 ---
 
+
+
 Provides information about a Launch Template.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -17,6 +21,8 @@ const defaultLaunchTemplate = pulumi.output(aws.ec2.getLaunchTemplate({
 }, { async: true }));
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Filter
 
 ```typescript
@@ -31,7 +37,8 @@ const test = pulumi.output(aws.ec2.getLaunchTemplate({
 }, { async: true }));
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/launch_template.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -303,6 +310,15 @@ below for more details.
         <span class="property-type"><a href="#getlaunchtemplatefilter">List&lt;Get<wbr>Launch<wbr>Template<wbr>Filter&gt;?</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Hibernation<wbr>Options</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getlaunchtemplatehibernationoption">List&lt;Get<wbr>Launch<wbr>Template<wbr>Hibernation<wbr>Option&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The hibernation options for the instance.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -580,6 +596,15 @@ below for more details.
 
     <dt class="property-"
             title="">
+        <span>Hibernation<wbr>Options</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getlaunchtemplatehibernationoption">[]Get<wbr>Launch<wbr>Template<wbr>Hibernation<wbr>Option</a></span>
+    </dt>
+    <dd>{{% md %}}The hibernation options for the instance.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Iam<wbr>Instance<wbr>Profiles</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getlaunchtemplateiaminstanceprofile">[]Get<wbr>Launch<wbr>Template<wbr>Iam<wbr>Instance<wbr>Profile</a></span>
@@ -854,6 +879,15 @@ below for more details.
 
     <dt class="property-"
             title="">
+        <span>hibernation<wbr>Options</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getlaunchtemplatehibernationoption">Get<wbr>Launch<wbr>Template<wbr>Hibernation<wbr>Option[]</a></span>
+    </dt>
+    <dd>{{% md %}}The hibernation options for the instance.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>iam<wbr>Instance<wbr>Profiles</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getlaunchtemplateiaminstanceprofile">Get<wbr>Launch<wbr>Template<wbr>Iam<wbr>Instance<wbr>Profile[]</a></span>
@@ -1125,6 +1159,15 @@ below for more details.
         <span class="property-type"><a href="#getlaunchtemplatefilter">List[Get<wbr>Launch<wbr>Template<wbr>Filter]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>hibernation_<wbr>options</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getlaunchtemplatehibernationoption">List[Get<wbr>Launch<wbr>Template<wbr>Hibernation<wbr>Option]</a></span>
+    </dt>
+    <dd>{{% md %}}The hibernation options for the instance.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -2017,6 +2060,81 @@ Interfaces below for more details.
     </dt>
     <dd>{{% md %}}Set of values that are accepted for the given filter field. Results will be selected if any given value matches.
 {{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4>Get<wbr>Launch<wbr>Template<wbr>Hibernation<wbr>Option</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLaunchTemplateHibernationOption">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#GetLaunchTemplateHibernationOption">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Configured</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Configured</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>configured</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>configured</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

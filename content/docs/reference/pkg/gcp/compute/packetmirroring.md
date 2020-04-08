@@ -4,6 +4,8 @@ title: "PacketMirroring"
 block_external_search_index: true
 ---
 
+
+
 Packet Mirroring mirrors traffic to and from particular VM instances.
 You can use the collected traffic to help you detect security threats
 and monitor application performance.
@@ -1927,9 +1929,13 @@ If it is not provided, the provider project is used.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

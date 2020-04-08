@@ -4,6 +4,8 @@ title: "ProjectMetadata"
 block_external_search_index: true
 ---
 
+
+
 Authoritatively manages metadata common to all instances for a project in GCE. For more information see
 [the official documentation](https://cloud.google.com/compute/docs/storing-retrieving-metadata)
 and
@@ -13,6 +15,21 @@ and
 Keys unset in config but set on the server will be removed. If you want to manage only single
 key/value pairs within the project metadata rather than the entire set, then use
 google_compute_project_metadata_item.
+
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultProjectMetadata = new gcp.compute.ProjectMetadata("default", {
+    metadata: {
+        "13": "42",
+        fizz: "buzz",
+        foo: "bar",
+    },
+});
+```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_project_metadata.html.markdown.
 
@@ -584,9 +601,13 @@ is not provided, the provider project is used.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

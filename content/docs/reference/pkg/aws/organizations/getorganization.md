@@ -4,10 +4,14 @@ title: "GetOrganization"
 block_external_search_index: true
 ---
 
+
+
 Get information about the organization that the user's account belongs to
 
+{{% examples %}}
 ## Example Usage
 
+{{% example %}}
 ### SNS topic that can be interacted by the organization only
 
 ```typescript
@@ -41,7 +45,8 @@ const snsTopicPolicyTopicPolicy = new aws.sns.TopicPolicy("sns_topic_policy", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/organizations_organization.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

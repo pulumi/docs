@@ -4,6 +4,8 @@ title: "Instance"
 block_external_search_index: true
 ---
 
+
+
 An isolated set of Cloud Spanner resources on which databases can be
 hosted.
 
@@ -13,6 +15,23 @@ To get more information about Instance, see:
 * [API documentation](https://cloud.google.com/spanner/docs/reference/rest/v1/projects.instances)
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/spanner/)
+
+## Example Usage - Spanner Instance Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const example = new gcp.spanner.Instance("example", {
+    config: "regional-us-central1",
+    displayName: "Test Spanner Instance",
+    labels: {
+        foo: "bar",
+    },
+    numNodes: 2,
+});
+```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/spanner_instance.html.markdown.
 
@@ -1148,9 +1167,13 @@ If it is not provided, the provider project is used.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

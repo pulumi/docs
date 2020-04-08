@@ -4,9 +4,13 @@ title: "GetResourceShare"
 block_external_search_index: true
 ---
 
+
+
 `aws.ram.ResourceShare` Retrieve information about a RAM Resource Share.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -18,6 +22,8 @@ const example = pulumi.output(aws.ram.getResourceShare({
 }, { async: true }));
 ```
 
+{{% /example %}}
+{{% /examples %}}
 ## Search by filters
 
 ```typescript
@@ -33,8 +39,6 @@ const tagFilter = pulumi.output(aws.ram.getResourceShare({
     resourceOwner: "SELF",
 }, { async: true }));
 ```
-
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ram_resource_share.html.markdown.
 
 
 

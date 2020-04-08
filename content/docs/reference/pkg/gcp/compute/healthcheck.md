@@ -4,6 +4,8 @@ title: "HealthCheck"
 block_external_search_index: true
 ---
 
+
+
 Health Checks determine whether instances are responsive and able to do work.
 They are an important part of a comprehensive load balancing configuration,
 as they enable monitoring instances behind load balancers.
@@ -22,6 +24,195 @@ To get more information about HealthCheck, see:
 * [API documentation](https://cloud.google.com/compute/docs/reference/rest/v1/healthChecks)
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/load-balancing/docs/health-checks)
+
+## Example Usage - Health Check Tcp
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const tcp_health_check = new gcp.compute.HealthCheck("tcp-health-check", {
+    checkIntervalSec: 1,
+    tcpHealthCheck: {
+        port: 80,
+    },
+    timeoutSec: 1,
+});
+```
+## Example Usage - Health Check Tcp Full
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const tcp_health_check = new gcp.compute.HealthCheck("tcp-health-check", {
+    checkIntervalSec: 1,
+    description: "Health check via tcp",
+    healthyThreshold: 4,
+    tcpHealthCheck: {
+        portName: "health-check-port",
+        portSpecification: "USE_NAMED_PORT",
+        proxyHeader: "NONE",
+        request: "ARE YOU HEALTHY?",
+        response: "I AM HEALTHY",
+    },
+    timeoutSec: 1,
+    unhealthyThreshold: 5,
+});
+```
+## Example Usage - Health Check Ssl
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const ssl_health_check = new gcp.compute.HealthCheck("ssl-health-check", {
+    checkIntervalSec: 1,
+    sslHealthCheck: {
+        port: 443,
+    },
+    timeoutSec: 1,
+});
+```
+## Example Usage - Health Check Ssl Full
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const ssl_health_check = new gcp.compute.HealthCheck("ssl-health-check", {
+    checkIntervalSec: 1,
+    description: "Health check via ssl",
+    healthyThreshold: 4,
+    sslHealthCheck: {
+        portName: "health-check-port",
+        portSpecification: "USE_NAMED_PORT",
+        proxyHeader: "NONE",
+        request: "ARE YOU HEALTHY?",
+        response: "I AM HEALTHY",
+    },
+    timeoutSec: 1,
+    unhealthyThreshold: 5,
+});
+```
+## Example Usage - Health Check Http
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const http_health_check = new gcp.compute.HealthCheck("http-health-check", {
+    checkIntervalSec: 1,
+    httpHealthCheck: {
+        port: 80,
+    },
+    timeoutSec: 1,
+});
+```
+## Example Usage - Health Check Http Full
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const http_health_check = new gcp.compute.HealthCheck("http-health-check", {
+    checkIntervalSec: 1,
+    description: "Health check via http",
+    healthyThreshold: 4,
+    httpHealthCheck: {
+        host: "1.2.3.4",
+        portName: "health-check-port",
+        portSpecification: "USE_NAMED_PORT",
+        proxyHeader: "NONE",
+        requestPath: "/mypath",
+        response: "I AM HEALTHY",
+    },
+    timeoutSec: 1,
+    unhealthyThreshold: 5,
+});
+```
+## Example Usage - Health Check Https
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const https_health_check = new gcp.compute.HealthCheck("https-health-check", {
+    checkIntervalSec: 1,
+    httpsHealthCheck: {
+        port: 443,
+    },
+    timeoutSec: 1,
+});
+```
+## Example Usage - Health Check Https Full
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const https_health_check = new gcp.compute.HealthCheck("https-health-check", {
+    checkIntervalSec: 1,
+    description: "Health check via https",
+    healthyThreshold: 4,
+    httpsHealthCheck: {
+        host: "1.2.3.4",
+        portName: "health-check-port",
+        portSpecification: "USE_NAMED_PORT",
+        proxyHeader: "NONE",
+        requestPath: "/mypath",
+        response: "I AM HEALTHY",
+    },
+    timeoutSec: 1,
+    unhealthyThreshold: 5,
+});
+```
+## Example Usage - Health Check Http2
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const http2_health_check = new gcp.compute.HealthCheck("http2-health-check", {
+    checkIntervalSec: 1,
+    http2HealthCheck: {
+        port: 443,
+    },
+    timeoutSec: 1,
+});
+```
+## Example Usage - Health Check Http2 Full
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const http2_health_check = new gcp.compute.HealthCheck("http2-health-check", {
+    checkIntervalSec: 1,
+    description: "Health check via http2",
+    healthyThreshold: 4,
+    http2HealthCheck: {
+        host: "1.2.3.4",
+        portName: "health-check-port",
+        portSpecification: "USE_NAMED_PORT",
+        proxyHeader: "NONE",
+        requestPath: "/mypath",
+        response: "I AM HEALTHY",
+    },
+    timeoutSec: 1,
+    unhealthyThreshold: 5,
+});
+```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_health_check.html.markdown.
 
@@ -3213,9 +3404,13 @@ have greater value than checkIntervalSec.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

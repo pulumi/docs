@@ -4,9 +4,27 @@ title: "Job"
 block_external_search_index: true
 ---
 
+
+
 Creates a job on Dataflow, which is an implementation of Apache Beam running on Google Compute Engine. For more information see
 the official documentation for
 [Beam](https://beam.apache.org) and [Dataflow](https://cloud.google.com/dataflow/).
+
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const bigDataJob = new gcp.dataflow.Job("big_data_job", {
+    parameters: {
+        baz: "qux",
+        foo: "bar",
+    },
+    tempGcsLocation: "gs://my-bucket/tmp_dir",
+    templateGcsPath: "gs://my-bucket/templates/template_file",
+});
+```
 
 ## Note on "destroy" / "apply"
 
@@ -2218,9 +2236,13 @@ Unless explicitly set in config, these labels will be ignored to prevent diffs o
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

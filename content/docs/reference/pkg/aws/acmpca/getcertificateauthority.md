@@ -4,9 +4,13 @@ title: "GetCertificateAuthority"
 block_external_search_index: true
 ---
 
+
+
 Get information on a AWS Certificate Manager Private Certificate Authority (ACM PCA Certificate Authority).
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -17,7 +21,8 @@ const example = pulumi.output(aws.acmpca.getCertificateAuthority({
 }, { async: true }));
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/acmpca_certificate_authority.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

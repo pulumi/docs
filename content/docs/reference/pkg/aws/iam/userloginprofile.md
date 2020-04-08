@@ -4,11 +4,15 @@ title: "UserLoginProfile"
 block_external_search_index: true
 ---
 
+
+
 Manages an IAM User Login Profile with limited support for password creation during this provider resource creation. Uses PGP to encrypt the password for safe transport to the user. PGP keys can be obtained from Keybase.
 
 > To reset an IAM User login password via this provider, you can use delete and recreate this resource or change any of the arguments.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -26,7 +30,8 @@ const exampleUserLoginProfile = new aws.iam.UserLoginProfile("example", {
 export const password = exampleUserLoginProfile.encryptedPassword;
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iam_user_login_profile.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -944,9 +949,14 @@ The following state arguments are supported:
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

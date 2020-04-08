@@ -4,9 +4,13 @@ title: "GetIpset"
 block_external_search_index: true
 ---
 
+
+
 `aws.waf.IpSet` Retrieves a WAF IP Set Resource Id.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -17,7 +21,8 @@ const example = pulumi.output(aws.waf.getIpset({
 }, { async: true }));
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/waf_ipset.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

@@ -4,6 +4,8 @@ title: "URLMap"
 block_external_search_index: true
 ---
 
+
+
 UrlMaps are used to route requests to a backend service based on rules
 that you define for the host and path of an incoming URL.
 
@@ -9643,9 +9645,13 @@ You can specify a maximum of 100 tests per UrlMap.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

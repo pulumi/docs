@@ -4,9 +4,13 @@ title: "IpSet"
 block_external_search_index: true
 ---
 
+
+
 Provides a WAF IPSet Resource
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -26,7 +30,8 @@ const ipset = new aws.waf.IpSet("ipset", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/waf_ipset.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -780,9 +785,14 @@ e.g. `192.0.2.44/32` or `1111:0000:0000:0000:0000:0000:0000:0000/64`
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

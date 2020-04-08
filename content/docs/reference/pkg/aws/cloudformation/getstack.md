@@ -4,10 +4,14 @@ title: "GetStack"
 block_external_search_index: true
 ---
 
+
+
 The CloudFormation Stack data source allows access to stack
 outputs and other useful data including the template body.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -26,7 +30,8 @@ const web = new aws.ec2.Instance("web", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/cloudformation_stack.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

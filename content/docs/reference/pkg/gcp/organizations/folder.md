@@ -4,6 +4,8 @@ title: "Folder"
 block_external_search_index: true
 ---
 
+
+
 Allows management of a Google Cloud Platform folder. For more information see 
 [the official documentation](https://cloud.google.com/resource-manager/docs/creating-managing-folders)
 and 
@@ -824,9 +826,13 @@ Must be of the form `folders/{folder_id}` or `organizations/{org_id}`.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

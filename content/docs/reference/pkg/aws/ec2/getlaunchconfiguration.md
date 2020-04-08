@@ -4,9 +4,13 @@ title: "GetLaunchConfiguration"
 block_external_search_index: true
 ---
 
+
+
 Provides information about a Launch Configuration.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -17,7 +21,8 @@ const ubuntu = pulumi.output(aws.ec2.getLaunchConfiguration({
 }, { async: true }));
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/launch_configuration.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

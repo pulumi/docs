@@ -4,6 +4,8 @@ title: "HttpsHealthCheck"
 block_external_search_index: true
 ---
 
+
+
 An HttpsHealthCheck resource. This resource defines a template for how
 individual VMs should be checked for health, via HTTPS.
 
@@ -20,6 +22,20 @@ To get more information about HttpsHealthCheck, see:
 * [API documentation](https://cloud.google.com/compute/docs/reference/v1/httpsHealthChecks)
 * How-to Guides
     * [Adding Health Checks](https://cloud.google.com/compute/docs/load-balancing/health-checks#legacy_health_checks)
+
+## Example Usage - Https Health Check Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultHttpsHealthCheck = new gcp.compute.HttpsHealthCheck("default", {
+    checkIntervalSec: 1,
+    requestPath: "/health_check",
+    timeoutSec: 1,
+});
+```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_https_health_check.html.markdown.
 
@@ -1659,9 +1675,13 @@ have greater value than checkIntervalSec.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

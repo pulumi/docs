@@ -4,6 +4,8 @@ title: "Subnet"
 block_external_search_index: true
 ---
 
+
+
 Manages a subnet. Subnets represent network segments within the IP space defined by the virtual network.
 
 > **NOTE on Virtual Networks and Subnet's:** This provider currently
@@ -1451,9 +1453,13 @@ The following state arguments are supported:
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

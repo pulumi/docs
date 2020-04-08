@@ -4,6 +4,8 @@ title: "AttachedDisk"
 block_external_search_index: true
 ---
 
+
+
 Persistent disks can be attached to a compute instance using the `attached_disk`
 section within the compute instance configuration.
 However there may be situations where managing the attached disks via the compute
@@ -937,9 +939,13 @@ The following state arguments are supported:
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

@@ -18,94 +18,97 @@ A Pulumi package for creating and managing Microsoft Azure cloud resources.
 
 <h3>Modules</h3>
 <ul class="api">
-    <li><a href="analysisservices/"><span class="symbol module"></span>analysisservices</a></li>
-    <li><a href="apimanagement/"><span class="symbol module"></span>apimanagement</a></li>
-    <li><a href="appconfiguration/"><span class="symbol module"></span>appconfiguration</a></li>
-    <li><a href="appinsights/"><span class="symbol module"></span>appinsights</a></li>
-    <li><a href="appservice/"><span class="symbol module"></span>appservice</a></li>
-    <li><a href="authorization/"><span class="symbol module"></span>authorization</a></li>
-    <li><a href="automation/"><span class="symbol module"></span>automation</a></li>
-    <li><a href="backup/"><span class="symbol module"></span>backup</a></li>
-    <li><a href="batch/"><span class="symbol module"></span>batch</a></li>
-    <li><a href="bot/"><span class="symbol module"></span>bot</a></li>
-    <li><a href="cdn/"><span class="symbol module"></span>cdn</a></li>
-    <li><a href="cognitive/"><span class="symbol module"></span>cognitive</a></li>
-    <li><a href="compute/"><span class="symbol module"></span>compute</a></li>
-    <li><a href="containerservice/"><span class="symbol module"></span>containerservice</a></li>
-    <li><a href="core/"><span class="symbol module"></span>core</a></li>
-    <li><a href="cosmosdb/"><span class="symbol module"></span>cosmosdb</a></li>
-    <li><a href="costmanagement/"><span class="symbol module"></span>costmanagement</a></li>
-    <li><a href="dashboard/"><span class="symbol module"></span>dashboard</a></li>
-    <li><a href="databasemigration/"><span class="symbol module"></span>databasemigration</a></li>
-    <li><a href="databricks/"><span class="symbol module"></span>databricks</a></li>
-    <li><a href="datafactory/"><span class="symbol module"></span>datafactory</a></li>
-    <li><a href="datalake/"><span class="symbol module"></span>datalake</a></li>
-    <li><a href="devspace/"><span class="symbol module"></span>devspace</a></li>
-    <li><a href="devtest/"><span class="symbol module"></span>devtest</a></li>
-    <li><a href="dns/"><span class="symbol module"></span>dns</a></li>
-    <li><a href="eventgrid/"><span class="symbol module"></span>eventgrid</a></li>
-    <li><a href="eventhub/"><span class="symbol module"></span>eventhub</a></li>
-    <li><a href="frontdoor/"><span class="symbol module"></span>frontdoor</a></li>
-    <li><a href="hdinsight/"><span class="symbol module"></span>hdinsight</a></li>
-    <li><a href="healthcare/"><span class="symbol module"></span>healthcare</a></li>
-    <li><a href="hpc/"><span class="symbol module"></span>hpc</a></li>
-    <li><a href="iot/"><span class="symbol module"></span>iot</a></li>
-    <li><a href="iotcentral/"><span class="symbol module"></span>iotcentral</a></li>
-    <li><a href="keyvault/"><span class="symbol module"></span>keyvault</a></li>
-    <li><a href="kusto/"><span class="symbol module"></span>kusto</a></li>
-    <li><a href="lb/"><span class="symbol module"></span>lb</a></li>
-    <li><a href="loganalytics/"><span class="symbol module"></span>loganalytics</a></li>
-    <li><a href="logicapps/"><span class="symbol module"></span>logicapps</a></li>
-    <li><a href="machinelearning/"><span class="symbol module"></span>machinelearning</a></li>
-    <li><a href="management/"><span class="symbol module"></span>management</a></li>
-    <li><a href="managementgroups/"><span class="symbol module"></span>managementgroups</a></li>
-    <li><a href="managementresource/"><span class="symbol module"></span>managementresource</a></li>
-    <li><a href="maps/"><span class="symbol module"></span>maps</a></li>
-    <li><a href="mariadb/"><span class="symbol module"></span>mariadb</a></li>
-    <li><a href="marketplace/"><span class="symbol module"></span>marketplace</a></li>
-    <li><a href="mediaservices/"><span class="symbol module"></span>mediaservices</a></li>
-    <li><a href="mixedreality/"><span class="symbol module"></span>mixedreality</a></li>
-    <li><a href="monitoring/"><span class="symbol module"></span>monitoring</a></li>
-    <li><a href="msi/"><span class="symbol module"></span>msi</a></li>
-    <li><a href="mssql/"><span class="symbol module"></span>mssql</a></li>
-    <li><a href="mysql/"><span class="symbol module"></span>mysql</a></li>
-    <li><a href="netapp/"><span class="symbol module"></span>netapp</a></li>
-    <li><a href="network/"><span class="symbol module"></span>network</a></li>
-    <li><a href="notificationhub/"><span class="symbol module"></span>notificationhub</a></li>
-    <li><a href="operationalinsights/"><span class="symbol module"></span>operationalinsights</a></li>
-    <li><a href="policy/"><span class="symbol module"></span>policy</a></li>
-    <li><a href="postgresql/"><span class="symbol module"></span>postgresql</a></li>
-    <li><a href="powerbi/"><span class="symbol module"></span>powerbi</a></li>
-    <li><a href="privatedns/"><span class="symbol module"></span>privatedns</a></li>
-    <li><a href="privatelink/"><span class="symbol module"></span>privatelink</a></li>
-    <li><a href="proximity/"><span class="symbol module"></span>proximity</a></li>
-    <li><a href="recoveryservices/"><span class="symbol module"></span>recoveryservices</a></li>
-    <li><a href="redis/"><span class="symbol module"></span>redis</a></li>
-    <li><a href="relay/"><span class="symbol module"></span>relay</a></li>
-    <li><a href="role/"><span class="symbol module"></span>role</a></li>
-    <li><a href="search/"><span class="symbol module"></span>search</a></li>
-    <li><a href="securitycenter/"><span class="symbol module"></span>securitycenter</a></li>
-    <li><a href="servicebus/"><span class="symbol module"></span>servicebus</a></li>
-    <li><a href="servicefabric/"><span class="symbol module"></span>servicefabric</a></li>
-    <li><a href="signalr/"><span class="symbol module"></span>signalr</a></li>
-    <li><a href="siterecovery/"><span class="symbol module"></span>siterecovery</a></li>
-    <li><a href="sql/"><span class="symbol module"></span>sql</a></li>
-    <li><a href="storage/"><span class="symbol module"></span>storage</a></li>
-    <li><a href="streamanalytics/"><span class="symbol module"></span>streamanalytics</a></li>
-    <li><a href="trafficmanager/"><span class="symbol module"></span>trafficmanager</a></li>
-    <li><a href="waf/"><span class="symbol module"></span>waf</a></li>
+    <li><a href="analysisservices/" title="analysisservices"><span class="symbol module"></span>analysisservices</a></li>
+    <li><a href="apimanagement/" title="apimanagement"><span class="symbol module"></span>apimanagement</a></li>
+    <li><a href="appconfiguration/" title="appconfiguration"><span class="symbol module"></span>appconfiguration</a></li>
+    <li><a href="appinsights/" title="appinsights"><span class="symbol module"></span>appinsights</a></li>
+    <li><a href="appplatform/" title="appplatform"><span class="symbol module"></span>appplatform</a></li>
+    <li><a href="appservice/" title="appservice"><span class="symbol module"></span>appservice</a></li>
+    <li><a href="authorization/" title="authorization"><span class="symbol module"></span>authorization</a></li>
+    <li><a href="automation/" title="automation"><span class="symbol module"></span>automation</a></li>
+    <li><a href="backup/" title="backup"><span class="symbol module"></span>backup</a></li>
+    <li><a href="batch/" title="batch"><span class="symbol module"></span>batch</a></li>
+    <li><a href="bot/" title="bot"><span class="symbol module"></span>bot</a></li>
+    <li><a href="cdn/" title="cdn"><span class="symbol module"></span>cdn</a></li>
+    <li><a href="cognitive/" title="cognitive"><span class="symbol module"></span>cognitive</a></li>
+    <li><a href="compute/" title="compute"><span class="symbol module"></span>compute</a></li>
+    <li><a href="containerservice/" title="containerservice"><span class="symbol module"></span>containerservice</a></li>
+    <li><a href="core/" title="core"><span class="symbol module"></span>core</a></li>
+    <li><a href="cosmosdb/" title="cosmosdb"><span class="symbol module"></span>cosmosdb</a></li>
+    <li><a href="costmanagement/" title="costmanagement"><span class="symbol module"></span>costmanagement</a></li>
+    <li><a href="dashboard/" title="dashboard"><span class="symbol module"></span>dashboard</a></li>
+    <li><a href="databasemigration/" title="databasemigration"><span class="symbol module"></span>databasemigration</a></li>
+    <li><a href="databricks/" title="databricks"><span class="symbol module"></span>databricks</a></li>
+    <li><a href="datafactory/" title="datafactory"><span class="symbol module"></span>datafactory</a></li>
+    <li><a href="datalake/" title="datalake"><span class="symbol module"></span>datalake</a></li>
+    <li><a href="devspace/" title="devspace"><span class="symbol module"></span>devspace</a></li>
+    <li><a href="devtest/" title="devtest"><span class="symbol module"></span>devtest</a></li>
+    <li><a href="dns/" title="dns"><span class="symbol module"></span>dns</a></li>
+    <li><a href="eventgrid/" title="eventgrid"><span class="symbol module"></span>eventgrid</a></li>
+    <li><a href="eventhub/" title="eventhub"><span class="symbol module"></span>eventhub</a></li>
+    <li><a href="frontdoor/" title="frontdoor"><span class="symbol module"></span>frontdoor</a></li>
+    <li><a href="hdinsight/" title="hdinsight"><span class="symbol module"></span>hdinsight</a></li>
+    <li><a href="healthcare/" title="healthcare"><span class="symbol module"></span>healthcare</a></li>
+    <li><a href="hpc/" title="hpc"><span class="symbol module"></span>hpc</a></li>
+    <li><a href="iot/" title="iot"><span class="symbol module"></span>iot</a></li>
+    <li><a href="iotcentral/" title="iotcentral"><span class="symbol module"></span>iotcentral</a></li>
+    <li><a href="keyvault/" title="keyvault"><span class="symbol module"></span>keyvault</a></li>
+    <li><a href="kusto/" title="kusto"><span class="symbol module"></span>kusto</a></li>
+    <li><a href="lb/" title="lb"><span class="symbol module"></span>lb</a></li>
+    <li><a href="loganalytics/" title="loganalytics"><span class="symbol module"></span>loganalytics</a></li>
+    <li><a href="logicapps/" title="logicapps"><span class="symbol module"></span>logicapps</a></li>
+    <li><a href="machinelearning/" title="machinelearning"><span class="symbol module"></span>machinelearning</a></li>
+    <li><a href="managedapplication/" title="managedapplication"><span class="symbol module"></span>managedapplication</a></li>
+    <li><a href="management/" title="management"><span class="symbol module"></span>management</a></li>
+    <li><a href="managementgroups/" title="managementgroups"><span class="symbol module"></span>managementgroups</a></li>
+    <li><a href="managementresource/" title="managementresource"><span class="symbol module"></span>managementresource</a></li>
+    <li><a href="maps/" title="maps"><span class="symbol module"></span>maps</a></li>
+    <li><a href="mariadb/" title="mariadb"><span class="symbol module"></span>mariadb</a></li>
+    <li><a href="marketplace/" title="marketplace"><span class="symbol module"></span>marketplace</a></li>
+    <li><a href="mediaservices/" title="mediaservices"><span class="symbol module"></span>mediaservices</a></li>
+    <li><a href="mixedreality/" title="mixedreality"><span class="symbol module"></span>mixedreality</a></li>
+    <li><a href="monitoring/" title="monitoring"><span class="symbol module"></span>monitoring</a></li>
+    <li><a href="msi/" title="msi"><span class="symbol module"></span>msi</a></li>
+    <li><a href="mssql/" title="mssql"><span class="symbol module"></span>mssql</a></li>
+    <li><a href="mysql/" title="mysql"><span class="symbol module"></span>mysql</a></li>
+    <li><a href="netapp/" title="netapp"><span class="symbol module"></span>netapp</a></li>
+    <li><a href="network/" title="network"><span class="symbol module"></span>network</a></li>
+    <li><a href="notificationhub/" title="notificationhub"><span class="symbol module"></span>notificationhub</a></li>
+    <li><a href="operationalinsights/" title="operationalinsights"><span class="symbol module"></span>operationalinsights</a></li>
+    <li><a href="policy/" title="policy"><span class="symbol module"></span>policy</a></li>
+    <li><a href="postgresql/" title="postgresql"><span class="symbol module"></span>postgresql</a></li>
+    <li><a href="powerbi/" title="powerbi"><span class="symbol module"></span>powerbi</a></li>
+    <li><a href="privatedns/" title="privatedns"><span class="symbol module"></span>privatedns</a></li>
+    <li><a href="privatelink/" title="privatelink"><span class="symbol module"></span>privatelink</a></li>
+    <li><a href="proximity/" title="proximity"><span class="symbol module"></span>proximity</a></li>
+    <li><a href="recoveryservices/" title="recoveryservices"><span class="symbol module"></span>recoveryservices</a></li>
+    <li><a href="redis/" title="redis"><span class="symbol module"></span>redis</a></li>
+    <li><a href="relay/" title="relay"><span class="symbol module"></span>relay</a></li>
+    <li><a href="role/" title="role"><span class="symbol module"></span>role</a></li>
+    <li><a href="search/" title="search"><span class="symbol module"></span>search</a></li>
+    <li><a href="securitycenter/" title="securitycenter"><span class="symbol module"></span>securitycenter</a></li>
+    <li><a href="servicebus/" title="servicebus"><span class="symbol module"></span>servicebus</a></li>
+    <li><a href="servicefabric/" title="servicefabric"><span class="symbol module"></span>servicefabric</a></li>
+    <li><a href="signalr/" title="signalr"><span class="symbol module"></span>signalr</a></li>
+    <li><a href="siterecovery/" title="siterecovery"><span class="symbol module"></span>siterecovery</a></li>
+    <li><a href="sql/" title="sql"><span class="symbol module"></span>sql</a></li>
+    <li><a href="storage/" title="storage"><span class="symbol module"></span>storage</a></li>
+    <li><a href="streamanalytics/" title="streamanalytics"><span class="symbol module"></span>streamanalytics</a></li>
+    <li><a href="trafficmanager/" title="trafficmanager"><span class="symbol module"></span>trafficmanager</a></li>
+    <li><a href="waf/" title="waf"><span class="symbol module"></span>waf</a></li>
 </ul>
 
 <h3>Resources</h3>
 <ul class="api">
-    <li><a href="provider"><span class="symbol resource"></span>Provider</a></li>
+    <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
 </ul>
 
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
-	<dd>https://github.com/pulumi/pulumi-azure</dd>
+	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
+    
 </dl>
 

@@ -4,6 +4,8 @@ title: "VpnGatewayAttachment"
 block_external_search_index: true
 ---
 
+
+
 Provides a Virtual Private Gateway attachment resource, allowing for an existing
 hardware VPN gateway to be attached and/or detached from a VPC.
 
@@ -11,7 +13,9 @@ hardware VPN gateway to be attached and/or detached from a VPC.
 resource can also automatically attach the Virtual Private Gateway it creates
 to an existing VPC by setting the `vpc_id` attribute accordingly.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -35,7 +39,8 @@ See [Virtual Private Cloud](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuid
 and [Virtual Private Gateway](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_VPN.html) user
 guides for more information.
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpn_gateway_attachment.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -593,9 +598,14 @@ The following state arguments are supported:
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

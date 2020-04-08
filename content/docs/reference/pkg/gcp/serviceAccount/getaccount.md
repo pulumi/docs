@@ -4,8 +4,21 @@ title: "GetAccount"
 block_external_search_index: true
 ---
 
+
+
 Get the service account from a project. For more information see
 the official [API](https://cloud.google.com/compute/docs/access/service-accounts) documentation.
+
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const objectViewer = pulumi.output(gcp.serviceAccount.getAccount({
+    accountId: "object-viewer",
+}, { async: true }));
+```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/datasource_google_service_account.html.markdown.
 

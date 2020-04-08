@@ -4,6 +4,8 @@ title: "PeeringConnectionOptions"
 block_external_search_index: true
 ---
 
+
+
 Provides a resource to manage VPC peering connection options.
 
 > **NOTE on VPC Peering Connections and VPC Peering Connection Options:** This provider provides
@@ -96,8 +98,6 @@ const accepterPeeringConnectionOptions = new aws.ec2.PeeringConnectionOptions("a
     vpcPeeringConnectionId: peerVpcPeeringConnectionAccepter.id,
 }, { provider: accepter });
 ```
-
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_peering_connection_options.html.markdown.
 
 
 
@@ -1158,9 +1158,14 @@ connection. This option is not supported for inter-region VPC peering.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

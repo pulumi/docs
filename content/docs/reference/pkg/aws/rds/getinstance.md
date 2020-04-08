@@ -4,9 +4,13 @@ title: "GetInstance"
 block_external_search_index: true
 ---
 
+
+
 Use this data source to get information about an RDS instance
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -17,7 +21,8 @@ const database = pulumi.output(aws.rds.getInstance({
 }, { async: true }));
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/db_instance.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

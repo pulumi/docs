@@ -4,6 +4,8 @@ title: "GetResourcePolicy"
 block_external_search_index: true
 ---
 
+
+
 Provide access to a Resource Policy's attributes. For more information see [the official documentation](https://cloud.google.com/compute/docs/disks/scheduled-snapshots) or the [API](https://cloud.google.com/compute/docs/reference/rest/beta/resourcePolicies).
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/google_compute_resource_policy.html.markdown.

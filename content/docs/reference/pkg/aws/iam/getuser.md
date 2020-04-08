@@ -4,11 +4,15 @@ title: "GetUser"
 block_external_search_index: true
 ---
 
+
+
 This data source can be used to fetch information about a specific
 IAM user. By using this data source, you can reference IAM user
 properties without having to hard code ARNs or unique IDs as input.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -19,7 +23,8 @@ const example = pulumi.output(aws.iam.getUser({
 }, { async: true }));
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/iam_user.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

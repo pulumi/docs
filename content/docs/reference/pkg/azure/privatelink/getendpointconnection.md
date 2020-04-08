@@ -4,6 +4,8 @@ title: "GetEndpointConnection"
 block_external_search_index: true
 ---
 
+
+
 Use this data source to access the connection status information about an existing Private Endpoint Connection.
 
 > **NOTE** Private Endpoint is currently in Public Preview.

@@ -4,9 +4,13 @@ title: "Parameter"
 block_external_search_index: true
 ---
 
+
+
 Provides an SSM Parameter resource.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 To store a basic string parameter:
 
@@ -51,7 +55,8 @@ const secret = new aws.ssm.Parameter("secret", {
 > **Note:** The unencrypted value of a SecureString will be stored in the raw state as plain-text.
 [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ssm_parameter.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -1545,9 +1550,14 @@ The following state arguments are supported:
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

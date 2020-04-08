@@ -4,6 +4,8 @@ title: "RegionInstanceGroupManager"
 block_external_search_index: true
 ---
 
+
+
 The Google Compute Engine Regional Instance Group Manager API creates and manages pools
 of homogeneous Compute Engine virtual machine instances from a common instance
 template. For more information, see [the official documentation](https://cloud.google.com/compute/docs/instance-groups/distributing-instances-with-regional-instance-groups)
@@ -3029,9 +3031,13 @@ one of which has a `target_size.percent` of `60` will create 2 instances of that
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

@@ -4,9 +4,13 @@ title: "GetResolverRule"
 block_external_search_index: true
 ---
 
+
+
 `aws.route53.ResolverRule` provides details about a specific Route53 Resolver rule.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 The following example shows how to get a Route53 Resolver rule based on its associated domain name and rule type.
 
@@ -20,7 +24,8 @@ const example = pulumi.output(aws.route53.getResolverRule({
 }, { async: true }));
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/route53_resolver_rule.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

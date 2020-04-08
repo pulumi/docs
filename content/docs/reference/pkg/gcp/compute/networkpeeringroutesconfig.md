@@ -4,6 +4,8 @@ title: "NetworkPeeringRoutesConfig"
 block_external_search_index: true
 ---
 
+
+
 Manage a network peering's route settings without managing the peering as
 a whole. This resource is primarily intended for use with GCP-generated
 peerings that shouldn't otherwise be managed by other tools. Deleting this
@@ -910,9 +912,13 @@ If it is not provided, the provider project is used.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

@@ -4,12 +4,27 @@ title: "AccountIamMember"
 block_external_search_index: true
 ---
 
+
+
 Allows creation and management of a single member for a single binding within
 the IAM policy for an existing Google Cloud Platform Billing Account.
 
 > **Note:** This resource __must not__ be used in conjunction with
    `gcp.billing.AccountIamBinding` for the __same role__ or they will fight over
    what your policy should be.
+
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const binding = new gcp.billing.AccountIamMember("binding", {
+    billingAccountId: "00AA00-000AAA-00AA0A",
+    member: "user:alice@gmail.com",
+    role: "roles/billing.viewer",
+});
+```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_billing_account_iam_member.html.markdown.
 
@@ -989,9 +1004,13 @@ The following state arguments are supported:
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

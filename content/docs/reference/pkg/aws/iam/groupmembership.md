@@ -4,6 +4,8 @@ title: "GroupMembership"
 block_external_search_index: true
 ---
 
+
+
 > **WARNING:** Multiple aws.iam.GroupMembership resources with the same group name will produce inconsistent behavior!
 
 Provides a top level resource to manage IAM Group membership for IAM Users. For
@@ -13,7 +15,9 @@ more information on managing IAM Groups or IAM Users, see [IAM Groups][1] or
 > **Note:** `aws.iam.GroupMembership` will conflict with itself if used more than once with the same group. To non-exclusively manage the users in a group, see the
 [`aws.iam.UserGroupMembership` resource][3].
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -31,7 +35,8 @@ const team = new aws.iam.GroupMembership("team", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iam_group_membership.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -697,9 +702,14 @@ The following state arguments are supported:
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

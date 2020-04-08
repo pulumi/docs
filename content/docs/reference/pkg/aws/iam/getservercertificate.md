@@ -4,9 +4,13 @@ title: "GetServerCertificate"
 block_external_search_index: true
 ---
 
+
+
 Use this data source to lookup information about IAM Server Certificates.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -27,12 +31,12 @@ const elb = new aws.elb.LoadBalancer("elb", {
 });
 ```
 
+{{% /example %}}
+{{% /examples %}}
 ## Import 
 
 The import function will read in certificate body, certificate chain (if it exists), id, name, path, and arn. 
 It will not retrieve the private key which is not available through the AWS API.   
-
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/iam_server_certificate.html.markdown.
 
 
 

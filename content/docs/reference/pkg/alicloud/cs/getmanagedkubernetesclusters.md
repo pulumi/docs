@@ -1,0 +1,1189 @@
+
+---
+title: "GetManagedKubernetesClusters"
+block_external_search_index: true
+---
+
+
+
+This data source provides a list Container Service Managed Kubernetes Clusters on Alibaba Cloud.
+
+> **NOTE:** Available in v1.35.0+
+
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+// Declare the data source
+const k8sClusters = pulumi.output(alicloud.cs.getManagedKubernetesClusters({
+    nameRegex: "my-first-k8s",
+    outputFile: "my-first-k8s-json",
+}, { async: true }));
+
+export const output = k8sClusters.clusters;
+```
+
+> This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/cs_managed_kubernetes_clusters.html.markdown.
+
+
+
+
+
+## Using GetManagedKubernetesClusters
+
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+
+
+{{% choosable language typescript %}}
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getManagedKubernetesClusters<span class="p">(</span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cs/#GetManagedKubernetesClustersArgs">GetManagedKubernetesClustersArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cs/#GetManagedKubernetesClustersResult">GetManagedKubernetesClustersResult</a></span>></span></code></pre></div>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_managed_kubernetes_clusters(</span>enable_details=None<span class="p">, </span>ids=None<span class="p">, </span>name_regex=None<span class="p">, </span>output_file=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupManagedKubernetesClusters<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/cs?tab=doc#LookupManagedKubernetesClustersArgs">LookupManagedKubernetesClustersArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/cs?tab=doc#LookupManagedKubernetesClustersResult">LookupManagedKubernetesClustersResult</a></span>, error)</span></code></pre></div>
+{{% /choosable %}}
+
+
+{{% choosable language csharp %}}
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetManagedKubernetesClusters </span><span class="p">{</span><span class="k">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Cs.GetManagedKubernetesClustersResult.html">GetManagedKubernetesClustersResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.CS.GetManagedKubernetesClustersArgs.html">GetManagedKubernetesClustersArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+}</span></code></pre></div>
+{{% /choosable %}}
+
+
+
+The following arguments are supported:
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Enable<wbr>Details</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ids</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List<string>?</span>
+    </dt>
+    <dd>{{% md %}}Cluster IDs to filter.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name<wbr>Regex</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}A regex string to filter results by cluster name.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Output<wbr>File</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Enable<wbr>Details</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ids</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Cluster IDs to filter.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name<wbr>Regex</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}A regex string to filter results by cluster name.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Output<wbr>File</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>enable<wbr>Details</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>ids</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]?</span>
+    </dt>
+    <dd>{{% md %}}Cluster IDs to filter.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name<wbr>Regex</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}A regex string to filter results by cluster name.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>output<wbr>File</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>enable_<wbr>details</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>ids</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}Cluster IDs to filter.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name_<wbr>regex</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A regex string to filter results by cluster name.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>output_<wbr>file</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+
+## GetManagedKubernetesClusters Result
+
+The following output properties are available:
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Clusters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getmanagedkubernetesclusterscluster">List&lt;Get<wbr>Managed<wbr>Kubernetes<wbr>Clusters<wbr>Cluster&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of matched Kubernetes clusters. Each element contains the following attributes:
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Enable<wbr>Details</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Ids</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List<string></span>
+    </dt>
+    <dd>{{% md %}}A list of matched Kubernetes clusters' ids.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Name<wbr>Regex</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Names</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List<string></span>
+    </dt>
+    <dd>{{% md %}}A list of matched Kubernetes clusters' names.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Output<wbr>File</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Clusters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getmanagedkubernetesclusterscluster">[]Get<wbr>Managed<wbr>Kubernetes<wbr>Clusters<wbr>Cluster</a></span>
+    </dt>
+    <dd>{{% md %}}A list of matched Kubernetes clusters. Each element contains the following attributes:
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Enable<wbr>Details</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Ids</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of matched Kubernetes clusters' ids.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Name<wbr>Regex</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Names</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of matched Kubernetes clusters' names.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Output<wbr>File</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>clusters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getmanagedkubernetesclusterscluster">Get<wbr>Managed<wbr>Kubernetes<wbr>Clusters<wbr>Cluster[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of matched Kubernetes clusters. Each element contains the following attributes:
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>enable<wbr>Details</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>ids</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of matched Kubernetes clusters' ids.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>name<wbr>Regex</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>names</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of matched Kubernetes clusters' names.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>output<wbr>File</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>clusters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getmanagedkubernetesclusterscluster">List[Get<wbr>Managed<wbr>Kubernetes<wbr>Clusters<wbr>Cluster]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of matched Kubernetes clusters. Each element contains the following attributes:
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>enable_<wbr>details</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>ids</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of matched Kubernetes clusters' ids.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>name_<wbr>regex</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>names</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of matched Kubernetes clusters' names.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>output_<wbr>file</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+
+## Supporting Types
+
+<h4>Get<wbr>Managed<wbr>Kubernetes<wbr>Clusters<wbr>Cluster</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetManagedKubernetesClustersCluster">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/cs?tab=doc#GetManagedKubernetesClustersCluster">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Availability<wbr>Zone</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of availability zone.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Connections</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getmanagedkubernetesclustersclusterconnections">Get<wbr>Managed<wbr>Kubernetes<wbr>Clusters<wbr>Cluster<wbr>Connections<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Map of kubernetes cluster connection information. It contains several attributes to `Block Connections`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of the node.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Node name.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Nat<wbr>Gateway<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of nat gateway used to launch kubernetes cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Security<wbr>Group<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of security group where the current cluster worker node is located.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Vpc<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of VPC where the current cluster is located.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Worker<wbr>Nodes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getmanagedkubernetesclustersclusterworkernode">List&lt;Get<wbr>Managed<wbr>Kubernetes<wbr>Clusters<wbr>Cluster<wbr>Worker<wbr>Node<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of cluster worker nodes. It contains several attributes to `Block Nodes`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Availability<wbr>Zone</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of availability zone.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Connections</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getmanagedkubernetesclustersclusterconnections">Get<wbr>Managed<wbr>Kubernetes<wbr>Clusters<wbr>Cluster<wbr>Connections</a></span>
+    </dt>
+    <dd>{{% md %}}Map of kubernetes cluster connection information. It contains several attributes to `Block Connections`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of the node.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Node name.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Nat<wbr>Gateway<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of nat gateway used to launch kubernetes cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Security<wbr>Group<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of security group where the current cluster worker node is located.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Vpc<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of VPC where the current cluster is located.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Worker<wbr>Nodes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getmanagedkubernetesclustersclusterworkernode">[]Get<wbr>Managed<wbr>Kubernetes<wbr>Clusters<wbr>Cluster<wbr>Worker<wbr>Node</a></span>
+    </dt>
+    <dd>{{% md %}}List of cluster worker nodes. It contains several attributes to `Block Nodes`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>availability<wbr>Zone</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of availability zone.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>connections</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getmanagedkubernetesclustersclusterconnections">Get<wbr>Managed<wbr>Kubernetes<wbr>Clusters<wbr>Cluster<wbr>Connections</a></span>
+    </dt>
+    <dd>{{% md %}}Map of kubernetes cluster connection information. It contains several attributes to `Block Connections`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of the node.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Node name.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>nat<wbr>Gateway<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of nat gateway used to launch kubernetes cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>security<wbr>Group<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of security group where the current cluster worker node is located.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>vpc<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of VPC where the current cluster is located.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>worker<wbr>Nodes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getmanagedkubernetesclustersclusterworkernode">Get<wbr>Managed<wbr>Kubernetes<wbr>Clusters<wbr>Cluster<wbr>Worker<wbr>Node[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of cluster worker nodes. It contains several attributes to `Block Nodes`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>availability_<wbr>zone</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of availability zone.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>connections</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getmanagedkubernetesclustersclusterconnections">Dict[Get<wbr>Managed<wbr>Kubernetes<wbr>Clusters<wbr>Cluster<wbr>Connections]</a></span>
+    </dt>
+    <dd>{{% md %}}Map of kubernetes cluster connection information. It contains several attributes to `Block Connections`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}ID of the node.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Node name.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>nat_<wbr>gateway_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of nat gateway used to launch kubernetes cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>security_<wbr>group_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of security group where the current cluster worker node is located.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>vpc_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of VPC where the current cluster is located.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>worker_<wbr>nodes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getmanagedkubernetesclustersclusterworkernode">List[Get<wbr>Managed<wbr>Kubernetes<wbr>Clusters<wbr>Cluster<wbr>Worker<wbr>Node]</a></span>
+    </dt>
+    <dd>{{% md %}}List of cluster worker nodes. It contains several attributes to `Block Nodes`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4>Get<wbr>Managed<wbr>Kubernetes<wbr>Clusters<wbr>Cluster<wbr>Connections</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetManagedKubernetesClustersClusterConnections">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/cs?tab=doc#GetManagedKubernetesClustersClusterConnections">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Api<wbr>Server<wbr>Internet</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}API Server Internet endpoint.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Api<wbr>Server<wbr>Intranet</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}API Server Intranet endpoint.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Master<wbr>Public<wbr>Ip</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Master node SSH IP address.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Service<wbr>Domain</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Service Access Domain.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Api<wbr>Server<wbr>Internet</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}API Server Internet endpoint.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Api<wbr>Server<wbr>Intranet</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}API Server Intranet endpoint.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Master<wbr>Public<wbr>Ip</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Master node SSH IP address.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Service<wbr>Domain</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Service Access Domain.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>api<wbr>Server<wbr>Internet</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}API Server Internet endpoint.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>api<wbr>Server<wbr>Intranet</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}API Server Intranet endpoint.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>master<wbr>Public<wbr>Ip</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Master node SSH IP address.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>service<wbr>Domain</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Service Access Domain.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>api_<wbr>server_<wbr>internet</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}API Server Internet endpoint.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>api_<wbr>server_<wbr>intranet</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}API Server Intranet endpoint.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>master_<wbr>public_<wbr>ip</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Master node SSH IP address.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>service_<wbr>domain</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Service Access Domain.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4>Get<wbr>Managed<wbr>Kubernetes<wbr>Clusters<wbr>Cluster<wbr>Worker<wbr>Node</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetManagedKubernetesClustersClusterWorkerNode">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/cs?tab=doc#GetManagedKubernetesClustersClusterWorkerNode">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of the node.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Node name.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Private<wbr>Ip</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The private IP address of node.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of the node.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Node name.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Private<wbr>Ip</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The private IP address of node.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of the node.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Node name.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>private<wbr>Ip</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The private IP address of node.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}ID of the node.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Node name.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>private_<wbr>ip</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The private IP address of node.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+

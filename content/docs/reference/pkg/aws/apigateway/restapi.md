@@ -4,12 +4,16 @@ title: "RestApi"
 block_external_search_index: true
 ---
 
+
+
 Provides an API Gateway REST API.
 
 > **Note:** Amazon API Gateway Version 1 resources are used for creating and deploying REST APIs. To create and deploy WebSocket and HTTP APIs, use Amazon API Gateway Version 2.
 
+{{% examples %}}
 ## Example Usage
 
+{{% example %}}
 ### Basic
 
 ```typescript
@@ -21,6 +25,8 @@ const myDemoAPI = new aws.apigateway.RestApi("MyDemoAPI", {
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Regional Endpoint Type
 
 ```typescript
@@ -34,7 +40,8 @@ const example = new aws.apigateway.RestApi("example", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_rest_api.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -1772,9 +1779,14 @@ e.g. `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j`, which can be conca
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

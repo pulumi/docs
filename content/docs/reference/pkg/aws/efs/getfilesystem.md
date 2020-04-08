@@ -4,9 +4,13 @@ title: "GetFileSystem"
 block_external_search_index: true
 ---
 
+
+
 Provides information about an Elastic File System (EFS).
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -20,7 +24,8 @@ const byId = pulumi.output(aws.efs.getFileSystem({
 }, { async: true }));
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/efs_file_system.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

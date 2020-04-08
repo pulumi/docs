@@ -4,6 +4,8 @@ title: "PrincipalAssociation"
 block_external_search_index: true
 ---
 
+
+
 Provides a Resource Access Manager (RAM) principal association. Depending if [RAM Sharing with AWS Organizations is enabled](https://docs.aws.amazon.com/ram/latest/userguide/getting-started-sharing.html#getting-started-sharing-orgs), the RAM behavior with different principal types changes.
 
 When RAM Sharing with AWS Organizations is enabled:
@@ -16,8 +18,10 @@ When RAM Sharing with AWS Organizations is not enabled:
 - Organization and Organizational Unit principals cannot be used.
 - For AWS Account ID principals, a resource share invitation is sent and must be accepted before resources become available. See the [`aws.ram.ResourceShareAccepter` resource](https://www.terraform.io/docs/providers/aws/r/ram_resource_share_accepter.html) to accept these invitations.
 
+{{% examples %}}
 ## Example Usage
 
+{{% example %}}
 ### AWS Account ID
 
 ```typescript
@@ -34,6 +38,8 @@ const examplePrincipalAssociation = new aws.ram.PrincipalAssociation("example", 
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### AWS Organization
 
 ```typescript
@@ -46,7 +52,8 @@ const example = new aws.ram.PrincipalAssociation("example", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ram_principal_association.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -604,9 +611,14 @@ The following state arguments are supported:
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

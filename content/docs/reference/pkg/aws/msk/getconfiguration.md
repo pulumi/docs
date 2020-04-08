@@ -4,9 +4,13 @@ title: "GetConfiguration"
 block_external_search_index: true
 ---
 
+
+
 Get information on an Amazon MSK Configuration.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -17,7 +21,8 @@ const example = pulumi.output(aws.msk.getConfiguration({
 }, { async: true }));
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/msk_configuration.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

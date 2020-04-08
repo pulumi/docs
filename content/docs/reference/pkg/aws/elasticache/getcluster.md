@@ -4,9 +4,13 @@ title: "GetCluster"
 block_external_search_index: true
 ---
 
+
+
 Use this data source to get information about an Elasticache Cluster
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -17,7 +21,8 @@ const myCluster = pulumi.output(aws.elasticache.getCluster({
 }, { async: true }));
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/elasticache_cluster.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

@@ -4,10 +4,14 @@ title: "GetVpnAttachment"
 block_external_search_index: true
 ---
 
+
+
 Get information on an EC2 Transit Gateway VPN Attachment.
 
+{{% examples %}}
 ## Example Usage
 
+{{% example %}}
 ### By Transit Gateway and VPN Connection Identifiers
 
 ```typescript
@@ -20,6 +24,8 @@ const example = pulumi.all([aws_ec2_transit_gateway_example.id, aws_vpn_connecti
 }, { async: true }));
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Filter
 
 ```typescript
@@ -34,7 +40,8 @@ const test = pulumi.output(aws.ec2transitgateway.getVpnAttachment({
 }, { async: true }));
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ec2_transit_gateway_vpn_attachment.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

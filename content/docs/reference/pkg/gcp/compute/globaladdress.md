@@ -4,6 +4,8 @@ title: "GlobalAddress"
 block_external_search_index: true
 ---
 
+
+
 Represents a Global Address resource. Global addresses are used for
 HTTP(S) load balancing.
 
@@ -13,6 +15,16 @@ To get more information about GlobalAddress, see:
 * [API documentation](https://cloud.google.com/compute/docs/reference/v1/globalAddresses)
 * How-to Guides
     * [Reserving a Static External IP Address](https://cloud.google.com/compute/docs/ip-addresses/reserve-static-external-ip-address)
+
+## Example Usage - Global Address Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultGlobalAddress = new gcp.compute.GlobalAddress("default", {});
+```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_global_address.html.markdown.
 
@@ -1760,9 +1772,13 @@ be set when using an Internal address.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

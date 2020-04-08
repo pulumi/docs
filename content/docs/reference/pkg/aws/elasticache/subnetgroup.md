@@ -4,13 +4,17 @@ title: "SubnetGroup"
 block_external_search_index: true
 ---
 
+
+
 Provides an ElastiCache Subnet Group resource.
 
 > **NOTE:** ElastiCache Subnet Groups are only for use when working with an
 ElastiCache cluster **inside** of a VPC. If you are on EC2 Classic, see the
 ElastiCache Security Group resource.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -35,7 +39,8 @@ const bar = new aws.elasticache.SubnetGroup("bar", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticache_subnet_group.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -701,9 +706,14 @@ The following state arguments are supported:
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

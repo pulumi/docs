@@ -4,12 +4,16 @@ title: "CertificateAuthority"
 block_external_search_index: true
 ---
 
+
+
 Provides a resource to manage AWS Certificate Manager Private Certificate Authorities (ACM PCA Certificate Authorities).
 
 > **NOTE:** Creating this resource will leave the certificate authority in a `PENDING_CERTIFICATE` status, which means it cannot yet issue certificates. To complete this setup, you must fully sign the certificate authority CSR available in the `certificate_signing_request` attribute and import the signed certificate using the AWS SDK, CLI or Console. This provider can support another resource to manage that workflow automatically in the future.
 
+{{% examples %}}
 ## Example Usage
 
+{{% example %}}
 ### Basic
 
 ```typescript
@@ -28,6 +32,8 @@ const example = new aws.acmpca.CertificateAuthority("example", {
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Enable Certificate Revocation List
 
 ```typescript
@@ -76,7 +82,8 @@ const exampleCertificateAuthority = new aws.acmpca.CertificateAuthority("example
 }, { dependsOn: [exampleBucketPolicy] });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/acmpca_certificate_authority.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -2575,9 +2582,14 @@ The following state arguments are supported:
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

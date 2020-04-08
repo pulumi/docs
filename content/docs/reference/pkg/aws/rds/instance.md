@@ -4,6 +4,8 @@ title: "Instance"
 block_external_search_index: true
 ---
 
+
+
 Provides an RDS instance resource.  A DB instance is an isolated database
 environment in the cloud.  A DB instance can contain multiple user-created
 databases.
@@ -31,8 +33,10 @@ Amazon RDS supports three types of instance classes: Standard, Memory Optimized,
 and Burstable Performance. For more information please read the AWS RDS documentation
 about [DB Instance Class Types](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html)
 
+{{% examples %}}
 ## Example Usage
 
+{{% example %}}
 ### Basic Usage
 
 ```typescript
@@ -52,6 +56,8 @@ const defaultInstance = new aws.rds.Instance("default", {
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Storage Autoscaling
 
 To enable Storage Autoscaling with instances that support the feature, define the `max_allocated_storage` argument higher than the `allocated_storage` argument. This provider will automatically hide differences with the `allocated_storage` argument value if autoscaling occurs.
@@ -66,7 +72,8 @@ const example = new aws.rds.Instance("example", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/db_instance.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -7584,9 +7591,14 @@ associate.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

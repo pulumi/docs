@@ -4,6 +4,8 @@ title: "ConsumerQuotaOverride"
 block_external_search_index: true
 ---
 
+
+
 A consumer override is applied to the consumer on its own authority to limit its own quota usage.
 Consumer overrides cannot be used to grant more quota than would be allowed by admin overrides,
 producer overrides, or the default limit of the service.
@@ -1208,9 +1210,13 @@ If it is not provided, the provider project is used.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

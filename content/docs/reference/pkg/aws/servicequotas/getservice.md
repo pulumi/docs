@@ -4,9 +4,13 @@ title: "GetService"
 block_external_search_index: true
 ---
 
+
+
 Retrieve information about a Service Quotas Service.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -17,7 +21,8 @@ const example = pulumi.output(aws.servicequotas.getService({
 }, { async: true }));
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/servicequotas_service.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

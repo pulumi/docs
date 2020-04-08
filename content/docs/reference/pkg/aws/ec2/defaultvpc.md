@@ -4,6 +4,8 @@ title: "DefaultVpc"
 block_external_search_index: true
 ---
 
+
+
 Provides a resource to manage the [default AWS VPC](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/default-vpc.html)
 in the current region.
 
@@ -15,7 +17,9 @@ The `aws.ec2.DefaultVpc` behaves differently from normal resources, in that
 this provider does not _create_ this resource, but instead "adopts" it
 into management.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 Basic usage with tags:
 
@@ -30,7 +34,8 @@ const defaultDefaultVpc = new aws.ec2.DefaultVpc("default", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_vpc.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -1804,9 +1809,14 @@ this VPC. Note that you can change a VPC's main route table by using an
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

@@ -4,6 +4,8 @@ title: "GetProjectServiceAccount"
 block_external_search_index: true
 ---
 
+
+
 Get the email address of a project's unique Google Cloud Storage service account.
 
 Each Google Cloud project has a unique service account for use with Google Cloud Storage. Only this

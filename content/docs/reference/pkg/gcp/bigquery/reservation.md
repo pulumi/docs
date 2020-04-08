@@ -4,6 +4,8 @@ title: "Reservation"
 block_external_search_index: true
 ---
 
+
+
 A reservation is a mechanism used to guarantee BigQuery slots to users.
 
 To get more information about Reservation, see:
@@ -942,9 +944,13 @@ of parallelism. Queries using this reservation might use more slots during runti
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

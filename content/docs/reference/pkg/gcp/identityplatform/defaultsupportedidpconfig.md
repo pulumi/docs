@@ -4,11 +4,30 @@ title: "DefaultSupportedIdpConfig"
 block_external_search_index: true
 ---
 
+
+
 Configurations options for authenticating with a the standard set of Identity Toolkit-trusted IDPs.
 
 You must enable the
 [Google Identity Platform](https://console.cloud.google.com/marketplace/details/google-cloud-platform/customer-identity) in
 the marketplace prior to using this resource.
+
+
+
+## Example Usage - Identity Platform Default Supported Idp Config Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const idpConfig = new gcp.identityplatform.DefaultSupportedIdpConfig("idp_config", {
+    clientId: "client-id",
+    clientSecret: "secret",
+    enabled: true,
+    idpId: "playgames.google.com",
+});
+```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/identity_platform_default_supported_idp_config.html.markdown.
 
@@ -988,9 +1007,13 @@ If it is not provided, the provider project is used.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

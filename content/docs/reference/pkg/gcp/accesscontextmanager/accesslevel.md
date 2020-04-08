@@ -4,6 +4,8 @@ title: "AccessLevel"
 block_external_search_index: true
 ---
 
+
+
 An AccessLevel is a label that can be applied to requests to GCP services,
 along with a list of requirements necessary for the label to be applied.
 
@@ -13,6 +15,38 @@ To get more information about AccessLevel, see:
 * [API documentation](https://cloud.google.com/access-context-manager/docs/reference/rest/v1/accessPolicies.accessLevels)
 * How-to Guides
     * [Access Policy Quickstart](https://cloud.google.com/access-context-manager/docs/quickstart)
+
+## Example Usage - Access Context Manager Access Level Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const access_level = new gcp.accesscontextmanager.AccessLevel("access-level", {
+    basic: {
+        conditions: [{
+            devicePolicy: {
+                osConstraints: [{
+                    osType: "DESKTOP_CHROME_OS",
+                }],
+                requireScreenLock: false,
+            },
+            regions: [
+                "CH",
+                "IT",
+                "US",
+            ],
+        }],
+    },
+    parent: pulumi.interpolate`accessPolicies/${google_access_context_manager_access_policy_test_access.name}`,
+    title: "chromeos_no_lock",
+});
+const access_policy = new gcp.accesscontextmanager.AccessPolicy("access-policy", {
+    parent: "organizations/123456789",
+    title: "my policy",
+});
+```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/access_context_manager_access_level.html.markdown.
 
@@ -1597,9 +1631,13 @@ The following state arguments are supported:
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

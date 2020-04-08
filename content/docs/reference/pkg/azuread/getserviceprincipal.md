@@ -4,9 +4,44 @@ title: "GetServicePrincipal"
 block_external_search_index: true
 ---
 
+
+
 Gets information about an existing Service Principal associated with an Application within Azure Active Directory.
 
 > **NOTE:** If you're authenticating using a Service Principal then it must have permissions to both `Read and write all applications` and `Sign in and read user profile` within the `Windows Azure Active Directory` API.
+
+## Example Usage (by Application Display Name)
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azuread from "@pulumi/azuread";
+
+const example = pulumi.output(azuread.getServicePrincipal({
+    displayName: "my-awesome-application",
+}, { async: true }));
+```
+
+## Example Usage (by Application ID)
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azuread from "@pulumi/azuread";
+
+const example = pulumi.output(azuread.getServicePrincipal({
+    applicationId: "00000000-0000-0000-0000-000000000000",
+}, { async: true }));
+```
+
+## Example Usage (by Object ID)
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azuread from "@pulumi/azuread";
+
+const example = pulumi.output(azuread.getServicePrincipal({
+    objectId: "00000000-0000-0000-0000-000000000000",
+}, { async: true }));
+```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/d/service_principal.html.markdown.
 

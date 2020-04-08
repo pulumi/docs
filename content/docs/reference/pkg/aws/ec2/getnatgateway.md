@@ -4,9 +4,13 @@ title: "GetNatGateway"
 block_external_search_index: true
 ---
 
+
+
 Provides details about a specific Nat Gateway.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -34,7 +38,8 @@ const defaultNatGateway = aws_subnet_public.id.apply(id => aws.ec2.getNatGateway
 }, { async: true }));
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/nat_gateway.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

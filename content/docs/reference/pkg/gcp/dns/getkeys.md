@@ -4,6 +4,8 @@ title: "GetKeys"
 block_external_search_index: true
 ---
 
+
+
 Get the DNSKEY and DS records of DNSSEC-signed managed zones. For more information see the
 [official documentation](https://cloud.google.com/dns/docs/dnskeys/)
 and [API](https://cloud.google.com/dns/docs/reference/v1/dnsKeys).

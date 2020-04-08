@@ -4,9 +4,13 @@ title: "GetPartition"
 block_external_search_index: true
 ---
 
+
+
 Use this data source to lookup current AWS partition in which this provider is working
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -22,7 +26,8 @@ const s3Policy = current.apply(current => aws.iam.getPolicyDocument({
 }, { async: true }));
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/partition.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
