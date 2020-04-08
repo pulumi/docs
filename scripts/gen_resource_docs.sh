@@ -14,7 +14,7 @@ INSTALL_RESOURCE_PLUGIN_VERSION=${3:-}
 
 PACKDIR="./content/docs/reference/pkg"
 ABSOLUTEPACKDIR="$(pwd)/content/docs/reference/pkg"
-TOOL_RESDOCGEN="go run ./tools/resourcedocsgen/*.go -logtostderr"
+TOOL_RESDOCGEN="./tools/resourcedocsgen/"
 
 PROVIDERS=(
     "aws"
@@ -52,27 +52,26 @@ generate_docs() {
         fi
         echo "Installing resource plugin for ${provider}. Version: ${plugin_version}"
         pulumi plugin install resource ${provider} ${plugin_version}
-        popd
     fi
 
-    echo "Removing the ${PACKDIR}/${provider} dir..."
-    rm -rf "${PACKDIR}/${provider}"
-
     TFGEN=pulumi-tfgen-${provider}
-
-    pushd ../pulumi-${provider}
     echo "Running pulumi-tfgen-${TFGEN} to generate provider schema..."
     make generate_schema
     popd
 
     if [ $provider = "kubernetes" ]; then
-        SCHEMA_FILE="../pulumi-${provider}/sdk/schema/schema.json"
+        SCHEMA_FILE="../../../pulumi-kubernetes/sdk/schema/schema.json"
     else
-        SCHEMA_FILE="../pulumi-${provider}/provider/cmd/pulumi-resource-${provider}/schema.json"
+        SCHEMA_FILE="../../../pulumi-${provider}/provider/cmd/pulumi-resource-${provider}/schema.json"
     fi
 
+    echo "Removing the ${PACKDIR}/${provider} dir..."
+    rm -rf "${PACKDIR}/${provider}"
+
     echo "Running docs generator from schema for ${provider}..."
-    ${TOOL_RESDOCGEN} ${ABSOLUTEPACKDIR}/${provider} ${SCHEMA_FILE} || exit 3
+    pushd ${TOOL_RESDOCGEN}
+    go run . -logtostderr ${ABSOLUTEPACKDIR}/${provider} ${SCHEMA_FILE} || exit 3
+    popd
 
     echo "Done generating resource docs for ${provider}"
     echo ""
