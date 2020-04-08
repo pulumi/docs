@@ -609,7 +609,7 @@ The following output properties are available:
             title="Optional">
         <span>Conversion<wbr>Review<wbr>Versions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;?</span>
     </dt>
     <dd>{{% md %}}conversionReviewVersions is an ordered list of preferred `ConversionReview` versions the Webhook expects. The API server will use the first version in the list which it supports. If none of the versions specified in this list are supported by API server, conversion will fail for the custom resource. If a persisted Webhook configuration specifies allowed versions and does not include any versions known to the API Server, calls to the webhook will fail. Defaults to `["v1beta1"]`.{{% /md %}}</dd>
 
@@ -955,7 +955,7 @@ The following output properties are available:
             title="Optional">
         <span>Categories</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;?</span>
     </dt>
     <dd>{{% md %}}categories is a list of grouped resources this custom resource belongs to (e.g. 'all'). This is published in API discovery documents, and used by clients to support invocations like `kubectl get all`.{{% /md %}}</dd>
 
@@ -979,7 +979,7 @@ The following output properties are available:
             title="Optional">
         <span>Short<wbr>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;?</span>
     </dt>
     <dd>{{% md %}}shortNames are short names for the resource, exposed in API discovery documents, and used by clients to support invocations like `kubectl get <shortname>`. It must be all lowercase.{{% /md %}}</dd>
 
@@ -1537,7 +1537,7 @@ The following output properties are available:
             title="Optional">
         <span>Stored<wbr>Versions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;?</span>
     </dt>
     <dd>{{% md %}}storedVersions lists all versions of CustomResources that were ever persisted. Tracking these versions allows a migration path for stored versions in etcd. The field is mutable so a migration controller can finish a migration to another version (ensuring no old objects are left in storage), and then remove the rest of the versions from this list. Versions may not be removed from `spec.versions` while they exist in this list.{{% /md %}}</dd>
 
@@ -2323,7 +2323,7 @@ The following output properties are available:
             title="Optional">
         <span>Additional<wbr>Items</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Union<Pulumi.Kubernetes.Apiextensions.k8s.io/v1beta1.Inputs.JSONSchemaPropsArgs, bool>?</span>
+        <span class="property-type">Union&lt;JSONSchema<wbr>Props<wbr>Args, bool&gt;?</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2331,7 +2331,7 @@ The following output properties are available:
             title="Optional">
         <span>Additional<wbr>Properties</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Union<Pulumi.Kubernetes.Apiextensions.k8s.io/v1beta1.Inputs.JSONSchemaPropsArgs, bool>?</span>
+        <span class="property-type">Union&lt;JSONSchema<wbr>Props<wbr>Args, bool&gt;?</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2363,7 +2363,7 @@ The following output properties are available:
             title="Optional">
         <span>Definitions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, Pulumi.Kubernetes.Apiextensions.k8s.io/v1beta1.Inputs.JSONSchemaPropsArgs>?</span>
+        <span class="property-type">Dictionary&lt;string, JSONSchema<wbr>Props<wbr>Args&gt;?</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2371,7 +2371,7 @@ The following output properties are available:
             title="Optional">
         <span>Dependencies</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, Union<Pulumi.Kubernetes.Apiextensions.k8s.io/v1beta1.Inputs.JSONSchemaPropsArgs, ImmutableArray<string>>>?</span>
+        <span class="property-type">Dictionary&lt;string, Union&lt;JSONSchema<wbr>Props<wbr>Args, Immutable<wbr>Array&lt;string&gt;&gt;&gt;?</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2387,7 +2387,7 @@ The following output properties are available:
             title="Optional">
         <span>Enum</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<object>?</span>
+        <span class="property-type">List&lt;object&gt;?</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2445,7 +2445,7 @@ The following output properties are available:
             title="Optional">
         <span>Items</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Union<Pulumi.Kubernetes.Apiextensions.k8s.io/v1beta1.Inputs.JSONSchemaPropsArgs, ImmutableArray<object>>?</span>
+        <span class="property-type">Union&lt;JSONSchema<wbr>Props<wbr>Args, Immutable<wbr>Array&lt;object&gt;&gt;?</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2557,7 +2557,7 @@ The following output properties are available:
             title="Optional">
         <span>Pattern<wbr>Properties</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, Pulumi.Kubernetes.Apiextensions.k8s.io/v1beta1.Inputs.JSONSchemaPropsArgs>?</span>
+        <span class="property-type">Dictionary&lt;string, JSONSchema<wbr>Props<wbr>Args&gt;?</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2565,7 +2565,7 @@ The following output properties are available:
             title="Optional">
         <span>Properties</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, Pulumi.Kubernetes.Apiextensions.k8s.io/v1beta1.Inputs.JSONSchemaPropsArgs>?</span>
+        <span class="property-type">Dictionary&lt;string, JSONSchema<wbr>Props<wbr>Args&gt;?</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2573,7 +2573,7 @@ The following output properties are available:
             title="Optional">
         <span>Required</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;?</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2646,7 +2646,7 @@ The following output properties are available:
             title="Optional">
         <span>X_<wbr>kubernetes_<wbr>list_<wbr>map_<wbr>keys</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;?</span>
     </dt>
     <dd>{{% md %}}x-kubernetes-list-map-keys annotates an array with the x-kubernetes-list-type `map` by specifying the keys used as the index of the map.
 
@@ -2749,7 +2749,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>Definitions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]JSONSchemaProps</span>
+        <span class="property-type">map[string]JSONSchema<wbr>Props</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2943,7 +2943,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>Pattern<wbr>Properties</span>
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]JSONSchemaProps</span>
+        <span class="property-type">map[string]JSONSchema<wbr>Props</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2951,7 +2951,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>Properties</span>
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]JSONSchemaProps</span>
+        <span class="property-type">map[string]JSONSchema<wbr>Props</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3095,7 +3095,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>additional<wbr>Items</span>
         <span class="property-indicator"></span>
-        <span class="property-type">apiextensions.k8s.io.v1beta1.JSONSchemaProps | boolean</span>
+        <span class="property-type">JSONSchema<wbr>Props | boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3103,7 +3103,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>additional<wbr>Properties</span>
         <span class="property-indicator"></span>
-        <span class="property-type">apiextensions.k8s.io.v1beta1.JSONSchemaProps | boolean</span>
+        <span class="property-type">JSONSchema<wbr>Props | boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3135,7 +3135,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>definitions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: apiextensions.k8s.io.v1beta1.JSONSchemaProps}?</span>
+        <span class="property-type">JSONSchema<wbr>Props}?</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3143,7 +3143,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>dependencies</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: apiextensions.k8s.io.v1beta1.JSONSchemaProps | string[]}?</span>
+        <span class="property-type">JSONSchema<wbr>Props | string[]}?</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3217,7 +3217,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>items</span>
         <span class="property-indicator"></span>
-        <span class="property-type">apiextensions.k8s.io.v1beta1.JSONSchemaProps | any[]</span>
+        <span class="property-type">JSONSchema<wbr>Props | any[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3329,7 +3329,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>pattern<wbr>Properties</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: apiextensions.k8s.io.v1beta1.JSONSchemaProps}?</span>
+        <span class="property-type">JSONSchema<wbr>Props}?</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3337,7 +3337,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>properties</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: apiextensions.k8s.io.v1beta1.JSONSchemaProps}?</span>
+        <span class="property-type">JSONSchema<wbr>Props}?</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3521,7 +3521,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>definitions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, JSONSchemaProps]</span>
+        <span class="property-type">Dict[str, JSONSchema<wbr>Props]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3529,7 +3529,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>dependencies</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, JSONSchemaProps, Array<String>>]</span>
+        <span class="property-type">Dict[str, JSONSchema<wbr>Props, Array<String>>]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3715,7 +3715,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>pattern_<wbr>properties</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, JSONSchemaProps]</span>
+        <span class="property-type">Dict[str, JSONSchema<wbr>Props]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3723,7 +3723,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>properties</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, JSONSchemaProps]</span>
+        <span class="property-type">Dict[str, JSONSchema<wbr>Props]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3890,7 +3890,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>Fields<wbr>V1</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;?</span>
     </dt>
     <dd>{{% md %}}FieldsV1 holds the first JSON version format as described in the "FieldsV1" type.{{% /md %}}</dd>
 
@@ -4085,7 +4085,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>Annotations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;?</span>
     </dt>
     <dd>{{% md %}}Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations{{% /md %}}</dd>
 
@@ -4129,7 +4129,7 @@ Populated by the system when a graceful deletion is requested. Read-only. More i
             title="Optional">
         <span>Finalizers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;?</span>
     </dt>
     <dd>{{% md %}}Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. Finalizers may be processed and removed in any order.  Order is NOT enforced because it introduces significant risk of stuck finalizers. finalizers is a shared field, any actor with permission can reorder it. If the finalizer list is processed in order, then this can lead to a situation in which the component responsible for the first finalizer in the list is waiting for a signal (field value, external system, or other) produced by a component responsible for a finalizer later in the list, resulting in a deadlock. Without enforced ordering finalizers are free to order amongst themselves and are not vulnerable to ordering changes in the list.{{% /md %}}</dd>
 
@@ -4157,7 +4157,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
             title="Optional">
         <span>Labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;?</span>
     </dt>
     <dd>{{% md %}}Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels{{% /md %}}</dd>
 

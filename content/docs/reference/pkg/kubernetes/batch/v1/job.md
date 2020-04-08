@@ -8,6 +8,21 @@ block_external_search_index: true
 
 Job represents the configuration of a single job.
 
+This resource waits until its status is ready before registering success
+for create/update, and populating output properties from the current state of the resource.
+The following conditions are used to determine whether the resource creation has
+succeeded or failed:
+
+1. The Job's '.status.startTime' is set, which indicates that the Job has started running.
+2. The Job's '.status.conditions' has a status of type 'Complete', and a 'status' set
+   to 'True'.
+3. The Job's '.status.conditions' do not have a status of type 'Failed', with a
+	'status' set to 'True'. If this condition is set, we should fail the Job immediately.
+
+If the Job has not reached a Ready state after 10 minutes, it will
+time out and mark the resource update as Failed. You can override the default timeout value
+by setting the 'customTimeouts' option on the resource.
+
 
 ## Create a Job Resource
 
@@ -1058,7 +1073,7 @@ The following output properties are available:
             title="Optional">
         <span>Volume<wbr>Attributes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;?</span>
     </dt>
     <dd>{{% md %}}VolumeAttributes stores driver-specific properties that are passed to the CSI driver. Consult your driver's documentation for supported values.{{% /md %}}</dd>
 
@@ -1229,7 +1244,7 @@ The following output properties are available:
             title="Optional">
         <span>Add</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;?</span>
     </dt>
     <dd>{{% md %}}Added capabilities{{% /md %}}</dd>
 
@@ -1237,7 +1252,7 @@ The following output properties are available:
             title="Optional">
         <span>Drop</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;?</span>
     </dt>
     <dd>{{% md %}}Removed capabilities{{% /md %}}</dd>
 
@@ -1336,7 +1351,7 @@ The following output properties are available:
             title="Optional">
         <span>Monitors</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;?</span>
     </dt>
     <dd>{{% md %}}Required: Monitors is a collection of Ceph monitors More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it{{% /md %}}</dd>
 
@@ -2298,7 +2313,7 @@ The following output properties are available:
             title="Optional">
         <span>Args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;?</span>
     </dt>
     <dd>{{% md %}}Arguments to the entrypoint. The docker image's CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell{{% /md %}}</dd>
 
@@ -2306,7 +2321,7 @@ The following output properties are available:
             title="Optional">
         <span>Command</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;?</span>
     </dt>
     <dd>{{% md %}}Entrypoint array. Not executed within a shell. The docker image's ENTRYPOINT is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell{{% /md %}}</dd>
 
@@ -4157,7 +4172,7 @@ The following output properties are available:
             title="Optional">
         <span>Args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;?</span>
     </dt>
     <dd>{{% md %}}Arguments to the entrypoint. The docker image's CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell{{% /md %}}</dd>
 
@@ -4165,7 +4180,7 @@ The following output properties are available:
             title="Optional">
         <span>Command</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;?</span>
     </dt>
     <dd>{{% md %}}Entrypoint array. Not executed within a shell. The docker image's ENTRYPOINT is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell{{% /md %}}</dd>
 
@@ -4936,7 +4951,7 @@ The following output properties are available:
             title="Optional">
         <span>Command</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;?</span>
     </dt>
     <dd>{{% md %}}Command is the command line to execute inside the container, the working directory for the command  is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy.{{% /md %}}</dd>
 
@@ -5035,7 +5050,7 @@ The following output properties are available:
             title="Optional">
         <span>Target<wbr>WWNs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;?</span>
     </dt>
     <dd>{{% md %}}Optional: FC target worldwide names (WWNs){{% /md %}}</dd>
 
@@ -5043,7 +5058,7 @@ The following output properties are available:
             title="Optional">
         <span>Wwids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;?</span>
     </dt>
     <dd>{{% md %}}Optional: FC volume world wide identifiers (wwids) Either wwids or combination of targetWWNs and lun must be set, but not both simultaneously.{{% /md %}}</dd>
 
@@ -5230,7 +5245,7 @@ The following output properties are available:
             title="Optional">
         <span>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;?</span>
     </dt>
     <dd>{{% md %}}Optional: Extra command options if any.{{% /md %}}</dd>
 
@@ -5997,7 +6012,7 @@ The following output properties are available:
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Union<double, string>?</span>
+        <span class="property-type">Union&lt;double, string&gt;?</span>
     </dt>
     <dd>{{% md %}}Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.{{% /md %}}</dd>
 
@@ -6422,7 +6437,7 @@ The following output properties are available:
             title="Optional">
         <span>Hostnames</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;?</span>
     </dt>
     <dd>{{% md %}}Hostnames for the above IP address.{{% /md %}}</dd>
 
@@ -6692,7 +6707,7 @@ The following output properties are available:
             title="Optional">
         <span>Portals</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;?</span>
     </dt>
     <dd>{{% md %}}iSCSI Target Portal List. The portal is either an IP or ip_addr:port if the port is other than default (typically TCP ports 860 and 3260).{{% /md %}}</dd>
 
@@ -7947,7 +7962,7 @@ The following output properties are available:
             title="Optional">
         <span>Match<wbr>Labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;?</span>
     </dt>
     <dd>{{% md %}}matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is "key", the operator is "In", and the values array contains only "value". The requirements are ANDed.{{% /md %}}</dd>
 
@@ -8062,7 +8077,7 @@ The following output properties are available:
             title="Optional">
         <span>Values</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;?</span>
     </dt>
     <dd>{{% md %}}values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch.{{% /md %}}</dd>
 
@@ -8375,7 +8390,7 @@ The following output properties are available:
             title="Optional">
         <span>Fields<wbr>V1</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;?</span>
     </dt>
     <dd>{{% md %}}FieldsV1 holds the first JSON version format as described in the "FieldsV1" type.{{% /md %}}</dd>
 
@@ -8907,7 +8922,7 @@ The following output properties are available:
             title="Optional">
         <span>Values</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;?</span>
     </dt>
     <dd>{{% md %}}An array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. If the operator is Gt or Lt, the values array must have a single element, which will be interpreted as an integer. This array is replaced during a strategic merge patch.{{% /md %}}</dd>
 
@@ -9212,7 +9227,7 @@ The following output properties are available:
             title="Optional">
         <span>Annotations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;?</span>
     </dt>
     <dd>{{% md %}}Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations{{% /md %}}</dd>
 
@@ -9256,7 +9271,7 @@ Populated by the system when a graceful deletion is requested. Read-only. More i
             title="Optional">
         <span>Finalizers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;?</span>
     </dt>
     <dd>{{% md %}}Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. Finalizers may be processed and removed in any order.  Order is NOT enforced because it introduces significant risk of stuck finalizers. finalizers is a shared field, any actor with permission can reorder it. If the finalizer list is processed in order, then this can lead to a situation in which the component responsible for the first finalizer in the list is waiting for a signal (field value, external system, or other) produced by a component responsible for a finalizer later in the list, resulting in a deadlock. Without enforced ordering finalizers are free to order amongst themselves and are not vulnerable to ordering changes in the list.{{% /md %}}</dd>
 
@@ -9284,7 +9299,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
             title="Optional">
         <span>Labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;?</span>
     </dt>
     <dd>{{% md %}}Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels{{% /md %}}</dd>
 
@@ -10331,7 +10346,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
             title="Optional">
         <span>Namespaces</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;?</span>
     </dt>
     <dd>{{% md %}}namespaces specifies which namespaces the labelSelector applies to (matches against); null or empty list means "this pod's namespace"{{% /md %}}</dd>
 
@@ -10569,7 +10584,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
             title="Optional">
         <span>Nameservers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;?</span>
     </dt>
     <dd>{{% md %}}A list of DNS name server IP addresses. This will be appended to the base nameservers generated from DNSPolicy. Duplicated nameservers will be removed.{{% /md %}}</dd>
 
@@ -10585,7 +10600,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
             title="Optional">
         <span>Searches</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;?</span>
     </dt>
     <dd>{{% md %}}A list of DNS search domains for host-name lookup. This will be appended to the base search paths generated from DNSPolicy. Duplicated search paths will be removed.{{% /md %}}</dd>
 
@@ -10942,7 +10957,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
             title="Optional">
         <span>Supplemental<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<int>?</span>
+        <span class="property-type">List&lt;int&gt;?</span>
     </dt>
     <dd>{{% md %}}A list of groups applied to the first process run in each container, in addition to the container's primary GID.  If unspecified, no groups will be added to any container.{{% /md %}}</dd>
 
@@ -11365,7 +11380,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
             title="Optional">
         <span>Node<wbr>Selector</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;?</span>
     </dt>
     <dd>{{% md %}}NodeSelector is a selector which must be true for the pod to fit on a node. Selector which must match a node's labels for the pod to be scheduled on that node. More info: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/{{% /md %}}</dd>
 
@@ -11373,7 +11388,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
             title="Optional">
         <span>Overhead</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;?</span>
     </dt>
     <dd>{{% md %}}Overhead represents the resource overhead associated with running a pod for a given RuntimeClass. This field will be autopopulated at admission time by the RuntimeClass admission controller. If the RuntimeClass admission controller is enabled, overhead must not be set in Pod create requests. The RuntimeClass admission controller will reject Pod create requests which have the overhead already set. If RuntimeClass is configured and selected in the PodSpec, Overhead will be set to the value defined in the corresponding RuntimeClass, otherwise it will remain unset and treated as zero. More info: https://git.k8s.io/enhancements/keps/sig-node/20190226-pod-overhead.md This field is alpha-level as of Kubernetes v1.16, and is only honored by servers that enable the PodOverhead feature.{{% /md %}}</dd>
 
@@ -13386,7 +13401,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
             title="Optional">
         <span>Monitors</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;?</span>
     </dt>
     <dd>{{% md %}}A collection of Ceph monitors. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it{{% /md %}}</dd>
 
@@ -13800,7 +13815,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
             title="Optional">
         <span>Limits</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;?</span>
     </dt>
     <dd>{{% md %}}Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/{{% /md %}}</dd>
 
@@ -13808,7 +13823,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
             title="Optional">
         <span>Requests</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;?</span>
     </dt>
     <dd>{{% md %}}Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. More info: https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/{{% /md %}}</dd>
 
@@ -15817,7 +15832,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Union<double, string>?</span>
+        <span class="property-type">Union&lt;double, string&gt;?</span>
     </dt>
     <dd>{{% md %}}Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.{{% /md %}}</dd>
 

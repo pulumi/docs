@@ -981,7 +981,7 @@ The following output properties are available:
             title="Optional">
         <span>Fields<wbr>V1</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;?</span>
     </dt>
     <dd>{{% md %}}FieldsV1 holds the first JSON version format as described in the "FieldsV1" type.{{% /md %}}</dd>
 
@@ -1176,7 +1176,7 @@ The following output properties are available:
             title="Optional">
         <span>Non<wbr>Resource<wbr>URLs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;?</span>
     </dt>
     <dd>{{% md %}}`nonResourceURLs` is a set of url prefixes that a user should have access to and may not be empty. For example:
   - "/healthz" is legal
@@ -1190,7 +1190,7 @@ The following output properties are available:
             title="Optional">
         <span>Verbs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;?</span>
     </dt>
     <dd>{{% md %}}`verbs` is a list of matching verbs and may not be empty. "*" matches all verbs. If it is present, it must be the only entry. Required.{{% /md %}}</dd>
 
@@ -1307,7 +1307,7 @@ The following output properties are available:
             title="Optional">
         <span>Annotations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;?</span>
     </dt>
     <dd>{{% md %}}Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations{{% /md %}}</dd>
 
@@ -1351,7 +1351,7 @@ Populated by the system when a graceful deletion is requested. Read-only. More i
             title="Optional">
         <span>Finalizers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;?</span>
     </dt>
     <dd>{{% md %}}Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. Finalizers may be processed and removed in any order.  Order is NOT enforced because it introduces significant risk of stuck finalizers. finalizers is a shared field, any actor with permission can reorder it. If the finalizer list is processed in order, then this can lead to a situation in which the component responsible for the first finalizer in the list is waiting for a signal (field value, external system, or other) produced by a component responsible for a finalizer later in the list, resulting in a deadlock. Without enforced ordering finalizers are free to order amongst themselves and are not vulnerable to ordering changes in the list.{{% /md %}}</dd>
 
@@ -1379,7 +1379,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
             title="Optional">
         <span>Labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;?</span>
     </dt>
     <dd>{{% md %}}Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels{{% /md %}}</dd>
 
@@ -2311,7 +2311,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
             title="Optional">
         <span>Api<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;?</span>
     </dt>
     <dd>{{% md %}}`apiGroups` is a list of matching API groups and may not be empty. "*" matches all API groups and, if present, must be the only entry. Required.{{% /md %}}</dd>
 
@@ -2327,7 +2327,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
             title="Optional">
         <span>Namespaces</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;?</span>
     </dt>
     <dd>{{% md %}}`namespaces` is a list of target namespaces that restricts matches.  A request that specifies a target namespace matches only if either (a) this list contains that target namespace or (b) this list contains "*".  Note that "*" matches any specified namespace but does not match a request that _does not specify_ a namespace (see the `clusterScope` field for that). This list may be empty, but only if `clusterScope` is true.{{% /md %}}</dd>
 
@@ -2335,7 +2335,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
             title="Optional">
         <span>Resources</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;?</span>
     </dt>
     <dd>{{% md %}}`resources` is a list of matching resources (i.e., lowercase and plural) with, if desired, subresource.  For example, [ "services", "nodes/status" ].  This list may not be empty. "*" matches all resources and, if present, must be the only entry. Required.{{% /md %}}</dd>
 
@@ -2343,7 +2343,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
             title="Optional">
         <span>Verbs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;?</span>
     </dt>
     <dd>{{% md %}}`verbs` is a list of matching verbs and may not be empty. "*" matches all verbs and, if present, must be the only entry. Required.{{% /md %}}</dd>
 
