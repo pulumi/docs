@@ -9,7 +9,7 @@ tags:
     - microservices
 ---
 
-This article is the third in a series about Architecture as Code. The [first article]({{ relref "/blog/architecture-as-code-intro">}}) provided an overview of virtual machines, microservices, serverless, and Kubernetes. The [second]({{< relref "/blog/architecture-as-code-vm" >}}) one went in-depth on deploying virtual machines as reusable components. In this third installment, we'll look at microservices and how to implement them as reusable components with Pulumi.
+This article is the third in a series about Architecture as Code. The [first article]({{< relref "/blog/architecture-as-code-intro">}}) provided an overview of virtual machines, microservices, serverless, and Kubernetes. The [second]({{< relref "/blog/architecture-as-code-vm" >}}) one went in-depth on deploying virtual machines as reusable components. In this third installment, we'll look at microservices and how to implement them as reusable components with Pulumi.
 
 <!--more-->
 
@@ -98,7 +98,7 @@ $ aws-stackreference-architecture >> .git/info/sparse-checkout
 $ git pull origin master
 ```
 
-Follow the instructions to deploy the application. One caveat, when deploying the network microservice, set the number of availability zones to a minimum of two, e.g., `pulumi config set azCount 2`. Experiment with the example by adding data to the database and adding your REST application as a container. Add a web client to submit requests and display them. Let us know if you have questions on [Community Slack](https://pulumi-community.slack.com/) or send a tweet to show off your application.
+Follow the instructions to deploy the application. Experiment with the example by adding data to the database and adding your REST application as a container. Add a web client to submit requests and display them. Let us know if you have questions on [Community Slack](https://pulumi-community.slack.com/) or send a tweet to show off your application.
 
 To learn more about stacks, watch [Mike Metral's](https://twitter.com/mikemetral) presentation on [PulumiTV](https://www.youtube.com/channel/UC2Dhyn4Ev52YSbcpfnfP0Mw).
 

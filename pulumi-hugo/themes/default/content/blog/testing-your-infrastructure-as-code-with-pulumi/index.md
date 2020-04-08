@@ -7,6 +7,11 @@ meta_desc: "Leverage Pulumi for your core acceptance test workflow and unlock ne
 meta_image: "InfraTesting.png"
 ---
 
+{{% notes type="warning" %}}
+    Some parts of this blog post are out-of-date. Please refer to our
+    <a href="{{< relref "/docs/guides/testing" >}}">Testing Guide</a> for the updated overview and tutorials.
+{{% /notes %}}
+
 Using Pulumi and general purpose languages for infrastructure as code
 comes with many benefits: leveraging existing skills and knowledge,
 eliminating boilerplate through abstraction, and using the same
