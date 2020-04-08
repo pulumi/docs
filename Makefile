@@ -18,6 +18,8 @@ banner:
 ensure:
 	yarn install
 	yarn --cwd components install
+	echo "Restoring resourcedocsgen deps..."
+	cd tools/resourcedocsgen && go mod tidy && go mod download
 
 .PHONY: lint_markdown
 lint_markdown:
