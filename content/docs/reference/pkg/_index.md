@@ -56,7 +56,7 @@ used across all cloud platforms:
 {{% choosable language python %}}
 * [**Pulumi SDK** (`pulumi`)]({{< relref "python/pulumi" >}})
 * [**Docker** (`pulumi_docker`)]({{< relref "python/pulumi_docker" >}})
-* [**Policy** (`pulumi_policy`)]({{< relref "python/pulumi_policy" >}})
+* [**Policy** (`pulumi_policy`) <span class="badge badge-preview">PREVIEW</span>]({{< relref "python/pulumi_policy" >}})
 * [**Random** (`pulumi_random`)]({{< relref "python/pulumi_random" >}})
 {{% /choosable %}}
 
