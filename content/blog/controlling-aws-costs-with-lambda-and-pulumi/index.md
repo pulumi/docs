@@ -72,7 +72,7 @@ func HandleRequest() {
 ```
 
 To deploy this application, we need to build and package the lambda. Packaging a Go lambda requires compiling
-it for linux and then zip the lambda up. We can do this as follows:
+it for Linux and then zipping the lambda up. We can do this as follows:
 
 ```bash
 $ GOOS=linux GOARCH=amd64 go build -o main main.go && zip deployment.zip main
