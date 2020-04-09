@@ -22,7 +22,7 @@ to demonstrate how Policy as Code to ensure tags are automatically added to any 
 If your company doesn't use Pulumi to build and manage their infrastructure, then you can still use Pulumi, in collaboration
 with AWS Lambda, to build and deploy an application that can monitor your cloud costs.
 
-In order to keep our cloud costs down, Pulumi uses an AWS Lambda Go Application that is deployed to our AWS accounts that
+To keep our cloud costs down, Pulumi uses an AWS Lambda Go Application that
 removes wasteful resources daily. If a developer needs to protect their resources from being deleted, they simply need to
 add a tag to their infrastructure of "Owner: <name>". This ensures the owner of a resource can be tracked at any time.
 
