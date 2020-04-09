@@ -15,7 +15,7 @@ easier, by removing much of the boilerplate out of the native cloud providers' d
 the YAML and configuration required for functions, and simplifies uploading code packs to the cloud. The Serverless Framework relies on
 the cloud provider's APIs or templating solutions for any provisioning or management beyond the functions themselves.
 
-Pulumi is more holistic than the Serverless Framework in its focus. In [Pulumi] (https://www.pulumi.com/), you write entire applications -- some parts of which may be serverless
+Pulumi is more holistic than the Serverless Framework in its focus. In [Pulumi] ({{< relref "/" >}}), you write entire applications -- some parts of which may be serverless
 functions -- but this might also include containers, databases, cloud services, or even virtual machines. It then uses
 an infrastructure-as-code approach to deploy, update, and generally manage these constellations of resources.
 
