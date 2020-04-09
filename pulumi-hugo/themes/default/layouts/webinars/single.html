@@ -53,11 +53,18 @@
                     {{ end }}
                 </div>
                 <div id="webinarRegistrationForm" class="mt-10 md:mt-0 md:w-1/2 md:mx-8 bg-gray-200 rounded p-6">
-                    {{ $formHeader := (cond (eq .Params.pre_recorded true) "Watch The Recording Now" "Register Here") }}
-                    {{ with .Params.form }}
-                        <h3 class="text-orange">{{ $formHeader }}</h3>
+                    {{ if .Params.unlisted }}
+                        <h3 class="text-orange">Recording Coming Soon!</h3>
+                        <p>
+                            This live webinar is no longer available. The recording will be posted to this page when it is available.
+                        </p>
+                    {{ else }}
+                        {{ $formHeader := (cond (eq .Params.pre_recorded true) "Watch The Recording Now" "Register Here") }}
+                        {{ with .Params.form }}
+                            <h3 class="text-orange">{{ $formHeader }}</h3>
 
-                        {{ partial "hubspot-form.html" (dict "hubspotFormID" .hubspot_form_id "goToWebinarKey" .gotowebinar_key) }}
+                            {{ partial "hubspot-form.html" (dict "hubspotFormID" .hubspot_form_id "goToWebinarKey" .gotowebinar_key) }}
+                        {{ end }}
                     {{ end }}
                 </div>
             {{ else }}
