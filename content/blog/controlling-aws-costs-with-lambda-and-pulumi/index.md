@@ -11,19 +11,19 @@ Due to the nature of the product we build, the Pulumi team needs to have access 
 develop and test the product. With an increasing number of cloud providers, can come an associated ever-increasing cost.
 
 Giving a development team the ability to launch the resources they need in the cloud is both the best and most scary
-thing that happens in a company. The flexibility for them to be able to achieve their goal is fantastic but with this great
-freedom can come problems. We depend on developers to cleanup after themselves. Sometimes that doesn't happen. Throw in
+thing that happens in a company. The flexibility for them to be able to achieve their goal is fantastic, but with this great
+freedom can come problems. We depend on developers to clean up after themselves. Sometimes that doesn't happen. Throw in
 automated testing failures that leak cloud resources and we can very quickly get ourselves into a situation where costs
-spiral out of control
+spiral out of control.
 
 There are multiple ways that Pulumi can help you deal with this situation. Joe Duffy wrote a blog post on
 [Automatically Enforcing Tagging Policies]({{< relref "/blog/automatically-enforcing-aws-resource-tagging-policies" >}})
 to demonstrate how Policy as Code to ensure tags are automatically added to any Pulumi managed infrastructure.
-If your company doesn't use Pulumi to build and manage their infrastructure then you can still use Pulumi, in collaboration
-with AWS Lambda, to be able to build and deploy an application that can monitor your cloud costs.
+If your company doesn't use Pulumi to build and manage their infrastructure, then you can still use Pulumi, in collaboration
+with AWS Lambda, to build and deploy an application that can monitor your cloud costs.
 
-In order to keep our cloud costs down, Pulumi uses an AWS Lambda Go Application that is deployed to our AWS accounts that
-removes wasteful resources daily. If a developer needs to protect their resources from being deleted, they simply need to
+To keep our cloud costs down, Pulumi uses an AWS Lambda Go Application that
+removes wasteful resources from our AWS accounts daily. If a developer needs to protect their resources from being deleted, they need to
 add a tag to their infrastructure of "Owner: <name>". This ensures the owner of a resource can be tracked at any time.
 
 ## Cloud Cost Lambda
@@ -71,8 +71,8 @@ func HandleRequest() {
 }
 ```
 
-In order to deploy this application we need to build and package the lambda. To package a Go lambda, we need to compile
-it for linux and then zip the lambda up. We can do this as follows:
+To deploy this application, we need to build and package the lambda. Packaging a Go lambda requires compiling
+it for Linux and then zipping the lambda up. We can do this as follows:
 
 ```bash
 $ GOOS=linux GOARCH=amd64 go build -o main main.go && zip deployment.zip main
@@ -132,7 +132,7 @@ Duration: 27s
 ```
 
 We can go to the AWS Lambda console and trigger the application. To do this, we must trigger a test event. Our application
-doesn't actually accept any inputs so the test event will look as follows:
+doesn't accept any inputs, so the test event appears as follows:
 
 ![Lambda Test Event](./test-event.png)
 
@@ -147,7 +147,7 @@ END RequestId: 0910c342-4c43-4946-aeca-cf57683aa36b
 REPORT RequestId: 0910c342-4c43-4946-aeca-cf57683aa36b	Duration: 1.96 ms	Billed Duration: 100 ms	Memory Size: 1024 MB	Max Memory Used: 38 MB	Init Duration: 99.32 ms
 ```
 
-Our lambda application works!! But, it's not going to actually delete anything because we haven't told it what to delete. We
+Our lambda application works!! But, it's not going to delete anything because we haven't told it what to delete. We
 can start very small. Let's tell AWS to cleanup any EBS disks that are currently unattached.
 
 ```go
@@ -197,7 +197,7 @@ func handleUnattachedVolumes(cfg aws.Config) {
 }
 ```
 
-We can then update our lambda handler to include this new ebs cleanup function:
+We can then update our lambda handler to include this new EBS cleanup function:
 
 ```go
 func HandleRequest() {
@@ -265,7 +265,7 @@ REPORT RequestId: dc34a4f0-55f3-434b-a7e4-7832132865d1	Duration: 172.66 ms	Bille
 RequestId: dc34a4f0-55f3-434b-a7e4-7832132865d1 Process exited before completing request
 ```
 
-We haven't actually given our IAM Role permisson to interact with EBS. Let's attach a specific policy to the IAM Role that
+We haven't given our IAM Role permission to interact with EBS. Let's attach a specific policy to the IAM Role that
 allows us to interact with EBS:
 
 ```typescript
