@@ -12,7 +12,7 @@ develop and test the product. With an increasing number of cloud providers, can 
 
 Giving a development team the ability to launch the resources they need in the cloud is both the best and most scary
 thing that happens in a company. The flexibility for them to be able to achieve their goal is fantastic, but with this great
-freedom can come problems. We depend on developers to cleanup after themselves. Sometimes that doesn't happen. Throw in
+freedom can come problems. We depend on developers to clean up after themselves. Sometimes that doesn't happen. Throw in
 automated testing failures that leak cloud resources and we can very quickly get ourselves into a situation where costs
 spiral out of control
 
