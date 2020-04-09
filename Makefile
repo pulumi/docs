@@ -19,6 +19,11 @@ ensure:
 	yarn install
 	yarn --cwd components install
 
+.PHONY: ensure_tools
+ensure_tools:
+	echo "Restoring resourcedocsgen deps..."
+	cd tools/resourcedocsgen && go mod tidy && go mod download
+
 .PHONY: lint_markdown
 lint_markdown:
 	yarn lint-markdown
