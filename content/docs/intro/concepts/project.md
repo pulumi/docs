@@ -60,14 +60,14 @@ runtime:
     typescript: false
 ```
 
-A `Pulumi.yaml` file for a `go` program that will only use a pre-built executable by the name `myprebuilt`:
+A `Pulumi.yaml` file for a `go` program that will only use a pre-built executable by the name `mybinary`:
 
 ```yaml
 name: ls
 runtime:
     name: go
     options:
-        prebuilt: myprebuilt
+        binary: mybinary
 description: A minimal Go Pulumi program
 ```
 
