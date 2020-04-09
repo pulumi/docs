@@ -52,12 +52,8 @@ jobs:
       - name: Add GOBIN to PATH
         run: echo "::add-path::$(go env GOPATH)/bin"
 
-      - name: Install latest Pulumi CLI
-        run: |
-          curl -fsSL https://get.pulumi.com/ | bash -s
-
-      - name: Add Pulumi to PATH
-        run: echo "::add-path::$HOME/.pulumi/bin"
+      - name: Install Pulumi CLI
+        uses: pulumi/action-install-pulumi-cli@releases/v1
 
       - run: make ci_${GITHUB_EVENT_NAME}
         if: github.event_name != 'schedule'
