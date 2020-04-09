@@ -71,7 +71,7 @@ func HandleRequest() {
 }
 ```
 
-In order to deploy this application we need to build and package the lambda. To package a Go lambda, we need to compile
+To deploy this application, we need to build and package the lambda. Packaging a Go lambda requires compiling
 it for linux and then zip the lambda up. We can do this as follows:
 
 ```bash
