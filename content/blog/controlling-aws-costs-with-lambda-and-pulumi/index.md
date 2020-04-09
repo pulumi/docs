@@ -4,25 +4,27 @@ title: "Controlling AWS Costs with Pulumi and AWS Lambda"
 authors: ["paul-stack"]
 tags: ["AWS", "serverless", "lambda"]
 meta_desc: "Learn how to use Pulumi and AWS Lambda to create and deploy an application that can control cloud costs."
-meta_image: ""
+meta_image: "cost.png"
 ---
 
 Due to the nature of the product we build, the Pulumi team needs to have access to several cloud providers to
-develop and test the product. With an increasing number of cloud providers, can come an associated ever-increasing cost.
+develop and test the product. With an increasing number of cloud providers, comes with an associated ever-increasing cost.
+
+<!--more-->
 
 Giving a development team the ability to launch the resources they need in the cloud is both the best and most scary
 thing that happens in a company. The flexibility for them to be able to achieve their goal is fantastic, but with this great
-freedom can come problems. We depend on developers to clean up after themselves. Sometimes that doesn't happen. Throw in
-automated testing failures that leak cloud resources and we can very quickly get ourselves into a situation where costs
+freedom can come problems. We depend on developers to clean up after themselves, but ometimes that doesn't happen. Throw in
+automated testing failures that leak cloud resources, and we can very quickly get ourselves into a situation where costs
 spiral out of control.
 
-There are multiple ways that Pulumi can help you deal with this situation. Joe Duffy wrote a blog post on
+There are multiple ways that Pulumi can help you deal with this situation. [Joe Duffy](https://twitter.com/funcofjoe) wrote a blog post on
 [Automatically Enforcing Tagging Policies]({{< relref "/blog/automatically-enforcing-aws-resource-tagging-policies" >}})
-to demonstrate how Policy as Code to ensure tags are automatically added to any Pulumi managed infrastructure.
-If your company doesn't use Pulumi to build and manage their infrastructure, then you can still use Pulumi, in collaboration
-with AWS Lambda, to build and deploy an application that can monitor your cloud costs.
+to demonstrate how Policy as Code can ensure that tags are automatically added to any Pulumi managed infrastructure.
+If your company doesn't use Pulumi to build and manage their infrastructure, then you can still use Pulumi in collaboration
+with AWS Lambda to build and deploy an application that can monitor your cloud costs.
 
-To keep our cloud costs down, Pulumi uses an AWS Lambda Go Application that
+To keep our cloud costs down, Pulumi uses an AWS Lambda Go application that
 removes wasteful resources from our AWS accounts daily. If a developer needs to protect their resources from being deleted, they need to
 add a tag to their infrastructure of "Owner: <name>". This ensures the owner of a resource can be tracked at any time.
 
