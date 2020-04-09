@@ -197,7 +197,7 @@ func handleUnattachedVolumes(cfg aws.Config) {
 }
 ```
 
-We can then update our lambda handler to include this new ebs cleanup function:
+We can then update our lambda handler to include this new EBS cleanup function:
 
 ```go
 func HandleRequest() {
