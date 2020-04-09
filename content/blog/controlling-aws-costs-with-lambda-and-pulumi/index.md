@@ -14,7 +14,7 @@ Giving a development team the ability to launch the resources they need in the c
 thing that happens in a company. The flexibility for them to be able to achieve their goal is fantastic, but with this great
 freedom can come problems. We depend on developers to clean up after themselves. Sometimes that doesn't happen. Throw in
 automated testing failures that leak cloud resources and we can very quickly get ourselves into a situation where costs
-spiral out of control
+spiral out of control.
 
 There are multiple ways that Pulumi can help you deal with this situation. Joe Duffy wrote a blog post on
 [Automatically Enforcing Tagging Policies]({{< relref "/blog/automatically-enforcing-aws-resource-tagging-policies" >}})
