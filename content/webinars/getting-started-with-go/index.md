@@ -766,8 +766,7 @@ computer
 and once again we're still inside of
 this Pulumi examples repo so if you're
 inside of the Pulumi examples repo all
-you need to do is CD into testing - unit
-- go and run go tests so let's go ahead
+you need to do is CD into testing - unit - go and run go tests so let's go ahead
 and do that
 great and while that gets started let's
 go ahead and look at some of this code
