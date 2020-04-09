@@ -3,8 +3,6 @@
 title: "Advanced Infrastructure as Code"
 meta_desc: "Join us on April 08th, 2020 for a deep dive into Infrastructure as Code concepts with Pulumi engineers Paul Stack and Mikhail Shilkov."
 
-redirect_to: /webinars
-
 # A featured webinar will display first in the list.
 featured: false
 
