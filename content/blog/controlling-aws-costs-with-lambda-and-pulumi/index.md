@@ -265,7 +265,7 @@ REPORT RequestId: dc34a4f0-55f3-434b-a7e4-7832132865d1	Duration: 172.66 ms	Bille
 RequestId: dc34a4f0-55f3-434b-a7e4-7832132865d1 Process exited before completing request
 ```
 
-We haven't actually given our IAM Role permisson to interact with EBS. Let's attach a specific policy to the IAM Role that
+We haven't given our IAM Role permission to interact with EBS. Let's attach a specific policy to the IAM Role that
 allows us to interact with EBS:
 
 ```typescript
