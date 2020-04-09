@@ -18,6 +18,9 @@ banner:
 ensure:
 	yarn install
 	yarn --cwd components install
+
+.PHONY: ensure_tools
+ensure_tools:
 	echo "Restoring resourcedocsgen deps..."
 	cd tools/resourcedocsgen && go mod tidy && go mod download
 
