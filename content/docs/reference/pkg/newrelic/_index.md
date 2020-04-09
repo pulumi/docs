@@ -1,5 +1,5 @@
 ---
-title: "newrelic"
+title: "New Relic"
 block_external_search_index: true
 menu:
     reference:
