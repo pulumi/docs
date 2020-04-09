@@ -132,7 +132,7 @@ Duration: 27s
 ```
 
 We can go to the AWS Lambda console and trigger the application. To do this, we must trigger a test event. Our application
-doesn't actually accept any inputs so the test event will look as follows:
+doesn't accept any inputs, so the test event appears as follows:
 
 ![Lambda Test Event](./test-event.png)
 
