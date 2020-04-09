@@ -22,7 +22,7 @@ block_external_search_index: true
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_network(</span>datacenter_id=None<span class="p">, </span>name=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_network(</span>datacenter_id=None<span class="p">, </span>distributed_virtual_switch_uuid=None<span class="p">, </span>name=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -59,6 +59,18 @@ datacenters, use the id attribute from an empty `vsphere..Datacenter` data
 source.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Distributed<wbr>Virtual<wbr>Switch<wbr>Uuid</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}For distributed port group type 
+network objects, the ID of the distributed virtual switch the given port group
+belongs to. It is useful to differentiate port groups with same name using the
+Distributed virtual switch ID.
+{{% /md %}}</dd>
+
     <dt class="property-required"
             title="Required">
         <span>Name</span>
@@ -86,6 +98,18 @@ ID][docs-about-morefs] of the datacenter the network is located in. This can
 be omitted if the search path used in `name` is an absolute path. For default
 datacenters, use the id attribute from an empty `vsphere..Datacenter` data
 source.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Distributed<wbr>Virtual<wbr>Switch<wbr>Uuid</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}For distributed port group type 
+network objects, the ID of the distributed virtual switch the given port group
+belongs to. It is useful to differentiate port groups with same name using the
+Distributed virtual switch ID.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -117,6 +141,18 @@ datacenters, use the id attribute from an empty `vsphere..Datacenter` data
 source.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>distributed<wbr>Virtual<wbr>Switch<wbr>Uuid</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}For distributed port group type 
+network objects, the ID of the distributed virtual switch the given port group
+belongs to. It is useful to differentiate port groups with same name using the
+Distributed virtual switch ID.
+{{% /md %}}</dd>
+
     <dt class="property-required"
             title="Required">
         <span>name</span>
@@ -144,6 +180,18 @@ ID][docs-about-morefs] of the datacenter the network is located in. This can
 be omitted if the search path used in `name` is an absolute path. For default
 datacenters, use the id attribute from an empty `vsphere..Datacenter` data
 source.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>distributed_<wbr>virtual_<wbr>switch_<wbr>uuid</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}For distributed port group type 
+network objects, the ID of the distributed virtual switch the given port group
+belongs to. It is useful to differentiate port groups with same name using the
+Distributed virtual switch ID.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -185,6 +233,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Distributed<wbr>Virtual<wbr>Switch<wbr>Uuid</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -218,6 +274,14 @@ The following output properties are available:
     <dt class="property-"
             title="">
         <span>Datacenter<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Distributed<wbr>Virtual<wbr>Switch<wbr>Uuid</span>
         <span class="property-indicator"></span>
         <span class="property-type">*string</span>
     </dt>
@@ -265,6 +329,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>distributed<wbr>Virtual<wbr>Switch<wbr>Uuid</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -298,6 +370,14 @@ The following output properties are available:
     <dt class="property-"
             title="">
         <span>datacenter_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>distributed_<wbr>virtual_<wbr>switch_<wbr>uuid</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>

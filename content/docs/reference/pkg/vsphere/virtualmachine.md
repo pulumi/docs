@@ -18,7 +18,7 @@ block_external_search_index: true
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">VirtualMachine</span><span class="p">(resource_name, opts=None, </span>alternate_guest_name=None<span class="p">, </span>annotation=None<span class="p">, </span>boot_delay=None<span class="p">, </span>boot_retry_delay=None<span class="p">, </span>boot_retry_enabled=None<span class="p">, </span>cdrom=None<span class="p">, </span>clone=None<span class="p">, </span>cpu_hot_add_enabled=None<span class="p">, </span>cpu_hot_remove_enabled=None<span class="p">, </span>cpu_limit=None<span class="p">, </span>cpu_performance_counters_enabled=None<span class="p">, </span>cpu_reservation=None<span class="p">, </span>cpu_share_count=None<span class="p">, </span>cpu_share_level=None<span class="p">, </span>custom_attributes=None<span class="p">, </span>datastore_cluster_id=None<span class="p">, </span>datastore_id=None<span class="p">, </span>disks=None<span class="p">, </span>efi_secure_boot_enabled=None<span class="p">, </span>enable_disk_uuid=None<span class="p">, </span>enable_logging=None<span class="p">, </span>ept_rvi_mode=None<span class="p">, </span>extra_config=None<span class="p">, </span>firmware=None<span class="p">, </span>folder=None<span class="p">, </span>force_power_off=None<span class="p">, </span>guest_id=None<span class="p">, </span>host_system_id=None<span class="p">, </span>hv_mode=None<span class="p">, </span>ignored_guest_ips=None<span class="p">, </span>latency_sensitivity=None<span class="p">, </span>memory=None<span class="p">, </span>memory_hot_add_enabled=None<span class="p">, </span>memory_limit=None<span class="p">, </span>memory_reservation=None<span class="p">, </span>memory_share_count=None<span class="p">, </span>memory_share_level=None<span class="p">, </span>migrate_wait_timeout=None<span class="p">, </span>name=None<span class="p">, </span>nested_hv_enabled=None<span class="p">, </span>network_interfaces=None<span class="p">, </span>num_cores_per_socket=None<span class="p">, </span>num_cpus=None<span class="p">, </span>poweron_timeout=None<span class="p">, </span>resource_pool_id=None<span class="p">, </span>run_tools_scripts_after_power_on=None<span class="p">, </span>run_tools_scripts_after_resume=None<span class="p">, </span>run_tools_scripts_before_guest_reboot=None<span class="p">, </span>run_tools_scripts_before_guest_shutdown=None<span class="p">, </span>run_tools_scripts_before_guest_standby=None<span class="p">, </span>scsi_bus_sharing=None<span class="p">, </span>scsi_controller_count=None<span class="p">, </span>scsi_type=None<span class="p">, </span>shutdown_wait_timeout=None<span class="p">, </span>storage_policy_id=None<span class="p">, </span>swap_placement_policy=None<span class="p">, </span>sync_time_with_host=None<span class="p">, </span>tags=None<span class="p">, </span>vapp=None<span class="p">, </span>wait_for_guest_ip_timeout=None<span class="p">, </span>wait_for_guest_net_routable=None<span class="p">, </span>wait_for_guest_net_timeout=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">VirtualMachine</span><span class="p">(resource_name, opts=None, </span>alternate_guest_name=None<span class="p">, </span>annotation=None<span class="p">, </span>boot_delay=None<span class="p">, </span>boot_retry_delay=None<span class="p">, </span>boot_retry_enabled=None<span class="p">, </span>cdrom=None<span class="p">, </span>clone=None<span class="p">, </span>cpu_hot_add_enabled=None<span class="p">, </span>cpu_hot_remove_enabled=None<span class="p">, </span>cpu_limit=None<span class="p">, </span>cpu_performance_counters_enabled=None<span class="p">, </span>cpu_reservation=None<span class="p">, </span>cpu_share_count=None<span class="p">, </span>cpu_share_level=None<span class="p">, </span>custom_attributes=None<span class="p">, </span>datastore_cluster_id=None<span class="p">, </span>datastore_id=None<span class="p">, </span>disks=None<span class="p">, </span>efi_secure_boot_enabled=None<span class="p">, </span>enable_disk_uuid=None<span class="p">, </span>enable_logging=None<span class="p">, </span>ept_rvi_mode=None<span class="p">, </span>extra_config=None<span class="p">, </span>firmware=None<span class="p">, </span>folder=None<span class="p">, </span>force_power_off=None<span class="p">, </span>guest_id=None<span class="p">, </span>hardware_version=None<span class="p">, </span>host_system_id=None<span class="p">, </span>hv_mode=None<span class="p">, </span>ignored_guest_ips=None<span class="p">, </span>latency_sensitivity=None<span class="p">, </span>memory=None<span class="p">, </span>memory_hot_add_enabled=None<span class="p">, </span>memory_limit=None<span class="p">, </span>memory_reservation=None<span class="p">, </span>memory_share_count=None<span class="p">, </span>memory_share_level=None<span class="p">, </span>migrate_wait_timeout=None<span class="p">, </span>name=None<span class="p">, </span>nested_hv_enabled=None<span class="p">, </span>network_interfaces=None<span class="p">, </span>num_cores_per_socket=None<span class="p">, </span>num_cpus=None<span class="p">, </span>poweron_timeout=None<span class="p">, </span>resource_pool_id=None<span class="p">, </span>run_tools_scripts_after_power_on=None<span class="p">, </span>run_tools_scripts_after_resume=None<span class="p">, </span>run_tools_scripts_before_guest_reboot=None<span class="p">, </span>run_tools_scripts_before_guest_shutdown=None<span class="p">, </span>run_tools_scripts_before_guest_standby=None<span class="p">, </span>scsi_bus_sharing=None<span class="p">, </span>scsi_controller_count=None<span class="p">, </span>scsi_type=None<span class="p">, </span>shutdown_wait_timeout=None<span class="p">, </span>storage_policy_id=None<span class="p">, </span>swap_placement_policy=None<span class="p">, </span>sync_time_with_host=None<span class="p">, </span>tags=None<span class="p">, </span>vapp=None<span class="p">, </span>wait_for_guest_ip_timeout=None<span class="p">, </span>wait_for_guest_net_routable=None<span class="p">, </span>wait_for_guest_net_timeout=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -400,6 +400,18 @@ the virtual machine. Default: `true`.
     </dt>
     <dd>{{% md %}}The guest ID for the operating system type. For a
 full list of possible values, see [here][vmware-docs-guest-ids]. Default: `other-64`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Hardware<wbr>Version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int?</span>
+    </dt>
+    <dd>{{% md %}}The hardware version number. Valid range
+is from 4 to 15. The hardware version cannot be downgraded. See [virtual
+machine hardware compatibility][virtual-machine-hardware-compatibility] for
+more details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1081,6 +1093,18 @@ full list of possible values, see [here][vmware-docs-guest-ids]. Default: `other
 
     <dt class="property-optional"
             title="Optional">
+        <span>Hardware<wbr>Version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*int</span>
+    </dt>
+    <dd>{{% md %}}The hardware version number. Valid range
+is from 4 to 15. The hardware version cannot be downgraded. See [virtual
+machine hardware compatibility][virtual-machine-hardware-compatibility] for
+more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Host<wbr>System<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">*string</span>
@@ -1758,6 +1782,18 @@ full list of possible values, see [here][vmware-docs-guest-ids]. Default: `other
 
     <dt class="property-optional"
             title="Optional">
+        <span>hardware<wbr>Version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number?</span>
+    </dt>
+    <dd>{{% md %}}The hardware version number. Valid range
+is from 4 to 15. The hardware version cannot be downgraded. See [virtual
+machine hardware compatibility][virtual-machine-hardware-compatibility] for
+more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>host<wbr>System<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string?</span>
@@ -2431,6 +2467,18 @@ the virtual machine. Default: `true`.
     </dt>
     <dd>{{% md %}}The guest ID for the operating system type. For a
 full list of possible values, see [here][vmware-docs-guest-ids]. Default: `other-64`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>hardware_<wbr>version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The hardware version number. Valid range
+is from 4 to 15. The hardware version cannot be downgraded. See [virtual
+machine hardware compatibility][virtual-machine-hardware-compatibility] for
+more details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3153,6 +3201,18 @@ including the value of `default_ip_address`. If VMware tools is not running
 on the virtual machine, or if the VM is powered off, this list will be empty.
 * `moid`: The [managed object reference ID][docs-about-morefs] of the created
 virtual machine.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Hardware<wbr>Version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The hardware version number. Valid range
+is from 4 to 15. The hardware version cannot be downgraded. See [virtual
+machine hardware compatibility][virtual-machine-hardware-compatibility] for
+more details.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -3938,6 +3998,18 @@ virtual machine.
 
     <dt class="property-"
             title="">
+        <span>Hardware<wbr>Version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The hardware version number. Valid range
+is from 4 to 15. The hardware version cannot be downgraded. See [virtual
+machine hardware compatibility][virtual-machine-hardware-compatibility] for
+more details.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Host<wbr>System<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -4715,6 +4787,18 @@ including the value of `default_ip_address`. If VMware tools is not running
 on the virtual machine, or if the VM is powered off, this list will be empty.
 * `moid`: The [managed object reference ID][docs-about-morefs] of the created
 virtual machine.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>hardware<wbr>Version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The hardware version number. Valid range
+is from 4 to 15. The hardware version cannot be downgraded. See [virtual
+machine hardware compatibility][virtual-machine-hardware-compatibility] for
+more details.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -5500,6 +5584,18 @@ virtual machine.
 
     <dt class="property-"
             title="">
+        <span>hardware_<wbr>version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The hardware version number. Valid range
+is from 4 to 15. The hardware version cannot be downgraded. See [virtual
+machine hardware compatibility][virtual-machine-hardware-compatibility] for
+more details.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>host_<wbr>system_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -5976,7 +6072,7 @@ Get an existing VirtualMachine resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>alternate_guest_name=None<span class="p">, </span>annotation=None<span class="p">, </span>boot_delay=None<span class="p">, </span>boot_retry_delay=None<span class="p">, </span>boot_retry_enabled=None<span class="p">, </span>cdrom=None<span class="p">, </span>change_version=None<span class="p">, </span>clone=None<span class="p">, </span>cpu_hot_add_enabled=None<span class="p">, </span>cpu_hot_remove_enabled=None<span class="p">, </span>cpu_limit=None<span class="p">, </span>cpu_performance_counters_enabled=None<span class="p">, </span>cpu_reservation=None<span class="p">, </span>cpu_share_count=None<span class="p">, </span>cpu_share_level=None<span class="p">, </span>custom_attributes=None<span class="p">, </span>datastore_cluster_id=None<span class="p">, </span>datastore_id=None<span class="p">, </span>default_ip_address=None<span class="p">, </span>disks=None<span class="p">, </span>efi_secure_boot_enabled=None<span class="p">, </span>enable_disk_uuid=None<span class="p">, </span>enable_logging=None<span class="p">, </span>ept_rvi_mode=None<span class="p">, </span>extra_config=None<span class="p">, </span>firmware=None<span class="p">, </span>folder=None<span class="p">, </span>force_power_off=None<span class="p">, </span>guest_id=None<span class="p">, </span>guest_ip_addresses=None<span class="p">, </span>host_system_id=None<span class="p">, </span>hv_mode=None<span class="p">, </span>ignored_guest_ips=None<span class="p">, </span>imported=None<span class="p">, </span>latency_sensitivity=None<span class="p">, </span>memory=None<span class="p">, </span>memory_hot_add_enabled=None<span class="p">, </span>memory_limit=None<span class="p">, </span>memory_reservation=None<span class="p">, </span>memory_share_count=None<span class="p">, </span>memory_share_level=None<span class="p">, </span>migrate_wait_timeout=None<span class="p">, </span>moid=None<span class="p">, </span>name=None<span class="p">, </span>nested_hv_enabled=None<span class="p">, </span>network_interfaces=None<span class="p">, </span>num_cores_per_socket=None<span class="p">, </span>num_cpus=None<span class="p">, </span>poweron_timeout=None<span class="p">, </span>reboot_required=None<span class="p">, </span>resource_pool_id=None<span class="p">, </span>run_tools_scripts_after_power_on=None<span class="p">, </span>run_tools_scripts_after_resume=None<span class="p">, </span>run_tools_scripts_before_guest_reboot=None<span class="p">, </span>run_tools_scripts_before_guest_shutdown=None<span class="p">, </span>run_tools_scripts_before_guest_standby=None<span class="p">, </span>scsi_bus_sharing=None<span class="p">, </span>scsi_controller_count=None<span class="p">, </span>scsi_type=None<span class="p">, </span>shutdown_wait_timeout=None<span class="p">, </span>storage_policy_id=None<span class="p">, </span>swap_placement_policy=None<span class="p">, </span>sync_time_with_host=None<span class="p">, </span>tags=None<span class="p">, </span>uuid=None<span class="p">, </span>vapp=None<span class="p">, </span>vapp_transports=None<span class="p">, </span>vmware_tools_status=None<span class="p">, </span>vmx_path=None<span class="p">, </span>wait_for_guest_ip_timeout=None<span class="p">, </span>wait_for_guest_net_routable=None<span class="p">, </span>wait_for_guest_net_timeout=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>alternate_guest_name=None<span class="p">, </span>annotation=None<span class="p">, </span>boot_delay=None<span class="p">, </span>boot_retry_delay=None<span class="p">, </span>boot_retry_enabled=None<span class="p">, </span>cdrom=None<span class="p">, </span>change_version=None<span class="p">, </span>clone=None<span class="p">, </span>cpu_hot_add_enabled=None<span class="p">, </span>cpu_hot_remove_enabled=None<span class="p">, </span>cpu_limit=None<span class="p">, </span>cpu_performance_counters_enabled=None<span class="p">, </span>cpu_reservation=None<span class="p">, </span>cpu_share_count=None<span class="p">, </span>cpu_share_level=None<span class="p">, </span>custom_attributes=None<span class="p">, </span>datastore_cluster_id=None<span class="p">, </span>datastore_id=None<span class="p">, </span>default_ip_address=None<span class="p">, </span>disks=None<span class="p">, </span>efi_secure_boot_enabled=None<span class="p">, </span>enable_disk_uuid=None<span class="p">, </span>enable_logging=None<span class="p">, </span>ept_rvi_mode=None<span class="p">, </span>extra_config=None<span class="p">, </span>firmware=None<span class="p">, </span>folder=None<span class="p">, </span>force_power_off=None<span class="p">, </span>guest_id=None<span class="p">, </span>guest_ip_addresses=None<span class="p">, </span>hardware_version=None<span class="p">, </span>host_system_id=None<span class="p">, </span>hv_mode=None<span class="p">, </span>ignored_guest_ips=None<span class="p">, </span>imported=None<span class="p">, </span>latency_sensitivity=None<span class="p">, </span>memory=None<span class="p">, </span>memory_hot_add_enabled=None<span class="p">, </span>memory_limit=None<span class="p">, </span>memory_reservation=None<span class="p">, </span>memory_share_count=None<span class="p">, </span>memory_share_level=None<span class="p">, </span>migrate_wait_timeout=None<span class="p">, </span>moid=None<span class="p">, </span>name=None<span class="p">, </span>nested_hv_enabled=None<span class="p">, </span>network_interfaces=None<span class="p">, </span>num_cores_per_socket=None<span class="p">, </span>num_cpus=None<span class="p">, </span>poweron_timeout=None<span class="p">, </span>reboot_required=None<span class="p">, </span>resource_pool_id=None<span class="p">, </span>run_tools_scripts_after_power_on=None<span class="p">, </span>run_tools_scripts_after_resume=None<span class="p">, </span>run_tools_scripts_before_guest_reboot=None<span class="p">, </span>run_tools_scripts_before_guest_shutdown=None<span class="p">, </span>run_tools_scripts_before_guest_standby=None<span class="p">, </span>scsi_bus_sharing=None<span class="p">, </span>scsi_controller_count=None<span class="p">, </span>scsi_type=None<span class="p">, </span>shutdown_wait_timeout=None<span class="p">, </span>storage_policy_id=None<span class="p">, </span>swap_placement_policy=None<span class="p">, </span>sync_time_with_host=None<span class="p">, </span>tags=None<span class="p">, </span>uuid=None<span class="p">, </span>vapp=None<span class="p">, </span>vapp_transports=None<span class="p">, </span>vmware_tools_status=None<span class="p">, </span>vmx_path=None<span class="p">, </span>wait_for_guest_ip_timeout=None<span class="p">, </span>wait_for_guest_net_routable=None<span class="p">, </span>wait_for_guest_net_timeout=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -6405,6 +6501,18 @@ including the value of `default_ip_address`. If VMware tools is not running
 on the virtual machine, or if the VM is powered off, this list will be empty.
 * `moid`: The [managed object reference ID][docs-about-morefs] of the created
 virtual machine.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Hardware<wbr>Version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int?</span>
+    </dt>
+    <dd>{{% md %}}The hardware version number. Valid range
+is from 4 to 15. The hardware version cannot be downgraded. See [virtual
+machine hardware compatibility][virtual-machine-hardware-compatibility] for
+more details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7190,6 +7298,18 @@ virtual machine.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Hardware<wbr>Version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*int</span>
+    </dt>
+    <dd>{{% md %}}The hardware version number. Valid range
+is from 4 to 15. The hardware version cannot be downgraded. See [virtual
+machine hardware compatibility][virtual-machine-hardware-compatibility] for
+more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Host<wbr>System<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">*string</span>
@@ -7971,6 +8091,18 @@ virtual machine.
 
     <dt class="property-optional"
             title="Optional">
+        <span>hardware<wbr>Version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number?</span>
+    </dt>
+    <dd>{{% md %}}The hardware version number. Valid range
+is from 4 to 15. The hardware version cannot be downgraded. See [virtual
+machine hardware compatibility][virtual-machine-hardware-compatibility] for
+more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>host<wbr>System<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string?</span>
@@ -8748,6 +8880,18 @@ including the value of `default_ip_address`. If VMware tools is not running
 on the virtual machine, or if the VM is powered off, this list will be empty.
 * `moid`: The [managed object reference ID][docs-about-morefs] of the created
 virtual machine.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>hardware_<wbr>version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The hardware version number. Valid range
+is from 4 to 15. The hardware version cannot be downgraded. See [virtual
+machine hardware compatibility][virtual-machine-hardware-compatibility] for
+more details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
