@@ -1,5 +1,5 @@
 ---
-title: "kafka"
+title: "Kafka"
 block_external_search_index: true
 menu:
     reference:
