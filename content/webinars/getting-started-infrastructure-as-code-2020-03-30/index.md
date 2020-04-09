@@ -6,7 +6,7 @@ meta_desc: "Join us on March 30th, 2020 for a deep dive into Infrastructure as C
 # A featured webinar will display first in the list.
 featured: false
 
-redirect_to: "/webinars/"
+redirect_to: "/webinars/getting-started-with-infrastrcuture-as-code/"
 
 # If the video is pre-recorded or live.
 pre_recorded: false
