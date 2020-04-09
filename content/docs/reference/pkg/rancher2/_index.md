@@ -1,5 +1,5 @@
 ---
-title: "rancher2"
+title: "Rancher 2"
 block_external_search_index: true
 menu:
     reference:

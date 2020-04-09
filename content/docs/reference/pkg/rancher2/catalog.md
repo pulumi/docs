@@ -266,7 +266,7 @@ const foo_project = new rancher2.Catalog("foo-project", {
         <span class="property-indicator"></span>
         <span class="property-type">string?</span>
     </dt>
-    <dd>{{% md %}}Helm version for the catalog. Available options: `helm_v2` (default) and `helm_v3` (string)
+    <dd>{{% md %}}Helm version for the catalog. Available options: `helm_v2` and `helm_v3` (string)
 {{% /md %}}</dd>
 
 </dl>
@@ -399,7 +399,7 @@ const foo_project = new rancher2.Catalog("foo-project", {
         <span class="property-indicator"></span>
         <span class="property-type">*string</span>
     </dt>
-    <dd>{{% md %}}Helm version for the catalog. Available options: `helm_v2` (default) and `helm_v3` (string)
+    <dd>{{% md %}}Helm version for the catalog. Available options: `helm_v2` and `helm_v3` (string)
 {{% /md %}}</dd>
 
 </dl>
@@ -532,7 +532,7 @@ const foo_project = new rancher2.Catalog("foo-project", {
         <span class="property-indicator"></span>
         <span class="property-type">string?</span>
     </dt>
-    <dd>{{% md %}}Helm version for the catalog. Available options: `helm_v2` (default) and `helm_v3` (string)
+    <dd>{{% md %}}Helm version for the catalog. Available options: `helm_v2` and `helm_v3` (string)
 {{% /md %}}</dd>
 
 </dl>
@@ -665,7 +665,7 @@ const foo_project = new rancher2.Catalog("foo-project", {
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Helm version for the catalog. Available options: `helm_v2` (default) and `helm_v3` (string)
+    <dd>{{% md %}}Helm version for the catalog. Available options: `helm_v2` and `helm_v3` (string)
 {{% /md %}}</dd>
 
 </dl>
@@ -808,9 +808,9 @@ The following output properties are available:
             title="">
         <span>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Helm version for the catalog. Available options: `helm_v2` (default) and `helm_v3` (string)
+    <dd>{{% md %}}Helm version for the catalog. Available options: `helm_v2` and `helm_v3` (string)
 {{% /md %}}</dd>
 
 </dl>
@@ -941,9 +941,9 @@ The following output properties are available:
             title="">
         <span>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Helm version for the catalog. Available options: `helm_v2` (default) and `helm_v3` (string)
+    <dd>{{% md %}}Helm version for the catalog. Available options: `helm_v2` and `helm_v3` (string)
 {{% /md %}}</dd>
 
 </dl>
@@ -1074,9 +1074,9 @@ The following output properties are available:
             title="">
         <span>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Helm version for the catalog. Available options: `helm_v2` (default) and `helm_v3` (string)
+    <dd>{{% md %}}Helm version for the catalog. Available options: `helm_v2` and `helm_v3` (string)
 {{% /md %}}</dd>
 
 </dl>
@@ -1209,7 +1209,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Helm version for the catalog. Available options: `helm_v2` (default) and `helm_v3` (string)
+    <dd>{{% md %}}Helm version for the catalog. Available options: `helm_v2` and `helm_v3` (string)
 {{% /md %}}</dd>
 
 </dl>
@@ -1470,7 +1470,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string?</span>
     </dt>
-    <dd>{{% md %}}Helm version for the catalog. Available options: `helm_v2` (default) and `helm_v3` (string)
+    <dd>{{% md %}}Helm version for the catalog. Available options: `helm_v2` and `helm_v3` (string)
 {{% /md %}}</dd>
 
 </dl>
@@ -1603,7 +1603,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">*string</span>
     </dt>
-    <dd>{{% md %}}Helm version for the catalog. Available options: `helm_v2` (default) and `helm_v3` (string)
+    <dd>{{% md %}}Helm version for the catalog. Available options: `helm_v2` and `helm_v3` (string)
 {{% /md %}}</dd>
 
 </dl>
@@ -1736,7 +1736,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string?</span>
     </dt>
-    <dd>{{% md %}}Helm version for the catalog. Available options: `helm_v2` (default) and `helm_v3` (string)
+    <dd>{{% md %}}Helm version for the catalog. Available options: `helm_v2` and `helm_v3` (string)
 {{% /md %}}</dd>
 
 </dl>
@@ -1869,7 +1869,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Helm version for the catalog. Available options: `helm_v2` (default) and `helm_v3` (string)
+    <dd>{{% md %}}Helm version for the catalog. Available options: `helm_v2` and `helm_v3` (string)
 {{% /md %}}</dd>
 
 </dl>
