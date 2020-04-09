@@ -36,7 +36,7 @@ A project file contains the following attributes:
     * `name`: `runtime` can either be specified as a string, or a complex object with additional configuration. If you need to include additional configuration, specify language information (`nodejs`, `python`, `go`, or `dotnet`) in this property.
     * `options`: (optional) a property bag that has various configuration options that apply to different language runtimes.
         * `typescript`: applies to nodejs projects only. A boolean (`true` | `false`) controls whether to use ts-node to execute sources. Defaults to `true`.
-        * `prebuilt`: applies to Go projects only. A string that specifies the name of a pre-built executable to look for on your path. If not specified, go sources in $CWD will be invoked via `go run`. 
+        * `prebuilt`: applies to Go projects only. A string that specifies the name of a pre-built executable to look for on your path. If not specified, go sources in $CWD will be invoked via `go run`.
 
 * `description`: (optional) a friendly description about your project.
 
@@ -66,7 +66,7 @@ A `Pulumi.yaml` file for a `go` program that will only use a pre-built executabl
 name: ls
 runtime:
     name: go
-    options: 
+    options:
         prebuilt: myprebuilt
 description: A minimal Go Pulumi program
 ```
