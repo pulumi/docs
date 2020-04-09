@@ -23,7 +23,7 @@ If your company doesn't use Pulumi to build and manage their infrastructure, the
 with AWS Lambda, to build and deploy an application that can monitor your cloud costs.
 
 To keep our cloud costs down, Pulumi uses an AWS Lambda Go Application that
-removes wasteful resources daily. If a developer needs to protect their resources from being deleted, they simply need to
+removes wasteful resources from our AWS accounts daily. If a developer needs to protect their resources from being deleted, they need to
 add a tag to their infrastructure of "Owner: <name>". This ensures the owner of a resource can be tracked at any time.
 
 ## Cloud Cost Lambda
