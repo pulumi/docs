@@ -31,12 +31,12 @@ A project file contains the following attributes:
   associated stacks and their resources underneath the project, as a simple kind of hierarchy.
 
 * `runtime`: (required) (`string`|`object`) the language runtime configuration to use for your program.  Possible string options are `nodejs`
-  (for JavaScript and TypeScript), `python` (for Python),`go` (for Go), and `dotnet` (for Dotnet).  At the moment, Pulumi doesn't depend on specific versions
+  (for JavaScript and TypeScript), `python` (for Python),`go` (for Go), and `dotnet` (for .NET).  At the moment, Pulumi doesn't depend on specific versions
   of these runtimes, and will simply use whatever version you have installed on your machine.
     * `name`: `runtime` can either be specified as a string, or a complex object with additional configuration. If you need to include additional configuration, specify language information (`nodejs`, `python`, `go`, or `dotnet`) in this property.
     * `options`: (optional) a property bag that has various configuration options that apply to different language runtimes.
         * `typescript`: applies to nodejs projects only. A boolean (`true` | `false`) controls whether to use ts-node to execute sources. Defaults to `true`.
-        * `prebuilt`: applies to Go projects only. A string that specifies the name of a pre-built executable to look for on your path. If not specified, go sources in $CWD will be invoked via `go run`.
+        * `binary`: applies to Go projects only. A string that specifies the name of a pre-built executable to look for on your path. If not specified, go sources in $CWD will be invoked via `go run`.
 
 * `description`: (optional) a friendly description about your project.
 
