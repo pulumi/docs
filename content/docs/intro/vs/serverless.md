@@ -30,4 +30,4 @@ https://serverless.com/blog/serverless-application-for-long-running-process-farg
 of explanation, including manual steps and AWS CloudFormation; [the after code using Pulumi](
 https://github.com/pulumi/examples/tree/master/cloud-js-thumbnailer) is only about 38 lines of code.
 
-Follow our blog for updates on [new features] (https://www.pulumi.com/blog/tag/new-features/), and if you have any questions about Pulumi, feel free to [contact us] (https://www.pulumi.com/contact/) any time.
+Follow our blog for updates on [new features] ({{< relref "/blog/tag/new-features" >}}), and if you have any questions about Pulumi, feel free to [contact us] ({{< relref "/contact" >}}) any time.
