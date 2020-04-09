@@ -23,7 +23,7 @@ The easiest way to start with the Cloud Framework is to follow one of the tutori
 * [A simple containerized app]({{< relref "service" >}}): Deploy cloud-agnostic containerized services
 * [Serverless + Containers + Infrastructure]({{< relref "thumbnailer" >}}): Deploy a complete cloud-agnostic application using a combination of buckets, serverless functions and containers.
 
-In addition to the tutorials, several interesting examples are available complete with instructions for adoption:
+In addition to the tutorials, several interesting examples are available with instructions for adoption:
 
 * [HTTP API](https://github.com/pulumi/examples/tree/master/cloud-js-api)
 * [Containers](https://github.com/pulumi/examples/tree/master/cloud-js-containers)
