@@ -1,5 +1,5 @@
 ---
-title: "consul"
+title: "Consul"
 block_external_search_index: true
 menu:
     reference:
