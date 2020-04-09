@@ -1,5 +1,5 @@
 ---
-title: "spotinst"
+title: "Spotinst"
 block_external_search_index: true
 menu:
     reference:
@@ -28,6 +28,7 @@ A Pulumi package for creating and managing spotinst cloud resources.
 
 <h3>Resources</h3>
 <ul class="api">
+    <li><a href="healthcheck" title="HealthCheck"><span class="symbol resource"></span>HealthCheck</a></li>
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
     <li><a href="subscription" title="Subscription"><span class="symbol resource"></span>Subscription</a></li>
 </ul>

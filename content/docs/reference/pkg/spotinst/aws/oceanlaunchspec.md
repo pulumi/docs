@@ -27,10 +27,15 @@ const example = new spotinst.aws.OceanLaunchSpec("example", {
         key: "fakeKey",
         value: "fakeValue",
     }],
+    name: "launch spec name test",
     oceanId: "o-123456",
     rootVolumeSize: 30,
     securityGroups: ["sg-987654321"],
     subnetIds: ["subnet-1234"],
+    tags: [{
+        key: "Env",
+        value: "production",
+    }],
     taints: [{
         effect: "NoExecute",
         key: "taint key updated",
@@ -53,7 +58,7 @@ const example = new spotinst.aws.OceanLaunchSpec("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">OceanLaunchSpec</span><span class="p">(resource_name, opts=None, </span>autoscale_headrooms=None<span class="p">, </span>iam_instance_profile=None<span class="p">, </span>image_id=None<span class="p">, </span>labels=None<span class="p">, </span>ocean_id=None<span class="p">, </span>root_volume_size=None<span class="p">, </span>security_groups=None<span class="p">, </span>subnet_ids=None<span class="p">, </span>taints=None<span class="p">, </span>user_data=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">OceanLaunchSpec</span><span class="p">(resource_name, opts=None, </span>autoscale_headrooms=None<span class="p">, </span>iam_instance_profile=None<span class="p">, </span>image_id=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>ocean_id=None<span class="p">, </span>root_volume_size=None<span class="p">, </span>security_groups=None<span class="p">, </span>subnet_ids=None<span class="p">, </span>tags=None<span class="p">, </span>taints=None<span class="p">, </span>user_data=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -189,6 +194,15 @@ const example = new spotinst.aws.OceanLaunchSpec("example", {
     <dd>{{% md %}}Optionally adds labels to instances launched in an Ocean cluster.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Set Launch Specification name 
+{{% /md %}}</dd>
+
     <dt class="property-required"
             title="Required">
         <span>Ocean<wbr>Id</span>
@@ -223,6 +237,15 @@ const example = new spotinst.aws.OceanLaunchSpec("example", {
         <span class="property-type">List<string>?</span>
     </dt>
     <dd>{{% md %}}Set subnets in launchSpec. Each element in array should be subnet ID.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspectag">List&lt;Ocean<wbr>Launch<wbr>Spec<wbr>Tag<wbr>Args&gt;?</a></span>
+    </dt>
+    <dd>{{% md %}}A key/value mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -286,6 +309,15 @@ const example = new spotinst.aws.OceanLaunchSpec("example", {
     <dd>{{% md %}}Optionally adds labels to instances launched in an Ocean cluster.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}Set Launch Specification name 
+{{% /md %}}</dd>
+
     <dt class="property-required"
             title="Required">
         <span>Ocean<wbr>Id</span>
@@ -320,6 +352,15 @@ const example = new spotinst.aws.OceanLaunchSpec("example", {
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Set subnets in launchSpec. Each element in array should be subnet ID.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspectag">[]Ocean<wbr>Launch<wbr>Spec<wbr>Tag</a></span>
+    </dt>
+    <dd>{{% md %}}A key/value mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -383,6 +424,15 @@ const example = new spotinst.aws.OceanLaunchSpec("example", {
     <dd>{{% md %}}Optionally adds labels to instances launched in an Ocean cluster.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Set Launch Specification name 
+{{% /md %}}</dd>
+
     <dt class="property-required"
             title="Required">
         <span>ocean<wbr>Id</span>
@@ -417,6 +467,15 @@ const example = new spotinst.aws.OceanLaunchSpec("example", {
         <span class="property-type">string[]?</span>
     </dt>
     <dd>{{% md %}}Set subnets in launchSpec. Each element in array should be subnet ID.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspectag">Ocean<wbr>Launch<wbr>Spec<wbr>Tag[]?</a></span>
+    </dt>
+    <dd>{{% md %}}A key/value mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -480,6 +539,15 @@ const example = new spotinst.aws.OceanLaunchSpec("example", {
     <dd>{{% md %}}Optionally adds labels to instances launched in an Ocean cluster.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Set Launch Specification name 
+{{% /md %}}</dd>
+
     <dt class="property-required"
             title="Required">
         <span>ocean_<wbr>id</span>
@@ -514,6 +582,15 @@ const example = new spotinst.aws.OceanLaunchSpec("example", {
         <span class="property-type">List[str]</span>
     </dt>
     <dd>{{% md %}}Set subnets in launchSpec. Each element in array should be subnet ID.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspectag">List[Ocean<wbr>Launch<wbr>Spec<wbr>Tag]</a></span>
+    </dt>
+    <dd>{{% md %}}A key/value mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -591,6 +668,15 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Set Launch Specification name 
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Ocean<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -623,6 +709,15 @@ The following output properties are available:
         <span class="property-type">List<string>?</span>
     </dt>
     <dd>{{% md %}}Set subnets in launchSpec. Each element in array should be subnet ID.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspectag">List&lt;Ocean<wbr>Launch<wbr>Spec<wbr>Tag&gt;?</a></span>
+    </dt>
+    <dd>{{% md %}}A key/value mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -688,6 +783,15 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Set Launch Specification name 
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Ocean<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -720,6 +824,15 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Set subnets in launchSpec. Each element in array should be subnet ID.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspectag">[]Ocean<wbr>Launch<wbr>Spec<wbr>Tag</a></span>
+    </dt>
+    <dd>{{% md %}}A key/value mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -785,6 +898,15 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Set Launch Specification name 
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>ocean<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -817,6 +939,15 @@ The following output properties are available:
         <span class="property-type">string[]?</span>
     </dt>
     <dd>{{% md %}}Set subnets in launchSpec. Each element in array should be subnet ID.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspectag">Ocean<wbr>Launch<wbr>Spec<wbr>Tag[]?</a></span>
+    </dt>
+    <dd>{{% md %}}A key/value mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -882,6 +1013,15 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Set Launch Specification name 
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>ocean_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -914,6 +1054,15 @@ The following output properties are available:
         <span class="property-type">List[str]</span>
     </dt>
     <dd>{{% md %}}Set subnets in launchSpec. Each element in array should be subnet ID.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspectag">List[Ocean<wbr>Launch<wbr>Spec<wbr>Tag]</a></span>
+    </dt>
+    <dd>{{% md %}}A key/value mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -955,7 +1104,7 @@ Get an existing OceanLaunchSpec resource's state with the given name, ID, and op
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>autoscale_headrooms=None<span class="p">, </span>iam_instance_profile=None<span class="p">, </span>image_id=None<span class="p">, </span>labels=None<span class="p">, </span>ocean_id=None<span class="p">, </span>root_volume_size=None<span class="p">, </span>security_groups=None<span class="p">, </span>subnet_ids=None<span class="p">, </span>taints=None<span class="p">, </span>user_data=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>autoscale_headrooms=None<span class="p">, </span>iam_instance_profile=None<span class="p">, </span>image_id=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>ocean_id=None<span class="p">, </span>root_volume_size=None<span class="p">, </span>security_groups=None<span class="p">, </span>subnet_ids=None<span class="p">, </span>tags=None<span class="p">, </span>taints=None<span class="p">, </span>user_data=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1107,6 +1256,15 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Set Launch Specification name 
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Ocean<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string?</span>
@@ -1139,6 +1297,15 @@ The following state arguments are supported:
         <span class="property-type">List<string>?</span>
     </dt>
     <dd>{{% md %}}Set subnets in launchSpec. Each element in array should be subnet ID.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspectag">List&lt;Ocean<wbr>Launch<wbr>Spec<wbr>Tag<wbr>Args&gt;?</a></span>
+    </dt>
+    <dd>{{% md %}}A key/value mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1204,6 +1371,15 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}Set Launch Specification name 
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Ocean<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">*string</span>
@@ -1236,6 +1412,15 @@ The following state arguments are supported:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Set subnets in launchSpec. Each element in array should be subnet ID.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspectag">[]Ocean<wbr>Launch<wbr>Spec<wbr>Tag</a></span>
+    </dt>
+    <dd>{{% md %}}A key/value mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1301,6 +1486,15 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Set Launch Specification name 
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>ocean<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string?</span>
@@ -1333,6 +1527,15 @@ The following state arguments are supported:
         <span class="property-type">string[]?</span>
     </dt>
     <dd>{{% md %}}Set subnets in launchSpec. Each element in array should be subnet ID.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspectag">Ocean<wbr>Launch<wbr>Spec<wbr>Tag[]?</a></span>
+    </dt>
+    <dd>{{% md %}}A key/value mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1398,6 +1601,15 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Set Launch Specification name 
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>ocean_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -1430,6 +1642,15 @@ The following state arguments are supported:
         <span class="property-type">List[str]</span>
     </dt>
     <dd>{{% md %}}Set subnets in launchSpec. Each element in array should be subnet ID.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspectag">List[Ocean<wbr>Launch<wbr>Spec<wbr>Tag]</a></span>
+    </dt>
+    <dd>{{% md %}}A key/value mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1658,6 +1879,121 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/go/spotinst/aws?tab=doc#OceanLaunchSpecLabelArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/go/spotinst/aws?tab=doc#OceanLaunchSpecLabelOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Key</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The tag key.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The tag value.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Key</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The tag key.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The tag value.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>key</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The tag key.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The tag value.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>key</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The tag key.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The tag value.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4>Ocean<wbr>Launch<wbr>Spec<wbr>Tag</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#OceanLaunchSpecTag">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#OceanLaunchSpecTag">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/go/spotinst/aws?tab=doc#OceanLaunchSpecTagArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/go/spotinst/aws?tab=doc#OceanLaunchSpecTagOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
