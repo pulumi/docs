@@ -18,7 +18,7 @@ block_external_search_index: true
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ScalingGroup</span><span class="p">(resource_name, opts=None, </span>db_instance_ids=None<span class="p">, </span>default_cooldown=None<span class="p">, </span>loadbalancer_ids=None<span class="p">, </span>max_size=None<span class="p">, </span>min_size=None<span class="p">, </span>multi_az_policy=None<span class="p">, </span>on_demand_base_capacity=None<span class="p">, </span>on_demand_percentage_above_base_capacity=None<span class="p">, </span>removal_policies=None<span class="p">, </span>scaling_group_name=None<span class="p">, </span>spot_instance_pools=None<span class="p">, </span>spot_instance_remedy=None<span class="p">, </span>vswitch_id=None<span class="p">, </span>vswitch_ids=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ScalingGroup</span><span class="p">(resource_name, opts=None, </span>db_instance_ids=None<span class="p">, </span>default_cooldown=None<span class="p">, </span>desired_capacity=None<span class="p">, </span>loadbalancer_ids=None<span class="p">, </span>max_size=None<span class="p">, </span>min_size=None<span class="p">, </span>multi_az_policy=None<span class="p">, </span>on_demand_base_capacity=None<span class="p">, </span>on_demand_percentage_above_base_capacity=None<span class="p">, </span>removal_policies=None<span class="p">, </span>scaling_group_name=None<span class="p">, </span>spot_instance_pools=None<span class="p">, </span>spot_instance_remedy=None<span class="p">, </span>vswitch_id=None<span class="p">, </span>vswitch_ids=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -136,6 +136,15 @@ block_external_search_index: true
         <span class="property-type">int?</span>
     </dt>
     <dd>{{% md %}}Default cool-down time (in seconds) of the scaling group. Value range: [0, 86400]. The default value is 300s.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Desired<wbr>Capacity</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int?</span>
+    </dt>
+    <dd>{{% md %}}Expected number of ECS instances in the scaling group. Value range: [min_size, max_size].
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -284,6 +293,15 @@ targeting your `alicloud.slb.Listener` in order to make sure the listener with i
 
     <dt class="property-optional"
             title="Optional">
+        <span>Desired<wbr>Capacity</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*int</span>
+    </dt>
+    <dd>{{% md %}}Expected number of ECS instances in the scaling group. Value range: [min_size, max_size].
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Loadbalancer<wbr>Ids</span>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
@@ -428,6 +446,15 @@ targeting your `alicloud.slb.Listener` in order to make sure the listener with i
 
     <dt class="property-optional"
             title="Optional">
+        <span>desired<wbr>Capacity</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number?</span>
+    </dt>
+    <dd>{{% md %}}Expected number of ECS instances in the scaling group. Value range: [min_size, max_size].
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>loadbalancer<wbr>Ids</span>
         <span class="property-indicator"></span>
         <span class="property-type">string[]?</span>
@@ -568,6 +595,15 @@ targeting your `alicloud.slb.Listener` in order to make sure the listener with i
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Default cool-down time (in seconds) of the scaling group. Value range: [0, 86400]. The default value is 300s.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>desired_<wbr>capacity</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}Expected number of ECS instances in the scaling group. Value range: [min_size, max_size].
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -728,6 +764,15 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Desired<wbr>Capacity</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int?</span>
+    </dt>
+    <dd>{{% md %}}Expected number of ECS instances in the scaling group. Value range: [min_size, max_size].
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Loadbalancer<wbr>Ids</span>
         <span class="property-indicator"></span>
         <span class="property-type">List<string>?</span>
@@ -872,6 +917,15 @@ targeting your `alicloud.slb.Listener` in order to make sure the listener with i
 
     <dt class="property-"
             title="">
+        <span>Desired<wbr>Capacity</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*int</span>
+    </dt>
+    <dd>{{% md %}}Expected number of ECS instances in the scaling group. Value range: [min_size, max_size].
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Loadbalancer<wbr>Ids</span>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
@@ -1012,6 +1066,15 @@ targeting your `alicloud.slb.Listener` in order to make sure the listener with i
         <span class="property-type">number?</span>
     </dt>
     <dd>{{% md %}}Default cool-down time (in seconds) of the scaling group. Value range: [0, 86400]. The default value is 300s.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>desired<wbr>Capacity</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number?</span>
+    </dt>
+    <dd>{{% md %}}Expected number of ECS instances in the scaling group. Value range: [min_size, max_size].
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1160,6 +1223,15 @@ targeting your `alicloud.slb.Listener` in order to make sure the listener with i
 
     <dt class="property-"
             title="">
+        <span>desired_<wbr>capacity</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}Expected number of ECS instances in the scaling group. Value range: [min_size, max_size].
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>loadbalancer_<wbr>ids</span>
         <span class="property-indicator"></span>
         <span class="property-type">List[str]</span>
@@ -1296,7 +1368,7 @@ Get an existing ScalingGroup resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>db_instance_ids=None<span class="p">, </span>default_cooldown=None<span class="p">, </span>loadbalancer_ids=None<span class="p">, </span>max_size=None<span class="p">, </span>min_size=None<span class="p">, </span>multi_az_policy=None<span class="p">, </span>on_demand_base_capacity=None<span class="p">, </span>on_demand_percentage_above_base_capacity=None<span class="p">, </span>removal_policies=None<span class="p">, </span>scaling_group_name=None<span class="p">, </span>spot_instance_pools=None<span class="p">, </span>spot_instance_remedy=None<span class="p">, </span>vswitch_id=None<span class="p">, </span>vswitch_ids=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>db_instance_ids=None<span class="p">, </span>default_cooldown=None<span class="p">, </span>desired_capacity=None<span class="p">, </span>loadbalancer_ids=None<span class="p">, </span>max_size=None<span class="p">, </span>min_size=None<span class="p">, </span>multi_az_policy=None<span class="p">, </span>on_demand_base_capacity=None<span class="p">, </span>on_demand_percentage_above_base_capacity=None<span class="p">, </span>removal_policies=None<span class="p">, </span>scaling_group_name=None<span class="p">, </span>spot_instance_pools=None<span class="p">, </span>spot_instance_remedy=None<span class="p">, </span>vswitch_id=None<span class="p">, </span>vswitch_ids=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1428,6 +1500,15 @@ The following state arguments are supported:
         <span class="property-type">int?</span>
     </dt>
     <dd>{{% md %}}Default cool-down time (in seconds) of the scaling group. Value range: [0, 86400]. The default value is 300s.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Desired<wbr>Capacity</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int?</span>
+    </dt>
+    <dd>{{% md %}}Expected number of ECS instances in the scaling group. Value range: [min_size, max_size].
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1576,6 +1657,15 @@ targeting your `alicloud.slb.Listener` in order to make sure the listener with i
 
     <dt class="property-optional"
             title="Optional">
+        <span>Desired<wbr>Capacity</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*int</span>
+    </dt>
+    <dd>{{% md %}}Expected number of ECS instances in the scaling group. Value range: [min_size, max_size].
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Loadbalancer<wbr>Ids</span>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
@@ -1720,6 +1810,15 @@ targeting your `alicloud.slb.Listener` in order to make sure the listener with i
 
     <dt class="property-optional"
             title="Optional">
+        <span>desired<wbr>Capacity</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number?</span>
+    </dt>
+    <dd>{{% md %}}Expected number of ECS instances in the scaling group. Value range: [min_size, max_size].
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>loadbalancer<wbr>Ids</span>
         <span class="property-indicator"></span>
         <span class="property-type">string[]?</span>
@@ -1860,6 +1959,15 @@ targeting your `alicloud.slb.Listener` in order to make sure the listener with i
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Default cool-down time (in seconds) of the scaling group. Value range: [0, 86400]. The default value is 300s.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>desired_<wbr>capacity</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}Expected number of ECS instances in the scaling group. Value range: [min_size, max_size].
 {{% /md %}}</dd>
 
     <dt class="property-optional"

@@ -18,7 +18,7 @@ block_external_search_index: true
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">SiteMonitor</span><span class="p">(resource_name, opts=None, </span>address=None<span class="p">, </span>alert_ids=None<span class="p">, </span>interval=None<span class="p">, </span>options_json=None<span class="p">, </span>task_name=None<span class="p">, </span>task_type=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">SiteMonitor</span><span class="p">(resource_name, opts=None, </span>address=None<span class="p">, </span>alert_ids=None<span class="p">, </span>interval=None<span class="p">, </span>isp_cities=None<span class="p">, </span>options_json=None<span class="p">, </span>task_name=None<span class="p">, </span>task_type=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -144,6 +144,14 @@ block_external_search_index: true
 
     <dt class="property-optional"
             title="Optional">
+        <span>Isp<wbr>Cities</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sitemonitorispcity">List&lt;Site<wbr>Monitor<wbr>Isp<wbr>City<wbr>Args&gt;?</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Options<wbr>Json</span>
         <span class="property-indicator"></span>
         <span class="property-type">string?</span>
@@ -194,6 +202,14 @@ block_external_search_index: true
         <span>Interval</span>
         <span class="property-indicator"></span>
         <span class="property-type">*int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Isp<wbr>Cities</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sitemonitorispcity">[]Site<wbr>Monitor<wbr>Isp<wbr>City</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -254,6 +270,14 @@ block_external_search_index: true
 
     <dt class="property-optional"
             title="Optional">
+        <span>isp<wbr>Cities</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sitemonitorispcity">Site<wbr>Monitor<wbr>Isp<wbr>City[]?</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>options<wbr>Json</span>
         <span class="property-indicator"></span>
         <span class="property-type">string?</span>
@@ -304,6 +328,14 @@ block_external_search_index: true
         <span>interval</span>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>isp_<wbr>cities</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sitemonitorispcity">List[Site<wbr>Monitor<wbr>Isp<wbr>City]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -384,6 +416,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Isp<wbr>Cities</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sitemonitorispcity">List&lt;Site<wbr>Monitor<wbr>Isp<wbr>City&gt;?</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Options<wbr>Json</span>
         <span class="property-indicator"></span>
         <span class="property-type">string?</span>
@@ -458,6 +498,14 @@ The following output properties are available:
         <span>Interval</span>
         <span class="property-indicator"></span>
         <span class="property-type">*int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Isp<wbr>Cities</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sitemonitorispcity">[]Site<wbr>Monitor<wbr>Isp<wbr>City</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -542,6 +590,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>isp<wbr>Cities</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sitemonitorispcity">Site<wbr>Monitor<wbr>Isp<wbr>City[]?</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>options<wbr>Json</span>
         <span class="property-indicator"></span>
         <span class="property-type">string?</span>
@@ -621,6 +677,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>isp_<wbr>cities</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sitemonitorispcity">List[Site<wbr>Monitor<wbr>Isp<wbr>City]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>options_<wbr>json</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -680,7 +744,7 @@ Get an existing SiteMonitor resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>address=None<span class="p">, </span>alert_ids=None<span class="p">, </span>create_time=None<span class="p">, </span>interval=None<span class="p">, </span>options_json=None<span class="p">, </span>task_name=None<span class="p">, </span>task_state=None<span class="p">, </span>task_type=None<span class="p">, </span>update_time=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>address=None<span class="p">, </span>alert_ids=None<span class="p">, </span>create_time=None<span class="p">, </span>interval=None<span class="p">, </span>isp_cities=None<span class="p">, </span>options_json=None<span class="p">, </span>task_name=None<span class="p">, </span>task_state=None<span class="p">, </span>task_type=None<span class="p">, </span>update_time=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -828,6 +892,14 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Isp<wbr>Cities</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sitemonitorispcity">List&lt;Site<wbr>Monitor<wbr>Isp<wbr>City<wbr>Args&gt;?</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Options<wbr>Json</span>
         <span class="property-indicator"></span>
         <span class="property-type">string?</span>
@@ -902,6 +974,14 @@ The following state arguments are supported:
         <span>Interval</span>
         <span class="property-indicator"></span>
         <span class="property-type">*int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Isp<wbr>Cities</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sitemonitorispcity">[]Site<wbr>Monitor<wbr>Isp<wbr>City</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -986,6 +1066,14 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>isp<wbr>Cities</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sitemonitorispcity">Site<wbr>Monitor<wbr>Isp<wbr>City[]?</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>options<wbr>Json</span>
         <span class="property-indicator"></span>
         <span class="property-type">string?</span>
@@ -1065,6 +1153,14 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>isp_<wbr>cities</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sitemonitorispcity">List[Site<wbr>Monitor<wbr>Isp<wbr>City]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>options_<wbr>json</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -1107,6 +1203,118 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 
+
+
+
+
+
+
+
+
+## Supporting Types
+
+<h4>Site<wbr>Monitor<wbr>Isp<wbr>City</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#SiteMonitorIspCity">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#SiteMonitorIspCity">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/cms?tab=doc#SiteMonitorIspCityArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/cms?tab=doc#SiteMonitorIspCityOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>City</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Isp</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>City</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Isp</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>city</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>isp</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>city</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>isp</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
 

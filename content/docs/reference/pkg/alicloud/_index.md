@@ -1,5 +1,5 @@
 ---
-title: "alicloud"
+title: "AliCloud"
 block_external_search_index: true
 menu:
     reference:
@@ -44,6 +44,7 @@ A Pulumi package for creating and managing AliCloud resources.
     <li><a href="kvstore/" title="kvstore"><span class="symbol module"></span>kvstore</a></li>
     <li><a href="log/" title="log"><span class="symbol module"></span>log</a></li>
     <li><a href="marketplace/" title="marketplace"><span class="symbol module"></span>marketplace</a></li>
+    <li><a href="maxcompute/" title="maxcompute"><span class="symbol module"></span>maxcompute</a></li>
     <li><a href="mns/" title="mns"><span class="symbol module"></span>mns</a></li>
     <li><a href="mongodb/" title="mongodb"><span class="symbol module"></span>mongodb</a></li>
     <li><a href="nas/" title="nas"><span class="symbol module"></span>nas</a></li>

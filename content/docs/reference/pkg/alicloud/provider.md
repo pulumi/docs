@@ -1187,6 +1187,14 @@ that are not public (yet).
 
     <dt class="property-optional"
             title="Optional">
+        <span>Maxcompute</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Mns</span>
         <span class="property-indicator"></span>
         <span class="property-type">string?</span>
@@ -1515,6 +1523,14 @@ that are not public (yet).
     <dt class="property-optional"
             title="Optional">
         <span>Market</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Maxcompute</span>
         <span class="property-indicator"></span>
         <span class="property-type">*string</span>
     </dt>
@@ -1857,6 +1873,14 @@ that are not public (yet).
 
     <dt class="property-optional"
             title="Optional">
+        <span>maxcompute</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>mns</span>
         <span class="property-indicator"></span>
         <span class="property-type">string?</span>
@@ -2185,6 +2209,14 @@ that are not public (yet).
     <dt class="property-optional"
             title="Optional">
         <span>market</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>maxcompute</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
