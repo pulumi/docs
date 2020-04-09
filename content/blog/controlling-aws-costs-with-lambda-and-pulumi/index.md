@@ -147,7 +147,7 @@ END RequestId: 0910c342-4c43-4946-aeca-cf57683aa36b
 REPORT RequestId: 0910c342-4c43-4946-aeca-cf57683aa36b	Duration: 1.96 ms	Billed Duration: 100 ms	Memory Size: 1024 MB	Max Memory Used: 38 MB	Init Duration: 99.32 ms
 ```
 
-Our lambda application works!! But, it's not going to actually delete anything because we haven't told it what to delete. We
+Our lambda application works!! But, it's not going to delete anything because we haven't told it what to delete. We
 can start very small. Let's tell AWS to cleanup any EBS disks that are currently unattached.
 
 ```go
