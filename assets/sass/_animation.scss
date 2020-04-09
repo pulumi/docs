@@ -27,3 +27,70 @@
 .blink {
     animation: fadeIn 500ms linear infinite alternate;
 }
+
+@keyframes sparkle-primary {
+    0% {
+        opacity: 1;
+    }
+    96% {
+        opacity: 1;
+    }
+    97% {
+        opacity: .2;
+    }
+    98% {
+        opacity: 1;
+    }
+    99% {
+        opacity: .2;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes sparkle-secondary {
+    0% {
+        opacity: .4;
+    }
+    96% {
+        opacity: .4;
+    }
+    97% {
+        opacity: .1;
+    }
+    98% {
+        opacity: .4;
+    }
+    99% {
+        opacity: .1;
+    }
+    100% {
+        opacity: .4;
+    }
+}
+
+.sparkle {
+    &.primary {
+        animation: sparkle-primary 6s ease-in-out infinite;
+    }
+
+    &.secondary {
+        animation: sparkle-secondary 6s ease-in-out .1s infinite;
+    }
+}
+
+@keyframes hero-clouds {
+    from {
+        left: 0;
+        top: 2%;
+    }
+    to {
+        left: 100%;
+        top: 2%;
+    }
+}
+
+.hero-clouds {
+    animation: hero-clouds 420s linear infinite alternate;
+}

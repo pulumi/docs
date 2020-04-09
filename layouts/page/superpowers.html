@@ -1,0 +1,276 @@
+{{ define "hero" }}
+    <header class="header-hero shadow-2xl relative overflow-hidden">
+        <div class="absolute hero-clouds w-full"><img src="/images/hero-clouds.svg" alt=""></div>
+        <div class="container mx-auto">
+            <div class="flex items-start">
+                <div>
+                    <img class="w-64" src="/images/mascot/pulumipus.svg" alt="">
+                </div>
+                <div class="md:ml-8 md:mt-8 md:w-3/4">
+                    <h1 class="text-4xl">Modern Infrastructure with <span class="text-blue-300 font-semibold">Superpowers</span>.</h1>
+                    <p class="text-xl pr-48 text-purple-100 leading-relaxed">
+                        We're unleashing new capabilities for Delivery, Provisioning,
+                        Architecture, Testing and Policy-as-code &mdash; on any cloud, using your
+                        favorite languages. Join us as we walk through our favorite new features.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </header>
+{{ end }}
+
+{{ define "main" }}
+    <section class="bg-white pt-24 px-4 justify-center" id="editions">
+        <div class="container mx-auto lg:flex justify-center">
+            <ul class="flex flex-col md:flex-row md:flex-wrap items-start">
+                <li class="md:w-1/2 flex items-start">
+                    <div class="bg-blue-100 border-4 border-blue-200 rounded-full p-6" style="fill: #4387c7;">
+                        <svg class="h-12 w-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><defs><style>.fa-secondary{opacity:.4}</style></defs><path d="M35.67945,352.06641C9.82789,377.91992-2.94945,442.59375.57789,511.41016c69.10156,3.55859,133.58984-9.35157,159.33984-35.10547,40.28516-40.2793,42.8711-93.98633,6.3086-130.54883C129.66773,309.19727,75.9607,311.78516,35.67945,352.06641Zm94.957,81.05468c-10.73046,10.73243-37.60546,16.11133-66.40234,14.627-1.46484-28.67383,3.85938-55.623,14.63281-66.39649,16.78125-16.78515,39.16407-17.86328,54.39844-2.6289C148.49586,393.959,147.42164,416.33789,130.63648,433.12109ZM51.94117,154.48438,2.531,253.29688A28.125,28.125,0,0,0-.00023,264a24.00619,24.00619,0,0,0,24,24H117.4607c23.44141-47.41211,61.01172-123.373,77.89063-157.32812.51953-.91407,1-1.76758,1.52344-2.67188H94.82008C78.47633,128.01562,59.28883,139.875,51.94117,154.48438ZM381.3357,316.57227c-33.96093,17.00781-110.0625,54.67968-157.33593,78.07421V488.209A24.12394,24.12394,0,0,0,247.9607,512a28.02965,28.02965,0,0,0,10.625-2.53125l98.72657-49.39063c14.625-7.3125,26.5-26.5,26.5-42.85937V315.70312c.0664-.041.125-.08789.1875-.1289v-.52734C383.09352,315.56641,382.25367,316.04883,381.3357,316.57227Z" class="fa-secondary"/><path d="M505.15992,19.51562A16.73971,16.73971,0,0,0,492.62477,6.94531C460.22633,0,434.37477,0,409.48414,0,320.3357,0,252.80836,40.61523,196.97633,127.81836c-.5586.97852-1.07031,1.877-1.625,2.85352C178.47242,164.627,140.90211,240.58789,117.4607,288h10.53907a95.99975,95.99975,0,0,1,96,96v10.64648c47.27343-23.39453,123.375-61.0664,157.33593-78.07421.96094-.54883,1.832-1.04883,2.78907-1.59766,87.23437-56.06055,127.85937-123.51172,127.85937-212.27734C512.06227,77.60742,512.12867,52.08789,505.15992,19.51562ZM367.99977,192a48,48,0,1,1,48-48.00195A48.02156,48.02156,0,0,1,367.99977,192ZM78.867,381.35156C68.09352,392.125,62.7693,419.07422,64.23414,447.74805c28.79688,1.48437,55.67188-3.89453,66.40234-14.627,16.78516-16.7832,17.85938-39.16211,2.62891-54.39843C118.031,363.48828,95.6482,364.56641,78.867,381.35156Z" class="fa-primary"/></svg>
+                    </div>
+                    <div class="pl-6 pr-12">
+                        <h3 class="font-normal text-gray-800 text-3xl mt-0" >
+                            <a href="{{ relref . "/docs/get-started" }}">
+                                <span class="align-middle text-blue-700 transition-all hover:mr-1">Provisioning</span>
+                                <span class="text-blue-400 text-lg">&rarr;</span>
+                            </a>
+                        </h3>
+                        <p class="text-lg text-gray-700 mb-12 pb-12 border-b border-gray-1 leading-relaxed">
+                            Manage infrastructure with your favorite languages, libraries, and editors
+                            instead of wrestling with legacy formats. Preview changes and track
+                            updates on-prem and any cloud.
+                        </p>
+                    </div>
+                </li>
+                <li class="md:w-1/2 flex items-start">
+                    <div class="bg-blue-100 border-4 border-blue-200 rounded-full p-6" style="fill: #4387c7;">
+                        <svg class="h-12 w-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><defs><style>.fa-secondary{opacity:.4}</style></defs><path d="M496 384H208a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h288a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm0-320H208a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h288a16 16 0 0 0 16-16V80a16 16 0 0 0-16-16zm0 160H208a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h288a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16z" class="fa-secondary"/><path d="M139.61 35.5a12 12 0 0 0-17 0L58.93 98.81l-22.7-22.12a12 12 0 0 0-17 0L3.53 92.41a12 12 0 0 0 0 17l47.59 47.4a12.78 12.78 0 0 0 17.61 0l15.59-15.62L156.52 69a12.09 12.09 0 0 0 .09-17zm0 159.19a12 12 0 0 0-17 0l-63.68 63.72-22.7-22.1a12 12 0 0 0-17 0L3.53 252a12 12 0 0 0 0 17L51 316.5a12.77 12.77 0 0 0 17.6 0l15.7-15.69 72.2-72.22a12 12 0 0 0 .09-16.9zM64 368c-26.49 0-48.59 21.5-48.59 48S37.53 464 64 464a48 48 0 0 0 0-96z" class="fa-primary"/></svg>
+                    </div>
+                    <div class="pl-6 pr-12">
+                        <h3 class="font-normal text-gray-800 text-3xl mt-0">
+                            <a href="{{ relref . "/docs/guides/testing" }}">
+                                <span class="align-middle text-blue-700 transition-all hover:mr-1">Testing</span>
+                                <span class="text-blue-400 text-lg">&rarr;</span>
+                            </a>
+                        </h3>
+                        <p class="text-lg text-gray-700 mb-12 pb-12 border-b border-gray-1 leading-relaxed">
+                            Ensure that your infrastructure is correct before and after deployment.
+                            New resource mocking and test framework support make testing and
+                            validating cloud resources a snap.
+                        </p>
+                    </div>
+                </li>
+                <li class="md:w-1/2 flex items-start">
+                    <div class="bg-blue-100 border-4 border-blue-200 rounded-full p-6" style="fill: #4387c7;">
+                        <svg class="h-12 w-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><defs><style>.fa-secondary{opacity:.4}</style></defs><path d="M176 352a80 80 0 1 0 80 80 80 80 0 0 0-80-80zm288 0a80 80 0 1 0 80 80 80 80 0 0 0-80-80z" class="fa-secondary"/><path d="M624 352h-16V243.9a48 48 0 0 0-14.1-33.9L494 110.1A48 48 0 0 0 460.1 96H416V48a48 48 0 0 0-48-48H48A48 48 0 0 0 0 48v320a48 48 0 0 0 48 48h18.16C74 361.93 119.78 320 176 320s102.54 41.86 110.38 96h67.24c7.85-54.14 54.1-96 110.38-96s102 41.93 109.84 96H624a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm-64-96H416V144h44.1l99.9 99.9z" class="fa-primary"/></svg>
+                    </div>
+                    <div class="pl-6 pr-12">
+                        <h3 class="font-normal text-gray-800 text-3xl mt-0">
+                            <a href="{{ relref . "/docs/guides/continuous-delivery" }}">
+                                <span class="align-middle text-blue-700 transition-all hover:mr-1">Delivery</span>
+                                <span class="text-blue-400 text-lg">&rarr;</span>
+                            </a>
+                        </h3>
+                        <p class="text-lg text-gray-700 mb-12 pb-12 border-b border-gray-1 leading-relaxed">
+                            Continuously ship application and infrastructure updates using common
+                            workflows. Integrates with your CI/CD toolchain to improve velocity and
+                            visibility into infrastructure dependencies and state.
+                        </p>
+                    </div>
+                </li>
+                <li class="md:w-1/2 flex items-start">
+                    <div class="bg-blue-100 border-4 border-blue-200 rounded-full p-6" style="fill: #4387c7;">
+                        <svg class="w-12 h-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><defs><style>.fa-secondary{opacity:.4}</style></defs><path d="M104 320H56v-57.59A38.45 38.45 0 0 1 94.41 224H296v-64h48v64h201.59A38.46 38.46 0 0 1 584 262.41V320h-48v-48H344v48h-48v-48H104z" class="fa-secondary"/><path d="M128 352H32a32 32 0 0 0-32 32v96a32 32 0 0 0 32 32h96a32 32 0 0 0 32-32v-96a32 32 0 0 0-32-32zM384 0H256a32 32 0 0 0-32 32v96a32 32 0 0 0 32 32h128a32 32 0 0 0 32-32V32a32 32 0 0 0-32-32zm224 352h-96a32 32 0 0 0-32 32v96a32 32 0 0 0 32 32h96a32 32 0 0 0 32-32v-96a32 32 0 0 0-32-32zm-240 0h-96a32 32 0 0 0-32 32v96a32 32 0 0 0 32 32h96a32 32 0 0 0 32-32v-96a32 32 0 0 0-32-32z" class="fa-primary"/></svg>
+                    </div>
+                    <div class="pl-6 pr-12">
+                        <h3 class="font-normal text-gray-800 text-3xl mt-0">
+                            <a href="{{ relref . "/docs/intro/concepts" }}">
+                                <span class="align-middle text-blue-700 transition-all hover:mr-1">Architecture</span>
+                                <span class="text-blue-400 text-lg">&rarr;</span>
+                            </a>
+                        </h3>
+                        <p class="text-lg text-gray-700 mb-12 pb-12 border-b border-gray-1 leading-relaxed">
+                            Stop reinventing the wheel with each new microservice component and create
+                            self-service infrastructure for your teams. Leverage an ecosystem of
+                            libraries that implement best practices.
+                        </p>
+                    </div>
+                </li>
+                <li class="md:w-1/2 flex items-start">
+                    <div class="bg-blue-100 border-4 border-blue-200 rounded-full p-6" style="fill: #4387c7;">
+                        <svg class="h-12 w-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><defs><style>.fa-secondary{opacity:.4}</style></defs><path d="M466.5 83.67l-192-80a48.15 48.15 0 0 0-36.9 0l-192 80A48 48 0 0 0 16 128c0 198.5 114.5 335.69 221.5 380.29a48.15 48.15 0 0 0 36.9 0C360.1 472.58 496 349.27 496 128a48 48 0 0 0-29.5-44.33zm-47.2 114.21l-184 184a16.06 16.06 0 0 1-22.6 0l-104-104a16.07 16.07 0 0 1 0-22.61l22.6-22.6a16.07 16.07 0 0 1 22.6 0l70.1 70.1 150.1-150.1a16.07 16.07 0 0 1 22.6 0l22.6 22.6a15.89 15.89 0 0 1 0 22.61z" class="fa-secondary"/><path d="M419.3 197.88l-184 184a16.06 16.06 0 0 1-22.6 0l-104-104a16.07 16.07 0 0 1 0-22.61l22.6-22.6a16.07 16.07 0 0 1 22.6 0l70.1 70.1 150.1-150.1a16.07 16.07 0 0 1 22.6 0l22.6 22.6a15.89 15.89 0 0 1 0 22.61z" class="fa-primary"/></svg>
+                    </div>
+                    <div class="pl-6 pr-12">
+                        <h3 class="font-normal text-gray-800 text-3xl mt-0">
+                            <a href="{{ relref . "docs/guides/crossguard" }}">
+                                <span class="align-middle text-blue-700 transition-all hover:mr-1">Policy</span>
+                                <span class="text-blue-400 text-lg">&rarr;</span>
+                            </a>
+                        </h3>
+                        <p class="text-lg text-gray-700 mb-12 pb-12 border-b border-gray-1 md:border-b-0 leading-relaxed">
+                            Enforce standards for deployments with auditing capabilities across roles,
+                            environments, projects or organizations. Define security, compliance, and
+                            cost controls to prevent mistakes from reaching production.
+                        </p>
+                    </div>
+                </li>
+                <li class="md:w-1/2 flex items-start">
+                    <div class="bg-blue-100 border-4 border-blue-200 rounded-full p-6" style="fill: #4387c7;">
+                        <svg class="h-12 w-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><defs><style>.fa-secondary{opacity:.4}</style></defs><path d="M161.6 288H96a96 96 0 0 1 0-192c.6 0 1.1.2 1.6.2C105.3 41.9 151.6 0 208 0a111.61 111.61 0 0 1 104.5 72.7A95.07 95.07 0 0 1 352 64a96 96 0 0 1 96 96 93 93 0 0 1-7 34.7 110.5 110.5 0 0 0-31.6 11.8A142.54 142.54 0 0 0 304 160c-73.9 0-134.3 56.2-142.4 128z" class="fa-secondary"/><path d="M640 416a96 96 0 0 1-96 96H224a96 96 0 0 1-96-96c0-42.5 27.8-78.2 66.1-90.8A113.72 113.72 0 0 1 192 304a111.94 111.94 0 0 1 112-112c43.2 0 80.4 24.9 99 60.8 14.7-17.5 36.4-28.8 61-28.8a80 80 0 0 1 80 80 78.09 78.09 0 0 1-1.6 16.2c.5 0 1-.2 1.6-.2a96 96 0 0 1 96 96z" class="fa-primary"/></svg>
+                    </div>
+                    <div class="pl-6 pr-12">
+                        <h3 class="font-normal text-gray-800 text-3xl mt-0">
+                            <a href="{{ relref . "/docs/get-started" }}">
+                                <span class="align-middle text-blue-700 transition-all hover:mr-1">Any cloud, any language</span>
+                                <span class="text-blue-400 text-lg">&rarr;</span>
+                            </a>
+                        </h3>
+                        <p class="text-lg text-gray-700 mb-12 pb-12 leading-relaxed">
+                            Pulumi works with top programming languages across all major public clouds
+                            with support for on-prem, hybrid and multi-cloud deployments.
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <svg width="100%" viewBox="0 0 1868 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1868 58H0V0C401.799 114.686 1778.83 -37.1767 1868 30V58Z" fill="#F7FAFC"/>
+    </svg>
+    <section class="bg-gray-100 pt-8 pb-16 px-4 mb-0">
+        <div class="container mx-auto max-w-2xl flex flex-col justify-center text-center">
+            <div class="inline-block flex items-center justify-center">
+                <span class="text-orange-500 bg-orange-100 p-4 rounded-full border-4 border-orange-300" style="fill: #ee975c;">
+                    <svg class="w-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><defs><style>.fa-secondary{opacity:.4}</style></defs>
+                        <path d="M423.16 186.58L448 127l59.58-24.84a8 8 0 0 0 0-14.32L448 63 423.16 3.42a8 8 0 0 0-14.32 0L384 63l-59.58 24.84a8 8 0 0 0 0 14.32L384 127l24.84 59.58a8 8 0 0 0 14.32 0zm-14.32 136.84L384 383l-59.58 24.84a8 8 0 0 0 0 14.32L384 447l24.84 59.58a8 8 0 0 0 14.32 0L448 447l59.58-24.84a8 8 0 0 0 0-14.32L448 383l-24.84-59.58a8 8 0 0 0-14.32 0z" class="fa-secondary sparkle secondary"/>
+                        <path d="M384 254.64a16.06 16.06 0 0 0-8.84-14.33l-112.57-56.39-56.28-112.77c-5.44-10.87-23.19-10.87-28.62 0l-56.28 112.77L8.84 240.31a16 16 0 0 0 0 28.67l112.57 56.39 56.28 112.77a16 16 0 0 0 28.62 0l56.28-112.77L375.16 269a16.07 16.07 0 0 0 8.84-14.36z" class="fa-primary sparkle primary"/>
+                    </svg>
+                </span>
+            </div>
+            <h3 class="mt-4 text-4xl text-gray-800">
+                Watch the Launch Event
+            </h3>
+            <div class="">
+                <div class="text-gray-600 uppercase text-sm">
+                    Wednesday, April 29, 2020 &bull; 11:00 AM&ndash;12:00 PM PDT
+                </div>
+                <p class="leading-relaxed mt-6 mb-10 text-2xl text-gray-700">
+                    Corey Quinn, Joe Duffy and the Pulumi team introduce you to all
+                    Pulumi’s new superpowers and improvements.
+                </p>
+                <div>
+                    <a href="#" class="btn group btn-orange py-3 px-4">
+                        <span>Register Now</span>
+                        <span class="inline-block pl-1 w-4 group-hover:pl-2 transition-all">&rarr;</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <svg width="100%" viewBox="0 0 1868 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M-6.10352e-05 0H1868V58C1466.2 -56.6861 89.1693 95.1767 -6.10352e-05 28V0Z" fill="#F7FAFC"/>
+    </svg>
+    <section class="bg-white pt-12 px-4 justify-center">
+        <div class="container mx-auto max-w-4xl">
+            <div class="text-center mt-0 mb-16">
+                <h2 class="bg-white text-gray-800">Talks and Screencasts</h2>
+            </div>
+            <ul class="flex flex-col items-start w-full list-none">
+                <li class="flex w-full items-start pb-12 mb-12 border-b border-gray-200">
+                    <div class="w-1/8 mr-10 py-24 px-48 w-64 rounded border-2 border-gray-400 bg-gray-100 flex items-center justify-center"
+                         style="background: top / cover url(/images/webinar/pac-demo.png)">
+                    </div>
+                    <div class="">
+                        <h3>
+                            <a href="#" class="text-blue-600 text-2xl">Policy as Code for Any Cloud</a>
+                        </h3>
+                        <div class="text-gray-600 uppercase text-sm">
+                            Thursday, April 9, 2020 • 11:00 AM–12:00 PM PDT
+                        </div>
+                        <p class="leading-relaxed mb-8 text-lg">
+                            Erin Krengel and Cameron Stokes show you how to apply policies
+                            to avoid common security and cost management issues.
+                        </p>
+                        <div>
+                            <a href="#" class="btn btn-secondary">Watch Now</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="flex w-full items-start pb-12 mb-12 border-b border-gray-200">
+                    <div class="w-1/8 mr-10 py-24 px-48 rounded border border-gray-300 bg-gray-100 flex items-center justify-center"
+                        style="background: top / cover url(/images/webinar/dotnet-demo.png)">
+                    </div>
+                    <div class="">
+                        <h3><a href="#" class="text-blue-600 text-2xl">Managing Any Cloud with .NET</a></h3>
+                        <div class="text-gray-600 uppercase text-sm">
+                            Monday, April 13, 2020 • 2:30 AM–3:30 AM PDT
+                        </div>
+                        <p class="leading-relaxed mb-8 text-lg">
+                            Mikhail Shilkov shows you how you can use C#, F#, and VB.NET
+                            to define the infrastructure for Azure, AWS, or even on-prem
+                            Kubernetes clusters.
+                        </p>
+                        <div>
+                            <a href="#" class="btn btn-secondary">Watch Now</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="flex w-full items-start pb-12 mb-12">
+                    <div class="w-1/8 mr-10 py-24 px-48 rounded border border-gray-300 bg-gray-100 flex items-center justify-center">
+
+                    </div>
+                    <div class="">
+                        <h3><a href="#" class="text-blue-600 text-2xl">Building Self-service Clouds with Pulumi</a></h3>
+                        <div class="text-gray-600 uppercase text-sm">
+                            Wednesday, April 22, 2020 • 11:00 AM–12:00 PM PDT
+                        </div>
+                        <p class="leading-relaxed mb-8 text-lg">
+                            Mercedes-Benz R&D is leading the way in showing how large
+                            organizations can leverage all of the clouds and empower teams
+                            to rapidly innovate with new services and architectures.
+                        </p>
+                        <div>
+                            <a href="#" class="btn btn-secondary">Register</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="flex w-full items-start pb-12 mb-12 border-b border-gray-200">
+                    <div class="w-1/8 mr-10 py-24 px-48 rounded border border-gray-300 bg-gray-100 flex items-center justify-center">
+
+                    </div>
+                    <div class="">
+                        <h3><a href="#" class="text-blue-600 text-2xl">How to Test Cloud Infrastructure with Pulumi</a></h3>
+                        <div class="text-gray-600 uppercase text-sm">
+                            Wednesday, April 27, 2020 • 6:30:00 AM–7:30 AM PDT
+                        </div>
+                        <p class="leading-relaxed mb-8 text-lg">
+                            Cumundi CEO, Ringo De Smet will demonstrate how Pulumi’s
+                            mocking capabilities make it easy to ensure that cloud
+                            resources are provisioned the right way.
+                        </p>
+                        <div>
+                            <a href="#" class="btn btn-secondary">Register</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <div class="text-center pt-16 pb-32 text-lg px-4" style="background: linear-gradient(#ffffff, #f7fafc);">
+        <div class="md:inline-flex items-center shadow-lg bg-white rounded px-4 md:px-12 py-6 mx-auto border border-gray-400">
+            <div class="text-left">
+                <p class="text-gray-700 leading-relaxed mt-0 md:mt-4">
+                    <strong class="mr-2">Give it a try!</strong>
+                    <span>Deploy your first Pulumi app in just five minutes.</span>
+                </p>
+            </div>
+            <div class="inline-flex items-center md:ml-10">
+                <a class="btn px-6 py-3" href="{{ relref . "/docs/get-started" }}" title="Create your first project with Pulumi">
+                    <span>Get Started</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    {{ partial "newsletter.html" . }}
+{{ end }}

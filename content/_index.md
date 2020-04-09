@@ -4,8 +4,7 @@ meta_desc: Pulumi's open source infrastructure as code SDK enables you to create
 heading: Modern Infrastructure as Code.
 
 subhead: >
-    Declare cloud infrastructure using real languages. Enable
-    developers and operators to work better together.
+    Any cloud, real languages. Now with superpowers.
 
 ctas:
     - |
@@ -25,16 +24,16 @@ carousel:
             Define infrastructure in JavaScript, TypeScript, Python, Go, or
             any .NET language, including C#, F#, and VB.
         - title: Your favorite tools.
-          description: Use familiar IDEs, test frameworks, and tools.
+          description: Use familiar IDEs, test frameworks, and tools. Resource mocking for easy verification.
         - title: Share and reuse.
-          description: Codify best practices and share them with your team or a growing community of practitioners.
+          description: Codify best practices and policies then share them with your team or community as self-service architectures.
 
     - heading: Deploy
       label: Deploy
       description: to any cloud.
       details:
         - title: Many clouds, one workflow.
-          description: Use the same language, tools, and workflow, no matter the cloud.
+          description: Use the same language, tools, and workflow, on any cloud.
         - title: Collaborate.
           description: Harmonize your engineering practices between developers and operators.
         - title: Easy continuous delivery.
@@ -59,24 +58,20 @@ carousel:
 quotes:
     - name: Dinesh Ramamurthy
       title: Engineering Manager, Mercedes-Benz Research and Development North America
-      logo: mercedes-benz-RDNA_logo.png
       body: >
         I needed a solution that cut across silos and gave our developers a tool they could use
         themselves to provision infrastructure to suit their own immediate needs. The way Pulumi
         solves the multi-cloud problem is exactly what I was looking for.
 
-    - name: Harrison Heck
-      title: Head of DevOps, Linio
-      logo: linio_logo.png
+    - name: Igor Shapiro
+      title: Principal Engineer, Lemonade
       body: >
-        As the largest eCommerce platform in Latin America, our infrastructure has to be highly
-        stable, well documented and agile. With Pulumi, we're able to develop new infrastructure,
-        change existing infrastructure and more with greater speed and reliability than we've ever
-        had before.
+        Pulumi supercharged our infrastructure team by helping us create reusable building blocks that
+        developers can leverage to provision new resources and enforce organizational policies for
+        logging, permissions, resource tagging, and security.
 
     - name: Josh Imhoff
       title: Site Reliability Engineer, Cockroach Labs
-      logo: cockroach-labs_logo.png
       body: >
         We are building a distributed-database-as-a-service product that runs on Kubernetes clusters
         across multiple public clouds including GCP, AWS and others. Pulumi's declarative model,
@@ -85,7 +80,6 @@ quotes:
 
     - name: Beyang Liu
       title: CTO, Sourcegraph
-      logo: sourcegraph_logo.png
       body: >
         Sourcegraph uses Kubernetes heavily and Pulumi is a great tool that lets us work efficiently
         with Kubernetes and support a rich set of configuration options for our customers' diverse
@@ -94,12 +88,19 @@ quotes:
 
     - name: Pankaj Dhingra
       title: Senior Director of Cloud Engineering, Tableau Software
-      avatar: tableau_logo.png
       body: >
         Our team was looking for an end-to-end solution to tame the complexity of Kubernetes on AWS
         and ensure we adhere to AWS best practices. Pulumi has equipped our team to scale far better:
         our delivery is now automated and we can now deliver new features with much faster turn-around.
         Pulumi is key to our team's productivity.
+
+    - name: Harrison Heck
+      title: Head of DevOps, Linio
+      body: >
+        As the largest eCommerce platform in Latin America, our infrastructure has to be highly
+        stable, well documented and agile. With Pulumi, we're able to develop new infrastructure,
+        change existing infrastructure and more with greater speed and reliability than we've ever
+        had before.
 
 articles:
     - label: Start Simple
