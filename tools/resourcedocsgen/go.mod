@@ -8,8 +8,3 @@ require (
 	github.com/pulumi/pulumi/pkg v1.14.0
 	github.com/pulumi/pulumi/sdk v1.14.0
 )
-
-replace (
-	github.com/pulumi/pulumi/pkg => ../../../pulumi/pkg
-	github.com/pulumi/pulumi/sdk => ../../../pulumi/sdk
-)
