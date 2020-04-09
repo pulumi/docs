@@ -87,4 +87,4 @@ The following packages are available in package managers:
 * Go: [`github.com/pulumi/pulumi-openstack/sdk/go/openstack`](https://github.com/pulumi/pulumi-openstack)
 * .NET: [`Pulumi.Openstack`](https://www.nuget.org/packages/Pulumi.Openstack)
 
-As with all Pulumi software solutions, the OpenStack provider is open source and available in the [pulumi/pulumi-openstack](https://github.com/pulumi/pulumi-openstack) repo. You can see all Pulumi infrastructure and cloud providers [here] (https://www.pulumi.com/docs/intro/cloud-providers/).
+As with all Pulumi software solutions, the OpenStack provider is open source and available in the [pulumi/pulumi-openstack](https://github.com/pulumi/pulumi-openstack) repo. You can see all Pulumi infrastructure and cloud providers [here] ({{< relref "/docs/intro/cloud-providers" >}}).
