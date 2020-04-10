@@ -2230,4 +2230,3 @@ Cloud resources. Must be one of: 'public', 'private'.
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
 	
 </dl>
-
