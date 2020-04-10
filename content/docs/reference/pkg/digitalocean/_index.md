@@ -1,5 +1,5 @@
 ---
-title: "digitalocean"
+title: "Digital Ocean"
 block_external_search_index: true
 menu:
     reference:

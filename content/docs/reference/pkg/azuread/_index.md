@@ -1,5 +1,5 @@
 ---
-title: "azuread"
+title: "Azure AD"
 block_external_search_index: true
 menu:
     reference:

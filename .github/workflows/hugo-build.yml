@@ -16,11 +16,6 @@ jobs:
       GOPATH: ${{ github.workspace }}
     name: Install deps and build site
     runs-on: ubuntu-latest
-    # Max timeout before this job is killed.
-    # This is also useful when a workflow execution is paused by
-    # the Turnstyle action (see below) when another workflow is currently
-    # executing. It prevents a workflow from waiting indefinitely.
-    timeout-minutes: 30
     steps:
       # Turnstyle is used to prevent multiple push jobs from
       # running at the same time.

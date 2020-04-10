@@ -1,5 +1,5 @@
 ---
-title: "rabbitmq"
+title: "RabbitMQ"
 block_external_search_index: true
 menu:
     reference:

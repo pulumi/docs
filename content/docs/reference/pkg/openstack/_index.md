@@ -1,5 +1,5 @@
 ---
-title: "openstack"
+title: "Open Stack"
 block_external_search_index: true
 menu:
     reference:

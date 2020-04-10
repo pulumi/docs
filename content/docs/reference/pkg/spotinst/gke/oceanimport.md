@@ -46,6 +46,27 @@ import * as pulumi from "@pulumi/pulumi";
 export const controllerClusterId = spotinst_ocean_gke_import_ocean_gke_example.clusterControllerId;
 ```
 
+## scheduled task
+
+* `scheduled_task` - (Optional) Set scheduling object.
+    * `shutdown_hours` - (Optional) Set shutdown hours for cluster object.
+        * `is_enabled` - (Optional)  Flag to enable / disable the shutdown hours.
+                                     Example: True
+        * `time_windows` - (Required) Set time windows for shutdown hours. specify a list of 'timeWindows' with at least one time window Each string is in the format of - ddd:hh:mm-ddd:hh:mm ddd = day of week = Sun | Mon | Tue | Wed | Thu | Fri | Sat hh = hour 24 = 0 -23 mm = minute = 0 - 59. Time windows should not overlap. required on cluster.scheduling.isEnabled = True. API Times are in UTC
+                                      Example: Fri:15:30-Wed:14:30
+    * `tasks` - (Optional) The scheduling tasks for the cluster.
+        * `is_enabled` - (Required)  Describes whether the task is enabled. When true the task should run when false it should not run. Required for cluster.scheduling.tasks object.
+        * `cron_expression` - (Required) A valid cron expression. For example : " * * * * * ".The cron is running in UTC time zone and is in Unix cron format Cron Expression Validator Script. Only one of ‘frequency’ or ‘cronExpression’ should be used at a time. Required for cluster.scheduling.tasks object
+                                         Example: 0 1 * * *
+        * `task_type` - (Required) Valid values: "clusterRoll". Required for cluster.scheduling.tasks object.
+        * `batch_size_percentage` - (Optional)  Value in % to set size of batch in roll. Valid values are 0-100
+                                                Example: 20.
+                          
+             
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/ocean_gke_import.html.markdown.
 
 
@@ -59,7 +80,7 @@ export const controllerClusterId = spotinst_ocean_gke_import_ocean_gke_example.c
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">OceanImport</span><span class="p">(resource_name, opts=None, </span>backend_services=None<span class="p">, </span>cluster_name=None<span class="p">, </span>desired_capacity=None<span class="p">, </span>location=None<span class="p">, </span>max_size=None<span class="p">, </span>min_size=None<span class="p">, </span>whitelists=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">OceanImport</span><span class="p">(resource_name, opts=None, </span>backend_services=None<span class="p">, </span>cluster_name=None<span class="p">, </span>desired_capacity=None<span class="p">, </span>location=None<span class="p">, </span>max_size=None<span class="p">, </span>min_size=None<span class="p">, </span>scheduled_tasks=None<span class="p">, </span>whitelists=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -215,6 +236,14 @@ export const controllerClusterId = spotinst_ocean_gke_import_ocean_gke_example.c
 
     <dt class="property-optional"
             title="Optional">
+        <span>Scheduled<wbr>Tasks</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanimportscheduledtask">List&lt;Ocean<wbr>Import<wbr>Scheduled<wbr>Task<wbr>Args&gt;?</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Whitelists</span>
         <span class="property-indicator"></span>
         <span class="property-type">List<string>?</span>
@@ -281,6 +310,14 @@ export const controllerClusterId = spotinst_ocean_gke_import_ocean_gke_example.c
     </dt>
     <dd>{{% md %}}The lower limit of instances the cluster can scale down to.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Scheduled<wbr>Tasks</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanimportscheduledtask">[]Ocean<wbr>Import<wbr>Scheduled<wbr>Task</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -353,6 +390,14 @@ export const controllerClusterId = spotinst_ocean_gke_import_ocean_gke_example.c
 
     <dt class="property-optional"
             title="Optional">
+        <span>scheduled<wbr>Tasks</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanimportscheduledtask">Ocean<wbr>Import<wbr>Scheduled<wbr>Task[]?</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>whitelists</span>
         <span class="property-indicator"></span>
         <span class="property-type">string[]?</span>
@@ -419,6 +464,14 @@ export const controllerClusterId = spotinst_ocean_gke_import_ocean_gke_example.c
     </dt>
     <dd>{{% md %}}The lower limit of instances the cluster can scale down to.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>scheduled_<wbr>tasks</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanimportscheduledtask">List[Ocean<wbr>Import<wbr>Scheduled<wbr>Task]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -511,6 +564,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Scheduled<wbr>Tasks</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanimportscheduledtask">List&lt;Ocean<wbr>Import<wbr>Scheduled<wbr>Task&gt;?</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Whitelists</span>
         <span class="property-indicator"></span>
         <span class="property-type">List<string>?</span>
@@ -585,6 +646,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The lower limit of instances the cluster can scale down to.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Scheduled<wbr>Tasks</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanimportscheduledtask">[]Ocean<wbr>Import<wbr>Scheduled<wbr>Task</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -665,6 +734,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>scheduled<wbr>Tasks</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanimportscheduledtask">Ocean<wbr>Import<wbr>Scheduled<wbr>Task[]?</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>whitelists</span>
         <span class="property-indicator"></span>
         <span class="property-type">string[]?</span>
@@ -742,6 +819,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>scheduled_<wbr>tasks</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanimportscheduledtask">List[Ocean<wbr>Import<wbr>Scheduled<wbr>Task]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>whitelists</span>
         <span class="property-indicator"></span>
         <span class="property-type">List[str]</span>
@@ -769,7 +854,7 @@ Get an existing OceanImport resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>backend_services=None<span class="p">, </span>cluster_controller_id=None<span class="p">, </span>cluster_name=None<span class="p">, </span>desired_capacity=None<span class="p">, </span>location=None<span class="p">, </span>max_size=None<span class="p">, </span>min_size=None<span class="p">, </span>whitelists=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>backend_services=None<span class="p">, </span>cluster_controller_id=None<span class="p">, </span>cluster_name=None<span class="p">, </span>desired_capacity=None<span class="p">, </span>location=None<span class="p">, </span>max_size=None<span class="p">, </span>min_size=None<span class="p">, </span>scheduled_tasks=None<span class="p">, </span>whitelists=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -947,6 +1032,14 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Scheduled<wbr>Tasks</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanimportscheduledtask">List&lt;Ocean<wbr>Import<wbr>Scheduled<wbr>Task<wbr>Args&gt;?</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Whitelists</span>
         <span class="property-indicator"></span>
         <span class="property-type">List<string>?</span>
@@ -1021,6 +1114,14 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The lower limit of instances the cluster can scale down to.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Scheduled<wbr>Tasks</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanimportscheduledtask">[]Ocean<wbr>Import<wbr>Scheduled<wbr>Task</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1101,6 +1202,14 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>scheduled<wbr>Tasks</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanimportscheduledtask">Ocean<wbr>Import<wbr>Scheduled<wbr>Task[]?</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>whitelists</span>
         <span class="property-indicator"></span>
         <span class="property-type">string[]?</span>
@@ -1175,6 +1284,14 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The lower limit of instances the cluster can scale down to.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>scheduled_<wbr>tasks</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanimportscheduledtask">List[Ocean<wbr>Import<wbr>Scheduled<wbr>Task]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1484,6 +1601,391 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}A list of ports.
 {{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4>Ocean<wbr>Import<wbr>Scheduled<wbr>Task</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#OceanImportScheduledTask">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#OceanImportScheduledTask">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/go/spotinst/gke?tab=doc#OceanImportScheduledTaskArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/go/spotinst/gke?tab=doc#OceanImportScheduledTaskOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Shutdown<wbr>Hours</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanimportscheduledtaskshutdownhours">Ocean<wbr>Import<wbr>Scheduled<wbr>Task<wbr>Shutdown<wbr>Hours<wbr>Args?</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tasks</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanimportscheduledtasktask">List&lt;Ocean<wbr>Import<wbr>Scheduled<wbr>Task<wbr>Task<wbr>Args&gt;?</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Shutdown<wbr>Hours</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanimportscheduledtaskshutdownhours">*Ocean<wbr>Import<wbr>Scheduled<wbr>Task<wbr>Shutdown<wbr>Hours</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tasks</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanimportscheduledtasktask">[]Ocean<wbr>Import<wbr>Scheduled<wbr>Task<wbr>Task</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>shutdown<wbr>Hours</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanimportscheduledtaskshutdownhours">Ocean<wbr>Import<wbr>Scheduled<wbr>Task<wbr>Shutdown<wbr>Hours?</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>tasks</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanimportscheduledtasktask">Ocean<wbr>Import<wbr>Scheduled<wbr>Task<wbr>Task[]?</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>shutdown<wbr>Hours</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanimportscheduledtaskshutdownhours">Dict[Ocean<wbr>Import<wbr>Scheduled<wbr>Task<wbr>Shutdown<wbr>Hours]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>tasks</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanimportscheduledtasktask">List[Ocean<wbr>Import<wbr>Scheduled<wbr>Task<wbr>Task]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4>Ocean<wbr>Import<wbr>Scheduled<wbr>Task<wbr>Shutdown<wbr>Hours</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#OceanImportScheduledTaskShutdownHours">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#OceanImportScheduledTaskShutdownHours">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/go/spotinst/gke?tab=doc#OceanImportScheduledTaskShutdownHoursArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/go/spotinst/gke?tab=doc#OceanImportScheduledTaskShutdownHoursOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Is<wbr>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Time<wbr>Windows</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List<string></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Is<wbr>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Time<wbr>Windows</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>is<wbr>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>time<wbr>Windows</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>is<wbr>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>time<wbr>Windows</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4>Ocean<wbr>Import<wbr>Scheduled<wbr>Task<wbr>Task</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#OceanImportScheduledTaskTask">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#OceanImportScheduledTaskTask">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/go/spotinst/gke?tab=doc#OceanImportScheduledTaskTaskArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/go/spotinst/gke?tab=doc#OceanImportScheduledTaskTaskOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Batch<wbr>Size<wbr>Percentage</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Cron<wbr>Expression</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Is<wbr>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Task<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Batch<wbr>Size<wbr>Percentage</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Cron<wbr>Expression</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Is<wbr>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Task<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>batch<wbr>Size<wbr>Percentage</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>cron<wbr>Expression</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>is<wbr>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>task<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>batch<wbr>Size<wbr>Percentage</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>cron<wbr>Expression</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>is<wbr>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>task<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

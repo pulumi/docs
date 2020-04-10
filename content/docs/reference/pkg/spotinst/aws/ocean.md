@@ -18,6 +18,7 @@ const example = new spotinst.aws.Ocean("example", {
     associatePublicIpAddress: true,
     // --- AUTOSCALER -----------------
     autoscaler: {
+        autoHeadroomPercentage: 50,
         autoscaleCooldown: 300,
         autoscaleDown: {
             evaluationPeriods: 300,
@@ -40,6 +41,7 @@ const example = new spotinst.aws.Ocean("example", {
     drainingTimeout: 120,
     // --- STRATEGY --------------------
     fallbackToOndemand: true,
+    gracePeriod: 600,
     iamInstanceProfile: "iam-profile",
     // --- LAUNCH CONFIGURATION --------------
     imageId: "ami-123456",
@@ -59,7 +61,6 @@ const example = new spotinst.aws.Ocean("example", {
     region: "us-west-2",
     rootVolumeSize: 20,
     securityGroups: ["sg-987654321"],
-    spotPercentage: 100,
     subnetIds: ["subnet-123456789"],
     userData: "echo hello world",
     utilizeReservedInstances: false,
@@ -81,6 +82,26 @@ const example = new spotinst.aws.Ocean("example", {
 import * as pulumi from "@pulumi/pulumi";
 ```
 
+<a id="scheduled-task"></a>
+## scheduled task
+
+* `scheduled_task` - (Optional) Set scheduling object.
+    * `shutdown_hours` - (Optional) Set shutdown hours for cluster object.
+        * `is_enabled` - (Optional)  Flag to enable / disable the shutdown hours.
+                                     Example: True
+        * `time_windows` - (Required) Set time windows for shutdown hours. specify a list of 'timeWindows' with at least one time window Each string is in the format of - ddd:hh:mm-ddd:hh:mm ddd = day of week = Sun | Mon | Tue | Wed | Thu | Fri | Sat hh = hour 24 = 0 -23 mm = minute = 0 - 59. Time windows should not overlap. required on cluster.scheduling.isEnabled = True. API Times are in UTC
+                                      Example: Fri:15:30-Wed:14:30
+    * `tasks` - (Optional) The scheduling tasks for the cluster.
+        * `is_enabled` - (Required)  Describes whether the task is enabled. When true the task should run when false it should not run. Required for cluster.scheduling.tasks object.
+        * `cron_expression` - (Required) A valid cron expression. For example : " * * * * * ".The cron is running in UTC time zone and is in Unix cron format Cron Expression Validator Script. Only one of ‘frequency’ or ‘cronExpression’ should be used at a time. Required for cluster.scheduling.tasks object
+                                         Example: 0 1 * * *
+        * `task_type` - (Required) Valid values: "clusterRoll". Required for cluster.scheduling.tasks object
+                                   Example: clusterRoll
+             
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/ocean_aws.html.markdown.
 
 
@@ -94,7 +115,7 @@ import * as pulumi from "@pulumi/pulumi";
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Ocean</span><span class="p">(resource_name, opts=None, </span>associate_public_ip_address=None<span class="p">, </span>autoscaler=None<span class="p">, </span>blacklists=None<span class="p">, </span>controller_id=None<span class="p">, </span>desired_capacity=None<span class="p">, </span>draining_timeout=None<span class="p">, </span>ebs_optimized=None<span class="p">, </span>fallback_to_ondemand=None<span class="p">, </span>iam_instance_profile=None<span class="p">, </span>image_id=None<span class="p">, </span>key_name=None<span class="p">, </span>load_balancers=None<span class="p">, </span>max_size=None<span class="p">, </span>min_size=None<span class="p">, </span>monitoring=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, </span>root_volume_size=None<span class="p">, </span>security_groups=None<span class="p">, </span>spot_percentage=None<span class="p">, </span>subnet_ids=None<span class="p">, </span>tags=None<span class="p">, </span>update_policy=None<span class="p">, </span>user_data=None<span class="p">, </span>utilize_reserved_instances=None<span class="p">, </span>whitelists=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Ocean</span><span class="p">(resource_name, opts=None, </span>associate_public_ip_address=None<span class="p">, </span>autoscaler=None<span class="p">, </span>blacklists=None<span class="p">, </span>controller_id=None<span class="p">, </span>desired_capacity=None<span class="p">, </span>draining_timeout=None<span class="p">, </span>ebs_optimized=None<span class="p">, </span>fallback_to_ondemand=None<span class="p">, </span>grace_period=None<span class="p">, </span>iam_instance_profile=None<span class="p">, </span>image_id=None<span class="p">, </span>key_name=None<span class="p">, </span>load_balancers=None<span class="p">, </span>max_size=None<span class="p">, </span>min_size=None<span class="p">, </span>monitoring=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, </span>root_volume_size=None<span class="p">, </span>scheduled_tasks=None<span class="p">, </span>security_groups=None<span class="p">, </span>spot_percentage=None<span class="p">, </span>subnet_ids=None<span class="p">, </span>tags=None<span class="p">, </span>update_policy=None<span class="p">, </span>user_data=None<span class="p">, </span>utilize_reserved_instances=None<span class="p">, </span>whitelists=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -268,6 +289,15 @@ import * as pulumi from "@pulumi/pulumi";
 
     <dt class="property-optional"
             title="Optional">
+        <span>Grace<wbr>Period</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int?</span>
+    </dt>
+    <dd>{{% md %}}The amount of time, in seconds, after the instance has launched to start checking its health.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Iam<wbr>Instance<wbr>Profile</span>
         <span class="property-indicator"></span>
         <span class="property-type">string?</span>
@@ -356,6 +386,14 @@ import * as pulumi from "@pulumi/pulumi";
     <dd>{{% md %}}The size (in Gb) to allocate for the root volume. Minimum `20`.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Scheduled<wbr>Tasks</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanscheduledtask">List&lt;Ocean<wbr>Scheduled<wbr>Task<wbr>Args&gt;?</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-required"
             title="Required">
         <span>Security<wbr>Groups</span>
@@ -371,8 +409,7 @@ import * as pulumi from "@pulumi/pulumi";
         <span class="property-indicator"></span>
         <span class="property-type">double?</span>
     </dt>
-    <dd>{{% md %}}The percentage of Spot instances the cluster should maintain. Min 0, max 100.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -508,6 +545,15 @@ import * as pulumi from "@pulumi/pulumi";
 
     <dt class="property-optional"
             title="Optional">
+        <span>Grace<wbr>Period</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*int</span>
+    </dt>
+    <dd>{{% md %}}The amount of time, in seconds, after the instance has launched to start checking its health.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Iam<wbr>Instance<wbr>Profile</span>
         <span class="property-indicator"></span>
         <span class="property-type">*string</span>
@@ -596,6 +642,14 @@ import * as pulumi from "@pulumi/pulumi";
     <dd>{{% md %}}The size (in Gb) to allocate for the root volume. Minimum `20`.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Scheduled<wbr>Tasks</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanscheduledtask">[]Ocean<wbr>Scheduled<wbr>Task</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-required"
             title="Required">
         <span>Security<wbr>Groups</span>
@@ -611,8 +665,7 @@ import * as pulumi from "@pulumi/pulumi";
         <span class="property-indicator"></span>
         <span class="property-type">*float64</span>
     </dt>
-    <dd>{{% md %}}The percentage of Spot instances the cluster should maintain. Min 0, max 100.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -748,6 +801,15 @@ import * as pulumi from "@pulumi/pulumi";
 
     <dt class="property-optional"
             title="Optional">
+        <span>grace<wbr>Period</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number?</span>
+    </dt>
+    <dd>{{% md %}}The amount of time, in seconds, after the instance has launched to start checking its health.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>iam<wbr>Instance<wbr>Profile</span>
         <span class="property-indicator"></span>
         <span class="property-type">string?</span>
@@ -836,6 +898,14 @@ import * as pulumi from "@pulumi/pulumi";
     <dd>{{% md %}}The size (in Gb) to allocate for the root volume. Minimum `20`.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>scheduled<wbr>Tasks</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanscheduledtask">Ocean<wbr>Scheduled<wbr>Task[]?</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-required"
             title="Required">
         <span>security<wbr>Groups</span>
@@ -851,8 +921,7 @@ import * as pulumi from "@pulumi/pulumi";
         <span class="property-indicator"></span>
         <span class="property-type">number?</span>
     </dt>
-    <dd>{{% md %}}The percentage of Spot instances the cluster should maintain. Min 0, max 100.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -988,6 +1057,15 @@ import * as pulumi from "@pulumi/pulumi";
 
     <dt class="property-optional"
             title="Optional">
+        <span>grace_<wbr>period</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The amount of time, in seconds, after the instance has launched to start checking its health.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>iam_<wbr>instance_<wbr>profile</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -1076,6 +1154,14 @@ import * as pulumi from "@pulumi/pulumi";
     <dd>{{% md %}}The size (in Gb) to allocate for the root volume. Minimum `20`.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>scheduled_<wbr>tasks</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanscheduledtask">List[Ocean<wbr>Scheduled<wbr>Task]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-required"
             title="Required">
         <span>security_<wbr>groups</span>
@@ -1091,8 +1177,7 @@ import * as pulumi from "@pulumi/pulumi";
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The percentage of Spot instances the cluster should maintain. Min 0, max 100.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1240,6 +1325,15 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Grace<wbr>Period</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int?</span>
+    </dt>
+    <dd>{{% md %}}The amount of time, in seconds, after the instance has launched to start checking its health.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Iam<wbr>Instance<wbr>Profile</span>
         <span class="property-indicator"></span>
         <span class="property-type">string?</span>
@@ -1330,6 +1424,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Scheduled<wbr>Tasks</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanscheduledtask">List&lt;Ocean<wbr>Scheduled<wbr>Task&gt;?</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Security<wbr>Groups</span>
         <span class="property-indicator"></span>
         <span class="property-type">List<string></span>
@@ -1343,8 +1445,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">double?</span>
     </dt>
-    <dd>{{% md %}}The percentage of Spot instances the cluster should maintain. Min 0, max 100.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1480,6 +1581,15 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Grace<wbr>Period</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*int</span>
+    </dt>
+    <dd>{{% md %}}The amount of time, in seconds, after the instance has launched to start checking its health.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Iam<wbr>Instance<wbr>Profile</span>
         <span class="property-indicator"></span>
         <span class="property-type">*string</span>
@@ -1570,6 +1680,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Scheduled<wbr>Tasks</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanscheduledtask">[]Ocean<wbr>Scheduled<wbr>Task</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Security<wbr>Groups</span>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
@@ -1583,8 +1701,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">*float64</span>
     </dt>
-    <dd>{{% md %}}The percentage of Spot instances the cluster should maintain. Min 0, max 100.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1720,6 +1837,15 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>grace<wbr>Period</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number?</span>
+    </dt>
+    <dd>{{% md %}}The amount of time, in seconds, after the instance has launched to start checking its health.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>iam<wbr>Instance<wbr>Profile</span>
         <span class="property-indicator"></span>
         <span class="property-type">string?</span>
@@ -1810,6 +1936,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>scheduled<wbr>Tasks</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanscheduledtask">Ocean<wbr>Scheduled<wbr>Task[]?</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>security<wbr>Groups</span>
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
@@ -1823,8 +1957,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number?</span>
     </dt>
-    <dd>{{% md %}}The percentage of Spot instances the cluster should maintain. Min 0, max 100.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1960,6 +2093,15 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>grace_<wbr>period</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The amount of time, in seconds, after the instance has launched to start checking its health.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>iam_<wbr>instance_<wbr>profile</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -2050,6 +2192,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>scheduled_<wbr>tasks</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanscheduledtask">List[Ocean<wbr>Scheduled<wbr>Task]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>security_<wbr>groups</span>
         <span class="property-indicator"></span>
         <span class="property-type">List[str]</span>
@@ -2063,8 +2213,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The percentage of Spot instances the cluster should maintain. Min 0, max 100.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -2140,7 +2289,7 @@ Get an existing Ocean resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>associate_public_ip_address=None<span class="p">, </span>autoscaler=None<span class="p">, </span>blacklists=None<span class="p">, </span>controller_id=None<span class="p">, </span>desired_capacity=None<span class="p">, </span>draining_timeout=None<span class="p">, </span>ebs_optimized=None<span class="p">, </span>fallback_to_ondemand=None<span class="p">, </span>iam_instance_profile=None<span class="p">, </span>image_id=None<span class="p">, </span>key_name=None<span class="p">, </span>load_balancers=None<span class="p">, </span>max_size=None<span class="p">, </span>min_size=None<span class="p">, </span>monitoring=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, </span>root_volume_size=None<span class="p">, </span>security_groups=None<span class="p">, </span>spot_percentage=None<span class="p">, </span>subnet_ids=None<span class="p">, </span>tags=None<span class="p">, </span>update_policy=None<span class="p">, </span>user_data=None<span class="p">, </span>utilize_reserved_instances=None<span class="p">, </span>whitelists=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>associate_public_ip_address=None<span class="p">, </span>autoscaler=None<span class="p">, </span>blacklists=None<span class="p">, </span>controller_id=None<span class="p">, </span>desired_capacity=None<span class="p">, </span>draining_timeout=None<span class="p">, </span>ebs_optimized=None<span class="p">, </span>fallback_to_ondemand=None<span class="p">, </span>grace_period=None<span class="p">, </span>iam_instance_profile=None<span class="p">, </span>image_id=None<span class="p">, </span>key_name=None<span class="p">, </span>load_balancers=None<span class="p">, </span>max_size=None<span class="p">, </span>min_size=None<span class="p">, </span>monitoring=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, </span>root_volume_size=None<span class="p">, </span>scheduled_tasks=None<span class="p">, </span>security_groups=None<span class="p">, </span>spot_percentage=None<span class="p">, </span>subnet_ids=None<span class="p">, </span>tags=None<span class="p">, </span>update_policy=None<span class="p">, </span>user_data=None<span class="p">, </span>utilize_reserved_instances=None<span class="p">, </span>whitelists=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2328,6 +2477,15 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Grace<wbr>Period</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int?</span>
+    </dt>
+    <dd>{{% md %}}The amount of time, in seconds, after the instance has launched to start checking its health.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Iam<wbr>Instance<wbr>Profile</span>
         <span class="property-indicator"></span>
         <span class="property-type">string?</span>
@@ -2418,6 +2576,14 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Scheduled<wbr>Tasks</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanscheduledtask">List&lt;Ocean<wbr>Scheduled<wbr>Task<wbr>Args&gt;?</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Security<wbr>Groups</span>
         <span class="property-indicator"></span>
         <span class="property-type">List<string>?</span>
@@ -2431,8 +2597,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">double?</span>
     </dt>
-    <dd>{{% md %}}The percentage of Spot instances the cluster should maintain. Min 0, max 100.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2568,6 +2733,15 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Grace<wbr>Period</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*int</span>
+    </dt>
+    <dd>{{% md %}}The amount of time, in seconds, after the instance has launched to start checking its health.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Iam<wbr>Instance<wbr>Profile</span>
         <span class="property-indicator"></span>
         <span class="property-type">*string</span>
@@ -2658,6 +2832,14 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Scheduled<wbr>Tasks</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanscheduledtask">[]Ocean<wbr>Scheduled<wbr>Task</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Security<wbr>Groups</span>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
@@ -2671,8 +2853,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">*float64</span>
     </dt>
-    <dd>{{% md %}}The percentage of Spot instances the cluster should maintain. Min 0, max 100.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2808,6 +2989,15 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>grace<wbr>Period</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number?</span>
+    </dt>
+    <dd>{{% md %}}The amount of time, in seconds, after the instance has launched to start checking its health.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>iam<wbr>Instance<wbr>Profile</span>
         <span class="property-indicator"></span>
         <span class="property-type">string?</span>
@@ -2898,6 +3088,14 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>scheduled<wbr>Tasks</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanscheduledtask">Ocean<wbr>Scheduled<wbr>Task[]?</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>security<wbr>Groups</span>
         <span class="property-indicator"></span>
         <span class="property-type">string[]?</span>
@@ -2911,8 +3109,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number?</span>
     </dt>
-    <dd>{{% md %}}The percentage of Spot instances the cluster should maintain. Min 0, max 100.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3048,6 +3245,15 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>grace_<wbr>period</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The amount of time, in seconds, after the instance has launched to start checking its health.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>iam_<wbr>instance_<wbr>profile</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -3138,6 +3344,14 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>scheduled_<wbr>tasks</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanscheduledtask">List[Ocean<wbr>Scheduled<wbr>Task]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>security_<wbr>groups</span>
         <span class="property-indicator"></span>
         <span class="property-type">List[str]</span>
@@ -3151,8 +3365,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}The percentage of Spot instances the cluster should maintain. Min 0, max 100.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3238,6 +3451,15 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Auto<wbr>Headroom<wbr>Percentage</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int?</span>
+    </dt>
+    <dd>{{% md %}}Set the auto headroom percentage (a number in the range [0, 200]) which controls the percentage of headroom from the cluster. Relevant only when `isAutoConfig` toggled on.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Autoscale<wbr>Cooldown</span>
         <span class="property-indicator"></span>
         <span class="property-type">int?</span>
@@ -3296,6 +3518,15 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Auto<wbr>Headroom<wbr>Percentage</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*int</span>
+    </dt>
+    <dd>{{% md %}}Set the auto headroom percentage (a number in the range [0, 200]) which controls the percentage of headroom from the cluster. Relevant only when `isAutoConfig` toggled on.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3360,6 +3591,15 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>auto<wbr>Headroom<wbr>Percentage</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number?</span>
+    </dt>
+    <dd>{{% md %}}Set the auto headroom percentage (a number in the range [0, 200]) which controls the percentage of headroom from the cluster. Relevant only when `isAutoConfig` toggled on.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>autoscale<wbr>Cooldown</span>
         <span class="property-indicator"></span>
         <span class="property-type">number?</span>
@@ -3418,6 +3658,15 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>auto<wbr>Headroom<wbr>Percentage</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}Set the auto headroom percentage (a number in the range [0, 200]) which controls the percentage of headroom from the cluster. Relevant only when `isAutoConfig` toggled on.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4040,6 +4289,359 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Can be set to CLASSIC or TARGET_GROUP
 {{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4>Ocean<wbr>Scheduled<wbr>Task</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#OceanScheduledTask">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#OceanScheduledTask">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/go/spotinst/aws?tab=doc#OceanScheduledTaskArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/go/spotinst/aws?tab=doc#OceanScheduledTaskOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Shutdown<wbr>Hours</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanscheduledtaskshutdownhours">Ocean<wbr>Scheduled<wbr>Task<wbr>Shutdown<wbr>Hours<wbr>Args?</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tasks</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanscheduledtasktask">List&lt;Ocean<wbr>Scheduled<wbr>Task<wbr>Task<wbr>Args&gt;?</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Shutdown<wbr>Hours</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanscheduledtaskshutdownhours">*Ocean<wbr>Scheduled<wbr>Task<wbr>Shutdown<wbr>Hours</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tasks</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanscheduledtasktask">[]Ocean<wbr>Scheduled<wbr>Task<wbr>Task</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>shutdown<wbr>Hours</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanscheduledtaskshutdownhours">Ocean<wbr>Scheduled<wbr>Task<wbr>Shutdown<wbr>Hours?</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>tasks</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanscheduledtasktask">Ocean<wbr>Scheduled<wbr>Task<wbr>Task[]?</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>shutdown<wbr>Hours</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanscheduledtaskshutdownhours">Dict[Ocean<wbr>Scheduled<wbr>Task<wbr>Shutdown<wbr>Hours]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>tasks</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanscheduledtasktask">List[Ocean<wbr>Scheduled<wbr>Task<wbr>Task]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4>Ocean<wbr>Scheduled<wbr>Task<wbr>Shutdown<wbr>Hours</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#OceanScheduledTaskShutdownHours">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#OceanScheduledTaskShutdownHours">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/go/spotinst/aws?tab=doc#OceanScheduledTaskShutdownHoursArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/go/spotinst/aws?tab=doc#OceanScheduledTaskShutdownHoursOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Is<wbr>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Time<wbr>Windows</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List<string></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Is<wbr>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Time<wbr>Windows</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>is<wbr>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>time<wbr>Windows</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>is<wbr>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>time<wbr>Windows</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4>Ocean<wbr>Scheduled<wbr>Task<wbr>Task</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#OceanScheduledTaskTask">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#OceanScheduledTaskTask">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/go/spotinst/aws?tab=doc#OceanScheduledTaskTaskArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/go/spotinst/aws?tab=doc#OceanScheduledTaskTaskOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Cron<wbr>Expression</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Is<wbr>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Task<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Cron<wbr>Expression</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Is<wbr>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Task<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>cron<wbr>Expression</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>is<wbr>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>task<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>cron<wbr>Expression</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>is<wbr>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>task<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

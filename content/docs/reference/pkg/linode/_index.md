@@ -1,5 +1,5 @@
 ---
-title: "linode"
+title: "Linode"
 block_external_search_index: true
 menu:
     reference:

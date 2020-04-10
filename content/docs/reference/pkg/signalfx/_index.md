@@ -1,5 +1,5 @@
 ---
-title: "signalfx"
+title: "SignalFx"
 block_external_search_index: true
 menu:
     reference:

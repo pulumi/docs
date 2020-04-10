@@ -24,6 +24,7 @@ block_external_search_index: true
 <ul class="api">
     <li><a href="getbandwidthlimits" title="GetBandwidthLimits"><span class="symbol function"></span>GetBandwidthLimits</a></li>
     <li><a href="getbandwidthpackages" title="GetBandwidthPackages"><span class="symbol function"></span>GetBandwidthPackages</a></li>
+    <li><a href="getflowlogs" title="GetFlowlogs"><span class="symbol function"></span>GetFlowlogs</a></li>
     <li><a href="getinstances" title="GetInstances"><span class="symbol function"></span>GetInstances</a></li>
     <li><a href="getregionrouteentries" title="GetRegionRouteEntries"><span class="symbol function"></span>GetRegionRouteEntries</a></li>
     <li><a href="getrouteentries" title="GetRouteEntries"><span class="symbol function"></span>GetRouteEntries</a></li>

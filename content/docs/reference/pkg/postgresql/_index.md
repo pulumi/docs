@@ -1,5 +1,5 @@
 ---
-title: "postgresql"
+title: "PostgreSQL"
 block_external_search_index: true
 menu:
     reference:

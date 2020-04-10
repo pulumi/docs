@@ -1,5 +1,5 @@
 ---
-title: "keycloak"
+title: "Keycloak"
 block_external_search_index: true
 menu:
     reference:

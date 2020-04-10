@@ -1,5 +1,5 @@
 ---
-title: "mysql"
+title: "MySQL"
 block_external_search_index: true
 menu:
     reference:

@@ -18,7 +18,7 @@ block_external_search_index: true
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Instance</span><span class="p">(resource_name, opts=None, </span>account_password=None<span class="p">, </span>backup_periods=None<span class="p">, </span>backup_time=None<span class="p">, </span>db_instance_class=None<span class="p">, </span>db_instance_storage=None<span class="p">, </span>engine_version=None<span class="p">, </span>instance_charge_type=None<span class="p">, </span>kms_encrypted_password=None<span class="p">, </span>kms_encryption_context=None<span class="p">, </span>maintain_end_time=None<span class="p">, </span>maintain_start_time=None<span class="p">, </span>name=None<span class="p">, </span>period=None<span class="p">, </span>replication_factor=None<span class="p">, </span>security_group_id=None<span class="p">, </span>security_ip_lists=None<span class="p">, </span>storage_engine=None<span class="p">, </span>tags=None<span class="p">, </span>tde_status=None<span class="p">, </span>vswitch_id=None<span class="p">, </span>zone_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Instance</span><span class="p">(resource_name, opts=None, </span>account_password=None<span class="p">, </span>backup_periods=None<span class="p">, </span>backup_time=None<span class="p">, </span>db_instance_class=None<span class="p">, </span>db_instance_storage=None<span class="p">, </span>engine_version=None<span class="p">, </span>instance_charge_type=None<span class="p">, </span>kms_encrypted_password=None<span class="p">, </span>kms_encryption_context=None<span class="p">, </span>maintain_end_time=None<span class="p">, </span>maintain_start_time=None<span class="p">, </span>name=None<span class="p">, </span>period=None<span class="p">, </span>replication_factor=None<span class="p">, </span>security_group_id=None<span class="p">, </span>security_ip_lists=None<span class="p">, </span>ssl_action=None<span class="p">, </span>storage_engine=None<span class="p">, </span>tags=None<span class="p">, </span>tde_status=None<span class="p">, </span>vswitch_id=None<span class="p">, </span>zone_id=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -267,6 +267,15 @@ block_external_search_index: true
 
     <dt class="property-optional"
             title="Optional">
+        <span>Ssl<wbr>Action</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Actions performed on SSL functions, Valid values: `Open`: turn on SSL encryption; `Close`: turn off SSL encryption; `Update`: update SSL certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Storage<wbr>Engine</span>
         <span class="property-indicator"></span>
         <span class="property-type">string?</span>
@@ -463,6 +472,15 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of IP addresses allowed to access all databases of an instance. The list contains up to 1,000 IP addresses, separated by commas. Supported formats include 0.0.0.0/0, 10.23.12.24 (IP), and 10.23.12.24/24 (Classless Inter-Domain Routing (CIDR) mode. /24 represents the length of the prefix in an IP address. The range of the prefix length is [1,32]).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ssl<wbr>Action</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}Actions performed on SSL functions, Valid values: `Open`: turn on SSL encryption; `Close`: turn off SSL encryption; `Update`: update SSL certificate.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -667,6 +685,15 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
 
     <dt class="property-optional"
             title="Optional">
+        <span>ssl<wbr>Action</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Actions performed on SSL functions, Valid values: `Open`: turn on SSL encryption; `Close`: turn off SSL encryption; `Update`: update SSL certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>storage<wbr>Engine</span>
         <span class="property-indicator"></span>
         <span class="property-type">string?</span>
@@ -863,6 +890,15 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-type">List[str]</span>
     </dt>
     <dd>{{% md %}}List of IP addresses allowed to access all databases of an instance. The list contains up to 1,000 IP addresses, separated by commas. Supported formats include 0.0.0.0/0, 10.23.12.24 (IP), and 10.23.12.24/24 (Classless Inter-Domain Routing (CIDR) mode. /24 represents the length of the prefix in an IP address. The range of the prefix length is [1,32]).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>ssl_<wbr>action</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Actions performed on SSL functions, Valid values: `Open`: turn on SSL encryption; `Close`: turn off SSL encryption; `Update`: update SSL certificate.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1097,6 +1133,24 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Ssl<wbr>Action</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Actions performed on SSL functions, Valid values: `Open`: turn on SSL encryption; `Close`: turn off SSL encryption; `Update`: update SSL certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Ssl<wbr>Status</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of the SSL feature. `Open`: SSL is turned on; `Closed`: SSL is turned off.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Storage<wbr>Engine</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1311,6 +1365,24 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of IP addresses allowed to access all databases of an instance. The list contains up to 1,000 IP addresses, separated by commas. Supported formats include 0.0.0.0/0, 10.23.12.24 (IP), and 10.23.12.24/24 (Classless Inter-Domain Routing (CIDR) mode. /24 represents the length of the prefix in an IP address. The range of the prefix length is [1,32]).
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Ssl<wbr>Action</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Actions performed on SSL functions, Valid values: `Open`: turn on SSL encryption; `Close`: turn off SSL encryption; `Update`: update SSL certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Ssl<wbr>Status</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of the SSL feature. `Open`: SSL is turned on; `Closed`: SSL is turned off.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1533,6 +1605,24 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
 
     <dt class="property-"
             title="">
+        <span>ssl<wbr>Action</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Actions performed on SSL functions, Valid values: `Open`: turn on SSL encryption; `Close`: turn off SSL encryption; `Update`: update SSL certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>ssl<wbr>Status</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of the SSL feature. `Open`: SSL is turned on; `Closed`: SSL is turned off.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>storage<wbr>Engine</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1751,6 +1841,24 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
 
     <dt class="property-"
             title="">
+        <span>ssl_<wbr>action</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Actions performed on SSL functions, Valid values: `Open`: turn on SSL encryption; `Close`: turn off SSL encryption; `Update`: update SSL certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>ssl_<wbr>status</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Status of the SSL feature. `Open`: SSL is turned on; `Closed`: SSL is turned off.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>storage_<wbr>engine</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -1816,7 +1924,7 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>account_password=None<span class="p">, </span>backup_periods=None<span class="p">, </span>backup_time=None<span class="p">, </span>db_instance_class=None<span class="p">, </span>db_instance_storage=None<span class="p">, </span>engine_version=None<span class="p">, </span>instance_charge_type=None<span class="p">, </span>kms_encrypted_password=None<span class="p">, </span>kms_encryption_context=None<span class="p">, </span>maintain_end_time=None<span class="p">, </span>maintain_start_time=None<span class="p">, </span>name=None<span class="p">, </span>period=None<span class="p">, </span>replica_set_name=None<span class="p">, </span>replication_factor=None<span class="p">, </span>retention_period=None<span class="p">, </span>security_group_id=None<span class="p">, </span>security_ip_lists=None<span class="p">, </span>storage_engine=None<span class="p">, </span>tags=None<span class="p">, </span>tde_status=None<span class="p">, </span>vswitch_id=None<span class="p">, </span>zone_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>account_password=None<span class="p">, </span>backup_periods=None<span class="p">, </span>backup_time=None<span class="p">, </span>db_instance_class=None<span class="p">, </span>db_instance_storage=None<span class="p">, </span>engine_version=None<span class="p">, </span>instance_charge_type=None<span class="p">, </span>kms_encrypted_password=None<span class="p">, </span>kms_encryption_context=None<span class="p">, </span>maintain_end_time=None<span class="p">, </span>maintain_start_time=None<span class="p">, </span>name=None<span class="p">, </span>period=None<span class="p">, </span>replica_set_name=None<span class="p">, </span>replication_factor=None<span class="p">, </span>retention_period=None<span class="p">, </span>security_group_id=None<span class="p">, </span>security_ip_lists=None<span class="p">, </span>ssl_action=None<span class="p">, </span>ssl_status=None<span class="p">, </span>storage_engine=None<span class="p">, </span>tags=None<span class="p">, </span>tde_status=None<span class="p">, </span>vswitch_id=None<span class="p">, </span>zone_id=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2097,6 +2205,24 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Ssl<wbr>Action</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Actions performed on SSL functions, Valid values: `Open`: turn on SSL encryption; `Close`: turn off SSL encryption; `Update`: update SSL certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ssl<wbr>Status</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Status of the SSL feature. `Open`: SSL is turned on; `Closed`: SSL is turned off.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Storage<wbr>Engine</span>
         <span class="property-indicator"></span>
         <span class="property-type">string?</span>
@@ -2311,6 +2437,24 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of IP addresses allowed to access all databases of an instance. The list contains up to 1,000 IP addresses, separated by commas. Supported formats include 0.0.0.0/0, 10.23.12.24 (IP), and 10.23.12.24/24 (Classless Inter-Domain Routing (CIDR) mode. /24 represents the length of the prefix in an IP address. The range of the prefix length is [1,32]).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ssl<wbr>Action</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}Actions performed on SSL functions, Valid values: `Open`: turn on SSL encryption; `Close`: turn off SSL encryption; `Update`: update SSL certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ssl<wbr>Status</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}Status of the SSL feature. `Open`: SSL is turned on; `Closed`: SSL is turned off.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2533,6 +2677,24 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
 
     <dt class="property-optional"
             title="Optional">
+        <span>ssl<wbr>Action</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Actions performed on SSL functions, Valid values: `Open`: turn on SSL encryption; `Close`: turn off SSL encryption; `Update`: update SSL certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>ssl<wbr>Status</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Status of the SSL feature. `Open`: SSL is turned on; `Closed`: SSL is turned off.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>storage<wbr>Engine</span>
         <span class="property-indicator"></span>
         <span class="property-type">string?</span>
@@ -2747,6 +2909,24 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
         <span class="property-type">List[str]</span>
     </dt>
     <dd>{{% md %}}List of IP addresses allowed to access all databases of an instance. The list contains up to 1,000 IP addresses, separated by commas. Supported formats include 0.0.0.0/0, 10.23.12.24 (IP), and 10.23.12.24/24 (Classless Inter-Domain Routing (CIDR) mode. /24 represents the length of the prefix in an IP address. The range of the prefix length is [1,32]).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>ssl_<wbr>action</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Actions performed on SSL functions, Valid values: `Open`: turn on SSL encryption; `Close`: turn off SSL encryption; `Update`: update SSL certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>ssl_<wbr>status</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Status of the SSL feature. `Open`: SSL is turned on; `Closed`: SSL is turned off.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

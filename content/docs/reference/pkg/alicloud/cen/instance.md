@@ -36,7 +36,7 @@ const cen = new alicloud.cen.Instance("cen", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Instance</span><span class="p">(resource_name, opts=None, </span>description=None<span class="p">, </span>name=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Instance</span><span class="p">(resource_name, opts=None, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>protection_level=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -154,6 +154,17 @@ const cen = new alicloud.cen.Instance("cen", {
     <dd>{{% md %}}The name of the CEN instance. Defaults to null. The name must be 2 to 128 characters in length and can contain letters, numbers, periods (.), underscores (_), and hyphens (-). The name must start with a letter, but cannot start with http:// or https://.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Protection<wbr>Level</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.76.0+) Indicates the allowed level of CIDR block overlapping. Valid values:
+- FULL: No overlapping CIDR blocks are allowed.
+- REDUCE: Overlapping CIDR blocks are allowed. However, the overlapping CIDR blocks cannot be identical.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -177,6 +188,17 @@ const cen = new alicloud.cen.Instance("cen", {
         <span class="property-type">*string</span>
     </dt>
     <dd>{{% md %}}The name of the CEN instance. Defaults to null. The name must be 2 to 128 characters in length and can contain letters, numbers, periods (.), underscores (_), and hyphens (-). The name must start with a letter, but cannot start with http:// or https://.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Protection<wbr>Level</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.76.0+) Indicates the allowed level of CIDR block overlapping. Valid values:
+- FULL: No overlapping CIDR blocks are allowed.
+- REDUCE: Overlapping CIDR blocks are allowed. However, the overlapping CIDR blocks cannot be identical.
 {{% /md %}}</dd>
 
 </dl>
@@ -204,6 +226,17 @@ const cen = new alicloud.cen.Instance("cen", {
     <dd>{{% md %}}The name of the CEN instance. Defaults to null. The name must be 2 to 128 characters in length and can contain letters, numbers, periods (.), underscores (_), and hyphens (-). The name must start with a letter, but cannot start with http:// or https://.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>protection<wbr>Level</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.76.0+) Indicates the allowed level of CIDR block overlapping. Valid values:
+- FULL: No overlapping CIDR blocks are allowed.
+- REDUCE: Overlapping CIDR blocks are allowed. However, the overlapping CIDR blocks cannot be identical.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -227,6 +260,17 @@ const cen = new alicloud.cen.Instance("cen", {
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the CEN instance. Defaults to null. The name must be 2 to 128 characters in length and can contain letters, numbers, periods (.), underscores (_), and hyphens (-). The name must start with a letter, but cannot start with http:// or https://.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>protection_<wbr>level</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.76.0+) Indicates the allowed level of CIDR block overlapping. Valid values:
+- FULL: No overlapping CIDR blocks are allowed.
+- REDUCE: Overlapping CIDR blocks are allowed. However, the overlapping CIDR blocks cannot be identical.
 {{% /md %}}</dd>
 
 </dl>
@@ -266,6 +310,17 @@ The following output properties are available:
     <dd>{{% md %}}The name of the CEN instance. Defaults to null. The name must be 2 to 128 characters in length and can contain letters, numbers, periods (.), underscores (_), and hyphens (-). The name must start with a letter, but cannot start with http:// or https://.
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>Protection<wbr>Level</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.76.0+) Indicates the allowed level of CIDR block overlapping. Valid values:
+- FULL: No overlapping CIDR blocks are allowed.
+- REDUCE: Overlapping CIDR blocks are allowed. However, the overlapping CIDR blocks cannot be identical.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -289,6 +344,17 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the CEN instance. Defaults to null. The name must be 2 to 128 characters in length and can contain letters, numbers, periods (.), underscores (_), and hyphens (-). The name must start with a letter, but cannot start with http:// or https://.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Protection<wbr>Level</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.76.0+) Indicates the allowed level of CIDR block overlapping. Valid values:
+- FULL: No overlapping CIDR blocks are allowed.
+- REDUCE: Overlapping CIDR blocks are allowed. However, the overlapping CIDR blocks cannot be identical.
 {{% /md %}}</dd>
 
 </dl>
@@ -316,6 +382,17 @@ The following output properties are available:
     <dd>{{% md %}}The name of the CEN instance. Defaults to null. The name must be 2 to 128 characters in length and can contain letters, numbers, periods (.), underscores (_), and hyphens (-). The name must start with a letter, but cannot start with http:// or https://.
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>protection<wbr>Level</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.76.0+) Indicates the allowed level of CIDR block overlapping. Valid values:
+- FULL: No overlapping CIDR blocks are allowed.
+- REDUCE: Overlapping CIDR blocks are allowed. However, the overlapping CIDR blocks cannot be identical.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -341,6 +418,17 @@ The following output properties are available:
     <dd>{{% md %}}The name of the CEN instance. Defaults to null. The name must be 2 to 128 characters in length and can contain letters, numbers, periods (.), underscores (_), and hyphens (-). The name must start with a letter, but cannot start with http:// or https://.
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>protection_<wbr>level</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.76.0+) Indicates the allowed level of CIDR block overlapping. Valid values:
+- FULL: No overlapping CIDR blocks are allowed.
+- REDUCE: Overlapping CIDR blocks are allowed. However, the overlapping CIDR blocks cannot be identical.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -362,7 +450,7 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>description=None<span class="p">, </span>name=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>description=None<span class="p">, </span>name=None<span class="p">, </span>protection_level=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -494,6 +582,17 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of the CEN instance. Defaults to null. The name must be 2 to 128 characters in length and can contain letters, numbers, periods (.), underscores (_), and hyphens (-). The name must start with a letter, but cannot start with http:// or https://.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Protection<wbr>Level</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.76.0+) Indicates the allowed level of CIDR block overlapping. Valid values:
+- FULL: No overlapping CIDR blocks are allowed.
+- REDUCE: Overlapping CIDR blocks are allowed. However, the overlapping CIDR blocks cannot be identical.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -517,6 +616,17 @@ The following state arguments are supported:
         <span class="property-type">*string</span>
     </dt>
     <dd>{{% md %}}The name of the CEN instance. Defaults to null. The name must be 2 to 128 characters in length and can contain letters, numbers, periods (.), underscores (_), and hyphens (-). The name must start with a letter, but cannot start with http:// or https://.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Protection<wbr>Level</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.76.0+) Indicates the allowed level of CIDR block overlapping. Valid values:
+- FULL: No overlapping CIDR blocks are allowed.
+- REDUCE: Overlapping CIDR blocks are allowed. However, the overlapping CIDR blocks cannot be identical.
 {{% /md %}}</dd>
 
 </dl>
@@ -544,6 +654,17 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of the CEN instance. Defaults to null. The name must be 2 to 128 characters in length and can contain letters, numbers, periods (.), underscores (_), and hyphens (-). The name must start with a letter, but cannot start with http:// or https://.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>protection<wbr>Level</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.76.0+) Indicates the allowed level of CIDR block overlapping. Valid values:
+- FULL: No overlapping CIDR blocks are allowed.
+- REDUCE: Overlapping CIDR blocks are allowed. However, the overlapping CIDR blocks cannot be identical.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -567,6 +688,17 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the CEN instance. Defaults to null. The name must be 2 to 128 characters in length and can contain letters, numbers, periods (.), underscores (_), and hyphens (-). The name must start with a letter, but cannot start with http:// or https://.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>protection_<wbr>level</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}(Available in 1.76.0+) Indicates the allowed level of CIDR block overlapping. Valid values:
+- FULL: No overlapping CIDR blocks are allowed.
+- REDUCE: Overlapping CIDR blocks are allowed. However, the overlapping CIDR blocks cannot be identical.
 {{% /md %}}</dd>
 
 </dl>

@@ -1,5 +1,5 @@
 ---
-title: "f5bigip"
+title: "f5 BIG-IP"
 block_external_search_index: true
 menu:
     reference:

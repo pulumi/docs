@@ -293,7 +293,7 @@ block_external_search_index: true
         <span class="property-indicator"></span>
         <span class="property-type">List<string>?</span>
     </dt>
-    <dd>{{% md %}}[Terway Specific] The vswitches for the pod network when using Terway.Be careful the `pod_vswitch_ids` can not equal to `worker_vswtich_ids` or `master_vswtich_ids` but must be in same availability zones.
+    <dd>{{% md %}}[Terway Specific] The vswitches for the pod network when using Terway.Be careful the `pod_vswitch_ids` can not equal to `worker_vswtich_ids`.but must be in same availability zones.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -628,7 +628,7 @@ block_external_search_index: true
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}[Terway Specific] The vswitches for the pod network when using Terway.Be careful the `pod_vswitch_ids` can not equal to `worker_vswtich_ids` or `master_vswtich_ids` but must be in same availability zones.
+    <dd>{{% md %}}[Terway Specific] The vswitches for the pod network when using Terway.Be careful the `pod_vswitch_ids` can not equal to `worker_vswtich_ids`.but must be in same availability zones.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -963,7 +963,7 @@ block_external_search_index: true
         <span class="property-indicator"></span>
         <span class="property-type">string[]?</span>
     </dt>
-    <dd>{{% md %}}[Terway Specific] The vswitches for the pod network when using Terway.Be careful the `pod_vswitch_ids` can not equal to `worker_vswtich_ids` or `master_vswtich_ids` but must be in same availability zones.
+    <dd>{{% md %}}[Terway Specific] The vswitches for the pod network when using Terway.Be careful the `pod_vswitch_ids` can not equal to `worker_vswtich_ids`.but must be in same availability zones.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1298,7 +1298,7 @@ block_external_search_index: true
         <span class="property-indicator"></span>
         <span class="property-type">List[str]</span>
     </dt>
-    <dd>{{% md %}}[Terway Specific] The vswitches for the pod network when using Terway.Be careful the `pod_vswitch_ids` can not equal to `worker_vswtich_ids` or `master_vswtich_ids` but must be in same availability zones.
+    <dd>{{% md %}}[Terway Specific] The vswitches for the pod network when using Terway.Be careful the `pod_vswitch_ids` can not equal to `worker_vswtich_ids`.but must be in same availability zones.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1663,7 +1663,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List<string>?</span>
     </dt>
-    <dd>{{% md %}}[Terway Specific] The vswitches for the pod network when using Terway.Be careful the `pod_vswitch_ids` can not equal to `worker_vswtich_ids` or `master_vswtich_ids` but must be in same availability zones.
+    <dd>{{% md %}}[Terway Specific] The vswitches for the pod network when using Terway.Be careful the `pod_vswitch_ids` can not equal to `worker_vswtich_ids`.but must be in same availability zones.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -2068,7 +2068,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}[Terway Specific] The vswitches for the pod network when using Terway.Be careful the `pod_vswitch_ids` can not equal to `worker_vswtich_ids` or `master_vswtich_ids` but must be in same availability zones.
+    <dd>{{% md %}}[Terway Specific] The vswitches for the pod network when using Terway.Be careful the `pod_vswitch_ids` can not equal to `worker_vswtich_ids`.but must be in same availability zones.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -2473,7 +2473,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string[]?</span>
     </dt>
-    <dd>{{% md %}}[Terway Specific] The vswitches for the pod network when using Terway.Be careful the `pod_vswitch_ids` can not equal to `worker_vswtich_ids` or `master_vswtich_ids` but must be in same availability zones.
+    <dd>{{% md %}}[Terway Specific] The vswitches for the pod network when using Terway.Be careful the `pod_vswitch_ids` can not equal to `worker_vswtich_ids`.but must be in same availability zones.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -2878,7 +2878,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">List[str]</span>
     </dt>
-    <dd>{{% md %}}[Terway Specific] The vswitches for the pod network when using Terway.Be careful the `pod_vswitch_ids` can not equal to `worker_vswtich_ids` or `master_vswtich_ids` but must be in same availability zones.
+    <dd>{{% md %}}[Terway Specific] The vswitches for the pod network when using Terway.Be careful the `pod_vswitch_ids` can not equal to `worker_vswtich_ids`.but must be in same availability zones.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -3411,7 +3411,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List<string>?</span>
     </dt>
-    <dd>{{% md %}}[Terway Specific] The vswitches for the pod network when using Terway.Be careful the `pod_vswitch_ids` can not equal to `worker_vswtich_ids` or `master_vswtich_ids` but must be in same availability zones.
+    <dd>{{% md %}}[Terway Specific] The vswitches for the pod network when using Terway.Be careful the `pod_vswitch_ids` can not equal to `worker_vswtich_ids`.but must be in same availability zones.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3816,7 +3816,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}[Terway Specific] The vswitches for the pod network when using Terway.Be careful the `pod_vswitch_ids` can not equal to `worker_vswtich_ids` or `master_vswtich_ids` but must be in same availability zones.
+    <dd>{{% md %}}[Terway Specific] The vswitches for the pod network when using Terway.Be careful the `pod_vswitch_ids` can not equal to `worker_vswtich_ids`.but must be in same availability zones.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4221,7 +4221,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]?</span>
     </dt>
-    <dd>{{% md %}}[Terway Specific] The vswitches for the pod network when using Terway.Be careful the `pod_vswitch_ids` can not equal to `worker_vswtich_ids` or `master_vswtich_ids` but must be in same availability zones.
+    <dd>{{% md %}}[Terway Specific] The vswitches for the pod network when using Terway.Be careful the `pod_vswitch_ids` can not equal to `worker_vswtich_ids`.but must be in same availability zones.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4626,7 +4626,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List[str]</span>
     </dt>
-    <dd>{{% md %}}[Terway Specific] The vswitches for the pod network when using Terway.Be careful the `pod_vswitch_ids` can not equal to `worker_vswtich_ids` or `master_vswtich_ids` but must be in same availability zones.
+    <dd>{{% md %}}[Terway Specific] The vswitches for the pod network when using Terway.Be careful the `pod_vswitch_ids` can not equal to `worker_vswtich_ids`.but must be in same availability zones.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5027,8 +5027,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string?</span>
     </dt>
-    <dd>{{% md %}}Master node SSH IP address.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5070,8 +5069,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">*string</span>
     </dt>
-    <dd>{{% md %}}Master node SSH IP address.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5113,8 +5111,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string?</span>
     </dt>
-    <dd>{{% md %}}Master node SSH IP address.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5156,8 +5153,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Master node SSH IP address.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

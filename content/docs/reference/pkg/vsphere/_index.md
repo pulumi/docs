@@ -1,5 +1,5 @@
 ---
-title: "vsphere"
+title: "vSphere"
 block_external_search_index: true
 menu:
     reference:

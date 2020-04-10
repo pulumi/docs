@@ -10,6 +10,7 @@ block_external_search_index: true
 
 <h3>Resources</h3>
 <ul class="api">
+    <li><a href="alert" title="Alert"><span class="symbol resource"></span>Alert</a></li>
     <li><a href="logtailattachment" title="LogTailAttachment"><span class="symbol resource"></span>LogTailAttachment</a></li>
     <li><a href="logtailconfig" title="LogTailConfig"><span class="symbol resource"></span>LogTailConfig</a></li>
     <li><a href="machinegroup" title="MachineGroup"><span class="symbol resource"></span>MachineGroup</a></li>

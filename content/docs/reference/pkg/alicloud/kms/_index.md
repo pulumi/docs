@@ -10,8 +10,10 @@ block_external_search_index: true
 
 <h3>Resources</h3>
 <ul class="api">
+    <li><a href="alias" title="Alias"><span class="symbol resource"></span>Alias</a></li>
     <li><a href="ciphertext" title="Ciphertext"><span class="symbol resource"></span>Ciphertext</a></li>
     <li><a href="key" title="Key"><span class="symbol resource"></span>Key</a></li>
+    <li><a href="secret" title="Secret"><span class="symbol resource"></span>Secret</a></li>
 </ul>
 
 <h3>Functions</h3>

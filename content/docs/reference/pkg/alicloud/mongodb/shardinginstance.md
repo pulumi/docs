@@ -18,7 +18,7 @@ block_external_search_index: true
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ShardingInstance</span><span class="p">(resource_name, opts=None, </span>account_password=None<span class="p">, </span>backup_periods=None<span class="p">, </span>backup_time=None<span class="p">, </span>engine_version=None<span class="p">, </span>instance_charge_type=None<span class="p">, </span>kms_encrypted_password=None<span class="p">, </span>kms_encryption_context=None<span class="p">, </span>mongo_lists=None<span class="p">, </span>name=None<span class="p">, </span>period=None<span class="p">, </span>security_ip_lists=None<span class="p">, </span>shard_lists=None<span class="p">, </span>storage_engine=None<span class="p">, </span>vswitch_id=None<span class="p">, </span>zone_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ShardingInstance</span><span class="p">(resource_name, opts=None, </span>account_password=None<span class="p">, </span>backup_periods=None<span class="p">, </span>backup_time=None<span class="p">, </span>engine_version=None<span class="p">, </span>instance_charge_type=None<span class="p">, </span>kms_encrypted_password=None<span class="p">, </span>kms_encryption_context=None<span class="p">, </span>mongo_lists=None<span class="p">, </span>name=None<span class="p">, </span>period=None<span class="p">, </span>security_group_id=None<span class="p">, </span>security_ip_lists=None<span class="p">, </span>shard_lists=None<span class="p">, </span>storage_engine=None<span class="p">, </span>tde_status=None<span class="p">, </span>vswitch_id=None<span class="p">, </span>zone_id=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -212,6 +212,15 @@ block_external_search_index: true
 
     <dt class="property-optional"
             title="Optional">
+        <span>Security<wbr>Group<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The Security Group ID of ECS.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Security<wbr>Ip<wbr>Lists</span>
         <span class="property-indicator"></span>
         <span class="property-type">List<string>?</span>
@@ -236,6 +245,15 @@ block_external_search_index: true
         <span class="property-type">string?</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tde<wbr>Status</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The TDE(Transparent Data Encryption) status.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -357,6 +375,15 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
+        <span>Security<wbr>Group<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The Security Group ID of ECS.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Security<wbr>Ip<wbr>Lists</span>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
@@ -381,6 +408,15 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">*string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tde<wbr>Status</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The TDE(Transparent Data Encryption) status.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -502,6 +538,15 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
+        <span>security<wbr>Group<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The Security Group ID of ECS.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>security<wbr>Ip<wbr>Lists</span>
         <span class="property-indicator"></span>
         <span class="property-type">string[]?</span>
@@ -526,6 +571,15 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">string?</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>tde<wbr>Status</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The TDE(Transparent Data Encryption) status.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -647,6 +701,15 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
+        <span>security_<wbr>group_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Security Group ID of ECS.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>security_<wbr>ip_<wbr>lists</span>
         <span class="property-indicator"></span>
         <span class="property-type">List[str]</span>
@@ -671,6 +734,15 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>tde_<wbr>status</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The TDE(Transparent Data Encryption) status.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -813,6 +885,15 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Security<wbr>Group<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Security Group ID of ECS.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Security<wbr>Ip<wbr>Lists</span>
         <span class="property-indicator"></span>
         <span class="property-type">List<string></span>
@@ -837,6 +918,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Tde<wbr>Status</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The TDE(Transparent Data Encryption) status.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -967,6 +1057,15 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-"
             title="">
+        <span>Security<wbr>Group<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Security Group ID of ECS.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Security<wbr>Ip<wbr>Lists</span>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
@@ -991,6 +1090,15 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Tde<wbr>Status</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The TDE(Transparent Data Encryption) status.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1121,6 +1229,15 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-"
             title="">
+        <span>security<wbr>Group<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Security Group ID of ECS.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>security<wbr>Ip<wbr>Lists</span>
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
@@ -1145,6 +1262,15 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>tde<wbr>Status</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The TDE(Transparent Data Encryption) status.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1275,6 +1401,15 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-"
             title="">
+        <span>security_<wbr>group_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Security Group ID of ECS.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>security_<wbr>ip_<wbr>lists</span>
         <span class="property-indicator"></span>
         <span class="property-type">List[str]</span>
@@ -1299,6 +1434,15 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>tde_<wbr>status</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The TDE(Transparent Data Encryption) status.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1340,7 +1484,7 @@ Get an existing ShardingInstance resource's state with the given name, ID, and o
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>account_password=None<span class="p">, </span>backup_periods=None<span class="p">, </span>backup_time=None<span class="p">, </span>engine_version=None<span class="p">, </span>instance_charge_type=None<span class="p">, </span>kms_encrypted_password=None<span class="p">, </span>kms_encryption_context=None<span class="p">, </span>mongo_lists=None<span class="p">, </span>name=None<span class="p">, </span>period=None<span class="p">, </span>retention_period=None<span class="p">, </span>security_ip_lists=None<span class="p">, </span>shard_lists=None<span class="p">, </span>storage_engine=None<span class="p">, </span>vswitch_id=None<span class="p">, </span>zone_id=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>account_password=None<span class="p">, </span>backup_periods=None<span class="p">, </span>backup_time=None<span class="p">, </span>engine_version=None<span class="p">, </span>instance_charge_type=None<span class="p">, </span>kms_encrypted_password=None<span class="p">, </span>kms_encryption_context=None<span class="p">, </span>mongo_lists=None<span class="p">, </span>name=None<span class="p">, </span>period=None<span class="p">, </span>retention_period=None<span class="p">, </span>security_group_id=None<span class="p">, </span>security_ip_lists=None<span class="p">, </span>shard_lists=None<span class="p">, </span>storage_engine=None<span class="p">, </span>tde_status=None<span class="p">, </span>vswitch_id=None<span class="p">, </span>zone_id=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1557,6 +1701,15 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Security<wbr>Group<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The Security Group ID of ECS.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Security<wbr>Ip<wbr>Lists</span>
         <span class="property-indicator"></span>
         <span class="property-type">List<string>?</span>
@@ -1581,6 +1734,15 @@ The following state arguments are supported:
         <span class="property-type">string?</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tde<wbr>Status</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The TDE(Transparent Data Encryption) status.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1711,6 +1873,15 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
+        <span>Security<wbr>Group<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The Security Group ID of ECS.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Security<wbr>Ip<wbr>Lists</span>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
@@ -1735,6 +1906,15 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">*string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tde<wbr>Status</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The TDE(Transparent Data Encryption) status.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1865,6 +2045,15 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
+        <span>security<wbr>Group<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The Security Group ID of ECS.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>security<wbr>Ip<wbr>Lists</span>
         <span class="property-indicator"></span>
         <span class="property-type">string[]?</span>
@@ -1889,6 +2078,15 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">string?</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>tde<wbr>Status</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The TDE(Transparent Data Encryption) status.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2019,6 +2217,15 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
 
     <dt class="property-optional"
             title="Optional">
+        <span>security_<wbr>group_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Security Group ID of ECS.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>security_<wbr>ip_<wbr>lists</span>
         <span class="property-indicator"></span>
         <span class="property-type">List[str]</span>
@@ -2043,6 +2250,15 @@ If it is a multi-zone and `vswitch_id` is specified, the vswitch must in one of 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>tde_<wbr>status</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The TDE(Transparent Data Encryption) status.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
