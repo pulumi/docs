@@ -3242,7 +3242,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>definitions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">JSONSchema<wbr>Props}?</span>
+        <span class="property-type">{[key: string]: JSONSchema<wbr>Props}?</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3250,7 +3250,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>dependencies</span>
         <span class="property-indicator"></span>
-        <span class="property-type">JSONSchema<wbr>Props | string[]}?</span>
+        <span class="property-type">{[key: string]: JSONSchema<wbr>Props | string[]}?</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3436,7 +3436,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>pattern<wbr>Properties</span>
         <span class="property-indicator"></span>
-        <span class="property-type">JSONSchema<wbr>Props}?</span>
+        <span class="property-type">{[key: string]: JSONSchema<wbr>Props}?</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3444,7 +3444,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>properties</span>
         <span class="property-indicator"></span>
-        <span class="property-type">JSONSchema<wbr>Props}?</span>
+        <span class="property-type">{[key: string]: JSONSchema<wbr>Props}?</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

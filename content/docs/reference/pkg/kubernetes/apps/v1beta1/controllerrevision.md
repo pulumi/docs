@@ -119,6 +119,14 @@ ControllerRevision implements an immutable snapshot of state data. Clients are r
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Revision</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Revision indicates the revision of the state represented by Data.{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Data</span>
@@ -135,6 +143,13 @@ ControllerRevision implements an immutable snapshot of state data. Clients are r
     </dt>
     <dd>{{% md %}}Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd>
 
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
     <dt class="property-required"
             title="Required">
         <span>Revision</span>
@@ -142,13 +157,6 @@ ControllerRevision implements an immutable snapshot of state data. Clients are r
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Revision indicates the revision of the state represented by Data.{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
@@ -166,20 +174,20 @@ ControllerRevision implements an immutable snapshot of state data. Clients are r
     </dt>
     <dd>{{% md %}}Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Revision</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Revision indicates the revision of the state represented by Data.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>revision</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Revision indicates the revision of the state represented by Data.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -197,20 +205,20 @@ ControllerRevision implements an immutable snapshot of state data. Clients are r
     </dt>
     <dd>{{% md %}}Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>revision</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Revision indicates the revision of the state represented by Data.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>revision</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}Revision indicates the revision of the state represented by Data.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -227,14 +235,6 @@ ControllerRevision implements an immutable snapshot of state data. Clients are r
         <span class="property-type"><a href="#objectmeta">Dict[Object<wbr>Meta]</a></span>
     </dt>
     <dd>{{% md %}}Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>revision</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Revision indicates the revision of the state represented by Data.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

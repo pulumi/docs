@@ -118,14 +118,6 @@ LocalSubjectAccessReview checks whether or not a user or group can perform an ac
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Metadata</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Spec</span>
@@ -134,12 +126,28 @@ LocalSubjectAccessReview checks whether or not a user or group can perform an ac
     </dt>
     <dd>{{% md %}}Spec holds information about the request being evaluated.  spec.namespace must be equal to the namespace you made the request against.  If empty, it is defaulted.{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Metadata</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta<wbr>Args?</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Spec</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subjectaccessreviewspec">Subject<wbr>Access<wbr>Review<wbr>Spec</a></span>
+    </dt>
+    <dd>{{% md %}}Spec holds information about the request being evaluated.  spec.namespace must be equal to the namespace you made the request against.  If empty, it is defaulted.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -149,20 +157,20 @@ LocalSubjectAccessReview checks whether or not a user or group can perform an ac
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Spec</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subjectaccessreviewspec">Subject<wbr>Access<wbr>Review<wbr>Spec</a></span>
-    </dt>
-    <dd>{{% md %}}Spec holds information about the request being evaluated.  spec.namespace must be equal to the namespace you made the request against.  If empty, it is defaulted.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>spec</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subjectaccessreviewspec">Subject<wbr>Access<wbr>Review<wbr>Spec</a></span>
+    </dt>
+    <dd>{{% md %}}Spec holds information about the request being evaluated.  spec.namespace must be equal to the namespace you made the request against.  If empty, it is defaulted.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -172,28 +180,12 @@ LocalSubjectAccessReview checks whether or not a user or group can perform an ac
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>spec</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subjectaccessreviewspec">Subject<wbr>Access<wbr>Review<wbr>Spec</a></span>
-    </dt>
-    <dd>{{% md %}}Spec holds information about the request being evaluated.  spec.namespace must be equal to the namespace you made the request against.  If empty, it is defaulted.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>metadata</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">Dict[Object<wbr>Meta]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -202,6 +194,14 @@ LocalSubjectAccessReview checks whether or not a user or group can perform an ac
         <span class="property-type"><a href="#subjectaccessreviewspec">Dict[Subject<wbr>Access<wbr>Review<wbr>Spec]</a></span>
     </dt>
     <dd>{{% md %}}Spec holds information about the request being evaluated.  spec.namespace must be equal to the namespace you made the request against.  If empty, it is defaulted.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>metadata</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#objectmeta">Dict[Object<wbr>Meta]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

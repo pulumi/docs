@@ -120,6 +120,14 @@ StorageClasses are non-namespaced; the name of the storage class according to et
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Provisioner</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Provisioner indicates the type of the provisioner.{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Allow<wbr>Volume<wbr>Expansion</span>
@@ -160,14 +168,6 @@ StorageClasses are non-namespaced; the name of the storage class according to et
     </dt>
     <dd>{{% md %}}Parameters holds the parameters for the provisioner that should create volumes of this storage class.{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Provisioner</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Provisioner indicates the type of the provisioner.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>Reclaim<wbr>Policy</span>
@@ -190,6 +190,14 @@ StorageClasses are non-namespaced; the name of the storage class according to et
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Provisioner</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Provisioner indicates the type of the provisioner.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -231,14 +239,6 @@ StorageClasses are non-namespaced; the name of the storage class according to et
     </dt>
     <dd>{{% md %}}Parameters holds the parameters for the provisioner that should create volumes of this storage class.{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Provisioner</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Provisioner indicates the type of the provisioner.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>Reclaim<wbr>Policy</span>
@@ -261,6 +261,14 @@ StorageClasses are non-namespaced; the name of the storage class according to et
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>provisioner</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Provisioner indicates the type of the provisioner.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -302,14 +310,6 @@ StorageClasses are non-namespaced; the name of the storage class according to et
     </dt>
     <dd>{{% md %}}Parameters holds the parameters for the provisioner that should create volumes of this storage class.{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>provisioner</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Provisioner indicates the type of the provisioner.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>reclaim<wbr>Policy</span>
@@ -332,6 +332,14 @@ StorageClasses are non-namespaced; the name of the storage class according to et
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>provisioner</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Provisioner indicates the type of the provisioner.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -372,14 +380,6 @@ StorageClasses are non-namespaced; the name of the storage class according to et
         <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}Parameters holds the parameters for the provisioner that should create volumes of this storage class.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>provisioner</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Provisioner indicates the type of the provisioner.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

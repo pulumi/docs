@@ -118,6 +118,22 @@ Event is a report of an event somewhere in the cluster.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Involved<wbr>Object</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#objectreference">Object<wbr>Reference<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The object that this event is about.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Metadata</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Action</span>
@@ -150,14 +166,6 @@ Event is a report of an event somewhere in the cluster.
     </dt>
     <dd>{{% md %}}The time at which the event was first recorded. (Time of server receipt is in TypeMeta.){{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Involved<wbr>Object</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectreference">Object<wbr>Reference<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The object that this event is about.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>Last<wbr>Timestamp</span>
@@ -173,14 +181,6 @@ Event is a report of an event somewhere in the cluster.
         <span class="property-type">string?</span>
     </dt>
     <dd>{{% md %}}A human-readable description of the status of this operation.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Metadata</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -245,6 +245,22 @@ Event is a report of an event somewhere in the cluster.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Involved<wbr>Object</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#objectreference">Object<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}The object that this event is about.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Metadata</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta</a></span>
+    </dt>
+    <dd>{{% md %}}Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Action</span>
@@ -277,14 +293,6 @@ Event is a report of an event somewhere in the cluster.
     </dt>
     <dd>{{% md %}}The time at which the event was first recorded. (Time of server receipt is in TypeMeta.){{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Involved<wbr>Object</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectreference">Object<wbr>Reference</a></span>
-    </dt>
-    <dd>{{% md %}}The object that this event is about.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>Last<wbr>Timestamp</span>
@@ -300,14 +308,6 @@ Event is a report of an event somewhere in the cluster.
         <span class="property-type">*string</span>
     </dt>
     <dd>{{% md %}}A human-readable description of the status of this operation.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Metadata</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta</a></span>
-    </dt>
-    <dd>{{% md %}}Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -372,6 +372,22 @@ Event is a report of an event somewhere in the cluster.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>involved<wbr>Object</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#objectreference">Object<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}The object that this event is about.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>metadata</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta</a></span>
+    </dt>
+    <dd>{{% md %}}Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>action</span>
@@ -404,14 +420,6 @@ Event is a report of an event somewhere in the cluster.
     </dt>
     <dd>{{% md %}}The time at which the event was first recorded. (Time of server receipt is in TypeMeta.){{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>involved<wbr>Object</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectreference">Object<wbr>Reference</a></span>
-    </dt>
-    <dd>{{% md %}}The object that this event is about.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>last<wbr>Timestamp</span>
@@ -427,14 +435,6 @@ Event is a report of an event somewhere in the cluster.
         <span class="property-type">string?</span>
     </dt>
     <dd>{{% md %}}A human-readable description of the status of this operation.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>metadata</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta</a></span>
-    </dt>
-    <dd>{{% md %}}Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -499,6 +499,22 @@ Event is a report of an event somewhere in the cluster.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>involved_<wbr>object</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#objectreference">Dict[Object<wbr>Reference]</a></span>
+    </dt>
+    <dd>{{% md %}}The object that this event is about.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>metadata</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#objectmeta">Dict[Object<wbr>Meta]</a></span>
+    </dt>
+    <dd>{{% md %}}Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>action</span>
@@ -531,14 +547,6 @@ Event is a report of an event somewhere in the cluster.
     </dt>
     <dd>{{% md %}}The time at which the event was first recorded. (Time of server receipt is in TypeMeta.){{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>involved_<wbr>object</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectreference">Dict[Object<wbr>Reference]</a></span>
-    </dt>
-    <dd>{{% md %}}The object that this event is about.{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>last_<wbr>timestamp</span>
@@ -554,14 +562,6 @@ Event is a report of an event somewhere in the cluster.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A human-readable description of the status of this operation.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>metadata</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">Dict[Object<wbr>Meta]</a></span>
-    </dt>
-    <dd>{{% md %}}Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

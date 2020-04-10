@@ -118,6 +118,14 @@ Event is a report of an event somewhere in the cluster. It generally denotes som
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Event<wbr>Time</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Required. Time when this Event was first observed.{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Action</span>
@@ -157,14 +165,6 @@ Event is a report of an event somewhere in the cluster. It generally denotes som
         <span class="property-type"><a href="#eventsource">Event<wbr>Source<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Deprecated field assuring backward compatibility with core.v1 Event type{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Event<wbr>Time</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Required. Time when this Event was first observed.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -245,6 +245,14 @@ Event is a report of an event somewhere in the cluster. It generally denotes som
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Event<wbr>Time</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Required. Time when this Event was first observed.{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Action</span>
@@ -284,14 +292,6 @@ Event is a report of an event somewhere in the cluster. It generally denotes som
         <span class="property-type"><a href="#eventsource">Event<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Deprecated field assuring backward compatibility with core.v1 Event type{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Event<wbr>Time</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Required. Time when this Event was first observed.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -372,6 +372,14 @@ Event is a report of an event somewhere in the cluster. It generally denotes som
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>event<wbr>Time</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Required. Time when this Event was first observed.{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>action</span>
@@ -411,14 +419,6 @@ Event is a report of an event somewhere in the cluster. It generally denotes som
         <span class="property-type"><a href="#eventsource">Event<wbr>Source?</a></span>
     </dt>
     <dd>{{% md %}}Deprecated field assuring backward compatibility with core.v1 Event type{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>event<wbr>Time</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Required. Time when this Event was first observed.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -499,6 +499,14 @@ Event is a report of an event somewhere in the cluster. It generally denotes som
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>event_<wbr>time</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Required. Time when this Event was first observed.{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>action</span>
@@ -538,14 +546,6 @@ Event is a report of an event somewhere in the cluster. It generally denotes som
         <span class="property-type"><a href="#eventsource">Dict[Event<wbr>Source]</a></span>
     </dt>
     <dd>{{% md %}}Deprecated field assuring backward compatibility with core.v1 Event type{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>event_<wbr>time</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Required. Time when this Event was first observed.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

@@ -119,14 +119,6 @@ CSINode holds information about all CSI drivers installed on a node. CSI drivers
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Metadata</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}metadata.name must be the Kubernetes node name.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Spec</span>
@@ -135,12 +127,28 @@ CSINode holds information about all CSI drivers installed on a node. CSI drivers
     </dt>
     <dd>{{% md %}}spec is the specification of CSINode{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Metadata</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta<wbr>Args?</a></span>
+    </dt>
+    <dd>{{% md %}}metadata.name must be the Kubernetes node name.{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Spec</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#csinodespec">CSINode<wbr>Spec</a></span>
+    </dt>
+    <dd>{{% md %}}spec is the specification of CSINode{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -150,20 +158,20 @@ CSINode holds information about all CSI drivers installed on a node. CSI drivers
     </dt>
     <dd>{{% md %}}metadata.name must be the Kubernetes node name.{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Spec</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#csinodespec">CSINode<wbr>Spec</a></span>
-    </dt>
-    <dd>{{% md %}}spec is the specification of CSINode{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>spec</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#csinodespec">CSINode<wbr>Spec</a></span>
+    </dt>
+    <dd>{{% md %}}spec is the specification of CSINode{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -173,28 +181,12 @@ CSINode holds information about all CSI drivers installed on a node. CSI drivers
     </dt>
     <dd>{{% md %}}metadata.name must be the Kubernetes node name.{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>spec</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#csinodespec">CSINode<wbr>Spec</a></span>
-    </dt>
-    <dd>{{% md %}}spec is the specification of CSINode{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>metadata</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">Dict[Object<wbr>Meta]</a></span>
-    </dt>
-    <dd>{{% md %}}metadata.name must be the Kubernetes node name.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -203,6 +195,14 @@ CSINode holds information about all CSI drivers installed on a node. CSI drivers
         <span class="property-type"><a href="#csinodespec">Dict[CSINode<wbr>Spec]</a></span>
     </dt>
     <dd>{{% md %}}spec is the specification of CSINode{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>metadata</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#objectmeta">Dict[Object<wbr>Meta]</a></span>
+    </dt>
+    <dd>{{% md %}}metadata.name must be the Kubernetes node name.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

@@ -118,14 +118,6 @@ ClusterRoleBinding references a ClusterRole, but not contain it.  It can referen
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Metadata</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}Standard object's metadata.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Role<wbr>Ref</span>
@@ -133,6 +125,14 @@ ClusterRoleBinding references a ClusterRole, but not contain it.  It can referen
         <span class="property-type"><a href="#roleref">Role<wbr>Ref<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}RoleRef can only reference a ClusterRole in the global namespace. If the RoleRef cannot be resolved, the Authorizer must return an error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Metadata</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta<wbr>Args?</a></span>
+    </dt>
+    <dd>{{% md %}}Standard object's metadata.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -149,14 +149,6 @@ ClusterRoleBinding references a ClusterRole, but not contain it.  It can referen
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Metadata</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta</a></span>
-    </dt>
-    <dd>{{% md %}}Standard object's metadata.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Role<wbr>Ref</span>
@@ -164,6 +156,14 @@ ClusterRoleBinding references a ClusterRole, but not contain it.  It can referen
         <span class="property-type"><a href="#roleref">Role<wbr>Ref</a></span>
     </dt>
     <dd>{{% md %}}RoleRef can only reference a ClusterRole in the global namespace. If the RoleRef cannot be resolved, the Authorizer must return an error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Metadata</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta</a></span>
+    </dt>
+    <dd>{{% md %}}Standard object's metadata.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -180,14 +180,6 @@ ClusterRoleBinding references a ClusterRole, but not contain it.  It can referen
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>metadata</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta?</a></span>
-    </dt>
-    <dd>{{% md %}}Standard object's metadata.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>role<wbr>Ref</span>
@@ -195,6 +187,14 @@ ClusterRoleBinding references a ClusterRole, but not contain it.  It can referen
         <span class="property-type"><a href="#roleref">Role<wbr>Ref</a></span>
     </dt>
     <dd>{{% md %}}RoleRef can only reference a ClusterRole in the global namespace. If the RoleRef cannot be resolved, the Authorizer must return an error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>metadata</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta?</a></span>
+    </dt>
+    <dd>{{% md %}}Standard object's metadata.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -211,14 +211,6 @@ ClusterRoleBinding references a ClusterRole, but not contain it.  It can referen
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>metadata</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">Dict[Object<wbr>Meta]</a></span>
-    </dt>
-    <dd>{{% md %}}Standard object's metadata.{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>role_<wbr>ref</span>
@@ -226,6 +218,14 @@ ClusterRoleBinding references a ClusterRole, but not contain it.  It can referen
         <span class="property-type"><a href="#roleref">Dict[Role<wbr>Ref]</a></span>
     </dt>
     <dd>{{% md %}}RoleRef can only reference a ClusterRole in the global namespace. If the RoleRef cannot be resolved, the Authorizer must return an error.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>metadata</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#objectmeta">Dict[Object<wbr>Meta]</a></span>
+    </dt>
+    <dd>{{% md %}}Standard object's metadata.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

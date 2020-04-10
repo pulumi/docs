@@ -120,14 +120,6 @@ VolumeAttachment objects are non-namespaced.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Metadata</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}Standard object metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Spec</span>
@@ -136,12 +128,28 @@ VolumeAttachment objects are non-namespaced.
     </dt>
     <dd>{{% md %}}Specification of the desired attach/detach volume behavior. Populated by the Kubernetes system.{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Metadata</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta<wbr>Args?</a></span>
+    </dt>
+    <dd>{{% md %}}Standard object metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Spec</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#volumeattachmentspec">Volume<wbr>Attachment<wbr>Spec</a></span>
+    </dt>
+    <dd>{{% md %}}Specification of the desired attach/detach volume behavior. Populated by the Kubernetes system.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -151,20 +159,20 @@ VolumeAttachment objects are non-namespaced.
     </dt>
     <dd>{{% md %}}Standard object metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Spec</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumeattachmentspec">Volume<wbr>Attachment<wbr>Spec</a></span>
-    </dt>
-    <dd>{{% md %}}Specification of the desired attach/detach volume behavior. Populated by the Kubernetes system.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>spec</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#volumeattachmentspec">Volume<wbr>Attachment<wbr>Spec</a></span>
+    </dt>
+    <dd>{{% md %}}Specification of the desired attach/detach volume behavior. Populated by the Kubernetes system.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -174,28 +182,12 @@ VolumeAttachment objects are non-namespaced.
     </dt>
     <dd>{{% md %}}Standard object metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>spec</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#volumeattachmentspec">Volume<wbr>Attachment<wbr>Spec</a></span>
-    </dt>
-    <dd>{{% md %}}Specification of the desired attach/detach volume behavior. Populated by the Kubernetes system.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>metadata</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">Dict[Object<wbr>Meta]</a></span>
-    </dt>
-    <dd>{{% md %}}Standard object metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -204,6 +196,14 @@ VolumeAttachment objects are non-namespaced.
         <span class="property-type"><a href="#volumeattachmentspec">Dict[Volume<wbr>Attachment<wbr>Spec]</a></span>
     </dt>
     <dd>{{% md %}}Specification of the desired attach/detach volume behavior. Populated by the Kubernetes system.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>metadata</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#objectmeta">Dict[Object<wbr>Meta]</a></span>
+    </dt>
+    <dd>{{% md %}}Standard object metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
