@@ -49,7 +49,7 @@ main:
     # Duration of the webinar.
     duration: "90 minutes"
     # Datetime of the webinar.
-    datetime: "WED APR 08, 2020 AT 11:30AM CET"
+    datetime: "THU APR 16, 2020 AT 11:00AM PDT"
     # Description of the webinar.
     description: |
         The hardest part of Kubernetes is setting up the infrastructure: clusters, DNS, firewalls, load balancers, IAM, storage, logging, and performance monitoring, often spanning private, public, and hybrid cloud architectures.

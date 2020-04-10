@@ -47,7 +47,7 @@ hero:
 main:
     # Webinar title.
     title: "Getting Started with Infrastructure as Code"
-    youtube_url: "https://www.youtube.com/embed/k4UpMCWxbMc"
+    youtube_url: "https://www.youtube.com/embed/emv0iMwCkkg"
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
     sortable_date: 2020-03-30T11:30:00.000+01:00
     # Duration of the webinar.
