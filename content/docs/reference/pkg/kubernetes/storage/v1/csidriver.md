@@ -118,14 +118,6 @@ CSIDriver captures information about a Container Storage Interface (CSI) volume 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Metadata</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}Standard object metadata. metadata.Name indicates the name of the CSI driver that this object refers to; it MUST be the same name returned by the CSI GetPluginName() call for that driver. The driver name must be 63 characters or less, beginning and ending with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), dots (.), and alphanumerics between. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Spec</span>
@@ -134,12 +126,28 @@ CSIDriver captures information about a Container Storage Interface (CSI) volume 
     </dt>
     <dd>{{% md %}}Specification of the CSI Driver.{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Metadata</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta<wbr>Args?</a></span>
+    </dt>
+    <dd>{{% md %}}Standard object metadata. metadata.Name indicates the name of the CSI driver that this object refers to; it MUST be the same name returned by the CSI GetPluginName() call for that driver. The driver name must be 63 characters or less, beginning and ending with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), dots (.), and alphanumerics between. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Spec</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#csidriverspec">CSIDriver<wbr>Spec</a></span>
+    </dt>
+    <dd>{{% md %}}Specification of the CSI Driver.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -149,20 +157,20 @@ CSIDriver captures information about a Container Storage Interface (CSI) volume 
     </dt>
     <dd>{{% md %}}Standard object metadata. metadata.Name indicates the name of the CSI driver that this object refers to; it MUST be the same name returned by the CSI GetPluginName() call for that driver. The driver name must be 63 characters or less, beginning and ending with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), dots (.), and alphanumerics between. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Spec</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#csidriverspec">CSIDriver<wbr>Spec</a></span>
-    </dt>
-    <dd>{{% md %}}Specification of the CSI Driver.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>spec</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#csidriverspec">CSIDriver<wbr>Spec</a></span>
+    </dt>
+    <dd>{{% md %}}Specification of the CSI Driver.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -172,28 +180,12 @@ CSIDriver captures information about a Container Storage Interface (CSI) volume 
     </dt>
     <dd>{{% md %}}Standard object metadata. metadata.Name indicates the name of the CSI driver that this object refers to; it MUST be the same name returned by the CSI GetPluginName() call for that driver. The driver name must be 63 characters or less, beginning and ending with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), dots (.), and alphanumerics between. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>spec</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#csidriverspec">CSIDriver<wbr>Spec</a></span>
-    </dt>
-    <dd>{{% md %}}Specification of the CSI Driver.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>metadata</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">Dict[Object<wbr>Meta]</a></span>
-    </dt>
-    <dd>{{% md %}}Standard object metadata. metadata.Name indicates the name of the CSI driver that this object refers to; it MUST be the same name returned by the CSI GetPluginName() call for that driver. The driver name must be 63 characters or less, beginning and ending with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), dots (.), and alphanumerics between. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -202,6 +194,14 @@ CSIDriver captures information about a Container Storage Interface (CSI) volume 
         <span class="property-type"><a href="#csidriverspec">Dict[CSIDriver<wbr>Spec]</a></span>
     </dt>
     <dd>{{% md %}}Specification of the CSI Driver.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>metadata</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#objectmeta">Dict[Object<wbr>Meta]</a></span>
+    </dt>
+    <dd>{{% md %}}Standard object metadata. metadata.Name indicates the name of the CSI driver that this object refers to; it MUST be the same name returned by the CSI GetPluginName() call for that driver. The driver name must be 63 characters or less, beginning and ending with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), dots (.), and alphanumerics between. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

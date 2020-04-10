@@ -118,14 +118,6 @@ RuntimeClass defines a class of container runtime supported in the cluster. The 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Metadata</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Spec</span>
@@ -134,12 +126,28 @@ RuntimeClass defines a class of container runtime supported in the cluster. The 
     </dt>
     <dd>{{% md %}}Specification of the RuntimeClass More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Metadata</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta<wbr>Args?</a></span>
+    </dt>
+    <dd>{{% md %}}More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Spec</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#runtimeclassspec">Runtime<wbr>Class<wbr>Spec</a></span>
+    </dt>
+    <dd>{{% md %}}Specification of the RuntimeClass More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -149,20 +157,20 @@ RuntimeClass defines a class of container runtime supported in the cluster. The 
     </dt>
     <dd>{{% md %}}More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Spec</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#runtimeclassspec">Runtime<wbr>Class<wbr>Spec</a></span>
-    </dt>
-    <dd>{{% md %}}Specification of the RuntimeClass More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>spec</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#runtimeclassspec">Runtime<wbr>Class<wbr>Spec</a></span>
+    </dt>
+    <dd>{{% md %}}Specification of the RuntimeClass More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -172,28 +180,12 @@ RuntimeClass defines a class of container runtime supported in the cluster. The 
     </dt>
     <dd>{{% md %}}More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>spec</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#runtimeclassspec">Runtime<wbr>Class<wbr>Spec</a></span>
-    </dt>
-    <dd>{{% md %}}Specification of the RuntimeClass More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>metadata</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">Dict[Object<wbr>Meta]</a></span>
-    </dt>
-    <dd>{{% md %}}More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -202,6 +194,14 @@ RuntimeClass defines a class of container runtime supported in the cluster. The 
         <span class="property-type"><a href="#runtimeclassspec">Dict[Runtime<wbr>Class<wbr>Spec]</a></span>
     </dt>
     <dd>{{% md %}}Specification of the RuntimeClass More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>metadata</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#objectmeta">Dict[Object<wbr>Meta]</a></span>
+    </dt>
+    <dd>{{% md %}}More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

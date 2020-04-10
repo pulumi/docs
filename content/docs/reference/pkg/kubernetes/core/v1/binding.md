@@ -118,14 +118,6 @@ Binding ties one object to another; for example, a pod is bound to a node by a s
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Metadata</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Target</span>
@@ -134,12 +126,28 @@ Binding ties one object to another; for example, a pod is bound to a node by a s
     </dt>
     <dd>{{% md %}}The target object that you want to bind to the standard object.{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Metadata</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta<wbr>Args?</a></span>
+    </dt>
+    <dd>{{% md %}}Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Target</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#objectreference">Object<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}The target object that you want to bind to the standard object.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -149,20 +157,20 @@ Binding ties one object to another; for example, a pod is bound to a node by a s
     </dt>
     <dd>{{% md %}}Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Target</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectreference">Object<wbr>Reference</a></span>
-    </dt>
-    <dd>{{% md %}}The target object that you want to bind to the standard object.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>target</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#objectreference">Object<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}The target object that you want to bind to the standard object.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -172,28 +180,12 @@ Binding ties one object to another; for example, a pod is bound to a node by a s
     </dt>
     <dd>{{% md %}}Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>target</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectreference">Object<wbr>Reference</a></span>
-    </dt>
-    <dd>{{% md %}}The target object that you want to bind to the standard object.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>metadata</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">Dict[Object<wbr>Meta]</a></span>
-    </dt>
-    <dd>{{% md %}}Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -202,6 +194,14 @@ Binding ties one object to another; for example, a pod is bound to a node by a s
         <span class="property-type"><a href="#objectreference">Dict[Object<wbr>Reference]</a></span>
     </dt>
     <dd>{{% md %}}The target object that you want to bind to the standard object.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>metadata</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#objectmeta">Dict[Object<wbr>Meta]</a></span>
+    </dt>
+    <dd>{{% md %}}Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

@@ -118,6 +118,14 @@ DEPRECATED - This group version of PriorityClass is deprecated by scheduling.k8s
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The value of this priority class. This is the actual priority that pods receive when they have the name of this class in their pod spec.{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Description</span>
@@ -150,6 +158,13 @@ DEPRECATED - This group version of PriorityClass is deprecated by scheduling.k8s
     </dt>
     <dd>{{% md %}}PreemptionPolicy is the Policy for preempting pods with lower priority. One of Never, PreemptLowerPriority. Defaults to PreemptLowerPriority if unset. This field is alpha-level and is only honored by servers that enable the NonPreemptingPriority feature.{{% /md %}}</dd>
 
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
     <dt class="property-required"
             title="Required">
         <span>Value</span>
@@ -157,13 +172,6 @@ DEPRECATED - This group version of PriorityClass is deprecated by scheduling.k8s
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The value of this priority class. This is the actual priority that pods receive when they have the name of this class in their pod spec.{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
@@ -197,20 +205,20 @@ DEPRECATED - This group version of PriorityClass is deprecated by scheduling.k8s
     </dt>
     <dd>{{% md %}}PreemptionPolicy is the Policy for preempting pods with lower priority. One of Never, PreemptLowerPriority. Defaults to PreemptLowerPriority if unset. This field is alpha-level and is only honored by servers that enable the NonPreemptingPriority feature.{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Value</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The value of this priority class. This is the actual priority that pods receive when they have the name of this class in their pod spec.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The value of this priority class. This is the actual priority that pods receive when they have the name of this class in their pod spec.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -244,20 +252,20 @@ DEPRECATED - This group version of PriorityClass is deprecated by scheduling.k8s
     </dt>
     <dd>{{% md %}}PreemptionPolicy is the Policy for preempting pods with lower priority. One of Never, PreemptLowerPriority. Defaults to PreemptLowerPriority if unset. This field is alpha-level and is only honored by servers that enable the NonPreemptingPriority feature.{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>value</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The value of this priority class. This is the actual priority that pods receive when they have the name of this class in their pod spec.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The value of this priority class. This is the actual priority that pods receive when they have the name of this class in their pod spec.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -290,14 +298,6 @@ DEPRECATED - This group version of PriorityClass is deprecated by scheduling.k8s
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}PreemptionPolicy is the Policy for preempting pods with lower priority. One of Never, PreemptLowerPriority. Defaults to PreemptLowerPriority if unset. This field is alpha-level and is only honored by servers that enable the NonPreemptingPriority feature.{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>value</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The value of this priority class. This is the actual priority that pods receive when they have the name of this class in their pod spec.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

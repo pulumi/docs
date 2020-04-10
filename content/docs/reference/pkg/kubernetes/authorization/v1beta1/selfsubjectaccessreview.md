@@ -118,14 +118,6 @@ SelfSubjectAccessReview checks whether or the current user can perform an action
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Metadata</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Spec</span>
@@ -134,12 +126,28 @@ SelfSubjectAccessReview checks whether or the current user can perform an action
     </dt>
     <dd>{{% md %}}Spec holds information about the request being evaluated.  user and groups must be empty{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Metadata</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta<wbr>Args?</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Spec</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#selfsubjectaccessreviewspec">Self<wbr>Subject<wbr>Access<wbr>Review<wbr>Spec</a></span>
+    </dt>
+    <dd>{{% md %}}Spec holds information about the request being evaluated.  user and groups must be empty{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -149,20 +157,20 @@ SelfSubjectAccessReview checks whether or the current user can perform an action
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Spec</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#selfsubjectaccessreviewspec">Self<wbr>Subject<wbr>Access<wbr>Review<wbr>Spec</a></span>
-    </dt>
-    <dd>{{% md %}}Spec holds information about the request being evaluated.  user and groups must be empty{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>spec</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#selfsubjectaccessreviewspec">Self<wbr>Subject<wbr>Access<wbr>Review<wbr>Spec</a></span>
+    </dt>
+    <dd>{{% md %}}Spec holds information about the request being evaluated.  user and groups must be empty{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -172,28 +180,12 @@ SelfSubjectAccessReview checks whether or the current user can perform an action
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>spec</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#selfsubjectaccessreviewspec">Self<wbr>Subject<wbr>Access<wbr>Review<wbr>Spec</a></span>
-    </dt>
-    <dd>{{% md %}}Spec holds information about the request being evaluated.  user and groups must be empty{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>metadata</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">Dict[Object<wbr>Meta]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -202,6 +194,14 @@ SelfSubjectAccessReview checks whether or the current user can perform an action
         <span class="property-type"><a href="#selfsubjectaccessreviewspec">Dict[Self<wbr>Subject<wbr>Access<wbr>Review<wbr>Spec]</a></span>
     </dt>
     <dd>{{% md %}}Spec holds information about the request being evaluated.  user and groups must be empty{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>metadata</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#objectmeta">Dict[Object<wbr>Meta]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
