@@ -67,6 +67,6 @@ main:
 
     # A bullet point list containing what the user will learn during the webinar.
     learn:
-        - How to rovision cloud infrastructure in Go.
+        - How to provision cloud infrastructure in Go.
         - How to test cloud infrastructure.
 ---
