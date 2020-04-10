@@ -36,7 +36,9 @@ A project file contains the following attributes:
     * `name`: `runtime` can either be specified as a string, or a complex object with additional configuration. If you need to include additional configuration, specify language information (`nodejs`, `python`, `go`, or `dotnet`) in this property.
     * `options`: (optional) a property bag that has various configuration options that apply to different language runtimes.
         * `typescript`: applies to nodejs projects only. A boolean (`true` | `false`) controls whether to use ts-node to execute sources. Defaults to `true`.
-        * `binary`: applies to Go projects only. A string that specifies the name of a pre-built executable to look for on your path. If not specified, go sources in $CWD will be invoked via `go run`.
+        * `binary`: applies to Go and .NET projects only
+            * **Go**: A string that specifies the name of a pre-built executable to look for on your path. If not specified, go sources in $CWD will be invoked via `go run`.
+            * **.NET**: A string that specifies the path of a pre-built .NET assembly. If not specified, a .NET project in $CWD will be invoked via `dotnet run`.
 
 * `description`: (optional) a friendly description about your project.
 
@@ -69,6 +71,17 @@ runtime:
     options:
         binary: mybinary
 description: A minimal Go Pulumi program
+```
+
+A `Pulumi.yaml` file for a `dotnet` program that will use a pre-built assembly `MyInfra.dll` under the `bin` directory:
+
+```yaml
+name: ls
+runtime:
+    name: dotnet
+    options:
+        binary: bin/MyInfra.dll
+description: A precompiled .NET Pulumi program
 ```
 
 ### Paths
