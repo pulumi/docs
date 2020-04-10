@@ -8,13 +8,13 @@ meta_image: "cost.png"
 ---
 
 Due to the nature of the product we build, the Pulumi team needs to have access to several cloud providers to
-develop and test the product. With an increasing number of cloud providers, comes with an associated ever-increasing cost.
+develop and test the product. An increasing number of cloud providers comes with an associated ever-increasing cost.
 
 <!--more-->
 
 Giving a development team the ability to launch the resources they need in the cloud is both the best and most scary
 thing that happens in a company. The flexibility for them to be able to achieve their goal is fantastic, but with this great
-freedom can come problems. We depend on developers to clean up after themselves, but ometimes that doesn't happen. Throw in
+freedom can come problems. We depend on developers to clean up after themselves, but sometimes that doesn't happen. Throw in
 automated testing failures that leak cloud resources, and we can very quickly get ourselves into a situation where costs
 spiral out of control.
 
@@ -227,7 +227,7 @@ func HandleRequest() {
 }
 ```
 
-When we run `pulumi up`, Pulumi will understand that the source code of the lambda as changed:
+When we run `pulumi up`, Pulumi will understand that the source code of the lambda has changed:
 
 ```bash
 $ pulumi up
