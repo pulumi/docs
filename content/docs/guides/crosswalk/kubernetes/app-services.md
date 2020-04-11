@@ -180,7 +180,7 @@ const cacheCluster = new aws.elasticache.Cluster("cachecluster", {
 });
 
 // Create a ConfigMap from the cache connection information.
-const cacheConn = new k8s.core.v1.ConfigMap("postgres-db-conn",
+const cacheConn = new k8s.core.v1.ConfigMap("redis-db-conn",
     {
         data: {
             host: cacheCluster.cacheNodes[0].address.apply(addr => Buffer.from(addr).toString("base64")),
