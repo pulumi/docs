@@ -320,46 +320,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Code</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Suggested HTTP return code for this status, 0 if not set.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Details</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statusdetails">Status<wbr>Details?</a></span>
-    </dt>
-    <dd>{{% md %}}Extended data associated with the reason.  Each reason may define its own extended details. This field is optional and the data returned is not guaranteed to conform to any schema except that defined by the reason type.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Message</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A human-readable description of the status of this operation.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Metadata</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listmeta">List<wbr>Meta?</a></span>
-    </dt>
-    <dd>{{% md %}}Standard list metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Reason</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A machine-readable description of why this operation is in the "Failure" status. If this value is empty there is no information available. A Reason clarifies an HTTP status code but does not override it.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Status</span>
         <span class="property-indicator"></span>
         <span class="property-type">string?</span>
@@ -372,46 +332,6 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Code</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Suggested HTTP return code for this status, 0 if not set.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Details</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statusdetails">*Status<wbr>Details</a></span>
-    </dt>
-    <dd>{{% md %}}Extended data associated with the reason.  Each reason may define its own extended details. This field is optional and the data returned is not guaranteed to conform to any schema except that defined by the reason type.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Message</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}A human-readable description of the status of this operation.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Metadata</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listmeta">*List<wbr>Meta</a></span>
-    </dt>
-    <dd>{{% md %}}Standard list metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Reason</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}A machine-readable description of why this operation is in the "Failure" status. If this value is empty there is no information available. A Reason clarifies an HTTP status code but does not override it.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -430,46 +350,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>code</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Suggested HTTP return code for this status, 0 if not set.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>details</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statusdetails">Status<wbr>Details?</a></span>
-    </dt>
-    <dd>{{% md %}}Extended data associated with the reason.  Each reason may define its own extended details. This field is optional and the data returned is not guaranteed to conform to any schema except that defined by the reason type.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>message</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A human-readable description of the status of this operation.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>metadata</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listmeta">List<wbr>Meta?</a></span>
-    </dt>
-    <dd>{{% md %}}Standard list metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>reason</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A machine-readable description of why this operation is in the "Failure" status. If this value is empty there is no information available. A Reason clarifies an HTTP status code but does not override it.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>status</span>
         <span class="property-indicator"></span>
         <span class="property-type">string?</span>
@@ -482,46 +362,6 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>code</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Suggested HTTP return code for this status, 0 if not set.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>details</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#statusdetails">Dict[Status<wbr>Details]</a></span>
-    </dt>
-    <dd>{{% md %}}Extended data associated with the reason.  Each reason may define its own extended details. This field is optional and the data returned is not guaranteed to conform to any schema except that defined by the reason type.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>message</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A human-readable description of the status of this operation.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>metadata</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listmeta">Dict[List<wbr>Meta]</a></span>
-    </dt>
-    <dd>{{% md %}}Standard list metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>reason</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A machine-readable description of why this operation is in the "Failure" status. If this value is empty there is no information available. A Reason clarifies an HTTP status code but does not override it.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">

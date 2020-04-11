@@ -224,22 +224,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Metadata</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta?</a></span>
-    </dt>
-    <dd>{{% md %}}`metadata` is the standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Spec</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowschemaspec">Flow<wbr>Schema<wbr>Spec?</a></span>
-    </dt>
-    <dd>{{% md %}}`spec` is the specification of the desired behavior of a FlowSchema. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Status</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flowschemastatus">Flow<wbr>Schema<wbr>Status?</a></span>
@@ -252,22 +236,6 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Metadata</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta</a></span>
-    </dt>
-    <dd>{{% md %}}`metadata` is the standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Spec</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowschemaspec">*Flow<wbr>Schema<wbr>Spec</a></span>
-    </dt>
-    <dd>{{% md %}}`spec` is the specification of the desired behavior of a FlowSchema. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -286,22 +254,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>metadata</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta?</a></span>
-    </dt>
-    <dd>{{% md %}}`metadata` is the standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>spec</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowschemaspec">Flow<wbr>Schema<wbr>Spec?</a></span>
-    </dt>
-    <dd>{{% md %}}`spec` is the specification of the desired behavior of a FlowSchema. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>status</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#flowschemastatus">Flow<wbr>Schema<wbr>Status?</a></span>
@@ -314,22 +266,6 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>metadata</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">Dict[Object<wbr>Meta]</a></span>
-    </dt>
-    <dd>{{% md %}}`metadata` is the standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>spec</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#flowschemaspec">Dict[Flow<wbr>Schema<wbr>Spec]</a></span>
-    </dt>
-    <dd>{{% md %}}`spec` is the specification of the desired behavior of a FlowSchema. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status{{% /md %}}</dd>
 
     <dt class="property-"
             title="">

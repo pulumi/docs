@@ -224,22 +224,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Metadata</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta?</a></span>
-    </dt>
-    <dd>{{% md %}}Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Spec</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#persistentvolumeclaimspec">Persistent<wbr>Volume<wbr>Claim<wbr>Spec?</a></span>
-    </dt>
-    <dd>{{% md %}}Spec defines the desired characteristics of a volume requested by a pod author. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Status</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#persistentvolumeclaimstatus">Persistent<wbr>Volume<wbr>Claim<wbr>Status?</a></span>
@@ -252,22 +236,6 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Metadata</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta</a></span>
-    </dt>
-    <dd>{{% md %}}Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Spec</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#persistentvolumeclaimspec">*Persistent<wbr>Volume<wbr>Claim<wbr>Spec</a></span>
-    </dt>
-    <dd>{{% md %}}Spec defines the desired characteristics of a volume requested by a pod author. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -286,22 +254,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>metadata</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta?</a></span>
-    </dt>
-    <dd>{{% md %}}Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>spec</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#persistentvolumeclaimspec">Persistent<wbr>Volume<wbr>Claim<wbr>Spec?</a></span>
-    </dt>
-    <dd>{{% md %}}Spec defines the desired characteristics of a volume requested by a pod author. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>status</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#persistentvolumeclaimstatus">Persistent<wbr>Volume<wbr>Claim<wbr>Status?</a></span>
@@ -314,22 +266,6 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>metadata</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">Dict[Object<wbr>Meta]</a></span>
-    </dt>
-    <dd>{{% md %}}Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>spec</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#persistentvolumeclaimspec">Dict[Persistent<wbr>Volume<wbr>Claim<wbr>Spec]</a></span>
-    </dt>
-    <dd>{{% md %}}Spec defines the desired characteristics of a volume requested by a pod author. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
