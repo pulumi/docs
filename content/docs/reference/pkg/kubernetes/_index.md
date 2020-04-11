@@ -1,5 +1,5 @@
 ---
-title: "kubernetes"
+title: "Kubernetes"
 block_external_search_index: true
 menu:
     reference:
