@@ -16,17 +16,25 @@ anything, please consult the source <a class="reference external" href="https://
 <span class="target" id="module-pulumi_gcp.iap"></span><dl class="class">
 <dt id="pulumi_gcp.iap.AppEngineServiceIamBinding">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.iap.</code><code class="sig-name descname">AppEngineServiceIamBinding</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">app_id=None</em>, <em class="sig-param">condition=None</em>, <em class="sig-param">members=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">service=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.iap.AppEngineServiceIamBinding" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a AppEngineServiceIamBinding resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] app_id: Id of the App Engine application. Used to find the parent resource to bind the IAM policy to
-:param pulumi.Input[dict] condition: ) An <a class="reference external" href="https://cloud.google.com/iam/docs/conditions-overview">IAM Condition</a> for a given binding.</p>
+<dd><p>Three different resources help you manage your IAM policy for Identity-Aware Proxy AppEngineService. Each of these resources serves a different use case:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">iap.AppEngineServiceIamPolicy</span></code>: Authoritative. Sets the IAM policy for the appengineservice and replaces any existing policy already attached.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iap.AppEngineServiceIamBinding</span></code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the appengineservice are preserved.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iap.AppEngineServiceIamMember</span></code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the appengineservice are preserved.</p></li>
+</ul>
 <blockquote>
-<div><p>Structure is documented below.</p>
+<div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">iap.AppEngineServiceIamPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">iap.AppEngineServiceIamBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">iap.AppEngineServiceIamMember</span></code> or they will fight over what your policy should be.</p>
+<p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">iap.AppEngineServiceIamBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">iap.AppEngineServiceIamMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/iap_app_engine_service_iam.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/iap_app_engine_service_iam.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>app_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Id of the App Engine application. Used to find the parent resource to bind the IAM policy to</p></li>
+<li><p><strong>condition</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – An <a class="reference external" href="https://cloud.google.com/iam/docs/conditions-overview">IAM Condition</a> for a given binding.
+Structure is documented below.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p></li>
 <li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
@@ -51,7 +59,7 @@ If it is not provided, the project will be parsed from the identifier of the par
 <dl class="attribute">
 <dt id="pulumi_gcp.iap.AppEngineServiceIamBinding.condition">
 <code class="sig-name descname">condition</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.iap.AppEngineServiceIamBinding.condition" title="Permalink to this definition">¶</a></dt>
-<dd><p>) An <a class="reference external" href="https://cloud.google.com/iam/docs/conditions-overview">IAM Condition</a> for a given binding.
+<dd><p>An <a class="reference external" href="https://cloud.google.com/iam/docs/conditions-overview">IAM Condition</a> for a given binding.
 Structure is documented below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
@@ -99,7 +107,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>app_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Id of the App Engine application. Used to find the parent resource to bind the IAM policy to</p></li>
-<li><p><strong>condition</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>) An <a class="reference external" href="https://cloud.google.com/iam/docs/conditions-overview">IAM Condition</a> for a given binding.
+<li><p><strong>condition</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>An <a class="reference external" href="https://cloud.google.com/iam/docs/conditions-overview">IAM Condition</a> for a given binding.
 Structure is documented below.</p>
 </p></li>
 <li><p><strong>etag</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Computed) The etag of the IAM policy.</p></li>
@@ -161,17 +169,26 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.iap.AppEngineServiceIamMember">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.iap.</code><code class="sig-name descname">AppEngineServiceIamMember</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">app_id=None</em>, <em class="sig-param">condition=None</em>, <em class="sig-param">member=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">service=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.iap.AppEngineServiceIamMember" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a AppEngineServiceIamMember resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] app_id: Id of the App Engine application. Used to find the parent resource to bind the IAM policy to
-:param pulumi.Input[dict] condition: ) An <a class="reference external" href="https://cloud.google.com/iam/docs/conditions-overview">IAM Condition</a> for a given binding.</p>
+<dd><p>Three different resources help you manage your IAM policy for Identity-Aware Proxy AppEngineService. Each of these resources serves a different use case:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">iap.AppEngineServiceIamPolicy</span></code>: Authoritative. Sets the IAM policy for the appengineservice and replaces any existing policy already attached.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iap.AppEngineServiceIamBinding</span></code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the appengineservice are preserved.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iap.AppEngineServiceIamMember</span></code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the appengineservice are preserved.</p></li>
+</ul>
 <blockquote>
-<div><p>Structure is documented below.</p>
+<div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">iap.AppEngineServiceIamPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">iap.AppEngineServiceIamBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">iap.AppEngineServiceIamMember</span></code> or they will fight over what your policy should be.</p>
+<p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">iap.AppEngineServiceIamBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">iap.AppEngineServiceIamMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/iap_app_engine_service_iam.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/iap_app_engine_service_iam.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>app_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Id of the App Engine application. Used to find the parent resource to bind the IAM policy to</p></li>
+<li><p><strong>condition</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>An <a class="reference external" href="https://cloud.google.com/iam/docs/conditions-overview">IAM Condition</a> for a given binding.
+Structure is documented below.</p>
+</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p></li>
 <li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
@@ -196,7 +213,7 @@ If it is not provided, the project will be parsed from the identifier of the par
 <dl class="attribute">
 <dt id="pulumi_gcp.iap.AppEngineServiceIamMember.condition">
 <code class="sig-name descname">condition</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.iap.AppEngineServiceIamMember.condition" title="Permalink to this definition">¶</a></dt>
-<dd><p>) An <a class="reference external" href="https://cloud.google.com/iam/docs/conditions-overview">IAM Condition</a> for a given binding.
+<dd><p>An <a class="reference external" href="https://cloud.google.com/iam/docs/conditions-overview">IAM Condition</a> for a given binding.
 Structure is documented below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
@@ -244,7 +261,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>app_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Id of the App Engine application. Used to find the parent resource to bind the IAM policy to</p></li>
-<li><p><strong>condition</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>) An <a class="reference external" href="https://cloud.google.com/iam/docs/conditions-overview">IAM Condition</a> for a given binding.
+<li><p><strong>condition</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>An <a class="reference external" href="https://cloud.google.com/iam/docs/conditions-overview">IAM Condition</a> for a given binding.
 Structure is documented below.</p>
 </p></li>
 <li><p><strong>etag</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Computed) The etag of the IAM policy.</p></li>
@@ -306,17 +323,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.iap.AppEngineServiceIamPolicy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.iap.</code><code class="sig-name descname">AppEngineServiceIamPolicy</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">app_id=None</em>, <em class="sig-param">policy_data=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">service=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.iap.AppEngineServiceIamPolicy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a AppEngineServiceIamPolicy resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] app_id: Id of the App Engine application. Used to find the parent resource to bind the IAM policy to
-:param pulumi.Input[str] policy_data: The policy data generated by</p>
+<dd><p>Three different resources help you manage your IAM policy for Identity-Aware Proxy AppEngineService. Each of these resources serves a different use case:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">iap.AppEngineServiceIamPolicy</span></code>: Authoritative. Sets the IAM policy for the appengineservice and replaces any existing policy already attached.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iap.AppEngineServiceIamBinding</span></code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the appengineservice are preserved.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iap.AppEngineServiceIamMember</span></code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the appengineservice are preserved.</p></li>
+</ul>
 <blockquote>
-<div><p>a <code class="docutils literal notranslate"><span class="pre">organizations.getIAMPolicy</span></code> data source.</p>
+<div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">iap.AppEngineServiceIamPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">iap.AppEngineServiceIamBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">iap.AppEngineServiceIamMember</span></code> or they will fight over what your policy should be.</p>
+<p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">iap.AppEngineServiceIamBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">iap.AppEngineServiceIamMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/iap_app_engine_service_iam.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/iap_app_engine_service_iam.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>app_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Id of the App Engine application. Used to find the parent resource to bind the IAM policy to</p></li>
+<li><p><strong>policy_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy data generated by
+a <code class="docutils literal notranslate"><span class="pre">organizations.getIAMPolicy</span></code> data source.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p></li>
 <li><p><strong>service</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Service id of the App Engine application Used to find the parent resource to bind the IAM policy to</p></li>
@@ -419,17 +444,26 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.iap.AppEngineVersionIamBinding">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.iap.</code><code class="sig-name descname">AppEngineVersionIamBinding</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">app_id=None</em>, <em class="sig-param">condition=None</em>, <em class="sig-param">members=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">service=None</em>, <em class="sig-param">version_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.iap.AppEngineVersionIamBinding" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a AppEngineVersionIamBinding resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] app_id: Id of the App Engine application. Used to find the parent resource to bind the IAM policy to
-:param pulumi.Input[dict] condition: ) An <a class="reference external" href="https://cloud.google.com/iam/docs/conditions-overview">IAM Condition</a> for a given binding.</p>
+<dd><p>Three different resources help you manage your IAM policy for Identity-Aware Proxy AppEngineVersion. Each of these resources serves a different use case:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">iap.AppEngineVersionIamPolicy</span></code>: Authoritative. Sets the IAM policy for the appengineversion and replaces any existing policy already attached.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iap.AppEngineVersionIamBinding</span></code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the appengineversion are preserved.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iap.AppEngineVersionIamMember</span></code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the appengineversion are preserved.</p></li>
+</ul>
 <blockquote>
-<div><p>Structure is documented below.</p>
+<div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">iap.AppEngineVersionIamPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">iap.AppEngineVersionIamBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">iap.AppEngineVersionIamMember</span></code> or they will fight over what your policy should be.</p>
+<p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">iap.AppEngineVersionIamBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">iap.AppEngineVersionIamMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/iap_app_engine_version_iam.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/iap_app_engine_version_iam.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>app_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Id of the App Engine application. Used to find the parent resource to bind the IAM policy to</p></li>
+<li><p><strong>condition</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>An <a class="reference external" href="https://cloud.google.com/iam/docs/conditions-overview">IAM Condition</a> for a given binding.
+Structure is documented below.</p>
+</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p></li>
 <li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
@@ -455,7 +489,7 @@ If it is not provided, the project will be parsed from the identifier of the par
 <dl class="attribute">
 <dt id="pulumi_gcp.iap.AppEngineVersionIamBinding.condition">
 <code class="sig-name descname">condition</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.iap.AppEngineVersionIamBinding.condition" title="Permalink to this definition">¶</a></dt>
-<dd><p>) An <a class="reference external" href="https://cloud.google.com/iam/docs/conditions-overview">IAM Condition</a> for a given binding.
+<dd><p>An <a class="reference external" href="https://cloud.google.com/iam/docs/conditions-overview">IAM Condition</a> for a given binding.
 Structure is documented below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
@@ -509,7 +543,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>app_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Id of the App Engine application. Used to find the parent resource to bind the IAM policy to</p></li>
-<li><p><strong>condition</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>) An <a class="reference external" href="https://cloud.google.com/iam/docs/conditions-overview">IAM Condition</a> for a given binding.
+<li><p><strong>condition</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>An <a class="reference external" href="https://cloud.google.com/iam/docs/conditions-overview">IAM Condition</a> for a given binding.
 Structure is documented below.</p>
 </p></li>
 <li><p><strong>etag</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Computed) The etag of the IAM policy.</p></li>
@@ -572,17 +606,26 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.iap.AppEngineVersionIamMember">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.iap.</code><code class="sig-name descname">AppEngineVersionIamMember</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">app_id=None</em>, <em class="sig-param">condition=None</em>, <em class="sig-param">member=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">service=None</em>, <em class="sig-param">version_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.iap.AppEngineVersionIamMember" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a AppEngineVersionIamMember resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] app_id: Id of the App Engine application. Used to find the parent resource to bind the IAM policy to
-:param pulumi.Input[dict] condition: ) An <a class="reference external" href="https://cloud.google.com/iam/docs/conditions-overview">IAM Condition</a> for a given binding.</p>
+<dd><p>Three different resources help you manage your IAM policy for Identity-Aware Proxy AppEngineVersion. Each of these resources serves a different use case:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">iap.AppEngineVersionIamPolicy</span></code>: Authoritative. Sets the IAM policy for the appengineversion and replaces any existing policy already attached.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iap.AppEngineVersionIamBinding</span></code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the appengineversion are preserved.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iap.AppEngineVersionIamMember</span></code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the appengineversion are preserved.</p></li>
+</ul>
 <blockquote>
-<div><p>Structure is documented below.</p>
+<div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">iap.AppEngineVersionIamPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">iap.AppEngineVersionIamBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">iap.AppEngineVersionIamMember</span></code> or they will fight over what your policy should be.</p>
+<p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">iap.AppEngineVersionIamBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">iap.AppEngineVersionIamMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/iap_app_engine_version_iam.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/iap_app_engine_version_iam.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>app_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Id of the App Engine application. Used to find the parent resource to bind the IAM policy to</p></li>
+<li><p><strong>condition</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>An <a class="reference external" href="https://cloud.google.com/iam/docs/conditions-overview">IAM Condition</a> for a given binding.
+Structure is documented below.</p>
+</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p></li>
 <li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
@@ -608,7 +651,7 @@ If it is not provided, the project will be parsed from the identifier of the par
 <dl class="attribute">
 <dt id="pulumi_gcp.iap.AppEngineVersionIamMember.condition">
 <code class="sig-name descname">condition</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.iap.AppEngineVersionIamMember.condition" title="Permalink to this definition">¶</a></dt>
-<dd><p>) An <a class="reference external" href="https://cloud.google.com/iam/docs/conditions-overview">IAM Condition</a> for a given binding.
+<dd><p>An <a class="reference external" href="https://cloud.google.com/iam/docs/conditions-overview">IAM Condition</a> for a given binding.
 Structure is documented below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
@@ -662,7 +705,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>app_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Id of the App Engine application. Used to find the parent resource to bind the IAM policy to</p></li>
-<li><p><strong>condition</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>) An <a class="reference external" href="https://cloud.google.com/iam/docs/conditions-overview">IAM Condition</a> for a given binding.
+<li><p><strong>condition</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>An <a class="reference external" href="https://cloud.google.com/iam/docs/conditions-overview">IAM Condition</a> for a given binding.
 Structure is documented below.</p>
 </p></li>
 <li><p><strong>etag</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Computed) The etag of the IAM policy.</p></li>
@@ -725,17 +768,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.iap.AppEngineVersionIamPolicy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.iap.</code><code class="sig-name descname">AppEngineVersionIamPolicy</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">app_id=None</em>, <em class="sig-param">policy_data=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">service=None</em>, <em class="sig-param">version_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.iap.AppEngineVersionIamPolicy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a AppEngineVersionIamPolicy resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] app_id: Id of the App Engine application. Used to find the parent resource to bind the IAM policy to
-:param pulumi.Input[str] policy_data: The policy data generated by</p>
+<dd><p>Three different resources help you manage your IAM policy for Identity-Aware Proxy AppEngineVersion. Each of these resources serves a different use case:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">iap.AppEngineVersionIamPolicy</span></code>: Authoritative. Sets the IAM policy for the appengineversion and replaces any existing policy already attached.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iap.AppEngineVersionIamBinding</span></code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the appengineversion are preserved.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iap.AppEngineVersionIamMember</span></code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the appengineversion are preserved.</p></li>
+</ul>
 <blockquote>
-<div><p>a <code class="docutils literal notranslate"><span class="pre">organizations.getIAMPolicy</span></code> data source.</p>
+<div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">iap.AppEngineVersionIamPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">iap.AppEngineVersionIamBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">iap.AppEngineVersionIamMember</span></code> or they will fight over what your policy should be.</p>
+<p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">iap.AppEngineVersionIamBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">iap.AppEngineVersionIamMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/iap_app_engine_version_iam.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/iap_app_engine_version_iam.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>app_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Id of the App Engine application. Used to find the parent resource to bind the IAM policy to</p></li>
+<li><p><strong>policy_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy data generated by
+a <code class="docutils literal notranslate"><span class="pre">organizations.getIAMPolicy</span></code> data source.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p></li>
 <li><p><strong>service</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Service id of the App Engine application Used to find the parent resource to bind the IAM policy to</p></li>
@@ -846,16 +897,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.iap.TunnelInstanceIAMBinding">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.iap.</code><code class="sig-name descname">TunnelInstanceIAMBinding</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">condition=None</em>, <em class="sig-param">instance=None</em>, <em class="sig-param">members=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">zone=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.iap.TunnelInstanceIAMBinding" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a TunnelInstanceIAMBinding resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[dict] condition: ) An <a class="reference external" href="https://cloud.google.com/iam/docs/conditions-overview">IAM Condition</a> for a given binding.</p>
+<dd><p>Three different resources help you manage your IAM policy for Identity-Aware Proxy TunnelInstance. Each of these resources serves a different use case:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">iap.TunnelInstanceIAMPolicy</span></code>: Authoritative. Sets the IAM policy for the tunnelinstance and replaces any existing policy already attached.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iap.TunnelInstanceIAMBinding</span></code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the tunnelinstance are preserved.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iap.TunnelInstanceIAMMember</span></code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the tunnelinstance are preserved.</p></li>
+</ul>
 <blockquote>
-<div><p>Structure is documented below.</p>
+<div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">iap.TunnelInstanceIAMPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">iap.TunnelInstanceIAMBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">iap.TunnelInstanceIAMMember</span></code> or they will fight over what your policy should be.</p>
+<p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">iap.TunnelInstanceIAMBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">iap.TunnelInstanceIAMMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/iap_tunnel_instance_iam.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/iap_tunnel_instance_iam.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>condition</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>) An <a class="reference external" href="https://cloud.google.com/iam/docs/conditions-overview">IAM Condition</a> for a given binding.
+Structure is documented below.</p>
+</p></li>
 <li><p><strong>instance</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Used to find the parent resource to bind the IAM policy to</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p></li>
@@ -983,16 +1043,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.iap.TunnelInstanceIAMMember">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.iap.</code><code class="sig-name descname">TunnelInstanceIAMMember</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">condition=None</em>, <em class="sig-param">instance=None</em>, <em class="sig-param">member=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">zone=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.iap.TunnelInstanceIAMMember" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a TunnelInstanceIAMMember resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[dict] condition: ) An <a class="reference external" href="https://cloud.google.com/iam/docs/conditions-overview">IAM Condition</a> for a given binding.</p>
+<dd><p>Three different resources help you manage your IAM policy for Identity-Aware Proxy TunnelInstance. Each of these resources serves a different use case:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">iap.TunnelInstanceIAMPolicy</span></code>: Authoritative. Sets the IAM policy for the tunnelinstance and replaces any existing policy already attached.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iap.TunnelInstanceIAMBinding</span></code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the tunnelinstance are preserved.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iap.TunnelInstanceIAMMember</span></code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the tunnelinstance are preserved.</p></li>
+</ul>
 <blockquote>
-<div><p>Structure is documented below.</p>
+<div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">iap.TunnelInstanceIAMPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">iap.TunnelInstanceIAMBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">iap.TunnelInstanceIAMMember</span></code> or they will fight over what your policy should be.</p>
+<p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">iap.TunnelInstanceIAMBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">iap.TunnelInstanceIAMMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/iap_tunnel_instance_iam.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/iap_tunnel_instance_iam.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>condition</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>) An <a class="reference external" href="https://cloud.google.com/iam/docs/conditions-overview">IAM Condition</a> for a given binding.
+Structure is documented below.</p>
+</p></li>
 <li><p><strong>instance</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Used to find the parent resource to bind the IAM policy to</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p></li>
@@ -1120,18 +1189,28 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.iap.TunnelInstanceIAMPolicy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.iap.</code><code class="sig-name descname">TunnelInstanceIAMPolicy</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">instance=None</em>, <em class="sig-param">policy_data=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">zone=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.iap.TunnelInstanceIAMPolicy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a TunnelInstanceIAMPolicy resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] instance: Used to find the parent resource to bind the IAM policy to
-:param pulumi.Input[str] policy_data: The policy data generated by</p>
+<dd><p>Three different resources help you manage your IAM policy for Identity-Aware Proxy TunnelInstance. Each of these resources serves a different use case:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">iap.TunnelInstanceIAMPolicy</span></code>: Authoritative. Sets the IAM policy for the tunnelinstance and replaces any existing policy already attached.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iap.TunnelInstanceIAMBinding</span></code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the tunnelinstance are preserved.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iap.TunnelInstanceIAMMember</span></code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the tunnelinstance are preserved.</p></li>
+</ul>
 <blockquote>
-<div><p>a <code class="docutils literal notranslate"><span class="pre">organizations.getIAMPolicy</span></code> data source.</p>
+<div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">iap.TunnelInstanceIAMPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">iap.TunnelInstanceIAMBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">iap.TunnelInstanceIAMMember</span></code> or they will fight over what your policy should be.</p>
+<p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">iap.TunnelInstanceIAMBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">iap.TunnelInstanceIAMMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/iap_tunnel_instance_iam.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/iap_tunnel_instance_iam.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
-If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>instance</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Used to find the parent resource to bind the IAM policy to</p></li>
+<li><p><strong>policy_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy data generated by
+a <code class="docutils literal notranslate"><span class="pre">organizations.getIAMPolicy</span></code> data source.</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p></li>
+</ul>
 </dd>
 </dl>
 <dl class="attribute">
@@ -1223,16 +1302,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.iap.WebBackendServiceIamBinding">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.iap.</code><code class="sig-name descname">WebBackendServiceIamBinding</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">condition=None</em>, <em class="sig-param">members=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">web_backend_service=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.iap.WebBackendServiceIamBinding" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a WebBackendServiceIamBinding resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[dict] condition: ) An <a class="reference external" href="https://cloud.google.com/iam/docs/conditions-overview">IAM Condition</a> for a given binding.</p>
+<dd><p>Three different resources help you manage your IAM policy for Identity-Aware Proxy WebBackendService. Each of these resources serves a different use case:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">iap.WebBackendServiceIamPolicy</span></code>: Authoritative. Sets the IAM policy for the webbackendservice and replaces any existing policy already attached.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iap.WebBackendServiceIamBinding</span></code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the webbackendservice are preserved.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iap.WebBackendServiceIamMember</span></code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the webbackendservice are preserved.</p></li>
+</ul>
 <blockquote>
-<div><p>Structure is documented below.</p>
+<div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">iap.WebBackendServiceIamPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">iap.WebBackendServiceIamBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">iap.WebBackendServiceIamMember</span></code> or they will fight over what your policy should be.</p>
+<p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">iap.WebBackendServiceIamBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">iap.WebBackendServiceIamMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/iap_web_backend_service_iam.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/iap_web_backend_service_iam.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>condition</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>) An <a class="reference external" href="https://cloud.google.com/iam/docs/conditions-overview">IAM Condition</a> for a given binding.
+Structure is documented below.</p>
+</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p></li>
 <li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
@@ -1360,16 +1448,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.iap.WebBackendServiceIamMember">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.iap.</code><code class="sig-name descname">WebBackendServiceIamMember</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">condition=None</em>, <em class="sig-param">member=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">web_backend_service=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.iap.WebBackendServiceIamMember" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a WebBackendServiceIamMember resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[dict] condition: ) An <a class="reference external" href="https://cloud.google.com/iam/docs/conditions-overview">IAM Condition</a> for a given binding.</p>
+<dd><p>Three different resources help you manage your IAM policy for Identity-Aware Proxy WebBackendService. Each of these resources serves a different use case:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">iap.WebBackendServiceIamPolicy</span></code>: Authoritative. Sets the IAM policy for the webbackendservice and replaces any existing policy already attached.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iap.WebBackendServiceIamBinding</span></code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the webbackendservice are preserved.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iap.WebBackendServiceIamMember</span></code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the webbackendservice are preserved.</p></li>
+</ul>
 <blockquote>
-<div><p>Structure is documented below.</p>
+<div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">iap.WebBackendServiceIamPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">iap.WebBackendServiceIamBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">iap.WebBackendServiceIamMember</span></code> or they will fight over what your policy should be.</p>
+<p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">iap.WebBackendServiceIamBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">iap.WebBackendServiceIamMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/iap_web_backend_service_iam.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/iap_web_backend_service_iam.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>condition</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>) An <a class="reference external" href="https://cloud.google.com/iam/docs/conditions-overview">IAM Condition</a> for a given binding.
+Structure is documented below.</p>
+</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p></li>
 <li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
@@ -1497,16 +1594,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.iap.WebBackendServiceIamPolicy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.iap.</code><code class="sig-name descname">WebBackendServiceIamPolicy</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">policy_data=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">web_backend_service=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.iap.WebBackendServiceIamPolicy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a WebBackendServiceIamPolicy resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] policy_data: The policy data generated by</p>
+<dd><p>Three different resources help you manage your IAM policy for Identity-Aware Proxy WebBackendService. Each of these resources serves a different use case:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">iap.WebBackendServiceIamPolicy</span></code>: Authoritative. Sets the IAM policy for the webbackendservice and replaces any existing policy already attached.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iap.WebBackendServiceIamBinding</span></code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the webbackendservice are preserved.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iap.WebBackendServiceIamMember</span></code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the webbackendservice are preserved.</p></li>
+</ul>
 <blockquote>
-<div><p>a <code class="docutils literal notranslate"><span class="pre">organizations.getIAMPolicy</span></code> data source.</p>
+<div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">iap.WebBackendServiceIamPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">iap.WebBackendServiceIamBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">iap.WebBackendServiceIamMember</span></code> or they will fight over what your policy should be.</p>
+<p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">iap.WebBackendServiceIamBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">iap.WebBackendServiceIamMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/iap_web_backend_service_iam.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/iap_web_backend_service_iam.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>policy_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy data generated by
+a <code class="docutils literal notranslate"><span class="pre">organizations.getIAMPolicy</span></code> data source.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p></li>
 <li><p><strong>web_backend_service</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Used to find the parent resource to bind the IAM policy to</p></li>
@@ -1602,16 +1707,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.iap.WebIamBinding">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.iap.</code><code class="sig-name descname">WebIamBinding</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">condition=None</em>, <em class="sig-param">members=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.iap.WebIamBinding" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a WebIamBinding resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[dict] condition: ) An <a class="reference external" href="https://cloud.google.com/iam/docs/conditions-overview">IAM Condition</a> for a given binding.</p>
+<dd><p>Three different resources help you manage your IAM policy for Identity-Aware Proxy Web. Each of these resources serves a different use case:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">iap.WebIamPolicy</span></code>: Authoritative. Sets the IAM policy for the web and replaces any existing policy already attached.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iap.WebIamBinding</span></code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the web are preserved.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iap.WebIamMember</span></code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the web are preserved.</p></li>
+</ul>
 <blockquote>
-<div><p>Structure is documented below.</p>
+<div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">iap.WebIamPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">iap.WebIamBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">iap.WebIamMember</span></code> or they will fight over what your policy should be.</p>
+<p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">iap.WebIamBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">iap.WebIamMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/iap_web_iam.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/iap_web_iam.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>condition</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>) An <a class="reference external" href="https://cloud.google.com/iam/docs/conditions-overview">IAM Condition</a> for a given binding.
+Structure is documented below.</p>
+</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p></li>
 <li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
@@ -1731,16 +1845,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.iap.WebIamMember">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.iap.</code><code class="sig-name descname">WebIamMember</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">condition=None</em>, <em class="sig-param">member=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.iap.WebIamMember" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a WebIamMember resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[dict] condition: ) An <a class="reference external" href="https://cloud.google.com/iam/docs/conditions-overview">IAM Condition</a> for a given binding.</p>
+<dd><p>Three different resources help you manage your IAM policy for Identity-Aware Proxy Web. Each of these resources serves a different use case:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">iap.WebIamPolicy</span></code>: Authoritative. Sets the IAM policy for the web and replaces any existing policy already attached.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iap.WebIamBinding</span></code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the web are preserved.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iap.WebIamMember</span></code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the web are preserved.</p></li>
+</ul>
 <blockquote>
-<div><p>Structure is documented below.</p>
+<div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">iap.WebIamPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">iap.WebIamBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">iap.WebIamMember</span></code> or they will fight over what your policy should be.</p>
+<p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">iap.WebIamBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">iap.WebIamMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/iap_web_iam.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/iap_web_iam.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>condition</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>) An <a class="reference external" href="https://cloud.google.com/iam/docs/conditions-overview">IAM Condition</a> for a given binding.
+Structure is documented below.</p>
+</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p></li>
 <li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
@@ -1860,17 +1983,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.iap.WebIamPolicy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.iap.</code><code class="sig-name descname">WebIamPolicy</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">policy_data=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.iap.WebIamPolicy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a WebIamPolicy resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] policy_data: The policy data generated by</p>
+<dd><p>Three different resources help you manage your IAM policy for Identity-Aware Proxy Web. Each of these resources serves a different use case:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">iap.WebIamPolicy</span></code>: Authoritative. Sets the IAM policy for the web and replaces any existing policy already attached.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iap.WebIamBinding</span></code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the web are preserved.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iap.WebIamMember</span></code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the web are preserved.</p></li>
+</ul>
 <blockquote>
-<div><p>a <code class="docutils literal notranslate"><span class="pre">organizations.getIAMPolicy</span></code> data source.</p>
+<div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">iap.WebIamPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">iap.WebIamBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">iap.WebIamMember</span></code> or they will fight over what your policy should be.</p>
+<p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">iap.WebIamBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">iap.WebIamMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/iap_web_iam.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/iap_web_iam.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
-If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>policy_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy data generated by
+a <code class="docutils literal notranslate"><span class="pre">organizations.getIAMPolicy</span></code> data source.</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p></li>
+</ul>
 </dd>
 </dl>
 <dl class="attribute">
@@ -1955,17 +2088,26 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.iap.WebTypeAppEngingIamBinding">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.iap.</code><code class="sig-name descname">WebTypeAppEngingIamBinding</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">app_id=None</em>, <em class="sig-param">condition=None</em>, <em class="sig-param">members=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.iap.WebTypeAppEngingIamBinding" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a WebTypeAppEngingIamBinding resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] app_id: Id of the App Engine application. Used to find the parent resource to bind the IAM policy to
-:param pulumi.Input[dict] condition: ) An <a class="reference external" href="https://cloud.google.com/iam/docs/conditions-overview">IAM Condition</a> for a given binding.</p>
+<dd><p>Three different resources help you manage your IAM policy for Identity-Aware Proxy WebTypeAppEngine. Each of these resources serves a different use case:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">iap.WebTypeAppEngingIamPolicy</span></code>: Authoritative. Sets the IAM policy for the webtypeappengine and replaces any existing policy already attached.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iap.WebTypeAppEngingIamBinding</span></code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the webtypeappengine are preserved.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iap.WebTypeAppEngingIamMember</span></code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the webtypeappengine are preserved.</p></li>
+</ul>
 <blockquote>
-<div><p>Structure is documented below.</p>
+<div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">iap.WebTypeAppEngingIamPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">iap.WebTypeAppEngingIamBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">iap.WebTypeAppEngingIamMember</span></code> or they will fight over what your policy should be.</p>
+<p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">iap.WebTypeAppEngingIamBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">iap.WebTypeAppEngingIamMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/iap_web_type_app_engine_iam.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/iap_web_type_app_engine_iam.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>app_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Id of the App Engine application. Used to find the parent resource to bind the IAM policy to</p></li>
+<li><p><strong>condition</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>) An <a class="reference external" href="https://cloud.google.com/iam/docs/conditions-overview">IAM Condition</a> for a given binding.
+Structure is documented below.</p>
+</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p></li>
 <li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
@@ -2092,17 +2234,26 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.iap.WebTypeAppEngingIamMember">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.iap.</code><code class="sig-name descname">WebTypeAppEngingIamMember</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">app_id=None</em>, <em class="sig-param">condition=None</em>, <em class="sig-param">member=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.iap.WebTypeAppEngingIamMember" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a WebTypeAppEngingIamMember resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] app_id: Id of the App Engine application. Used to find the parent resource to bind the IAM policy to
-:param pulumi.Input[dict] condition: ) An <a class="reference external" href="https://cloud.google.com/iam/docs/conditions-overview">IAM Condition</a> for a given binding.</p>
+<dd><p>Three different resources help you manage your IAM policy for Identity-Aware Proxy WebTypeAppEngine. Each of these resources serves a different use case:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">iap.WebTypeAppEngingIamPolicy</span></code>: Authoritative. Sets the IAM policy for the webtypeappengine and replaces any existing policy already attached.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iap.WebTypeAppEngingIamBinding</span></code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the webtypeappengine are preserved.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iap.WebTypeAppEngingIamMember</span></code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the webtypeappengine are preserved.</p></li>
+</ul>
 <blockquote>
-<div><p>Structure is documented below.</p>
+<div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">iap.WebTypeAppEngingIamPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">iap.WebTypeAppEngingIamBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">iap.WebTypeAppEngingIamMember</span></code> or they will fight over what your policy should be.</p>
+<p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">iap.WebTypeAppEngingIamBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">iap.WebTypeAppEngingIamMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/iap_web_type_app_engine_iam.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/iap_web_type_app_engine_iam.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>app_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Id of the App Engine application. Used to find the parent resource to bind the IAM policy to</p></li>
+<li><p><strong>condition</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>) An <a class="reference external" href="https://cloud.google.com/iam/docs/conditions-overview">IAM Condition</a> for a given binding.
+Structure is documented below.</p>
+</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p></li>
 <li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
@@ -2229,18 +2380,28 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.iap.WebTypeAppEngingIamPolicy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.iap.</code><code class="sig-name descname">WebTypeAppEngingIamPolicy</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">app_id=None</em>, <em class="sig-param">policy_data=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.iap.WebTypeAppEngingIamPolicy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a WebTypeAppEngingIamPolicy resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] app_id: Id of the App Engine application. Used to find the parent resource to bind the IAM policy to
-:param pulumi.Input[str] policy_data: The policy data generated by</p>
+<dd><p>Three different resources help you manage your IAM policy for Identity-Aware Proxy WebTypeAppEngine. Each of these resources serves a different use case:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">iap.WebTypeAppEngingIamPolicy</span></code>: Authoritative. Sets the IAM policy for the webtypeappengine and replaces any existing policy already attached.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iap.WebTypeAppEngingIamBinding</span></code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the webtypeappengine are preserved.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iap.WebTypeAppEngingIamMember</span></code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the webtypeappengine are preserved.</p></li>
+</ul>
 <blockquote>
-<div><p>a <code class="docutils literal notranslate"><span class="pre">organizations.getIAMPolicy</span></code> data source.</p>
+<div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">iap.WebTypeAppEngingIamPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">iap.WebTypeAppEngingIamBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">iap.WebTypeAppEngingIamMember</span></code> or they will fight over what your policy should be.</p>
+<p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">iap.WebTypeAppEngingIamBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">iap.WebTypeAppEngingIamMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/iap_web_type_app_engine_iam.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/iap_web_type_app_engine_iam.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
-If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>app_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Id of the App Engine application. Used to find the parent resource to bind the IAM policy to</p></li>
+<li><p><strong>policy_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy data generated by
+a <code class="docutils literal notranslate"><span class="pre">organizations.getIAMPolicy</span></code> data source.</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p></li>
+</ul>
 </dd>
 </dl>
 <dl class="attribute">
@@ -2332,16 +2493,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.iap.WebTypeComputeIamBinding">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.iap.</code><code class="sig-name descname">WebTypeComputeIamBinding</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">condition=None</em>, <em class="sig-param">members=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.iap.WebTypeComputeIamBinding" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a WebTypeComputeIamBinding resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[dict] condition: ) An <a class="reference external" href="https://cloud.google.com/iam/docs/conditions-overview">IAM Condition</a> for a given binding.</p>
+<dd><p>Three different resources help you manage your IAM policy for Identity-Aware Proxy WebTypeCompute. Each of these resources serves a different use case:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">iap.WebTypeComputeIamPolicy</span></code>: Authoritative. Sets the IAM policy for the webtypecompute and replaces any existing policy already attached.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iap.WebTypeComputeIamBinding</span></code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the webtypecompute are preserved.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iap.WebTypeComputeIamMember</span></code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the webtypecompute are preserved.</p></li>
+</ul>
 <blockquote>
-<div><p>Structure is documented below.</p>
+<div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">iap.WebTypeComputeIamPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">iap.WebTypeComputeIamBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">iap.WebTypeComputeIamMember</span></code> or they will fight over what your policy should be.</p>
+<p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">iap.WebTypeComputeIamBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">iap.WebTypeComputeIamMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/iap_web_type_compute_iam.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/iap_web_type_compute_iam.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>condition</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>) An <a class="reference external" href="https://cloud.google.com/iam/docs/conditions-overview">IAM Condition</a> for a given binding.
+Structure is documented below.</p>
+</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p></li>
 <li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
@@ -2461,16 +2631,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.iap.WebTypeComputeIamMember">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.iap.</code><code class="sig-name descname">WebTypeComputeIamMember</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">condition=None</em>, <em class="sig-param">member=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.iap.WebTypeComputeIamMember" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a WebTypeComputeIamMember resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[dict] condition: ) An <a class="reference external" href="https://cloud.google.com/iam/docs/conditions-overview">IAM Condition</a> for a given binding.</p>
+<dd><p>Three different resources help you manage your IAM policy for Identity-Aware Proxy WebTypeCompute. Each of these resources serves a different use case:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">iap.WebTypeComputeIamPolicy</span></code>: Authoritative. Sets the IAM policy for the webtypecompute and replaces any existing policy already attached.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iap.WebTypeComputeIamBinding</span></code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the webtypecompute are preserved.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iap.WebTypeComputeIamMember</span></code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the webtypecompute are preserved.</p></li>
+</ul>
 <blockquote>
-<div><p>Structure is documented below.</p>
+<div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">iap.WebTypeComputeIamPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">iap.WebTypeComputeIamBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">iap.WebTypeComputeIamMember</span></code> or they will fight over what your policy should be.</p>
+<p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">iap.WebTypeComputeIamBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">iap.WebTypeComputeIamMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/iap_web_type_compute_iam.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/iap_web_type_compute_iam.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>condition</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>) An <a class="reference external" href="https://cloud.google.com/iam/docs/conditions-overview">IAM Condition</a> for a given binding.
+Structure is documented below.</p>
+</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p></li>
 <li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
@@ -2590,17 +2769,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.iap.WebTypeComputeIamPolicy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.iap.</code><code class="sig-name descname">WebTypeComputeIamPolicy</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">policy_data=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.iap.WebTypeComputeIamPolicy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a WebTypeComputeIamPolicy resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] policy_data: The policy data generated by</p>
+<dd><p>Three different resources help you manage your IAM policy for Identity-Aware Proxy WebTypeCompute. Each of these resources serves a different use case:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">iap.WebTypeComputeIamPolicy</span></code>: Authoritative. Sets the IAM policy for the webtypecompute and replaces any existing policy already attached.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iap.WebTypeComputeIamBinding</span></code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the webtypecompute are preserved.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iap.WebTypeComputeIamMember</span></code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the webtypecompute are preserved.</p></li>
+</ul>
 <blockquote>
-<div><p>a <code class="docutils literal notranslate"><span class="pre">organizations.getIAMPolicy</span></code> data source.</p>
+<div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">iap.WebTypeComputeIamPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">iap.WebTypeComputeIamBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">iap.WebTypeComputeIamMember</span></code> or they will fight over what your policy should be.</p>
+<p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">iap.WebTypeComputeIamBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">iap.WebTypeComputeIamMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/iap_web_type_compute_iam.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/iap_web_type_compute_iam.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
-If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>policy_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy data generated by
+a <code class="docutils literal notranslate"><span class="pre">organizations.getIAMPolicy</span></code> data source.</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p></li>
+</ul>
 </dd>
 </dl>
 <dl class="attribute">

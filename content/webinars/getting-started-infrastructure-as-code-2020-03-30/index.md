@@ -3,6 +3,11 @@
 title: "Getting Started with Infrastructure as Code"
 meta_desc: "Join us on March 30th, 2020 for a deep dive into Infrastructure as Code concepts with Pulumi engineers Paul Stack and Mikhail Shilkov."
 
+# A featured webinar will display first in the list.
+featured: false
+
+redirect_to: "/webinars/getting-started-with-infrastructure-as-code/"
+
 # If the video is pre-recorded or live.
 pre_recorded: false
 
@@ -10,10 +15,10 @@ pre_recorded: false
 pulumi_tv: false
 
 # The preview image will be shown on the list page.
-preview_image: "/images/webinar/getting-started-with-iac-2020-03-30.png"
+preview_image: "/images/webinar/pulumi_workshop.jpg"
 
 # Webinars with unlisted as true will not be shown on the webinar list
-unlisted: false
+unlisted: true
 
 # Gated webinars will have a registration form and the user will need
 # to fill out the form before viewing.
@@ -42,14 +47,18 @@ main:
     # Webinar title.
     title: "Getting Started with Infrastructure as Code"
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2020-03-30 11:30:00 +01:00
+    sortable_date: 2020-03-30T11:30:00.000+01:00
+    # Duration of the webinar.
+    duration: "2 hours"
     # Datetime of the webinar.
     datetime: "MON MAR 30, 2020 AT 11:30AM CET"
     # Description of the webinar.
     description: |
-        In this webinar, the Pulumi team will show you how to stand up basic services using Infrastructure as Code (IaC) through a series of hands-on labs. The techniques work for any cloud - Azure, AWS, and GCP. You’ll be able to leverage your favorite languages including Python, Go, JavaScript, TypeScript, and C# instead of YAML or domain-specific languages.
+        In this hands-on workshop, the Pulumi team will show you how to stand up basic services using Infrastructure as Code (IaC) through a series of hands-on labs. The techniques work for any cloud --- Azure, AWS, and GCP. You’ll be able to leverage your favorite languages including Python, Go, JavaScript, TypeScript, and C# instead of YAML or domain-specific languages.
 
-        After completion of this webinar, you’ll be up and running with IaC fundamentals, modern application architectures across many clouds, and best-practices that are ready for production environments. You’ll also be ready to empower your development teams to be more productive - continuously deploying both their applications and infrastructure.
+        After completion of this webinar, you’ll be up and running with IaC fundamentals, modern application architectures across many clouds, and best-practices that are ready for production environments. You’ll also be ready to empower your development teams to be more productive --- continuously deploying both their applications and infrastructure.
+
+        View the prerequisites for this workshop [here](https://github.com/pulumi/infrastructure-as-code-workshop/blob/master/00-installing-prerequisites.md).
 
     # The webinar presenters
     presenters:

@@ -3,9 +3,8 @@
 title: "Cluster"
 block_external_search_index: true
 ---
-<style>
-table td p { margin-top: 0; margin-bottom: 0; }
-</style>
+
+
 
 Manages a DocDB Cluster.
 
@@ -20,7 +19,9 @@ phase because a modification has not yet taken place. You can use the
 > **Note:** All arguments including the username and password will be stored in the raw state as plain-text.
 [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -37,1550 +38,1003 @@ const docdb = new aws.docdb.Cluster("docdb", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/docdb_cluster.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
 ## Create a Cluster Resource
 
-{{< langchoose csharp nojavascript >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/docdb/#Cluster">Cluster</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/docdb/#ClusterArgs">ClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+{{% choosable language nodejs %}}
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/docdb/#Cluster">Cluster</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/docdb/#ClusterArgs">ClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+{{% /choosable %}}
 
+{{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Cluster</span><span class="p">(resource_name, opts=None, </span>apply_immediately=None<span class="p">, </span>availability_zones=None<span class="p">, </span>backup_retention_period=None<span class="p">, </span>cluster_identifier=None<span class="p">, </span>cluster_identifier_prefix=None<span class="p">, </span>cluster_members=None<span class="p">, </span>db_cluster_parameter_group_name=None<span class="p">, </span>db_subnet_group_name=None<span class="p">, </span>enabled_cloudwatch_logs_exports=None<span class="p">, </span>engine=None<span class="p">, </span>engine_version=None<span class="p">, </span>final_snapshot_identifier=None<span class="p">, </span>kms_key_id=None<span class="p">, </span>master_password=None<span class="p">, </span>master_username=None<span class="p">, </span>port=None<span class="p">, </span>preferred_backup_window=None<span class="p">, </span>preferred_maintenance_window=None<span class="p">, </span>skip_final_snapshot=None<span class="p">, </span>snapshot_identifier=None<span class="p">, </span>storage_encrypted=None<span class="p">, </span>tags=None<span class="p">, </span>vpc_security_group_ids=None<span class="p">, __props__=None);</span></code></pre></div>
+{{% /choosable %}}
 
+{{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewCluster<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/docdb?tab=doc#ClusterArgs">ClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/docdb?tab=doc#Cluster">Cluster</a></span>, error)</span></code></pre></div>
+{{% /choosable %}}
 
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Docdb.Cluster.html">Cluster</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Docdb.ClusterArgs.html">ClusterArgs</a></span>? <span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+{{% choosable language csharp %}}
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Docdb.Cluster.html">Cluster</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DocDB.ClusterArgs.html">ClusterArgs</a></span>? <span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+{{% /choosable %}}
 
-Creates a Cluster resource with the given unique name, arguments, and options.
+{{% choosable language nodejs %}}
 
-{{% lang nodejs %}}
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The arguments to use to populate this resource's properties.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 
-<ul class="pl-10">
-    <li><strong>name</strong> &ndash; (Required) The unique name of the resulting resource.</li>
-    <li><strong>args</strong> &ndash;  (Optional)  The arguments to use to populate this resource's properties.</li>
-    <li><strong>opts</strong> &ndash; (Optional) A bag of options that control this resource's behavior.</li>
-</ul>
+{{% /choosable %}}
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
+{{% /choosable %}}
 
-{{% lang go %}}
+{{% choosable language go %}}
 
-<ul class="pl-10">
-    <li><strong>name</strong> &ndash; (Required) The unique name of the resulting resource.</li>
-    <li><strong>args</strong> &ndash;  (Optional)  The arguments to use to populate this resource's properties.</li>
-    <li><strong>opts</strong> &ndash; (Optional) A bag of options that control this resource's behavior.</li>
-</ul>
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The arguments to use to populate this resource's properties.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 
-{{% /lang %}}
+{{% /choosable %}}
 
-{{% lang csharp %}}
+{{% choosable language csharp %}}
 
-<ul class="pl-10">
-    <li><strong>name</strong> &ndash; (Required) The unique name of the resulting resource.</li>
-    <li><strong>args</strong> &ndash;  (Optional)  The arguments to use to populate this resource's properties.</li>
-    <li><strong>opts</strong> &ndash; (Optional) A bag of options that control this resource's behavior.</li>
-</ul>
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The arguments to use to populate this resource's properties.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 
-{{% /lang %}}
+{{% /choosable %}}
 
-The following arguments are supported:
-
-
-{{< langchoose csharp nojavascript >}}
+#### Resource Arguments
 
 
-{{% lang csharp %}}
 
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Apply<wbr>Immediately</td>
-            <td class="align-top">
-                
-                <code>bool?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Specifies whether any cluster modifications
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Apply<wbr>Immediately</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool?</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether any cluster modifications
 are applied immediately, or during the next maintenance window. Default is
 `false`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Availability<wbr>Zones</td>
-            <td class="align-top">
-                
-                <code>List<string>?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A list of EC2 Availability Zones that
+    <dt class="property-optional"
+            title="Optional">
+        <span>Availability<wbr>Zones</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List<string>?</span>
+    </dt>
+    <dd>{{% md %}}A list of EC2 Availability Zones that
 instances in the DB cluster can be created in.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Backup<wbr>Retention<wbr>Period</td>
-            <td class="align-top">
-                
-                <code>int?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The days to retain backups for. Default `1`
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Backup<wbr>Retention<wbr>Period</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int?</span>
+    </dt>
+    <dd>{{% md %}}The days to retain backups for. Default `1`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Cluster<wbr>Identifier</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The cluster identifier. If omitted, this provider will assign a random, unique identifier.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cluster<wbr>Identifier</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The cluster identifier. If omitted, this provider will assign a random, unique identifier.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Cluster<wbr>Identifier<wbr>Prefix</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Creates a unique cluster identifier beginning with the specified prefix. Conflicts with `cluster_identifer`.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cluster<wbr>Identifier<wbr>Prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Creates a unique cluster identifier beginning with the specified prefix. Conflicts with `cluster_identifer`.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Cluster<wbr>Members</td>
-            <td class="align-top">
-                
-                <code>List<string>?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-List of DocDB Instances that are a part of this cluster
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cluster<wbr>Members</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List<string>?</span>
+    </dt>
+    <dd>{{% md %}}List of DocDB Instances that are a part of this cluster
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Db<wbr>Cluster<wbr>Parameter<wbr>Group<wbr>Name</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A cluster parameter group to associate with the cluster.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Db<wbr>Cluster<wbr>Parameter<wbr>Group<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}A cluster parameter group to associate with the cluster.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Db<wbr>Subnet<wbr>Group<wbr>Name</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A DB subnet group to associate with this DB instance.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Db<wbr>Subnet<wbr>Group<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}A DB subnet group to associate with this DB instance.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Enabled<wbr>Cloudwatch<wbr>Logs<wbr>Exports</td>
-            <td class="align-top">
-                
-                <code>List<string>?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-List of log types to export to cloudwatch. If omitted, no logs will be exported.
+    <dt class="property-optional"
+            title="Optional">
+        <span>Enabled<wbr>Cloudwatch<wbr>Logs<wbr>Exports</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List<string>?</span>
+    </dt>
+    <dd>{{% md %}}List of log types to export to cloudwatch. If omitted, no logs will be exported.
 The following log types are supported: `audit`, `profiler`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Engine</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The name of the database engine to be used for this DB cluster. Defaults to `docdb`. Valid Values: `docdb`
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Engine</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The name of the database engine to be used for this DB cluster. Defaults to `docdb`. Valid Values: `docdb`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Engine<wbr>Version</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The database engine version. Updating this argument results in an outage.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Engine<wbr>Version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The database engine version. Updating this argument results in an outage.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Final<wbr>Snapshot<wbr>Identifier</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The name of your final DB snapshot
+    <dt class="property-optional"
+            title="Optional">
+        <span>Final<wbr>Snapshot<wbr>Identifier</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The name of your final DB snapshot
 when this DB cluster is deleted. If omitted, no final snapshot will be
 made.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Kms<wbr>Key<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ARN for the KMS encryption key. When specifying `kms_key_id`, `storage_encrypted` needs to be set to true.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Kms<wbr>Key<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The ARN for the KMS encryption key. When specifying `kms_key_id`, `storage_encrypted` needs to be set to true.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Master<wbr>Password</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Password for the master DB user. Note that this may
+    <dt class="property-optional"
+            title="Optional">
+        <span>Master<wbr>Password</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Password for the master DB user. Note that this may
 show up in logs, and it will be stored in the state file. Please refer to the DocDB Naming Constraints.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Master<wbr>Username</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Username for the master DB user. 
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Master<wbr>Username</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Username for the master DB user. 
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Port</td>
-            <td class="align-top">
-                
-                <code>int?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The port on which the DB accepts connections
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int?</span>
+    </dt>
+    <dd>{{% md %}}The port on which the DB accepts connections
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Preferred<wbr>Backup<wbr>Window</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.Time in UTC
+    <dt class="property-optional"
+            title="Optional">
+        <span>Preferred<wbr>Backup<wbr>Window</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.Time in UTC
 Default: A 30-minute window selected at random from an 8-hour block of time per region. e.g. 04:00-09:00
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Preferred<wbr>Maintenance<wbr>Window</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Preferred<wbr>Maintenance<wbr>Window</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Skip<wbr>Final<wbr>Snapshot</td>
-            <td class="align-top">
-                
-                <code>bool?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Determines whether a final DB snapshot is created before the DB cluster is deleted. If true is specified, no DB snapshot is created. If false is specified, a DB snapshot is created before the DB cluster is deleted, using the value from `final_snapshot_identifier`. Default is `false`.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Skip<wbr>Final<wbr>Snapshot</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool?</span>
+    </dt>
+    <dd>{{% md %}}Determines whether a final DB snapshot is created before the DB cluster is deleted. If true is specified, no DB snapshot is created. If false is specified, a DB snapshot is created before the DB cluster is deleted, using the value from `final_snapshot_identifier`. Default is `false`.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Snapshot<wbr>Identifier</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Specifies whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a DB cluster snapshot, or the ARN when specifying a DB snapshot.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Snapshot<wbr>Identifier</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a DB cluster snapshot, or the ARN when specifying a DB snapshot.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Storage<wbr>Encrypted</td>
-            <td class="align-top">
-                
-                <code>bool?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Specifies whether the DB cluster is encrypted. The default is `false`.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Storage<wbr>Encrypted</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool?</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the DB cluster is encrypted. The default is `false`.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Tags</td>
-            <td class="align-top">
-                
-                <code>Dictionary<string, object>?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A mapping of tags to assign to the DB cluster.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary<string, object>?</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the DB cluster.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Vpc<wbr>Security<wbr>Group<wbr>Ids</td>
-            <td class="align-top">
-                
-                <code>List<string>?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-List of VPC security groups to associate
+    <dt class="property-optional"
+            title="Optional">
+        <span>Vpc<wbr>Security<wbr>Group<wbr>Ids</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List<string>?</span>
+    </dt>
+    <dd>{{% md %}}List of VPC security groups to associate
 with the Cluster
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language go %}}
+<dl class="resources-properties">
 
-
-{{% lang go %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Apply<wbr>Immediately</td>
-            <td class="align-top">
-                
-                <code>*bool</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Specifies whether any cluster modifications
+    <dt class="property-optional"
+            title="Optional">
+        <span>Apply<wbr>Immediately</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether any cluster modifications
 are applied immediately, or during the next maintenance window. Default is
 `false`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Availability<wbr>Zones</td>
-            <td class="align-top">
-                
-                <code>[]string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A list of EC2 Availability Zones that
+    <dt class="property-optional"
+            title="Optional">
+        <span>Availability<wbr>Zones</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of EC2 Availability Zones that
 instances in the DB cluster can be created in.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Backup<wbr>Retention<wbr>Period</td>
-            <td class="align-top">
-                
-                <code>*int</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The days to retain backups for. Default `1`
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Backup<wbr>Retention<wbr>Period</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*int</span>
+    </dt>
+    <dd>{{% md %}}The days to retain backups for. Default `1`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Cluster<wbr>Identifier</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The cluster identifier. If omitted, this provider will assign a random, unique identifier.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cluster<wbr>Identifier</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The cluster identifier. If omitted, this provider will assign a random, unique identifier.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Cluster<wbr>Identifier<wbr>Prefix</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Creates a unique cluster identifier beginning with the specified prefix. Conflicts with `cluster_identifer`.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cluster<wbr>Identifier<wbr>Prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}Creates a unique cluster identifier beginning with the specified prefix. Conflicts with `cluster_identifer`.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Cluster<wbr>Members</td>
-            <td class="align-top">
-                
-                <code>[]string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-List of DocDB Instances that are a part of this cluster
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cluster<wbr>Members</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of DocDB Instances that are a part of this cluster
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Db<wbr>Cluster<wbr>Parameter<wbr>Group<wbr>Name</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A cluster parameter group to associate with the cluster.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Db<wbr>Cluster<wbr>Parameter<wbr>Group<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}A cluster parameter group to associate with the cluster.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Db<wbr>Subnet<wbr>Group<wbr>Name</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A DB subnet group to associate with this DB instance.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Db<wbr>Subnet<wbr>Group<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}A DB subnet group to associate with this DB instance.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Enabled<wbr>Cloudwatch<wbr>Logs<wbr>Exports</td>
-            <td class="align-top">
-                
-                <code>[]string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-List of log types to export to cloudwatch. If omitted, no logs will be exported.
+    <dt class="property-optional"
+            title="Optional">
+        <span>Enabled<wbr>Cloudwatch<wbr>Logs<wbr>Exports</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of log types to export to cloudwatch. If omitted, no logs will be exported.
 The following log types are supported: `audit`, `profiler`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Engine</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The name of the database engine to be used for this DB cluster. Defaults to `docdb`. Valid Values: `docdb`
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Engine</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The name of the database engine to be used for this DB cluster. Defaults to `docdb`. Valid Values: `docdb`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Engine<wbr>Version</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The database engine version. Updating this argument results in an outage.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Engine<wbr>Version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The database engine version. Updating this argument results in an outage.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Final<wbr>Snapshot<wbr>Identifier</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The name of your final DB snapshot
+    <dt class="property-optional"
+            title="Optional">
+        <span>Final<wbr>Snapshot<wbr>Identifier</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The name of your final DB snapshot
 when this DB cluster is deleted. If omitted, no final snapshot will be
 made.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Kms<wbr>Key<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ARN for the KMS encryption key. When specifying `kms_key_id`, `storage_encrypted` needs to be set to true.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Kms<wbr>Key<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The ARN for the KMS encryption key. When specifying `kms_key_id`, `storage_encrypted` needs to be set to true.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Master<wbr>Password</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Password for the master DB user. Note that this may
+    <dt class="property-optional"
+            title="Optional">
+        <span>Master<wbr>Password</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}Password for the master DB user. Note that this may
 show up in logs, and it will be stored in the state file. Please refer to the DocDB Naming Constraints.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Master<wbr>Username</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Username for the master DB user. 
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Master<wbr>Username</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}Username for the master DB user. 
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Port</td>
-            <td class="align-top">
-                
-                <code>*int</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The port on which the DB accepts connections
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*int</span>
+    </dt>
+    <dd>{{% md %}}The port on which the DB accepts connections
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Preferred<wbr>Backup<wbr>Window</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.Time in UTC
+    <dt class="property-optional"
+            title="Optional">
+        <span>Preferred<wbr>Backup<wbr>Window</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.Time in UTC
 Default: A 30-minute window selected at random from an 8-hour block of time per region. e.g. 04:00-09:00
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Preferred<wbr>Maintenance<wbr>Window</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Preferred<wbr>Maintenance<wbr>Window</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Skip<wbr>Final<wbr>Snapshot</td>
-            <td class="align-top">
-                
-                <code>*bool</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Determines whether a final DB snapshot is created before the DB cluster is deleted. If true is specified, no DB snapshot is created. If false is specified, a DB snapshot is created before the DB cluster is deleted, using the value from `final_snapshot_identifier`. Default is `false`.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Skip<wbr>Final<wbr>Snapshot</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*bool</span>
+    </dt>
+    <dd>{{% md %}}Determines whether a final DB snapshot is created before the DB cluster is deleted. If true is specified, no DB snapshot is created. If false is specified, a DB snapshot is created before the DB cluster is deleted, using the value from `final_snapshot_identifier`. Default is `false`.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Snapshot<wbr>Identifier</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Specifies whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a DB cluster snapshot, or the ARN when specifying a DB snapshot.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Snapshot<wbr>Identifier</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a DB cluster snapshot, or the ARN when specifying a DB snapshot.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Storage<wbr>Encrypted</td>
-            <td class="align-top">
-                
-                <code>*bool</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Specifies whether the DB cluster is encrypted. The default is `false`.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Storage<wbr>Encrypted</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the DB cluster is encrypted. The default is `false`.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Tags</td>
-            <td class="align-top">
-                
-                <code>map[string]interface{}</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A mapping of tags to assign to the DB cluster.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the DB cluster.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Vpc<wbr>Security<wbr>Group<wbr>Ids</td>
-            <td class="align-top">
-                
-                <code>[]string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-List of VPC security groups to associate
+    <dt class="property-optional"
+            title="Optional">
+        <span>Vpc<wbr>Security<wbr>Group<wbr>Ids</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of VPC security groups to associate
 with the Cluster
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
-
-{{% lang nodejs %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">apply<wbr>Immediately</td>
-            <td class="align-top">
-                
-                <code>boolean?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Specifies whether any cluster modifications
+    <dt class="property-optional"
+            title="Optional">
+        <span>apply<wbr>Immediately</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean?</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether any cluster modifications
 are applied immediately, or during the next maintenance window. Default is
 `false`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">availability<wbr>Zones</td>
-            <td class="align-top">
-                
-                <code>string[]?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A list of EC2 Availability Zones that
+    <dt class="property-optional"
+            title="Optional">
+        <span>availability<wbr>Zones</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]?</span>
+    </dt>
+    <dd>{{% md %}}A list of EC2 Availability Zones that
 instances in the DB cluster can be created in.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">backup<wbr>Retention<wbr>Period</td>
-            <td class="align-top">
-                
-                <code>number?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The days to retain backups for. Default `1`
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>backup<wbr>Retention<wbr>Period</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number?</span>
+    </dt>
+    <dd>{{% md %}}The days to retain backups for. Default `1`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">cluster<wbr>Identifier</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The cluster identifier. If omitted, this provider will assign a random, unique identifier.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>cluster<wbr>Identifier</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The cluster identifier. If omitted, this provider will assign a random, unique identifier.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">cluster<wbr>Identifier<wbr>Prefix</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Creates a unique cluster identifier beginning with the specified prefix. Conflicts with `cluster_identifer`.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>cluster<wbr>Identifier<wbr>Prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Creates a unique cluster identifier beginning with the specified prefix. Conflicts with `cluster_identifer`.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">cluster<wbr>Members</td>
-            <td class="align-top">
-                
-                <code>string[]?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-List of DocDB Instances that are a part of this cluster
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>cluster<wbr>Members</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]?</span>
+    </dt>
+    <dd>{{% md %}}List of DocDB Instances that are a part of this cluster
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">db<wbr>Cluster<wbr>Parameter<wbr>Group<wbr>Name</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A cluster parameter group to associate with the cluster.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>db<wbr>Cluster<wbr>Parameter<wbr>Group<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}A cluster parameter group to associate with the cluster.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">db<wbr>Subnet<wbr>Group<wbr>Name</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A DB subnet group to associate with this DB instance.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>db<wbr>Subnet<wbr>Group<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}A DB subnet group to associate with this DB instance.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">enabled<wbr>Cloudwatch<wbr>Logs<wbr>Exports</td>
-            <td class="align-top">
-                
-                <code>string[]?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-List of log types to export to cloudwatch. If omitted, no logs will be exported.
+    <dt class="property-optional"
+            title="Optional">
+        <span>enabled<wbr>Cloudwatch<wbr>Logs<wbr>Exports</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]?</span>
+    </dt>
+    <dd>{{% md %}}List of log types to export to cloudwatch. If omitted, no logs will be exported.
 The following log types are supported: `audit`, `profiler`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">engine</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The name of the database engine to be used for this DB cluster. Defaults to `docdb`. Valid Values: `docdb`
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>engine</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The name of the database engine to be used for this DB cluster. Defaults to `docdb`. Valid Values: `docdb`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">engine<wbr>Version</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The database engine version. Updating this argument results in an outage.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>engine<wbr>Version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The database engine version. Updating this argument results in an outage.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">final<wbr>Snapshot<wbr>Identifier</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The name of your final DB snapshot
+    <dt class="property-optional"
+            title="Optional">
+        <span>final<wbr>Snapshot<wbr>Identifier</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The name of your final DB snapshot
 when this DB cluster is deleted. If omitted, no final snapshot will be
 made.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">kms<wbr>Key<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ARN for the KMS encryption key. When specifying `kms_key_id`, `storage_encrypted` needs to be set to true.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>kms<wbr>Key<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The ARN for the KMS encryption key. When specifying `kms_key_id`, `storage_encrypted` needs to be set to true.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">master<wbr>Password</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Password for the master DB user. Note that this may
+    <dt class="property-optional"
+            title="Optional">
+        <span>master<wbr>Password</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Password for the master DB user. Note that this may
 show up in logs, and it will be stored in the state file. Please refer to the DocDB Naming Constraints.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">master<wbr>Username</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Username for the master DB user. 
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>master<wbr>Username</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Username for the master DB user. 
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">port</td>
-            <td class="align-top">
-                
-                <code>number?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The port on which the DB accepts connections
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number?</span>
+    </dt>
+    <dd>{{% md %}}The port on which the DB accepts connections
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">preferred<wbr>Backup<wbr>Window</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.Time in UTC
+    <dt class="property-optional"
+            title="Optional">
+        <span>preferred<wbr>Backup<wbr>Window</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.Time in UTC
 Default: A 30-minute window selected at random from an 8-hour block of time per region. e.g. 04:00-09:00
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">preferred<wbr>Maintenance<wbr>Window</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>preferred<wbr>Maintenance<wbr>Window</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">skip<wbr>Final<wbr>Snapshot</td>
-            <td class="align-top">
-                
-                <code>boolean?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Determines whether a final DB snapshot is created before the DB cluster is deleted. If true is specified, no DB snapshot is created. If false is specified, a DB snapshot is created before the DB cluster is deleted, using the value from `final_snapshot_identifier`. Default is `false`.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>skip<wbr>Final<wbr>Snapshot</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean?</span>
+    </dt>
+    <dd>{{% md %}}Determines whether a final DB snapshot is created before the DB cluster is deleted. If true is specified, no DB snapshot is created. If false is specified, a DB snapshot is created before the DB cluster is deleted, using the value from `final_snapshot_identifier`. Default is `false`.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">snapshot<wbr>Identifier</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Specifies whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a DB cluster snapshot, or the ARN when specifying a DB snapshot.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>snapshot<wbr>Identifier</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a DB cluster snapshot, or the ARN when specifying a DB snapshot.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">storage<wbr>Encrypted</td>
-            <td class="align-top">
-                
-                <code>boolean?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Specifies whether the DB cluster is encrypted. The default is `false`.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>storage<wbr>Encrypted</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean?</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the DB cluster is encrypted. The default is `false`.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">tags</td>
-            <td class="align-top">
-                
-                <code>{[key: string]: any}?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A mapping of tags to assign to the DB cluster.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}?</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the DB cluster.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">vpc<wbr>Security<wbr>Group<wbr>Ids</td>
-            <td class="align-top">
-                
-                <code>string[]?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-List of VPC security groups to associate
+    <dt class="property-optional"
+            title="Optional">
+        <span>vpc<wbr>Security<wbr>Group<wbr>Ids</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]?</span>
+    </dt>
+    <dd>{{% md %}}List of VPC security groups to associate
 with the Cluster
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
 
-
-{{% lang python %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">apply_<wbr>immediately</td>
-            <td class="align-top">
-                
-                <code>bool</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Specifies whether any cluster modifications
+    <dt class="property-optional"
+            title="Optional">
+        <span>apply_<wbr>immediately</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether any cluster modifications
 are applied immediately, or during the next maintenance window. Default is
 `false`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">availability_<wbr>zones</td>
-            <td class="align-top">
-                
-                <code>List[str]</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A list of EC2 Availability Zones that
+    <dt class="property-optional"
+            title="Optional">
+        <span>availability_<wbr>zones</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of EC2 Availability Zones that
 instances in the DB cluster can be created in.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">backup_<wbr>retention_<wbr>period</td>
-            <td class="align-top">
-                
-                <code>float</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The days to retain backups for. Default `1`
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>backup_<wbr>retention_<wbr>period</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The days to retain backups for. Default `1`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">cluster_<wbr>identifier</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The cluster identifier. If omitted, this provider will assign a random, unique identifier.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>cluster_<wbr>identifier</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The cluster identifier. If omitted, this provider will assign a random, unique identifier.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">cluster_<wbr>identifier_<wbr>prefix</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Creates a unique cluster identifier beginning with the specified prefix. Conflicts with `cluster_identifer`.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>cluster_<wbr>identifier_<wbr>prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Creates a unique cluster identifier beginning with the specified prefix. Conflicts with `cluster_identifer`.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">cluster_<wbr>members</td>
-            <td class="align-top">
-                
-                <code>List[str]</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-List of DocDB Instances that are a part of this cluster
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>cluster_<wbr>members</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}List of DocDB Instances that are a part of this cluster
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">db_<wbr>cluster_<wbr>parameter_<wbr>group_<wbr>name</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A cluster parameter group to associate with the cluster.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>db_<wbr>cluster_<wbr>parameter_<wbr>group_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A cluster parameter group to associate with the cluster.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">db_<wbr>subnet_<wbr>group_<wbr>name</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A DB subnet group to associate with this DB instance.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>db_<wbr>subnet_<wbr>group_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A DB subnet group to associate with this DB instance.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">enabled_<wbr>cloudwatch_<wbr>logs_<wbr>exports</td>
-            <td class="align-top">
-                
-                <code>List[str]</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-List of log types to export to cloudwatch. If omitted, no logs will be exported.
+    <dt class="property-optional"
+            title="Optional">
+        <span>enabled_<wbr>cloudwatch_<wbr>logs_<wbr>exports</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}List of log types to export to cloudwatch. If omitted, no logs will be exported.
 The following log types are supported: `audit`, `profiler`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">engine</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The name of the database engine to be used for this DB cluster. Defaults to `docdb`. Valid Values: `docdb`
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>engine</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the database engine to be used for this DB cluster. Defaults to `docdb`. Valid Values: `docdb`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">engine_<wbr>version</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The database engine version. Updating this argument results in an outage.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>engine_<wbr>version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The database engine version. Updating this argument results in an outage.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">final_<wbr>snapshot_<wbr>identifier</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The name of your final DB snapshot
+    <dt class="property-optional"
+            title="Optional">
+        <span>final_<wbr>snapshot_<wbr>identifier</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of your final DB snapshot
 when this DB cluster is deleted. If omitted, no final snapshot will be
 made.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">kms_<wbr>key_<wbr>id</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ARN for the KMS encryption key. When specifying `kms_key_id`, `storage_encrypted` needs to be set to true.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>kms_<wbr>key_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARN for the KMS encryption key. When specifying `kms_key_id`, `storage_encrypted` needs to be set to true.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">master_<wbr>password</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Password for the master DB user. Note that this may
+    <dt class="property-optional"
+            title="Optional">
+        <span>master_<wbr>password</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Password for the master DB user. Note that this may
 show up in logs, and it will be stored in the state file. Please refer to the DocDB Naming Constraints.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">master_<wbr>username</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Username for the master DB user. 
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>master_<wbr>username</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Username for the master DB user. 
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">port</td>
-            <td class="align-top">
-                
-                <code>float</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The port on which the DB accepts connections
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The port on which the DB accepts connections
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">preferred_<wbr>backup_<wbr>window</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.Time in UTC
+    <dt class="property-optional"
+            title="Optional">
+        <span>preferred_<wbr>backup_<wbr>window</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.Time in UTC
 Default: A 30-minute window selected at random from an 8-hour block of time per region. e.g. 04:00-09:00
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">preferred_<wbr>maintenance_<wbr>window</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>preferred_<wbr>maintenance_<wbr>window</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">skip_<wbr>final_<wbr>snapshot</td>
-            <td class="align-top">
-                
-                <code>bool</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Determines whether a final DB snapshot is created before the DB cluster is deleted. If true is specified, no DB snapshot is created. If false is specified, a DB snapshot is created before the DB cluster is deleted, using the value from `final_snapshot_identifier`. Default is `false`.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>skip_<wbr>final_<wbr>snapshot</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Determines whether a final DB snapshot is created before the DB cluster is deleted. If true is specified, no DB snapshot is created. If false is specified, a DB snapshot is created before the DB cluster is deleted, using the value from `final_snapshot_identifier`. Default is `false`.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">snapshot_<wbr>identifier</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Specifies whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a DB cluster snapshot, or the ARN when specifying a DB snapshot.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>snapshot_<wbr>identifier</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a DB cluster snapshot, or the ARN when specifying a DB snapshot.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">storage_<wbr>encrypted</td>
-            <td class="align-top">
-                
-                <code>bool</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Specifies whether the DB cluster is encrypted. The default is `false`.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>storage_<wbr>encrypted</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the DB cluster is encrypted. The default is `false`.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">tags</td>
-            <td class="align-top">
-                
-                <code>Dict[str, Any]</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A mapping of tags to assign to the DB cluster.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the DB cluster.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">vpc_<wbr>security_<wbr>group_<wbr>ids</td>
-            <td class="align-top">
-                
-                <code>List[str]</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-List of VPC security groups to associate
+    <dt class="property-optional"
+            title="Optional">
+        <span>vpc_<wbr>security_<wbr>group_<wbr>ids</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}List of VPC security groups to associate
 with the Cluster
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
+</dl>
+{{% /choosable %}}
 
 
 
@@ -1594,1575 +1048,1073 @@ The following output properties are available:
 
 
 
-{{< langchoose csharp nojavascript >}}
 
+{{% choosable language csharp %}}
+<dl class="resources-properties">
 
-{{% lang csharp %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Apply<wbr>Immediately</td>
-            <td class="align-top">
-                
-                <code>bool</code>
-            </td>
-            <td class="align-top">{{% md %}} Specifies whether any cluster modifications
+    <dt class="property-"
+            title="">
+        <span>Apply<wbr>Immediately</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether any cluster modifications
 are applied immediately, or during the next maintenance window. Default is
 `false`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Arn</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} Amazon Resource Name (ARN) of cluster
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Amazon Resource Name (ARN) of cluster
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Availability<wbr>Zones</td>
-            <td class="align-top">
-                
-                <code>List<string></code>
-            </td>
-            <td class="align-top">{{% md %}} A list of EC2 Availability Zones that
+    <dt class="property-"
+            title="">
+        <span>Availability<wbr>Zones</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List<string></span>
+    </dt>
+    <dd>{{% md %}}A list of EC2 Availability Zones that
 instances in the DB cluster can be created in.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Backup<wbr>Retention<wbr>Period</td>
-            <td class="align-top">
-                
-                <code>int?</code>
-            </td>
-            <td class="align-top">{{% md %}} The days to retain backups for. Default `1`
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Backup<wbr>Retention<wbr>Period</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int?</span>
+    </dt>
+    <dd>{{% md %}}The days to retain backups for. Default `1`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Cluster<wbr>Identifier</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The cluster identifier. If omitted, this provider will assign a random, unique identifier.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Cluster<wbr>Identifier</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The cluster identifier. If omitted, this provider will assign a random, unique identifier.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Cluster<wbr>Identifier<wbr>Prefix</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} Creates a unique cluster identifier beginning with the specified prefix. Conflicts with `cluster_identifer`.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Cluster<wbr>Identifier<wbr>Prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Creates a unique cluster identifier beginning with the specified prefix. Conflicts with `cluster_identifer`.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Cluster<wbr>Members</td>
-            <td class="align-top">
-                
-                <code>List<string></code>
-            </td>
-            <td class="align-top">{{% md %}} List of DocDB Instances that are a part of this cluster
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Cluster<wbr>Members</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List<string></span>
+    </dt>
+    <dd>{{% md %}}List of DocDB Instances that are a part of this cluster
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Cluster<wbr>Resource<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The DocDB Cluster Resource ID
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Cluster<wbr>Resource<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The DocDB Cluster Resource ID
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Db<wbr>Cluster<wbr>Parameter<wbr>Group<wbr>Name</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} A cluster parameter group to associate with the cluster.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Db<wbr>Cluster<wbr>Parameter<wbr>Group<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A cluster parameter group to associate with the cluster.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Db<wbr>Subnet<wbr>Group<wbr>Name</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} A DB subnet group to associate with this DB instance.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Db<wbr>Subnet<wbr>Group<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A DB subnet group to associate with this DB instance.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Enabled<wbr>Cloudwatch<wbr>Logs<wbr>Exports</td>
-            <td class="align-top">
-                
-                <code>List<string>?</code>
-            </td>
-            <td class="align-top">{{% md %}} List of log types to export to cloudwatch. If omitted, no logs will be exported.
+    <dt class="property-"
+            title="">
+        <span>Enabled<wbr>Cloudwatch<wbr>Logs<wbr>Exports</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List<string>?</span>
+    </dt>
+    <dd>{{% md %}}List of log types to export to cloudwatch. If omitted, no logs will be exported.
 The following log types are supported: `audit`, `profiler`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Endpoint</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The DNS address of the DocDB instance
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Endpoint</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The DNS address of the DocDB instance
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Engine</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} The name of the database engine to be used for this DB cluster. Defaults to `docdb`. Valid Values: `docdb`
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Engine</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The name of the database engine to be used for this DB cluster. Defaults to `docdb`. Valid Values: `docdb`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Engine<wbr>Version</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The database engine version. Updating this argument results in an outage.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Engine<wbr>Version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The database engine version. Updating this argument results in an outage.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Final<wbr>Snapshot<wbr>Identifier</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} The name of your final DB snapshot
+    <dt class="property-"
+            title="">
+        <span>Final<wbr>Snapshot<wbr>Identifier</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The name of your final DB snapshot
 when this DB cluster is deleted. If omitted, no final snapshot will be
 made.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Hosted<wbr>Zone<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The Route53 Hosted Zone ID of the endpoint
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Hosted<wbr>Zone<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Route53 Hosted Zone ID of the endpoint
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Kms<wbr>Key<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The ARN for the KMS encryption key. When specifying `kms_key_id`, `storage_encrypted` needs to be set to true.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Kms<wbr>Key<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN for the KMS encryption key. When specifying `kms_key_id`, `storage_encrypted` needs to be set to true.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Master<wbr>Password</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} Password for the master DB user. Note that this may
+    <dt class="property-"
+            title="">
+        <span>Master<wbr>Password</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Password for the master DB user. Note that this may
 show up in logs, and it will be stored in the state file. Please refer to the DocDB Naming Constraints.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Master<wbr>Username</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} Username for the master DB user. 
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Master<wbr>Username</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Username for the master DB user. 
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Port</td>
-            <td class="align-top">
-                
-                <code>int?</code>
-            </td>
-            <td class="align-top">{{% md %}} The port on which the DB accepts connections
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int?</span>
+    </dt>
+    <dd>{{% md %}}The port on which the DB accepts connections
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Preferred<wbr>Backup<wbr>Window</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.Time in UTC
+    <dt class="property-"
+            title="">
+        <span>Preferred<wbr>Backup<wbr>Window</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.Time in UTC
 Default: A 30-minute window selected at random from an 8-hour block of time per region. e.g. 04:00-09:00
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Preferred<wbr>Maintenance<wbr>Window</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}}  {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Preferred<wbr>Maintenance<wbr>Window</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Reader<wbr>Endpoint</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} A read-only endpoint for the DocDB cluster, automatically load-balanced across replicas
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Reader<wbr>Endpoint</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A read-only endpoint for the DocDB cluster, automatically load-balanced across replicas
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Skip<wbr>Final<wbr>Snapshot</td>
-            <td class="align-top">
-                
-                <code>bool?</code>
-            </td>
-            <td class="align-top">{{% md %}} Determines whether a final DB snapshot is created before the DB cluster is deleted. If true is specified, no DB snapshot is created. If false is specified, a DB snapshot is created before the DB cluster is deleted, using the value from `final_snapshot_identifier`. Default is `false`.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Skip<wbr>Final<wbr>Snapshot</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool?</span>
+    </dt>
+    <dd>{{% md %}}Determines whether a final DB snapshot is created before the DB cluster is deleted. If true is specified, no DB snapshot is created. If false is specified, a DB snapshot is created before the DB cluster is deleted, using the value from `final_snapshot_identifier`. Default is `false`.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Snapshot<wbr>Identifier</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} Specifies whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a DB cluster snapshot, or the ARN when specifying a DB snapshot.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Snapshot<wbr>Identifier</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a DB cluster snapshot, or the ARN when specifying a DB snapshot.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Storage<wbr>Encrypted</td>
-            <td class="align-top">
-                
-                <code>bool?</code>
-            </td>
-            <td class="align-top">{{% md %}} Specifies whether the DB cluster is encrypted. The default is `false`.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Storage<wbr>Encrypted</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool?</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the DB cluster is encrypted. The default is `false`.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Tags</td>
-            <td class="align-top">
-                
-                <code>Dictionary<string, object>?</code>
-            </td>
-            <td class="align-top">{{% md %}} A mapping of tags to assign to the DB cluster.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary<string, object>?</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the DB cluster.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Vpc<wbr>Security<wbr>Group<wbr>Ids</td>
-            <td class="align-top">
-                
-                <code>List<string></code>
-            </td>
-            <td class="align-top">{{% md %}} List of VPC security groups to associate
+    <dt class="property-"
+            title="">
+        <span>Vpc<wbr>Security<wbr>Group<wbr>Ids</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List<string></span>
+    </dt>
+    <dd>{{% md %}}List of VPC security groups to associate
 with the Cluster
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language go %}}
+<dl class="resources-properties">
 
-
-{{% lang go %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Apply<wbr>Immediately</td>
-            <td class="align-top">
-                
-                <code>bool</code>
-            </td>
-            <td class="align-top">{{% md %}} Specifies whether any cluster modifications
+    <dt class="property-"
+            title="">
+        <span>Apply<wbr>Immediately</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether any cluster modifications
 are applied immediately, or during the next maintenance window. Default is
 `false`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Arn</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} Amazon Resource Name (ARN) of cluster
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Amazon Resource Name (ARN) of cluster
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Availability<wbr>Zones</td>
-            <td class="align-top">
-                
-                <code>[]string</code>
-            </td>
-            <td class="align-top">{{% md %}} A list of EC2 Availability Zones that
+    <dt class="property-"
+            title="">
+        <span>Availability<wbr>Zones</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of EC2 Availability Zones that
 instances in the DB cluster can be created in.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Backup<wbr>Retention<wbr>Period</td>
-            <td class="align-top">
-                
-                <code>*int</code>
-            </td>
-            <td class="align-top">{{% md %}} The days to retain backups for. Default `1`
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Backup<wbr>Retention<wbr>Period</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*int</span>
+    </dt>
+    <dd>{{% md %}}The days to retain backups for. Default `1`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Cluster<wbr>Identifier</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The cluster identifier. If omitted, this provider will assign a random, unique identifier.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Cluster<wbr>Identifier</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The cluster identifier. If omitted, this provider will assign a random, unique identifier.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Cluster<wbr>Identifier<wbr>Prefix</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} Creates a unique cluster identifier beginning with the specified prefix. Conflicts with `cluster_identifer`.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Cluster<wbr>Identifier<wbr>Prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Creates a unique cluster identifier beginning with the specified prefix. Conflicts with `cluster_identifer`.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Cluster<wbr>Members</td>
-            <td class="align-top">
-                
-                <code>[]string</code>
-            </td>
-            <td class="align-top">{{% md %}} List of DocDB Instances that are a part of this cluster
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Cluster<wbr>Members</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of DocDB Instances that are a part of this cluster
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Cluster<wbr>Resource<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The DocDB Cluster Resource ID
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Cluster<wbr>Resource<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The DocDB Cluster Resource ID
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Db<wbr>Cluster<wbr>Parameter<wbr>Group<wbr>Name</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} A cluster parameter group to associate with the cluster.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Db<wbr>Cluster<wbr>Parameter<wbr>Group<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A cluster parameter group to associate with the cluster.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Db<wbr>Subnet<wbr>Group<wbr>Name</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} A DB subnet group to associate with this DB instance.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Db<wbr>Subnet<wbr>Group<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A DB subnet group to associate with this DB instance.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Enabled<wbr>Cloudwatch<wbr>Logs<wbr>Exports</td>
-            <td class="align-top">
-                
-                <code>[]string</code>
-            </td>
-            <td class="align-top">{{% md %}} List of log types to export to cloudwatch. If omitted, no logs will be exported.
+    <dt class="property-"
+            title="">
+        <span>Enabled<wbr>Cloudwatch<wbr>Logs<wbr>Exports</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of log types to export to cloudwatch. If omitted, no logs will be exported.
 The following log types are supported: `audit`, `profiler`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Endpoint</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The DNS address of the DocDB instance
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Endpoint</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The DNS address of the DocDB instance
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Engine</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} The name of the database engine to be used for this DB cluster. Defaults to `docdb`. Valid Values: `docdb`
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Engine</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The name of the database engine to be used for this DB cluster. Defaults to `docdb`. Valid Values: `docdb`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Engine<wbr>Version</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The database engine version. Updating this argument results in an outage.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Engine<wbr>Version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The database engine version. Updating this argument results in an outage.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Final<wbr>Snapshot<wbr>Identifier</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} The name of your final DB snapshot
+    <dt class="property-"
+            title="">
+        <span>Final<wbr>Snapshot<wbr>Identifier</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The name of your final DB snapshot
 when this DB cluster is deleted. If omitted, no final snapshot will be
 made.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Hosted<wbr>Zone<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The Route53 Hosted Zone ID of the endpoint
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Hosted<wbr>Zone<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Route53 Hosted Zone ID of the endpoint
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Kms<wbr>Key<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The ARN for the KMS encryption key. When specifying `kms_key_id`, `storage_encrypted` needs to be set to true.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Kms<wbr>Key<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN for the KMS encryption key. When specifying `kms_key_id`, `storage_encrypted` needs to be set to true.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Master<wbr>Password</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} Password for the master DB user. Note that this may
+    <dt class="property-"
+            title="">
+        <span>Master<wbr>Password</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}Password for the master DB user. Note that this may
 show up in logs, and it will be stored in the state file. Please refer to the DocDB Naming Constraints.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Master<wbr>Username</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} Username for the master DB user. 
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Master<wbr>Username</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Username for the master DB user. 
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Port</td>
-            <td class="align-top">
-                
-                <code>*int</code>
-            </td>
-            <td class="align-top">{{% md %}} The port on which the DB accepts connections
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*int</span>
+    </dt>
+    <dd>{{% md %}}The port on which the DB accepts connections
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Preferred<wbr>Backup<wbr>Window</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.Time in UTC
+    <dt class="property-"
+            title="">
+        <span>Preferred<wbr>Backup<wbr>Window</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.Time in UTC
 Default: A 30-minute window selected at random from an 8-hour block of time per region. e.g. 04:00-09:00
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Preferred<wbr>Maintenance<wbr>Window</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}}  {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Preferred<wbr>Maintenance<wbr>Window</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Reader<wbr>Endpoint</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} A read-only endpoint for the DocDB cluster, automatically load-balanced across replicas
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Reader<wbr>Endpoint</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A read-only endpoint for the DocDB cluster, automatically load-balanced across replicas
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Skip<wbr>Final<wbr>Snapshot</td>
-            <td class="align-top">
-                
-                <code>*bool</code>
-            </td>
-            <td class="align-top">{{% md %}} Determines whether a final DB snapshot is created before the DB cluster is deleted. If true is specified, no DB snapshot is created. If false is specified, a DB snapshot is created before the DB cluster is deleted, using the value from `final_snapshot_identifier`. Default is `false`.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Skip<wbr>Final<wbr>Snapshot</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*bool</span>
+    </dt>
+    <dd>{{% md %}}Determines whether a final DB snapshot is created before the DB cluster is deleted. If true is specified, no DB snapshot is created. If false is specified, a DB snapshot is created before the DB cluster is deleted, using the value from `final_snapshot_identifier`. Default is `false`.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Snapshot<wbr>Identifier</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} Specifies whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a DB cluster snapshot, or the ARN when specifying a DB snapshot.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Snapshot<wbr>Identifier</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a DB cluster snapshot, or the ARN when specifying a DB snapshot.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Storage<wbr>Encrypted</td>
-            <td class="align-top">
-                
-                <code>*bool</code>
-            </td>
-            <td class="align-top">{{% md %}} Specifies whether the DB cluster is encrypted. The default is `false`.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Storage<wbr>Encrypted</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the DB cluster is encrypted. The default is `false`.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Tags</td>
-            <td class="align-top">
-                
-                <code>map[string]interface{}</code>
-            </td>
-            <td class="align-top">{{% md %}} A mapping of tags to assign to the DB cluster.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the DB cluster.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Vpc<wbr>Security<wbr>Group<wbr>Ids</td>
-            <td class="align-top">
-                
-                <code>[]string</code>
-            </td>
-            <td class="align-top">{{% md %}} List of VPC security groups to associate
+    <dt class="property-"
+            title="">
+        <span>Vpc<wbr>Security<wbr>Group<wbr>Ids</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of VPC security groups to associate
 with the Cluster
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
-
-{{% lang nodejs %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">apply<wbr>Immediately</td>
-            <td class="align-top">
-                
-                <code>boolean</code>
-            </td>
-            <td class="align-top">{{% md %}} Specifies whether any cluster modifications
+    <dt class="property-"
+            title="">
+        <span>apply<wbr>Immediately</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether any cluster modifications
 are applied immediately, or during the next maintenance window. Default is
 `false`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">arn</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} Amazon Resource Name (ARN) of cluster
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Amazon Resource Name (ARN) of cluster
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">availability<wbr>Zones</td>
-            <td class="align-top">
-                
-                <code>string[]</code>
-            </td>
-            <td class="align-top">{{% md %}} A list of EC2 Availability Zones that
+    <dt class="property-"
+            title="">
+        <span>availability<wbr>Zones</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of EC2 Availability Zones that
 instances in the DB cluster can be created in.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">backup<wbr>Retention<wbr>Period</td>
-            <td class="align-top">
-                
-                <code>number?</code>
-            </td>
-            <td class="align-top">{{% md %}} The days to retain backups for. Default `1`
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>backup<wbr>Retention<wbr>Period</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number?</span>
+    </dt>
+    <dd>{{% md %}}The days to retain backups for. Default `1`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">cluster<wbr>Identifier</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The cluster identifier. If omitted, this provider will assign a random, unique identifier.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>cluster<wbr>Identifier</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The cluster identifier. If omitted, this provider will assign a random, unique identifier.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">cluster<wbr>Identifier<wbr>Prefix</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} Creates a unique cluster identifier beginning with the specified prefix. Conflicts with `cluster_identifer`.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>cluster<wbr>Identifier<wbr>Prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Creates a unique cluster identifier beginning with the specified prefix. Conflicts with `cluster_identifer`.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">cluster<wbr>Members</td>
-            <td class="align-top">
-                
-                <code>string[]</code>
-            </td>
-            <td class="align-top">{{% md %}} List of DocDB Instances that are a part of this cluster
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>cluster<wbr>Members</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of DocDB Instances that are a part of this cluster
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">cluster<wbr>Resource<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The DocDB Cluster Resource ID
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>cluster<wbr>Resource<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The DocDB Cluster Resource ID
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">db<wbr>Cluster<wbr>Parameter<wbr>Group<wbr>Name</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} A cluster parameter group to associate with the cluster.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>db<wbr>Cluster<wbr>Parameter<wbr>Group<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A cluster parameter group to associate with the cluster.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">db<wbr>Subnet<wbr>Group<wbr>Name</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} A DB subnet group to associate with this DB instance.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>db<wbr>Subnet<wbr>Group<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A DB subnet group to associate with this DB instance.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">enabled<wbr>Cloudwatch<wbr>Logs<wbr>Exports</td>
-            <td class="align-top">
-                
-                <code>string[]?</code>
-            </td>
-            <td class="align-top">{{% md %}} List of log types to export to cloudwatch. If omitted, no logs will be exported.
+    <dt class="property-"
+            title="">
+        <span>enabled<wbr>Cloudwatch<wbr>Logs<wbr>Exports</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]?</span>
+    </dt>
+    <dd>{{% md %}}List of log types to export to cloudwatch. If omitted, no logs will be exported.
 The following log types are supported: `audit`, `profiler`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">endpoint</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The DNS address of the DocDB instance
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>endpoint</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The DNS address of the DocDB instance
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">engine</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} The name of the database engine to be used for this DB cluster. Defaults to `docdb`. Valid Values: `docdb`
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>engine</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The name of the database engine to be used for this DB cluster. Defaults to `docdb`. Valid Values: `docdb`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">engine<wbr>Version</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The database engine version. Updating this argument results in an outage.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>engine<wbr>Version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The database engine version. Updating this argument results in an outage.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">final<wbr>Snapshot<wbr>Identifier</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} The name of your final DB snapshot
+    <dt class="property-"
+            title="">
+        <span>final<wbr>Snapshot<wbr>Identifier</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The name of your final DB snapshot
 when this DB cluster is deleted. If omitted, no final snapshot will be
 made.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">hosted<wbr>Zone<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The Route53 Hosted Zone ID of the endpoint
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>hosted<wbr>Zone<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Route53 Hosted Zone ID of the endpoint
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">kms<wbr>Key<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The ARN for the KMS encryption key. When specifying `kms_key_id`, `storage_encrypted` needs to be set to true.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>kms<wbr>Key<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN for the KMS encryption key. When specifying `kms_key_id`, `storage_encrypted` needs to be set to true.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">master<wbr>Password</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} Password for the master DB user. Note that this may
+    <dt class="property-"
+            title="">
+        <span>master<wbr>Password</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Password for the master DB user. Note that this may
 show up in logs, and it will be stored in the state file. Please refer to the DocDB Naming Constraints.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">master<wbr>Username</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} Username for the master DB user. 
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>master<wbr>Username</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Username for the master DB user. 
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">port</td>
-            <td class="align-top">
-                
-                <code>number?</code>
-            </td>
-            <td class="align-top">{{% md %}} The port on which the DB accepts connections
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number?</span>
+    </dt>
+    <dd>{{% md %}}The port on which the DB accepts connections
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">preferred<wbr>Backup<wbr>Window</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.Time in UTC
+    <dt class="property-"
+            title="">
+        <span>preferred<wbr>Backup<wbr>Window</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.Time in UTC
 Default: A 30-minute window selected at random from an 8-hour block of time per region. e.g. 04:00-09:00
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">preferred<wbr>Maintenance<wbr>Window</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}}  {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>preferred<wbr>Maintenance<wbr>Window</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">reader<wbr>Endpoint</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} A read-only endpoint for the DocDB cluster, automatically load-balanced across replicas
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>reader<wbr>Endpoint</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A read-only endpoint for the DocDB cluster, automatically load-balanced across replicas
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">skip<wbr>Final<wbr>Snapshot</td>
-            <td class="align-top">
-                
-                <code>boolean?</code>
-            </td>
-            <td class="align-top">{{% md %}} Determines whether a final DB snapshot is created before the DB cluster is deleted. If true is specified, no DB snapshot is created. If false is specified, a DB snapshot is created before the DB cluster is deleted, using the value from `final_snapshot_identifier`. Default is `false`.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>skip<wbr>Final<wbr>Snapshot</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean?</span>
+    </dt>
+    <dd>{{% md %}}Determines whether a final DB snapshot is created before the DB cluster is deleted. If true is specified, no DB snapshot is created. If false is specified, a DB snapshot is created before the DB cluster is deleted, using the value from `final_snapshot_identifier`. Default is `false`.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">snapshot<wbr>Identifier</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} Specifies whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a DB cluster snapshot, or the ARN when specifying a DB snapshot.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>snapshot<wbr>Identifier</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a DB cluster snapshot, or the ARN when specifying a DB snapshot.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">storage<wbr>Encrypted</td>
-            <td class="align-top">
-                
-                <code>boolean?</code>
-            </td>
-            <td class="align-top">{{% md %}} Specifies whether the DB cluster is encrypted. The default is `false`.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>storage<wbr>Encrypted</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean?</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the DB cluster is encrypted. The default is `false`.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">tags</td>
-            <td class="align-top">
-                
-                <code>{[key: string]: any}?</code>
-            </td>
-            <td class="align-top">{{% md %}} A mapping of tags to assign to the DB cluster.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}?</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the DB cluster.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">vpc<wbr>Security<wbr>Group<wbr>Ids</td>
-            <td class="align-top">
-                
-                <code>string[]</code>
-            </td>
-            <td class="align-top">{{% md %}} List of VPC security groups to associate
+    <dt class="property-"
+            title="">
+        <span>vpc<wbr>Security<wbr>Group<wbr>Ids</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of VPC security groups to associate
 with the Cluster
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
 
-
-{{% lang python %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">apply_<wbr>immediately</td>
-            <td class="align-top">
-                
-                <code>bool</code>
-            </td>
-            <td class="align-top">{{% md %}} Specifies whether any cluster modifications
+    <dt class="property-"
+            title="">
+        <span>apply_<wbr>immediately</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether any cluster modifications
 are applied immediately, or during the next maintenance window. Default is
 `false`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">arn</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} Amazon Resource Name (ARN) of cluster
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Amazon Resource Name (ARN) of cluster
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">availability_<wbr>zones</td>
-            <td class="align-top">
-                
-                <code>List[str]</code>
-            </td>
-            <td class="align-top">{{% md %}} A list of EC2 Availability Zones that
+    <dt class="property-"
+            title="">
+        <span>availability_<wbr>zones</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of EC2 Availability Zones that
 instances in the DB cluster can be created in.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">backup_<wbr>retention_<wbr>period</td>
-            <td class="align-top">
-                
-                <code>float</code>
-            </td>
-            <td class="align-top">{{% md %}} The days to retain backups for. Default `1`
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>backup_<wbr>retention_<wbr>period</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The days to retain backups for. Default `1`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">cluster_<wbr>identifier</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} The cluster identifier. If omitted, this provider will assign a random, unique identifier.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>cluster_<wbr>identifier</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The cluster identifier. If omitted, this provider will assign a random, unique identifier.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">cluster_<wbr>identifier_<wbr>prefix</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} Creates a unique cluster identifier beginning with the specified prefix. Conflicts with `cluster_identifer`.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>cluster_<wbr>identifier_<wbr>prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Creates a unique cluster identifier beginning with the specified prefix. Conflicts with `cluster_identifer`.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">cluster_<wbr>members</td>
-            <td class="align-top">
-                
-                <code>List[str]</code>
-            </td>
-            <td class="align-top">{{% md %}} List of DocDB Instances that are a part of this cluster
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>cluster_<wbr>members</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}List of DocDB Instances that are a part of this cluster
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">cluster_<wbr>resource_<wbr>id</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} The DocDB Cluster Resource ID
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>cluster_<wbr>resource_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The DocDB Cluster Resource ID
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">db_<wbr>cluster_<wbr>parameter_<wbr>group_<wbr>name</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} A cluster parameter group to associate with the cluster.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>db_<wbr>cluster_<wbr>parameter_<wbr>group_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A cluster parameter group to associate with the cluster.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">db_<wbr>subnet_<wbr>group_<wbr>name</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} A DB subnet group to associate with this DB instance.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>db_<wbr>subnet_<wbr>group_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A DB subnet group to associate with this DB instance.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">enabled_<wbr>cloudwatch_<wbr>logs_<wbr>exports</td>
-            <td class="align-top">
-                
-                <code>List[str]</code>
-            </td>
-            <td class="align-top">{{% md %}} List of log types to export to cloudwatch. If omitted, no logs will be exported.
+    <dt class="property-"
+            title="">
+        <span>enabled_<wbr>cloudwatch_<wbr>logs_<wbr>exports</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}List of log types to export to cloudwatch. If omitted, no logs will be exported.
 The following log types are supported: `audit`, `profiler`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">endpoint</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} The DNS address of the DocDB instance
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>endpoint</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The DNS address of the DocDB instance
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">engine</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} The name of the database engine to be used for this DB cluster. Defaults to `docdb`. Valid Values: `docdb`
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>engine</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the database engine to be used for this DB cluster. Defaults to `docdb`. Valid Values: `docdb`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">engine_<wbr>version</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} The database engine version. Updating this argument results in an outage.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>engine_<wbr>version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The database engine version. Updating this argument results in an outage.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">final_<wbr>snapshot_<wbr>identifier</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} The name of your final DB snapshot
+    <dt class="property-"
+            title="">
+        <span>final_<wbr>snapshot_<wbr>identifier</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of your final DB snapshot
 when this DB cluster is deleted. If omitted, no final snapshot will be
 made.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">hosted_<wbr>zone_<wbr>id</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} The Route53 Hosted Zone ID of the endpoint
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>hosted_<wbr>zone_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Route53 Hosted Zone ID of the endpoint
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">kms_<wbr>key_<wbr>id</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} The ARN for the KMS encryption key. When specifying `kms_key_id`, `storage_encrypted` needs to be set to true.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>kms_<wbr>key_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARN for the KMS encryption key. When specifying `kms_key_id`, `storage_encrypted` needs to be set to true.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">master_<wbr>password</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} Password for the master DB user. Note that this may
+    <dt class="property-"
+            title="">
+        <span>master_<wbr>password</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Password for the master DB user. Note that this may
 show up in logs, and it will be stored in the state file. Please refer to the DocDB Naming Constraints.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">master_<wbr>username</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} Username for the master DB user. 
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>master_<wbr>username</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Username for the master DB user. 
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">port</td>
-            <td class="align-top">
-                
-                <code>float</code>
-            </td>
-            <td class="align-top">{{% md %}} The port on which the DB accepts connections
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The port on which the DB accepts connections
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">preferred_<wbr>backup_<wbr>window</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.Time in UTC
+    <dt class="property-"
+            title="">
+        <span>preferred_<wbr>backup_<wbr>window</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.Time in UTC
 Default: A 30-minute window selected at random from an 8-hour block of time per region. e.g. 04:00-09:00
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">preferred_<wbr>maintenance_<wbr>window</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}}  {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>preferred_<wbr>maintenance_<wbr>window</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">reader_<wbr>endpoint</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} A read-only endpoint for the DocDB cluster, automatically load-balanced across replicas
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>reader_<wbr>endpoint</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A read-only endpoint for the DocDB cluster, automatically load-balanced across replicas
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">skip_<wbr>final_<wbr>snapshot</td>
-            <td class="align-top">
-                
-                <code>bool</code>
-            </td>
-            <td class="align-top">{{% md %}} Determines whether a final DB snapshot is created before the DB cluster is deleted. If true is specified, no DB snapshot is created. If false is specified, a DB snapshot is created before the DB cluster is deleted, using the value from `final_snapshot_identifier`. Default is `false`.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>skip_<wbr>final_<wbr>snapshot</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Determines whether a final DB snapshot is created before the DB cluster is deleted. If true is specified, no DB snapshot is created. If false is specified, a DB snapshot is created before the DB cluster is deleted, using the value from `final_snapshot_identifier`. Default is `false`.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">snapshot_<wbr>identifier</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} Specifies whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a DB cluster snapshot, or the ARN when specifying a DB snapshot.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>snapshot_<wbr>identifier</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a DB cluster snapshot, or the ARN when specifying a DB snapshot.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">storage_<wbr>encrypted</td>
-            <td class="align-top">
-                
-                <code>bool</code>
-            </td>
-            <td class="align-top">{{% md %}} Specifies whether the DB cluster is encrypted. The default is `false`.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>storage_<wbr>encrypted</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the DB cluster is encrypted. The default is `false`.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">tags</td>
-            <td class="align-top">
-                
-                <code>Dict[str, Any]</code>
-            </td>
-            <td class="align-top">{{% md %}} A mapping of tags to assign to the DB cluster.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the DB cluster.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">vpc_<wbr>security_<wbr>group_<wbr>ids</td>
-            <td class="align-top">
-                
-                <code>List[str]</code>
-            </td>
-            <td class="align-top">{{% md %}} List of VPC security groups to associate
+    <dt class="property-"
+            title="">
+        <span>vpc_<wbr>security_<wbr>group_<wbr>ids</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}List of VPC security groups to associate
 with the Cluster
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
+</dl>
+{{% /choosable %}}
 
 
 
@@ -3173,1847 +2125,1192 @@ with the Cluster
 
 ## Look up an Existing Cluster Resource
 
-{{< langchoose csharp nojavascript >}}
-
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">pulumi.Input&lt;pulumi.ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/docdb/#ClusterState">ClusterState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/docdb/#Cluster">Cluster</a></span></code></pre></div>
-
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>apply_immediately=None<span class="p">, </span>arn=None<span class="p">, </span>availability_zones=None<span class="p">, </span>backup_retention_period=None<span class="p">, </span>cluster_identifier=None<span class="p">, </span>cluster_identifier_prefix=None<span class="p">, </span>cluster_members=None<span class="p">, </span>cluster_resource_id=None<span class="p">, </span>db_cluster_parameter_group_name=None<span class="p">, </span>db_subnet_group_name=None<span class="p">, </span>enabled_cloudwatch_logs_exports=None<span class="p">, </span>endpoint=None<span class="p">, </span>engine=None<span class="p">, </span>engine_version=None<span class="p">, </span>final_snapshot_identifier=None<span class="p">, </span>hosted_zone_id=None<span class="p">, </span>kms_key_id=None<span class="p">, </span>master_password=None<span class="p">, </span>master_username=None<span class="p">, </span>port=None<span class="p">, </span>preferred_backup_window=None<span class="p">, </span>preferred_maintenance_window=None<span class="p">, </span>reader_endpoint=None<span class="p">, </span>skip_final_snapshot=None<span class="p">, </span>snapshot_identifier=None<span class="p">, </span>storage_encrypted=None<span class="p">, </span>tags=None<span class="p">, </span>vpc_security_group_ids=None<span class="p">, __props__=None);</span></code></pre></div>
-
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCluster<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">pulumi.IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/docdb?tab=doc#ClusterState">ClusterState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/docdb?tab=doc#Cluster">Cluster</a></span>, error)</span></code></pre></div>
-
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Docdb.Cluster.html">Cluster</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Pulumi.Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Docdb.ClusterState.html">ClusterState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
-
 Get an existing Cluster resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 
-{{% lang nodejs %}}
+{{< chooser language "javascript,typescript,python,go,csharp  " / >}}
 
-<ul class="pl-10">
-    <li><strong>name</strong> &ndash; (Required) The unique name of the resulting resource.</li>
-    <li><strong>id</strong> &ndash; (Required) The _unique_ provider ID of the resource to lookup.</li>
-    <li><strong>state</strong> &ndash; (Optional) Any extra arguments used during the lookup.</li>
-    <li><strong>opts</strong> &ndash; (Optional) A bag of options that control this resource's behavior.</li>
-</ul>
+{{% choosable language nodejs %}}
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/docdb/#ClusterState">ClusterState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/docdb/#Cluster">Cluster</a></span></code></pre></div>
+{{% /choosable %}}
 
-{{% /lang %}}
+{{% choosable language python %}}
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>apply_immediately=None<span class="p">, </span>arn=None<span class="p">, </span>availability_zones=None<span class="p">, </span>backup_retention_period=None<span class="p">, </span>cluster_identifier=None<span class="p">, </span>cluster_identifier_prefix=None<span class="p">, </span>cluster_members=None<span class="p">, </span>cluster_resource_id=None<span class="p">, </span>db_cluster_parameter_group_name=None<span class="p">, </span>db_subnet_group_name=None<span class="p">, </span>enabled_cloudwatch_logs_exports=None<span class="p">, </span>endpoint=None<span class="p">, </span>engine=None<span class="p">, </span>engine_version=None<span class="p">, </span>final_snapshot_identifier=None<span class="p">, </span>hosted_zone_id=None<span class="p">, </span>kms_key_id=None<span class="p">, </span>master_password=None<span class="p">, </span>master_username=None<span class="p">, </span>port=None<span class="p">, </span>preferred_backup_window=None<span class="p">, </span>preferred_maintenance_window=None<span class="p">, </span>reader_endpoint=None<span class="p">, </span>skip_final_snapshot=None<span class="p">, </span>snapshot_identifier=None<span class="p">, </span>storage_encrypted=None<span class="p">, </span>tags=None<span class="p">, </span>vpc_security_group_ids=None<span class="p">, __props__=None);</span></code></pre></div>
+{{% /choosable %}}
 
-{{% lang go %}}
+{{% choosable language go %}}
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCluster<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/docdb?tab=doc#ClusterState">ClusterState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/docdb?tab=doc#Cluster">Cluster</a></span>, error)</span></code></pre></div>
+{{% /choosable %}}
 
-<ul class="pl-10">
-    <li><strong>name</strong> &ndash; (Required) The unique name of the resulting resource.</li>
-    <li><strong>id</strong> &ndash; (Required) The _unique_ provider ID of the resource to lookup.</li>
-    <li><strong>state</strong> &ndash; (Optional) Any extra arguments used during the lookup.</li>
-    <li><strong>opts</strong> &ndash; (Optional) A bag of options that control this resource's behavior.</li>
-</ul>
+{{% choosable language csharp %}}
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Docdb.Cluster.html">Cluster</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Docdb.ClusterState.html">ClusterState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+{{% /choosable %}}
 
-{{% /lang %}}
+{{% choosable language nodejs %}}
 
-{{% lang csharp %}}
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resulting resource.</dd>
+    <dt class="property-required" title="Required">
+        <span>id</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The <em>unique</em> provider ID of the resource to lookup.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>state</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>Any extra arguments used during the lookup.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 
-<ul class="pl-10">
-    <li><strong>name</strong> &ndash; (Required) The unique name of the resulting resource.</li>
-    <li><strong>id</strong> &ndash; (Required) The _unique_ provider ID of the resource to lookup.</li>
-    <li><strong>state</strong> &ndash; (Optional) Any extra arguments used during the lookup.</li>
-    <li><strong>opts</strong> &ndash; (Optional) A bag of options that control this resource's behavior.</li>
-</ul>
+{{% /choosable %}}
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>resource_name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resulting resource.</dd>
+    <dt class="property-required" title="Optional">
+        <span>id</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The <em>unique</em> provider ID of the resource to lookup.</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resulting resource.</dd>
+    <dt class="property-required" title="Required">
+        <span>id</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The <em>unique</em> provider ID of the resource to lookup.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>state</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>Any extra arguments used during the lookup.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resulting resource.</dd>
+    <dt class="property-required" title="Required">
+        <span>id</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The <em>unique</em> provider ID of the resource to lookup.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>state</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>Any extra arguments used during the lookup.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
+
+{{% /choosable %}}
 
 The following state arguments are supported:
 
 
-{{< langchoose csharp nojavascript >}}
 
+{{% choosable language csharp %}}
+<dl class="resources-properties">
 
-{{% lang csharp %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Apply<wbr>Immediately</td>
-            <td class="align-top">
-                
-                <code>bool?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Specifies whether any cluster modifications
+    <dt class="property-optional"
+            title="Optional">
+        <span>Apply<wbr>Immediately</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool?</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether any cluster modifications
 are applied immediately, or during the next maintenance window. Default is
 `false`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Arn</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Amazon Resource Name (ARN) of cluster
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Amazon Resource Name (ARN) of cluster
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Availability<wbr>Zones</td>
-            <td class="align-top">
-                
-                <code>List<string>?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A list of EC2 Availability Zones that
+    <dt class="property-optional"
+            title="Optional">
+        <span>Availability<wbr>Zones</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List<string>?</span>
+    </dt>
+    <dd>{{% md %}}A list of EC2 Availability Zones that
 instances in the DB cluster can be created in.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Backup<wbr>Retention<wbr>Period</td>
-            <td class="align-top">
-                
-                <code>int?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The days to retain backups for. Default `1`
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Backup<wbr>Retention<wbr>Period</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int?</span>
+    </dt>
+    <dd>{{% md %}}The days to retain backups for. Default `1`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Cluster<wbr>Identifier</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The cluster identifier. If omitted, this provider will assign a random, unique identifier.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cluster<wbr>Identifier</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The cluster identifier. If omitted, this provider will assign a random, unique identifier.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Cluster<wbr>Identifier<wbr>Prefix</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Creates a unique cluster identifier beginning with the specified prefix. Conflicts with `cluster_identifer`.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cluster<wbr>Identifier<wbr>Prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Creates a unique cluster identifier beginning with the specified prefix. Conflicts with `cluster_identifer`.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Cluster<wbr>Members</td>
-            <td class="align-top">
-                
-                <code>List<string>?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-List of DocDB Instances that are a part of this cluster
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cluster<wbr>Members</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List<string>?</span>
+    </dt>
+    <dd>{{% md %}}List of DocDB Instances that are a part of this cluster
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Cluster<wbr>Resource<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The DocDB Cluster Resource ID
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cluster<wbr>Resource<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The DocDB Cluster Resource ID
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Db<wbr>Cluster<wbr>Parameter<wbr>Group<wbr>Name</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A cluster parameter group to associate with the cluster.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Db<wbr>Cluster<wbr>Parameter<wbr>Group<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}A cluster parameter group to associate with the cluster.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Db<wbr>Subnet<wbr>Group<wbr>Name</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A DB subnet group to associate with this DB instance.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Db<wbr>Subnet<wbr>Group<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}A DB subnet group to associate with this DB instance.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Enabled<wbr>Cloudwatch<wbr>Logs<wbr>Exports</td>
-            <td class="align-top">
-                
-                <code>List<string>?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-List of log types to export to cloudwatch. If omitted, no logs will be exported.
+    <dt class="property-optional"
+            title="Optional">
+        <span>Enabled<wbr>Cloudwatch<wbr>Logs<wbr>Exports</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List<string>?</span>
+    </dt>
+    <dd>{{% md %}}List of log types to export to cloudwatch. If omitted, no logs will be exported.
 The following log types are supported: `audit`, `profiler`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Endpoint</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The DNS address of the DocDB instance
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Endpoint</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The DNS address of the DocDB instance
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Engine</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The name of the database engine to be used for this DB cluster. Defaults to `docdb`. Valid Values: `docdb`
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Engine</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The name of the database engine to be used for this DB cluster. Defaults to `docdb`. Valid Values: `docdb`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Engine<wbr>Version</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The database engine version. Updating this argument results in an outage.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Engine<wbr>Version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The database engine version. Updating this argument results in an outage.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Final<wbr>Snapshot<wbr>Identifier</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The name of your final DB snapshot
+    <dt class="property-optional"
+            title="Optional">
+        <span>Final<wbr>Snapshot<wbr>Identifier</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The name of your final DB snapshot
 when this DB cluster is deleted. If omitted, no final snapshot will be
 made.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Hosted<wbr>Zone<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The Route53 Hosted Zone ID of the endpoint
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Hosted<wbr>Zone<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The Route53 Hosted Zone ID of the endpoint
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Kms<wbr>Key<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ARN for the KMS encryption key. When specifying `kms_key_id`, `storage_encrypted` needs to be set to true.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Kms<wbr>Key<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The ARN for the KMS encryption key. When specifying `kms_key_id`, `storage_encrypted` needs to be set to true.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Master<wbr>Password</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Password for the master DB user. Note that this may
+    <dt class="property-optional"
+            title="Optional">
+        <span>Master<wbr>Password</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Password for the master DB user. Note that this may
 show up in logs, and it will be stored in the state file. Please refer to the DocDB Naming Constraints.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Master<wbr>Username</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Username for the master DB user. 
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Master<wbr>Username</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Username for the master DB user. 
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Port</td>
-            <td class="align-top">
-                
-                <code>int?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The port on which the DB accepts connections
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int?</span>
+    </dt>
+    <dd>{{% md %}}The port on which the DB accepts connections
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Preferred<wbr>Backup<wbr>Window</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.Time in UTC
+    <dt class="property-optional"
+            title="Optional">
+        <span>Preferred<wbr>Backup<wbr>Window</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.Time in UTC
 Default: A 30-minute window selected at random from an 8-hour block of time per region. e.g. 04:00-09:00
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Preferred<wbr>Maintenance<wbr>Window</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Preferred<wbr>Maintenance<wbr>Window</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Reader<wbr>Endpoint</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A read-only endpoint for the DocDB cluster, automatically load-balanced across replicas
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Reader<wbr>Endpoint</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}A read-only endpoint for the DocDB cluster, automatically load-balanced across replicas
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Skip<wbr>Final<wbr>Snapshot</td>
-            <td class="align-top">
-                
-                <code>bool?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Determines whether a final DB snapshot is created before the DB cluster is deleted. If true is specified, no DB snapshot is created. If false is specified, a DB snapshot is created before the DB cluster is deleted, using the value from `final_snapshot_identifier`. Default is `false`.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Skip<wbr>Final<wbr>Snapshot</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool?</span>
+    </dt>
+    <dd>{{% md %}}Determines whether a final DB snapshot is created before the DB cluster is deleted. If true is specified, no DB snapshot is created. If false is specified, a DB snapshot is created before the DB cluster is deleted, using the value from `final_snapshot_identifier`. Default is `false`.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Snapshot<wbr>Identifier</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Specifies whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a DB cluster snapshot, or the ARN when specifying a DB snapshot.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Snapshot<wbr>Identifier</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a DB cluster snapshot, or the ARN when specifying a DB snapshot.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Storage<wbr>Encrypted</td>
-            <td class="align-top">
-                
-                <code>bool?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Specifies whether the DB cluster is encrypted. The default is `false`.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Storage<wbr>Encrypted</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool?</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the DB cluster is encrypted. The default is `false`.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Tags</td>
-            <td class="align-top">
-                
-                <code>Dictionary<string, object>?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A mapping of tags to assign to the DB cluster.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary<string, object>?</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the DB cluster.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Vpc<wbr>Security<wbr>Group<wbr>Ids</td>
-            <td class="align-top">
-                
-                <code>List<string>?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-List of VPC security groups to associate
+    <dt class="property-optional"
+            title="Optional">
+        <span>Vpc<wbr>Security<wbr>Group<wbr>Ids</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List<string>?</span>
+    </dt>
+    <dd>{{% md %}}List of VPC security groups to associate
 with the Cluster
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language go %}}
+<dl class="resources-properties">
 
-
-{{% lang go %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Apply<wbr>Immediately</td>
-            <td class="align-top">
-                
-                <code>*bool</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Specifies whether any cluster modifications
+    <dt class="property-optional"
+            title="Optional">
+        <span>Apply<wbr>Immediately</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether any cluster modifications
 are applied immediately, or during the next maintenance window. Default is
 `false`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Arn</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Amazon Resource Name (ARN) of cluster
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}Amazon Resource Name (ARN) of cluster
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Availability<wbr>Zones</td>
-            <td class="align-top">
-                
-                <code>[]string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A list of EC2 Availability Zones that
+    <dt class="property-optional"
+            title="Optional">
+        <span>Availability<wbr>Zones</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of EC2 Availability Zones that
 instances in the DB cluster can be created in.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Backup<wbr>Retention<wbr>Period</td>
-            <td class="align-top">
-                
-                <code>*int</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The days to retain backups for. Default `1`
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Backup<wbr>Retention<wbr>Period</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*int</span>
+    </dt>
+    <dd>{{% md %}}The days to retain backups for. Default `1`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Cluster<wbr>Identifier</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The cluster identifier. If omitted, this provider will assign a random, unique identifier.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cluster<wbr>Identifier</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The cluster identifier. If omitted, this provider will assign a random, unique identifier.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Cluster<wbr>Identifier<wbr>Prefix</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Creates a unique cluster identifier beginning with the specified prefix. Conflicts with `cluster_identifer`.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cluster<wbr>Identifier<wbr>Prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}Creates a unique cluster identifier beginning with the specified prefix. Conflicts with `cluster_identifer`.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Cluster<wbr>Members</td>
-            <td class="align-top">
-                
-                <code>[]string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-List of DocDB Instances that are a part of this cluster
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cluster<wbr>Members</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of DocDB Instances that are a part of this cluster
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Cluster<wbr>Resource<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The DocDB Cluster Resource ID
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cluster<wbr>Resource<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The DocDB Cluster Resource ID
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Db<wbr>Cluster<wbr>Parameter<wbr>Group<wbr>Name</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A cluster parameter group to associate with the cluster.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Db<wbr>Cluster<wbr>Parameter<wbr>Group<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}A cluster parameter group to associate with the cluster.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Db<wbr>Subnet<wbr>Group<wbr>Name</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A DB subnet group to associate with this DB instance.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Db<wbr>Subnet<wbr>Group<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}A DB subnet group to associate with this DB instance.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Enabled<wbr>Cloudwatch<wbr>Logs<wbr>Exports</td>
-            <td class="align-top">
-                
-                <code>[]string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-List of log types to export to cloudwatch. If omitted, no logs will be exported.
+    <dt class="property-optional"
+            title="Optional">
+        <span>Enabled<wbr>Cloudwatch<wbr>Logs<wbr>Exports</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of log types to export to cloudwatch. If omitted, no logs will be exported.
 The following log types are supported: `audit`, `profiler`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Endpoint</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The DNS address of the DocDB instance
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Endpoint</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The DNS address of the DocDB instance
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Engine</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The name of the database engine to be used for this DB cluster. Defaults to `docdb`. Valid Values: `docdb`
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Engine</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The name of the database engine to be used for this DB cluster. Defaults to `docdb`. Valid Values: `docdb`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Engine<wbr>Version</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The database engine version. Updating this argument results in an outage.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Engine<wbr>Version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The database engine version. Updating this argument results in an outage.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Final<wbr>Snapshot<wbr>Identifier</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The name of your final DB snapshot
+    <dt class="property-optional"
+            title="Optional">
+        <span>Final<wbr>Snapshot<wbr>Identifier</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The name of your final DB snapshot
 when this DB cluster is deleted. If omitted, no final snapshot will be
 made.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Hosted<wbr>Zone<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The Route53 Hosted Zone ID of the endpoint
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Hosted<wbr>Zone<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The Route53 Hosted Zone ID of the endpoint
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Kms<wbr>Key<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ARN for the KMS encryption key. When specifying `kms_key_id`, `storage_encrypted` needs to be set to true.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Kms<wbr>Key<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The ARN for the KMS encryption key. When specifying `kms_key_id`, `storage_encrypted` needs to be set to true.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Master<wbr>Password</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Password for the master DB user. Note that this may
+    <dt class="property-optional"
+            title="Optional">
+        <span>Master<wbr>Password</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}Password for the master DB user. Note that this may
 show up in logs, and it will be stored in the state file. Please refer to the DocDB Naming Constraints.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Master<wbr>Username</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Username for the master DB user. 
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Master<wbr>Username</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}Username for the master DB user. 
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Port</td>
-            <td class="align-top">
-                
-                <code>*int</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The port on which the DB accepts connections
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*int</span>
+    </dt>
+    <dd>{{% md %}}The port on which the DB accepts connections
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Preferred<wbr>Backup<wbr>Window</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.Time in UTC
+    <dt class="property-optional"
+            title="Optional">
+        <span>Preferred<wbr>Backup<wbr>Window</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.Time in UTC
 Default: A 30-minute window selected at random from an 8-hour block of time per region. e.g. 04:00-09:00
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Preferred<wbr>Maintenance<wbr>Window</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Preferred<wbr>Maintenance<wbr>Window</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Reader<wbr>Endpoint</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A read-only endpoint for the DocDB cluster, automatically load-balanced across replicas
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Reader<wbr>Endpoint</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}A read-only endpoint for the DocDB cluster, automatically load-balanced across replicas
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Skip<wbr>Final<wbr>Snapshot</td>
-            <td class="align-top">
-                
-                <code>*bool</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Determines whether a final DB snapshot is created before the DB cluster is deleted. If true is specified, no DB snapshot is created. If false is specified, a DB snapshot is created before the DB cluster is deleted, using the value from `final_snapshot_identifier`. Default is `false`.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Skip<wbr>Final<wbr>Snapshot</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*bool</span>
+    </dt>
+    <dd>{{% md %}}Determines whether a final DB snapshot is created before the DB cluster is deleted. If true is specified, no DB snapshot is created. If false is specified, a DB snapshot is created before the DB cluster is deleted, using the value from `final_snapshot_identifier`. Default is `false`.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Snapshot<wbr>Identifier</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Specifies whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a DB cluster snapshot, or the ARN when specifying a DB snapshot.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Snapshot<wbr>Identifier</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a DB cluster snapshot, or the ARN when specifying a DB snapshot.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Storage<wbr>Encrypted</td>
-            <td class="align-top">
-                
-                <code>*bool</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Specifies whether the DB cluster is encrypted. The default is `false`.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Storage<wbr>Encrypted</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the DB cluster is encrypted. The default is `false`.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Tags</td>
-            <td class="align-top">
-                
-                <code>map[string]interface{}</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A mapping of tags to assign to the DB cluster.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the DB cluster.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Vpc<wbr>Security<wbr>Group<wbr>Ids</td>
-            <td class="align-top">
-                
-                <code>[]string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-List of VPC security groups to associate
+    <dt class="property-optional"
+            title="Optional">
+        <span>Vpc<wbr>Security<wbr>Group<wbr>Ids</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of VPC security groups to associate
 with the Cluster
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
-
-{{% lang nodejs %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">apply<wbr>Immediately</td>
-            <td class="align-top">
-                
-                <code>boolean?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Specifies whether any cluster modifications
+    <dt class="property-optional"
+            title="Optional">
+        <span>apply<wbr>Immediately</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean?</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether any cluster modifications
 are applied immediately, or during the next maintenance window. Default is
 `false`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">arn</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Amazon Resource Name (ARN) of cluster
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Amazon Resource Name (ARN) of cluster
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">availability<wbr>Zones</td>
-            <td class="align-top">
-                
-                <code>string[]?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A list of EC2 Availability Zones that
+    <dt class="property-optional"
+            title="Optional">
+        <span>availability<wbr>Zones</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]?</span>
+    </dt>
+    <dd>{{% md %}}A list of EC2 Availability Zones that
 instances in the DB cluster can be created in.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">backup<wbr>Retention<wbr>Period</td>
-            <td class="align-top">
-                
-                <code>number?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The days to retain backups for. Default `1`
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>backup<wbr>Retention<wbr>Period</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number?</span>
+    </dt>
+    <dd>{{% md %}}The days to retain backups for. Default `1`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">cluster<wbr>Identifier</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The cluster identifier. If omitted, this provider will assign a random, unique identifier.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>cluster<wbr>Identifier</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The cluster identifier. If omitted, this provider will assign a random, unique identifier.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">cluster<wbr>Identifier<wbr>Prefix</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Creates a unique cluster identifier beginning with the specified prefix. Conflicts with `cluster_identifer`.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>cluster<wbr>Identifier<wbr>Prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Creates a unique cluster identifier beginning with the specified prefix. Conflicts with `cluster_identifer`.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">cluster<wbr>Members</td>
-            <td class="align-top">
-                
-                <code>string[]?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-List of DocDB Instances that are a part of this cluster
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>cluster<wbr>Members</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]?</span>
+    </dt>
+    <dd>{{% md %}}List of DocDB Instances that are a part of this cluster
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">cluster<wbr>Resource<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The DocDB Cluster Resource ID
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>cluster<wbr>Resource<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The DocDB Cluster Resource ID
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">db<wbr>Cluster<wbr>Parameter<wbr>Group<wbr>Name</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A cluster parameter group to associate with the cluster.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>db<wbr>Cluster<wbr>Parameter<wbr>Group<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}A cluster parameter group to associate with the cluster.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">db<wbr>Subnet<wbr>Group<wbr>Name</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A DB subnet group to associate with this DB instance.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>db<wbr>Subnet<wbr>Group<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}A DB subnet group to associate with this DB instance.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">enabled<wbr>Cloudwatch<wbr>Logs<wbr>Exports</td>
-            <td class="align-top">
-                
-                <code>string[]?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-List of log types to export to cloudwatch. If omitted, no logs will be exported.
+    <dt class="property-optional"
+            title="Optional">
+        <span>enabled<wbr>Cloudwatch<wbr>Logs<wbr>Exports</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]?</span>
+    </dt>
+    <dd>{{% md %}}List of log types to export to cloudwatch. If omitted, no logs will be exported.
 The following log types are supported: `audit`, `profiler`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">endpoint</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The DNS address of the DocDB instance
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>endpoint</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The DNS address of the DocDB instance
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">engine</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The name of the database engine to be used for this DB cluster. Defaults to `docdb`. Valid Values: `docdb`
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>engine</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The name of the database engine to be used for this DB cluster. Defaults to `docdb`. Valid Values: `docdb`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">engine<wbr>Version</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The database engine version. Updating this argument results in an outage.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>engine<wbr>Version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The database engine version. Updating this argument results in an outage.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">final<wbr>Snapshot<wbr>Identifier</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The name of your final DB snapshot
+    <dt class="property-optional"
+            title="Optional">
+        <span>final<wbr>Snapshot<wbr>Identifier</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The name of your final DB snapshot
 when this DB cluster is deleted. If omitted, no final snapshot will be
 made.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">hosted<wbr>Zone<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The Route53 Hosted Zone ID of the endpoint
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>hosted<wbr>Zone<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The Route53 Hosted Zone ID of the endpoint
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">kms<wbr>Key<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ARN for the KMS encryption key. When specifying `kms_key_id`, `storage_encrypted` needs to be set to true.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>kms<wbr>Key<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The ARN for the KMS encryption key. When specifying `kms_key_id`, `storage_encrypted` needs to be set to true.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">master<wbr>Password</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Password for the master DB user. Note that this may
+    <dt class="property-optional"
+            title="Optional">
+        <span>master<wbr>Password</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Password for the master DB user. Note that this may
 show up in logs, and it will be stored in the state file. Please refer to the DocDB Naming Constraints.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">master<wbr>Username</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Username for the master DB user. 
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>master<wbr>Username</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Username for the master DB user. 
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">port</td>
-            <td class="align-top">
-                
-                <code>number?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The port on which the DB accepts connections
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number?</span>
+    </dt>
+    <dd>{{% md %}}The port on which the DB accepts connections
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">preferred<wbr>Backup<wbr>Window</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.Time in UTC
+    <dt class="property-optional"
+            title="Optional">
+        <span>preferred<wbr>Backup<wbr>Window</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.Time in UTC
 Default: A 30-minute window selected at random from an 8-hour block of time per region. e.g. 04:00-09:00
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">preferred<wbr>Maintenance<wbr>Window</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>preferred<wbr>Maintenance<wbr>Window</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">reader<wbr>Endpoint</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A read-only endpoint for the DocDB cluster, automatically load-balanced across replicas
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>reader<wbr>Endpoint</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}A read-only endpoint for the DocDB cluster, automatically load-balanced across replicas
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">skip<wbr>Final<wbr>Snapshot</td>
-            <td class="align-top">
-                
-                <code>boolean?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Determines whether a final DB snapshot is created before the DB cluster is deleted. If true is specified, no DB snapshot is created. If false is specified, a DB snapshot is created before the DB cluster is deleted, using the value from `final_snapshot_identifier`. Default is `false`.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>skip<wbr>Final<wbr>Snapshot</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean?</span>
+    </dt>
+    <dd>{{% md %}}Determines whether a final DB snapshot is created before the DB cluster is deleted. If true is specified, no DB snapshot is created. If false is specified, a DB snapshot is created before the DB cluster is deleted, using the value from `final_snapshot_identifier`. Default is `false`.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">snapshot<wbr>Identifier</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Specifies whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a DB cluster snapshot, or the ARN when specifying a DB snapshot.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>snapshot<wbr>Identifier</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a DB cluster snapshot, or the ARN when specifying a DB snapshot.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">storage<wbr>Encrypted</td>
-            <td class="align-top">
-                
-                <code>boolean?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Specifies whether the DB cluster is encrypted. The default is `false`.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>storage<wbr>Encrypted</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean?</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the DB cluster is encrypted. The default is `false`.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">tags</td>
-            <td class="align-top">
-                
-                <code>{[key: string]: any}?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A mapping of tags to assign to the DB cluster.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}?</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the DB cluster.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">vpc<wbr>Security<wbr>Group<wbr>Ids</td>
-            <td class="align-top">
-                
-                <code>string[]?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-List of VPC security groups to associate
+    <dt class="property-optional"
+            title="Optional">
+        <span>vpc<wbr>Security<wbr>Group<wbr>Ids</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]?</span>
+    </dt>
+    <dd>{{% md %}}List of VPC security groups to associate
 with the Cluster
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
 
-
-{{% lang python %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">apply_<wbr>immediately</td>
-            <td class="align-top">
-                
-                <code>bool</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Specifies whether any cluster modifications
+    <dt class="property-optional"
+            title="Optional">
+        <span>apply_<wbr>immediately</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether any cluster modifications
 are applied immediately, or during the next maintenance window. Default is
 `false`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">arn</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Amazon Resource Name (ARN) of cluster
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Amazon Resource Name (ARN) of cluster
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">availability_<wbr>zones</td>
-            <td class="align-top">
-                
-                <code>List[str]</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A list of EC2 Availability Zones that
+    <dt class="property-optional"
+            title="Optional">
+        <span>availability_<wbr>zones</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of EC2 Availability Zones that
 instances in the DB cluster can be created in.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">backup_<wbr>retention_<wbr>period</td>
-            <td class="align-top">
-                
-                <code>float</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The days to retain backups for. Default `1`
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>backup_<wbr>retention_<wbr>period</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The days to retain backups for. Default `1`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">cluster_<wbr>identifier</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The cluster identifier. If omitted, this provider will assign a random, unique identifier.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>cluster_<wbr>identifier</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The cluster identifier. If omitted, this provider will assign a random, unique identifier.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">cluster_<wbr>identifier_<wbr>prefix</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Creates a unique cluster identifier beginning with the specified prefix. Conflicts with `cluster_identifer`.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>cluster_<wbr>identifier_<wbr>prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Creates a unique cluster identifier beginning with the specified prefix. Conflicts with `cluster_identifer`.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">cluster_<wbr>members</td>
-            <td class="align-top">
-                
-                <code>List[str]</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-List of DocDB Instances that are a part of this cluster
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>cluster_<wbr>members</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}List of DocDB Instances that are a part of this cluster
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">cluster_<wbr>resource_<wbr>id</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The DocDB Cluster Resource ID
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>cluster_<wbr>resource_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The DocDB Cluster Resource ID
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">db_<wbr>cluster_<wbr>parameter_<wbr>group_<wbr>name</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A cluster parameter group to associate with the cluster.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>db_<wbr>cluster_<wbr>parameter_<wbr>group_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A cluster parameter group to associate with the cluster.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">db_<wbr>subnet_<wbr>group_<wbr>name</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A DB subnet group to associate with this DB instance.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>db_<wbr>subnet_<wbr>group_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A DB subnet group to associate with this DB instance.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">enabled_<wbr>cloudwatch_<wbr>logs_<wbr>exports</td>
-            <td class="align-top">
-                
-                <code>List[str]</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-List of log types to export to cloudwatch. If omitted, no logs will be exported.
+    <dt class="property-optional"
+            title="Optional">
+        <span>enabled_<wbr>cloudwatch_<wbr>logs_<wbr>exports</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}List of log types to export to cloudwatch. If omitted, no logs will be exported.
 The following log types are supported: `audit`, `profiler`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">endpoint</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The DNS address of the DocDB instance
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>endpoint</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The DNS address of the DocDB instance
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">engine</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The name of the database engine to be used for this DB cluster. Defaults to `docdb`. Valid Values: `docdb`
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>engine</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the database engine to be used for this DB cluster. Defaults to `docdb`. Valid Values: `docdb`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">engine_<wbr>version</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The database engine version. Updating this argument results in an outage.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>engine_<wbr>version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The database engine version. Updating this argument results in an outage.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">final_<wbr>snapshot_<wbr>identifier</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The name of your final DB snapshot
+    <dt class="property-optional"
+            title="Optional">
+        <span>final_<wbr>snapshot_<wbr>identifier</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of your final DB snapshot
 when this DB cluster is deleted. If omitted, no final snapshot will be
 made.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">hosted_<wbr>zone_<wbr>id</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The Route53 Hosted Zone ID of the endpoint
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>hosted_<wbr>zone_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Route53 Hosted Zone ID of the endpoint
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">kms_<wbr>key_<wbr>id</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ARN for the KMS encryption key. When specifying `kms_key_id`, `storage_encrypted` needs to be set to true.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>kms_<wbr>key_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARN for the KMS encryption key. When specifying `kms_key_id`, `storage_encrypted` needs to be set to true.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">master_<wbr>password</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Password for the master DB user. Note that this may
+    <dt class="property-optional"
+            title="Optional">
+        <span>master_<wbr>password</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Password for the master DB user. Note that this may
 show up in logs, and it will be stored in the state file. Please refer to the DocDB Naming Constraints.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">master_<wbr>username</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Username for the master DB user. 
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>master_<wbr>username</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Username for the master DB user. 
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">port</td>
-            <td class="align-top">
-                
-                <code>float</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The port on which the DB accepts connections
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The port on which the DB accepts connections
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">preferred_<wbr>backup_<wbr>window</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.Time in UTC
+    <dt class="property-optional"
+            title="Optional">
+        <span>preferred_<wbr>backup_<wbr>window</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.Time in UTC
 Default: A 30-minute window selected at random from an 8-hour block of time per region. e.g. 04:00-09:00
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">preferred_<wbr>maintenance_<wbr>window</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>preferred_<wbr>maintenance_<wbr>window</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">reader_<wbr>endpoint</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A read-only endpoint for the DocDB cluster, automatically load-balanced across replicas
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>reader_<wbr>endpoint</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A read-only endpoint for the DocDB cluster, automatically load-balanced across replicas
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">skip_<wbr>final_<wbr>snapshot</td>
-            <td class="align-top">
-                
-                <code>bool</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Determines whether a final DB snapshot is created before the DB cluster is deleted. If true is specified, no DB snapshot is created. If false is specified, a DB snapshot is created before the DB cluster is deleted, using the value from `final_snapshot_identifier`. Default is `false`.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>skip_<wbr>final_<wbr>snapshot</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Determines whether a final DB snapshot is created before the DB cluster is deleted. If true is specified, no DB snapshot is created. If false is specified, a DB snapshot is created before the DB cluster is deleted, using the value from `final_snapshot_identifier`. Default is `false`.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">snapshot_<wbr>identifier</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Specifies whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a DB cluster snapshot, or the ARN when specifying a DB snapshot.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>snapshot_<wbr>identifier</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a DB cluster snapshot, or the ARN when specifying a DB snapshot.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">storage_<wbr>encrypted</td>
-            <td class="align-top">
-                
-                <code>bool</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Specifies whether the DB cluster is encrypted. The default is `false`.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>storage_<wbr>encrypted</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the DB cluster is encrypted. The default is `false`.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">tags</td>
-            <td class="align-top">
-                
-                <code>Dict[str, Any]</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A mapping of tags to assign to the DB cluster.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the DB cluster.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">vpc_<wbr>security_<wbr>group_<wbr>ids</td>
-            <td class="align-top">
-                
-                <code>List[str]</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-List of VPC security groups to associate
+    <dt class="property-optional"
+            title="Optional">
+        <span>vpc_<wbr>security_<wbr>group_<wbr>ids</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}List of VPC security groups to associate
 with the Cluster
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
+</dl>
+{{% /choosable %}}
 
 
 
@@ -5022,4 +3319,16 @@ with the Cluster
 
 
 
+
+
+
+<h3>Package Details</h3>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
 

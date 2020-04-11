@@ -3,6 +3,8 @@
 
 set -o nounset -o errexit -o pipefail
 
+REPO_OVERRIDE=${1:-}
+
 TOOLS_REPOS=(
     "pulumi"
     "pulumi-aiven"
@@ -48,8 +50,8 @@ TOOLS_REPOS=(
     "pulumi-vsphere"
 )
 
-for repo in "${TOOLS_REPOS[@]}"
-do
+update_repo() {
+    repo=$1
     echo -e "\033[0;95m--- Updating repo pulumi/${repo} ---\033[0m"
     pushd . >/dev/null 2>&1
     cd "../${repo}"
@@ -62,4 +64,13 @@ do
     git -c advice.detachedHead=false checkout $LATEST_RELEASE >/dev/null
     echo -e "\033[0;96m$LATEST_RELEASE\033[0m"
     popd >/dev/null 2>&1
-done
+}
+
+if [ -z "${REPO_OVERRIDE:-}" ]; then
+    for repo in "${TOOLS_REPOS[@]}"
+    do
+        update_repo ${repo}
+    done
+else
+    update_repo ${REPO_OVERRIDE}
+fi

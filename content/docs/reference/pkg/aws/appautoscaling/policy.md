@@ -3,14 +3,15 @@
 title: "Policy"
 block_external_search_index: true
 ---
-<style>
-table td p { margin-top: 0; margin-bottom: 0; }
-</style>
+
+
 
 Provides an Application AutoScaling Policy resource.
 
+{{% examples %}}
 ## Example Usage
 
+{{% example %}}
 ### DynamoDB Table Autoscaling
 
 ```typescript
@@ -39,6 +40,8 @@ const dynamodbTableReadPolicy = new aws.appautoscaling.Policy("dynamodb_table_re
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### ECS Service Autoscaling
 
 ```typescript
@@ -70,6 +73,8 @@ const ecsPolicy = new aws.appautoscaling.Policy("ecs_policy", {
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Preserve desired count when updating an autoscaled ECS Service
 
 ```typescript
@@ -80,9 +85,11 @@ const ecsService = new aws.ecs.Service("ecs_service", {
     cluster: "clusterName",
     desiredCount: 2,
     taskDefinition: "taskDefinitionFamily:1",
-}, {ignoreChanges: ["desiredCount"]});
+}, { ignoreChanges: ["desiredCount"] });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Aurora Read Replica Autoscaling
 
 ```typescript
@@ -112,6 +119,8 @@ const replicasPolicy = new aws.appautoscaling.Policy("replicas", {
 });
 ```
 
+{{% /example %}}
+{{% /examples %}}
 ## Nested fields
 
 ### `target_tracking_scaling_policy_configuration`
@@ -136,558 +145,392 @@ const replicasPolicy = new aws.appautoscaling.Policy("replicas", {
 * `predefined_metric_type` - (Required) The metric type.
 * `resource_label` - (Optional) Reserved for future use.
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appautoscaling_policy.html.markdown.
-
 
 
 ## Create a Policy Resource
 
-{{< langchoose csharp nojavascript >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/appautoscaling/#Policy">Policy</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/appautoscaling/#PolicyArgs">PolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+{{% choosable language nodejs %}}
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/appautoscaling/#Policy">Policy</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/appautoscaling/#PolicyArgs">PolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+{{% /choosable %}}
 
+{{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Policy</span><span class="p">(resource_name, opts=None, </span>name=None<span class="p">, </span>policy_type=None<span class="p">, </span>resource_id=None<span class="p">, </span>scalable_dimension=None<span class="p">, </span>service_namespace=None<span class="p">, </span>step_scaling_policy_configuration=None<span class="p">, </span>target_tracking_scaling_policy_configuration=None<span class="p">, __props__=None);</span></code></pre></div>
+{{% /choosable %}}
 
+{{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewPolicy<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/appautoscaling?tab=doc#PolicyArgs">PolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/appautoscaling?tab=doc#Policy">Policy</a></span>, error)</span></code></pre></div>
-
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Appautoscaling.Policy.html">Policy</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Appautoscaling.PolicyArgs.html">PolicyArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
-
-Creates a Policy resource with the given unique name, arguments, and options.
-
-{{% lang nodejs %}}
-
-<ul class="pl-10">
-    <li><strong>name</strong> &ndash; (Required) The unique name of the resulting resource.</li>
-    <li><strong>args</strong> &ndash;  (Optional)  The arguments to use to populate this resource's properties.</li>
-    <li><strong>opts</strong> &ndash; (Optional) A bag of options that control this resource's behavior.</li>
-</ul>
-
-{{% /lang %}}
-
-{{% lang go %}}
-
-<ul class="pl-10">
-    <li><strong>name</strong> &ndash; (Required) The unique name of the resulting resource.</li>
-    <li><strong>args</strong> &ndash;  (Optional)  The arguments to use to populate this resource's properties.</li>
-    <li><strong>opts</strong> &ndash; (Optional) A bag of options that control this resource's behavior.</li>
-</ul>
-
-{{% /lang %}}
-
-{{% lang csharp %}}
-
-<ul class="pl-10">
-    <li><strong>name</strong> &ndash; (Required) The unique name of the resulting resource.</li>
-    <li><strong>args</strong> &ndash;  (Optional)  The arguments to use to populate this resource's properties.</li>
-    <li><strong>opts</strong> &ndash; (Optional) A bag of options that control this resource's behavior.</li>
-</ul>
-
-{{% /lang %}}
-
-The following arguments are supported:
-
-
-{{< langchoose csharp nojavascript >}}
-
-
-{{% lang csharp %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Name</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The name of the policy.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Policy<wbr>Type</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-For DynamoDB, only `TargetTrackingScaling` is supported. For Amazon ECS, Spot Fleet, and Amazon RDS, both `StepScaling` and `TargetTrackingScaling` are supported. For any other service, only `StepScaling` is supported. Defaults to `StepScaling`.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Resource<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The resource type and unique identifier string for the resource associated with the scaling policy. Documentation can be found in the `ResourceId` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Scalable<wbr>Dimension</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The scalable dimension of the scalable target. Documentation can be found in the `ScalableDimension` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Service<wbr>Namespace</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The AWS service namespace of the scalable target. Documentation can be found in the `ServiceNamespace` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Step<wbr>Scaling<wbr>Policy<wbr>Configuration</td>
-            <td class="align-top">
-                
-                <code><a href="#policystepscalingpolicyconfiguration">Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Args?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Step scaling policy configuration, requires `policy_type = &#34;StepScaling&#34;` (default). See supported fields below.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration</td>
-            <td class="align-top">
-                
-                <code><a href="#policytargettrackingscalingpolicyconfiguration">Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Args?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A target tracking policy, requires `policy_type = &#34;TargetTrackingScaling&#34;`. See supported fields below.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang go %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Name</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The name of the policy.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Policy<wbr>Type</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-For DynamoDB, only `TargetTrackingScaling` is supported. For Amazon ECS, Spot Fleet, and Amazon RDS, both `StepScaling` and `TargetTrackingScaling` are supported. For any other service, only `StepScaling` is supported. Defaults to `StepScaling`.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Resource<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The resource type and unique identifier string for the resource associated with the scaling policy. Documentation can be found in the `ResourceId` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Scalable<wbr>Dimension</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The scalable dimension of the scalable target. Documentation can be found in the `ScalableDimension` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Service<wbr>Namespace</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The AWS service namespace of the scalable target. Documentation can be found in the `ServiceNamespace` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Step<wbr>Scaling<wbr>Policy<wbr>Configuration</td>
-            <td class="align-top">
-                
-                <code><a href="#policystepscalingpolicyconfiguration">*Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Step scaling policy configuration, requires `policy_type = &#34;StepScaling&#34;` (default). See supported fields below.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration</td>
-            <td class="align-top">
-                
-                <code><a href="#policytargettrackingscalingpolicyconfiguration">*Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A target tracking policy, requires `policy_type = &#34;TargetTrackingScaling&#34;`. See supported fields below.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang nodejs %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">name</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The name of the policy.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">policy<wbr>Type</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-For DynamoDB, only `TargetTrackingScaling` is supported. For Amazon ECS, Spot Fleet, and Amazon RDS, both `StepScaling` and `TargetTrackingScaling` are supported. For any other service, only `StepScaling` is supported. Defaults to `StepScaling`.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">resource<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The resource type and unique identifier string for the resource associated with the scaling policy. Documentation can be found in the `ResourceId` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">scalable<wbr>Dimension</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The scalable dimension of the scalable target. Documentation can be found in the `ScalableDimension` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">service<wbr>Namespace</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The AWS service namespace of the scalable target. Documentation can be found in the `ServiceNamespace` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">step<wbr>Scaling<wbr>Policy<wbr>Configuration</td>
-            <td class="align-top">
-                
-                <code><a href="#policystepscalingpolicyconfiguration">Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Step scaling policy configuration, requires `policy_type = &#34;StepScaling&#34;` (default). See supported fields below.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration</td>
-            <td class="align-top">
-                
-                <code><a href="#policytargettrackingscalingpolicyconfiguration">Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A target tracking policy, requires `policy_type = &#34;TargetTrackingScaling&#34;`. See supported fields below.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang python %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">name</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The name of the policy.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">policy_<wbr>type</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-For DynamoDB, only `TargetTrackingScaling` is supported. For Amazon ECS, Spot Fleet, and Amazon RDS, both `StepScaling` and `TargetTrackingScaling` are supported. For any other service, only `StepScaling` is supported. Defaults to `StepScaling`.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">resource_<wbr>id</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The resource type and unique identifier string for the resource associated with the scaling policy. Documentation can be found in the `ResourceId` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">scalable_<wbr>dimension</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The scalable dimension of the scalable target. Documentation can be found in the `ScalableDimension` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">service_<wbr>namespace</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The AWS service namespace of the scalable target. Documentation can be found in the `ServiceNamespace` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">step_<wbr>scaling_<wbr>policy_<wbr>configuration</td>
-            <td class="align-top">
-                
-                <code><a href="#policystepscalingpolicyconfiguration">Dict[Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Step scaling policy configuration, requires `policy_type = &#34;StepScaling&#34;` (default). See supported fields below.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">target_<wbr>tracking_<wbr>scaling_<wbr>policy_<wbr>configuration</td>
-            <td class="align-top">
-                
-                <code><a href="#policytargettrackingscalingpolicyconfiguration">Dict[Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A target tracking policy, requires `policy_type = &#34;TargetTrackingScaling&#34;`. See supported fields below.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Appautoscaling.Policy.html">Policy</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppAutoScaling.PolicyArgs.html">PolicyArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The arguments to use to populate this resource's properties.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The arguments to use to populate this resource's properties.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The arguments to use to populate this resource's properties.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
+
+{{% /choosable %}}
+
+#### Resource Arguments
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The name of the policy.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Policy<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}For DynamoDB, only `TargetTrackingScaling` is supported. For Amazon ECS, Spot Fleet, and Amazon RDS, both `StepScaling` and `TargetTrackingScaling` are supported. For any other service, only `StepScaling` is supported. Defaults to `StepScaling`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Resource<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource type and unique identifier string for the resource associated with the scaling policy. Documentation can be found in the `ResourceId` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Scalable<wbr>Dimension</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The scalable dimension of the scalable target. Documentation can be found in the `ScalableDimension` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Service<wbr>Namespace</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The AWS service namespace of the scalable target. Documentation can be found in the `ServiceNamespace` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Step<wbr>Scaling<wbr>Policy<wbr>Configuration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policystepscalingpolicyconfiguration">Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Args?</a></span>
+    </dt>
+    <dd>{{% md %}}Step scaling policy configuration, requires `policy_type = "StepScaling"` (default). See supported fields below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policytargettrackingscalingpolicyconfiguration">Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Args?</a></span>
+    </dt>
+    <dd>{{% md %}}A target tracking policy, requires `policy_type = "TargetTrackingScaling"`. See supported fields below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The name of the policy.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Policy<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}For DynamoDB, only `TargetTrackingScaling` is supported. For Amazon ECS, Spot Fleet, and Amazon RDS, both `StepScaling` and `TargetTrackingScaling` are supported. For any other service, only `StepScaling` is supported. Defaults to `StepScaling`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Resource<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource type and unique identifier string for the resource associated with the scaling policy. Documentation can be found in the `ResourceId` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Scalable<wbr>Dimension</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The scalable dimension of the scalable target. Documentation can be found in the `ScalableDimension` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Service<wbr>Namespace</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The AWS service namespace of the scalable target. Documentation can be found in the `ServiceNamespace` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Step<wbr>Scaling<wbr>Policy<wbr>Configuration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policystepscalingpolicyconfiguration">*Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}Step scaling policy configuration, requires `policy_type = "StepScaling"` (default). See supported fields below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policytargettrackingscalingpolicyconfiguration">*Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}A target tracking policy, requires `policy_type = "TargetTrackingScaling"`. See supported fields below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The name of the policy.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>policy<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}For DynamoDB, only `TargetTrackingScaling` is supported. For Amazon ECS, Spot Fleet, and Amazon RDS, both `StepScaling` and `TargetTrackingScaling` are supported. For any other service, only `StepScaling` is supported. Defaults to `StepScaling`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>resource<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource type and unique identifier string for the resource associated with the scaling policy. Documentation can be found in the `ResourceId` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>scalable<wbr>Dimension</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The scalable dimension of the scalable target. Documentation can be found in the `ScalableDimension` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>service<wbr>Namespace</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The AWS service namespace of the scalable target. Documentation can be found in the `ServiceNamespace` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>step<wbr>Scaling<wbr>Policy<wbr>Configuration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policystepscalingpolicyconfiguration">Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration?</a></span>
+    </dt>
+    <dd>{{% md %}}Step scaling policy configuration, requires `policy_type = "StepScaling"` (default). See supported fields below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policytargettrackingscalingpolicyconfiguration">Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration?</a></span>
+    </dt>
+    <dd>{{% md %}}A target tracking policy, requires `policy_type = "TargetTrackingScaling"`. See supported fields below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the policy.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>policy_<wbr>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}For DynamoDB, only `TargetTrackingScaling` is supported. For Amazon ECS, Spot Fleet, and Amazon RDS, both `StepScaling` and `TargetTrackingScaling` are supported. For any other service, only `StepScaling` is supported. Defaults to `StepScaling`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>resource_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The resource type and unique identifier string for the resource associated with the scaling policy. Documentation can be found in the `ResourceId` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>scalable_<wbr>dimension</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The scalable dimension of the scalable target. Documentation can be found in the `ScalableDimension` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>service_<wbr>namespace</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The AWS service namespace of the scalable target. Documentation can be found in the `ServiceNamespace` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>step_<wbr>scaling_<wbr>policy_<wbr>configuration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policystepscalingpolicyconfiguration">Dict[Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration]</a></span>
+    </dt>
+    <dd>{{% md %}}Step scaling policy configuration, requires `policy_type = "StepScaling"` (default). See supported fields below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>target_<wbr>tracking_<wbr>scaling_<wbr>policy_<wbr>configuration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policytargettrackingscalingpolicyconfiguration">Dict[Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration]</a></span>
+    </dt>
+    <dd>{{% md %}}A target tracking policy, requires `policy_type = "TargetTrackingScaling"`. See supported fields below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
 
@@ -701,503 +544,321 @@ The following output properties are available:
 
 
 
-{{< langchoose csharp nojavascript >}}
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN assigned by AWS to the scaling policy.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the policy.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Policy<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}For DynamoDB, only `TargetTrackingScaling` is supported. For Amazon ECS, Spot Fleet, and Amazon RDS, both `StepScaling` and `TargetTrackingScaling` are supported. For any other service, only `StepScaling` is supported. Defaults to `StepScaling`.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Resource<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource type and unique identifier string for the resource associated with the scaling policy. Documentation can be found in the `ResourceId` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Scalable<wbr>Dimension</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The scalable dimension of the scalable target. Documentation can be found in the `ScalableDimension` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Service<wbr>Namespace</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The AWS service namespace of the scalable target. Documentation can be found in the `ServiceNamespace` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Step<wbr>Scaling<wbr>Policy<wbr>Configuration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policystepscalingpolicyconfiguration">Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration?</a></span>
+    </dt>
+    <dd>{{% md %}}Step scaling policy configuration, requires `policy_type = "StepScaling"` (default). See supported fields below.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policytargettrackingscalingpolicyconfiguration">Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration?</a></span>
+    </dt>
+    <dd>{{% md %}}A target tracking policy, requires `policy_type = "TargetTrackingScaling"`. See supported fields below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% lang csharp %}}
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN assigned by AWS to the scaling policy.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the policy.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Policy<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}For DynamoDB, only `TargetTrackingScaling` is supported. For Amazon ECS, Spot Fleet, and Amazon RDS, both `StepScaling` and `TargetTrackingScaling` are supported. For any other service, only `StepScaling` is supported. Defaults to `StepScaling`.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Resource<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource type and unique identifier string for the resource associated with the scaling policy. Documentation can be found in the `ResourceId` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Scalable<wbr>Dimension</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The scalable dimension of the scalable target. Documentation can be found in the `ScalableDimension` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Service<wbr>Namespace</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The AWS service namespace of the scalable target. Documentation can be found in the `ServiceNamespace` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Step<wbr>Scaling<wbr>Policy<wbr>Configuration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policystepscalingpolicyconfiguration">*Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}Step scaling policy configuration, requires `policy_type = "StepScaling"` (default). See supported fields below.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policytargettrackingscalingpolicyconfiguration">*Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}A target tracking policy, requires `policy_type = "TargetTrackingScaling"`. See supported fields below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Arn</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The ARN assigned by AWS to the scaling policy.
- {{% /md %}}
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Name</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The name of the policy.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN assigned by AWS to the scaling policy.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Policy<wbr>Type</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} For DynamoDB, only `TargetTrackingScaling` is supported. For Amazon ECS, Spot Fleet, and Amazon RDS, both `StepScaling` and `TargetTrackingScaling` are supported. For any other service, only `StepScaling` is supported. Defaults to `StepScaling`.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the policy.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Resource<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The resource type and unique identifier string for the resource associated with the scaling policy. Documentation can be found in the `ResourceId` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>policy<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}For DynamoDB, only `TargetTrackingScaling` is supported. For Amazon ECS, Spot Fleet, and Amazon RDS, both `StepScaling` and `TargetTrackingScaling` are supported. For any other service, only `StepScaling` is supported. Defaults to `StepScaling`.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Scalable<wbr>Dimension</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The scalable dimension of the scalable target. Documentation can be found in the `ScalableDimension` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>resource<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource type and unique identifier string for the resource associated with the scaling policy. Documentation can be found in the `ResourceId` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Service<wbr>Namespace</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The AWS service namespace of the scalable target. Documentation can be found in the `ServiceNamespace` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>scalable<wbr>Dimension</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The scalable dimension of the scalable target. Documentation can be found in the `ScalableDimension` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Step<wbr>Scaling<wbr>Policy<wbr>Configuration</td>
-            <td class="align-top">
-                
-                <code><a href="#policystepscalingpolicyconfiguration">Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} Step scaling policy configuration, requires `policy_type = &#34;StepScaling&#34;` (default). See supported fields below.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>service<wbr>Namespace</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The AWS service namespace of the scalable target. Documentation can be found in the `ServiceNamespace` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration</td>
-            <td class="align-top">
-                
-                <code><a href="#policytargettrackingscalingpolicyconfiguration">Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} A target tracking policy, requires `policy_type = &#34;TargetTrackingScaling&#34;`. See supported fields below.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>step<wbr>Scaling<wbr>Policy<wbr>Configuration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policystepscalingpolicyconfiguration">Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration?</a></span>
+    </dt>
+    <dd>{{% md %}}Step scaling policy configuration, requires `policy_type = "StepScaling"` (default). See supported fields below.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+    <dt class="property-"
+            title="">
+        <span>target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policytargettrackingscalingpolicyconfiguration">Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration?</a></span>
+    </dt>
+    <dd>{{% md %}}A target tracking policy, requires `policy_type = "TargetTrackingScaling"`. See supported fields below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
 
+    <dt class="property-"
+            title="">
+        <span>arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARN assigned by AWS to the scaling policy.
+{{% /md %}}</dd>
 
-{{% lang go %}}
+    <dt class="property-"
+            title="">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the policy.
+{{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>policy_<wbr>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}For DynamoDB, only `TargetTrackingScaling` is supported. For Amazon ECS, Spot Fleet, and Amazon RDS, both `StepScaling` and `TargetTrackingScaling` are supported. For any other service, only `StepScaling` is supported. Defaults to `StepScaling`.
+{{% /md %}}</dd>
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Arn</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The ARN assigned by AWS to the scaling policy.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>resource_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The resource type and unique identifier string for the resource associated with the scaling policy. Documentation can be found in the `ResourceId` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Name</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The name of the policy.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>scalable_<wbr>dimension</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The scalable dimension of the scalable target. Documentation can be found in the `ScalableDimension` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Policy<wbr>Type</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} For DynamoDB, only `TargetTrackingScaling` is supported. For Amazon ECS, Spot Fleet, and Amazon RDS, both `StepScaling` and `TargetTrackingScaling` are supported. For any other service, only `StepScaling` is supported. Defaults to `StepScaling`.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>service_<wbr>namespace</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The AWS service namespace of the scalable target. Documentation can be found in the `ServiceNamespace` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Resource<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The resource type and unique identifier string for the resource associated with the scaling policy. Documentation can be found in the `ResourceId` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>step_<wbr>scaling_<wbr>policy_<wbr>configuration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policystepscalingpolicyconfiguration">Dict[Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration]</a></span>
+    </dt>
+    <dd>{{% md %}}Step scaling policy configuration, requires `policy_type = "StepScaling"` (default). See supported fields below.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Scalable<wbr>Dimension</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The scalable dimension of the scalable target. Documentation can be found in the `ScalableDimension` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>target_<wbr>tracking_<wbr>scaling_<wbr>policy_<wbr>configuration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policytargettrackingscalingpolicyconfiguration">Dict[Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration]</a></span>
+    </dt>
+    <dd>{{% md %}}A target tracking policy, requires `policy_type = "TargetTrackingScaling"`. See supported fields below.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Service<wbr>Namespace</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The AWS service namespace of the scalable target. Documentation can be found in the `ServiceNamespace` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Step<wbr>Scaling<wbr>Policy<wbr>Configuration</td>
-            <td class="align-top">
-                
-                <code><a href="#policystepscalingpolicyconfiguration">*Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration</a></code>
-            </td>
-            <td class="align-top">{{% md %}} Step scaling policy configuration, requires `policy_type = &#34;StepScaling&#34;` (default). See supported fields below.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration</td>
-            <td class="align-top">
-                
-                <code><a href="#policytargettrackingscalingpolicyconfiguration">*Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration</a></code>
-            </td>
-            <td class="align-top">{{% md %}} A target tracking policy, requires `policy_type = &#34;TargetTrackingScaling&#34;`. See supported fields below.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang nodejs %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">arn</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The ARN assigned by AWS to the scaling policy.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">name</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The name of the policy.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">policy<wbr>Type</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} For DynamoDB, only `TargetTrackingScaling` is supported. For Amazon ECS, Spot Fleet, and Amazon RDS, both `StepScaling` and `TargetTrackingScaling` are supported. For any other service, only `StepScaling` is supported. Defaults to `StepScaling`.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">resource<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The resource type and unique identifier string for the resource associated with the scaling policy. Documentation can be found in the `ResourceId` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">scalable<wbr>Dimension</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The scalable dimension of the scalable target. Documentation can be found in the `ScalableDimension` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">service<wbr>Namespace</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The AWS service namespace of the scalable target. Documentation can be found in the `ServiceNamespace` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">step<wbr>Scaling<wbr>Policy<wbr>Configuration</td>
-            <td class="align-top">
-                
-                <code><a href="#policystepscalingpolicyconfiguration">Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} Step scaling policy configuration, requires `policy_type = &#34;StepScaling&#34;` (default). See supported fields below.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration</td>
-            <td class="align-top">
-                
-                <code><a href="#policytargettrackingscalingpolicyconfiguration">Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} A target tracking policy, requires `policy_type = &#34;TargetTrackingScaling&#34;`. See supported fields below.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang python %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">arn</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} The ARN assigned by AWS to the scaling policy.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">name</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} The name of the policy.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">policy_<wbr>type</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} For DynamoDB, only `TargetTrackingScaling` is supported. For Amazon ECS, Spot Fleet, and Amazon RDS, both `StepScaling` and `TargetTrackingScaling` are supported. For any other service, only `StepScaling` is supported. Defaults to `StepScaling`.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">resource_<wbr>id</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} The resource type and unique identifier string for the resource associated with the scaling policy. Documentation can be found in the `ResourceId` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">scalable_<wbr>dimension</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} The scalable dimension of the scalable target. Documentation can be found in the `ScalableDimension` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">service_<wbr>namespace</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} The AWS service namespace of the scalable target. Documentation can be found in the `ServiceNamespace` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">step_<wbr>scaling_<wbr>policy_<wbr>configuration</td>
-            <td class="align-top">
-                
-                <code><a href="#policystepscalingpolicyconfiguration">Dict[Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} Step scaling policy configuration, requires `policy_type = &#34;StepScaling&#34;` (default). See supported fields below.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">target_<wbr>tracking_<wbr>scaling_<wbr>policy_<wbr>configuration</td>
-            <td class="align-top">
-                
-                <code><a href="#policytargettrackingscalingpolicyconfiguration">Dict[Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} A target tracking policy, requires `policy_type = &#34;TargetTrackingScaling&#34;`. See supported fields below.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
+</dl>
+{{% /choosable %}}
 
 
 
@@ -1208,615 +869,440 @@ The following output properties are available:
 
 ## Look up an Existing Policy Resource
 
-{{< langchoose csharp nojavascript >}}
-
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">pulumi.Input&lt;pulumi.ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/appautoscaling/#PolicyState">PolicyState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/appautoscaling/#Policy">Policy</a></span></code></pre></div>
-
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>name=None<span class="p">, </span>policy_type=None<span class="p">, </span>resource_id=None<span class="p">, </span>scalable_dimension=None<span class="p">, </span>service_namespace=None<span class="p">, </span>step_scaling_policy_configuration=None<span class="p">, </span>target_tracking_scaling_policy_configuration=None<span class="p">, __props__=None);</span></code></pre></div>
-
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPolicy<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">pulumi.IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/appautoscaling?tab=doc#PolicyState">PolicyState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/appautoscaling?tab=doc#Policy">Policy</a></span>, error)</span></code></pre></div>
-
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Appautoscaling.Policy.html">Policy</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Pulumi.Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Appautoscaling.PolicyState.html">PolicyState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
-
 Get an existing Policy resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 
-{{% lang nodejs %}}
+{{< chooser language "javascript,typescript,python,go,csharp  " / >}}
 
-<ul class="pl-10">
-    <li><strong>name</strong> &ndash; (Required) The unique name of the resulting resource.</li>
-    <li><strong>id</strong> &ndash; (Required) The _unique_ provider ID of the resource to lookup.</li>
-    <li><strong>state</strong> &ndash; (Optional) Any extra arguments used during the lookup.</li>
-    <li><strong>opts</strong> &ndash; (Optional) A bag of options that control this resource's behavior.</li>
-</ul>
+{{% choosable language nodejs %}}
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/appautoscaling/#PolicyState">PolicyState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/appautoscaling/#Policy">Policy</a></span></code></pre></div>
+{{% /choosable %}}
 
-{{% /lang %}}
+{{% choosable language python %}}
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>name=None<span class="p">, </span>policy_type=None<span class="p">, </span>resource_id=None<span class="p">, </span>scalable_dimension=None<span class="p">, </span>service_namespace=None<span class="p">, </span>step_scaling_policy_configuration=None<span class="p">, </span>target_tracking_scaling_policy_configuration=None<span class="p">, __props__=None);</span></code></pre></div>
+{{% /choosable %}}
 
-{{% lang go %}}
+{{% choosable language go %}}
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPolicy<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/appautoscaling?tab=doc#PolicyState">PolicyState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/appautoscaling?tab=doc#Policy">Policy</a></span>, error)</span></code></pre></div>
+{{% /choosable %}}
 
-<ul class="pl-10">
-    <li><strong>name</strong> &ndash; (Required) The unique name of the resulting resource.</li>
-    <li><strong>id</strong> &ndash; (Required) The _unique_ provider ID of the resource to lookup.</li>
-    <li><strong>state</strong> &ndash; (Optional) Any extra arguments used during the lookup.</li>
-    <li><strong>opts</strong> &ndash; (Optional) A bag of options that control this resource's behavior.</li>
-</ul>
+{{% choosable language csharp %}}
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Appautoscaling.Policy.html">Policy</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Appautoscaling.PolicyState.html">PolicyState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+{{% /choosable %}}
 
-{{% /lang %}}
+{{% choosable language nodejs %}}
 
-{{% lang csharp %}}
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resulting resource.</dd>
+    <dt class="property-required" title="Required">
+        <span>id</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The <em>unique</em> provider ID of the resource to lookup.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>state</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>Any extra arguments used during the lookup.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 
-<ul class="pl-10">
-    <li><strong>name</strong> &ndash; (Required) The unique name of the resulting resource.</li>
-    <li><strong>id</strong> &ndash; (Required) The _unique_ provider ID of the resource to lookup.</li>
-    <li><strong>state</strong> &ndash; (Optional) Any extra arguments used during the lookup.</li>
-    <li><strong>opts</strong> &ndash; (Optional) A bag of options that control this resource's behavior.</li>
-</ul>
+{{% /choosable %}}
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>resource_name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resulting resource.</dd>
+    <dt class="property-required" title="Optional">
+        <span>id</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The <em>unique</em> provider ID of the resource to lookup.</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resulting resource.</dd>
+    <dt class="property-required" title="Required">
+        <span>id</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The <em>unique</em> provider ID of the resource to lookup.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>state</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>Any extra arguments used during the lookup.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resulting resource.</dd>
+    <dt class="property-required" title="Required">
+        <span>id</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The <em>unique</em> provider ID of the resource to lookup.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>state</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>Any extra arguments used during the lookup.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
+
+{{% /choosable %}}
 
 The following state arguments are supported:
 
 
-{{< langchoose csharp nojavascript >}}
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The ARN assigned by AWS to the scaling policy.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The name of the policy.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Policy<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}For DynamoDB, only `TargetTrackingScaling` is supported. For Amazon ECS, Spot Fleet, and Amazon RDS, both `StepScaling` and `TargetTrackingScaling` are supported. For any other service, only `StepScaling` is supported. Defaults to `StepScaling`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Resource<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The resource type and unique identifier string for the resource associated with the scaling policy. Documentation can be found in the `ResourceId` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Scalable<wbr>Dimension</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The scalable dimension of the scalable target. Documentation can be found in the `ScalableDimension` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Service<wbr>Namespace</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The AWS service namespace of the scalable target. Documentation can be found in the `ServiceNamespace` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Step<wbr>Scaling<wbr>Policy<wbr>Configuration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policystepscalingpolicyconfiguration">Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Args?</a></span>
+    </dt>
+    <dd>{{% md %}}Step scaling policy configuration, requires `policy_type = "StepScaling"` (default). See supported fields below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policytargettrackingscalingpolicyconfiguration">Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Args?</a></span>
+    </dt>
+    <dd>{{% md %}}A target tracking policy, requires `policy_type = "TargetTrackingScaling"`. See supported fields below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% lang csharp %}}
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The ARN assigned by AWS to the scaling policy.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The name of the policy.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Policy<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}For DynamoDB, only `TargetTrackingScaling` is supported. For Amazon ECS, Spot Fleet, and Amazon RDS, both `StepScaling` and `TargetTrackingScaling` are supported. For any other service, only `StepScaling` is supported. Defaults to `StepScaling`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Resource<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The resource type and unique identifier string for the resource associated with the scaling policy. Documentation can be found in the `ResourceId` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Scalable<wbr>Dimension</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The scalable dimension of the scalable target. Documentation can be found in the `ScalableDimension` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Service<wbr>Namespace</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The AWS service namespace of the scalable target. Documentation can be found in the `ServiceNamespace` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Step<wbr>Scaling<wbr>Policy<wbr>Configuration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policystepscalingpolicyconfiguration">*Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}Step scaling policy configuration, requires `policy_type = "StepScaling"` (default). See supported fields below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policytargettrackingscalingpolicyconfiguration">*Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}A target tracking policy, requires `policy_type = "TargetTrackingScaling"`. See supported fields below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Arn</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ARN assigned by AWS to the scaling policy.
- {{% /md %}}
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Name</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The name of the policy.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The ARN assigned by AWS to the scaling policy.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Policy<wbr>Type</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-For DynamoDB, only `TargetTrackingScaling` is supported. For Amazon ECS, Spot Fleet, and Amazon RDS, both `StepScaling` and `TargetTrackingScaling` are supported. For any other service, only `StepScaling` is supported. Defaults to `StepScaling`.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The name of the policy.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Resource<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The resource type and unique identifier string for the resource associated with the scaling policy. Documentation can be found in the `ResourceId` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>policy<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}For DynamoDB, only `TargetTrackingScaling` is supported. For Amazon ECS, Spot Fleet, and Amazon RDS, both `StepScaling` and `TargetTrackingScaling` are supported. For any other service, only `StepScaling` is supported. Defaults to `StepScaling`.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Scalable<wbr>Dimension</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The scalable dimension of the scalable target. Documentation can be found in the `ScalableDimension` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>resource<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The resource type and unique identifier string for the resource associated with the scaling policy. Documentation can be found in the `ResourceId` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Service<wbr>Namespace</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The AWS service namespace of the scalable target. Documentation can be found in the `ServiceNamespace` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>scalable<wbr>Dimension</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The scalable dimension of the scalable target. Documentation can be found in the `ScalableDimension` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Step<wbr>Scaling<wbr>Policy<wbr>Configuration</td>
-            <td class="align-top">
-                
-                <code><a href="#policystepscalingpolicyconfiguration">Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Args?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Step scaling policy configuration, requires `policy_type = &#34;StepScaling&#34;` (default). See supported fields below.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>service<wbr>Namespace</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The AWS service namespace of the scalable target. Documentation can be found in the `ServiceNamespace` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration</td>
-            <td class="align-top">
-                
-                <code><a href="#policytargettrackingscalingpolicyconfiguration">Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Args?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A target tracking policy, requires `policy_type = &#34;TargetTrackingScaling&#34;`. See supported fields below.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>step<wbr>Scaling<wbr>Policy<wbr>Configuration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policystepscalingpolicyconfiguration">Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration?</a></span>
+    </dt>
+    <dd>{{% md %}}Step scaling policy configuration, requires `policy_type = "StepScaling"` (default). See supported fields below.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+    <dt class="property-optional"
+            title="Optional">
+        <span>target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policytargettrackingscalingpolicyconfiguration">Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration?</a></span>
+    </dt>
+    <dd>{{% md %}}A target tracking policy, requires `policy_type = "TargetTrackingScaling"`. See supported fields below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARN assigned by AWS to the scaling policy.
+{{% /md %}}</dd>
 
-{{% lang go %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the policy.
+{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>policy_<wbr>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}For DynamoDB, only `TargetTrackingScaling` is supported. For Amazon ECS, Spot Fleet, and Amazon RDS, both `StepScaling` and `TargetTrackingScaling` are supported. For any other service, only `StepScaling` is supported. Defaults to `StepScaling`.
+{{% /md %}}</dd>
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Arn</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ARN assigned by AWS to the scaling policy.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>resource_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The resource type and unique identifier string for the resource associated with the scaling policy. Documentation can be found in the `ResourceId` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Name</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The name of the policy.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>scalable_<wbr>dimension</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The scalable dimension of the scalable target. Documentation can be found in the `ScalableDimension` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Policy<wbr>Type</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-For DynamoDB, only `TargetTrackingScaling` is supported. For Amazon ECS, Spot Fleet, and Amazon RDS, both `StepScaling` and `TargetTrackingScaling` are supported. For any other service, only `StepScaling` is supported. Defaults to `StepScaling`.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>service_<wbr>namespace</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The AWS service namespace of the scalable target. Documentation can be found in the `ServiceNamespace` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Resource<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The resource type and unique identifier string for the resource associated with the scaling policy. Documentation can be found in the `ResourceId` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>step_<wbr>scaling_<wbr>policy_<wbr>configuration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policystepscalingpolicyconfiguration">Dict[Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration]</a></span>
+    </dt>
+    <dd>{{% md %}}Step scaling policy configuration, requires `policy_type = "StepScaling"` (default). See supported fields below.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Scalable<wbr>Dimension</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The scalable dimension of the scalable target. Documentation can be found in the `ScalableDimension` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>target_<wbr>tracking_<wbr>scaling_<wbr>policy_<wbr>configuration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policytargettrackingscalingpolicyconfiguration">Dict[Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration]</a></span>
+    </dt>
+    <dd>{{% md %}}A target tracking policy, requires `policy_type = "TargetTrackingScaling"`. See supported fields below.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Service<wbr>Namespace</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The AWS service namespace of the scalable target. Documentation can be found in the `ServiceNamespace` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Step<wbr>Scaling<wbr>Policy<wbr>Configuration</td>
-            <td class="align-top">
-                
-                <code><a href="#policystepscalingpolicyconfiguration">*Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Step scaling policy configuration, requires `policy_type = &#34;StepScaling&#34;` (default). See supported fields below.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration</td>
-            <td class="align-top">
-                
-                <code><a href="#policytargettrackingscalingpolicyconfiguration">*Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A target tracking policy, requires `policy_type = &#34;TargetTrackingScaling&#34;`. See supported fields below.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang nodejs %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">arn</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ARN assigned by AWS to the scaling policy.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">name</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The name of the policy.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">policy<wbr>Type</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-For DynamoDB, only `TargetTrackingScaling` is supported. For Amazon ECS, Spot Fleet, and Amazon RDS, both `StepScaling` and `TargetTrackingScaling` are supported. For any other service, only `StepScaling` is supported. Defaults to `StepScaling`.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">resource<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The resource type and unique identifier string for the resource associated with the scaling policy. Documentation can be found in the `ResourceId` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">scalable<wbr>Dimension</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The scalable dimension of the scalable target. Documentation can be found in the `ScalableDimension` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">service<wbr>Namespace</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The AWS service namespace of the scalable target. Documentation can be found in the `ServiceNamespace` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">step<wbr>Scaling<wbr>Policy<wbr>Configuration</td>
-            <td class="align-top">
-                
-                <code><a href="#policystepscalingpolicyconfiguration">Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Step scaling policy configuration, requires `policy_type = &#34;StepScaling&#34;` (default). See supported fields below.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration</td>
-            <td class="align-top">
-                
-                <code><a href="#policytargettrackingscalingpolicyconfiguration">Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A target tracking policy, requires `policy_type = &#34;TargetTrackingScaling&#34;`. See supported fields below.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang python %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">arn</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ARN assigned by AWS to the scaling policy.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">name</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The name of the policy.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">policy_<wbr>type</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-For DynamoDB, only `TargetTrackingScaling` is supported. For Amazon ECS, Spot Fleet, and Amazon RDS, both `StepScaling` and `TargetTrackingScaling` are supported. For any other service, only `StepScaling` is supported. Defaults to `StepScaling`.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">resource_<wbr>id</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The resource type and unique identifier string for the resource associated with the scaling policy. Documentation can be found in the `ResourceId` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">scalable_<wbr>dimension</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The scalable dimension of the scalable target. Documentation can be found in the `ScalableDimension` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">service_<wbr>namespace</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The AWS service namespace of the scalable target. Documentation can be found in the `ServiceNamespace` parameter at: [AWS Application Auto Scaling API Reference](http://docs.aws.amazon.com/ApplicationAutoScaling/latest/APIReference/API_RegisterScalableTarget.html#API_RegisterScalableTarget_RequestParameters)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">step_<wbr>scaling_<wbr>policy_<wbr>configuration</td>
-            <td class="align-top">
-                
-                <code><a href="#policystepscalingpolicyconfiguration">Dict[Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Step scaling policy configuration, requires `policy_type = &#34;StepScaling&#34;` (default). See supported fields below.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">target_<wbr>tracking_<wbr>scaling_<wbr>policy_<wbr>configuration</td>
-            <td class="align-top">
-                
-                <code><a href="#policytargettrackingscalingpolicyconfiguration">Dict[Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A target tracking policy, requires `policy_type = &#34;TargetTrackingScaling&#34;`. See supported fields below.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
+</dl>
+{{% /choosable %}}
 
 
 
@@ -1829,1903 +1315,1015 @@ A target tracking policy, requires `policy_type = &#34;TargetTrackingScaling&#34
 
 ## Supporting Types
 
-#### PolicyStepScalingPolicyConfiguration
-{{% lang nodejs %}}
+<h4>Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration</h4>
+{{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PolicyStepScalingPolicyConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PolicyStepScalingPolicyConfiguration">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
-{{% lang go %}}
+{{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/appautoscaling?tab=doc#PolicyStepScalingPolicyConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/appautoscaling?tab=doc#PolicyStepScalingPolicyConfigurationOutput">output</a> API doc for this type.
-{{% /lang %}}
-
-{{% lang csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Appautoscaling.PolicyStepScalingPolicyConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Appautoscaling.PolicyStepScalingPolicyConfiguration.html">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
 
 
-{{< langchoose csharp nojavascript >}}
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Adjustment<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cooldown</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Metric<wbr>Aggregation<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Min<wbr>Adjustment<wbr>Magnitude</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Step<wbr>Adjustments</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policystepscalingpolicyconfigurationstepadjustment">List&lt;Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Step<wbr>Adjustment<wbr>Args&gt;?</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% lang csharp %}}
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Adjustment<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cooldown</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Metric<wbr>Aggregation<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Min<wbr>Adjustment<wbr>Magnitude</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Step<wbr>Adjustments</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policystepscalingpolicyconfigurationstepadjustment">[]Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Step<wbr>Adjustment</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Adjustment<wbr>Type</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Cooldown</td>
-            <td class="align-top">
-                
-                <code>int?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>adjustment<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Metric<wbr>Aggregation<wbr>Type</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>cooldown</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Min<wbr>Adjustment<wbr>Magnitude</td>
-            <td class="align-top">
-                
-                <code>int?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>metric<wbr>Aggregation<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Step<wbr>Adjustments</td>
-            <td class="align-top">
-                
-                <code><a href="#policystepscalingpolicyconfigurationstepadjustment">List&lt;Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Step<wbr>Adjustment<wbr>Args&gt;?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>min<wbr>Adjustment<wbr>Magnitude</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+    <dt class="property-optional"
+            title="Optional">
+        <span>step<wbr>Adjustments</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policystepscalingpolicyconfigurationstepadjustment">Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Step<wbr>Adjustment[]?</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>adjustment_<wbr>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
-{{% lang go %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>cooldown</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>metric_<wbr>aggregation_<wbr>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Adjustment<wbr>Type</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>min_<wbr>adjustment_<wbr>magnitude</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Cooldown</td>
-            <td class="align-top">
-                
-                <code>*int</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>step_<wbr>adjustments</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policystepscalingpolicyconfigurationstepadjustment">List[Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Step<wbr>Adjustment]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Metric<wbr>Aggregation<wbr>Type</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Min<wbr>Adjustment<wbr>Magnitude</td>
-            <td class="align-top">
-                
-                <code>*int</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Step<wbr>Adjustments</td>
-            <td class="align-top">
-                
-                <code><a href="#policystepscalingpolicyconfigurationstepadjustment">[]Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Step<wbr>Adjustment</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang nodejs %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">adjustment<wbr>Type</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">cooldown</td>
-            <td class="align-top">
-                
-                <code>number?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">metric<wbr>Aggregation<wbr>Type</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">min<wbr>Adjustment<wbr>Magnitude</td>
-            <td class="align-top">
-                
-                <code>number?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">step<wbr>Adjustments</td>
-            <td class="align-top">
-                
-                <code><a href="#policystepscalingpolicyconfigurationstepadjustment">Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Step<wbr>Adjustment[]?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang python %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">adjustment_<wbr>type</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">cooldown</td>
-            <td class="align-top">
-                
-                <code>float</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">metric_<wbr>aggregation_<wbr>type</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">min_<wbr>adjustment_<wbr>magnitude</td>
-            <td class="align-top">
-                
-                <code>float</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">step_<wbr>adjustments</td>
-            <td class="align-top">
-                
-                <code><a href="#policystepscalingpolicyconfigurationstepadjustment">List[Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Step<wbr>Adjustment]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
+</dl>
+{{% /choosable %}}
 
 
 
 
 
-#### PolicyStepScalingPolicyConfigurationStepAdjustment
-{{% lang nodejs %}}
+<h4>Policy<wbr>Step<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Step<wbr>Adjustment</h4>
+{{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PolicyStepScalingPolicyConfigurationStepAdjustment">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PolicyStepScalingPolicyConfigurationStepAdjustment">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
-{{% lang go %}}
+{{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/appautoscaling?tab=doc#PolicyStepScalingPolicyConfigurationStepAdjustmentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/appautoscaling?tab=doc#PolicyStepScalingPolicyConfigurationStepAdjustmentOutput">output</a> API doc for this type.
-{{% /lang %}}
-
-{{% lang csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Appautoscaling.PolicyStepScalingPolicyConfigurationStepAdjustmentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Appautoscaling.PolicyStepScalingPolicyConfigurationStepAdjustment.html">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
 
 
-{{< langchoose csharp nojavascript >}}
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Metric<wbr>Interval<wbr>Lower<wbr>Bound</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Metric<wbr>Interval<wbr>Upper<wbr>Bound</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Scaling<wbr>Adjustment</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% lang csharp %}}
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Metric<wbr>Interval<wbr>Lower<wbr>Bound</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Metric<wbr>Interval<wbr>Upper<wbr>Bound</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Scaling<wbr>Adjustment</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Metric<wbr>Interval<wbr>Lower<wbr>Bound</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Metric<wbr>Interval<wbr>Upper<wbr>Bound</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>metric<wbr>Interval<wbr>Lower<wbr>Bound</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Scaling<wbr>Adjustment</td>
-            <td class="align-top">
-                
-                <code>int</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>metric<wbr>Interval<wbr>Upper<wbr>Bound</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+    <dt class="property-required"
+            title="Required">
+        <span>scaling<wbr>Adjustment</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>metric<wbr>Interval<wbr>Lower<wbr>Bound</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
-{{% lang go %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>metric<wbr>Interval<wbr>Upper<wbr>Bound</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>scaling_<wbr>adjustment</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Metric<wbr>Interval<wbr>Lower<wbr>Bound</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Metric<wbr>Interval<wbr>Upper<wbr>Bound</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Scaling<wbr>Adjustment</td>
-            <td class="align-top">
-                
-                <code>int</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang nodejs %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">metric<wbr>Interval<wbr>Lower<wbr>Bound</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">metric<wbr>Interval<wbr>Upper<wbr>Bound</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">scaling<wbr>Adjustment</td>
-            <td class="align-top">
-                
-                <code>number</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang python %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">metric<wbr>Interval<wbr>Lower<wbr>Bound</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">metric<wbr>Interval<wbr>Upper<wbr>Bound</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">scaling_<wbr>adjustment</td>
-            <td class="align-top">
-                
-                <code>float</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
+</dl>
+{{% /choosable %}}
 
 
 
 
 
-#### PolicyTargetTrackingScalingPolicyConfiguration
-{{% lang nodejs %}}
+<h4>Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration</h4>
+{{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PolicyTargetTrackingScalingPolicyConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PolicyTargetTrackingScalingPolicyConfiguration">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
-{{% lang go %}}
+{{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/appautoscaling?tab=doc#PolicyTargetTrackingScalingPolicyConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/appautoscaling?tab=doc#PolicyTargetTrackingScalingPolicyConfigurationOutput">output</a> API doc for this type.
-{{% /lang %}}
-
-{{% lang csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Appautoscaling.PolicyTargetTrackingScalingPolicyConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Appautoscaling.PolicyTargetTrackingScalingPolicyConfiguration.html">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
 
 
-{{< langchoose csharp nojavascript >}}
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Customized<wbr>Metric<wbr>Specification</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policytargettrackingscalingpolicyconfigurationcustomizedmetricspecification">Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification<wbr>Args?</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Disable<wbr>Scale<wbr>In</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Predefined<wbr>Metric<wbr>Specification</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policytargettrackingscalingpolicyconfigurationpredefinedmetricspecification">Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Predefined<wbr>Metric<wbr>Specification<wbr>Args?</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Scale<wbr>In<wbr>Cooldown</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Scale<wbr>Out<wbr>Cooldown</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Target<wbr>Value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% lang csharp %}}
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Customized<wbr>Metric<wbr>Specification</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policytargettrackingscalingpolicyconfigurationcustomizedmetricspecification">*Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Disable<wbr>Scale<wbr>In</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Predefined<wbr>Metric<wbr>Specification</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policytargettrackingscalingpolicyconfigurationpredefinedmetricspecification">*Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Predefined<wbr>Metric<wbr>Specification</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Scale<wbr>In<wbr>Cooldown</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Scale<wbr>Out<wbr>Cooldown</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Target<wbr>Value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Customized<wbr>Metric<wbr>Specification</td>
-            <td class="align-top">
-                
-                <code><a href="#policytargettrackingscalingpolicyconfigurationcustomizedmetricspecification">Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification<wbr>Args?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Disable<wbr>Scale<wbr>In</td>
-            <td class="align-top">
-                
-                <code>bool?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>customized<wbr>Metric<wbr>Specification</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policytargettrackingscalingpolicyconfigurationcustomizedmetricspecification">Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification?</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Predefined<wbr>Metric<wbr>Specification</td>
-            <td class="align-top">
-                
-                <code><a href="#policytargettrackingscalingpolicyconfigurationpredefinedmetricspecification">Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Predefined<wbr>Metric<wbr>Specification<wbr>Args?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>disable<wbr>Scale<wbr>In</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Scale<wbr>In<wbr>Cooldown</td>
-            <td class="align-top">
-                
-                <code>int?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>predefined<wbr>Metric<wbr>Specification</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policytargettrackingscalingpolicyconfigurationpredefinedmetricspecification">Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Predefined<wbr>Metric<wbr>Specification?</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Scale<wbr>Out<wbr>Cooldown</td>
-            <td class="align-top">
-                
-                <code>int?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>scale<wbr>In<wbr>Cooldown</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Target<wbr>Value</td>
-            <td class="align-top">
-                
-                <code>double</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>scale<wbr>Out<wbr>Cooldown</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+    <dt class="property-required"
+            title="Required">
+        <span>target<wbr>Value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>customized<wbr>Metric<wbr>Specification</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policytargettrackingscalingpolicyconfigurationcustomizedmetricspecification">Dict[Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
-{{% lang go %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>disable<wbr>Scale<wbr>In</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>predefined<wbr>Metric<wbr>Specification</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policytargettrackingscalingpolicyconfigurationpredefinedmetricspecification">Dict[Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Predefined<wbr>Metric<wbr>Specification]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Customized<wbr>Metric<wbr>Specification</td>
-            <td class="align-top">
-                
-                <code><a href="#policytargettrackingscalingpolicyconfigurationcustomizedmetricspecification">*Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>scale<wbr>In<wbr>Cooldown</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Disable<wbr>Scale<wbr>In</td>
-            <td class="align-top">
-                
-                <code>*bool</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>scale<wbr>Out<wbr>Cooldown</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Predefined<wbr>Metric<wbr>Specification</td>
-            <td class="align-top">
-                
-                <code><a href="#policytargettrackingscalingpolicyconfigurationpredefinedmetricspecification">*Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Predefined<wbr>Metric<wbr>Specification</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
+    <dt class="property-required"
+            title="Required">
+        <span>target<wbr>Value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Scale<wbr>In<wbr>Cooldown</td>
-            <td class="align-top">
-                
-                <code>*int</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Scale<wbr>Out<wbr>Cooldown</td>
-            <td class="align-top">
-                
-                <code>*int</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Target<wbr>Value</td>
-            <td class="align-top">
-                
-                <code>float64</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang nodejs %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">customized<wbr>Metric<wbr>Specification</td>
-            <td class="align-top">
-                
-                <code><a href="#policytargettrackingscalingpolicyconfigurationcustomizedmetricspecification">Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">disable<wbr>Scale<wbr>In</td>
-            <td class="align-top">
-                
-                <code>boolean?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">predefined<wbr>Metric<wbr>Specification</td>
-            <td class="align-top">
-                
-                <code><a href="#policytargettrackingscalingpolicyconfigurationpredefinedmetricspecification">Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Predefined<wbr>Metric<wbr>Specification?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">scale<wbr>In<wbr>Cooldown</td>
-            <td class="align-top">
-                
-                <code>number?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">scale<wbr>Out<wbr>Cooldown</td>
-            <td class="align-top">
-                
-                <code>number?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">target<wbr>Value</td>
-            <td class="align-top">
-                
-                <code>number</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang python %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">customized<wbr>Metric<wbr>Specification</td>
-            <td class="align-top">
-                
-                <code><a href="#policytargettrackingscalingpolicyconfigurationcustomizedmetricspecification">Dict[Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">disable<wbr>Scale<wbr>In</td>
-            <td class="align-top">
-                
-                <code>bool</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">predefined<wbr>Metric<wbr>Specification</td>
-            <td class="align-top">
-                
-                <code><a href="#policytargettrackingscalingpolicyconfigurationpredefinedmetricspecification">Dict[Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Predefined<wbr>Metric<wbr>Specification]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">scale<wbr>In<wbr>Cooldown</td>
-            <td class="align-top">
-                
-                <code>float</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">scale<wbr>Out<wbr>Cooldown</td>
-            <td class="align-top">
-                
-                <code>float</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">target<wbr>Value</td>
-            <td class="align-top">
-                
-                <code>float</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
+</dl>
+{{% /choosable %}}
 
 
 
 
 
-#### PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecification
-{{% lang nodejs %}}
+<h4>Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification</h4>
+{{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecification">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecification">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
-{{% lang go %}}
+{{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/appautoscaling?tab=doc#PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/appautoscaling?tab=doc#PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationOutput">output</a> API doc for this type.
-{{% /lang %}}
-
-{{% lang csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Appautoscaling.PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Appautoscaling.PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecification.html">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
 
 
-{{< langchoose csharp nojavascript >}}
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Dimensions</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policytargettrackingscalingpolicyconfigurationcustomizedmetricspecificationdimension">List&lt;Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification<wbr>Dimension<wbr>Args&gt;?</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Metric<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Namespace</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Statistic</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Unit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% lang csharp %}}
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Dimensions</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policytargettrackingscalingpolicyconfigurationcustomizedmetricspecificationdimension">[]Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification<wbr>Dimension</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Metric<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Namespace</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Statistic</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Unit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Dimensions</td>
-            <td class="align-top">
-                
-                <code><a href="#policytargettrackingscalingpolicyconfigurationcustomizedmetricspecificationdimension">List&lt;Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification<wbr>Dimension<wbr>Args&gt;?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Metric<wbr>Name</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>dimensions</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policytargettrackingscalingpolicyconfigurationcustomizedmetricspecificationdimension">Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification<wbr>Dimension[]?</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Namespace</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
+    <dt class="property-required"
+            title="Required">
+        <span>metric<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Statistic</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
+    <dt class="property-required"
+            title="Required">
+        <span>namespace</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Unit</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
+    <dt class="property-required"
+            title="Required">
+        <span>statistic</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+    <dt class="property-optional"
+            title="Optional">
+        <span>unit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>dimensions</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policytargettrackingscalingpolicyconfigurationcustomizedmetricspecificationdimension">List[Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification<wbr>Dimension]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
-{{% lang go %}}
+    <dt class="property-required"
+            title="Required">
+        <span>metric_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>namespace</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Dimensions</td>
-            <td class="align-top">
-                
-                <code><a href="#policytargettrackingscalingpolicyconfigurationcustomizedmetricspecificationdimension">[]Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification<wbr>Dimension</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
+    <dt class="property-required"
+            title="Required">
+        <span>statistic</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Metric<wbr>Name</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>unit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Namespace</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Statistic</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Unit</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang nodejs %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">dimensions</td>
-            <td class="align-top">
-                
-                <code><a href="#policytargettrackingscalingpolicyconfigurationcustomizedmetricspecificationdimension">Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification<wbr>Dimension[]?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">metric<wbr>Name</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">namespace</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">statistic</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">unit</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang python %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">dimensions</td>
-            <td class="align-top">
-                
-                <code><a href="#policytargettrackingscalingpolicyconfigurationcustomizedmetricspecificationdimension">List[Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification<wbr>Dimension]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">metric_<wbr>name</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">namespace</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">statistic</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">unit</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
+</dl>
+{{% /choosable %}}
 
 
 
 
 
-#### PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationDimension
-{{% lang nodejs %}}
+<h4>Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Customized<wbr>Metric<wbr>Specification<wbr>Dimension</h4>
+{{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationDimension">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationDimension">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
-{{% lang go %}}
+{{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/appautoscaling?tab=doc#PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationDimensionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/appautoscaling?tab=doc#PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationDimensionOutput">output</a> API doc for this type.
-{{% /lang %}}
-
-{{% lang csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Appautoscaling.PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationDimensionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Appautoscaling.PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationDimension.html">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
 
 
-{{< langchoose csharp nojavascript >}}
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the policy.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% lang csharp %}}
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the policy.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Name</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The name of the policy.
- {{% /md %}}
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Value</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
+    <dt class="property-required"
+            title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the policy.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+    <dt class="property-required"
+            title="Required">
+        <span>value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the policy.
+{{% /md %}}</dd>
 
-{{% lang go %}}
+    <dt class="property-required"
+            title="Required">
+        <span>value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Name</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The name of the policy.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Value</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang nodejs %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">name</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The name of the policy.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">value</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang python %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">name</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The name of the policy.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">value</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
+</dl>
+{{% /choosable %}}
 
 
 
 
 
-#### PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecification
-{{% lang nodejs %}}
+<h4>Policy<wbr>Target<wbr>Tracking<wbr>Scaling<wbr>Policy<wbr>Configuration<wbr>Predefined<wbr>Metric<wbr>Specification</h4>
+{{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecification">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecification">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
-{{% lang go %}}
+{{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/appautoscaling?tab=doc#PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecificationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/appautoscaling?tab=doc#PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecificationOutput">output</a> API doc for this type.
-{{% /lang %}}
-
-{{% lang csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Appautoscaling.PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecificationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Appautoscaling.PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecification.html">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
 
 
-{{< langchoose csharp nojavascript >}}
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Predefined<wbr>Metric<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Resource<wbr>Label</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% lang csharp %}}
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Predefined<wbr>Metric<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Resource<wbr>Label</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Predefined<wbr>Metric<wbr>Type</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Resource<wbr>Label</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
+    <dt class="property-required"
+            title="Required">
+        <span>predefined<wbr>Metric<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+    <dt class="property-optional"
+            title="Optional">
+        <span>resource<wbr>Label</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>predefined<wbr>Metric<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
-{{% lang go %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>resource<wbr>Label</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Predefined<wbr>Metric<wbr>Type</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Resource<wbr>Label</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang nodejs %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">predefined<wbr>Metric<wbr>Type</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">resource<wbr>Label</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang python %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">predefined<wbr>Metric<wbr>Type</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">resource<wbr>Label</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
+</dl>
+{{% /choosable %}}
 
 
 
 
 
 
+
+
+
+<h3>Package Details</h3>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
 

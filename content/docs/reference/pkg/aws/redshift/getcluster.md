@@ -3,25 +3,26 @@
 title: "GetCluster"
 block_external_search_index: true
 ---
-<style>
-table td p { margin-top: 0; margin-bottom: 0; }
-</style>
+
+
 
 Provides details about a specific redshift cluster.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const testCluster = aws.redshift.getCluster({
+const testCluster = pulumi.output(aws.redshift.getCluster({
     clusterIdentifier: "test-cluster",
-});
+}, { async: true }));
 const testStream = new aws.kinesis.FirehoseDeliveryStream("test_stream", {
     destination: "redshift",
     redshiftConfiguration: {
-        clusterJdbcurl: `jdbc:redshift://${testCluster.endpoint}/${testCluster.databaseName}`,
+        clusterJdbcurl: pulumi.interpolate`jdbc:redshift://${testCluster.endpoint}/${testCluster.databaseName}`,
         copyOptions: "delimiter '|'", // the default delimiter
         dataTableColumns: "test-col",
         dataTableName: "test-table",
@@ -39,7 +40,8 @@ const testStream = new aws.kinesis.FirehoseDeliveryStream("test_stream", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/redshift_cluster.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -47,227 +49,134 @@ const testStream = new aws.kinesis.FirehoseDeliveryStream("test_stream", {
 
 ## Using GetCluster
 
-{{< langchoose csharp nojavascript >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getCluster<span class="p">(</span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/redshift/#GetClusterArgs">GetClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/pulumi/#InvokeOptions">pulumi.InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/redshift/#GetClusterResult">GetClusterResult</a></span>></span></code></pre></div>
+{{% choosable language typescript %}}
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getCluster<span class="p">(</span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/redshift/#GetClusterArgs">GetClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/redshift/#GetClusterResult">GetClusterResult</a></span>></span></code></pre></div>
+{{% /choosable %}}
 
 
+{{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_cluster(</span>cluster_identifier=None<span class="p">, </span>tags=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+{{% /choosable %}}
 
 
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupCluster<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/redshift?tab=doc#LookupClusterArgs">LookupClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/redshift?tab=doc#LookupClusterResult">LookupClusterResult</a></span>, error)</span></code></pre></div>
+{{% choosable language go %}}
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupCluster<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/redshift?tab=doc#LookupClusterArgs">LookupClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/redshift?tab=doc#LookupClusterResult">LookupClusterResult</a></span>, error)</span></code></pre></div>
+{{% /choosable %}}
 
 
-<div class="highlight">
-<pre class="chroma">
-<code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetCluster </span><span class="p">{</span>
-    <span class="k">public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Redshift.GetClusterResult.html">GetClusterResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Redshift.GetClusterArgs.html">GetClusterArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span>
-<span class="p">}</span></code></pre>
-</div>
+{{% choosable language csharp %}}
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetCluster </span><span class="p">{</span><span class="k">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Redshift.GetClusterResult.html">GetClusterResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.RedShift.GetClusterArgs.html">GetClusterArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+}</span></code></pre></div>
+{{% /choosable %}}
 
 
 
 The following arguments are supported:
 
 
-{{< langchoose csharp nojavascript >}}
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Cluster<wbr>Identifier</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The cluster identifier
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary<string, object>?</span>
+    </dt>
+    <dd>{{% md %}}The tags associated to the cluster
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% lang csharp %}}
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Cluster<wbr>Identifier</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The cluster identifier
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}The tags associated to the cluster
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Cluster<wbr>Identifier</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The cluster identifier
- {{% /md %}}
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Tags</td>
-            <td class="align-top">
-                
-                <code>Dictionary<string, object>?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
+    <dt class="property-required"
+            title="Required">
+        <span>cluster<wbr>Identifier</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The cluster identifier
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+    <dt class="property-optional"
+            title="Optional">
+        <span>tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}?</span>
+    </dt>
+    <dd>{{% md %}}The tags associated to the cluster
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>cluster_<wbr>identifier</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The cluster identifier
+{{% /md %}}</dd>
 
-{{% lang go %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}The tags associated to the cluster
+{{% /md %}}</dd>
 
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Cluster<wbr>Identifier</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The cluster identifier
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Tags</td>
-            <td class="align-top">
-                
-                <code>map[string]interface{}</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang nodejs %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">cluster<wbr>Identifier</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The cluster identifier
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">tags</td>
-            <td class="align-top">
-                
-                <code>{[key: string]: any}?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang python %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">cluster_<wbr>identifier</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The cluster identifier
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">tags</td>
-            <td class="align-top">
-                
-                <code>Dict[str, Any]</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
+</dl>
+{{% /choosable %}}
 
 
 
@@ -282,1695 +191,1145 @@ The following output properties are available:
 
 
 
-{{< langchoose csharp nojavascript >}}
-
-
-{{% lang csharp %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Allow<wbr>Version<wbr>Upgrade</td>
-            <td class="align-top">
-                
-                <code>bool</code>
-            </td>
-            <td class="align-top">{{% md %}} Whether major version upgrades can be applied during maintenance period
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Automated<wbr>Snapshot<wbr>Retention<wbr>Period</td>
-            <td class="align-top">
-                
-                <code>int</code>
-            </td>
-            <td class="align-top">{{% md %}} The backup retention period
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Availability<wbr>Zone</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The availability zone of the cluster
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Bucket<wbr>Name</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The name of the S3 bucket where the log files are to be stored
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Cluster<wbr>Identifier</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The cluster identifier
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Cluster<wbr>Parameter<wbr>Group<wbr>Name</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The name of the parameter group to be associated with this cluster
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Cluster<wbr>Public<wbr>Key</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The public key for the cluster
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Cluster<wbr>Revision<wbr>Number</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The cluster revision number
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Cluster<wbr>Security<wbr>Groups</td>
-            <td class="align-top">
-                
-                <code>List<string></code>
-            </td>
-            <td class="align-top">{{% md %}} The security groups associated with the cluster
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Cluster<wbr>Subnet<wbr>Group<wbr>Name</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The name of a cluster subnet group to be associated with this cluster
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Cluster<wbr>Type</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The cluster type
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Cluster<wbr>Version</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}}  {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Database<wbr>Name</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The name of the default database in the cluster
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Elastic<wbr>Ip</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The Elastic IP of the cluster
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Enable<wbr>Logging</td>
-            <td class="align-top">
-                
-                <code>bool</code>
-            </td>
-            <td class="align-top">{{% md %}} Whether cluster logging is enabled
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Encrypted</td>
-            <td class="align-top">
-                
-                <code>bool</code>
-            </td>
-            <td class="align-top">{{% md %}} Whether the cluster data is encrypted
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Endpoint</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The cluster endpoint
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Enhanced<wbr>Vpc<wbr>Routing</td>
-            <td class="align-top">
-                
-                <code>bool</code>
-            </td>
-            <td class="align-top">{{% md %}} Whether enhanced VPC routing is enabled
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Iam<wbr>Roles</td>
-            <td class="align-top">
-                
-                <code>List<string></code>
-            </td>
-            <td class="align-top">{{% md %}} The IAM roles associated to the cluster
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Id</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} id is the provider-assigned unique ID for this managed resource.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Kms<wbr>Key<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The KMS encryption key associated to the cluster
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Master<wbr>Username</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} Username for the master DB user
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Node<wbr>Type</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The cluster node type
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Number<wbr>Of<wbr>Nodes</td>
-            <td class="align-top">
-                
-                <code>int</code>
-            </td>
-            <td class="align-top">{{% md %}} The number of nodes in the cluster
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Port</td>
-            <td class="align-top">
-                
-                <code>int</code>
-            </td>
-            <td class="align-top">{{% md %}} The port the cluster responds on
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Preferred<wbr>Maintenance<wbr>Window</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The maintenance window
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Publicly<wbr>Accessible</td>
-            <td class="align-top">
-                
-                <code>bool</code>
-            </td>
-            <td class="align-top">{{% md %}} Whether the cluster is publicly accessible
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">S3Key<wbr>Prefix</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The folder inside the S3 bucket where the log files are stored
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Tags</td>
-            <td class="align-top">
-                
-                <code>Dictionary<string, object>?</code>
-            </td>
-            <td class="align-top">{{% md %}} The tags associated to the cluster
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Vpc<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The VPC Id associated with the cluster
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Vpc<wbr>Security<wbr>Group<wbr>Ids</td>
-            <td class="align-top">
-                
-                <code>List<string></code>
-            </td>
-            <td class="align-top">{{% md %}} The VPC security group Ids associated with the cluster
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang go %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Allow<wbr>Version<wbr>Upgrade</td>
-            <td class="align-top">
-                
-                <code>bool</code>
-            </td>
-            <td class="align-top">{{% md %}} Whether major version upgrades can be applied during maintenance period
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Automated<wbr>Snapshot<wbr>Retention<wbr>Period</td>
-            <td class="align-top">
-                
-                <code>int</code>
-            </td>
-            <td class="align-top">{{% md %}} The backup retention period
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Availability<wbr>Zone</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The availability zone of the cluster
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Bucket<wbr>Name</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The name of the S3 bucket where the log files are to be stored
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Cluster<wbr>Identifier</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The cluster identifier
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Cluster<wbr>Parameter<wbr>Group<wbr>Name</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The name of the parameter group to be associated with this cluster
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Cluster<wbr>Public<wbr>Key</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The public key for the cluster
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Cluster<wbr>Revision<wbr>Number</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The cluster revision number
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Cluster<wbr>Security<wbr>Groups</td>
-            <td class="align-top">
-                
-                <code>[]string</code>
-            </td>
-            <td class="align-top">{{% md %}} The security groups associated with the cluster
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Cluster<wbr>Subnet<wbr>Group<wbr>Name</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The name of a cluster subnet group to be associated with this cluster
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Cluster<wbr>Type</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The cluster type
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Cluster<wbr>Version</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}}  {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Database<wbr>Name</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The name of the default database in the cluster
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Elastic<wbr>Ip</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The Elastic IP of the cluster
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Enable<wbr>Logging</td>
-            <td class="align-top">
-                
-                <code>bool</code>
-            </td>
-            <td class="align-top">{{% md %}} Whether cluster logging is enabled
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Encrypted</td>
-            <td class="align-top">
-                
-                <code>bool</code>
-            </td>
-            <td class="align-top">{{% md %}} Whether the cluster data is encrypted
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Endpoint</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The cluster endpoint
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Enhanced<wbr>Vpc<wbr>Routing</td>
-            <td class="align-top">
-                
-                <code>bool</code>
-            </td>
-            <td class="align-top">{{% md %}} Whether enhanced VPC routing is enabled
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Iam<wbr>Roles</td>
-            <td class="align-top">
-                
-                <code>[]string</code>
-            </td>
-            <td class="align-top">{{% md %}} The IAM roles associated to the cluster
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Id</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} id is the provider-assigned unique ID for this managed resource.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Kms<wbr>Key<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The KMS encryption key associated to the cluster
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Master<wbr>Username</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} Username for the master DB user
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Node<wbr>Type</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The cluster node type
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Number<wbr>Of<wbr>Nodes</td>
-            <td class="align-top">
-                
-                <code>int</code>
-            </td>
-            <td class="align-top">{{% md %}} The number of nodes in the cluster
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Port</td>
-            <td class="align-top">
-                
-                <code>int</code>
-            </td>
-            <td class="align-top">{{% md %}} The port the cluster responds on
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Preferred<wbr>Maintenance<wbr>Window</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The maintenance window
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Publicly<wbr>Accessible</td>
-            <td class="align-top">
-                
-                <code>bool</code>
-            </td>
-            <td class="align-top">{{% md %}} Whether the cluster is publicly accessible
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">S3Key<wbr>Prefix</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The folder inside the S3 bucket where the log files are stored
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Tags</td>
-            <td class="align-top">
-                
-                <code>map[string]interface{}</code>
-            </td>
-            <td class="align-top">{{% md %}} The tags associated to the cluster
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Vpc<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The VPC Id associated with the cluster
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Vpc<wbr>Security<wbr>Group<wbr>Ids</td>
-            <td class="align-top">
-                
-                <code>[]string</code>
-            </td>
-            <td class="align-top">{{% md %}} The VPC security group Ids associated with the cluster
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang nodejs %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">allow<wbr>Version<wbr>Upgrade</td>
-            <td class="align-top">
-                
-                <code>boolean</code>
-            </td>
-            <td class="align-top">{{% md %}} Whether major version upgrades can be applied during maintenance period
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">automated<wbr>Snapshot<wbr>Retention<wbr>Period</td>
-            <td class="align-top">
-                
-                <code>number</code>
-            </td>
-            <td class="align-top">{{% md %}} The backup retention period
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">availability<wbr>Zone</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The availability zone of the cluster
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">bucket<wbr>Name</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The name of the S3 bucket where the log files are to be stored
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">cluster<wbr>Identifier</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The cluster identifier
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">cluster<wbr>Parameter<wbr>Group<wbr>Name</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The name of the parameter group to be associated with this cluster
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">cluster<wbr>Public<wbr>Key</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The public key for the cluster
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">cluster<wbr>Revision<wbr>Number</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The cluster revision number
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">cluster<wbr>Security<wbr>Groups</td>
-            <td class="align-top">
-                
-                <code>string[]</code>
-            </td>
-            <td class="align-top">{{% md %}} The security groups associated with the cluster
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">cluster<wbr>Subnet<wbr>Group<wbr>Name</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The name of a cluster subnet group to be associated with this cluster
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">cluster<wbr>Type</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The cluster type
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">cluster<wbr>Version</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}}  {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">database<wbr>Name</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The name of the default database in the cluster
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">elastic<wbr>Ip</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The Elastic IP of the cluster
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">enable<wbr>Logging</td>
-            <td class="align-top">
-                
-                <code>boolean</code>
-            </td>
-            <td class="align-top">{{% md %}} Whether cluster logging is enabled
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">encrypted</td>
-            <td class="align-top">
-                
-                <code>boolean</code>
-            </td>
-            <td class="align-top">{{% md %}} Whether the cluster data is encrypted
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">endpoint</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The cluster endpoint
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">enhanced<wbr>Vpc<wbr>Routing</td>
-            <td class="align-top">
-                
-                <code>boolean</code>
-            </td>
-            <td class="align-top">{{% md %}} Whether enhanced VPC routing is enabled
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">iam<wbr>Roles</td>
-            <td class="align-top">
-                
-                <code>string[]</code>
-            </td>
-            <td class="align-top">{{% md %}} The IAM roles associated to the cluster
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">id</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} id is the provider-assigned unique ID for this managed resource.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">kms<wbr>Key<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The KMS encryption key associated to the cluster
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">master<wbr>Username</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} Username for the master DB user
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">node<wbr>Type</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The cluster node type
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">number<wbr>Of<wbr>Nodes</td>
-            <td class="align-top">
-                
-                <code>number</code>
-            </td>
-            <td class="align-top">{{% md %}} The number of nodes in the cluster
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">port</td>
-            <td class="align-top">
-                
-                <code>number</code>
-            </td>
-            <td class="align-top">{{% md %}} The port the cluster responds on
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">preferred<wbr>Maintenance<wbr>Window</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The maintenance window
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">publicly<wbr>Accessible</td>
-            <td class="align-top">
-                
-                <code>boolean</code>
-            </td>
-            <td class="align-top">{{% md %}} Whether the cluster is publicly accessible
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">s3Key<wbr>Prefix</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The folder inside the S3 bucket where the log files are stored
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">tags</td>
-            <td class="align-top">
-                
-                <code>{[key: string]: any}?</code>
-            </td>
-            <td class="align-top">{{% md %}} The tags associated to the cluster
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">vpc<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The VPC Id associated with the cluster
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">vpc<wbr>Security<wbr>Group<wbr>Ids</td>
-            <td class="align-top">
-                
-                <code>string[]</code>
-            </td>
-            <td class="align-top">{{% md %}} The VPC security group Ids associated with the cluster
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang python %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">allow_<wbr>version_<wbr>upgrade</td>
-            <td class="align-top">
-                
-                <code>bool</code>
-            </td>
-            <td class="align-top">{{% md %}} Whether major version upgrades can be applied during maintenance period
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">automated_<wbr>snapshot_<wbr>retention_<wbr>period</td>
-            <td class="align-top">
-                
-                <code>float</code>
-            </td>
-            <td class="align-top">{{% md %}} The backup retention period
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">availability_<wbr>zone</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} The availability zone of the cluster
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">bucket_<wbr>name</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} The name of the S3 bucket where the log files are to be stored
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">cluster_<wbr>identifier</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} The cluster identifier
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">cluster_<wbr>parameter_<wbr>group_<wbr>name</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} The name of the parameter group to be associated with this cluster
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">cluster_<wbr>public_<wbr>key</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} The public key for the cluster
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">cluster_<wbr>revision_<wbr>number</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} The cluster revision number
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">cluster_<wbr>security_<wbr>groups</td>
-            <td class="align-top">
-                
-                <code>List[str]</code>
-            </td>
-            <td class="align-top">{{% md %}} The security groups associated with the cluster
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">cluster_<wbr>subnet_<wbr>group_<wbr>name</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} The name of a cluster subnet group to be associated with this cluster
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">cluster_<wbr>type</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} The cluster type
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">cluster_<wbr>version</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}}  {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">database_<wbr>name</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} The name of the default database in the cluster
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">elastic_<wbr>ip</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} The Elastic IP of the cluster
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">enable_<wbr>logging</td>
-            <td class="align-top">
-                
-                <code>bool</code>
-            </td>
-            <td class="align-top">{{% md %}} Whether cluster logging is enabled
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">encrypted</td>
-            <td class="align-top">
-                
-                <code>bool</code>
-            </td>
-            <td class="align-top">{{% md %}} Whether the cluster data is encrypted
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">endpoint</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} The cluster endpoint
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">enhanced_<wbr>vpc_<wbr>routing</td>
-            <td class="align-top">
-                
-                <code>bool</code>
-            </td>
-            <td class="align-top">{{% md %}} Whether enhanced VPC routing is enabled
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">iam_<wbr>roles</td>
-            <td class="align-top">
-                
-                <code>List[str]</code>
-            </td>
-            <td class="align-top">{{% md %}} The IAM roles associated to the cluster
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">id</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} id is the provider-assigned unique ID for this managed resource.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">kms_<wbr>key_<wbr>id</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} The KMS encryption key associated to the cluster
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">master_<wbr>username</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} Username for the master DB user
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">node_<wbr>type</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} The cluster node type
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">number_<wbr>of_<wbr>nodes</td>
-            <td class="align-top">
-                
-                <code>float</code>
-            </td>
-            <td class="align-top">{{% md %}} The number of nodes in the cluster
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">port</td>
-            <td class="align-top">
-                
-                <code>float</code>
-            </td>
-            <td class="align-top">{{% md %}} The port the cluster responds on
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">preferred_<wbr>maintenance_<wbr>window</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} The maintenance window
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">publicly_<wbr>accessible</td>
-            <td class="align-top">
-                
-                <code>bool</code>
-            </td>
-            <td class="align-top">{{% md %}} Whether the cluster is publicly accessible
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">s3_<wbr>key_<wbr>prefix</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} The folder inside the S3 bucket where the log files are stored
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">tags</td>
-            <td class="align-top">
-                
-                <code>Dict[str, Any]</code>
-            </td>
-            <td class="align-top">{{% md %}} The tags associated to the cluster
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">vpc_<wbr>id</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} The VPC Id associated with the cluster
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">vpc_<wbr>security_<wbr>group_<wbr>ids</td>
-            <td class="align-top">
-                
-                <code>List[str]</code>
-            </td>
-            <td class="align-top">{{% md %}} The VPC security group Ids associated with the cluster
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Allow<wbr>Version<wbr>Upgrade</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether major version upgrades can be applied during maintenance period
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Automated<wbr>Snapshot<wbr>Retention<wbr>Period</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The backup retention period
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Availability<wbr>Zone</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The availability zone of the cluster
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Bucket<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the S3 bucket where the log files are to be stored
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Cluster<wbr>Identifier</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The cluster identifier
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Cluster<wbr>Parameter<wbr>Group<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the parameter group to be associated with this cluster
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Cluster<wbr>Public<wbr>Key</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The public key for the cluster
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Cluster<wbr>Revision<wbr>Number</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The cluster revision number
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Cluster<wbr>Security<wbr>Groups</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List<string></span>
+    </dt>
+    <dd>{{% md %}}The security groups associated with the cluster
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Cluster<wbr>Subnet<wbr>Group<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of a cluster subnet group to be associated with this cluster
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Cluster<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The cluster type
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Cluster<wbr>Version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Database<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the default database in the cluster
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Elastic<wbr>Ip</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Elastic IP of the cluster
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Enable<wbr>Logging</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether cluster logging is enabled
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Encrypted</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the cluster data is encrypted
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Endpoint</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The cluster endpoint
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Enhanced<wbr>Vpc<wbr>Routing</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether enhanced VPC routing is enabled
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Iam<wbr>Roles</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List<string></span>
+    </dt>
+    <dd>{{% md %}}The IAM roles associated to the cluster
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Kms<wbr>Key<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The KMS encryption key associated to the cluster
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Master<wbr>Username</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Username for the master DB user
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Node<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The cluster node type
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Number<wbr>Of<wbr>Nodes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of nodes in the cluster
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The port the cluster responds on
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Preferred<wbr>Maintenance<wbr>Window</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The maintenance window
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Publicly<wbr>Accessible</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the cluster is publicly accessible
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>S3Key<wbr>Prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The folder inside the S3 bucket where the log files are stored
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary<string, object>?</span>
+    </dt>
+    <dd>{{% md %}}The tags associated to the cluster
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Vpc<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The VPC Id associated with the cluster
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Vpc<wbr>Security<wbr>Group<wbr>Ids</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List<string></span>
+    </dt>
+    <dd>{{% md %}}The VPC security group Ids associated with the cluster
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Allow<wbr>Version<wbr>Upgrade</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether major version upgrades can be applied during maintenance period
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Automated<wbr>Snapshot<wbr>Retention<wbr>Period</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The backup retention period
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Availability<wbr>Zone</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The availability zone of the cluster
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Bucket<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the S3 bucket where the log files are to be stored
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Cluster<wbr>Identifier</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The cluster identifier
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Cluster<wbr>Parameter<wbr>Group<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the parameter group to be associated with this cluster
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Cluster<wbr>Public<wbr>Key</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The public key for the cluster
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Cluster<wbr>Revision<wbr>Number</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The cluster revision number
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Cluster<wbr>Security<wbr>Groups</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The security groups associated with the cluster
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Cluster<wbr>Subnet<wbr>Group<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of a cluster subnet group to be associated with this cluster
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Cluster<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The cluster type
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Cluster<wbr>Version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Database<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the default database in the cluster
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Elastic<wbr>Ip</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Elastic IP of the cluster
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Enable<wbr>Logging</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether cluster logging is enabled
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Encrypted</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the cluster data is encrypted
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Endpoint</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The cluster endpoint
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Enhanced<wbr>Vpc<wbr>Routing</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether enhanced VPC routing is enabled
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Iam<wbr>Roles</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The IAM roles associated to the cluster
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Kms<wbr>Key<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The KMS encryption key associated to the cluster
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Master<wbr>Username</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Username for the master DB user
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Node<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The cluster node type
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Number<wbr>Of<wbr>Nodes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of nodes in the cluster
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The port the cluster responds on
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Preferred<wbr>Maintenance<wbr>Window</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The maintenance window
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Publicly<wbr>Accessible</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the cluster is publicly accessible
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>S3Key<wbr>Prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The folder inside the S3 bucket where the log files are stored
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}The tags associated to the cluster
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Vpc<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The VPC Id associated with the cluster
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Vpc<wbr>Security<wbr>Group<wbr>Ids</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The VPC security group Ids associated with the cluster
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>allow<wbr>Version<wbr>Upgrade</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether major version upgrades can be applied during maintenance period
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>automated<wbr>Snapshot<wbr>Retention<wbr>Period</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The backup retention period
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>availability<wbr>Zone</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The availability zone of the cluster
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>bucket<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the S3 bucket where the log files are to be stored
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>cluster<wbr>Identifier</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The cluster identifier
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>cluster<wbr>Parameter<wbr>Group<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the parameter group to be associated with this cluster
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>cluster<wbr>Public<wbr>Key</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The public key for the cluster
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>cluster<wbr>Revision<wbr>Number</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The cluster revision number
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>cluster<wbr>Security<wbr>Groups</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The security groups associated with the cluster
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>cluster<wbr>Subnet<wbr>Group<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of a cluster subnet group to be associated with this cluster
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>cluster<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The cluster type
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>cluster<wbr>Version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>database<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the default database in the cluster
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>elastic<wbr>Ip</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Elastic IP of the cluster
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>enable<wbr>Logging</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether cluster logging is enabled
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>encrypted</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether the cluster data is encrypted
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>endpoint</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The cluster endpoint
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>enhanced<wbr>Vpc<wbr>Routing</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether enhanced VPC routing is enabled
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>iam<wbr>Roles</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The IAM roles associated to the cluster
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>kms<wbr>Key<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The KMS encryption key associated to the cluster
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>master<wbr>Username</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Username for the master DB user
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>node<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The cluster node type
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>number<wbr>Of<wbr>Nodes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The number of nodes in the cluster
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The port the cluster responds on
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>preferred<wbr>Maintenance<wbr>Window</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The maintenance window
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>publicly<wbr>Accessible</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether the cluster is publicly accessible
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>s3Key<wbr>Prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The folder inside the S3 bucket where the log files are stored
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}?</span>
+    </dt>
+    <dd>{{% md %}}The tags associated to the cluster
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>vpc<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The VPC Id associated with the cluster
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>vpc<wbr>Security<wbr>Group<wbr>Ids</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The VPC security group Ids associated with the cluster
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>allow_<wbr>version_<wbr>upgrade</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether major version upgrades can be applied during maintenance period
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>automated_<wbr>snapshot_<wbr>retention_<wbr>period</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The backup retention period
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>availability_<wbr>zone</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The availability zone of the cluster
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>bucket_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the S3 bucket where the log files are to be stored
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>cluster_<wbr>identifier</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The cluster identifier
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>cluster_<wbr>parameter_<wbr>group_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the parameter group to be associated with this cluster
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>cluster_<wbr>public_<wbr>key</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The public key for the cluster
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>cluster_<wbr>revision_<wbr>number</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The cluster revision number
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>cluster_<wbr>security_<wbr>groups</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}The security groups associated with the cluster
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>cluster_<wbr>subnet_<wbr>group_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of a cluster subnet group to be associated with this cluster
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>cluster_<wbr>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The cluster type
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>cluster_<wbr>version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>database_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the default database in the cluster
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>elastic_<wbr>ip</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Elastic IP of the cluster
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>enable_<wbr>logging</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether cluster logging is enabled
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>encrypted</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the cluster data is encrypted
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>endpoint</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The cluster endpoint
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>enhanced_<wbr>vpc_<wbr>routing</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether enhanced VPC routing is enabled
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>iam_<wbr>roles</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}The IAM roles associated to the cluster
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>kms_<wbr>key_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The KMS encryption key associated to the cluster
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>master_<wbr>username</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Username for the master DB user
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>node_<wbr>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The cluster node type
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>number_<wbr>of_<wbr>nodes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The number of nodes in the cluster
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The port the cluster responds on
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>preferred_<wbr>maintenance_<wbr>window</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The maintenance window
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>publicly_<wbr>accessible</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the cluster is publicly accessible
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>s3_<wbr>key_<wbr>prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The folder inside the S3 bucket where the log files are stored
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}The tags associated to the cluster
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>vpc_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The VPC Id associated with the cluster
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>vpc_<wbr>security_<wbr>group_<wbr>ids</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}The VPC security group Ids associated with the cluster
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
 

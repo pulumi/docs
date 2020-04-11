@@ -1,7 +1,6 @@
 ---
-title: Continuous Delivery
-meta_desc: This page provides an overview of how to integrate Pulumi with your current CI/CD
-           processes to review, validate, and test cloud resources.
+title: Continuous Delivery for Cloud Resources
+meta_desc: Pulumi's approach to infrastructure as code is great for CI/CD because it uses source code to model cloud resources and integrates into any CI/CD system.
 menu:
     userguides:
         identifier: cont_delivery
@@ -18,7 +17,7 @@ process that you have today. For example, doing code reviews via Pull Requests, 
 analysis tools, and running unit and integration tests as appropriate. It all "just works" for your cloud
 infrastructure the same way it would for your application code.
 
-Pulumi can easily integrate into any CI/CD system. If yours isn't listed below, see our guide for using Pulumi
+Pulumi can easily integrate into any continuous integration/continuous deliver (CI/CD) system. If your CI/CD system isn't listed below or you are testing something new, see our guide for using Pulumi
 within a [generic CI/CD system]({{< relref "other" >}}).
 
 <div class="supported-cicd-platforms">
@@ -85,7 +84,7 @@ sensitive information. See [Managing Secrets with Pulumi]({{< relref "managing-s
 
 Most real-world environments are complex. Perhaps you have a networking stack that's independent from your data
 and application stacks. Pulumi [supports "stack references"]({{< relref "/docs/intro/concepts/organizing-stacks-projects" >}}), which
-permit one stack to depend upon another. This facilitates continuous delivery at scale.
+permit one stack to depend upon another. This facilitates continuous delivery and integration at scale.
 
 ### Using Branches for Environments
 

@@ -83,6 +83,10 @@ module.exports = {
                     "Open Sans",
                     ...defaultTheme.fontFamily.sans,
                 ],
+                mono: [
+                    "Source Code Pro",
+                    ...defaultTheme.fontFamily.mono,
+                ]
             },
         },
         colors: {

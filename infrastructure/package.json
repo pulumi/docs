@@ -12,9 +12,9 @@
         "tslint": "^5.19.0"
     },
     "dependencies": {
-        "@pulumi/aws": "^0.18.27",
+        "@pulumi/aws": "^1.28.0",
         "@pulumi/awsx": "^0.19.1",
-        "@pulumi/pulumi": "^0.17.28",
+        "@pulumi/pulumi": "^1.13.0",
         "mime": "^2.4.4"
     }
 }

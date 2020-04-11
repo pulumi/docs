@@ -3,14 +3,15 @@
 title: "Permission"
 block_external_search_index: true
 ---
-<style>
-table td p { margin-top: 0; margin-bottom: 0; }
-</style>
+
+
 
 Creates a Lambda permission to allow external sources invoking the Lambda function
 (e.g. CloudWatch Event Rule, SNS or S3).
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -52,6 +53,8 @@ const allowCloudwatch = new aws.lambda.Permission("allow_cloudwatch", {
 });
 ```
 
+{{% /example %}}
+{{% /examples %}}
 ## Usage with SNS
 
 ```typescript
@@ -111,714 +114,500 @@ const lambdaPermission = new aws.lambda.Permission("lambda_permission", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lambda_permission.html.markdown.
-
 
 
 ## Create a Permission Resource
 
-{{< langchoose csharp nojavascript >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/lambda/#Permission">Permission</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/lambda/#PermissionArgs">PermissionArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+{{% choosable language nodejs %}}
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/lambda/#Permission">Permission</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/lambda/#PermissionArgs">PermissionArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+{{% /choosable %}}
 
+{{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Permission</span><span class="p">(resource_name, opts=None, </span>action=None<span class="p">, </span>event_source_token=None<span class="p">, </span>function=None<span class="p">, </span>principal=None<span class="p">, </span>qualifier=None<span class="p">, </span>source_account=None<span class="p">, </span>source_arn=None<span class="p">, </span>statement_id=None<span class="p">, </span>statement_id_prefix=None<span class="p">, __props__=None);</span></code></pre></div>
+{{% /choosable %}}
 
+{{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewPermission<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/lambda?tab=doc#PermissionArgs">PermissionArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/lambda?tab=doc#Permission">Permission</a></span>, error)</span></code></pre></div>
+{{% /choosable %}}
 
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lambda.Permission.html">Permission</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lambda.PermissionArgs.html">PermissionArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+{{% choosable language csharp %}}
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lambda.Permission.html">Permission</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lambda.PermissionArgs.html">PermissionArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+{{% /choosable %}}
 
-Creates a Permission resource with the given unique name, arguments, and options.
+{{% choosable language nodejs %}}
 
-{{% lang nodejs %}}
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The arguments to use to populate this resource's properties.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 
-<ul class="pl-10">
-    <li><strong>name</strong> &ndash; (Required) The unique name of the resulting resource.</li>
-    <li><strong>args</strong> &ndash;  (Optional)  The arguments to use to populate this resource's properties.</li>
-    <li><strong>opts</strong> &ndash; (Optional) A bag of options that control this resource's behavior.</li>
-</ul>
+{{% /choosable %}}
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
+{{% /choosable %}}
 
-{{% lang go %}}
+{{% choosable language go %}}
 
-<ul class="pl-10">
-    <li><strong>name</strong> &ndash; (Required) The unique name of the resulting resource.</li>
-    <li><strong>args</strong> &ndash;  (Optional)  The arguments to use to populate this resource's properties.</li>
-    <li><strong>opts</strong> &ndash; (Optional) A bag of options that control this resource's behavior.</li>
-</ul>
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The arguments to use to populate this resource's properties.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 
-{{% /lang %}}
+{{% /choosable %}}
 
-{{% lang csharp %}}
+{{% choosable language csharp %}}
 
-<ul class="pl-10">
-    <li><strong>name</strong> &ndash; (Required) The unique name of the resulting resource.</li>
-    <li><strong>args</strong> &ndash;  (Optional)  The arguments to use to populate this resource's properties.</li>
-    <li><strong>opts</strong> &ndash; (Optional) A bag of options that control this resource's behavior.</li>
-</ul>
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The arguments to use to populate this resource's properties.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 
-{{% /lang %}}
+{{% /choosable %}}
 
-The following arguments are supported:
-
-
-{{< langchoose csharp nojavascript >}}
+#### Resource Arguments
 
 
-{{% lang csharp %}}
 
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Action</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The AWS Lambda action you want to allow in this statement. (e.g. `lambda:InvokeFunction`)
- {{% /md %}}
+{{% choosable language csharp %}}
+<dl class="resources-properties">
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Event<wbr>Source<wbr>Token</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The Event Source Token to validate.  Used with [Alexa Skills][1].
- {{% /md %}}
+    <dt class="property-required"
+            title="Required">
+        <span>Action</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The AWS Lambda action you want to allow in this statement. (e.g. `lambda:InvokeFunction`)
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Function</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-Name of the Lambda function whose resource policy you are updating
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Event<wbr>Source<wbr>Token</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The Event Source Token to validate.  Used with [Alexa Skills][1].
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Principal</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The principal who is getting this permission.
+    <dt class="property-required"
+            title="Required">
+        <span>Function</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the Lambda function whose resource policy you are updating
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Principal</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The principal who is getting this permission.
 e.g. `s3.amazonaws.com`, an AWS account ID, or any valid AWS service principal
 such as `events.amazonaws.com` or `sns.amazonaws.com`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Qualifier</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Query parameter to specify function version or alias name.
+    <dt class="property-optional"
+            title="Optional">
+        <span>Qualifier</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Query parameter to specify function version or alias name.
 The permission will then apply to the specific qualified ARN.
 e.g. `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Source<wbr>Account</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-This parameter is used for S3 and SES. The AWS account ID (without a hyphen) of the source owner.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Source<wbr>Account</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}This parameter is used for S3 and SES. The AWS account ID (without a hyphen) of the source owner.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Source<wbr>Arn</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-When granting Amazon S3 or CloudWatch Events permission to
+    <dt class="property-optional"
+            title="Optional">
+        <span>Source<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}When granting Amazon S3 or CloudWatch Events permission to
 invoke your function, you should specify this field with the Amazon Resource Name (ARN)
 for the S3 Bucket or CloudWatch Events Rule as its value.  This ensures that only events
 generated from the specified bucket or rule can invoke the function.
 API Gateway ARNs have a unique structure described
 [here](http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-control-access-using-iam-policies-to-invoke-api.html).
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Statement<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A unique statement identifier. By default generated by this provider.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Statement<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}A unique statement identifier. By default generated by this provider.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Statement<wbr>Id<wbr>Prefix</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A statement identifier prefix. This provider will generate a unique suffix. Conflicts with `statement_id`.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Statement<wbr>Id<wbr>Prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}A statement identifier prefix. This provider will generate a unique suffix. Conflicts with `statement_id`.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language go %}}
+<dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Action</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The AWS Lambda action you want to allow in this statement. (e.g. `lambda:InvokeFunction`)
+{{% /md %}}</dd>
 
-{{% lang go %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Event<wbr>Source<wbr>Token</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The Event Source Token to validate.  Used with [Alexa Skills][1].
+{{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>Function</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}Name of the Lambda function whose resource policy you are updating
+{{% /md %}}</dd>
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Action</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The AWS Lambda action you want to allow in this statement. (e.g. `lambda:InvokeFunction`)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Event<wbr>Source<wbr>Token</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The Event Source Token to validate.  Used with [Alexa Skills][1].
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Function</td>
-            <td class="align-top">
-                
-                <code>interface{}</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-Name of the Lambda function whose resource policy you are updating
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Principal</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The principal who is getting this permission.
+    <dt class="property-required"
+            title="Required">
+        <span>Principal</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The principal who is getting this permission.
 e.g. `s3.amazonaws.com`, an AWS account ID, or any valid AWS service principal
 such as `events.amazonaws.com` or `sns.amazonaws.com`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Qualifier</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Query parameter to specify function version or alias name.
+    <dt class="property-optional"
+            title="Optional">
+        <span>Qualifier</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}Query parameter to specify function version or alias name.
 The permission will then apply to the specific qualified ARN.
 e.g. `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Source<wbr>Account</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-This parameter is used for S3 and SES. The AWS account ID (without a hyphen) of the source owner.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Source<wbr>Account</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}This parameter is used for S3 and SES. The AWS account ID (without a hyphen) of the source owner.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Source<wbr>Arn</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-When granting Amazon S3 or CloudWatch Events permission to
+    <dt class="property-optional"
+            title="Optional">
+        <span>Source<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}When granting Amazon S3 or CloudWatch Events permission to
 invoke your function, you should specify this field with the Amazon Resource Name (ARN)
 for the S3 Bucket or CloudWatch Events Rule as its value.  This ensures that only events
 generated from the specified bucket or rule can invoke the function.
 API Gateway ARNs have a unique structure described
 [here](http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-control-access-using-iam-policies-to-invoke-api.html).
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Statement<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A unique statement identifier. By default generated by this provider.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Statement<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}A unique statement identifier. By default generated by this provider.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Statement<wbr>Id<wbr>Prefix</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A statement identifier prefix. This provider will generate a unique suffix. Conflicts with `statement_id`.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Statement<wbr>Id<wbr>Prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}A statement identifier prefix. This provider will generate a unique suffix. Conflicts with `statement_id`.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>action</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The AWS Lambda action you want to allow in this statement. (e.g. `lambda:InvokeFunction`)
+{{% /md %}}</dd>
 
-{{% lang nodejs %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>event<wbr>Source<wbr>Token</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The Event Source Token to validate.  Used with [Alexa Skills][1].
+{{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>function</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | Function</span>
+    </dt>
+    <dd>{{% md %}}Name of the Lambda function whose resource policy you are updating
+{{% /md %}}</dd>
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">action</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The AWS Lambda action you want to allow in this statement. (e.g. `lambda:InvokeFunction`)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">event<wbr>Source<wbr>Token</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The Event Source Token to validate.  Used with [Alexa Skills][1].
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">function</td>
-            <td class="align-top">
-                
-                <code>string | Function</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-Name of the Lambda function whose resource policy you are updating
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">principal</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The principal who is getting this permission.
+    <dt class="property-required"
+            title="Required">
+        <span>principal</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The principal who is getting this permission.
 e.g. `s3.amazonaws.com`, an AWS account ID, or any valid AWS service principal
 such as `events.amazonaws.com` or `sns.amazonaws.com`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">qualifier</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Query parameter to specify function version or alias name.
+    <dt class="property-optional"
+            title="Optional">
+        <span>qualifier</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Query parameter to specify function version or alias name.
 The permission will then apply to the specific qualified ARN.
 e.g. `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">source<wbr>Account</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-This parameter is used for S3 and SES. The AWS account ID (without a hyphen) of the source owner.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>source<wbr>Account</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}This parameter is used for S3 and SES. The AWS account ID (without a hyphen) of the source owner.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">source<wbr>Arn</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-When granting Amazon S3 or CloudWatch Events permission to
+    <dt class="property-optional"
+            title="Optional">
+        <span>source<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}When granting Amazon S3 or CloudWatch Events permission to
 invoke your function, you should specify this field with the Amazon Resource Name (ARN)
 for the S3 Bucket or CloudWatch Events Rule as its value.  This ensures that only events
 generated from the specified bucket or rule can invoke the function.
 API Gateway ARNs have a unique structure described
 [here](http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-control-access-using-iam-policies-to-invoke-api.html).
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">statement<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A unique statement identifier. By default generated by this provider.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>statement<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}A unique statement identifier. By default generated by this provider.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">statement<wbr>Id<wbr>Prefix</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A statement identifier prefix. This provider will generate a unique suffix. Conflicts with `statement_id`.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>statement<wbr>Id<wbr>Prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}A statement identifier prefix. This provider will generate a unique suffix. Conflicts with `statement_id`.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>action</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The AWS Lambda action you want to allow in this statement. (e.g. `lambda:InvokeFunction`)
+{{% /md %}}</dd>
 
-{{% lang python %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>event_<wbr>source_<wbr>token</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Event Source Token to validate.  Used with [Alexa Skills][1].
+{{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>function</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}Name of the Lambda function whose resource policy you are updating
+{{% /md %}}</dd>
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">action</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The AWS Lambda action you want to allow in this statement. (e.g. `lambda:InvokeFunction`)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">event_<wbr>source_<wbr>token</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The Event Source Token to validate.  Used with [Alexa Skills][1].
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">function</td>
-            <td class="align-top">
-                
-                <code>Dict[str, Any]</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-Name of the Lambda function whose resource policy you are updating
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">principal</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The principal who is getting this permission.
+    <dt class="property-required"
+            title="Required">
+        <span>principal</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The principal who is getting this permission.
 e.g. `s3.amazonaws.com`, an AWS account ID, or any valid AWS service principal
 such as `events.amazonaws.com` or `sns.amazonaws.com`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">qualifier</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Query parameter to specify function version or alias name.
+    <dt class="property-optional"
+            title="Optional">
+        <span>qualifier</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Query parameter to specify function version or alias name.
 The permission will then apply to the specific qualified ARN.
 e.g. `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">source_<wbr>account</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-This parameter is used for S3 and SES. The AWS account ID (without a hyphen) of the source owner.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>source_<wbr>account</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}This parameter is used for S3 and SES. The AWS account ID (without a hyphen) of the source owner.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">source_<wbr>arn</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-When granting Amazon S3 or CloudWatch Events permission to
+    <dt class="property-optional"
+            title="Optional">
+        <span>source_<wbr>arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}When granting Amazon S3 or CloudWatch Events permission to
 invoke your function, you should specify this field with the Amazon Resource Name (ARN)
 for the S3 Bucket or CloudWatch Events Rule as its value.  This ensures that only events
 generated from the specified bucket or rule can invoke the function.
 API Gateway ARNs have a unique structure described
 [here](http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-control-access-using-iam-policies-to-invoke-api.html).
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">statement_<wbr>id</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A unique statement identifier. By default generated by this provider.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>statement_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A unique statement identifier. By default generated by this provider.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">statement_<wbr>id_<wbr>prefix</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A statement identifier prefix. This provider will generate a unique suffix. Conflicts with `statement_id`.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>statement_<wbr>id_<wbr>prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A statement identifier prefix. This provider will generate a unique suffix. Conflicts with `statement_id`.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
+</dl>
+{{% /choosable %}}
 
 
 
@@ -832,591 +621,393 @@ The following output properties are available:
 
 
 
-{{< langchoose csharp nojavascript >}}
 
+{{% choosable language csharp %}}
+<dl class="resources-properties">
 
-{{% lang csharp %}}
+    <dt class="property-"
+            title="">
+        <span>Action</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The AWS Lambda action you want to allow in this statement. (e.g. `lambda:InvokeFunction`)
+{{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>Event<wbr>Source<wbr>Token</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The Event Source Token to validate.  Used with [Alexa Skills][1].
+{{% /md %}}</dd>
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Action</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The AWS Lambda action you want to allow in this statement. (e.g. `lambda:InvokeFunction`)
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Function</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the Lambda function whose resource policy you are updating
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Event<wbr>Source<wbr>Token</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} The Event Source Token to validate.  Used with [Alexa Skills][1].
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Function</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} Name of the Lambda function whose resource policy you are updating
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Principal</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The principal who is getting this permission.
+    <dt class="property-"
+            title="">
+        <span>Principal</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The principal who is getting this permission.
 e.g. `s3.amazonaws.com`, an AWS account ID, or any valid AWS service principal
 such as `events.amazonaws.com` or `sns.amazonaws.com`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Qualifier</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} Query parameter to specify function version or alias name.
+    <dt class="property-"
+            title="">
+        <span>Qualifier</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Query parameter to specify function version or alias name.
 The permission will then apply to the specific qualified ARN.
 e.g. `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Source<wbr>Account</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} This parameter is used for S3 and SES. The AWS account ID (without a hyphen) of the source owner.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Source<wbr>Account</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}This parameter is used for S3 and SES. The AWS account ID (without a hyphen) of the source owner.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Source<wbr>Arn</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} When granting Amazon S3 or CloudWatch Events permission to
+    <dt class="property-"
+            title="">
+        <span>Source<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}When granting Amazon S3 or CloudWatch Events permission to
 invoke your function, you should specify this field with the Amazon Resource Name (ARN)
 for the S3 Bucket or CloudWatch Events Rule as its value.  This ensures that only events
 generated from the specified bucket or rule can invoke the function.
 API Gateway ARNs have a unique structure described
 [here](http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-control-access-using-iam-policies-to-invoke-api.html).
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Statement<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} A unique statement identifier. By default generated by this provider.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Statement<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A unique statement identifier. By default generated by this provider.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Statement<wbr>Id<wbr>Prefix</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} A statement identifier prefix. This provider will generate a unique suffix. Conflicts with `statement_id`.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Statement<wbr>Id<wbr>Prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}A statement identifier prefix. This provider will generate a unique suffix. Conflicts with `statement_id`.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language go %}}
+<dl class="resources-properties">
 
+    <dt class="property-"
+            title="">
+        <span>Action</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The AWS Lambda action you want to allow in this statement. (e.g. `lambda:InvokeFunction`)
+{{% /md %}}</dd>
 
-{{% lang go %}}
+    <dt class="property-"
+            title="">
+        <span>Event<wbr>Source<wbr>Token</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The Event Source Token to validate.  Used with [Alexa Skills][1].
+{{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>Function</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the Lambda function whose resource policy you are updating
+{{% /md %}}</dd>
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Action</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The AWS Lambda action you want to allow in this statement. (e.g. `lambda:InvokeFunction`)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Event<wbr>Source<wbr>Token</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} The Event Source Token to validate.  Used with [Alexa Skills][1].
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Function</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} Name of the Lambda function whose resource policy you are updating
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Principal</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The principal who is getting this permission.
+    <dt class="property-"
+            title="">
+        <span>Principal</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The principal who is getting this permission.
 e.g. `s3.amazonaws.com`, an AWS account ID, or any valid AWS service principal
 such as `events.amazonaws.com` or `sns.amazonaws.com`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Qualifier</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} Query parameter to specify function version or alias name.
+    <dt class="property-"
+            title="">
+        <span>Qualifier</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}Query parameter to specify function version or alias name.
 The permission will then apply to the specific qualified ARN.
 e.g. `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Source<wbr>Account</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} This parameter is used for S3 and SES. The AWS account ID (without a hyphen) of the source owner.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Source<wbr>Account</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}This parameter is used for S3 and SES. The AWS account ID (without a hyphen) of the source owner.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Source<wbr>Arn</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} When granting Amazon S3 or CloudWatch Events permission to
+    <dt class="property-"
+            title="">
+        <span>Source<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}When granting Amazon S3 or CloudWatch Events permission to
 invoke your function, you should specify this field with the Amazon Resource Name (ARN)
 for the S3 Bucket or CloudWatch Events Rule as its value.  This ensures that only events
 generated from the specified bucket or rule can invoke the function.
 API Gateway ARNs have a unique structure described
 [here](http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-control-access-using-iam-policies-to-invoke-api.html).
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Statement<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} A unique statement identifier. By default generated by this provider.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Statement<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A unique statement identifier. By default generated by this provider.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Statement<wbr>Id<wbr>Prefix</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} A statement identifier prefix. This provider will generate a unique suffix. Conflicts with `statement_id`.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Statement<wbr>Id<wbr>Prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}A statement identifier prefix. This provider will generate a unique suffix. Conflicts with `statement_id`.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
+    <dt class="property-"
+            title="">
+        <span>action</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The AWS Lambda action you want to allow in this statement. (e.g. `lambda:InvokeFunction`)
+{{% /md %}}</dd>
 
-{{% lang nodejs %}}
+    <dt class="property-"
+            title="">
+        <span>event<wbr>Source<wbr>Token</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The Event Source Token to validate.  Used with [Alexa Skills][1].
+{{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>function</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the Lambda function whose resource policy you are updating
+{{% /md %}}</dd>
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">action</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The AWS Lambda action you want to allow in this statement. (e.g. `lambda:InvokeFunction`)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">event<wbr>Source<wbr>Token</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} The Event Source Token to validate.  Used with [Alexa Skills][1].
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">function</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} Name of the Lambda function whose resource policy you are updating
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">principal</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The principal who is getting this permission.
+    <dt class="property-"
+            title="">
+        <span>principal</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The principal who is getting this permission.
 e.g. `s3.amazonaws.com`, an AWS account ID, or any valid AWS service principal
 such as `events.amazonaws.com` or `sns.amazonaws.com`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">qualifier</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} Query parameter to specify function version or alias name.
+    <dt class="property-"
+            title="">
+        <span>qualifier</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Query parameter to specify function version or alias name.
 The permission will then apply to the specific qualified ARN.
 e.g. `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">source<wbr>Account</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} This parameter is used for S3 and SES. The AWS account ID (without a hyphen) of the source owner.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>source<wbr>Account</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}This parameter is used for S3 and SES. The AWS account ID (without a hyphen) of the source owner.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">source<wbr>Arn</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} When granting Amazon S3 or CloudWatch Events permission to
+    <dt class="property-"
+            title="">
+        <span>source<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}When granting Amazon S3 or CloudWatch Events permission to
 invoke your function, you should specify this field with the Amazon Resource Name (ARN)
 for the S3 Bucket or CloudWatch Events Rule as its value.  This ensures that only events
 generated from the specified bucket or rule can invoke the function.
 API Gateway ARNs have a unique structure described
 [here](http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-control-access-using-iam-policies-to-invoke-api.html).
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">statement<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} A unique statement identifier. By default generated by this provider.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>statement<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A unique statement identifier. By default generated by this provider.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">statement<wbr>Id<wbr>Prefix</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} A statement identifier prefix. This provider will generate a unique suffix. Conflicts with `statement_id`.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>statement<wbr>Id<wbr>Prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}A statement identifier prefix. This provider will generate a unique suffix. Conflicts with `statement_id`.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
 
+    <dt class="property-"
+            title="">
+        <span>action</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The AWS Lambda action you want to allow in this statement. (e.g. `lambda:InvokeFunction`)
+{{% /md %}}</dd>
 
-{{% lang python %}}
+    <dt class="property-"
+            title="">
+        <span>event_<wbr>source_<wbr>token</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Event Source Token to validate.  Used with [Alexa Skills][1].
+{{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>function</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of the Lambda function whose resource policy you are updating
+{{% /md %}}</dd>
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">action</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} The AWS Lambda action you want to allow in this statement. (e.g. `lambda:InvokeFunction`)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">event_<wbr>source_<wbr>token</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} The Event Source Token to validate.  Used with [Alexa Skills][1].
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">function</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} Name of the Lambda function whose resource policy you are updating
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">principal</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} The principal who is getting this permission.
+    <dt class="property-"
+            title="">
+        <span>principal</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The principal who is getting this permission.
 e.g. `s3.amazonaws.com`, an AWS account ID, or any valid AWS service principal
 such as `events.amazonaws.com` or `sns.amazonaws.com`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">qualifier</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} Query parameter to specify function version or alias name.
+    <dt class="property-"
+            title="">
+        <span>qualifier</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Query parameter to specify function version or alias name.
 The permission will then apply to the specific qualified ARN.
 e.g. `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">source_<wbr>account</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} This parameter is used for S3 and SES. The AWS account ID (without a hyphen) of the source owner.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>source_<wbr>account</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}This parameter is used for S3 and SES. The AWS account ID (without a hyphen) of the source owner.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">source_<wbr>arn</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} When granting Amazon S3 or CloudWatch Events permission to
+    <dt class="property-"
+            title="">
+        <span>source_<wbr>arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}When granting Amazon S3 or CloudWatch Events permission to
 invoke your function, you should specify this field with the Amazon Resource Name (ARN)
 for the S3 Bucket or CloudWatch Events Rule as its value.  This ensures that only events
 generated from the specified bucket or rule can invoke the function.
 API Gateway ARNs have a unique structure described
 [here](http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-control-access-using-iam-policies-to-invoke-api.html).
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">statement_<wbr>id</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} A unique statement identifier. By default generated by this provider.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>statement_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A unique statement identifier. By default generated by this provider.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">statement_<wbr>id_<wbr>prefix</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} A statement identifier prefix. This provider will generate a unique suffix. Conflicts with `statement_id`.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>statement_<wbr>id_<wbr>prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A statement identifier prefix. This provider will generate a unique suffix. Conflicts with `statement_id`.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
+</dl>
+{{% /choosable %}}
 
 
 
@@ -1427,711 +1018,512 @@ API Gateway ARNs have a unique structure described
 
 ## Look up an Existing Permission Resource
 
-{{< langchoose csharp nojavascript >}}
-
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">pulumi.Input&lt;pulumi.ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/lambda/#PermissionState">PermissionState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/lambda/#Permission">Permission</a></span></code></pre></div>
-
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>action=None<span class="p">, </span>event_source_token=None<span class="p">, </span>function=None<span class="p">, </span>principal=None<span class="p">, </span>qualifier=None<span class="p">, </span>source_account=None<span class="p">, </span>source_arn=None<span class="p">, </span>statement_id=None<span class="p">, </span>statement_id_prefix=None<span class="p">, __props__=None);</span></code></pre></div>
-
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPermission<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">pulumi.IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/lambda?tab=doc#PermissionState">PermissionState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/lambda?tab=doc#Permission">Permission</a></span>, error)</span></code></pre></div>
-
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lambda.Permission.html">Permission</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Pulumi.Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lambda.PermissionState.html">PermissionState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
-
 Get an existing Permission resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 
-{{% lang nodejs %}}
+{{< chooser language "javascript,typescript,python,go,csharp  " / >}}
 
-<ul class="pl-10">
-    <li><strong>name</strong> &ndash; (Required) The unique name of the resulting resource.</li>
-    <li><strong>id</strong> &ndash; (Required) The _unique_ provider ID of the resource to lookup.</li>
-    <li><strong>state</strong> &ndash; (Optional) Any extra arguments used during the lookup.</li>
-    <li><strong>opts</strong> &ndash; (Optional) A bag of options that control this resource's behavior.</li>
-</ul>
+{{% choosable language nodejs %}}
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/lambda/#PermissionState">PermissionState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/lambda/#Permission">Permission</a></span></code></pre></div>
+{{% /choosable %}}
 
-{{% /lang %}}
+{{% choosable language python %}}
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>action=None<span class="p">, </span>event_source_token=None<span class="p">, </span>function=None<span class="p">, </span>principal=None<span class="p">, </span>qualifier=None<span class="p">, </span>source_account=None<span class="p">, </span>source_arn=None<span class="p">, </span>statement_id=None<span class="p">, </span>statement_id_prefix=None<span class="p">, __props__=None);</span></code></pre></div>
+{{% /choosable %}}
 
-{{% lang go %}}
+{{% choosable language go %}}
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPermission<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/lambda?tab=doc#PermissionState">PermissionState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/lambda?tab=doc#Permission">Permission</a></span>, error)</span></code></pre></div>
+{{% /choosable %}}
 
-<ul class="pl-10">
-    <li><strong>name</strong> &ndash; (Required) The unique name of the resulting resource.</li>
-    <li><strong>id</strong> &ndash; (Required) The _unique_ provider ID of the resource to lookup.</li>
-    <li><strong>state</strong> &ndash; (Optional) Any extra arguments used during the lookup.</li>
-    <li><strong>opts</strong> &ndash; (Optional) A bag of options that control this resource's behavior.</li>
-</ul>
+{{% choosable language csharp %}}
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lambda.Permission.html">Permission</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Lambda.PermissionState.html">PermissionState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+{{% /choosable %}}
 
-{{% /lang %}}
+{{% choosable language nodejs %}}
 
-{{% lang csharp %}}
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resulting resource.</dd>
+    <dt class="property-required" title="Required">
+        <span>id</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The <em>unique</em> provider ID of the resource to lookup.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>state</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>Any extra arguments used during the lookup.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 
-<ul class="pl-10">
-    <li><strong>name</strong> &ndash; (Required) The unique name of the resulting resource.</li>
-    <li><strong>id</strong> &ndash; (Required) The _unique_ provider ID of the resource to lookup.</li>
-    <li><strong>state</strong> &ndash; (Optional) Any extra arguments used during the lookup.</li>
-    <li><strong>opts</strong> &ndash; (Optional) A bag of options that control this resource's behavior.</li>
-</ul>
+{{% /choosable %}}
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>resource_name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resulting resource.</dd>
+    <dt class="property-required" title="Optional">
+        <span>id</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The <em>unique</em> provider ID of the resource to lookup.</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resulting resource.</dd>
+    <dt class="property-required" title="Required">
+        <span>id</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The <em>unique</em> provider ID of the resource to lookup.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>state</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>Any extra arguments used during the lookup.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resulting resource.</dd>
+    <dt class="property-required" title="Required">
+        <span>id</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The <em>unique</em> provider ID of the resource to lookup.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>state</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>Any extra arguments used during the lookup.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
+
+{{% /choosable %}}
 
 The following state arguments are supported:
 
 
-{{< langchoose csharp nojavascript >}}
 
+{{% choosable language csharp %}}
+<dl class="resources-properties">
 
-{{% lang csharp %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Action</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The AWS Lambda action you want to allow in this statement. (e.g. `lambda:InvokeFunction`)
+{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Event<wbr>Source<wbr>Token</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The Event Source Token to validate.  Used with [Alexa Skills][1].
+{{% /md %}}</dd>
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Action</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The AWS Lambda action you want to allow in this statement. (e.g. `lambda:InvokeFunction`)
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Function</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Name of the Lambda function whose resource policy you are updating
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Event<wbr>Source<wbr>Token</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The Event Source Token to validate.  Used with [Alexa Skills][1].
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Function</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Name of the Lambda function whose resource policy you are updating
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Principal</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The principal who is getting this permission.
+    <dt class="property-optional"
+            title="Optional">
+        <span>Principal</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The principal who is getting this permission.
 e.g. `s3.amazonaws.com`, an AWS account ID, or any valid AWS service principal
 such as `events.amazonaws.com` or `sns.amazonaws.com`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Qualifier</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Query parameter to specify function version or alias name.
+    <dt class="property-optional"
+            title="Optional">
+        <span>Qualifier</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Query parameter to specify function version or alias name.
 The permission will then apply to the specific qualified ARN.
 e.g. `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Source<wbr>Account</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-This parameter is used for S3 and SES. The AWS account ID (without a hyphen) of the source owner.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Source<wbr>Account</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}This parameter is used for S3 and SES. The AWS account ID (without a hyphen) of the source owner.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Source<wbr>Arn</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-When granting Amazon S3 or CloudWatch Events permission to
+    <dt class="property-optional"
+            title="Optional">
+        <span>Source<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}When granting Amazon S3 or CloudWatch Events permission to
 invoke your function, you should specify this field with the Amazon Resource Name (ARN)
 for the S3 Bucket or CloudWatch Events Rule as its value.  This ensures that only events
 generated from the specified bucket or rule can invoke the function.
 API Gateway ARNs have a unique structure described
 [here](http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-control-access-using-iam-policies-to-invoke-api.html).
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Statement<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A unique statement identifier. By default generated by this provider.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Statement<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}A unique statement identifier. By default generated by this provider.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Statement<wbr>Id<wbr>Prefix</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A statement identifier prefix. This provider will generate a unique suffix. Conflicts with `statement_id`.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Statement<wbr>Id<wbr>Prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}A statement identifier prefix. This provider will generate a unique suffix. Conflicts with `statement_id`.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language go %}}
+<dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Action</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The AWS Lambda action you want to allow in this statement. (e.g. `lambda:InvokeFunction`)
+{{% /md %}}</dd>
 
-{{% lang go %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Event<wbr>Source<wbr>Token</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The Event Source Token to validate.  Used with [Alexa Skills][1].
+{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Function</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}Name of the Lambda function whose resource policy you are updating
+{{% /md %}}</dd>
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Action</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The AWS Lambda action you want to allow in this statement. (e.g. `lambda:InvokeFunction`)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Event<wbr>Source<wbr>Token</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The Event Source Token to validate.  Used with [Alexa Skills][1].
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Function</td>
-            <td class="align-top">
-                
-                <code>interface{}</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Name of the Lambda function whose resource policy you are updating
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Principal</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The principal who is getting this permission.
+    <dt class="property-optional"
+            title="Optional">
+        <span>Principal</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The principal who is getting this permission.
 e.g. `s3.amazonaws.com`, an AWS account ID, or any valid AWS service principal
 such as `events.amazonaws.com` or `sns.amazonaws.com`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Qualifier</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Query parameter to specify function version or alias name.
+    <dt class="property-optional"
+            title="Optional">
+        <span>Qualifier</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}Query parameter to specify function version or alias name.
 The permission will then apply to the specific qualified ARN.
 e.g. `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Source<wbr>Account</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-This parameter is used for S3 and SES. The AWS account ID (without a hyphen) of the source owner.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Source<wbr>Account</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}This parameter is used for S3 and SES. The AWS account ID (without a hyphen) of the source owner.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Source<wbr>Arn</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-When granting Amazon S3 or CloudWatch Events permission to
+    <dt class="property-optional"
+            title="Optional">
+        <span>Source<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}When granting Amazon S3 or CloudWatch Events permission to
 invoke your function, you should specify this field with the Amazon Resource Name (ARN)
 for the S3 Bucket or CloudWatch Events Rule as its value.  This ensures that only events
 generated from the specified bucket or rule can invoke the function.
 API Gateway ARNs have a unique structure described
 [here](http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-control-access-using-iam-policies-to-invoke-api.html).
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Statement<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A unique statement identifier. By default generated by this provider.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Statement<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}A unique statement identifier. By default generated by this provider.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Statement<wbr>Id<wbr>Prefix</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A statement identifier prefix. This provider will generate a unique suffix. Conflicts with `statement_id`.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Statement<wbr>Id<wbr>Prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}A statement identifier prefix. This provider will generate a unique suffix. Conflicts with `statement_id`.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>action</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The AWS Lambda action you want to allow in this statement. (e.g. `lambda:InvokeFunction`)
+{{% /md %}}</dd>
 
-{{% lang nodejs %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>event<wbr>Source<wbr>Token</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The Event Source Token to validate.  Used with [Alexa Skills][1].
+{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>function</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | Function</span>
+    </dt>
+    <dd>{{% md %}}Name of the Lambda function whose resource policy you are updating
+{{% /md %}}</dd>
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">action</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The AWS Lambda action you want to allow in this statement. (e.g. `lambda:InvokeFunction`)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">event<wbr>Source<wbr>Token</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The Event Source Token to validate.  Used with [Alexa Skills][1].
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">function</td>
-            <td class="align-top">
-                
-                <code>string | Function</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Name of the Lambda function whose resource policy you are updating
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">principal</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The principal who is getting this permission.
+    <dt class="property-optional"
+            title="Optional">
+        <span>principal</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The principal who is getting this permission.
 e.g. `s3.amazonaws.com`, an AWS account ID, or any valid AWS service principal
 such as `events.amazonaws.com` or `sns.amazonaws.com`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">qualifier</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Query parameter to specify function version or alias name.
+    <dt class="property-optional"
+            title="Optional">
+        <span>qualifier</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Query parameter to specify function version or alias name.
 The permission will then apply to the specific qualified ARN.
 e.g. `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">source<wbr>Account</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-This parameter is used for S3 and SES. The AWS account ID (without a hyphen) of the source owner.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>source<wbr>Account</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}This parameter is used for S3 and SES. The AWS account ID (without a hyphen) of the source owner.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">source<wbr>Arn</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-When granting Amazon S3 or CloudWatch Events permission to
+    <dt class="property-optional"
+            title="Optional">
+        <span>source<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}When granting Amazon S3 or CloudWatch Events permission to
 invoke your function, you should specify this field with the Amazon Resource Name (ARN)
 for the S3 Bucket or CloudWatch Events Rule as its value.  This ensures that only events
 generated from the specified bucket or rule can invoke the function.
 API Gateway ARNs have a unique structure described
 [here](http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-control-access-using-iam-policies-to-invoke-api.html).
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">statement<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A unique statement identifier. By default generated by this provider.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>statement<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}A unique statement identifier. By default generated by this provider.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">statement<wbr>Id<wbr>Prefix</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A statement identifier prefix. This provider will generate a unique suffix. Conflicts with `statement_id`.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>statement<wbr>Id<wbr>Prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}A statement identifier prefix. This provider will generate a unique suffix. Conflicts with `statement_id`.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>action</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The AWS Lambda action you want to allow in this statement. (e.g. `lambda:InvokeFunction`)
+{{% /md %}}</dd>
 
-{{% lang python %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>event_<wbr>source_<wbr>token</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Event Source Token to validate.  Used with [Alexa Skills][1].
+{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>function</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}Name of the Lambda function whose resource policy you are updating
+{{% /md %}}</dd>
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">action</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The AWS Lambda action you want to allow in this statement. (e.g. `lambda:InvokeFunction`)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">event_<wbr>source_<wbr>token</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The Event Source Token to validate.  Used with [Alexa Skills][1].
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">function</td>
-            <td class="align-top">
-                
-                <code>Dict[str, Any]</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Name of the Lambda function whose resource policy you are updating
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">principal</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The principal who is getting this permission.
+    <dt class="property-optional"
+            title="Optional">
+        <span>principal</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The principal who is getting this permission.
 e.g. `s3.amazonaws.com`, an AWS account ID, or any valid AWS service principal
 such as `events.amazonaws.com` or `sns.amazonaws.com`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">qualifier</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Query parameter to specify function version or alias name.
+    <dt class="property-optional"
+            title="Optional">
+        <span>qualifier</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Query parameter to specify function version or alias name.
 The permission will then apply to the specific qualified ARN.
 e.g. `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">source_<wbr>account</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-This parameter is used for S3 and SES. The AWS account ID (without a hyphen) of the source owner.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>source_<wbr>account</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}This parameter is used for S3 and SES. The AWS account ID (without a hyphen) of the source owner.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">source_<wbr>arn</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-When granting Amazon S3 or CloudWatch Events permission to
+    <dt class="property-optional"
+            title="Optional">
+        <span>source_<wbr>arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}When granting Amazon S3 or CloudWatch Events permission to
 invoke your function, you should specify this field with the Amazon Resource Name (ARN)
 for the S3 Bucket or CloudWatch Events Rule as its value.  This ensures that only events
 generated from the specified bucket or rule can invoke the function.
 API Gateway ARNs have a unique structure described
 [here](http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-control-access-using-iam-policies-to-invoke-api.html).
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">statement_<wbr>id</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A unique statement identifier. By default generated by this provider.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>statement_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A unique statement identifier. By default generated by this provider.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">statement_<wbr>id_<wbr>prefix</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A statement identifier prefix. This provider will generate a unique suffix. Conflicts with `statement_id`.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>statement_<wbr>id_<wbr>prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A statement identifier prefix. This provider will generate a unique suffix. Conflicts with `statement_id`.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
+</dl>
+{{% /choosable %}}
 
 
 
@@ -2140,4 +1532,16 @@ A statement identifier prefix. This provider will generate a unique suffix. Conf
 
 
 
+
+
+
+<h3>Package Details</h3>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
 

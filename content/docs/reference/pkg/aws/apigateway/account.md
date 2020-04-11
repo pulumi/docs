@@ -3,15 +3,16 @@
 title: "Account"
 block_external_search_index: true
 ---
-<style>
-table td p { margin-top: 0; margin-bottom: 0; }
-</style>
+
+
 
 Provides a settings of an API Gateway Account. Settings is applied region-wide per `provider` block.
 
 > **Note:** As there is no API method for deleting account settings or resetting it to defaults, destroying this resource will keep your account settings intact
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -60,206 +61,187 @@ const cloudwatchRolePolicy = new aws.iam.RolePolicy("cloudwatch", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/api_gateway_account.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
 ## Create a Account Resource
 
-{{< langchoose csharp nojavascript >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/apigateway/#Account">Account</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/apigateway/#AccountArgs">AccountArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+{{% choosable language nodejs %}}
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/apigateway/#Account">Account</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/apigateway/#AccountArgs">AccountArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+{{% /choosable %}}
 
+{{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Account</span><span class="p">(resource_name, opts=None, </span>cloudwatch_role_arn=None<span class="p">, __props__=None);</span></code></pre></div>
+{{% /choosable %}}
 
+{{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewAccount<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/apigateway?tab=doc#AccountArgs">AccountArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/apigateway?tab=doc#Account">Account</a></span>, error)</span></code></pre></div>
+{{% /choosable %}}
 
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Apigateway.Account.html">Account</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Apigateway.AccountArgs.html">AccountArgs</a></span>? <span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+{{% choosable language csharp %}}
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Apigateway.Account.html">Account</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ApiGateway.AccountArgs.html">AccountArgs</a></span>? <span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+{{% /choosable %}}
 
-Creates a Account resource with the given unique name, arguments, and options.
+{{% choosable language nodejs %}}
 
-{{% lang nodejs %}}
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The arguments to use to populate this resource's properties.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 
-<ul class="pl-10">
-    <li><strong>name</strong> &ndash; (Required) The unique name of the resulting resource.</li>
-    <li><strong>args</strong> &ndash;  (Optional)  The arguments to use to populate this resource's properties.</li>
-    <li><strong>opts</strong> &ndash; (Optional) A bag of options that control this resource's behavior.</li>
-</ul>
+{{% /choosable %}}
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
+{{% /choosable %}}
 
-{{% lang go %}}
+{{% choosable language go %}}
 
-<ul class="pl-10">
-    <li><strong>name</strong> &ndash; (Required) The unique name of the resulting resource.</li>
-    <li><strong>args</strong> &ndash;  (Optional)  The arguments to use to populate this resource's properties.</li>
-    <li><strong>opts</strong> &ndash; (Optional) A bag of options that control this resource's behavior.</li>
-</ul>
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The arguments to use to populate this resource's properties.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 
-{{% /lang %}}
+{{% /choosable %}}
 
-{{% lang csharp %}}
+{{% choosable language csharp %}}
 
-<ul class="pl-10">
-    <li><strong>name</strong> &ndash; (Required) The unique name of the resulting resource.</li>
-    <li><strong>args</strong> &ndash;  (Optional)  The arguments to use to populate this resource's properties.</li>
-    <li><strong>opts</strong> &ndash; (Optional) A bag of options that control this resource's behavior.</li>
-</ul>
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The arguments to use to populate this resource's properties.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 
-{{% /lang %}}
+{{% /choosable %}}
 
-The following arguments are supported:
-
-
-{{< langchoose csharp nojavascript >}}
+#### Resource Arguments
 
 
-{{% lang csharp %}}
 
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Cloudwatch<wbr>Role<wbr>Arn</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ARN of an IAM role for CloudWatch (to allow logging &amp; monitoring).
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cloudwatch<wbr>Role<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The ARN of an IAM role for CloudWatch (to allow logging & monitoring).
 See more [in AWS Docs](https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-stage-settings.html#how-to-stage-settings-console).
-Logging &amp; monitoring can be enabled/disabled and otherwise tuned on the API Gateway Stage level.
- {{% /md %}}
+Logging & monitoring can be enabled/disabled and otherwise tuned on the API Gateway Stage level.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language go %}}
+<dl class="resources-properties">
 
-
-{{% lang go %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Cloudwatch<wbr>Role<wbr>Arn</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ARN of an IAM role for CloudWatch (to allow logging &amp; monitoring).
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cloudwatch<wbr>Role<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of an IAM role for CloudWatch (to allow logging & monitoring).
 See more [in AWS Docs](https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-stage-settings.html#how-to-stage-settings-console).
-Logging &amp; monitoring can be enabled/disabled and otherwise tuned on the API Gateway Stage level.
- {{% /md %}}
+Logging & monitoring can be enabled/disabled and otherwise tuned on the API Gateway Stage level.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
-
-{{% lang nodejs %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">cloudwatch<wbr>Role<wbr>Arn</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ARN of an IAM role for CloudWatch (to allow logging &amp; monitoring).
+    <dt class="property-optional"
+            title="Optional">
+        <span>cloudwatch<wbr>Role<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The ARN of an IAM role for CloudWatch (to allow logging & monitoring).
 See more [in AWS Docs](https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-stage-settings.html#how-to-stage-settings-console).
-Logging &amp; monitoring can be enabled/disabled and otherwise tuned on the API Gateway Stage level.
- {{% /md %}}
+Logging & monitoring can be enabled/disabled and otherwise tuned on the API Gateway Stage level.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
 
-
-{{% lang python %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">cloudwatch_<wbr>role_<wbr>arn</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ARN of an IAM role for CloudWatch (to allow logging &amp; monitoring).
+    <dt class="property-optional"
+            title="Optional">
+        <span>cloudwatch_<wbr>role_<wbr>arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARN of an IAM role for CloudWatch (to allow logging & monitoring).
 See more [in AWS Docs](https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-stage-settings.html#how-to-stage-settings-console).
-Logging &amp; monitoring can be enabled/disabled and otherwise tuned on the API Gateway Stage level.
- {{% /md %}}
+Logging & monitoring can be enabled/disabled and otherwise tuned on the API Gateway Stage level.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
+</dl>
+{{% /choosable %}}
 
 
 
@@ -273,199 +255,113 @@ The following output properties are available:
 
 
 
-{{< langchoose csharp nojavascript >}}
 
+{{% choosable language csharp %}}
+<dl class="resources-properties">
 
-{{% lang csharp %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Cloudwatch<wbr>Role<wbr>Arn</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} The ARN of an IAM role for CloudWatch (to allow logging &amp; monitoring).
+    <dt class="property-"
+            title="">
+        <span>Cloudwatch<wbr>Role<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The ARN of an IAM role for CloudWatch (to allow logging & monitoring).
 See more [in AWS Docs](https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-stage-settings.html#how-to-stage-settings-console).
-Logging &amp; monitoring can be enabled/disabled and otherwise tuned on the API Gateway Stage level.
- {{% /md %}}
+Logging & monitoring can be enabled/disabled and otherwise tuned on the API Gateway Stage level.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Throttle<wbr>Settings</td>
-            <td class="align-top">
-                
-                <code><a href="#accountthrottlesettings">Account<wbr>Throttle<wbr>Settings</a></code>
-            </td>
-            <td class="align-top">{{% md %}} Account-Level throttle settings. See exported fields below.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Throttle<wbr>Settings</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountthrottlesettings">Account<wbr>Throttle<wbr>Settings</a></span>
+    </dt>
+    <dd>{{% md %}}Account-Level throttle settings. See exported fields below.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language go %}}
+<dl class="resources-properties">
 
-
-{{% lang go %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Cloudwatch<wbr>Role<wbr>Arn</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} The ARN of an IAM role for CloudWatch (to allow logging &amp; monitoring).
+    <dt class="property-"
+            title="">
+        <span>Cloudwatch<wbr>Role<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of an IAM role for CloudWatch (to allow logging & monitoring).
 See more [in AWS Docs](https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-stage-settings.html#how-to-stage-settings-console).
-Logging &amp; monitoring can be enabled/disabled and otherwise tuned on the API Gateway Stage level.
- {{% /md %}}
+Logging & monitoring can be enabled/disabled and otherwise tuned on the API Gateway Stage level.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Throttle<wbr>Settings</td>
-            <td class="align-top">
-                
-                <code><a href="#accountthrottlesettings">Account<wbr>Throttle<wbr>Settings</a></code>
-            </td>
-            <td class="align-top">{{% md %}} Account-Level throttle settings. See exported fields below.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Throttle<wbr>Settings</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountthrottlesettings">Account<wbr>Throttle<wbr>Settings</a></span>
+    </dt>
+    <dd>{{% md %}}Account-Level throttle settings. See exported fields below.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
-
-{{% lang nodejs %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">cloudwatch<wbr>Role<wbr>Arn</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} The ARN of an IAM role for CloudWatch (to allow logging &amp; monitoring).
+    <dt class="property-"
+            title="">
+        <span>cloudwatch<wbr>Role<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The ARN of an IAM role for CloudWatch (to allow logging & monitoring).
 See more [in AWS Docs](https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-stage-settings.html#how-to-stage-settings-console).
-Logging &amp; monitoring can be enabled/disabled and otherwise tuned on the API Gateway Stage level.
- {{% /md %}}
+Logging & monitoring can be enabled/disabled and otherwise tuned on the API Gateway Stage level.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">throttle<wbr>Settings</td>
-            <td class="align-top">
-                
-                <code><a href="#accountthrottlesettings">Account<wbr>Throttle<wbr>Settings</a></code>
-            </td>
-            <td class="align-top">{{% md %}} Account-Level throttle settings. See exported fields below.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>throttle<wbr>Settings</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountthrottlesettings">Account<wbr>Throttle<wbr>Settings</a></span>
+    </dt>
+    <dd>{{% md %}}Account-Level throttle settings. See exported fields below.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
 
-
-{{% lang python %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">cloudwatch_<wbr>role_<wbr>arn</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} The ARN of an IAM role for CloudWatch (to allow logging &amp; monitoring).
+    <dt class="property-"
+            title="">
+        <span>cloudwatch_<wbr>role_<wbr>arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARN of an IAM role for CloudWatch (to allow logging & monitoring).
 See more [in AWS Docs](https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-stage-settings.html#how-to-stage-settings-console).
-Logging &amp; monitoring can be enabled/disabled and otherwise tuned on the API Gateway Stage level.
- {{% /md %}}
+Logging & monitoring can be enabled/disabled and otherwise tuned on the API Gateway Stage level.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">throttle_<wbr>settings</td>
-            <td class="align-top">
-                
-                <code><a href="#accountthrottlesettings">Dict[Account<wbr>Throttle<wbr>Settings]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} Account-Level throttle settings. See exported fields below.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>throttle_<wbr>settings</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountthrottlesettings">Dict[Account<wbr>Throttle<wbr>Settings]</a></span>
+    </dt>
+    <dd>{{% md %}}Account-Level throttle settings. See exported fields below.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
+</dl>
+{{% /choosable %}}
 
 
 
@@ -476,263 +372,232 @@ Logging &amp; monitoring can be enabled/disabled and otherwise tuned on the API 
 
 ## Look up an Existing Account Resource
 
-{{< langchoose csharp nojavascript >}}
-
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">pulumi.Input&lt;pulumi.ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/apigateway/#AccountState">AccountState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/apigateway/#Account">Account</a></span></code></pre></div>
-
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>cloudwatch_role_arn=None<span class="p">, </span>throttle_settings=None<span class="p">, __props__=None);</span></code></pre></div>
-
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAccount<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">pulumi.IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/apigateway?tab=doc#AccountState">AccountState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/apigateway?tab=doc#Account">Account</a></span>, error)</span></code></pre></div>
-
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Apigateway.Account.html">Account</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Pulumi.Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Apigateway.AccountState.html">AccountState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
-
 Get an existing Account resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 
-{{% lang nodejs %}}
+{{< chooser language "javascript,typescript,python,go,csharp  " / >}}
 
-<ul class="pl-10">
-    <li><strong>name</strong> &ndash; (Required) The unique name of the resulting resource.</li>
-    <li><strong>id</strong> &ndash; (Required) The _unique_ provider ID of the resource to lookup.</li>
-    <li><strong>state</strong> &ndash; (Optional) Any extra arguments used during the lookup.</li>
-    <li><strong>opts</strong> &ndash; (Optional) A bag of options that control this resource's behavior.</li>
-</ul>
+{{% choosable language nodejs %}}
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/apigateway/#AccountState">AccountState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/apigateway/#Account">Account</a></span></code></pre></div>
+{{% /choosable %}}
 
-{{% /lang %}}
+{{% choosable language python %}}
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>cloudwatch_role_arn=None<span class="p">, </span>throttle_settings=None<span class="p">, __props__=None);</span></code></pre></div>
+{{% /choosable %}}
 
-{{% lang go %}}
+{{% choosable language go %}}
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAccount<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/apigateway?tab=doc#AccountState">AccountState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/apigateway?tab=doc#Account">Account</a></span>, error)</span></code></pre></div>
+{{% /choosable %}}
 
-<ul class="pl-10">
-    <li><strong>name</strong> &ndash; (Required) The unique name of the resulting resource.</li>
-    <li><strong>id</strong> &ndash; (Required) The _unique_ provider ID of the resource to lookup.</li>
-    <li><strong>state</strong> &ndash; (Optional) Any extra arguments used during the lookup.</li>
-    <li><strong>opts</strong> &ndash; (Optional) A bag of options that control this resource's behavior.</li>
-</ul>
+{{% choosable language csharp %}}
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Apigateway.Account.html">Account</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Apigateway.AccountState.html">AccountState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+{{% /choosable %}}
 
-{{% /lang %}}
+{{% choosable language nodejs %}}
 
-{{% lang csharp %}}
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resulting resource.</dd>
+    <dt class="property-required" title="Required">
+        <span>id</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The <em>unique</em> provider ID of the resource to lookup.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>state</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>Any extra arguments used during the lookup.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 
-<ul class="pl-10">
-    <li><strong>name</strong> &ndash; (Required) The unique name of the resulting resource.</li>
-    <li><strong>id</strong> &ndash; (Required) The _unique_ provider ID of the resource to lookup.</li>
-    <li><strong>state</strong> &ndash; (Optional) Any extra arguments used during the lookup.</li>
-    <li><strong>opts</strong> &ndash; (Optional) A bag of options that control this resource's behavior.</li>
-</ul>
+{{% /choosable %}}
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>resource_name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resulting resource.</dd>
+    <dt class="property-required" title="Optional">
+        <span>id</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The <em>unique</em> provider ID of the resource to lookup.</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resulting resource.</dd>
+    <dt class="property-required" title="Required">
+        <span>id</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The <em>unique</em> provider ID of the resource to lookup.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>state</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>Any extra arguments used during the lookup.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resulting resource.</dd>
+    <dt class="property-required" title="Required">
+        <span>id</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The <em>unique</em> provider ID of the resource to lookup.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>state</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>Any extra arguments used during the lookup.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
+
+{{% /choosable %}}
 
 The following state arguments are supported:
 
 
-{{< langchoose csharp nojavascript >}}
 
+{{% choosable language csharp %}}
+<dl class="resources-properties">
 
-{{% lang csharp %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Cloudwatch<wbr>Role<wbr>Arn</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ARN of an IAM role for CloudWatch (to allow logging &amp; monitoring).
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cloudwatch<wbr>Role<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The ARN of an IAM role for CloudWatch (to allow logging & monitoring).
 See more [in AWS Docs](https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-stage-settings.html#how-to-stage-settings-console).
-Logging &amp; monitoring can be enabled/disabled and otherwise tuned on the API Gateway Stage level.
- {{% /md %}}
+Logging & monitoring can be enabled/disabled and otherwise tuned on the API Gateway Stage level.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Throttle<wbr>Settings</td>
-            <td class="align-top">
-                
-                <code><a href="#accountthrottlesettings">Account<wbr>Throttle<wbr>Settings<wbr>Args?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Account-Level throttle settings. See exported fields below.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Throttle<wbr>Settings</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountthrottlesettings">Account<wbr>Throttle<wbr>Settings<wbr>Args?</a></span>
+    </dt>
+    <dd>{{% md %}}Account-Level throttle settings. See exported fields below.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language go %}}
+<dl class="resources-properties">
 
-
-{{% lang go %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Cloudwatch<wbr>Role<wbr>Arn</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ARN of an IAM role for CloudWatch (to allow logging &amp; monitoring).
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cloudwatch<wbr>Role<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of an IAM role for CloudWatch (to allow logging & monitoring).
 See more [in AWS Docs](https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-stage-settings.html#how-to-stage-settings-console).
-Logging &amp; monitoring can be enabled/disabled and otherwise tuned on the API Gateway Stage level.
- {{% /md %}}
+Logging & monitoring can be enabled/disabled and otherwise tuned on the API Gateway Stage level.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Throttle<wbr>Settings</td>
-            <td class="align-top">
-                
-                <code><a href="#accountthrottlesettings">*Account<wbr>Throttle<wbr>Settings</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Account-Level throttle settings. See exported fields below.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Throttle<wbr>Settings</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountthrottlesettings">*Account<wbr>Throttle<wbr>Settings</a></span>
+    </dt>
+    <dd>{{% md %}}Account-Level throttle settings. See exported fields below.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
-
-{{% lang nodejs %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">cloudwatch<wbr>Role<wbr>Arn</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ARN of an IAM role for CloudWatch (to allow logging &amp; monitoring).
+    <dt class="property-optional"
+            title="Optional">
+        <span>cloudwatch<wbr>Role<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The ARN of an IAM role for CloudWatch (to allow logging & monitoring).
 See more [in AWS Docs](https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-stage-settings.html#how-to-stage-settings-console).
-Logging &amp; monitoring can be enabled/disabled and otherwise tuned on the API Gateway Stage level.
- {{% /md %}}
+Logging & monitoring can be enabled/disabled and otherwise tuned on the API Gateway Stage level.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">throttle<wbr>Settings</td>
-            <td class="align-top">
-                
-                <code><a href="#accountthrottlesettings">Account<wbr>Throttle<wbr>Settings?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Account-Level throttle settings. See exported fields below.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>throttle<wbr>Settings</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountthrottlesettings">Account<wbr>Throttle<wbr>Settings?</a></span>
+    </dt>
+    <dd>{{% md %}}Account-Level throttle settings. See exported fields below.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
 
-
-{{% lang python %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">cloudwatch_<wbr>role_<wbr>arn</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ARN of an IAM role for CloudWatch (to allow logging &amp; monitoring).
+    <dt class="property-optional"
+            title="Optional">
+        <span>cloudwatch_<wbr>role_<wbr>arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARN of an IAM role for CloudWatch (to allow logging & monitoring).
 See more [in AWS Docs](https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-stage-settings.html#how-to-stage-settings-console).
-Logging &amp; monitoring can be enabled/disabled and otherwise tuned on the API Gateway Stage level.
- {{% /md %}}
+Logging & monitoring can be enabled/disabled and otherwise tuned on the API Gateway Stage level.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">throttle_<wbr>settings</td>
-            <td class="align-top">
-                
-                <code><a href="#accountthrottlesettings">Dict[Account<wbr>Throttle<wbr>Settings]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Account-Level throttle settings. See exported fields below.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>throttle_<wbr>settings</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accountthrottlesettings">Dict[Account<wbr>Throttle<wbr>Settings]</a></span>
+    </dt>
+    <dd>{{% md %}}Account-Level throttle settings. See exported fields below.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
+</dl>
+{{% /choosable %}}
 
 
 
@@ -745,226 +610,132 @@ Account-Level throttle settings. See exported fields below.
 
 ## Supporting Types
 
-#### AccountThrottleSettings
-{{% lang nodejs %}}
+<h4>Account<wbr>Throttle<wbr>Settings</h4>
+{{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AccountThrottleSettings">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
-{{% lang go %}}
+{{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/apigateway?tab=doc#AccountThrottleSettingsOutput">output</a> API doc for this type.
-{{% /lang %}}
-
-{{% lang csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Apigateway.AccountThrottleSettings.html">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
 
 
-{{< langchoose csharp nojavascript >}}
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Burst<wbr>Limit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int?</span>
+    </dt>
+    <dd>{{% md %}}The absolute maximum number of times API Gateway allows the API to be called per second (RPS).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Rate<wbr>Limit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double?</span>
+    </dt>
+    <dd>{{% md %}}The number of times API Gateway allows the API to be called per second on average (RPS).
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% lang csharp %}}
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Burst<wbr>Limit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*int</span>
+    </dt>
+    <dd>{{% md %}}The absolute maximum number of times API Gateway allows the API to be called per second (RPS).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Rate<wbr>Limit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*float64</span>
+    </dt>
+    <dd>{{% md %}}The number of times API Gateway allows the API to be called per second on average (RPS).
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Burst<wbr>Limit</td>
-            <td class="align-top">
-                
-                <code>int?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The absolute maximum number of times API Gateway allows the API to be called per second (RPS).
- {{% /md %}}
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Rate<wbr>Limit</td>
-            <td class="align-top">
-                
-                <code>double?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The number of times API Gateway allows the API to be called per second on average (RPS).
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>burst<wbr>Limit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number?</span>
+    </dt>
+    <dd>{{% md %}}The absolute maximum number of times API Gateway allows the API to be called per second (RPS).
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+    <dt class="property-optional"
+            title="Optional">
+        <span>rate<wbr>Limit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number?</span>
+    </dt>
+    <dd>{{% md %}}The number of times API Gateway allows the API to be called per second on average (RPS).
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>burst<wbr>Limit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The absolute maximum number of times API Gateway allows the API to be called per second (RPS).
+{{% /md %}}</dd>
 
-{{% lang go %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>rate_<wbr>limit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The number of times API Gateway allows the API to be called per second on average (RPS).
+{{% /md %}}</dd>
 
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Burst<wbr>Limit</td>
-            <td class="align-top">
-                
-                <code>*int</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The absolute maximum number of times API Gateway allows the API to be called per second (RPS).
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Rate<wbr>Limit</td>
-            <td class="align-top">
-                
-                <code>*float64</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The number of times API Gateway allows the API to be called per second on average (RPS).
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang nodejs %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">burst<wbr>Limit</td>
-            <td class="align-top">
-                
-                <code>number?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The absolute maximum number of times API Gateway allows the API to be called per second (RPS).
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">rate<wbr>Limit</td>
-            <td class="align-top">
-                
-                <code>number?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The number of times API Gateway allows the API to be called per second on average (RPS).
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang python %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">burst<wbr>Limit</td>
-            <td class="align-top">
-                
-                <code>float</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The absolute maximum number of times API Gateway allows the API to be called per second (RPS).
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">rate_<wbr>limit</td>
-            <td class="align-top">
-                
-                <code>float</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The number of times API Gateway allows the API to be called per second on average (RPS).
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
+</dl>
+{{% /choosable %}}
 
 
 
 
 
 
+
+
+
+<h3>Package Details</h3>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
 

@@ -1,0 +1,965 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class DatastoreCluster
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class DatastoreCluster
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.VSphere.DatastoreCluster">
+  
+  <h1 id="Pulumi_VSphere_DatastoreCluster" data-uid="Pulumi.VSphere.DatastoreCluster" class="text-break">Class DatastoreCluster
+  </h1>
+  <div class="markdown level0 summary"><p>The <code>vsphere..DatastoreCluster</code> resource can be used to create and manage
+datastore clusters. This can be used to create groups of datastores with a
+shared management interface, allowing for resource control and load balancing
+through Storage DRS.</p>
+<p>For more information on vSphere datastore clusters and Storage DRS, see <a href="https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.resmgmt.doc/GUID-598DF695-107E-406B-9C95-0AF961FC227A.html">this
+page</a>.</p>
+<blockquote>
+<p><strong>NOTE:</strong> This resource requires vCenter and is not available on direct ESXi
+connections.</p>
+</blockquote>
+<blockquote>
+<p><strong>NOTE:</strong> Storage DRS requires a vSphere Enterprise Plus license.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/datastore_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/datastore_cluster.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">DatastoreCluster</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.VSphere.html">Pulumi.VSphere</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.VSphere.dll</h6>
+  <h5 id="Pulumi_VSphere_DatastoreCluster_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class DatastoreCluster : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/DatastoreCluster.cs/#L227">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_DatastoreCluster__ctor_" data-uid="Pulumi.VSphere.DatastoreCluster.#ctor*"></a>
+  <h4 id="Pulumi_VSphere_DatastoreCluster__ctor_System_String_Pulumi_VSphere_DatastoreClusterArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.VSphere.DatastoreCluster.#ctor(System.String,Pulumi.VSphere.DatastoreClusterArgs,System.Nullable{CustomResourceOptions})">DatastoreCluster(String, DatastoreClusterArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Create a DatastoreCluster resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DatastoreCluster(string name, DatastoreClusterArgs args, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.VSphere.DatastoreClusterArgs.html">DatastoreClusterArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/DatastoreCluster.cs/#L37">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_DatastoreCluster_CustomAttributes_" data-uid="Pulumi.VSphere.DatastoreCluster.CustomAttributes*"></a>
+  <h4 id="Pulumi_VSphere_DatastoreCluster_CustomAttributes" data-uid="Pulumi.VSphere.DatastoreCluster.CustomAttributes">CustomAttributes</h4>
+  <div class="markdown level1 summary"><p>A map of custom attribute ids to attribute
+value strings to set for the datastore cluster. See
+[here][docs-setting-custom-attributes] for a reference on how to set values
+for custom attributes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;?&gt; CustomAttributes { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/DatastoreCluster.cs/#L45">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_DatastoreCluster_DatacenterId_" data-uid="Pulumi.VSphere.DatastoreCluster.DatacenterId*"></a>
+  <h4 id="Pulumi_VSphere_DatastoreCluster_DatacenterId" data-uid="Pulumi.VSphere.DatastoreCluster.DatacenterId">DatacenterId</h4>
+  <div class="markdown level1 summary"><p>The [managed object ID][docs-about-morefs] of
+the datacenter to create the datastore cluster in. Forces a new resource if
+changed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; DatacenterId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/DatastoreCluster.cs/#L51">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_DatastoreCluster_Folder_" data-uid="Pulumi.VSphere.DatastoreCluster.Folder*"></a>
+  <h4 id="Pulumi_VSphere_DatastoreCluster_Folder" data-uid="Pulumi.VSphere.DatastoreCluster.Folder">Folder</h4>
+  <div class="markdown level1 summary"><p>The name of the folder to locate the datastore cluster in.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Folder { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/DatastoreCluster.cs/#L57">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_DatastoreCluster_Name_" data-uid="Pulumi.VSphere.DatastoreCluster.Name*"></a>
+  <h4 id="Pulumi_VSphere_DatastoreCluster_Name" data-uid="Pulumi.VSphere.DatastoreCluster.Name">Name</h4>
+  <div class="markdown level1 summary"><p>The name of the datastore cluster.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/DatastoreCluster.cs/#L63">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_DatastoreCluster_SdrsAdvancedOptions_" data-uid="Pulumi.VSphere.DatastoreCluster.SdrsAdvancedOptions*"></a>
+  <h4 id="Pulumi_VSphere_DatastoreCluster_SdrsAdvancedOptions" data-uid="Pulumi.VSphere.DatastoreCluster.SdrsAdvancedOptions">SdrsAdvancedOptions</h4>
+  <div class="markdown level1 summary"><p>Advanced configuration options for storage DRS.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, string&gt;?&gt; SdrsAdvancedOptions { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/DatastoreCluster.cs/#L70">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_DatastoreCluster_SdrsAutomationLevel_" data-uid="Pulumi.VSphere.DatastoreCluster.SdrsAutomationLevel*"></a>
+  <h4 id="Pulumi_VSphere_DatastoreCluster_SdrsAutomationLevel" data-uid="Pulumi.VSphere.DatastoreCluster.SdrsAutomationLevel">SdrsAutomationLevel</h4>
+  <div class="markdown level1 summary"><p>The global automation level for all
+virtual machines in this datastore cluster. Default: <code>manual</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SdrsAutomationLevel { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/DatastoreCluster.cs/#L77">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_DatastoreCluster_SdrsDefaultIntraVmAffinity_" data-uid="Pulumi.VSphere.DatastoreCluster.SdrsDefaultIntraVmAffinity*"></a>
+  <h4 id="Pulumi_VSphere_DatastoreCluster_SdrsDefaultIntraVmAffinity" data-uid="Pulumi.VSphere.DatastoreCluster.SdrsDefaultIntraVmAffinity">SdrsDefaultIntraVmAffinity</h4>
+  <div class="markdown level1 summary"><p>When <code>true</code>, all disks in a
+single virtual machine will be kept on the same datastore. Default: <code>true</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; SdrsDefaultIntraVmAffinity { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/DatastoreCluster.cs/#L84">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_DatastoreCluster_SdrsEnabled_" data-uid="Pulumi.VSphere.DatastoreCluster.SdrsEnabled*"></a>
+  <h4 id="Pulumi_VSphere_DatastoreCluster_SdrsEnabled" data-uid="Pulumi.VSphere.DatastoreCluster.SdrsEnabled">SdrsEnabled</h4>
+  <div class="markdown level1 summary"><p>Enable Storage DRS for this datastore cluster.
+Default: <code>false</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; SdrsEnabled { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/DatastoreCluster.cs/#L93">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_DatastoreCluster_SdrsFreeSpaceThreshold_" data-uid="Pulumi.VSphere.DatastoreCluster.SdrsFreeSpaceThreshold*"></a>
+  <h4 id="Pulumi_VSphere_DatastoreCluster_SdrsFreeSpaceThreshold" data-uid="Pulumi.VSphere.DatastoreCluster.SdrsFreeSpaceThreshold">SdrsFreeSpaceThreshold</h4>
+  <div class="markdown level1 summary"><p>The free space threshold to use.
+When set to <code>utilization</code>, <code>drs_space_utilization_threshold</code> is used, and
+when set to <code>freeSpace</code>, <code>drs_free_space_threshold</code> is used. Default:
+<code>utilization</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; SdrsFreeSpaceThreshold { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/DatastoreCluster.cs/#L100">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_DatastoreCluster_SdrsFreeSpaceThresholdMode_" data-uid="Pulumi.VSphere.DatastoreCluster.SdrsFreeSpaceThresholdMode*"></a>
+  <h4 id="Pulumi_VSphere_DatastoreCluster_SdrsFreeSpaceThresholdMode" data-uid="Pulumi.VSphere.DatastoreCluster.SdrsFreeSpaceThresholdMode">SdrsFreeSpaceThresholdMode</h4>
+  <div class="markdown level1 summary"><p>The free space threshold to use. When set to utilization, drs_space_utilization_threshold is used, and when
+set to freeSpace, drs_free_space_threshold is used.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SdrsFreeSpaceThresholdMode { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/DatastoreCluster.cs/#L108">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_DatastoreCluster_SdrsFreeSpaceUtilizationDifference_" data-uid="Pulumi.VSphere.DatastoreCluster.SdrsFreeSpaceUtilizationDifference*"></a>
+  <h4 id="Pulumi_VSphere_DatastoreCluster_SdrsFreeSpaceUtilizationDifference" data-uid="Pulumi.VSphere.DatastoreCluster.SdrsFreeSpaceUtilizationDifference">SdrsFreeSpaceUtilizationDifference</h4>
+  <div class="markdown level1 summary"><p>The threshold, in
+percent, of difference between space utilization in datastores before storage
+DRS makes decisions to balance the space. Default: <code>5</code> percent.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; SdrsFreeSpaceUtilizationDifference { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/DatastoreCluster.cs/#L115">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_DatastoreCluster_SdrsIoBalanceAutomationLevel_" data-uid="Pulumi.VSphere.DatastoreCluster.SdrsIoBalanceAutomationLevel*"></a>
+  <h4 id="Pulumi_VSphere_DatastoreCluster_SdrsIoBalanceAutomationLevel" data-uid="Pulumi.VSphere.DatastoreCluster.SdrsIoBalanceAutomationLevel">SdrsIoBalanceAutomationLevel</h4>
+  <div class="markdown level1 summary"><p>Overrides the default
+automation settings when correcting I/O load imbalances.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SdrsIoBalanceAutomationLevel { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/DatastoreCluster.cs/#L123">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_DatastoreCluster_SdrsIoLatencyThreshold_" data-uid="Pulumi.VSphere.DatastoreCluster.SdrsIoLatencyThreshold*"></a>
+  <h4 id="Pulumi_VSphere_DatastoreCluster_SdrsIoLatencyThreshold" data-uid="Pulumi.VSphere.DatastoreCluster.SdrsIoLatencyThreshold">SdrsIoLatencyThreshold</h4>
+  <div class="markdown level1 summary"><p>The I/O latency threshold, in
+milliseconds, that storage DRS uses to make recommendations to move disks
+from this datastore. Default: <code>15</code> seconds.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; SdrsIoLatencyThreshold { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/DatastoreCluster.cs/#L130">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_DatastoreCluster_SdrsIoLoadBalanceEnabled_" data-uid="Pulumi.VSphere.DatastoreCluster.SdrsIoLoadBalanceEnabled*"></a>
+  <h4 id="Pulumi_VSphere_DatastoreCluster_SdrsIoLoadBalanceEnabled" data-uid="Pulumi.VSphere.DatastoreCluster.SdrsIoLoadBalanceEnabled">SdrsIoLoadBalanceEnabled</h4>
+  <div class="markdown level1 summary"><p>Enable I/O load balancing for
+this datastore cluster. Default: <code>true</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; SdrsIoLoadBalanceEnabled { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/DatastoreCluster.cs/#L138">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_DatastoreCluster_SdrsIoLoadImbalanceThreshold_" data-uid="Pulumi.VSphere.DatastoreCluster.SdrsIoLoadImbalanceThreshold*"></a>
+  <h4 id="Pulumi_VSphere_DatastoreCluster_SdrsIoLoadImbalanceThreshold" data-uid="Pulumi.VSphere.DatastoreCluster.SdrsIoLoadImbalanceThreshold">SdrsIoLoadImbalanceThreshold</h4>
+  <div class="markdown level1 summary"><p>The difference between load
+in datastores in the cluster before storage DRS makes recommendations to
+balance the load. Default: <code>5</code> percent.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; SdrsIoLoadImbalanceThreshold { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/DatastoreCluster.cs/#L149">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_DatastoreCluster_SdrsIoReservableIopsThreshold_" data-uid="Pulumi.VSphere.DatastoreCluster.SdrsIoReservableIopsThreshold*"></a>
+  <h4 id="Pulumi_VSphere_DatastoreCluster_SdrsIoReservableIopsThreshold" data-uid="Pulumi.VSphere.DatastoreCluster.SdrsIoReservableIopsThreshold">SdrsIoReservableIopsThreshold</h4>
+  <div class="markdown level1 summary"><p>The threshold of reservable
+IOPS of all virtual machines on the datastore before storage DRS makes
+recommendations to move VMs off of a datastore. Note that this setting should
+only be set if <code>sdrs_io_reservable_percent_threshold</code> cannot make an accurate
+estimate of the capacity of the datastores in your cluster, and should be set
+to roughly 50-60% of the worst case peak performance of the backing LUNs.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; SdrsIoReservableIopsThreshold { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/DatastoreCluster.cs/#L158">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_DatastoreCluster_SdrsIoReservablePercentThreshold_" data-uid="Pulumi.VSphere.DatastoreCluster.SdrsIoReservablePercentThreshold*"></a>
+  <h4 id="Pulumi_VSphere_DatastoreCluster_SdrsIoReservablePercentThreshold" data-uid="Pulumi.VSphere.DatastoreCluster.SdrsIoReservablePercentThreshold">SdrsIoReservablePercentThreshold</h4>
+  <div class="markdown level1 summary"><p>The threshold, in
+percent, of actual estimated performance of the datastore (in IOPS) that
+storage DRS uses to make recommendations to move VMs off of a datastore when
+the total reservable IOPS exceeds the threshold. Default: <code>60</code> percent.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; SdrsIoReservablePercentThreshold { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/DatastoreCluster.cs/#L167">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_DatastoreCluster_SdrsIoReservableThresholdMode_" data-uid="Pulumi.VSphere.DatastoreCluster.SdrsIoReservableThresholdMode*"></a>
+  <h4 id="Pulumi_VSphere_DatastoreCluster_SdrsIoReservableThresholdMode" data-uid="Pulumi.VSphere.DatastoreCluster.SdrsIoReservableThresholdMode">SdrsIoReservableThresholdMode</h4>
+  <div class="markdown level1 summary"><p>The reservable IOPS
+threshold setting to use, <code>sdrs_io_reservable_percent_threshold</code> in the event
+of <code>automatic</code>, or <code>sdrs_io_reservable_iops_threshold</code> in the event of
+<code>manual</code>. Default: <code>automatic</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SdrsIoReservableThresholdMode { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/DatastoreCluster.cs/#L174">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_DatastoreCluster_SdrsLoadBalanceInterval_" data-uid="Pulumi.VSphere.DatastoreCluster.SdrsLoadBalanceInterval*"></a>
+  <h4 id="Pulumi_VSphere_DatastoreCluster_SdrsLoadBalanceInterval" data-uid="Pulumi.VSphere.DatastoreCluster.SdrsLoadBalanceInterval">SdrsLoadBalanceInterval</h4>
+  <div class="markdown level1 summary"><p>The storage DRS poll interval, in
+minutes. Default: <code>480</code> minutes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; SdrsLoadBalanceInterval { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/DatastoreCluster.cs/#L181">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_DatastoreCluster_SdrsPolicyEnforcementAutomationLevel_" data-uid="Pulumi.VSphere.DatastoreCluster.SdrsPolicyEnforcementAutomationLevel*"></a>
+  <h4 id="Pulumi_VSphere_DatastoreCluster_SdrsPolicyEnforcementAutomationLevel" data-uid="Pulumi.VSphere.DatastoreCluster.SdrsPolicyEnforcementAutomationLevel">SdrsPolicyEnforcementAutomationLevel</h4>
+  <div class="markdown level1 summary"><p>Overrides the default
+automation settings when correcting storage and VM policy violations.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SdrsPolicyEnforcementAutomationLevel { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/DatastoreCluster.cs/#L188">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_DatastoreCluster_SdrsRuleEnforcementAutomationLevel_" data-uid="Pulumi.VSphere.DatastoreCluster.SdrsRuleEnforcementAutomationLevel*"></a>
+  <h4 id="Pulumi_VSphere_DatastoreCluster_SdrsRuleEnforcementAutomationLevel" data-uid="Pulumi.VSphere.DatastoreCluster.SdrsRuleEnforcementAutomationLevel">SdrsRuleEnforcementAutomationLevel</h4>
+  <div class="markdown level1 summary"><p>Overrides the default
+automation settings when correcting affinity rule violations.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SdrsRuleEnforcementAutomationLevel { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/DatastoreCluster.cs/#L195">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_DatastoreCluster_SdrsSpaceBalanceAutomationLevel_" data-uid="Pulumi.VSphere.DatastoreCluster.SdrsSpaceBalanceAutomationLevel*"></a>
+  <h4 id="Pulumi_VSphere_DatastoreCluster_SdrsSpaceBalanceAutomationLevel" data-uid="Pulumi.VSphere.DatastoreCluster.SdrsSpaceBalanceAutomationLevel">SdrsSpaceBalanceAutomationLevel</h4>
+  <div class="markdown level1 summary"><p>Overrides the default
+automation settings when correcting disk space imbalances.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SdrsSpaceBalanceAutomationLevel { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/DatastoreCluster.cs/#L202">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_DatastoreCluster_SdrsSpaceUtilizationThreshold_" data-uid="Pulumi.VSphere.DatastoreCluster.SdrsSpaceUtilizationThreshold*"></a>
+  <h4 id="Pulumi_VSphere_DatastoreCluster_SdrsSpaceUtilizationThreshold" data-uid="Pulumi.VSphere.DatastoreCluster.SdrsSpaceUtilizationThreshold">SdrsSpaceUtilizationThreshold</h4>
+  <div class="markdown level1 summary"><p>The threshold, in percent of used space, that storage DRS uses to make decisions to migrate VMs out of a
+datastore.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; SdrsSpaceUtilizationThreshold { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/DatastoreCluster.cs/#L209">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_DatastoreCluster_SdrsVmEvacuationAutomationLevel_" data-uid="Pulumi.VSphere.DatastoreCluster.SdrsVmEvacuationAutomationLevel*"></a>
+  <h4 id="Pulumi_VSphere_DatastoreCluster_SdrsVmEvacuationAutomationLevel" data-uid="Pulumi.VSphere.DatastoreCluster.SdrsVmEvacuationAutomationLevel">SdrsVmEvacuationAutomationLevel</h4>
+  <div class="markdown level1 summary"><p>Overrides the default
+automation settings when generating recommendations for datastore evacuation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SdrsVmEvacuationAutomationLevel { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/DatastoreCluster.cs/#L216">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_DatastoreCluster_Tags_" data-uid="Pulumi.VSphere.DatastoreCluster.Tags*"></a>
+  <h4 id="Pulumi_VSphere_DatastoreCluster_Tags" data-uid="Pulumi.VSphere.DatastoreCluster.Tags">Tags</h4>
+  <div class="markdown level1 summary"><p>The IDs of any tags to attach to this resource. See
+[here][docs-applying-tags] for a reference on how to apply tags.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; Tags { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/DatastoreCluster.cs/#L257">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_DatastoreCluster_Get_" data-uid="Pulumi.VSphere.DatastoreCluster.Get*"></a>
+  <h4 id="Pulumi_VSphere_DatastoreCluster_Get_System_String_Input_System_String__Pulumi_VSphere_DatastoreClusterState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.VSphere.DatastoreCluster.Get(System.String,Input{System.String},Pulumi.VSphere.DatastoreClusterState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, DatastoreClusterState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Get an existing DatastoreCluster resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static DatastoreCluster Get(string name, Input&lt;string&gt; id, DatastoreClusterState state = null, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.VSphere.DatastoreClusterState.html">DatastoreClusterState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.VSphere.DatastoreCluster.html">DatastoreCluster</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/DatastoreCluster.cs/#L29" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

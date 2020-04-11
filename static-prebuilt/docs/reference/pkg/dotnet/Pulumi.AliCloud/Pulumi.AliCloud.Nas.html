@@ -1,0 +1,199 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Namespace Pulumi.AliCloud.Nas
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Namespace Pulumi.AliCloud.Nas
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.AliCloud.Nas">
+  
+  <h1 id="Pulumi_AliCloud_Nas" data-uid="Pulumi.AliCloud.Nas" class="text-break">Namespace Pulumi.AliCloud.Nas
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+    <h3 id="classes">Classes
+  </h3>
+      <h4><a class="xref" href="Pulumi.AliCloud.Nas.AccessGroup.html">AccessGroup</a></h4>
+      <section><p>Provides a Nas Access Group resource.</p>
+<p>In NAS, the permission group acts as a whitelist that allows you to restrict file system access. You can allow specified IP addresses or CIDR blocks to access the file system, and assign different levels of access permission to different IP addresses or CIDR blocks by adding rules to the permission group.</p>
+<blockquote>
+<p><strong>NOTE:</strong> Available in v1.33.0+.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/nas_access_group.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/nas_access_group.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Nas.AccessGroupArgs.html">AccessGroupArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Nas.AccessGroupState.html">AccessGroupState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Nas.AccessRule.html">AccessRule</a></h4>
+      <section><p>Provides a Nas Access Rule resource.</p>
+<p>When NAS is activated, the Default VPC Permission Group is automatically generated. It allows all IP addresses in a VPC to access the mount point with full permissions. Full permissions include Read/Write permission with no restriction on root users.</p>
+<blockquote>
+<p><strong>NOTE:</strong> Available in v1.34.0+.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/nas_access_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/nas_access_rule.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Nas.AccessRuleArgs.html">AccessRuleArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Nas.AccessRuleState.html">AccessRuleState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Nas.FileSystem.html">FileSystem</a></h4>
+      <section><p>Provides a Nas File System resource.</p>
+<p>After activating NAS, you can create a file system and purchase a storage package for it in the NAS console. The NAS console also enables you to view the file system details and remove unnecessary file systems.</p>
+<p>For information about NAS file system and how to use it, see <a href="https://www.alibabacloud.com/help/doc-detail/27530.htm">Manage file systems</a></p>
+<blockquote>
+<p><strong>NOTE:</strong> Available in v1.33.0+.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/nas_file_system.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/nas_file_system.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Nas.FileSystemArgs.html">FileSystemArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Nas.FileSystemState.html">FileSystemState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Nas.GetAccessGroupsArgs.html">GetAccessGroupsArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Nas.GetAccessGroupsResult.html">GetAccessGroupsResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Nas.GetAccessRulesArgs.html">GetAccessRulesArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Nas.GetAccessRulesResult.html">GetAccessRulesResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Nas.GetFileSystemsArgs.html">GetFileSystemsArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Nas.GetFileSystemsResult.html">GetFileSystemsResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Nas.GetMountTargetsArgs.html">GetMountTargetsArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Nas.GetMountTargetsResult.html">GetMountTargetsResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Nas.GetProtocolsArgs.html">GetProtocolsArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Nas.GetProtocolsResult.html">GetProtocolsResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Nas.Invokes.html">Invokes</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Nas.MountTarget.html">MountTarget</a></h4>
+      <section><p>Provides a Nas Mount Target resource.</p>
+<blockquote>
+<p>NOTE: Available in v1.34.0+.</p>
+</blockquote>
+<blockquote>
+<p>NOTE: Currently this resource support create a mount point in a classic network only when current region is China mainland regions.</p>
+</blockquote>
+<blockquote>
+<p>NOTE: You must grant NAS with specific RAM permissions when creating a classic mount targets,
+and it only can be achieved by creating a classic mount target mannually.
+See <a href="https://www.alibabacloud.com/help/doc-detail/60431.htm">Add a mount point</a> and <a href="https://www.alibabacloud.com/help/faq-detail/42176.htm">Why do I need RAM permissions to create a mount point in a classic network</a>.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/nas_mount_target.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/nas_mount_target.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Nas.MountTargetArgs.html">MountTargetArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Nas.MountTargetState.html">MountTargetState</a></h4>
+      <section></section>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

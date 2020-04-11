@@ -3,13 +3,14 @@
 title: "JobDefinition"
 block_external_search_index: true
 ---
-<style>
-table td p { margin-top: 0; margin-bottom: 0; }
-</style>
+
+
 
 Provides a Batch Job Definition resource.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -52,6 +53,8 @@ const test = new aws.batch.JobDefinition("test", {
 });
 ```
 
+{{% /example %}}
+{{% /examples %}}
 ## retry_strategy
 
 `retry_strategy` supports the following:
@@ -64,506 +67,364 @@ const test = new aws.batch.JobDefinition("test", {
 
 * `attempt_duration_seconds` - (Optional) The time duration in seconds after which AWS Batch terminates your jobs if they have not finished. The minimum value for the timeout is `60` seconds.
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/batch_job_definition.html.markdown.
-
 
 
 ## Create a JobDefinition Resource
 
-{{< langchoose csharp nojavascript >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/batch/#JobDefinition">JobDefinition</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/batch/#JobDefinitionArgs">JobDefinitionArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+{{% choosable language nodejs %}}
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/batch/#JobDefinition">JobDefinition</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/batch/#JobDefinitionArgs">JobDefinitionArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+{{% /choosable %}}
 
+{{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">JobDefinition</span><span class="p">(resource_name, opts=None, </span>container_properties=None<span class="p">, </span>name=None<span class="p">, </span>parameters=None<span class="p">, </span>retry_strategy=None<span class="p">, </span>timeout=None<span class="p">, </span>type=None<span class="p">, __props__=None);</span></code></pre></div>
+{{% /choosable %}}
 
+{{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewJobDefinition<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/batch?tab=doc#JobDefinitionArgs">JobDefinitionArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/batch?tab=doc#JobDefinition">JobDefinition</a></span>, error)</span></code></pre></div>
+{{% /choosable %}}
 
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Batch.JobDefinition.html">JobDefinition</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Batch.JobDefinitionArgs.html">JobDefinitionArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+{{% choosable language csharp %}}
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Batch.JobDefinition.html">JobDefinition</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Batch.JobDefinitionArgs.html">JobDefinitionArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+{{% /choosable %}}
 
-Creates a JobDefinition resource with the given unique name, arguments, and options.
+{{% choosable language nodejs %}}
 
-{{% lang nodejs %}}
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The arguments to use to populate this resource's properties.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 
-<ul class="pl-10">
-    <li><strong>name</strong> &ndash; (Required) The unique name of the resulting resource.</li>
-    <li><strong>args</strong> &ndash;  (Optional)  The arguments to use to populate this resource's properties.</li>
-    <li><strong>opts</strong> &ndash; (Optional) A bag of options that control this resource's behavior.</li>
-</ul>
+{{% /choosable %}}
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
+{{% /choosable %}}
 
-{{% lang go %}}
+{{% choosable language go %}}
 
-<ul class="pl-10">
-    <li><strong>name</strong> &ndash; (Required) The unique name of the resulting resource.</li>
-    <li><strong>args</strong> &ndash;  (Optional)  The arguments to use to populate this resource's properties.</li>
-    <li><strong>opts</strong> &ndash; (Optional) A bag of options that control this resource's behavior.</li>
-</ul>
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The arguments to use to populate this resource's properties.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 
-{{% /lang %}}
+{{% /choosable %}}
 
-{{% lang csharp %}}
+{{% choosable language csharp %}}
 
-<ul class="pl-10">
-    <li><strong>name</strong> &ndash; (Required) The unique name of the resulting resource.</li>
-    <li><strong>args</strong> &ndash;  (Optional)  The arguments to use to populate this resource's properties.</li>
-    <li><strong>opts</strong> &ndash; (Optional) A bag of options that control this resource's behavior.</li>
-</ul>
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The arguments to use to populate this resource's properties.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 
-{{% /lang %}}
+{{% /choosable %}}
 
-The following arguments are supported:
-
-
-{{< langchoose csharp nojavascript >}}
+#### Resource Arguments
 
 
-{{% lang csharp %}}
 
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Container<wbr>Properties</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A valid [container properties](http://docs.aws.amazon.com/batch/latest/APIReference/API_RegisterJobDefinition.html)
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Container<wbr>Properties</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}A valid [container properties](http://docs.aws.amazon.com/batch/latest/APIReference/API_RegisterJobDefinition.html)
 provided as a single valid JSON document. This parameter is required if the `type` parameter is `container`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Name</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Specifies the name of the job definition.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the job definition.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Parameters</td>
-            <td class="align-top">
-                
-                <code>Dictionary<string, string>?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Specifies the parameter substitution placeholders to set in the job definition.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Parameters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary<string, string>?</span>
+    </dt>
+    <dd>{{% md %}}Specifies the parameter substitution placeholders to set in the job definition.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Retry<wbr>Strategy</td>
-            <td class="align-top">
-                
-                <code><a href="#jobdefinitionretrystrategy">Job<wbr>Definition<wbr>Retry<wbr>Strategy<wbr>Args?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Specifies the retry strategy to use for failed jobs that are submitted with this job definition.
+    <dt class="property-optional"
+            title="Optional">
+        <span>Retry<wbr>Strategy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#jobdefinitionretrystrategy">Job<wbr>Definition<wbr>Retry<wbr>Strategy<wbr>Args?</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the retry strategy to use for failed jobs that are submitted with this job definition.
 Maximum number of `retry_strategy` is `1`.  Defined below.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Timeout</td>
-            <td class="align-top">
-                
-                <code><a href="#jobdefinitiontimeout">Job<wbr>Definition<wbr>Timeout<wbr>Args?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Specifies the timeout for jobs so that if a job runs longer, AWS Batch terminates the job. Maximum number of `timeout` is `1`. Defined below.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Timeout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#jobdefinitiontimeout">Job<wbr>Definition<wbr>Timeout<wbr>Args?</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the timeout for jobs so that if a job runs longer, AWS Batch terminates the job. Maximum number of `timeout` is `1`. Defined below.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Type</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The type of job definition.  Must be `container`
- {{% /md %}}
+    <dt class="property-required"
+            title="Required">
+        <span>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of job definition.  Must be `container`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language go %}}
+<dl class="resources-properties">
 
-
-{{% lang go %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Container<wbr>Properties</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A valid [container properties](http://docs.aws.amazon.com/batch/latest/APIReference/API_RegisterJobDefinition.html)
+    <dt class="property-optional"
+            title="Optional">
+        <span>Container<wbr>Properties</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}A valid [container properties](http://docs.aws.amazon.com/batch/latest/APIReference/API_RegisterJobDefinition.html)
 provided as a single valid JSON document. This parameter is required if the `type` parameter is `container`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Name</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Specifies the name of the job definition.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the job definition.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Parameters</td>
-            <td class="align-top">
-                
-                <code>map[string]string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Specifies the parameter substitution placeholders to set in the job definition.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Parameters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the parameter substitution placeholders to set in the job definition.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Retry<wbr>Strategy</td>
-            <td class="align-top">
-                
-                <code><a href="#jobdefinitionretrystrategy">*Job<wbr>Definition<wbr>Retry<wbr>Strategy</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Specifies the retry strategy to use for failed jobs that are submitted with this job definition.
+    <dt class="property-optional"
+            title="Optional">
+        <span>Retry<wbr>Strategy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#jobdefinitionretrystrategy">*Job<wbr>Definition<wbr>Retry<wbr>Strategy</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the retry strategy to use for failed jobs that are submitted with this job definition.
 Maximum number of `retry_strategy` is `1`.  Defined below.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Timeout</td>
-            <td class="align-top">
-                
-                <code><a href="#jobdefinitiontimeout">*Job<wbr>Definition<wbr>Timeout</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Specifies the timeout for jobs so that if a job runs longer, AWS Batch terminates the job. Maximum number of `timeout` is `1`. Defined below.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Timeout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#jobdefinitiontimeout">*Job<wbr>Definition<wbr>Timeout</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the timeout for jobs so that if a job runs longer, AWS Batch terminates the job. Maximum number of `timeout` is `1`. Defined below.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Type</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The type of job definition.  Must be `container`
- {{% /md %}}
+    <dt class="property-required"
+            title="Required">
+        <span>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of job definition.  Must be `container`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
-
-{{% lang nodejs %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">container<wbr>Properties</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A valid [container properties](http://docs.aws.amazon.com/batch/latest/APIReference/API_RegisterJobDefinition.html)
+    <dt class="property-optional"
+            title="Optional">
+        <span>container<wbr>Properties</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}A valid [container properties](http://docs.aws.amazon.com/batch/latest/APIReference/API_RegisterJobDefinition.html)
 provided as a single valid JSON document. This parameter is required if the `type` parameter is `container`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">name</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Specifies the name of the job definition.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the job definition.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">parameters</td>
-            <td class="align-top">
-                
-                <code>{[key: string]: string}?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Specifies the parameter substitution placeholders to set in the job definition.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>parameters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}?</span>
+    </dt>
+    <dd>{{% md %}}Specifies the parameter substitution placeholders to set in the job definition.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">retry<wbr>Strategy</td>
-            <td class="align-top">
-                
-                <code><a href="#jobdefinitionretrystrategy">Job<wbr>Definition<wbr>Retry<wbr>Strategy?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Specifies the retry strategy to use for failed jobs that are submitted with this job definition.
+    <dt class="property-optional"
+            title="Optional">
+        <span>retry<wbr>Strategy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#jobdefinitionretrystrategy">Job<wbr>Definition<wbr>Retry<wbr>Strategy?</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the retry strategy to use for failed jobs that are submitted with this job definition.
 Maximum number of `retry_strategy` is `1`.  Defined below.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">timeout</td>
-            <td class="align-top">
-                
-                <code><a href="#jobdefinitiontimeout">Job<wbr>Definition<wbr>Timeout?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Specifies the timeout for jobs so that if a job runs longer, AWS Batch terminates the job. Maximum number of `timeout` is `1`. Defined below.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>timeout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#jobdefinitiontimeout">Job<wbr>Definition<wbr>Timeout?</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the timeout for jobs so that if a job runs longer, AWS Batch terminates the job. Maximum number of `timeout` is `1`. Defined below.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">type</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The type of job definition.  Must be `container`
- {{% /md %}}
+    <dt class="property-required"
+            title="Required">
+        <span>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of job definition.  Must be `container`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
 
-
-{{% lang python %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">container_<wbr>properties</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A valid [container properties](http://docs.aws.amazon.com/batch/latest/APIReference/API_RegisterJobDefinition.html)
+    <dt class="property-optional"
+            title="Optional">
+        <span>container_<wbr>properties</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A valid [container properties](http://docs.aws.amazon.com/batch/latest/APIReference/API_RegisterJobDefinition.html)
 provided as a single valid JSON document. This parameter is required if the `type` parameter is `container`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">name</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Specifies the name of the job definition.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the job definition.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">parameters</td>
-            <td class="align-top">
-                
-                <code>Dict[str, str]</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Specifies the parameter substitution placeholders to set in the job definition.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>parameters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, str]</span>
+    </dt>
+    <dd>{{% md %}}Specifies the parameter substitution placeholders to set in the job definition.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">retry_<wbr>strategy</td>
-            <td class="align-top">
-                
-                <code><a href="#jobdefinitionretrystrategy">Dict[Job<wbr>Definition<wbr>Retry<wbr>Strategy]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Specifies the retry strategy to use for failed jobs that are submitted with this job definition.
+    <dt class="property-optional"
+            title="Optional">
+        <span>retry_<wbr>strategy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#jobdefinitionretrystrategy">Dict[Job<wbr>Definition<wbr>Retry<wbr>Strategy]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the retry strategy to use for failed jobs that are submitted with this job definition.
 Maximum number of `retry_strategy` is `1`.  Defined below.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">timeout</td>
-            <td class="align-top">
-                
-                <code><a href="#jobdefinitiontimeout">Dict[Job<wbr>Definition<wbr>Timeout]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Specifies the timeout for jobs so that if a job runs longer, AWS Batch terminates the job. Maximum number of `timeout` is `1`. Defined below.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>timeout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#jobdefinitiontimeout">Dict[Job<wbr>Definition<wbr>Timeout]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the timeout for jobs so that if a job runs longer, AWS Batch terminates the job. Maximum number of `timeout` is `1`. Defined below.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">type</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The type of job definition.  Must be `container`
- {{% /md %}}
+    <dt class="property-required"
+            title="Required">
+        <span>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of job definition.  Must be `container`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
+</dl>
+{{% /choosable %}}
 
 
 
@@ -577,511 +438,329 @@ The following output properties are available:
 
 
 
-{{< langchoose csharp nojavascript >}}
 
+{{% choosable language csharp %}}
+<dl class="resources-properties">
 
-{{% lang csharp %}}
+    <dt class="property-"
+            title="">
+        <span>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name of the job definition.
+{{% /md %}}</dd>
 
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Arn</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The Amazon Resource Name of the job definition.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Container<wbr>Properties</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} A valid [container properties](http://docs.aws.amazon.com/batch/latest/APIReference/API_RegisterJobDefinition.html)
+    <dt class="property-"
+            title="">
+        <span>Container<wbr>Properties</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}A valid [container properties](http://docs.aws.amazon.com/batch/latest/APIReference/API_RegisterJobDefinition.html)
 provided as a single valid JSON document. This parameter is required if the `type` parameter is `container`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Name</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} Specifies the name of the job definition.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the job definition.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Parameters</td>
-            <td class="align-top">
-                
-                <code>Dictionary<string, string>?</code>
-            </td>
-            <td class="align-top">{{% md %}} Specifies the parameter substitution placeholders to set in the job definition.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Parameters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary<string, string>?</span>
+    </dt>
+    <dd>{{% md %}}Specifies the parameter substitution placeholders to set in the job definition.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Retry<wbr>Strategy</td>
-            <td class="align-top">
-                
-                <code><a href="#jobdefinitionretrystrategy">Job<wbr>Definition<wbr>Retry<wbr>Strategy?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} Specifies the retry strategy to use for failed jobs that are submitted with this job definition.
+    <dt class="property-"
+            title="">
+        <span>Retry<wbr>Strategy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#jobdefinitionretrystrategy">Job<wbr>Definition<wbr>Retry<wbr>Strategy?</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the retry strategy to use for failed jobs that are submitted with this job definition.
 Maximum number of `retry_strategy` is `1`.  Defined below.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Revision</td>
-            <td class="align-top">
-                
-                <code>int</code>
-            </td>
-            <td class="align-top">{{% md %}} The revision of the job definition.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Revision</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The revision of the job definition.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Timeout</td>
-            <td class="align-top">
-                
-                <code><a href="#jobdefinitiontimeout">Job<wbr>Definition<wbr>Timeout?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} Specifies the timeout for jobs so that if a job runs longer, AWS Batch terminates the job. Maximum number of `timeout` is `1`. Defined below.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Timeout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#jobdefinitiontimeout">Job<wbr>Definition<wbr>Timeout?</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the timeout for jobs so that if a job runs longer, AWS Batch terminates the job. Maximum number of `timeout` is `1`. Defined below.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Type</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The type of job definition.  Must be `container`
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of job definition.  Must be `container`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language go %}}
+<dl class="resources-properties">
 
+    <dt class="property-"
+            title="">
+        <span>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name of the job definition.
+{{% /md %}}</dd>
 
-{{% lang go %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Arn</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The Amazon Resource Name of the job definition.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Container<wbr>Properties</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} A valid [container properties](http://docs.aws.amazon.com/batch/latest/APIReference/API_RegisterJobDefinition.html)
+    <dt class="property-"
+            title="">
+        <span>Container<wbr>Properties</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}A valid [container properties](http://docs.aws.amazon.com/batch/latest/APIReference/API_RegisterJobDefinition.html)
 provided as a single valid JSON document. This parameter is required if the `type` parameter is `container`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Name</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} Specifies the name of the job definition.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the job definition.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Parameters</td>
-            <td class="align-top">
-                
-                <code>map[string]string</code>
-            </td>
-            <td class="align-top">{{% md %}} Specifies the parameter substitution placeholders to set in the job definition.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Parameters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the parameter substitution placeholders to set in the job definition.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Retry<wbr>Strategy</td>
-            <td class="align-top">
-                
-                <code><a href="#jobdefinitionretrystrategy">*Job<wbr>Definition<wbr>Retry<wbr>Strategy</a></code>
-            </td>
-            <td class="align-top">{{% md %}} Specifies the retry strategy to use for failed jobs that are submitted with this job definition.
+    <dt class="property-"
+            title="">
+        <span>Retry<wbr>Strategy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#jobdefinitionretrystrategy">*Job<wbr>Definition<wbr>Retry<wbr>Strategy</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the retry strategy to use for failed jobs that are submitted with this job definition.
 Maximum number of `retry_strategy` is `1`.  Defined below.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Revision</td>
-            <td class="align-top">
-                
-                <code>int</code>
-            </td>
-            <td class="align-top">{{% md %}} The revision of the job definition.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Revision</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The revision of the job definition.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Timeout</td>
-            <td class="align-top">
-                
-                <code><a href="#jobdefinitiontimeout">*Job<wbr>Definition<wbr>Timeout</a></code>
-            </td>
-            <td class="align-top">{{% md %}} Specifies the timeout for jobs so that if a job runs longer, AWS Batch terminates the job. Maximum number of `timeout` is `1`. Defined below.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Timeout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#jobdefinitiontimeout">*Job<wbr>Definition<wbr>Timeout</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the timeout for jobs so that if a job runs longer, AWS Batch terminates the job. Maximum number of `timeout` is `1`. Defined below.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Type</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The type of job definition.  Must be `container`
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of job definition.  Must be `container`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
+    <dt class="property-"
+            title="">
+        <span>arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name of the job definition.
+{{% /md %}}</dd>
 
-{{% lang nodejs %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">arn</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The Amazon Resource Name of the job definition.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">container<wbr>Properties</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} A valid [container properties](http://docs.aws.amazon.com/batch/latest/APIReference/API_RegisterJobDefinition.html)
+    <dt class="property-"
+            title="">
+        <span>container<wbr>Properties</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}A valid [container properties](http://docs.aws.amazon.com/batch/latest/APIReference/API_RegisterJobDefinition.html)
 provided as a single valid JSON document. This parameter is required if the `type` parameter is `container`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">name</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} Specifies the name of the job definition.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the job definition.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">parameters</td>
-            <td class="align-top">
-                
-                <code>{[key: string]: string}?</code>
-            </td>
-            <td class="align-top">{{% md %}} Specifies the parameter substitution placeholders to set in the job definition.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>parameters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}?</span>
+    </dt>
+    <dd>{{% md %}}Specifies the parameter substitution placeholders to set in the job definition.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">retry<wbr>Strategy</td>
-            <td class="align-top">
-                
-                <code><a href="#jobdefinitionretrystrategy">Job<wbr>Definition<wbr>Retry<wbr>Strategy?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} Specifies the retry strategy to use for failed jobs that are submitted with this job definition.
+    <dt class="property-"
+            title="">
+        <span>retry<wbr>Strategy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#jobdefinitionretrystrategy">Job<wbr>Definition<wbr>Retry<wbr>Strategy?</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the retry strategy to use for failed jobs that are submitted with this job definition.
 Maximum number of `retry_strategy` is `1`.  Defined below.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">revision</td>
-            <td class="align-top">
-                
-                <code>number</code>
-            </td>
-            <td class="align-top">{{% md %}} The revision of the job definition.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>revision</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The revision of the job definition.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">timeout</td>
-            <td class="align-top">
-                
-                <code><a href="#jobdefinitiontimeout">Job<wbr>Definition<wbr>Timeout?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} Specifies the timeout for jobs so that if a job runs longer, AWS Batch terminates the job. Maximum number of `timeout` is `1`. Defined below.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>timeout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#jobdefinitiontimeout">Job<wbr>Definition<wbr>Timeout?</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the timeout for jobs so that if a job runs longer, AWS Batch terminates the job. Maximum number of `timeout` is `1`. Defined below.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">type</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The type of job definition.  Must be `container`
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of job definition.  Must be `container`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
 
+    <dt class="property-"
+            title="">
+        <span>arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name of the job definition.
+{{% /md %}}</dd>
 
-{{% lang python %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">arn</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} The Amazon Resource Name of the job definition.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">container_<wbr>properties</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} A valid [container properties](http://docs.aws.amazon.com/batch/latest/APIReference/API_RegisterJobDefinition.html)
+    <dt class="property-"
+            title="">
+        <span>container_<wbr>properties</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A valid [container properties](http://docs.aws.amazon.com/batch/latest/APIReference/API_RegisterJobDefinition.html)
 provided as a single valid JSON document. This parameter is required if the `type` parameter is `container`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">name</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} Specifies the name of the job definition.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the job definition.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">parameters</td>
-            <td class="align-top">
-                
-                <code>Dict[str, str]</code>
-            </td>
-            <td class="align-top">{{% md %}} Specifies the parameter substitution placeholders to set in the job definition.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>parameters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, str]</span>
+    </dt>
+    <dd>{{% md %}}Specifies the parameter substitution placeholders to set in the job definition.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">retry_<wbr>strategy</td>
-            <td class="align-top">
-                
-                <code><a href="#jobdefinitionretrystrategy">Dict[Job<wbr>Definition<wbr>Retry<wbr>Strategy]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} Specifies the retry strategy to use for failed jobs that are submitted with this job definition.
+    <dt class="property-"
+            title="">
+        <span>retry_<wbr>strategy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#jobdefinitionretrystrategy">Dict[Job<wbr>Definition<wbr>Retry<wbr>Strategy]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the retry strategy to use for failed jobs that are submitted with this job definition.
 Maximum number of `retry_strategy` is `1`.  Defined below.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">revision</td>
-            <td class="align-top">
-                
-                <code>float</code>
-            </td>
-            <td class="align-top">{{% md %}} The revision of the job definition.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>revision</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The revision of the job definition.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">timeout</td>
-            <td class="align-top">
-                
-                <code><a href="#jobdefinitiontimeout">Dict[Job<wbr>Definition<wbr>Timeout]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} Specifies the timeout for jobs so that if a job runs longer, AWS Batch terminates the job. Maximum number of `timeout` is `1`. Defined below.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>timeout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#jobdefinitiontimeout">Dict[Job<wbr>Definition<wbr>Timeout]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the timeout for jobs so that if a job runs longer, AWS Batch terminates the job. Maximum number of `timeout` is `1`. Defined below.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">type</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} The type of job definition.  Must be `container`
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of job definition.  Must be `container`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
+</dl>
+{{% /choosable %}}
 
 
 
@@ -1092,623 +771,448 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
 
 ## Look up an Existing JobDefinition Resource
 
-{{< langchoose csharp nojavascript >}}
-
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">pulumi.Input&lt;pulumi.ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/batch/#JobDefinitionState">JobDefinitionState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/batch/#JobDefinition">JobDefinition</a></span></code></pre></div>
-
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>container_properties=None<span class="p">, </span>name=None<span class="p">, </span>parameters=None<span class="p">, </span>retry_strategy=None<span class="p">, </span>revision=None<span class="p">, </span>timeout=None<span class="p">, </span>type=None<span class="p">, __props__=None);</span></code></pre></div>
-
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetJobDefinition<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">pulumi.IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/batch?tab=doc#JobDefinitionState">JobDefinitionState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/batch?tab=doc#JobDefinition">JobDefinition</a></span>, error)</span></code></pre></div>
-
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Batch.JobDefinition.html">JobDefinition</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Pulumi.Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Batch.JobDefinitionState.html">JobDefinitionState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
-
 Get an existing JobDefinition resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 
-{{% lang nodejs %}}
+{{< chooser language "javascript,typescript,python,go,csharp  " / >}}
 
-<ul class="pl-10">
-    <li><strong>name</strong> &ndash; (Required) The unique name of the resulting resource.</li>
-    <li><strong>id</strong> &ndash; (Required) The _unique_ provider ID of the resource to lookup.</li>
-    <li><strong>state</strong> &ndash; (Optional) Any extra arguments used during the lookup.</li>
-    <li><strong>opts</strong> &ndash; (Optional) A bag of options that control this resource's behavior.</li>
-</ul>
+{{% choosable language nodejs %}}
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/batch/#JobDefinitionState">JobDefinitionState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/batch/#JobDefinition">JobDefinition</a></span></code></pre></div>
+{{% /choosable %}}
 
-{{% /lang %}}
+{{% choosable language python %}}
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>container_properties=None<span class="p">, </span>name=None<span class="p">, </span>parameters=None<span class="p">, </span>retry_strategy=None<span class="p">, </span>revision=None<span class="p">, </span>timeout=None<span class="p">, </span>type=None<span class="p">, __props__=None);</span></code></pre></div>
+{{% /choosable %}}
 
-{{% lang go %}}
+{{% choosable language go %}}
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetJobDefinition<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/batch?tab=doc#JobDefinitionState">JobDefinitionState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/batch?tab=doc#JobDefinition">JobDefinition</a></span>, error)</span></code></pre></div>
+{{% /choosable %}}
 
-<ul class="pl-10">
-    <li><strong>name</strong> &ndash; (Required) The unique name of the resulting resource.</li>
-    <li><strong>id</strong> &ndash; (Required) The _unique_ provider ID of the resource to lookup.</li>
-    <li><strong>state</strong> &ndash; (Optional) Any extra arguments used during the lookup.</li>
-    <li><strong>opts</strong> &ndash; (Optional) A bag of options that control this resource's behavior.</li>
-</ul>
+{{% choosable language csharp %}}
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Batch.JobDefinition.html">JobDefinition</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Batch.JobDefinitionState.html">JobDefinitionState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+{{% /choosable %}}
 
-{{% /lang %}}
+{{% choosable language nodejs %}}
 
-{{% lang csharp %}}
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resulting resource.</dd>
+    <dt class="property-required" title="Required">
+        <span>id</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The <em>unique</em> provider ID of the resource to lookup.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>state</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>Any extra arguments used during the lookup.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 
-<ul class="pl-10">
-    <li><strong>name</strong> &ndash; (Required) The unique name of the resulting resource.</li>
-    <li><strong>id</strong> &ndash; (Required) The _unique_ provider ID of the resource to lookup.</li>
-    <li><strong>state</strong> &ndash; (Optional) Any extra arguments used during the lookup.</li>
-    <li><strong>opts</strong> &ndash; (Optional) A bag of options that control this resource's behavior.</li>
-</ul>
+{{% /choosable %}}
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>resource_name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resulting resource.</dd>
+    <dt class="property-required" title="Optional">
+        <span>id</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The <em>unique</em> provider ID of the resource to lookup.</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resulting resource.</dd>
+    <dt class="property-required" title="Required">
+        <span>id</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The <em>unique</em> provider ID of the resource to lookup.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>state</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>Any extra arguments used during the lookup.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resulting resource.</dd>
+    <dt class="property-required" title="Required">
+        <span>id</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The <em>unique</em> provider ID of the resource to lookup.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>state</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>Any extra arguments used during the lookup.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
+
+{{% /choosable %}}
 
 The following state arguments are supported:
 
 
-{{< langchoose csharp nojavascript >}}
 
+{{% choosable language csharp %}}
+<dl class="resources-properties">
 
-{{% lang csharp %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name of the job definition.
+{{% /md %}}</dd>
 
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Arn</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The Amazon Resource Name of the job definition.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Container<wbr>Properties</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A valid [container properties](http://docs.aws.amazon.com/batch/latest/APIReference/API_RegisterJobDefinition.html)
+    <dt class="property-optional"
+            title="Optional">
+        <span>Container<wbr>Properties</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}A valid [container properties](http://docs.aws.amazon.com/batch/latest/APIReference/API_RegisterJobDefinition.html)
 provided as a single valid JSON document. This parameter is required if the `type` parameter is `container`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Name</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Specifies the name of the job definition.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the job definition.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Parameters</td>
-            <td class="align-top">
-                
-                <code>Dictionary<string, string>?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Specifies the parameter substitution placeholders to set in the job definition.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Parameters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary<string, string>?</span>
+    </dt>
+    <dd>{{% md %}}Specifies the parameter substitution placeholders to set in the job definition.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Retry<wbr>Strategy</td>
-            <td class="align-top">
-                
-                <code><a href="#jobdefinitionretrystrategy">Job<wbr>Definition<wbr>Retry<wbr>Strategy<wbr>Args?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Specifies the retry strategy to use for failed jobs that are submitted with this job definition.
+    <dt class="property-optional"
+            title="Optional">
+        <span>Retry<wbr>Strategy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#jobdefinitionretrystrategy">Job<wbr>Definition<wbr>Retry<wbr>Strategy<wbr>Args?</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the retry strategy to use for failed jobs that are submitted with this job definition.
 Maximum number of `retry_strategy` is `1`.  Defined below.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Revision</td>
-            <td class="align-top">
-                
-                <code>int?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The revision of the job definition.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Revision</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int?</span>
+    </dt>
+    <dd>{{% md %}}The revision of the job definition.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Timeout</td>
-            <td class="align-top">
-                
-                <code><a href="#jobdefinitiontimeout">Job<wbr>Definition<wbr>Timeout<wbr>Args?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Specifies the timeout for jobs so that if a job runs longer, AWS Batch terminates the job. Maximum number of `timeout` is `1`. Defined below.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Timeout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#jobdefinitiontimeout">Job<wbr>Definition<wbr>Timeout<wbr>Args?</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the timeout for jobs so that if a job runs longer, AWS Batch terminates the job. Maximum number of `timeout` is `1`. Defined below.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Type</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The type of job definition.  Must be `container`
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The type of job definition.  Must be `container`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language go %}}
+<dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name of the job definition.
+{{% /md %}}</dd>
 
-{{% lang go %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Arn</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The Amazon Resource Name of the job definition.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Container<wbr>Properties</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A valid [container properties](http://docs.aws.amazon.com/batch/latest/APIReference/API_RegisterJobDefinition.html)
+    <dt class="property-optional"
+            title="Optional">
+        <span>Container<wbr>Properties</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}A valid [container properties](http://docs.aws.amazon.com/batch/latest/APIReference/API_RegisterJobDefinition.html)
 provided as a single valid JSON document. This parameter is required if the `type` parameter is `container`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Name</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Specifies the name of the job definition.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the job definition.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Parameters</td>
-            <td class="align-top">
-                
-                <code>map[string]string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Specifies the parameter substitution placeholders to set in the job definition.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Parameters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the parameter substitution placeholders to set in the job definition.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Retry<wbr>Strategy</td>
-            <td class="align-top">
-                
-                <code><a href="#jobdefinitionretrystrategy">*Job<wbr>Definition<wbr>Retry<wbr>Strategy</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Specifies the retry strategy to use for failed jobs that are submitted with this job definition.
+    <dt class="property-optional"
+            title="Optional">
+        <span>Retry<wbr>Strategy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#jobdefinitionretrystrategy">*Job<wbr>Definition<wbr>Retry<wbr>Strategy</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the retry strategy to use for failed jobs that are submitted with this job definition.
 Maximum number of `retry_strategy` is `1`.  Defined below.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Revision</td>
-            <td class="align-top">
-                
-                <code>*int</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The revision of the job definition.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Revision</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*int</span>
+    </dt>
+    <dd>{{% md %}}The revision of the job definition.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Timeout</td>
-            <td class="align-top">
-                
-                <code><a href="#jobdefinitiontimeout">*Job<wbr>Definition<wbr>Timeout</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Specifies the timeout for jobs so that if a job runs longer, AWS Batch terminates the job. Maximum number of `timeout` is `1`. Defined below.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Timeout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#jobdefinitiontimeout">*Job<wbr>Definition<wbr>Timeout</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the timeout for jobs so that if a job runs longer, AWS Batch terminates the job. Maximum number of `timeout` is `1`. Defined below.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Type</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The type of job definition.  Must be `container`
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The type of job definition.  Must be `container`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name of the job definition.
+{{% /md %}}</dd>
 
-{{% lang nodejs %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">arn</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The Amazon Resource Name of the job definition.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">container<wbr>Properties</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A valid [container properties](http://docs.aws.amazon.com/batch/latest/APIReference/API_RegisterJobDefinition.html)
+    <dt class="property-optional"
+            title="Optional">
+        <span>container<wbr>Properties</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}A valid [container properties](http://docs.aws.amazon.com/batch/latest/APIReference/API_RegisterJobDefinition.html)
 provided as a single valid JSON document. This parameter is required if the `type` parameter is `container`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">name</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Specifies the name of the job definition.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the job definition.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">parameters</td>
-            <td class="align-top">
-                
-                <code>{[key: string]: string}?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Specifies the parameter substitution placeholders to set in the job definition.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>parameters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}?</span>
+    </dt>
+    <dd>{{% md %}}Specifies the parameter substitution placeholders to set in the job definition.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">retry<wbr>Strategy</td>
-            <td class="align-top">
-                
-                <code><a href="#jobdefinitionretrystrategy">Job<wbr>Definition<wbr>Retry<wbr>Strategy?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Specifies the retry strategy to use for failed jobs that are submitted with this job definition.
+    <dt class="property-optional"
+            title="Optional">
+        <span>retry<wbr>Strategy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#jobdefinitionretrystrategy">Job<wbr>Definition<wbr>Retry<wbr>Strategy?</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the retry strategy to use for failed jobs that are submitted with this job definition.
 Maximum number of `retry_strategy` is `1`.  Defined below.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">revision</td>
-            <td class="align-top">
-                
-                <code>number?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The revision of the job definition.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>revision</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number?</span>
+    </dt>
+    <dd>{{% md %}}The revision of the job definition.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">timeout</td>
-            <td class="align-top">
-                
-                <code><a href="#jobdefinitiontimeout">Job<wbr>Definition<wbr>Timeout?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Specifies the timeout for jobs so that if a job runs longer, AWS Batch terminates the job. Maximum number of `timeout` is `1`. Defined below.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>timeout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#jobdefinitiontimeout">Job<wbr>Definition<wbr>Timeout?</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the timeout for jobs so that if a job runs longer, AWS Batch terminates the job. Maximum number of `timeout` is `1`. Defined below.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">type</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The type of job definition.  Must be `container`
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The type of job definition.  Must be `container`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name of the job definition.
+{{% /md %}}</dd>
 
-{{% lang python %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">arn</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The Amazon Resource Name of the job definition.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">container_<wbr>properties</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A valid [container properties](http://docs.aws.amazon.com/batch/latest/APIReference/API_RegisterJobDefinition.html)
+    <dt class="property-optional"
+            title="Optional">
+        <span>container_<wbr>properties</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A valid [container properties](http://docs.aws.amazon.com/batch/latest/APIReference/API_RegisterJobDefinition.html)
 provided as a single valid JSON document. This parameter is required if the `type` parameter is `container`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">name</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Specifies the name of the job definition.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the job definition.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">parameters</td>
-            <td class="align-top">
-                
-                <code>Dict[str, str]</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Specifies the parameter substitution placeholders to set in the job definition.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>parameters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, str]</span>
+    </dt>
+    <dd>{{% md %}}Specifies the parameter substitution placeholders to set in the job definition.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">retry_<wbr>strategy</td>
-            <td class="align-top">
-                
-                <code><a href="#jobdefinitionretrystrategy">Dict[Job<wbr>Definition<wbr>Retry<wbr>Strategy]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Specifies the retry strategy to use for failed jobs that are submitted with this job definition.
+    <dt class="property-optional"
+            title="Optional">
+        <span>retry_<wbr>strategy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#jobdefinitionretrystrategy">Dict[Job<wbr>Definition<wbr>Retry<wbr>Strategy]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the retry strategy to use for failed jobs that are submitted with this job definition.
 Maximum number of `retry_strategy` is `1`.  Defined below.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">revision</td>
-            <td class="align-top">
-                
-                <code>float</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The revision of the job definition.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>revision</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The revision of the job definition.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">timeout</td>
-            <td class="align-top">
-                
-                <code><a href="#jobdefinitiontimeout">Dict[Job<wbr>Definition<wbr>Timeout]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Specifies the timeout for jobs so that if a job runs longer, AWS Batch terminates the job. Maximum number of `timeout` is `1`. Defined below.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>timeout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#jobdefinitiontimeout">Dict[Job<wbr>Definition<wbr>Timeout]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the timeout for jobs so that if a job runs longer, AWS Batch terminates the job. Maximum number of `timeout` is `1`. Defined below.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">type</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The type of job definition.  Must be `container`
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of job definition.  Must be `container`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
+</dl>
+{{% /choosable %}}
 
 
 
@@ -1721,319 +1225,167 @@ The type of job definition.  Must be `container`
 
 ## Supporting Types
 
-#### JobDefinitionRetryStrategy
-{{% lang nodejs %}}
+<h4>Job<wbr>Definition<wbr>Retry<wbr>Strategy</h4>
+{{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#JobDefinitionRetryStrategy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#JobDefinitionRetryStrategy">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
-{{% lang go %}}
+{{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/batch?tab=doc#JobDefinitionRetryStrategyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/batch?tab=doc#JobDefinitionRetryStrategyOutput">output</a> API doc for this type.
-{{% /lang %}}
-
-{{% lang csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Batch.JobDefinitionRetryStrategyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Batch.JobDefinitionRetryStrategy.html">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
 
 
-{{< langchoose csharp nojavascript >}}
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Attempts</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% lang csharp %}}
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Attempts</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Attempts</td>
-            <td class="align-top">
-                
-                <code>int?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+    <dt class="property-optional"
+            title="Optional">
+        <span>attempts</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>attempts</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
-{{% lang go %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Attempts</td>
-            <td class="align-top">
-                
-                <code>*int</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang nodejs %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">attempts</td>
-            <td class="align-top">
-                
-                <code>number?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang python %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">attempts</td>
-            <td class="align-top">
-                
-                <code>float</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
+</dl>
+{{% /choosable %}}
 
 
 
 
 
-#### JobDefinitionTimeout
-{{% lang nodejs %}}
+<h4>Job<wbr>Definition<wbr>Timeout</h4>
+{{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#JobDefinitionTimeout">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#JobDefinitionTimeout">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
-{{% lang go %}}
+{{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/batch?tab=doc#JobDefinitionTimeoutArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/batch?tab=doc#JobDefinitionTimeoutOutput">output</a> API doc for this type.
-{{% /lang %}}
-
-{{% lang csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Batch.JobDefinitionTimeoutArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Batch.JobDefinitionTimeout.html">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
 
 
-{{< langchoose csharp nojavascript >}}
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Attempt<wbr>Duration<wbr>Seconds</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% lang csharp %}}
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Attempt<wbr>Duration<wbr>Seconds</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Attempt<wbr>Duration<wbr>Seconds</td>
-            <td class="align-top">
-                
-                <code>int?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+    <dt class="property-optional"
+            title="Optional">
+        <span>attempt<wbr>Duration<wbr>Seconds</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>attempt<wbr>Duration<wbr>Seconds</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
-{{% lang go %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Attempt<wbr>Duration<wbr>Seconds</td>
-            <td class="align-top">
-                
-                <code>*int</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang nodejs %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">attempt<wbr>Duration<wbr>Seconds</td>
-            <td class="align-top">
-                
-                <code>number?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang python %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">attempt<wbr>Duration<wbr>Seconds</td>
-            <td class="align-top">
-                
-                <code>float</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
+</dl>
+{{% /choosable %}}
 
 
 
 
 
 
+
+
+
+<h3>Package Details</h3>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
 

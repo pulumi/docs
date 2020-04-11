@@ -1,0 +1,257 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Namespace Pulumi.Keycloak.Saml
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Namespace Pulumi.Keycloak.Saml
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Keycloak.Saml">
+  
+  <h1 id="Pulumi_Keycloak_Saml" data-uid="Pulumi.Keycloak.Saml" class="text-break">Namespace Pulumi.Keycloak.Saml
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+    <h3 id="classes">Classes
+  </h3>
+      <h4><a class="xref" href="Pulumi.Keycloak.Saml.Client.html">Client</a></h4>
+      <section><h2 id="-keycloaksamlclient"># keycloak.saml.Client</h2>
+<p>Allows for creating and managing Keycloak clients that use the SAML protocol.</p>
+<p>Clients are entities that can use Keycloak for user authentication. Typically,
+clients are applications that redirect users to Keycloak for authentication
+in order to take advantage of Keycloak's user sessions for SSO.</p>
+<h3 id="argument-reference">Argument Reference</h3>
+<p>The following arguments are supported:</p>
+<ul>
+<li><code>realm_id</code> - (Required) The realm this client is attached to.</li>
+<li><code>client_id</code> - (Required) The unique ID of this client, referenced in the URI during authentication and in issued tokens.</li>
+<li><code>name</code> - (Optional) The display name of this client in the GUI.</li>
+<li><code>enabled</code> - (Optional) When false, this client will not be able to initiate a login or obtain access tokens. Defaults to <code>true</code>.</li>
+<li><code>description</code> - (Optional) The description of this client in the GUI.</li>
+<li><code>include_authn_statement</code> - (Optional) When <code>true</code>, an <code>AuthnStatement</code> will be included in the SAML response.</li>
+<li><code>sign_documents</code> - (Optional) When <code>true</code>, the SAML document will be signed by Keycloak using the realm's private key.</li>
+<li><code>sign_assertions</code> - (Optional) When <code>true</code>, the SAML assertions will be signed by Keycloak using the realm's private key, and embedded within the SAML XML Auth response.</li>
+<li><code>client_signature_required</code> - (Optional) When <code>true</code>, Keycloak will expect that documents originating from a client will be signed using the certificate and/or key configured via <code>signing_certificate</code> and <code>signing_private_key</code>.</li>
+<li><code>force_post_binding</code> - (Optional) When <code>true</code>, Keycloak will always respond to an authentication request via the SAML POST Binding.</li>
+<li><code>front_channel_logout</code> - (Optional) When <code>true</code>, this client will require a browser redirect in order to perform a logout.</li>
+<li><code>name_id_format</code> - (Optional) Sets the Name ID format for the subject.</li>
+<li><code>root_url</code> - (Optional) When specified, this value is prepended to all relative URLs.</li>
+<li><code>valid_redirect_uris</code> - (Optional) When specified, Keycloak will use this list to validate given Assertion Consumer URLs specified in the authentication request.</li>
+<li><code>base_url</code> - (Optional) When specified, this URL will be used whenever Keycloak needs to link to this client.</li>
+<li><code>master_saml_processing_url</code> - (Optional) When specified, this URL will be used for all SAML requests.</li>
+<li><code>signing_certificate</code> - (Optional) If documents or assertions from the client are signed, this certificate will be used to verify the signature.</li>
+<li><code>signing_private_key</code> - (Optional) If documents or assertions from the client are signed, this private key will be used to verify the signature.</li>
+<li><code>idp_initiated_sso_url_name</code> - (Optional) URL fragment name to reference client when you want to do IDP Initiated SSO.</li>
+<li><code>idp_initiated_sso_relay_state</code> - (Optional) Relay state you want to send with SAML request when you want to do IDP Initiated SSO.</li>
+<li><code>assertion_consumer_post_url</code> - (Optional) SAML POST Binding URL for the client's assertion consumer service (login responses).</li>
+<li><code>assertion_consumer_redirect_url</code> - (Optional) SAML Redirect Binding URL for the client's assertion consumer service (login responses).</li>
+<li><code>logout_service_post_binding_url</code> - (Optional) SAML POST Binding URL for the client's single logout service.</li>
+<li><code>logout_service_redirect_binding_url</code> - (Optional) SAML Redirect Binding URL for the client's single logout service.</li>
+<li><code>full_scope_allowed</code> - (Optional) - Allow to include all roles mappings in the access token</li>
+</ul>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/saml_client.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/saml_client.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Keycloak.Saml.ClientArgs.html">ClientArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Keycloak.Saml.ClientState.html">ClientState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Keycloak.Saml.IdentityProvider.html">IdentityProvider</a></h4>
+      <section><h2 id="-keycloaksamlidentityprovider"># keycloak.saml.IdentityProvider</h2>
+<p>Allows to create and manage SAML Identity Providers within Keycloak.</p>
+<p>SAML (Security Assertion Markup Language) identity providers allows to authenticate through a third-party system, using SAML standard.</p>
+<h3 id="argument-reference">Argument Reference</h3>
+<p>The following arguments are supported:</p>
+<ul>
+<li><code>realm</code> - (Required) The name of the realm. This is unique across Keycloak.</li>
+<li><code>alias</code> - (Optional) The uniq name of identity provider.</li>
+<li><code>enabled</code> - (Optional) When false, users and clients will not be able to access this realm. Defaults to <code>true</code>.</li>
+<li><code>display_name</code> - (Optional) The display name for the realm that is shown when logging in to the admin console.</li>
+<li><code>store_token</code> - (Optional) Enable/disable if tokens must be stored after authenticating users. Defaults to <code>true</code>.</li>
+<li><code>add_read_token_role_on_create</code> - (Optional) Enable/disable if new users can read any stored tokens. This assigns the broker.read-token role. Defaults to <code>false</code>.</li>
+<li><code>trust_email</code> - (Optional) If enabled then email provided by this provider is not verified even if verification is enabled for the realm. Defaults to <code>false</code>.</li>
+<li><code>link_only</code> - (Optional) If true, users cannot log in through this provider. They can only link to this provider. This is useful if you don't want to allow login from the provider, but want to integrate with a provider. Defaults to <code>false</code>.</li>
+<li><code>hide_on_login_page</code> - (Optional) If hidden, then login with this provider is possible only if requested explicitly, e.g. using the 'kc_idp_hint' parameter.</li>
+<li><code>first_broker_login_flow_alias</code> - (Optional) Alias of authentication flow, which is triggered after first login with this identity provider. Term 'First Login' means that there is not yet existing Keycloak account linked with the authenticated identity provider account. Defaults to <code>first broker login</code>.</li>
+<li><code>post_broker_login_flow_alias</code> - (Optional) Alias of authentication flow, which is triggered after each login with this identity provider. Useful if you want additional verification of each user authenticated with this identity provider (for example OTP). Leave this empty if you don't want any additional authenticators to be triggered after login with this identity provider. Also note, that authenticator implementations must assume that user is already set in ClientSession as identity provider already set it. Defaults to empty.</li>
+<li><code>authenticate_by_default</code> - (Optional) Authenticate users by default. Defaults to <code>false</code>.</li>
+</ul>
+<h4 id="saml-configuration">SAML Configuration</h4>
+<ul>
+<li><code>single_sign_on_service_url</code> - (Optional) The Url that must be used to send authentication requests (SAML AuthnRequest).</li>
+<li><code>single_logout_service_url</code> - (Optional) The Url that must be used to send logout requests.</li>
+<li><code>backchannel_supported</code> - (Optional) Does the external IDP support back-channel logout ?.</li>
+<li><code>name_id_policy_format</code> - (Optional) Specifies the URI reference corresponding to a name identifier format. Defaults to empty.</li>
+<li><code>post_binding_response</code> - (Optional) Indicates whether to respond to requests using HTTP-POST binding. If false, HTTP-REDIRECT binding will be used..</li>
+<li><code>post_binding_authn_request</code> - (Optional) Indicates whether the AuthnRequest must be sent using HTTP-POST binding. If false, HTTP-REDIRECT binding will be used.</li>
+<li><code>post_binding_logout</code> - (Optional) Indicates whether to respond to requests using HTTP-POST binding. If false, HTTP-REDIRECT binding will be used.</li>
+<li><code>want_assertions_signed</code> - (Optional) Indicates whether this service provider expects a signed Assertion.</li>
+<li><code>want_assertions_encrypted</code> - (Optional) Indicates whether this service provider expects an encrypted Assertion.</li>
+<li><code>force_authn</code> - (Optional) Indicates whether the identity provider must authenticate the presenter directly rather than rely on a previous security context.</li>
+<li><code>validate_signature</code> - (Optional) Enable/disable signature validation of SAML responses.</li>
+<li><code>signing_certificate</code> - (Optional) Signing Certificate.</li>
+<li><code>signature_algorithm</code> - (Optional) Signing Algorithm. Defaults to empty.</li>
+<li><code>xml_sign_key_info_key_name_transformer</code> - (Optional) Sign Key Transformer. Defaults to empty.</li>
+</ul>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/saml_identity_provider.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/saml_identity_provider.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Keycloak.Saml.IdentityProviderArgs.html">IdentityProviderArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Keycloak.Saml.IdentityProviderState.html">IdentityProviderState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Keycloak.Saml.UserAttributeProtocolMapper.html">UserAttributeProtocolMapper</a></h4>
+      <section><h2 id="-keycloaksamluserattributeprotocolmapper"># keycloak.saml.UserAttributeProtocolMapper</h2>
+<p>Allows for creating and managing user attribute protocol mappers for
+SAML clients within Keycloak.</p>
+<p>SAML user attribute protocol mappers allow you to map custom attributes defined
+for a user within Keycloak to an attribute in a SAML assertion. Protocol mappers
+can be defined for a single client, or they can be defined for a client scope which
+can be shared between multiple different clients.</p>
+<h3 id="argument-reference">Argument Reference</h3>
+<p>The following arguments are supported:</p>
+<ul>
+<li><code>realm_id</code> - (Required) The realm this protocol mapper exists within.</li>
+<li><code>client_id</code> - (Required if <code>client_scope_id</code> is not specified) The SAML client this protocol mapper is attached to.</li>
+<li><code>client_scope_id</code> - (Required if <code>client_id</code> is not specified) The SAML client scope this protocol mapper is attached to.</li>
+<li><code>name</code> - (Required) The display name of this protocol mapper in the GUI.</li>
+<li><code>user_attribute</code> - (Required) The custom user attribute to map.</li>
+<li><code>friendly_name</code> - (Optional) An optional human-friendly name for this attribute.</li>
+<li><code>saml_attribute_name</code> - (Required) The name of the SAML attribute.</li>
+<li><code>saml_attribute_name_format</code> - (Required) The SAML attribute Name Format. Can be one of <code>Unspecified</code>, <code>Basic</code>, or <code>URI Reference</code>.</li>
+</ul>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/saml_user_attribute_protocol_mapper.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/saml_user_attribute_protocol_mapper.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Keycloak.Saml.UserAttributeProtocolMapperArgs.html">UserAttributeProtocolMapperArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Keycloak.Saml.UserAttributeProtocolMapperState.html">UserAttributeProtocolMapperState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Keycloak.Saml.UserPropertyProtocolMapper.html">UserPropertyProtocolMapper</a></h4>
+      <section><h2 id="-keycloaksamluserpropertyprotocolmapper"># keycloak.saml.UserPropertyProtocolMapper</h2>
+<p>Allows for creating and managing user property protocol mappers for
+SAML clients within Keycloak.</p>
+<p>SAML user property protocol mappers allow you to map properties of the Keycloak
+user model to an attribute in a SAML assertion. Protocol mappers
+can be defined for a single client, or they can be defined for a client scope which
+can be shared between multiple different clients.</p>
+<h3 id="argument-reference">Argument Reference</h3>
+<p>The following arguments are supported:</p>
+<ul>
+<li><code>realm_id</code> - (Required) The realm this protocol mapper exists within.</li>
+<li><code>client_id</code> - (Required if <code>client_scope_id</code> is not specified) The SAML client this protocol mapper is attached to.</li>
+<li><code>client_scope_id</code> - (Required if <code>client_id</code> is not specified) The SAML client scope this protocol mapper is attached to.</li>
+<li><code>name</code> - (Required) The display name of this protocol mapper in the GUI.</li>
+<li><code>user_property</code> - (Required) The property of the Keycloak user model to map.</li>
+<li><code>friendly_name</code> - (Optional) An optional human-friendly name for this attribute.</li>
+<li><code>saml_attribute_name</code> - (Required) The name of the SAML attribute.</li>
+<li><code>saml_attribute_name_format</code> - (Required) The SAML attribute Name Format. Can be one of <code>Unspecified</code>, <code>Basic</code>, or <code>URI Reference</code>.</li>
+</ul>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/saml_user_property_protocol_mapper.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/saml_user_property_protocol_mapper.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Keycloak.Saml.UserPropertyProtocolMapperArgs.html">UserPropertyProtocolMapperArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Keycloak.Saml.UserPropertyProtocolMapperState.html">UserPropertyProtocolMapperState</a></h4>
+      <section></section>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

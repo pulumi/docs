@@ -229,9 +229,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <p>The <strong>ip_configuration</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the Bastion Host. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">publicIpAddressId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the IP configuration.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publicIpAddressId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Reference to a Public IP Address to associate with this Bastion Host.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Reference to a subnet in which this Bastion Host has been created.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_azure.compute.BastionHost.dns_name">
@@ -244,9 +244,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">ip_configuration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.BastionHost.ip_configuration" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">ip_configuration</span></code> block as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the name of the Bastion Host. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">publicIpAddressId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the IP configuration.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publicIpAddressId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Reference to a Public IP Address to associate with this Bastion Host.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Reference to a subnet in which this Bastion Host has been created.</p></li>
 </ul>
 </dd></dl>
 
@@ -296,9 +296,9 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>ip_configuration</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the Bastion Host. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">publicIpAddressId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the IP configuration.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publicIpAddressId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Reference to a Public IP Address to associate with this Bastion Host.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Reference to a subnet in which this Bastion Host has been created.</p></li>
 </ul>
 </dd></dl>
 
@@ -713,20 +713,31 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_azure.compute.DiskEncryptionSet">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">DiskEncryptionSet</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">identity=None</em>, <em class="sig-param">key_vault_key_id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.DiskEncryptionSet" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a DiskEncryptionSet resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[dict] identity: A <code class="docutils literal notranslate"><span class="pre">identity</span></code> block defined below.
-:param pulumi.Input[str] key_vault_key_id: Specifies the URL to a Key Vault Key (either from a Key Vault Key, or the Key URL for the Key Vault Secret).
-:param pulumi.Input[str] location: Specifies the Azure Region where the Disk Encryption Set exists. Changing this forces a new resource to be created.
-:param pulumi.Input[str] name: The name of the Disk Encryption Set. Changing this forces a new resource to be created.
-:param pulumi.Input[str] resource_group_name: Specifies the name of the Resource Group where the Disk Encryption Set should exist. Changing this forces a new resource to be created.
-:param pulumi.Input[dict] tags: A mapping of tags to assign to the Disk Encryption Set.</p>
+<dd><p>Manages a Disk Encryption Set.</p>
+<blockquote>
+<div><p><strong>NOTE</strong>: Disk Encryption Sets are in Public Preview and at this time is only available in <code class="docutils literal notranslate"><span class="pre">Canada</span> <span class="pre">Central</span></code>, <code class="docutils literal notranslate"><span class="pre">North</span> <span class="pre">Europe</span></code> and <code class="docutils literal notranslate"><span class="pre">West</span> <span class="pre">Central</span> <span class="pre">US</span></code> regions - <a class="reference external" href="https://docs.microsoft.com/en-us/azure/virtual-machines/linux/disk-encryption">more information can be found in the preview documentation</a>.</p>
+<p><strong>NOTE:</strong> At this time the Key Vault used to store the Active Key for this Disk Encryption Set must have both Soft Delete &amp; Purge Protection enabled - which are not yet supported by this provider.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/disk_encryption_set.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/disk_encryption_set.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>identity</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">identity</span></code> block defined below.</p></li>
+<li><p><strong>key_vault_key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the URL to a Key Vault Key (either from a Key Vault Key, or the Key URL for the Key Vault Secret).</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the Azure Region where the Disk Encryption Set exists. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Disk Encryption Set. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Resource Group where the Disk Encryption Set should exist. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the Disk Encryption Set.</p></li>
+</ul>
+</dd>
+</dl>
 <p>The <strong>identity</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">principal_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The (Client) ID of the Service Principal.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">tenant_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Tenant the Service Principal is assigned in.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Type of Identity which should be used for this Disk Encryption Set. At this time the only possible value is <code class="docutils literal notranslate"><span class="pre">SystemAssigned</span></code>.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_azure.compute.DiskEncryptionSet.identity">
@@ -735,7 +746,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">principal_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The (Client) ID of the Service Principal.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">tenant_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the Tenant the Service Principal is assigned in.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Type of Identity which should be used for this Disk Encryption Set. At this time the only possible value is <code class="docutils literal notranslate"><span class="pre">SystemAssigned</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -793,7 +804,7 @@ properties used to qualify the lookup.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">principal_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The (Client) ID of the Service Principal.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">tenant_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Tenant the Service Principal is assigned in.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Type of Identity which should be used for this Disk Encryption Set. At this time the only possible value is <code class="docutils literal notranslate"><span class="pre">SystemAssigned</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -1658,89 +1669,102 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_azure.compute.LinuxVirtualMachine">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">LinuxVirtualMachine</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">additional_capabilities=None</em>, <em class="sig-param">admin_password=None</em>, <em class="sig-param">admin_ssh_keys=None</em>, <em class="sig-param">admin_username=None</em>, <em class="sig-param">allow_extension_operations=None</em>, <em class="sig-param">availability_set_id=None</em>, <em class="sig-param">boot_diagnostics=None</em>, <em class="sig-param">computer_name=None</em>, <em class="sig-param">custom_data=None</em>, <em class="sig-param">dedicated_host_id=None</em>, <em class="sig-param">disable_password_authentication=None</em>, <em class="sig-param">eviction_policy=None</em>, <em class="sig-param">identity=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">max_bid_price=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_interface_ids=None</em>, <em class="sig-param">os_disk=None</em>, <em class="sig-param">plan=None</em>, <em class="sig-param">priority=None</em>, <em class="sig-param">provision_vm_agent=None</em>, <em class="sig-param">proximity_placement_group_id=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">secrets=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">source_image_id=None</em>, <em class="sig-param">source_image_reference=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">zone=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.LinuxVirtualMachine" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a LinuxVirtualMachine resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[dict] additional_capabilities: A <code class="docutils literal notranslate"><span class="pre">additional_capabilities</span></code> block as defined below.
-:param pulumi.Input[str] admin_password: The Password which should be used for the local-administrator on this Virtual Machine. Changing this forces a new resource to be created.
-:param pulumi.Input[list] admin_ssh_keys: One or more <code class="docutils literal notranslate"><span class="pre">admin_ssh_key</span></code> blocks as defined below.
-:param pulumi.Input[str] admin_username: The username of the local administrator used for the Virtual Machine. Changing this forces a new resource to be created.
-:param pulumi.Input[bool] allow_extension_operations: Should Extension Operations be allowed on this Virtual Machine? Changing this forces a new resource to be created.
-:param pulumi.Input[str] availability_set_id: Specifies the ID of the Availability Set in which the Virtual Machine should exist. Changing this forces a new resource to be created.
-:param pulumi.Input[dict] boot_diagnostics: A <code class="docutils literal notranslate"><span class="pre">boot_diagnostics</span></code> block as defined below.
-:param pulumi.Input[str] computer_name: Specifies the Hostname which should be used for this Virtual Machine. If unspecified this defaults to the value for the <code class="docutils literal notranslate"><span class="pre">name</span></code> field. Changing this forces a new resource to be created.
-:param pulumi.Input[str] custom_data: The Base64-Encoded Custom Data which should be used for this Virtual Machine. Changing this forces a new resource to be created.
-:param pulumi.Input[str] dedicated_host_id: The ID of a Dedicated Host where this machine should be run on. Changing this forces a new resource to be created.
-:param pulumi.Input[bool] disable_password_authentication: Should Password Authentication be disabled on this Virtual Machine? Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Changing this forces a new resource to be created.
-:param pulumi.Input[str] eviction_policy: Specifies what should happen when the Virtual Machine is evicted for price reasons when using a Spot instance. At this time the only supported value is <code class="docutils literal notranslate"><span class="pre">Deallocate</span></code>. Changing this forces a new resource to be created.
-:param pulumi.Input[dict] identity: An <code class="docutils literal notranslate"><span class="pre">identity</span></code> block as defined below.
-:param pulumi.Input[str] location: The Azure location where the Linux Virtual Machine should exist. Changing this forces a new resource to be created.
-:param pulumi.Input[float] max_bid_price: The maximum price you’re willing to pay for this Virtual Machine, in US Dollars; which must be greater than the current spot price. If this bid price falls below the current spot price the Virtual Machine will be evicted using the <code class="docutils literal notranslate"><span class="pre">eviction_policy</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">-1</span></code>, which means that the Virtual Machine should not be evicted for price reasons.
-:param pulumi.Input[str] name: The name of the Linux Virtual Machine. Changing this forces a new resource to be created.
-:param pulumi.Input[list] network_interface_ids: . A list of Network Interface ID’s which should be attached to this Virtual Machine. The first Network Interface ID in this list will be the Primary Network Interface on the Virtual Machine.
-:param pulumi.Input[dict] os_disk: A <code class="docutils literal notranslate"><span class="pre">os_disk</span></code> block as defined below.
-:param pulumi.Input[dict] plan: A <code class="docutils literal notranslate"><span class="pre">plan</span></code> block as defined below. Changing this forces a new resource to be created.
-:param pulumi.Input[bool] provision_vm_agent: Should the Azure VM Agent be provisioned on this Virtual Machine? Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Changing this forces a new resource to be created.
-:param pulumi.Input[str] proximity_placement_group_id: The ID of the Proximity Placement Group which the Virtual Machine should be assigned to. Changing this forces a new resource to be created.
-:param pulumi.Input[str] resource_group_name: The name of the Resource Group in which the Linux Virtual Machine should be exist. Changing this forces a new resource to be created.
-:param pulumi.Input[list] secrets: One or more <code class="docutils literal notranslate"><span class="pre">secret</span></code> blocks as defined below.
-:param pulumi.Input[str] size: The SKU which should be used for this Virtual Machine, such as <code class="docutils literal notranslate"><span class="pre">Standard_F2</span></code>.
-:param pulumi.Input[str] source_image_id: The ID of the Image which this Virtual Machine should be created from. Changing this forces a new resource to be created.
-:param pulumi.Input[dict] source_image_reference: A <code class="docutils literal notranslate"><span class="pre">source_image_reference</span></code> block as defined below. Changing this forces a new resource to be created.
-:param pulumi.Input[dict] tags: A mapping of tags which should be assigned to this Virtual Machine.
-:param pulumi.Input[str] zone: The Zone in which this Virtual Machine should be created. Changing this forces a new resource to be created.</p>
+<dd><p>Manages a Linux Virtual Machine.</p>
+<blockquote>
+<div><p><strong>Note</strong> This provider will automatically remove the OS Disk by default - this behaviour can be configured using the <code class="docutils literal notranslate"><span class="pre">features</span></code> configuration within the Provider configuration block.</p>
+<p><strong>Note</strong> This resource does not support Unmanaged Disks. If you need to use Unmanaged Disks you can continue to use the <code class="docutils literal notranslate"><span class="pre">compute.VirtualMachine</span></code> resource instead.</p>
+<p><strong>Note</strong> This resource does not support attaching existing OS Disks. You can instead capture an image of the OS Disk or continue to use the <code class="docutils literal notranslate"><span class="pre">compute.VirtualMachine</span></code> resource instead.</p>
+<p>In this release there’s a known issue where the <code class="docutils literal notranslate"><span class="pre">public_ip_address</span></code> and <code class="docutils literal notranslate"><span class="pre">public_ip_addresses</span></code> fields may not be fully populated for Dynamic Public IP’s.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/linux_virtual_machine.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/linux_virtual_machine.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>additional_capabilities</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">additional_capabilities</span></code> block as defined below.</p></li>
+<li><p><strong>admin_password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Password which should be used for the local-administrator on this Virtual Machine. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>admin_ssh_keys</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">admin_ssh_key</span></code> blocks as defined below.</p></li>
+<li><p><strong>admin_username</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The username of the local administrator used for the Virtual Machine. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>allow_extension_operations</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should Extension Operations be allowed on this Virtual Machine? Changing this forces a new resource to be created.</p></li>
+<li><p><strong>availability_set_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the ID of the Availability Set in which the Virtual Machine should exist. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>boot_diagnostics</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">boot_diagnostics</span></code> block as defined below.</p></li>
+<li><p><strong>computer_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the Hostname which should be used for this Virtual Machine. If unspecified this defaults to the value for the <code class="docutils literal notranslate"><span class="pre">name</span></code> field. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>custom_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Base64-Encoded Custom Data which should be used for this Virtual Machine. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>dedicated_host_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of a Dedicated Host where this machine should be run on. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>disable_password_authentication</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should Password Authentication be disabled on this Virtual Machine? Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>eviction_policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies what should happen when the Virtual Machine is evicted for price reasons when using a Spot instance. At this time the only supported value is <code class="docutils literal notranslate"><span class="pre">Deallocate</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>identity</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – An <code class="docutils literal notranslate"><span class="pre">identity</span></code> block as defined below.</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Azure location where the Linux Virtual Machine should exist. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>max_bid_price</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum price you’re willing to pay for this Virtual Machine, in US Dollars; which must be greater than the current spot price. If this bid price falls below the current spot price the Virtual Machine will be evicted using the <code class="docutils literal notranslate"><span class="pre">eviction_policy</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">-1</span></code>, which means that the Virtual Machine should not be evicted for price reasons.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Linux Virtual Machine. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>network_interface_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – . A list of Network Interface ID’s which should be attached to this Virtual Machine. The first Network Interface ID in this list will be the Primary Network Interface on the Virtual Machine.</p></li>
+<li><p><strong>os_disk</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">os_disk</span></code> block as defined below.</p></li>
+<li><p><strong>plan</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">plan</span></code> block as defined below. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>provision_vm_agent</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should the Azure VM Agent be provisioned on this Virtual Machine? Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>proximity_placement_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Proximity Placement Group which the Virtual Machine should be assigned to. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Resource Group in which the Linux Virtual Machine should be exist. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>secrets</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">secret</span></code> blocks as defined below.</p></li>
+<li><p><strong>size</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The SKU which should be used for this Virtual Machine, such as <code class="docutils literal notranslate"><span class="pre">Standard_F2</span></code>.</p></li>
+<li><p><strong>source_image_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Image which this Virtual Machine should be created from. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>source_image_reference</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">source_image_reference</span></code> block as defined below. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags which should be assigned to this Virtual Machine.</p></li>
+<li><p><strong>zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Zone in which this Virtual Machine should be created. Changing this forces a new resource to be created.</p></li>
+</ul>
+</dd>
+</dl>
 <p>The <strong>additional_capabilities</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">ultraSsdEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ultraSsdEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should the capacity to enable Data Disks of the <code class="docutils literal notranslate"><span class="pre">UltraSSD_LRS</span></code> storage account type be supported on this Virtual Machine? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>. Changing this forces a new resource to be created.</p></li>
 </ul>
 <p>The <strong>admin_ssh_keys</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">publicKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publicKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Public Key which should be used for authentication, which needs to be at least 2048-bit and in <code class="docutils literal notranslate"><span class="pre">ssh-rsa</span></code> format. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Username for which this Public SSH Key should be configured. Changing this forces a new resource to be created.</p></li>
 </ul>
 <p>The <strong>boot_diagnostics</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">storageAccountUri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storageAccountUri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Primary/Secondary Endpoint for the Azure Storage Account which should be used to store Boot Diagnostics, including Console Output and Screenshots from the Hypervisor.</p></li>
 </ul>
 <p>The <strong>identity</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">identityIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">identityIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of User Managed Identity ID’s which should be assigned to the Linux Virtual Machine.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">principal_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the System Managed Service Principal.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of Managed Identity which should be assigned to the Linux Virtual Machine. Possible values are <code class="docutils literal notranslate"><span class="pre">SystemAssigned</span></code>, <code class="docutils literal notranslate"><span class="pre">UserAssigned</span></code> and <code class="docutils literal notranslate"><span class="pre">SystemAssigned,</span> <span class="pre">UserAssigned</span></code>.</p></li>
 </ul>
 <p>The <strong>os_disk</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">caching</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">diffDiskSettings</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">caching</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Type of Caching which should be used for the Internal OS Disk. Possible values are <code class="docutils literal notranslate"><span class="pre">None</span></code>, <code class="docutils literal notranslate"><span class="pre">ReadOnly</span></code> and <code class="docutils literal notranslate"><span class="pre">ReadWrite</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">diffDiskSettings</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">diff_disk_settings</span></code> block as defined above.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">option</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">option</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the Ephemeral Disk Settings for the OS Disk. At this time the only possible value is <code class="docutils literal notranslate"><span class="pre">Local</span></code>. Changing this forces a new resource to be created.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">disk_encryption_set_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Linux Virtual Machine. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">write_accelerator_enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disk_encryption_set_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Disk Encryption Set which should be used to Encrypt this OS Disk.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The Size of the Internal OS Disk in GB, if you wish to vary from the size used in the image this Virtual Machine is sourced from.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name which should be used for the Internal OS Disk. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Type of Storage Account which should back this the Internal OS Disk. Possible values are <code class="docutils literal notranslate"><span class="pre">Standard_LRS</span></code>, <code class="docutils literal notranslate"><span class="pre">StandardSSD_LRS</span></code> and <code class="docutils literal notranslate"><span class="pre">Premium_LRS</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">write_accelerator_enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should Write Accelerator be Enabled for this OS Disk? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
 <p>The <strong>plan</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Linux Virtual Machine. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">product</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">publisher</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the Name of the Marketplace Image this Virtual Machine should be created from. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">product</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the Product of the Marketplace Image this Virtual Machine should be created from. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publisher</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the Publisher of the Marketplace Image this Virtual Machine should be created from. Changing this forces a new resource to be created.</p></li>
 </ul>
 <p>The <strong>secrets</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">certificates</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificates</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">certificate</span></code> blocks as defined above.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Secret URL of a Key Vault Certificate.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">key_vault_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key_vault_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Key Vault from which all Secrets should be sourced.</p></li>
 </ul>
 <p>The <strong>source_image_reference</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">offer</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">publisher</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publisher</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the Publisher of the Marketplace Image this Virtual Machine should be created from. Changing this forces a new resource to be created.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sku</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
@@ -1749,7 +1773,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">additional_capabilities</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.LinuxVirtualMachine.additional_capabilities" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">additional_capabilities</span></code> block as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">ultraSsdEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ultraSsdEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Should the capacity to enable Data Disks of the <code class="docutils literal notranslate"><span class="pre">UltraSSD_LRS</span></code> storage account type be supported on this Virtual Machine? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>. Changing this forces a new resource to be created.</p></li>
 </ul>
 </dd></dl>
 
@@ -1764,8 +1788,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">admin_ssh_keys</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.LinuxVirtualMachine.admin_ssh_keys" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">admin_ssh_key</span></code> blocks as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">publicKey</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publicKey</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Public Key which should be used for authentication, which needs to be at least 2048-bit and in <code class="docutils literal notranslate"><span class="pre">ssh-rsa</span></code> format. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Username for which this Public SSH Key should be configured. Changing this forces a new resource to be created.</p></li>
 </ul>
 </dd></dl>
 
@@ -1792,7 +1816,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">boot_diagnostics</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.LinuxVirtualMachine.boot_diagnostics" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">boot_diagnostics</span></code> block as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">storageAccountUri</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storageAccountUri</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Primary/Secondary Endpoint for the Azure Storage Account which should be used to store Boot Diagnostics, including Console Output and Screenshots from the Hypervisor.</p></li>
 </ul>
 </dd></dl>
 
@@ -1831,9 +1855,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">identity</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.LinuxVirtualMachine.identity" title="Permalink to this definition">¶</a></dt>
 <dd><p>An <code class="docutils literal notranslate"><span class="pre">identity</span></code> block as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">identityIds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">identityIds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of User Managed Identity ID’s which should be assigned to the Linux Virtual Machine.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">principal_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the System Managed Service Principal.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The type of Managed Identity which should be assigned to the Linux Virtual Machine. Possible values are <code class="docutils literal notranslate"><span class="pre">SystemAssigned</span></code>, <code class="docutils literal notranslate"><span class="pre">UserAssigned</span></code> and <code class="docutils literal notranslate"><span class="pre">SystemAssigned,</span> <span class="pre">UserAssigned</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -1866,17 +1890,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">os_disk</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.LinuxVirtualMachine.os_disk" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">os_disk</span></code> block as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">caching</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">diffDiskSettings</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">caching</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Type of Caching which should be used for the Internal OS Disk. Possible values are <code class="docutils literal notranslate"><span class="pre">None</span></code>, <code class="docutils literal notranslate"><span class="pre">ReadOnly</span></code> and <code class="docutils literal notranslate"><span class="pre">ReadWrite</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">diffDiskSettings</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A <code class="docutils literal notranslate"><span class="pre">diff_disk_settings</span></code> block as defined above.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">option</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">option</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the Ephemeral Disk Settings for the OS Disk. At this time the only possible value is <code class="docutils literal notranslate"><span class="pre">Local</span></code>. Changing this forces a new resource to be created.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">disk_encryption_set_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the Linux Virtual Machine. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">write_accelerator_enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disk_encryption_set_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the Disk Encryption Set which should be used to Encrypt this OS Disk.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The Size of the Internal OS Disk in GB, if you wish to vary from the size used in the image this Virtual Machine is sourced from.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name which should be used for the Internal OS Disk. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Type of Storage Account which should back this the Internal OS Disk. Possible values are <code class="docutils literal notranslate"><span class="pre">Standard_LRS</span></code>, <code class="docutils literal notranslate"><span class="pre">StandardSSD_LRS</span></code> and <code class="docutils literal notranslate"><span class="pre">Premium_LRS</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">write_accelerator_enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Should Write Accelerator be Enabled for this OS Disk? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -1885,9 +1909,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">plan</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.LinuxVirtualMachine.plan" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">plan</span></code> block as defined below. Changing this forces a new resource to be created.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the Linux Virtual Machine. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">product</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">publisher</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the Name of the Marketplace Image this Virtual Machine should be created from. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">product</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the Product of the Marketplace Image this Virtual Machine should be created from. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publisher</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the Publisher of the Marketplace Image this Virtual Machine should be created from. Changing this forces a new resource to be created.</p></li>
 </ul>
 </dd></dl>
 
@@ -1938,12 +1962,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">secrets</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.LinuxVirtualMachine.secrets" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">secret</span></code> blocks as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">certificates</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificates</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">certificate</span></code> blocks as defined above.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Secret URL of a Key Vault Certificate.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">key_vault_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key_vault_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the Key Vault from which all Secrets should be sourced.</p></li>
 </ul>
 </dd></dl>
 
@@ -1965,7 +1989,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">source_image_reference</span></code> block as defined below. Changing this forces a new resource to be created.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">offer</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">publisher</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publisher</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the Publisher of the Marketplace Image this Virtual Machine should be created from. Changing this forces a new resource to be created.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sku</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 </ul>
@@ -2038,56 +2062,56 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>additional_capabilities</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">ultraSsdEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ultraSsdEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should the capacity to enable Data Disks of the <code class="docutils literal notranslate"><span class="pre">UltraSSD_LRS</span></code> storage account type be supported on this Virtual Machine? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>. Changing this forces a new resource to be created.</p></li>
 </ul>
 <p>The <strong>admin_ssh_keys</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">publicKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publicKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Public Key which should be used for authentication, which needs to be at least 2048-bit and in <code class="docutils literal notranslate"><span class="pre">ssh-rsa</span></code> format. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Username for which this Public SSH Key should be configured. Changing this forces a new resource to be created.</p></li>
 </ul>
 <p>The <strong>boot_diagnostics</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">storageAccountUri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storageAccountUri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Primary/Secondary Endpoint for the Azure Storage Account which should be used to store Boot Diagnostics, including Console Output and Screenshots from the Hypervisor.</p></li>
 </ul>
 <p>The <strong>identity</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">identityIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">identityIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of User Managed Identity ID’s which should be assigned to the Linux Virtual Machine.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">principal_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the System Managed Service Principal.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of Managed Identity which should be assigned to the Linux Virtual Machine. Possible values are <code class="docutils literal notranslate"><span class="pre">SystemAssigned</span></code>, <code class="docutils literal notranslate"><span class="pre">UserAssigned</span></code> and <code class="docutils literal notranslate"><span class="pre">SystemAssigned,</span> <span class="pre">UserAssigned</span></code>.</p></li>
 </ul>
 <p>The <strong>os_disk</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">caching</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">diffDiskSettings</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">caching</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Type of Caching which should be used for the Internal OS Disk. Possible values are <code class="docutils literal notranslate"><span class="pre">None</span></code>, <code class="docutils literal notranslate"><span class="pre">ReadOnly</span></code> and <code class="docutils literal notranslate"><span class="pre">ReadWrite</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">diffDiskSettings</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">diff_disk_settings</span></code> block as defined above.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">option</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">option</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the Ephemeral Disk Settings for the OS Disk. At this time the only possible value is <code class="docutils literal notranslate"><span class="pre">Local</span></code>. Changing this forces a new resource to be created.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">disk_encryption_set_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Linux Virtual Machine. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">write_accelerator_enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disk_encryption_set_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Disk Encryption Set which should be used to Encrypt this OS Disk.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The Size of the Internal OS Disk in GB, if you wish to vary from the size used in the image this Virtual Machine is sourced from.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name which should be used for the Internal OS Disk. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Type of Storage Account which should back this the Internal OS Disk. Possible values are <code class="docutils literal notranslate"><span class="pre">Standard_LRS</span></code>, <code class="docutils literal notranslate"><span class="pre">StandardSSD_LRS</span></code> and <code class="docutils literal notranslate"><span class="pre">Premium_LRS</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">write_accelerator_enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should Write Accelerator be Enabled for this OS Disk? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
 <p>The <strong>plan</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Linux Virtual Machine. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">product</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">publisher</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the Name of the Marketplace Image this Virtual Machine should be created from. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">product</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the Product of the Marketplace Image this Virtual Machine should be created from. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publisher</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the Publisher of the Marketplace Image this Virtual Machine should be created from. Changing this forces a new resource to be created.</p></li>
 </ul>
 <p>The <strong>secrets</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">certificates</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificates</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">certificate</span></code> blocks as defined above.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Secret URL of a Key Vault Certificate.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">key_vault_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key_vault_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Key Vault from which all Secrets should be sourced.</p></li>
 </ul>
 <p>The <strong>source_image_reference</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">offer</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">publisher</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publisher</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the Publisher of the Marketplace Image this Virtual Machine should be created from. Changing this forces a new resource to be created.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sku</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
@@ -2133,125 +2157,138 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.compute.LinuxVirtualMachineScaleSet">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">LinuxVirtualMachineScaleSet</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">additional_capabilities=None</em>, <em class="sig-param">admin_password=None</em>, <em class="sig-param">admin_ssh_keys=None</em>, <em class="sig-param">admin_username=None</em>, <em class="sig-param">automatic_os_upgrade_policy=None</em>, <em class="sig-param">boot_diagnostics=None</em>, <em class="sig-param">computer_name_prefix=None</em>, <em class="sig-param">custom_data=None</em>, <em class="sig-param">data_disks=None</em>, <em class="sig-param">disable_password_authentication=None</em>, <em class="sig-param">do_not_run_extensions_on_overprovisioned_machines=None</em>, <em class="sig-param">eviction_policy=None</em>, <em class="sig-param">health_probe_id=None</em>, <em class="sig-param">identity=None</em>, <em class="sig-param">instances=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">max_bid_price=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_interfaces=None</em>, <em class="sig-param">os_disk=None</em>, <em class="sig-param">overprovision=None</em>, <em class="sig-param">plan=None</em>, <em class="sig-param">priority=None</em>, <em class="sig-param">provision_vm_agent=None</em>, <em class="sig-param">proximity_placement_group_id=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">rolling_upgrade_policy=None</em>, <em class="sig-param">secrets=None</em>, <em class="sig-param">single_placement_group=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">source_image_id=None</em>, <em class="sig-param">source_image_reference=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">upgrade_mode=None</em>, <em class="sig-param">zone_balance=None</em>, <em class="sig-param">zones=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.LinuxVirtualMachineScaleSet" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a LinuxVirtualMachineScaleSet resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[dict] additional_capabilities: A <code class="docutils literal notranslate"><span class="pre">additional_capabilities</span></code> block as defined below.
-:param pulumi.Input[str] admin_password: The Password which should be used for the local-administrator on this Virtual Machine. Changing this forces a new resource to be created.
-:param pulumi.Input[list] admin_ssh_keys: One or more <code class="docutils literal notranslate"><span class="pre">admin_ssh_key</span></code> blocks as defined below.
-:param pulumi.Input[str] admin_username: The username of the local administrator on each Virtual Machine Scale Set instance. Changing this forces a new resource to be created.
-:param pulumi.Input[dict] automatic_os_upgrade_policy: A <code class="docutils literal notranslate"><span class="pre">automatic_os_upgrade_policy</span></code> block as defined below. This is Required and can only be specified when <code class="docutils literal notranslate"><span class="pre">upgrade_mode</span></code> is set to <code class="docutils literal notranslate"><span class="pre">Automatic</span></code>.
-:param pulumi.Input[dict] boot_diagnostics: A <code class="docutils literal notranslate"><span class="pre">boot_diagnostics</span></code> block as defined below.
-:param pulumi.Input[str] computer_name_prefix: The prefix which should be used for the name of the Virtual Machines in this Scale Set. If unspecified this defaults to the value for the <code class="docutils literal notranslate"><span class="pre">name</span></code> field.
-:param pulumi.Input[str] custom_data: The Base64-Encoded Custom Data which should be used for this Virtual Machine Scale Set.
-:param pulumi.Input[list] data_disks: One or more <code class="docutils literal notranslate"><span class="pre">data_disk</span></code> blocks as defined below.
-:param pulumi.Input[bool] disable_password_authentication: Should Password Authentication be disabled on this Virtual Machine Scale Set? Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.
-:param pulumi.Input[bool] do_not_run_extensions_on_overprovisioned_machines: Should Virtual Machine Extensions be run on Overprovisioned Virtual Machines in the Scale Set? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.
-:param pulumi.Input[str] eviction_policy: The Policy which should be used Virtual Machines are Evicted from the Scale Set. Changing this forces a new resource to be created.
-:param pulumi.Input[str] health_probe_id: The ID of a Load Balancer Probe which should be used to determine the health of an instance. Changing this forces a new resource to be created. This is Required and can only be specified when <code class="docutils literal notranslate"><span class="pre">upgrade_mode</span></code> is set to <code class="docutils literal notranslate"><span class="pre">Automatic</span></code> or <code class="docutils literal notranslate"><span class="pre">Rolling</span></code>.
-:param pulumi.Input[dict] identity: A <code class="docutils literal notranslate"><span class="pre">identity</span></code> block as defined below.
-:param pulumi.Input[float] instances: The number of Virtual Machines in the Scale Set.
-:param pulumi.Input[str] location: The Azure location where the Linux Virtual Machine Scale Set should exist. Changing this forces a new resource to be created.
-:param pulumi.Input[float] max_bid_price: The maximum price you’re willing to pay for each Virtual Machine in this Scale Set, in US Dollars; which must be greater than the current spot price. If this bid price falls below the current spot price the Virtual Machines in the Scale Set will be evicted using the <code class="docutils literal notranslate"><span class="pre">eviction_policy</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">-1</span></code>, which means that each Virtual Machine in this Scale Set should not be evicted for price reasons.
-:param pulumi.Input[str] name: The name of the Linux Virtual Machine Scale Set. Changing this forces a new resource to be created.
-:param pulumi.Input[list] network_interfaces: One or more <code class="docutils literal notranslate"><span class="pre">network_interface</span></code> blocks as defined below.
-:param pulumi.Input[dict] os_disk: An <code class="docutils literal notranslate"><span class="pre">os_disk</span></code> block as defined below.
-:param pulumi.Input[bool] overprovision: Should Azure over-provision Virtual Machines in this Scale Set? This means that multiple Virtual Machines will be provisioned and Azure will keep the instances which become available first - which improves provisioning success rates and improves deployment time. You’re not billed for these over-provisioned VM’s and they don’t count towards the Subscription Quota. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.
-:param pulumi.Input[str] priority: The Priority of this Virtual Machine Scale Set. Possible values are <code class="docutils literal notranslate"><span class="pre">Regular</span></code> and <code class="docutils literal notranslate"><span class="pre">Spot</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Regular</span></code>. Changing this value forces a new resource.
-:param pulumi.Input[bool] provision_vm_agent: Should the Azure VM Agent be provisioned on each Virtual Machine in the Scale Set? Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Changing this value forces a new resource to be created.
-:param pulumi.Input[str] proximity_placement_group_id: The ID of the Proximity Placement Group in which the Virtual Machine Scale Set should be assigned to. Changing this forces a new resource to be created.
-:param pulumi.Input[str] resource_group_name: The name of the Resource Group in which the Linux Virtual Machine Scale Set should be exist. Changing this forces a new resource to be created.
-:param pulumi.Input[dict] rolling_upgrade_policy: A <code class="docutils literal notranslate"><span class="pre">rolling_upgrade_policy</span></code> block as defined below. This is Required and can only be specified when <code class="docutils literal notranslate"><span class="pre">upgrade_mode</span></code> is set to <code class="docutils literal notranslate"><span class="pre">Automatic</span></code> or <code class="docutils literal notranslate"><span class="pre">Rolling</span></code>.
-:param pulumi.Input[list] secrets: One or more <code class="docutils literal notranslate"><span class="pre">secret</span></code> blocks as defined below.
-:param pulumi.Input[bool] single_placement_group: Should this Virtual Machine Scale Set be limited to a Single Placement Group, which means the number of instances will be capped at 100 Virtual Machines. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.
-:param pulumi.Input[str] sku: The Virtual Machine SKU for the Scale Set, such as <code class="docutils literal notranslate"><span class="pre">Standard_F2</span></code>.
-:param pulumi.Input[str] source_image_id: The ID of an Image which each Virtual Machine in this Scale Set should be based on.
-:param pulumi.Input[dict] source_image_reference: A <code class="docutils literal notranslate"><span class="pre">source_image_reference</span></code> block as defined below.
-:param pulumi.Input[dict] tags: A mapping of tags which should be assigned to this Virtual Machine Scale Set.
-:param pulumi.Input[str] upgrade_mode: Specifies how Upgrades (e.g. changing the Image/SKU) should be performed to Virtual Machine Instances. Possible values are <code class="docutils literal notranslate"><span class="pre">Automatic</span></code>, <code class="docutils literal notranslate"><span class="pre">Manual</span></code> and <code class="docutils literal notranslate"><span class="pre">Rolling</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Manual</span></code>.
-:param pulumi.Input[bool] zone_balance: Should the Virtual Machines in this Scale Set be strictly evenly distributed across Availability Zones? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>. Changing this forces a new resource to be created.
-:param pulumi.Input[list] zones: A list of Availability Zones in which the Virtual Machines in this Scale Set should be created in. Changing this forces a new resource to be created.</p>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">LinuxVirtualMachineScaleSet</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">additional_capabilities=None</em>, <em class="sig-param">admin_password=None</em>, <em class="sig-param">admin_ssh_keys=None</em>, <em class="sig-param">admin_username=None</em>, <em class="sig-param">automatic_os_upgrade_policy=None</em>, <em class="sig-param">boot_diagnostics=None</em>, <em class="sig-param">computer_name_prefix=None</em>, <em class="sig-param">custom_data=None</em>, <em class="sig-param">data_disks=None</em>, <em class="sig-param">disable_password_authentication=None</em>, <em class="sig-param">do_not_run_extensions_on_overprovisioned_machines=None</em>, <em class="sig-param">eviction_policy=None</em>, <em class="sig-param">health_probe_id=None</em>, <em class="sig-param">identity=None</em>, <em class="sig-param">instances=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">max_bid_price=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_interfaces=None</em>, <em class="sig-param">os_disk=None</em>, <em class="sig-param">overprovision=None</em>, <em class="sig-param">plan=None</em>, <em class="sig-param">priority=None</em>, <em class="sig-param">provision_vm_agent=None</em>, <em class="sig-param">proximity_placement_group_id=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">rolling_upgrade_policy=None</em>, <em class="sig-param">scale_in_policy=None</em>, <em class="sig-param">secrets=None</em>, <em class="sig-param">single_placement_group=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">source_image_id=None</em>, <em class="sig-param">source_image_reference=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">terminate_notification=None</em>, <em class="sig-param">upgrade_mode=None</em>, <em class="sig-param">zone_balance=None</em>, <em class="sig-param">zones=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.LinuxVirtualMachineScaleSet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages a Linux Virtual Machine Scale Set.</p>
+<blockquote>
+<div><p><strong>Note</strong> This provider will automatically update &amp; reimage the nodes in the Scale Set (if Required) during an Update - this behaviour can be configured using the <code class="docutils literal notranslate"><span class="pre">features</span></code> configuration within the Provider configuration block.</p>
+<p><strong>Note:</strong> This resource does not support Unmanaged Disks. If you need to use Unmanaged Disks you can continue to use the <code class="docutils literal notranslate"><span class="pre">compute.ScaleSet</span></code> resource instead</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/linux_virtual_machine_scale_set.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/linux_virtual_machine_scale_set.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>additional_capabilities</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">additional_capabilities</span></code> block as defined below.</p></li>
+<li><p><strong>admin_password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Password which should be used for the local-administrator on this Virtual Machine. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>admin_ssh_keys</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">admin_ssh_key</span></code> blocks as defined below.</p></li>
+<li><p><strong>admin_username</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The username of the local administrator on each Virtual Machine Scale Set instance. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>automatic_os_upgrade_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">automatic_os_upgrade_policy</span></code> block as defined below. This is Required and can only be specified when <code class="docutils literal notranslate"><span class="pre">upgrade_mode</span></code> is set to <code class="docutils literal notranslate"><span class="pre">Automatic</span></code>.</p></li>
+<li><p><strong>boot_diagnostics</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">boot_diagnostics</span></code> block as defined below.</p></li>
+<li><p><strong>computer_name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The prefix which should be used for the name of the Virtual Machines in this Scale Set. If unspecified this defaults to the value for the <code class="docutils literal notranslate"><span class="pre">name</span></code> field.</p></li>
+<li><p><strong>custom_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Base64-Encoded Custom Data which should be used for this Virtual Machine Scale Set.</p></li>
+<li><p><strong>data_disks</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">data_disk</span></code> blocks as defined below.</p></li>
+<li><p><strong>disable_password_authentication</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should Password Authentication be disabled on this Virtual Machine Scale Set? Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><strong>do_not_run_extensions_on_overprovisioned_machines</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should Virtual Machine Extensions be run on Overprovisioned Virtual Machines in the Scale Set? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>eviction_policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Policy which should be used Virtual Machines are Evicted from the Scale Set. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>health_probe_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of a Load Balancer Probe which should be used to determine the health of an instance. Changing this forces a new resource to be created. This is Required and can only be specified when <code class="docutils literal notranslate"><span class="pre">upgrade_mode</span></code> is set to <code class="docutils literal notranslate"><span class="pre">Automatic</span></code> or <code class="docutils literal notranslate"><span class="pre">Rolling</span></code>.</p></li>
+<li><p><strong>identity</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">identity</span></code> block as defined below.</p></li>
+<li><p><strong>instances</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of Virtual Machines in the Scale Set.</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Azure location where the Linux Virtual Machine Scale Set should exist. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>max_bid_price</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum price you’re willing to pay for each Virtual Machine in this Scale Set, in US Dollars; which must be greater than the current spot price. If this bid price falls below the current spot price the Virtual Machines in the Scale Set will be evicted using the <code class="docutils literal notranslate"><span class="pre">eviction_policy</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">-1</span></code>, which means that each Virtual Machine in this Scale Set should not be evicted for price reasons.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Linux Virtual Machine Scale Set. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>network_interfaces</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">network_interface</span></code> blocks as defined below.</p></li>
+<li><p><strong>os_disk</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – An <code class="docutils literal notranslate"><span class="pre">os_disk</span></code> block as defined below.</p></li>
+<li><p><strong>overprovision</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should Azure over-provision Virtual Machines in this Scale Set? This means that multiple Virtual Machines will be provisioned and Azure will keep the instances which become available first - which improves provisioning success rates and improves deployment time. You’re not billed for these over-provisioned VM’s and they don’t count towards the Subscription Quota. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>priority</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Priority of this Virtual Machine Scale Set. Possible values are <code class="docutils literal notranslate"><span class="pre">Regular</span></code> and <code class="docutils literal notranslate"><span class="pre">Spot</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Regular</span></code>. Changing this value forces a new resource.</p></li>
+<li><p><strong>provision_vm_agent</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should the Azure VM Agent be provisioned on each Virtual Machine in the Scale Set? Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Changing this value forces a new resource to be created.</p></li>
+<li><p><strong>proximity_placement_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Proximity Placement Group in which the Virtual Machine Scale Set should be assigned to. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Resource Group in which the Linux Virtual Machine Scale Set should be exist. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>rolling_upgrade_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">rolling_upgrade_policy</span></code> block as defined below. This is Required and can only be specified when <code class="docutils literal notranslate"><span class="pre">upgrade_mode</span></code> is set to <code class="docutils literal notranslate"><span class="pre">Automatic</span></code> or <code class="docutils literal notranslate"><span class="pre">Rolling</span></code>.</p></li>
+<li><p><strong>scale_in_policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The scale-in policy rule that decides which virtual machines are chosen for removal when a Virtual Machine Scale Set is scaled in. Possible values for the scale-in policy rules are <code class="docutils literal notranslate"><span class="pre">Default</span></code>, <code class="docutils literal notranslate"><span class="pre">NewestVM</span></code> and <code class="docutils literal notranslate"><span class="pre">OldestVM</span></code>, defaults to <code class="docutils literal notranslate"><span class="pre">Default</span></code>. For more information about scale in policy, please <a class="reference external" href="https://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-scale-in-policy">refer to this doc</a>.</p></li>
+<li><p><strong>secrets</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">secret</span></code> blocks as defined below.</p></li>
+<li><p><strong>single_placement_group</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should this Virtual Machine Scale Set be limited to a Single Placement Group, which means the number of instances will be capped at 100 Virtual Machines. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><strong>sku</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Virtual Machine SKU for the Scale Set, such as <code class="docutils literal notranslate"><span class="pre">Standard_F2</span></code>.</p></li>
+<li><p><strong>source_image_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of an Image which each Virtual Machine in this Scale Set should be based on.</p></li>
+<li><p><strong>source_image_reference</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">source_image_reference</span></code> block as defined below.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags which should be assigned to this Virtual Machine Scale Set.</p></li>
+<li><p><strong>terminate_notification</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">terminate_notification</span></code> block as defined below.</p></li>
+<li><p><strong>upgrade_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies how Upgrades (e.g. changing the Image/SKU) should be performed to Virtual Machine Instances. Possible values are <code class="docutils literal notranslate"><span class="pre">Automatic</span></code>, <code class="docutils literal notranslate"><span class="pre">Manual</span></code> and <code class="docutils literal notranslate"><span class="pre">Rolling</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Manual</span></code>.</p></li>
+<li><p><strong>zone_balance</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should the Virtual Machines in this Scale Set be strictly evenly distributed across Availability Zones? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>zones</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of Availability Zones in which the Virtual Machines in this Scale Set should be created in. Changing this forces a new resource to be created.</p></li>
+</ul>
+</dd>
+</dl>
 <p>The <strong>additional_capabilities</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">ultraSsdEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ultraSsdEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should the capacity to enable Data Disks of the <code class="docutils literal notranslate"><span class="pre">UltraSSD_LRS</span></code> storage account type be supported on this Virtual Machine Scale Set? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>. Changing this forces a new resource to be created.</p></li>
 </ul>
 <p>The <strong>admin_ssh_keys</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">publicKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publicKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Public Key which should be used for authentication, which needs to be at least 2048-bit and in <code class="docutils literal notranslate"><span class="pre">ssh-rsa</span></code> format.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Username for which this Public SSH Key should be configured.</p></li>
 </ul>
 <p>The <strong>automatic_os_upgrade_policy</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">disableAutomaticRollback</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enableAutomaticOsUpgrade</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disableAutomaticRollback</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should automatic rollbacks be disabled? Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enableAutomaticOsUpgrade</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should OS Upgrades automatically be applied to Scale Set instances in a rolling fashion when a newer version of the OS Image becomes available? Changing this forces a new resource to be created.</p></li>
 </ul>
 <p>The <strong>boot_diagnostics</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">storageAccountUri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storageAccountUri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Primary/Secondary Endpoint for the Azure Storage Account which should be used to store Boot Diagnostics, including Console Output and Screenshots from the Hypervisor.</p></li>
 </ul>
 <p>The <strong>data_disks</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">caching</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">disk_encryption_set_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">lun</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">write_accelerator_enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">caching</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of Caching which should be used for this Data Disk. Possible values are <code class="docutils literal notranslate"><span class="pre">None</span></code>, <code class="docutils literal notranslate"><span class="pre">ReadOnly</span></code> and <code class="docutils literal notranslate"><span class="pre">ReadWrite</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disk_encryption_set_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Disk Encryption Set which should be used to encrypt this Data Disk.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size of the Data Disk which should be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lun</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The Logical Unit Number of the Data Disk, which must be unique within the Virtual Machine.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Type of Storage Account which should back this Data Disk. Possible values include <code class="docutils literal notranslate"><span class="pre">Standard_LRS</span></code>, <code class="docutils literal notranslate"><span class="pre">StandardSSD_LRS</span></code>, <code class="docutils literal notranslate"><span class="pre">Premium_LRS</span></code> and <code class="docutils literal notranslate"><span class="pre">UltraSSD_LRS</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">write_accelerator_enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should Write Accelerator be enabled for this Data Disk? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
 <p>The <strong>identity</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">identityIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">identityIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of User Managed Identity ID’s which should be assigned to the Linux Virtual Machine Scale Set.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">principal_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the System Managed Service Principal.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of Managed Identity which should be assigned to the Linux Virtual Machine Scale Set. Possible values are <code class="docutils literal notranslate"><span class="pre">SystemAssigned</span></code>, <code class="docutils literal notranslate"><span class="pre">UserAssigned</span></code> and <code class="docutils literal notranslate"><span class="pre">SystemAssigned,</span> <span class="pre">UserAssigned</span></code>.</p></li>
 </ul>
 <p>The <strong>network_interfaces</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">dns_servers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enable_accelerated_networking</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enable_ip_forwarding</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ip_configurations</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">dns_servers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of IP Addresses of DNS Servers which should be assigned to the Network Interface.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enable_accelerated_networking</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Does this Network Interface support Accelerated Networking? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enable_ip_forwarding</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Does this Network Interface support IP Forwarding? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ip_configurations</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">ip_configuration</span></code> blocks as defined above.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">applicationGatewayBackendAddressPoolIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">applicationSecurityGroupIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">loadBalancerBackendAddressPoolIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">loadBalancerInboundNatRulesIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Linux Virtual Machine Scale Set. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">primary</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">public_ip_addresses</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">applicationGatewayBackendAddressPoolIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of Backend Address Pools ID’s from a Application Gateway which this Virtual Machine Scale Set should be connected to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">applicationSecurityGroupIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of Application Security Group ID’s which this Virtual Machine Scale Set should be connected to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">loadBalancerBackendAddressPoolIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of Backend Address Pools ID’s from a Load Balancer which this Virtual Machine Scale Set should be connected to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">loadBalancerInboundNatRulesIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of NAT Rule ID’s from a Load Balancer which this Virtual Machine Scale Set should be connected to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name which should be used for this IP Configuration.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">primary</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is this the Primary IP Configuration for this Network Interface? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public_ip_addresses</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">public_ip_address</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">domain_name_label</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">idle_timeout_in_minutes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ipTags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">domain_name_label</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Prefix which should be used for the Domain Name Label for each Virtual Machine Instance. Azure concatenates the Domain Name Label and Virtual Machine Index to create a unique Domain Name Label for each Virtual Machine.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">idle_timeout_in_minutes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The Idle Timeout in Minutes for the Public IP Address. Possible values are in the range <code class="docutils literal notranslate"><span class="pre">4</span></code> to <code class="docutils literal notranslate"><span class="pre">32</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipTags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">ip_tag</span></code> blocks as defined above.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">tag</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tag</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The IP Tag associated with the Public IP, such as <code class="docutils literal notranslate"><span class="pre">SQL</span></code> or <code class="docutils literal notranslate"><span class="pre">Storage</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Type of IP Tag, such as <code class="docutils literal notranslate"><span class="pre">FirstPartyUsage</span></code>.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Linux Virtual Machine Scale Set. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">public_ip_prefix_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of the Public IP Address Configuration.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public_ip_prefix_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Public IP Address Prefix from where Public IP Addresses should be allocated. Changing this forces a new resource to be created.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Subnet which this IP Configuration should be connected to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Internet Protocol Version which should be used for this IP Configuration. Possible values are <code class="docutils literal notranslate"><span class="pre">IPv4</span></code> and <code class="docutils literal notranslate"><span class="pre">IPv6</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">IPv4</span></code>.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Linux Virtual Machine Scale Set. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">network_security_group_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">primary</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name which should be used for this Network Interface. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">network_security_group_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of a Network Security Group which should be assigned to this Network Interface.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">primary</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is this the Primary IP Configuration?</p></li>
 </ul>
 <p>The <strong>os_disk</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">caching</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">diffDiskSettings</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">caching</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Type of Caching which should be used for the Internal OS Disk. Possible values are <code class="docutils literal notranslate"><span class="pre">None</span></code>, <code class="docutils literal notranslate"><span class="pre">ReadOnly</span></code> and <code class="docutils literal notranslate"><span class="pre">ReadWrite</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">diffDiskSettings</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">diff_disk_settings</span></code> block as defined above. Changing this forces a new resource to be created.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">option</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">disk_encryption_set_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">write_accelerator_enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disk_encryption_set_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Disk Encryption Set which should be used to encrypt this OS Disk.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The Size of the Internal OS Disk in GB, if you wish to vary from the size used in the image this Virtual Machine Scale Set is sourced from.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Type of Storage Account which should back this the Internal OS Disk. Possible values include <code class="docutils literal notranslate"><span class="pre">Standard_LRS</span></code>, <code class="docutils literal notranslate"><span class="pre">StandardSSD_LRS</span></code> and <code class="docutils literal notranslate"><span class="pre">Premium_LRS</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">write_accelerator_enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should Write Accelerator be Enabled for this OS Disk? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
 <p>The <strong>plan</strong> object supports the following:</p>
 <ul class="simple">
@@ -2261,33 +2298,38 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 <p>The <strong>rolling_upgrade_policy</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">maxBatchInstancePercent</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxUnhealthyInstancePercent</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxUnhealthyUpgradedInstancePercent</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">pauseTimeBetweenBatches</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxBatchInstancePercent</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum percent of total virtual machine instances that will be upgraded simultaneously by the rolling upgrade in one batch. As this is a maximum, unhealthy instances in previous or future batches can cause the percentage of instances in a batch to decrease to ensure higher reliability. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxUnhealthyInstancePercent</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum percentage of the total virtual machine instances in the scale set that can be simultaneously unhealthy, either as a result of being upgraded, or by being found in an unhealthy state by the virtual machine health checks before the rolling upgrade aborts. This constraint will be checked prior to starting any batch. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxUnhealthyUpgradedInstancePercent</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum percentage of upgraded virtual machine instances that can be found to be in an unhealthy state. This check will happen after each batch is upgraded. If this percentage is ever exceeded, the rolling update aborts. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pauseTimeBetweenBatches</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The wait time between completing the update for all virtual machines in one batch and starting the next batch. The time duration should be specified in ISO 8601 format. Changing this forces a new resource to be created.</p></li>
 </ul>
 <p>The <strong>secrets</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">certificates</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificates</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">certificate</span></code> blocks as defined above.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Secret URL of a Key Vault Certificate.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">key_vault_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key_vault_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Key Vault from which all Secrets should be sourced.</p></li>
 </ul>
 <p>The <strong>source_image_reference</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">offer</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">publisher</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sku</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Virtual Machine SKU for the Scale Set, such as <code class="docutils literal notranslate"><span class="pre">Standard_F2</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Internet Protocol Version which should be used for this IP Configuration. Possible values are <code class="docutils literal notranslate"><span class="pre">IPv4</span></code> and <code class="docutils literal notranslate"><span class="pre">IPv6</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">IPv4</span></code>.</p></li>
+</ul>
+<p>The <strong>terminate_notification</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should the terminate notification be enabled on this Virtual Machine Scale Set? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Length of time (in minutes, between 5 and 15) a notification to be sent to the VM on the instance metadata server till the VM gets deleted. The time duration should be specified in ISO 8601 format.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_azure.compute.LinuxVirtualMachineScaleSet.additional_capabilities">
 <code class="sig-name descname">additional_capabilities</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.LinuxVirtualMachineScaleSet.additional_capabilities" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">additional_capabilities</span></code> block as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">ultraSsdEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ultraSsdEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Should the capacity to enable Data Disks of the <code class="docutils literal notranslate"><span class="pre">UltraSSD_LRS</span></code> storage account type be supported on this Virtual Machine Scale Set? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>. Changing this forces a new resource to be created.</p></li>
 </ul>
 </dd></dl>
 
@@ -2302,8 +2344,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">admin_ssh_keys</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.LinuxVirtualMachineScaleSet.admin_ssh_keys" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">admin_ssh_key</span></code> blocks as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">publicKey</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publicKey</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Public Key which should be used for authentication, which needs to be at least 2048-bit and in <code class="docutils literal notranslate"><span class="pre">ssh-rsa</span></code> format.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Username for which this Public SSH Key should be configured.</p></li>
 </ul>
 </dd></dl>
 
@@ -2318,8 +2360,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">automatic_os_upgrade_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.LinuxVirtualMachineScaleSet.automatic_os_upgrade_policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">automatic_os_upgrade_policy</span></code> block as defined below. This is Required and can only be specified when <code class="docutils literal notranslate"><span class="pre">upgrade_mode</span></code> is set to <code class="docutils literal notranslate"><span class="pre">Automatic</span></code>.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">disableAutomaticRollback</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enableAutomaticOsUpgrade</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disableAutomaticRollback</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Should automatic rollbacks be disabled? Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enableAutomaticOsUpgrade</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Should OS Upgrades automatically be applied to Scale Set instances in a rolling fashion when a newer version of the OS Image becomes available? Changing this forces a new resource to be created.</p></li>
 </ul>
 </dd></dl>
 
@@ -2328,7 +2370,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">boot_diagnostics</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.LinuxVirtualMachineScaleSet.boot_diagnostics" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">boot_diagnostics</span></code> block as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">storageAccountUri</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storageAccountUri</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Primary/Secondary Endpoint for the Azure Storage Account which should be used to store Boot Diagnostics, including Console Output and Screenshots from the Hypervisor.</p></li>
 </ul>
 </dd></dl>
 
@@ -2349,12 +2391,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">data_disks</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.LinuxVirtualMachineScaleSet.data_disks" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">data_disk</span></code> blocks as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">caching</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">disk_encryption_set_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">lun</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">write_accelerator_enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">caching</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The type of Caching which should be used for this Data Disk. Possible values are <code class="docutils literal notranslate"><span class="pre">None</span></code>, <code class="docutils literal notranslate"><span class="pre">ReadOnly</span></code> and <code class="docutils literal notranslate"><span class="pre">ReadWrite</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disk_encryption_set_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the Disk Encryption Set which should be used to encrypt this Data Disk.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The size of the Data Disk which should be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lun</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The Logical Unit Number of the Data Disk, which must be unique within the Virtual Machine.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Type of Storage Account which should back this Data Disk. Possible values include <code class="docutils literal notranslate"><span class="pre">Standard_LRS</span></code>, <code class="docutils literal notranslate"><span class="pre">StandardSSD_LRS</span></code>, <code class="docutils literal notranslate"><span class="pre">Premium_LRS</span></code> and <code class="docutils literal notranslate"><span class="pre">UltraSSD_LRS</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">write_accelerator_enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Should Write Accelerator be enabled for this Data Disk? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -2387,9 +2429,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">identity</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.LinuxVirtualMachineScaleSet.identity" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">identity</span></code> block as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">identityIds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">identityIds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of User Managed Identity ID’s which should be assigned to the Linux Virtual Machine Scale Set.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">principal_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the System Managed Service Principal.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The type of Managed Identity which should be assigned to the Linux Virtual Machine Scale Set. Possible values are <code class="docutils literal notranslate"><span class="pre">SystemAssigned</span></code>, <code class="docutils literal notranslate"><span class="pre">UserAssigned</span></code> and <code class="docutils literal notranslate"><span class="pre">SystemAssigned,</span> <span class="pre">UserAssigned</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -2422,38 +2464,38 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">network_interfaces</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.LinuxVirtualMachineScaleSet.network_interfaces" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">network_interface</span></code> blocks as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">dns_servers</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enable_accelerated_networking</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enable_ip_forwarding</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ip_configurations</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">dns_servers</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of IP Addresses of DNS Servers which should be assigned to the Network Interface.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enable_accelerated_networking</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Does this Network Interface support Accelerated Networking? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enable_ip_forwarding</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Does this Network Interface support IP Forwarding? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ip_configurations</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">ip_configuration</span></code> blocks as defined above.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">applicationGatewayBackendAddressPoolIds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">applicationSecurityGroupIds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">loadBalancerBackendAddressPoolIds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">loadBalancerInboundNatRulesIds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the Linux Virtual Machine Scale Set. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">primary</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">public_ip_addresses</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">applicationGatewayBackendAddressPoolIds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of Backend Address Pools ID’s from a Application Gateway which this Virtual Machine Scale Set should be connected to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">applicationSecurityGroupIds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of Application Security Group ID’s which this Virtual Machine Scale Set should be connected to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">loadBalancerBackendAddressPoolIds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of Backend Address Pools ID’s from a Load Balancer which this Virtual Machine Scale Set should be connected to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">loadBalancerInboundNatRulesIds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of NAT Rule ID’s from a Load Balancer which this Virtual Machine Scale Set should be connected to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Name which should be used for this IP Configuration.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">primary</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Is this the Primary IP Configuration for this Network Interface? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public_ip_addresses</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A <code class="docutils literal notranslate"><span class="pre">public_ip_address</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">domain_name_label</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">idle_timeout_in_minutes</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ipTags</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">domain_name_label</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Prefix which should be used for the Domain Name Label for each Virtual Machine Instance. Azure concatenates the Domain Name Label and Virtual Machine Index to create a unique Domain Name Label for each Virtual Machine.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">idle_timeout_in_minutes</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The Idle Timeout in Minutes for the Public IP Address. Possible values are in the range <code class="docutils literal notranslate"><span class="pre">4</span></code> to <code class="docutils literal notranslate"><span class="pre">32</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipTags</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">ip_tag</span></code> blocks as defined above.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">tag</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tag</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The IP Tag associated with the Public IP, such as <code class="docutils literal notranslate"><span class="pre">SQL</span></code> or <code class="docutils literal notranslate"><span class="pre">Storage</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Type of IP Tag, such as <code class="docutils literal notranslate"><span class="pre">FirstPartyUsage</span></code>.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the Linux Virtual Machine Scale Set. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">public_ip_prefix_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Name of the Public IP Address Configuration.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public_ip_prefix_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the Public IP Address Prefix from where Public IP Addresses should be allocated. Changing this forces a new resource to be created.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the Subnet which this IP Configuration should be connected to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Internet Protocol Version which should be used for this IP Configuration. Possible values are <code class="docutils literal notranslate"><span class="pre">IPv4</span></code> and <code class="docutils literal notranslate"><span class="pre">IPv6</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">IPv4</span></code>.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the Linux Virtual Machine Scale Set. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">network_security_group_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">primary</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Name which should be used for this Network Interface. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">network_security_group_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of a Network Security Group which should be assigned to this Network Interface.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">primary</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Is this the Primary IP Configuration?</p></li>
 </ul>
 </dd></dl>
 
@@ -2462,16 +2504,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">os_disk</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.LinuxVirtualMachineScaleSet.os_disk" title="Permalink to this definition">¶</a></dt>
 <dd><p>An <code class="docutils literal notranslate"><span class="pre">os_disk</span></code> block as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">caching</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">diffDiskSettings</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">caching</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Type of Caching which should be used for the Internal OS Disk. Possible values are <code class="docutils literal notranslate"><span class="pre">None</span></code>, <code class="docutils literal notranslate"><span class="pre">ReadOnly</span></code> and <code class="docutils literal notranslate"><span class="pre">ReadWrite</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">diffDiskSettings</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A <code class="docutils literal notranslate"><span class="pre">diff_disk_settings</span></code> block as defined above. Changing this forces a new resource to be created.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">option</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">disk_encryption_set_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">write_accelerator_enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disk_encryption_set_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the Disk Encryption Set which should be used to encrypt this OS Disk.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The Size of the Internal OS Disk in GB, if you wish to vary from the size used in the image this Virtual Machine Scale Set is sourced from.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Type of Storage Account which should back this the Internal OS Disk. Possible values include <code class="docutils literal notranslate"><span class="pre">Standard_LRS</span></code>, <code class="docutils literal notranslate"><span class="pre">StandardSSD_LRS</span></code> and <code class="docutils literal notranslate"><span class="pre">Premium_LRS</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">write_accelerator_enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Should Write Accelerator be Enabled for this OS Disk? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -2510,11 +2552,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">rolling_upgrade_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.LinuxVirtualMachineScaleSet.rolling_upgrade_policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">rolling_upgrade_policy</span></code> block as defined below. This is Required and can only be specified when <code class="docutils literal notranslate"><span class="pre">upgrade_mode</span></code> is set to <code class="docutils literal notranslate"><span class="pre">Automatic</span></code> or <code class="docutils literal notranslate"><span class="pre">Rolling</span></code>.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">maxBatchInstancePercent</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxUnhealthyInstancePercent</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxUnhealthyUpgradedInstancePercent</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">pauseTimeBetweenBatches</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxBatchInstancePercent</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The maximum percent of total virtual machine instances that will be upgraded simultaneously by the rolling upgrade in one batch. As this is a maximum, unhealthy instances in previous or future batches can cause the percentage of instances in a batch to decrease to ensure higher reliability. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxUnhealthyInstancePercent</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The maximum percentage of the total virtual machine instances in the scale set that can be simultaneously unhealthy, either as a result of being upgraded, or by being found in an unhealthy state by the virtual machine health checks before the rolling upgrade aborts. This constraint will be checked prior to starting any batch. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxUnhealthyUpgradedInstancePercent</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The maximum percentage of upgraded virtual machine instances that can be found to be in an unhealthy state. This check will happen after each batch is upgraded. If this percentage is ever exceeded, the rolling update aborts. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pauseTimeBetweenBatches</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The wait time between completing the update for all virtual machines in one batch and starting the next batch. The time duration should be specified in ISO 8601 format. Changing this forces a new resource to be created.</p></li>
 </ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.compute.LinuxVirtualMachineScaleSet.scale_in_policy">
+<code class="sig-name descname">scale_in_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.LinuxVirtualMachineScaleSet.scale_in_policy" title="Permalink to this definition">¶</a></dt>
+<dd><p>The scale-in policy rule that decides which virtual machines are chosen for removal when a Virtual Machine Scale Set is scaled in. Possible values for the scale-in policy rules are <code class="docutils literal notranslate"><span class="pre">Default</span></code>, <code class="docutils literal notranslate"><span class="pre">NewestVM</span></code> and <code class="docutils literal notranslate"><span class="pre">OldestVM</span></code>, defaults to <code class="docutils literal notranslate"><span class="pre">Default</span></code>. For more information about scale in policy, please <a class="reference external" href="https://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-scale-in-policy">refer to this doc</a>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2522,12 +2570,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">secrets</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.LinuxVirtualMachineScaleSet.secrets" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">secret</span></code> blocks as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">certificates</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificates</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">certificate</span></code> blocks as defined above.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Secret URL of a Key Vault Certificate.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">key_vault_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key_vault_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the Key Vault from which all Secrets should be sourced.</p></li>
 </ul>
 </dd></dl>
 
@@ -2557,7 +2605,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">offer</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">publisher</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sku</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Virtual Machine SKU for the Scale Set, such as <code class="docutils literal notranslate"><span class="pre">Standard_F2</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Internet Protocol Version which should be used for this IP Configuration. Possible values are <code class="docutils literal notranslate"><span class="pre">IPv4</span></code> and <code class="docutils literal notranslate"><span class="pre">IPv6</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">IPv4</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -2565,6 +2613,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.compute.LinuxVirtualMachineScaleSet.tags">
 <code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.LinuxVirtualMachineScaleSet.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>A mapping of tags which should be assigned to this Virtual Machine Scale Set.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.compute.LinuxVirtualMachineScaleSet.terminate_notification">
+<code class="sig-name descname">terminate_notification</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.LinuxVirtualMachineScaleSet.terminate_notification" title="Permalink to this definition">¶</a></dt>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">terminate_notification</span></code> block as defined below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Should the terminate notification be enabled on this Virtual Machine Scale Set? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeout</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Length of time (in minutes, between 5 and 15) a notification to be sent to the VM on the instance metadata server till the VM gets deleted. The time duration should be specified in ISO 8601 format.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -2593,7 +2651,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="method">
 <dt id="pulumi_azure.compute.LinuxVirtualMachineScaleSet.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">additional_capabilities=None</em>, <em class="sig-param">admin_password=None</em>, <em class="sig-param">admin_ssh_keys=None</em>, <em class="sig-param">admin_username=None</em>, <em class="sig-param">automatic_os_upgrade_policy=None</em>, <em class="sig-param">boot_diagnostics=None</em>, <em class="sig-param">computer_name_prefix=None</em>, <em class="sig-param">custom_data=None</em>, <em class="sig-param">data_disks=None</em>, <em class="sig-param">disable_password_authentication=None</em>, <em class="sig-param">do_not_run_extensions_on_overprovisioned_machines=None</em>, <em class="sig-param">eviction_policy=None</em>, <em class="sig-param">health_probe_id=None</em>, <em class="sig-param">identity=None</em>, <em class="sig-param">instances=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">max_bid_price=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_interfaces=None</em>, <em class="sig-param">os_disk=None</em>, <em class="sig-param">overprovision=None</em>, <em class="sig-param">plan=None</em>, <em class="sig-param">priority=None</em>, <em class="sig-param">provision_vm_agent=None</em>, <em class="sig-param">proximity_placement_group_id=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">rolling_upgrade_policy=None</em>, <em class="sig-param">secrets=None</em>, <em class="sig-param">single_placement_group=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">source_image_id=None</em>, <em class="sig-param">source_image_reference=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">unique_id=None</em>, <em class="sig-param">upgrade_mode=None</em>, <em class="sig-param">zone_balance=None</em>, <em class="sig-param">zones=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.LinuxVirtualMachineScaleSet.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">additional_capabilities=None</em>, <em class="sig-param">admin_password=None</em>, <em class="sig-param">admin_ssh_keys=None</em>, <em class="sig-param">admin_username=None</em>, <em class="sig-param">automatic_os_upgrade_policy=None</em>, <em class="sig-param">boot_diagnostics=None</em>, <em class="sig-param">computer_name_prefix=None</em>, <em class="sig-param">custom_data=None</em>, <em class="sig-param">data_disks=None</em>, <em class="sig-param">disable_password_authentication=None</em>, <em class="sig-param">do_not_run_extensions_on_overprovisioned_machines=None</em>, <em class="sig-param">eviction_policy=None</em>, <em class="sig-param">health_probe_id=None</em>, <em class="sig-param">identity=None</em>, <em class="sig-param">instances=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">max_bid_price=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_interfaces=None</em>, <em class="sig-param">os_disk=None</em>, <em class="sig-param">overprovision=None</em>, <em class="sig-param">plan=None</em>, <em class="sig-param">priority=None</em>, <em class="sig-param">provision_vm_agent=None</em>, <em class="sig-param">proximity_placement_group_id=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">rolling_upgrade_policy=None</em>, <em class="sig-param">scale_in_policy=None</em>, <em class="sig-param">secrets=None</em>, <em class="sig-param">single_placement_group=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">source_image_id=None</em>, <em class="sig-param">source_image_reference=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">terminate_notification=None</em>, <em class="sig-param">unique_id=None</em>, <em class="sig-param">upgrade_mode=None</em>, <em class="sig-param">zone_balance=None</em>, <em class="sig-param">zones=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.LinuxVirtualMachineScaleSet.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing LinuxVirtualMachineScaleSet resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -2628,12 +2686,15 @@ properties used to qualify the lookup.</p>
 <li><p><strong>proximity_placement_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Proximity Placement Group in which the Virtual Machine Scale Set should be assigned to. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Resource Group in which the Linux Virtual Machine Scale Set should be exist. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>rolling_upgrade_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">rolling_upgrade_policy</span></code> block as defined below. This is Required and can only be specified when <code class="docutils literal notranslate"><span class="pre">upgrade_mode</span></code> is set to <code class="docutils literal notranslate"><span class="pre">Automatic</span></code> or <code class="docutils literal notranslate"><span class="pre">Rolling</span></code>.</p></li>
+<li><p><strong>scale_in_policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The scale-in policy rule that decides which virtual machines are chosen for removal when a Virtual Machine Scale Set is scaled in. Possible values for the scale-in policy rules are <code class="docutils literal notranslate"><span class="pre">Default</span></code>, <code class="docutils literal notranslate"><span class="pre">NewestVM</span></code> and <code class="docutils literal notranslate"><span class="pre">OldestVM</span></code>, defaults to <code class="docutils literal notranslate"><span class="pre">Default</span></code>. For more information about scale in policy, please <a class="reference external" href="https://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-scale-in-policy">refer to this doc</a>.</p>
+</p></li>
 <li><p><strong>secrets</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">secret</span></code> blocks as defined below.</p></li>
 <li><p><strong>single_placement_group</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should this Virtual Machine Scale Set be limited to a Single Placement Group, which means the number of instances will be capped at 100 Virtual Machines. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 <li><p><strong>sku</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Virtual Machine SKU for the Scale Set, such as <code class="docutils literal notranslate"><span class="pre">Standard_F2</span></code>.</p></li>
 <li><p><strong>source_image_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of an Image which each Virtual Machine in this Scale Set should be based on.</p></li>
 <li><p><strong>source_image_reference</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">source_image_reference</span></code> block as defined below.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags which should be assigned to this Virtual Machine Scale Set.</p></li>
+<li><p><strong>terminate_notification</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">terminate_notification</span></code> block as defined below.</p></li>
 <li><p><strong>unique_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Unique ID for this Linux Virtual Machine Scale Set.</p></li>
 <li><p><strong>upgrade_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies how Upgrades (e.g. changing the Image/SKU) should be performed to Virtual Machine Instances. Possible values are <code class="docutils literal notranslate"><span class="pre">Automatic</span></code>, <code class="docutils literal notranslate"><span class="pre">Manual</span></code> and <code class="docutils literal notranslate"><span class="pre">Rolling</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Manual</span></code>.</p></li>
 <li><p><strong>zone_balance</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should the Virtual Machines in this Scale Set be strictly evenly distributed across Availability Zones? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>. Changing this forces a new resource to be created.</p></li>
@@ -2643,84 +2704,84 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>additional_capabilities</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">ultraSsdEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ultraSsdEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should the capacity to enable Data Disks of the <code class="docutils literal notranslate"><span class="pre">UltraSSD_LRS</span></code> storage account type be supported on this Virtual Machine Scale Set? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>. Changing this forces a new resource to be created.</p></li>
 </ul>
 <p>The <strong>admin_ssh_keys</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">publicKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publicKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Public Key which should be used for authentication, which needs to be at least 2048-bit and in <code class="docutils literal notranslate"><span class="pre">ssh-rsa</span></code> format.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Username for which this Public SSH Key should be configured.</p></li>
 </ul>
 <p>The <strong>automatic_os_upgrade_policy</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">disableAutomaticRollback</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enableAutomaticOsUpgrade</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disableAutomaticRollback</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should automatic rollbacks be disabled? Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enableAutomaticOsUpgrade</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should OS Upgrades automatically be applied to Scale Set instances in a rolling fashion when a newer version of the OS Image becomes available? Changing this forces a new resource to be created.</p></li>
 </ul>
 <p>The <strong>boot_diagnostics</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">storageAccountUri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storageAccountUri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Primary/Secondary Endpoint for the Azure Storage Account which should be used to store Boot Diagnostics, including Console Output and Screenshots from the Hypervisor.</p></li>
 </ul>
 <p>The <strong>data_disks</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">caching</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">disk_encryption_set_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">lun</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">write_accelerator_enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">caching</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of Caching which should be used for this Data Disk. Possible values are <code class="docutils literal notranslate"><span class="pre">None</span></code>, <code class="docutils literal notranslate"><span class="pre">ReadOnly</span></code> and <code class="docutils literal notranslate"><span class="pre">ReadWrite</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disk_encryption_set_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Disk Encryption Set which should be used to encrypt this Data Disk.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size of the Data Disk which should be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lun</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The Logical Unit Number of the Data Disk, which must be unique within the Virtual Machine.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Type of Storage Account which should back this Data Disk. Possible values include <code class="docutils literal notranslate"><span class="pre">Standard_LRS</span></code>, <code class="docutils literal notranslate"><span class="pre">StandardSSD_LRS</span></code>, <code class="docutils literal notranslate"><span class="pre">Premium_LRS</span></code> and <code class="docutils literal notranslate"><span class="pre">UltraSSD_LRS</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">write_accelerator_enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should Write Accelerator be enabled for this Data Disk? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
 <p>The <strong>identity</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">identityIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">identityIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of User Managed Identity ID’s which should be assigned to the Linux Virtual Machine Scale Set.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">principal_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the System Managed Service Principal.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of Managed Identity which should be assigned to the Linux Virtual Machine Scale Set. Possible values are <code class="docutils literal notranslate"><span class="pre">SystemAssigned</span></code>, <code class="docutils literal notranslate"><span class="pre">UserAssigned</span></code> and <code class="docutils literal notranslate"><span class="pre">SystemAssigned,</span> <span class="pre">UserAssigned</span></code>.</p></li>
 </ul>
 <p>The <strong>network_interfaces</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">dns_servers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enable_accelerated_networking</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enable_ip_forwarding</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ip_configurations</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">dns_servers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of IP Addresses of DNS Servers which should be assigned to the Network Interface.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enable_accelerated_networking</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Does this Network Interface support Accelerated Networking? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enable_ip_forwarding</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Does this Network Interface support IP Forwarding? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ip_configurations</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">ip_configuration</span></code> blocks as defined above.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">applicationGatewayBackendAddressPoolIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">applicationSecurityGroupIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">loadBalancerBackendAddressPoolIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">loadBalancerInboundNatRulesIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Linux Virtual Machine Scale Set. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">primary</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">public_ip_addresses</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">applicationGatewayBackendAddressPoolIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of Backend Address Pools ID’s from a Application Gateway which this Virtual Machine Scale Set should be connected to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">applicationSecurityGroupIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of Application Security Group ID’s which this Virtual Machine Scale Set should be connected to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">loadBalancerBackendAddressPoolIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of Backend Address Pools ID’s from a Load Balancer which this Virtual Machine Scale Set should be connected to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">loadBalancerInboundNatRulesIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of NAT Rule ID’s from a Load Balancer which this Virtual Machine Scale Set should be connected to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name which should be used for this IP Configuration.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">primary</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is this the Primary IP Configuration for this Network Interface? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public_ip_addresses</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">public_ip_address</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">domain_name_label</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">idle_timeout_in_minutes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ipTags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">domain_name_label</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Prefix which should be used for the Domain Name Label for each Virtual Machine Instance. Azure concatenates the Domain Name Label and Virtual Machine Index to create a unique Domain Name Label for each Virtual Machine.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">idle_timeout_in_minutes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The Idle Timeout in Minutes for the Public IP Address. Possible values are in the range <code class="docutils literal notranslate"><span class="pre">4</span></code> to <code class="docutils literal notranslate"><span class="pre">32</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipTags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">ip_tag</span></code> blocks as defined above.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">tag</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tag</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The IP Tag associated with the Public IP, such as <code class="docutils literal notranslate"><span class="pre">SQL</span></code> or <code class="docutils literal notranslate"><span class="pre">Storage</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Type of IP Tag, such as <code class="docutils literal notranslate"><span class="pre">FirstPartyUsage</span></code>.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Linux Virtual Machine Scale Set. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">public_ip_prefix_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of the Public IP Address Configuration.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public_ip_prefix_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Public IP Address Prefix from where Public IP Addresses should be allocated. Changing this forces a new resource to be created.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Subnet which this IP Configuration should be connected to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Internet Protocol Version which should be used for this IP Configuration. Possible values are <code class="docutils literal notranslate"><span class="pre">IPv4</span></code> and <code class="docutils literal notranslate"><span class="pre">IPv6</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">IPv4</span></code>.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Linux Virtual Machine Scale Set. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">network_security_group_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">primary</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name which should be used for this Network Interface. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">network_security_group_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of a Network Security Group which should be assigned to this Network Interface.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">primary</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is this the Primary IP Configuration?</p></li>
 </ul>
 <p>The <strong>os_disk</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">caching</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">diffDiskSettings</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">caching</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Type of Caching which should be used for the Internal OS Disk. Possible values are <code class="docutils literal notranslate"><span class="pre">None</span></code>, <code class="docutils literal notranslate"><span class="pre">ReadOnly</span></code> and <code class="docutils literal notranslate"><span class="pre">ReadWrite</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">diffDiskSettings</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">diff_disk_settings</span></code> block as defined above. Changing this forces a new resource to be created.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">option</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">disk_encryption_set_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">write_accelerator_enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disk_encryption_set_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Disk Encryption Set which should be used to encrypt this OS Disk.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The Size of the Internal OS Disk in GB, if you wish to vary from the size used in the image this Virtual Machine Scale Set is sourced from.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Type of Storage Account which should back this the Internal OS Disk. Possible values include <code class="docutils literal notranslate"><span class="pre">Standard_LRS</span></code>, <code class="docutils literal notranslate"><span class="pre">StandardSSD_LRS</span></code> and <code class="docutils literal notranslate"><span class="pre">Premium_LRS</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">write_accelerator_enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should Write Accelerator be Enabled for this OS Disk? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
 <p>The <strong>plan</strong> object supports the following:</p>
 <ul class="simple">
@@ -2730,26 +2791,31 @@ properties used to qualify the lookup.</p>
 </ul>
 <p>The <strong>rolling_upgrade_policy</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">maxBatchInstancePercent</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxUnhealthyInstancePercent</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxUnhealthyUpgradedInstancePercent</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">pauseTimeBetweenBatches</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxBatchInstancePercent</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum percent of total virtual machine instances that will be upgraded simultaneously by the rolling upgrade in one batch. As this is a maximum, unhealthy instances in previous or future batches can cause the percentage of instances in a batch to decrease to ensure higher reliability. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxUnhealthyInstancePercent</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum percentage of the total virtual machine instances in the scale set that can be simultaneously unhealthy, either as a result of being upgraded, or by being found in an unhealthy state by the virtual machine health checks before the rolling upgrade aborts. This constraint will be checked prior to starting any batch. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxUnhealthyUpgradedInstancePercent</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum percentage of upgraded virtual machine instances that can be found to be in an unhealthy state. This check will happen after each batch is upgraded. If this percentage is ever exceeded, the rolling update aborts. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pauseTimeBetweenBatches</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The wait time between completing the update for all virtual machines in one batch and starting the next batch. The time duration should be specified in ISO 8601 format. Changing this forces a new resource to be created.</p></li>
 </ul>
 <p>The <strong>secrets</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">certificates</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificates</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">certificate</span></code> blocks as defined above.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Secret URL of a Key Vault Certificate.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">key_vault_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key_vault_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Key Vault from which all Secrets should be sourced.</p></li>
 </ul>
 <p>The <strong>source_image_reference</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">offer</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">publisher</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sku</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Virtual Machine SKU for the Scale Set, such as <code class="docutils literal notranslate"><span class="pre">Standard_F2</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Internet Protocol Version which should be used for this IP Configuration. Possible values are <code class="docutils literal notranslate"><span class="pre">IPv4</span></code> and <code class="docutils literal notranslate"><span class="pre">IPv6</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">IPv4</span></code>.</p></li>
+</ul>
+<p>The <strong>terminate_notification</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should the terminate notification be enabled on this Virtual Machine Scale Set? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Length of time (in minutes, between 5 and 15) a notification to be sent to the VM on the instance metadata server till the VM gets deleted. The time duration should be specified in ISO 8601 format.</p></li>
 </ul>
 </dd></dl>
 
@@ -2804,10 +2870,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>create_option</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The method to use when creating the managed disk. Changing this forces a new resource to be created. Possible values include:</p></li>
-<li><p><strong>disk_encryption_set_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of a Disk Encryption Set which should be used to encrypt this Managed Disk. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>disk_encryption_set_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of a Disk Encryption Set which should be used to encrypt this Managed Disk.</p></li>
 <li><p><strong>disk_iops_read_write</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of IOPS allowed for this disk; only settable for UltraSSD disks. One operation can transfer between 4k and 256k bytes.</p></li>
 <li><p><strong>disk_mbps_read_write</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The bandwidth allowed for this disk; only settable for UltraSSD disks. MBps means millions of bytes per second.</p></li>
-<li><p><strong>disk_size_gb</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Specifies the size of the managed disk to create in gigabytes. If <code class="docutils literal notranslate"><span class="pre">create_option</span></code> is <code class="docutils literal notranslate"><span class="pre">Copy</span></code> or <code class="docutils literal notranslate"><span class="pre">FromImage</span></code>, then the value must be equal to or greater than the source’s size.</p></li>
+<li><p><strong>disk_size_gb</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Specifies the size of the managed disk to create in gigabytes. If <code class="docutils literal notranslate"><span class="pre">create_option</span></code> is <code class="docutils literal notranslate"><span class="pre">Copy</span></code> or <code class="docutils literal notranslate"><span class="pre">FromImage</span></code>, then the value must be equal to or greater than the source’s size. The size can only be increased.</p></li>
 <li><p><strong>encryption_settings</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">encryption_settings</span></code> block as defined below.</p></li>
 <li><p><strong>image_reference_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of an existing platform/marketplace disk image to copy when <code class="docutils literal notranslate"><span class="pre">create_option</span></code> is <code class="docutils literal notranslate"><span class="pre">FromImage</span></code>.</p></li>
 <li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specified the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p></li>
@@ -2825,17 +2891,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <p>The <strong>encryption_settings</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">diskEncryptionKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">diskEncryptionKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">disk_encryption_key</span></code> block as defined above.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">secretUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sourceVaultId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">secretUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The URL to the Key Vault Secret used as the Disk Encryption Key. This can be found as <code class="docutils literal notranslate"><span class="pre">id</span></code> on the <code class="docutils literal notranslate"><span class="pre">keyvault.Secret</span></code> resource.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sourceVaultId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the source Key Vault.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">keyEncryptionKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is Encryption enabled on this Managed Disk? Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">keyEncryptionKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">key_encryption_key</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">keyUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sourceVaultId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">keyUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The URL to the Key Vault Key used as the Key Encryption Key. This can be found as <code class="docutils literal notranslate"><span class="pre">id</span></code> on the <code class="docutils literal notranslate"><span class="pre">keyvault.Key</span></code> resource.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sourceVaultId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the source Key Vault.</p></li>
 </ul>
 </li>
 </ul>
@@ -2848,7 +2914,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.compute.ManagedDisk.disk_encryption_set_id">
 <code class="sig-name descname">disk_encryption_set_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.ManagedDisk.disk_encryption_set_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The ID of a Disk Encryption Set which should be used to encrypt this Managed Disk. Changing this forces a new resource to be created.</p>
+<dd><p>The ID of a Disk Encryption Set which should be used to encrypt this Managed Disk.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2866,7 +2932,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.compute.ManagedDisk.disk_size_gb">
 <code class="sig-name descname">disk_size_gb</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.ManagedDisk.disk_size_gb" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies the size of the managed disk to create in gigabytes. If <code class="docutils literal notranslate"><span class="pre">create_option</span></code> is <code class="docutils literal notranslate"><span class="pre">Copy</span></code> or <code class="docutils literal notranslate"><span class="pre">FromImage</span></code>, then the value must be equal to or greater than the source’s size.</p>
+<dd><p>Specifies the size of the managed disk to create in gigabytes. If <code class="docutils literal notranslate"><span class="pre">create_option</span></code> is <code class="docutils literal notranslate"><span class="pre">Copy</span></code> or <code class="docutils literal notranslate"><span class="pre">FromImage</span></code>, then the value must be equal to or greater than the source’s size. The size can only be increased.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2874,17 +2940,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">encryption_settings</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.ManagedDisk.encryption_settings" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">encryption_settings</span></code> block as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">diskEncryptionKey</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">diskEncryptionKey</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A <code class="docutils literal notranslate"><span class="pre">disk_encryption_key</span></code> block as defined above.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">secretUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sourceVaultId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">secretUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The URL to the Key Vault Secret used as the Disk Encryption Key. This can be found as <code class="docutils literal notranslate"><span class="pre">id</span></code> on the <code class="docutils literal notranslate"><span class="pre">keyvault.Secret</span></code> resource.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sourceVaultId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the source Key Vault.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">keyEncryptionKey</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Is Encryption enabled on this Managed Disk? Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">keyEncryptionKey</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A <code class="docutils literal notranslate"><span class="pre">key_encryption_key</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">keyUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sourceVaultId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">keyUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The URL to the Key Vault Key used as the Key Encryption Key. This can be found as <code class="docutils literal notranslate"><span class="pre">id</span></code> on the <code class="docutils literal notranslate"><span class="pre">keyvault.Key</span></code> resource.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sourceVaultId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the source Key Vault.</p></li>
 </ul>
 </li>
 </ul>
@@ -2968,10 +3034,10 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>create_option</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The method to use when creating the managed disk. Changing this forces a new resource to be created. Possible values include:</p></li>
-<li><p><strong>disk_encryption_set_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of a Disk Encryption Set which should be used to encrypt this Managed Disk. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>disk_encryption_set_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of a Disk Encryption Set which should be used to encrypt this Managed Disk.</p></li>
 <li><p><strong>disk_iops_read_write</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of IOPS allowed for this disk; only settable for UltraSSD disks. One operation can transfer between 4k and 256k bytes.</p></li>
 <li><p><strong>disk_mbps_read_write</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The bandwidth allowed for this disk; only settable for UltraSSD disks. MBps means millions of bytes per second.</p></li>
-<li><p><strong>disk_size_gb</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Specifies the size of the managed disk to create in gigabytes. If <code class="docutils literal notranslate"><span class="pre">create_option</span></code> is <code class="docutils literal notranslate"><span class="pre">Copy</span></code> or <code class="docutils literal notranslate"><span class="pre">FromImage</span></code>, then the value must be equal to or greater than the source’s size.</p></li>
+<li><p><strong>disk_size_gb</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Specifies the size of the managed disk to create in gigabytes. If <code class="docutils literal notranslate"><span class="pre">create_option</span></code> is <code class="docutils literal notranslate"><span class="pre">Copy</span></code> or <code class="docutils literal notranslate"><span class="pre">FromImage</span></code>, then the value must be equal to or greater than the source’s size. The size can only be increased.</p></li>
 <li><p><strong>encryption_settings</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">encryption_settings</span></code> block as defined below.</p></li>
 <li><p><strong>image_reference_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of an existing platform/marketplace disk image to copy when <code class="docutils literal notranslate"><span class="pre">create_option</span></code> is <code class="docutils literal notranslate"><span class="pre">FromImage</span></code>.</p></li>
 <li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specified the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p></li>
@@ -2989,17 +3055,17 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>encryption_settings</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">diskEncryptionKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">diskEncryptionKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">disk_encryption_key</span></code> block as defined above.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">secretUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sourceVaultId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">secretUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The URL to the Key Vault Secret used as the Disk Encryption Key. This can be found as <code class="docutils literal notranslate"><span class="pre">id</span></code> on the <code class="docutils literal notranslate"><span class="pre">keyvault.Secret</span></code> resource.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sourceVaultId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the source Key Vault.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">keyEncryptionKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is Encryption enabled on this Managed Disk? Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">keyEncryptionKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">key_encryption_key</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">keyUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sourceVaultId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">keyUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The URL to the Key Vault Key used as the Key Encryption Key. This can be found as <code class="docutils literal notranslate"><span class="pre">id</span></code> on the <code class="docutils literal notranslate"><span class="pre">keyvault.Key</span></code> resource.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sourceVaultId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the source Key Vault.</p></li>
 </ul>
 </li>
 </ul>
@@ -3049,7 +3115,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Manages a virtual machine scale set.</p>
 <blockquote>
 <div><p><strong>Note:</strong> The <code class="docutils literal notranslate"><span class="pre">compute.ScaleSet</span></code> resource has been superseded by the <code class="docutils literal notranslate"><span class="pre">compute.LinuxVirtualMachineScaleSet</span></code> and <code class="docutils literal notranslate"><span class="pre">compute.WindowsVirtualMachineScaleSet</span></code> resources. The existing <code class="docutils literal notranslate"><span class="pre">compute.ScaleSet</span></code> resource will continue to be available throughout the 2.x releases however is in a feature-frozen state to maintain compatibility - new functionality will instead be added to the <code class="docutils literal notranslate"><span class="pre">compute.LinuxVirtualMachineScaleSet</span></code> and <code class="docutils literal notranslate"><span class="pre">compute.WindowsVirtualMachineScaleSet</span></code> resources.</p>
-<p><strong>NOTE:</strong> All arguments including the administrator login and password will be stored in the raw state as plain-text. <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
 <p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/virtual_machine_scale_set.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/virtual_machine_scale_set.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
@@ -3064,7 +3129,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>health_probe_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the identifier for the load balancer health probe. Required when using <code class="docutils literal notranslate"><span class="pre">Rolling</span></code> as your <code class="docutils literal notranslate"><span class="pre">upgrade_policy_mode</span></code>.</p></li>
 <li><p><strong>license_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the Windows OS license type. If supplied, the only allowed values are <code class="docutils literal notranslate"><span class="pre">Windows_Client</span></code> and <code class="docutils literal notranslate"><span class="pre">Windows_Server</span></code>.</p></li>
 <li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the image from the marketplace.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the virtual machine scale set resource. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>network_profiles</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A collection of network profile block as documented below.</p></li>
 <li><p><strong>os_profile</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A Virtual Machine OS Profile block as documented below.</p></li>
 <li><p><strong>os_profile_linux_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A Linux config block as documented below.</p></li>
@@ -3077,7 +3142,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the virtual machine scale set. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>rolling_upgrade_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">rolling_upgrade_policy</span></code> block as defined below. This is only applicable when the <code class="docutils literal notranslate"><span class="pre">upgrade_policy_mode</span></code> is <code class="docutils literal notranslate"><span class="pre">Rolling</span></code>.</p></li>
 <li><p><strong>single_placement_group</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether the scale set is limited to a single placement group with a maximum size of 100 virtual machines. If set to false, managed disks must be used. Default is true. Changing this forces a new resource to be created. See <a class="reference external" href="http://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-placement-groups">documentation</a> for more information.</p></li>
-<li><p><strong>sku</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Specifies the SKU of the image used to create the virtual machines.</p></li>
+<li><p><strong>sku</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A sku block as documented below.</p></li>
 <li><p><strong>storage_profile_data_disks</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A storage profile data disk block as documented below</p></li>
 <li><p><strong>storage_profile_image_reference</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A storage profile image reference block as documented below.</p></li>
 <li><p><strong>storage_profile_os_disk</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A storage profile os disk block as documented below</p></li>
@@ -3095,10 +3160,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>The <strong>extensions</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">auto_upgrade_minor_version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specifies whether or not to use the latest minor version available.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the image from the marketplace.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the extension.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">protected_settings</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The protected_settings passed to the extension, like settings, these are specified as a JSON object in a string.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">provision_after_extensions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies a dependency array of extensions required to be executed before, the array stores the name of each extension.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">publisher</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the publisher of the image.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publisher</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The publisher of the extension, available publishers can be found by using the Azure CLI.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">settings</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The settings passed to the extension, these are specified as a JSON object in a string.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of extension, available types for a publisher can be found using the Azure CLI.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type_handler_version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the version of the extension to use, available versions can be found using the Azure CLI.</p></li>
@@ -3107,7 +3172,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">identityIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies a list of user managed identity ids to be assigned to the VMSS. Required if <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">UserAssigned</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">principal_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of extension, available types for a publisher can be found using the Azure CLI.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the identity type to be assigned to the scale set. Allowable values are <code class="docutils literal notranslate"><span class="pre">SystemAssigned</span></code> and <code class="docutils literal notranslate"><span class="pre">UserAssigned</span></code>. For the <code class="docutils literal notranslate"><span class="pre">SystemAssigned</span></code> identity the scale set’s Service Principal ID (SPN) can be retrieved after the scale set has been created. See <a class="reference external" href="https://docs.microsoft.com/en-us/azure/active-directory/managed-service-identity/overview">documentation</a> for more information.</p></li>
 </ul>
 <p>The <strong>network_profiles</strong> object supports the following:</p>
 <ul class="simple">
@@ -3123,22 +3188,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">applicationSecurityGroupIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies up to <code class="docutils literal notranslate"><span class="pre">20</span></code> application security group IDs.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">loadBalancerBackendAddressPoolIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies an array of references to backend address pools of load balancers. A scale set can reference backend address pools of one public and one internal load balancer. Multiple scale sets cannot use the same load balancer.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">loadBalancerInboundNatRulesIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies an array of references to inbound NAT pools for load balancers. A scale set can reference inbound nat pools of one public and one internal load balancer. Multiple scale sets cannot use the same load balancer.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the image from the marketplace.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies name of the IP configuration.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">primary</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specifies if this ip_configuration is the primary one.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">publicIpAddressConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Describes a virtual machines scale set IP Configuration’s PublicIPAddress configuration. The public_ip_address_configuration is documented below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">domain_name_label</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The domain name label for the dns settings.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">idleTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The idle timeout in minutes. This value must be between 4 and 30.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the image from the marketplace.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the public ip address configuration</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the identifier of the subnet.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ipForwarding</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether IP forwarding is enabled on this NIC. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the image from the marketplace.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the network interface configuration.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">network_security_group_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the identifier for the network security group.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">primary</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specifies if this ip_configuration is the primary one.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">primary</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether network interfaces created from the network interface configuration will be the primary NIC of the VM.</p></li>
 </ul>
 <p>The <strong>os_profile</strong> object supports the following:</p>
 <ul class="simple">
@@ -3163,7 +3228,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">vaultCertificates</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A collection of Vault Certificates as documented below</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">certificateStore</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the certificate store on the Virtual Machine where the certificate should be added to.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">certificateUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies URL of the certificate with which new Virtual Machines is provisioned.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificateUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - It is the Base64 encoding of a JSON Object that which is encoded in UTF-8 of which the contents need to be <code class="docutils literal notranslate"><span class="pre">data</span></code>, <code class="docutils literal notranslate"><span class="pre">dataType</span></code> and <code class="docutils literal notranslate"><span class="pre">password</span></code>.</p></li>
 </ul>
 </li>
 </ul>
@@ -3202,7 +3267,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>The <strong>sku</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">capacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the number of virtual machines in the scale set.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the image from the marketplace.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the size of virtual machines in a scale set.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">tier</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the tier of virtual machines in a scale set. Possible values, <code class="docutils literal notranslate"><span class="pre">standard</span></code> or <code class="docutils literal notranslate"><span class="pre">basic</span></code>.</p></li>
 </ul>
 <p>The <strong>storage_profile_data_disks</strong> object supports the following:</p>
@@ -3218,19 +3283,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the ID of the (custom) image to use to create the virtual
 machine scale set, as in the example below.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">offer</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the offer of the image used to create the virtual machines.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">publisher</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the publisher of the image.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publisher</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the publisher of the image used to create the virtual machines.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sku</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the SKU of the image used to create the virtual machines.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the version of the image used to create the virtual machines.</p></li>
 </ul>
 <p>The <strong>storage_profile_os_disk</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">caching</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the caching requirements. Possible values include: <code class="docutils literal notranslate"><span class="pre">None</span></code> (default), <code class="docutils literal notranslate"><span class="pre">ReadOnly</span></code>, <code class="docutils literal notranslate"><span class="pre">ReadWrite</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">create_option</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies how the data disk should be created. The only possible options are <code class="docutils literal notranslate"><span class="pre">FromImage</span></code> and <code class="docutils literal notranslate"><span class="pre">Empty</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">create_option</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies how the virtual machine should be created. The only possible option is <code class="docutils literal notranslate"><span class="pre">FromImage</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">image</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the blob uri for user image. A virtual machine scale set creates an os disk in the same container as the user image.
 Updating the osDisk image causes the existing disk to be deleted and a new one created with the new image. If the VM scale set is in Manual upgrade mode then the virtual machines are not updated until they have manualUpgrade applied to them.
 When setting this field <code class="docutils literal notranslate"><span class="pre">os_type</span></code> needs to be specified. Cannot be used when <code class="docutils literal notranslate"><span class="pre">vhd_containers</span></code>, <code class="docutils literal notranslate"><span class="pre">managed_disk_type</span></code> or <code class="docutils literal notranslate"><span class="pre">storage_profile_image_reference</span></code> are specified.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">managedDiskType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the type of managed disk to create. Value must be either <code class="docutils literal notranslate"><span class="pre">Standard_LRS</span></code>, <code class="docutils literal notranslate"><span class="pre">StandardSSD_LRS</span></code> or <code class="docutils literal notranslate"><span class="pre">Premium_LRS</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the image from the marketplace.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">managedDiskType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the type of managed disk to create. Value you must be either <code class="docutils literal notranslate"><span class="pre">Standard_LRS</span></code>, <code class="docutils literal notranslate"><span class="pre">StandardSSD_LRS</span></code> or <code class="docutils literal notranslate"><span class="pre">Premium_LRS</span></code>. Cannot be used when <code class="docutils literal notranslate"><span class="pre">vhd_containers</span></code> or <code class="docutils literal notranslate"><span class="pre">image</span></code> is specified.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the disk name. Must be specified when using unmanaged disk (‘managed_disk_type’ property not set).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">os_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the operating system Type, valid values are windows, linux.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">vhdContainers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies the vhd uri. Cannot be used when <code class="docutils literal notranslate"><span class="pre">image</span></code> or <code class="docutils literal notranslate"><span class="pre">managed_disk_type</span></code> is specified.</p></li>
 </ul>
@@ -3262,10 +3327,10 @@ When setting this field <code class="docutils literal notranslate"><span class="
 <dd><p>Can be specified multiple times to add extension profiles to the scale set. Each <code class="docutils literal notranslate"><span class="pre">extension</span></code> block supports the fields documented below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">auto_upgrade_minor_version</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Specifies whether or not to use the latest minor version available.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the name of the image from the marketplace.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the name of the extension.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">protected_settings</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The protected_settings passed to the extension, like settings, these are specified as a JSON object in a string.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">provision_after_extensions</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Specifies a dependency array of extensions required to be executed before, the array stores the name of each extension.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">publisher</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the publisher of the image.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publisher</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The publisher of the extension, available publishers can be found by using the Azure CLI.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">settings</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The settings passed to the extension, these are specified as a JSON object in a string.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The type of extension, available types for a publisher can be found using the Azure CLI.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type_handler_version</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the version of the extension to use, available versions can be found using the Azure CLI.</p></li>
@@ -3293,7 +3358,7 @@ When setting this field <code class="docutils literal notranslate"><span class="
 <dl class="attribute">
 <dt id="pulumi_azure.compute.ScaleSet.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.ScaleSet.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies the name of the image from the marketplace.</p>
+<dd><p>Specifies the name of the virtual machine scale set resource. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -3313,22 +3378,22 @@ When setting this field <code class="docutils literal notranslate"><span class="
 <li><p><code class="docutils literal notranslate"><span class="pre">applicationSecurityGroupIds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Specifies up to <code class="docutils literal notranslate"><span class="pre">20</span></code> application security group IDs.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">loadBalancerBackendAddressPoolIds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Specifies an array of references to backend address pools of load balancers. A scale set can reference backend address pools of one public and one internal load balancer. Multiple scale sets cannot use the same load balancer.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">loadBalancerInboundNatRulesIds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Specifies an array of references to inbound NAT pools for load balancers. A scale set can reference inbound nat pools of one public and one internal load balancer. Multiple scale sets cannot use the same load balancer.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the name of the image from the marketplace.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies name of the IP configuration.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">primary</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Specifies if this ip_configuration is the primary one.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">publicIpAddressConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Describes a virtual machines scale set IP Configuration’s PublicIPAddress configuration. The public_ip_address_configuration is documented below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">domain_name_label</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The domain name label for the dns settings.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">idleTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The idle timeout in minutes. This value must be between 4 and 30.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the name of the image from the marketplace.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the public ip address configuration</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the identifier of the subnet.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ipForwarding</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether IP forwarding is enabled on this NIC. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the name of the image from the marketplace.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the name of the network interface configuration.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">network_security_group_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the identifier for the network security group.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">primary</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Specifies if this ip_configuration is the primary one.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">primary</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Indicates whether network interfaces created from the network interface configuration will be the primary NIC of the VM.</p></li>
 </ul>
 </dd></dl>
 
@@ -3368,7 +3433,7 @@ When setting this field <code class="docutils literal notranslate"><span class="
 <li><p><code class="docutils literal notranslate"><span class="pre">vaultCertificates</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A collection of Vault Certificates as documented below</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">certificateStore</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the certificate store on the Virtual Machine where the certificate should be added to.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">certificateUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies URL of the certificate with which new Virtual Machines is provisioned.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificateUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - It is the Base64 encoding of a JSON Object that which is encoded in UTF-8 of which the contents need to be <code class="docutils literal notranslate"><span class="pre">data</span></code>, <code class="docutils literal notranslate"><span class="pre">dataType</span></code> and <code class="docutils literal notranslate"><span class="pre">password</span></code>.</p></li>
 </ul>
 </li>
 </ul>
@@ -3454,10 +3519,10 @@ When setting this field <code class="docutils literal notranslate"><span class="
 <dl class="attribute">
 <dt id="pulumi_azure.compute.ScaleSet.sku">
 <code class="sig-name descname">sku</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.ScaleSet.sku" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies the SKU of the image used to create the virtual machines.</p>
+<dd><p>A sku block as documented below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">capacity</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Specifies the number of virtual machines in the scale set.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the name of the image from the marketplace.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the size of virtual machines in a scale set.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">tier</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the tier of virtual machines in a scale set. Possible values, <code class="docutils literal notranslate"><span class="pre">standard</span></code> or <code class="docutils literal notranslate"><span class="pre">basic</span></code>.</p></li>
 </ul>
 </dd></dl>
@@ -3483,7 +3548,7 @@ When setting this field <code class="docutils literal notranslate"><span class="
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the ID of the (custom) image to use to create the virtual
 machine scale set, as in the example below.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">offer</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the offer of the image used to create the virtual machines.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">publisher</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the publisher of the image.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publisher</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the publisher of the image used to create the virtual machines.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sku</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the SKU of the image used to create the virtual machines.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the version of the image used to create the virtual machines.</p></li>
 </ul>
@@ -3495,12 +3560,12 @@ machine scale set, as in the example below.</p></li>
 <dd><p>A storage profile os disk block as documented below</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">caching</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the caching requirements. Possible values include: <code class="docutils literal notranslate"><span class="pre">None</span></code> (default), <code class="docutils literal notranslate"><span class="pre">ReadOnly</span></code>, <code class="docutils literal notranslate"><span class="pre">ReadWrite</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">create_option</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies how the data disk should be created. The only possible options are <code class="docutils literal notranslate"><span class="pre">FromImage</span></code> and <code class="docutils literal notranslate"><span class="pre">Empty</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">create_option</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies how the virtual machine should be created. The only possible option is <code class="docutils literal notranslate"><span class="pre">FromImage</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">image</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the blob uri for user image. A virtual machine scale set creates an os disk in the same container as the user image.
 Updating the osDisk image causes the existing disk to be deleted and a new one created with the new image. If the VM scale set is in Manual upgrade mode then the virtual machines are not updated until they have manualUpgrade applied to them.
 When setting this field <code class="docutils literal notranslate"><span class="pre">os_type</span></code> needs to be specified. Cannot be used when <code class="docutils literal notranslate"><span class="pre">vhd_containers</span></code>, <code class="docutils literal notranslate"><span class="pre">managed_disk_type</span></code> or <code class="docutils literal notranslate"><span class="pre">storage_profile_image_reference</span></code> are specified.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">managedDiskType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the type of managed disk to create. Value must be either <code class="docutils literal notranslate"><span class="pre">Standard_LRS</span></code>, <code class="docutils literal notranslate"><span class="pre">StandardSSD_LRS</span></code> or <code class="docutils literal notranslate"><span class="pre">Premium_LRS</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the name of the image from the marketplace.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">managedDiskType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the type of managed disk to create. Value you must be either <code class="docutils literal notranslate"><span class="pre">Standard_LRS</span></code>, <code class="docutils literal notranslate"><span class="pre">StandardSSD_LRS</span></code> or <code class="docutils literal notranslate"><span class="pre">Premium_LRS</span></code>. Cannot be used when <code class="docutils literal notranslate"><span class="pre">vhd_containers</span></code> or <code class="docutils literal notranslate"><span class="pre">image</span></code> is specified.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the disk name. Must be specified when using unmanaged disk (‘managed_disk_type’ property not set).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">os_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the operating system Type, valid values are windows, linux.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">vhdContainers</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Specifies the vhd uri. Cannot be used when <code class="docutils literal notranslate"><span class="pre">image</span></code> or <code class="docutils literal notranslate"><span class="pre">managed_disk_type</span></code> is specified.</p></li>
 </ul>
@@ -3542,7 +3607,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>health_probe_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the identifier for the load balancer health probe. Required when using <code class="docutils literal notranslate"><span class="pre">Rolling</span></code> as your <code class="docutils literal notranslate"><span class="pre">upgrade_policy_mode</span></code>.</p></li>
 <li><p><strong>license_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the Windows OS license type. If supplied, the only allowed values are <code class="docutils literal notranslate"><span class="pre">Windows_Client</span></code> and <code class="docutils literal notranslate"><span class="pre">Windows_Server</span></code>.</p></li>
 <li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the image from the marketplace.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the virtual machine scale set resource. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>network_profiles</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A collection of network profile block as documented below.</p></li>
 <li><p><strong>os_profile</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A Virtual Machine OS Profile block as documented below.</p></li>
 <li><p><strong>os_profile_linux_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A Linux config block as documented below.</p></li>
@@ -3556,7 +3621,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>rolling_upgrade_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">rolling_upgrade_policy</span></code> block as defined below. This is only applicable when the <code class="docutils literal notranslate"><span class="pre">upgrade_policy_mode</span></code> is <code class="docutils literal notranslate"><span class="pre">Rolling</span></code>.</p></li>
 <li><p><strong>single_placement_group</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – <p>Specifies whether the scale set is limited to a single placement group with a maximum size of 100 virtual machines. If set to false, managed disks must be used. Default is true. Changing this forces a new resource to be created. See <a class="reference external" href="http://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-placement-groups">documentation</a> for more information.</p>
 </p></li>
-<li><p><strong>sku</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Specifies the SKU of the image used to create the virtual machines.</p></li>
+<li><p><strong>sku</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A sku block as documented below.</p></li>
 <li><p><strong>storage_profile_data_disks</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A storage profile data disk block as documented below</p></li>
 <li><p><strong>storage_profile_image_reference</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A storage profile image reference block as documented below.</p></li>
 <li><p><strong>storage_profile_os_disk</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A storage profile os disk block as documented below</p></li>
@@ -3574,10 +3639,10 @@ properties used to qualify the lookup.</p>
 <p>The <strong>extensions</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">auto_upgrade_minor_version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specifies whether or not to use the latest minor version available.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the image from the marketplace.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the extension.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">protected_settings</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The protected_settings passed to the extension, like settings, these are specified as a JSON object in a string.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">provision_after_extensions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies a dependency array of extensions required to be executed before, the array stores the name of each extension.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">publisher</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the publisher of the image.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publisher</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The publisher of the extension, available publishers can be found by using the Azure CLI.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">settings</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The settings passed to the extension, these are specified as a JSON object in a string.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of extension, available types for a publisher can be found using the Azure CLI.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type_handler_version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the version of the extension to use, available versions can be found using the Azure CLI.</p></li>
@@ -3586,7 +3651,7 @@ properties used to qualify the lookup.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">identityIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies a list of user managed identity ids to be assigned to the VMSS. Required if <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">UserAssigned</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">principal_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of extension, available types for a publisher can be found using the Azure CLI.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the identity type to be assigned to the scale set. Allowable values are <code class="docutils literal notranslate"><span class="pre">SystemAssigned</span></code> and <code class="docutils literal notranslate"><span class="pre">UserAssigned</span></code>. For the <code class="docutils literal notranslate"><span class="pre">SystemAssigned</span></code> identity the scale set’s Service Principal ID (SPN) can be retrieved after the scale set has been created. See <a class="reference external" href="https://docs.microsoft.com/en-us/azure/active-directory/managed-service-identity/overview">documentation</a> for more information.</p></li>
 </ul>
 <p>The <strong>network_profiles</strong> object supports the following:</p>
 <ul class="simple">
@@ -3602,22 +3667,22 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">applicationSecurityGroupIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies up to <code class="docutils literal notranslate"><span class="pre">20</span></code> application security group IDs.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">loadBalancerBackendAddressPoolIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies an array of references to backend address pools of load balancers. A scale set can reference backend address pools of one public and one internal load balancer. Multiple scale sets cannot use the same load balancer.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">loadBalancerInboundNatRulesIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies an array of references to inbound NAT pools for load balancers. A scale set can reference inbound nat pools of one public and one internal load balancer. Multiple scale sets cannot use the same load balancer.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the image from the marketplace.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies name of the IP configuration.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">primary</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specifies if this ip_configuration is the primary one.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">publicIpAddressConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Describes a virtual machines scale set IP Configuration’s PublicIPAddress configuration. The public_ip_address_configuration is documented below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">domain_name_label</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The domain name label for the dns settings.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">idleTimeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The idle timeout in minutes. This value must be between 4 and 30.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the image from the marketplace.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the public ip address configuration</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the identifier of the subnet.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ipForwarding</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether IP forwarding is enabled on this NIC. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the image from the marketplace.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the network interface configuration.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">network_security_group_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the identifier for the network security group.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">primary</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specifies if this ip_configuration is the primary one.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">primary</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether network interfaces created from the network interface configuration will be the primary NIC of the VM.</p></li>
 </ul>
 <p>The <strong>os_profile</strong> object supports the following:</p>
 <ul class="simple">
@@ -3642,7 +3707,7 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">vaultCertificates</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A collection of Vault Certificates as documented below</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">certificateStore</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the certificate store on the Virtual Machine where the certificate should be added to.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">certificateUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies URL of the certificate with which new Virtual Machines is provisioned.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificateUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - It is the Base64 encoding of a JSON Object that which is encoded in UTF-8 of which the contents need to be <code class="docutils literal notranslate"><span class="pre">data</span></code>, <code class="docutils literal notranslate"><span class="pre">dataType</span></code> and <code class="docutils literal notranslate"><span class="pre">password</span></code>.</p></li>
 </ul>
 </li>
 </ul>
@@ -3681,7 +3746,7 @@ properties used to qualify the lookup.</p>
 <p>The <strong>sku</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">capacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the number of virtual machines in the scale set.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the image from the marketplace.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the size of virtual machines in a scale set.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">tier</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the tier of virtual machines in a scale set. Possible values, <code class="docutils literal notranslate"><span class="pre">standard</span></code> or <code class="docutils literal notranslate"><span class="pre">basic</span></code>.</p></li>
 </ul>
 <p>The <strong>storage_profile_data_disks</strong> object supports the following:</p>
@@ -3697,19 +3762,19 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the ID of the (custom) image to use to create the virtual
 machine scale set, as in the example below.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">offer</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the offer of the image used to create the virtual machines.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">publisher</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the publisher of the image.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publisher</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the publisher of the image used to create the virtual machines.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sku</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the SKU of the image used to create the virtual machines.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the version of the image used to create the virtual machines.</p></li>
 </ul>
 <p>The <strong>storage_profile_os_disk</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">caching</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the caching requirements. Possible values include: <code class="docutils literal notranslate"><span class="pre">None</span></code> (default), <code class="docutils literal notranslate"><span class="pre">ReadOnly</span></code>, <code class="docutils literal notranslate"><span class="pre">ReadWrite</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">create_option</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies how the data disk should be created. The only possible options are <code class="docutils literal notranslate"><span class="pre">FromImage</span></code> and <code class="docutils literal notranslate"><span class="pre">Empty</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">create_option</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies how the virtual machine should be created. The only possible option is <code class="docutils literal notranslate"><span class="pre">FromImage</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">image</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the blob uri for user image. A virtual machine scale set creates an os disk in the same container as the user image.
 Updating the osDisk image causes the existing disk to be deleted and a new one created with the new image. If the VM scale set is in Manual upgrade mode then the virtual machines are not updated until they have manualUpgrade applied to them.
 When setting this field <code class="docutils literal notranslate"><span class="pre">os_type</span></code> needs to be specified. Cannot be used when <code class="docutils literal notranslate"><span class="pre">vhd_containers</span></code>, <code class="docutils literal notranslate"><span class="pre">managed_disk_type</span></code> or <code class="docutils literal notranslate"><span class="pre">storage_profile_image_reference</span></code> are specified.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">managedDiskType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the type of managed disk to create. Value must be either <code class="docutils literal notranslate"><span class="pre">Standard_LRS</span></code>, <code class="docutils literal notranslate"><span class="pre">StandardSSD_LRS</span></code> or <code class="docutils literal notranslate"><span class="pre">Premium_LRS</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the image from the marketplace.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">managedDiskType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the type of managed disk to create. Value you must be either <code class="docutils literal notranslate"><span class="pre">Standard_LRS</span></code>, <code class="docutils literal notranslate"><span class="pre">StandardSSD_LRS</span></code> or <code class="docutils literal notranslate"><span class="pre">Premium_LRS</span></code>. Cannot be used when <code class="docutils literal notranslate"><span class="pre">vhd_containers</span></code> or <code class="docutils literal notranslate"><span class="pre">image</span></code> is specified.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the disk name. Must be specified when using unmanaged disk (‘managed_disk_type’ property not set).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">os_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the operating system Type, valid values are windows, linux.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">vhdContainers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies the vhd uri. Cannot be used when <code class="docutils literal notranslate"><span class="pre">image</span></code> or <code class="docutils literal notranslate"><span class="pre">managed_disk_type</span></code> is specified.</p></li>
 </ul>
@@ -3781,9 +3846,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <p>The <strong>identifier</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">offer</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">publisher</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sku</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">offer</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Offer Name for this Shared Image.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publisher</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Publisher Name for this Gallery Image.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sku</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of the SKU for this Gallery Image.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_azure.compute.SharedImage.description">
@@ -3808,9 +3873,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">identifier</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.SharedImage.identifier" title="Permalink to this definition">¶</a></dt>
 <dd><p>An <code class="docutils literal notranslate"><span class="pre">identifier</span></code> block as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">offer</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">publisher</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sku</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">offer</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Offer Name for this Shared Image.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publisher</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Publisher Name for this Gallery Image.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sku</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Name of the SKU for this Gallery Image.</p></li>
 </ul>
 </dd></dl>
 
@@ -3883,9 +3948,9 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>identifier</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">offer</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">publisher</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sku</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">offer</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Offer Name for this Shared Image.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publisher</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Publisher Name for this Gallery Image.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sku</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of the SKU for this Gallery Image.</p></li>
 </ul>
 </dd></dl>
 
@@ -4069,9 +4134,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <p>The <strong>target_regions</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The version number for this Image Version, such as <code class="docutils literal notranslate"><span class="pre">1.0.0</span></code>. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">regionalReplicaCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Azure Region in which this Image Version should exist.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">regionalReplicaCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of replicas of the Image Version to be created per region.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The storage account type for the image version, which defaults to <code class="docutils literal notranslate"><span class="pre">Standard_LRS</span></code>. You can store all of your image version replicas in Zone Redundant Storage by specifying <code class="docutils literal notranslate"><span class="pre">Standard_ZRS</span></code>.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_azure.compute.SharedImageVersion.exclude_from_latest">
@@ -4126,9 +4191,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">target_regions</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.SharedImageVersion.target_regions" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">target_region</span></code> blocks as documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The version number for this Image Version, such as <code class="docutils literal notranslate"><span class="pre">1.0.0</span></code>. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">regionalReplicaCount</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Azure Region in which this Image Version should exist.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">regionalReplicaCount</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of replicas of the Image Version to be created per region.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The storage account type for the image version, which defaults to <code class="docutils literal notranslate"><span class="pre">Standard_LRS</span></code>. You can store all of your image version replicas in Zone Redundant Storage by specifying <code class="docutils literal notranslate"><span class="pre">Standard_ZRS</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -4157,9 +4222,9 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>target_regions</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The version number for this Image Version, such as <code class="docutils literal notranslate"><span class="pre">1.0.0</span></code>. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">regionalReplicaCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Azure Region in which this Image Version should exist.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">regionalReplicaCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of replicas of the Image Version to be created per region.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The storage account type for the image version, which defaults to <code class="docutils literal notranslate"><span class="pre">Standard_LRS</span></code>. You can store all of your image version replicas in Zone Redundant Storage by specifying <code class="docutils literal notranslate"><span class="pre">Standard_ZRS</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -4417,111 +4482,111 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <p>The <strong>additional_capabilities</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">ultraSsdEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ultraSsdEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should Ultra SSD disk be enabled for this Virtual Machine?</p></li>
 </ul>
 <p>The <strong>boot_diagnostics</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">storageUri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should Boot Diagnostics be enabled for this Virtual Machine?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storageUri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Storage Account’s Blob Endpoint which should hold the virtual machine’s diagnostic files.</p></li>
 </ul>
 <p>The <strong>identity</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">identityIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">identityIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies a list of user managed identity ids to be assigned to the VM. Required if <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">UserAssigned</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">principal_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Principal ID for the Service Principal associated with the Managed Service Identity of this Virtual Machine.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Managed Service Identity Type of this Virtual Machine. Possible values are <code class="docutils literal notranslate"><span class="pre">SystemAssigned</span></code> (where Azure will generate a Service Principal for you), <code class="docutils literal notranslate"><span class="pre">UserAssigned</span></code> (where you can specify the Service Principal ID’s) to be used by this Virtual Machine using the <code class="docutils literal notranslate"><span class="pre">identity_ids</span></code> field, and <code class="docutils literal notranslate"><span class="pre">SystemAssigned,</span> <span class="pre">UserAssigned</span></code> which assigns both a system managed identity as well as the specified user assigned identities.</p></li>
 </ul>
 <p>The <strong>os_profile</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">admin_password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">admin_username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">computer_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">custom_data</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">admin_password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The password associated with the local administrator account.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">admin_username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the local administrator account.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">computer_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the Virtual Machine.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">custom_data</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies custom data to supply to the machine. On Linux-based systems, this can be used as a cloud-init script. On other systems, this will be copied as a file on disk. Internally, this provider will base64 encode this value before sending it to the API. The maximum length of the binary array is 65535 bytes.</p></li>
 </ul>
 <p>The <strong>os_profile_linux_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">disable_password_authentication</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sshKeys</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">disable_password_authentication</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specifies whether password authentication should be disabled. If set to <code class="docutils literal notranslate"><span class="pre">false</span></code>, an <code class="docutils literal notranslate"><span class="pre">admin_password</span></code> must be specified.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sshKeys</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">ssh_keys</span></code> blocks. This field is required if <code class="docutils literal notranslate"><span class="pre">disable_password_authentication</span></code> is set to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">keyData</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">keyData</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Public SSH Key which should be written to the <code class="docutils literal notranslate"><span class="pre">path</span></code> defined above.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path of the destination file on the virtual machine</p></li>
 </ul>
 </li>
 </ul>
 <p>The <strong>os_profile_secrets</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">sourceVaultId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">vaultCertificates</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">sourceVaultId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the ID of the Key Vault to use.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vaultCertificates</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">vault_certificates</span></code> blocks.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">certificateStore</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">certificateUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificateStore</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the certificate store on the Virtual Machine where the certificate should be added to, such as <code class="docutils literal notranslate"><span class="pre">My</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificateUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Key Vault Secret. Stored secret is the Base64 encoding of a JSON Object that which is encoded in UTF-8 of which the contents need to be:</p></li>
 </ul>
 </li>
 </ul>
 <p>The <strong>os_profile_windows_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">additionalUnattendConfigs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">additionalUnattendConfigs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">additional_unattend_config</span></code> block.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">component</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">content</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">pass</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">settingName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">component</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the component to configure with the added content. The only allowable value is <code class="docutils literal notranslate"><span class="pre">Microsoft-Windows-Shell-Setup</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">content</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the base-64 encoded XML formatted content that is added to the unattend.xml file for the specified path and component.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pass</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the pass that the content applies to. The only allowable value is <code class="docutils literal notranslate"><span class="pre">oobeSystem</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">settingName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the setting to which the content applies. Possible values are: <code class="docutils literal notranslate"><span class="pre">FirstLogonCommands</span></code> and <code class="docutils literal notranslate"><span class="pre">AutoLogon</span></code>.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enableAutomaticUpgrades</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">provision_vm_agent</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">timezone</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">winrms</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">enableAutomaticUpgrades</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Are automatic updates enabled on this Virtual Machine? Defaults to <code class="docutils literal notranslate"><span class="pre">false.</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">provision_vm_agent</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should the Azure Virtual Machine Guest Agent be installed on this Virtual Machine? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timezone</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the time zone of the virtual machine, <a class="reference external" href="http://jackstromberg.com/2017/01/list-of-time-zones-consumed-by-azure/">the possible values are defined here</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">winrms</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">winrm</span></code> block.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">certificateUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificateUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Key Vault Secret which contains the encrypted Certificate which should be installed on the Virtual Machine. This certificate must also be specified in the <code class="docutils literal notranslate"><span class="pre">vault_certificates</span></code> block within the <code class="docutils literal notranslate"><span class="pre">os_profile_secrets</span></code> block.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the protocol of listener. Possible values are <code class="docutils literal notranslate"><span class="pre">HTTP</span></code> or <code class="docutils literal notranslate"><span class="pre">HTTPS</span></code>.</p></li>
 </ul>
 </li>
 </ul>
 <p>The <strong>plan</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the Virtual Machine. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">product</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">publisher</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the image from the marketplace.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">product</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the product of the image from the marketplace.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publisher</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the publisher of the image.</p></li>
 </ul>
 <p>The <strong>storage_data_disks</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">caching</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">create_option</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">lun</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">managed_disk_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">managedDiskType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the Virtual Machine. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">vhdUri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">write_accelerator_enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">caching</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the caching requirements for the Data Disk. Possible values include <code class="docutils literal notranslate"><span class="pre">None</span></code>, <code class="docutils literal notranslate"><span class="pre">ReadOnly</span></code> and <code class="docutils literal notranslate"><span class="pre">ReadWrite</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">create_option</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies how the data disk should be created. Possible values are <code class="docutils literal notranslate"><span class="pre">Attach</span></code>, <code class="docutils literal notranslate"><span class="pre">FromImage</span></code> and <code class="docutils literal notranslate"><span class="pre">Empty</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the size of the data disk in gigabytes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lun</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the logical unit number of the data disk. This needs to be unique within all the Data Disks on the Virtual Machine.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">managed_disk_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the ID of an Existing Managed Disk which should be attached to this Virtual Machine. When this field is set <code class="docutils literal notranslate"><span class="pre">create_option</span></code> must be set to <code class="docutils literal notranslate"><span class="pre">Attach</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">managedDiskType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the type of managed disk to create. Possible values are either <code class="docutils literal notranslate"><span class="pre">Standard_LRS</span></code>, <code class="docutils literal notranslate"><span class="pre">StandardSSD_LRS</span></code>, <code class="docutils literal notranslate"><span class="pre">Premium_LRS</span></code> or <code class="docutils literal notranslate"><span class="pre">UltraSSD_LRS</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Data Disk.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vhdUri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the URI of the VHD file backing this Unmanaged Data Disk. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">write_accelerator_enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specifies if Write Accelerator is enabled on the disk. This can only be enabled on <code class="docutils literal notranslate"><span class="pre">Premium_LRS</span></code> managed disks with no caching and <a class="reference external" href="https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/how-to-enable-write-accelerator">M-Series VMs</a>. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
 <p>The <strong>storage_image_reference</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Virtual Machine.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">offer</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">publisher</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sku</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the ID of the Custom Image which the Virtual Machine should be created from. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">offer</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the offer of the image used to create the virtual machine. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publisher</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the publisher of the image used to create the virtual machine. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sku</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the SKU of the image used to create the virtual machine. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the version of the image used to create the virtual machine. Changing this forces a new resource to be created.</p></li>
 </ul>
 <p>The <strong>storage_os_disk</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">caching</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">create_option</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">imageUri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">managed_disk_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">managedDiskType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the Virtual Machine. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">os_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">vhdUri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">write_accelerator_enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">caching</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the caching requirements for the OS Disk. Possible values include <code class="docutils literal notranslate"><span class="pre">None</span></code>, <code class="docutils literal notranslate"><span class="pre">ReadOnly</span></code> and <code class="docutils literal notranslate"><span class="pre">ReadWrite</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">create_option</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies how the OS Disk should be created. Possible values are <code class="docutils literal notranslate"><span class="pre">Attach</span></code> (managed disks only) and <code class="docutils literal notranslate"><span class="pre">FromImage</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the size of the OS Disk in gigabytes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">imageUri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the Image URI in the format <code class="docutils literal notranslate"><span class="pre">publisherName:offer:skus:version</span></code>. This field can also specify the <a class="reference external" href="https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-linux-cli-deploy-templates/#create-a-custom-vm-image">VHD uri</a> of a custom VM image to clone. When cloning a Custom (Unmanaged) Disk Image the <code class="docutils literal notranslate"><span class="pre">os_type</span></code> field must be set.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">managed_disk_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the ID of an existing Managed Disk which should be attached as the OS Disk of this Virtual Machine. If this is set then the <code class="docutils literal notranslate"><span class="pre">create_option</span></code> must be set to <code class="docutils literal notranslate"><span class="pre">Attach</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">managedDiskType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the type of Managed Disk which should be created. Possible values are <code class="docutils literal notranslate"><span class="pre">Standard_LRS</span></code>, <code class="docutils literal notranslate"><span class="pre">StandardSSD_LRS</span></code> or <code class="docutils literal notranslate"><span class="pre">Premium_LRS</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the OS Disk.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">os_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the Operating System on the OS Disk. Possible values are <code class="docutils literal notranslate"><span class="pre">Linux</span></code> and <code class="docutils literal notranslate"><span class="pre">Windows</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vhdUri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the URI of the VHD file backing this Unmanaged OS Disk. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">write_accelerator_enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specifies if Write Accelerator is enabled on the disk. This can only be enabled on <code class="docutils literal notranslate"><span class="pre">Premium_LRS</span></code> managed disks with no caching and <a class="reference external" href="https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/how-to-enable-write-accelerator">M-Series VMs</a>. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_azure.compute.VirtualMachine.additional_capabilities">
 <code class="sig-name descname">additional_capabilities</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.VirtualMachine.additional_capabilities" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">additional_capabilities</span></code> block.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">ultraSsdEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ultraSsdEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Should Ultra SSD disk be enabled for this Virtual Machine?</p></li>
 </ul>
 </dd></dl>
 
@@ -4536,8 +4601,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">boot_diagnostics</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.VirtualMachine.boot_diagnostics" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">boot_diagnostics</span></code> block.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">storageUri</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Should Boot Diagnostics be enabled for this Virtual Machine?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storageUri</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Storage Account’s Blob Endpoint which should hold the virtual machine’s diagnostic files.</p></li>
 </ul>
 </dd></dl>
 
@@ -4558,9 +4623,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">identity</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.VirtualMachine.identity" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">identity</span></code> block.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">identityIds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">identityIds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Specifies a list of user managed identity ids to be assigned to the VM. Required if <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">UserAssigned</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">principal_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Principal ID for the Service Principal associated with the Managed Service Identity of this Virtual Machine.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Managed Service Identity Type of this Virtual Machine. Possible values are <code class="docutils literal notranslate"><span class="pre">SystemAssigned</span></code> (where Azure will generate a Service Principal for you), <code class="docutils literal notranslate"><span class="pre">UserAssigned</span></code> (where you can specify the Service Principal ID’s) to be used by this Virtual Machine using the <code class="docutils literal notranslate"><span class="pre">identity_ids</span></code> field, and <code class="docutils literal notranslate"><span class="pre">SystemAssigned,</span> <span class="pre">UserAssigned</span></code> which assigns both a system managed identity as well as the specified user assigned identities.</p></li>
 </ul>
 </dd></dl>
 
@@ -4593,10 +4658,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">os_profile</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.VirtualMachine.os_profile" title="Permalink to this definition">¶</a></dt>
 <dd><p>An <code class="docutils literal notranslate"><span class="pre">os_profile</span></code> block. Required when <code class="docutils literal notranslate"><span class="pre">create_option</span></code> in the <code class="docutils literal notranslate"><span class="pre">storage_os_disk</span></code> block is set to <code class="docutils literal notranslate"><span class="pre">FromImage</span></code>.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">admin_password</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">admin_username</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">computer_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">custom_data</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">admin_password</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The password associated with the local administrator account.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">admin_username</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the name of the local administrator account.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">computer_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the name of the Virtual Machine.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">custom_data</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies custom data to supply to the machine. On Linux-based systems, this can be used as a cloud-init script. On other systems, this will be copied as a file on disk. Internally, this provider will base64 encode this value before sending it to the API. The maximum length of the binary array is 65535 bytes.</p></li>
 </ul>
 </dd></dl>
 
@@ -4605,11 +4670,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">os_profile_linux_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.VirtualMachine.os_profile_linux_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">os_profile_linux_config</span></code> block.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">disable_password_authentication</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sshKeys</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">disable_password_authentication</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Specifies whether password authentication should be disabled. If set to <code class="docutils literal notranslate"><span class="pre">false</span></code>, an <code class="docutils literal notranslate"><span class="pre">admin_password</span></code> must be specified.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sshKeys</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">ssh_keys</span></code> blocks. This field is required if <code class="docutils literal notranslate"><span class="pre">disable_password_authentication</span></code> is set to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">keyData</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">keyData</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Public SSH Key which should be written to the <code class="docutils literal notranslate"><span class="pre">path</span></code> defined above.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The path of the destination file on the virtual machine</p></li>
 </ul>
 </li>
 </ul>
@@ -4620,11 +4685,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">os_profile_secrets</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.VirtualMachine.os_profile_secrets" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">os_profile_secrets</span></code> blocks.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">sourceVaultId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">vaultCertificates</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">sourceVaultId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the ID of the Key Vault to use.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vaultCertificates</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">vault_certificates</span></code> blocks.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">certificateStore</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">certificateUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificateStore</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the certificate store on the Virtual Machine where the certificate should be added to, such as <code class="docutils literal notranslate"><span class="pre">My</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificateUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the Key Vault Secret. Stored secret is the Base64 encoding of a JSON Object that which is encoded in UTF-8 of which the contents need to be:</p></li>
 </ul>
 </li>
 </ul>
@@ -4635,21 +4700,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">os_profile_windows_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.VirtualMachine.os_profile_windows_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">os_profile_windows_config</span></code> block.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">additionalUnattendConfigs</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">additionalUnattendConfigs</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A <code class="docutils literal notranslate"><span class="pre">additional_unattend_config</span></code> block.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">component</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">content</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">pass</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">settingName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">component</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the name of the component to configure with the added content. The only allowable value is <code class="docutils literal notranslate"><span class="pre">Microsoft-Windows-Shell-Setup</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">content</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the base-64 encoded XML formatted content that is added to the unattend.xml file for the specified path and component.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pass</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the name of the pass that the content applies to. The only allowable value is <code class="docutils literal notranslate"><span class="pre">oobeSystem</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">settingName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the name of the setting to which the content applies. Possible values are: <code class="docutils literal notranslate"><span class="pre">FirstLogonCommands</span></code> and <code class="docutils literal notranslate"><span class="pre">AutoLogon</span></code>.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enableAutomaticUpgrades</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">provision_vm_agent</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">timezone</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">winrms</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">enableAutomaticUpgrades</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Are automatic updates enabled on this Virtual Machine? Defaults to <code class="docutils literal notranslate"><span class="pre">false.</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">provision_vm_agent</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Should the Azure Virtual Machine Guest Agent be installed on this Virtual Machine? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timezone</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the time zone of the virtual machine, <a class="reference external" href="http://jackstromberg.com/2017/01/list-of-time-zones-consumed-by-azure/">the possible values are defined here</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">winrms</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">winrm</span></code> block.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">certificateUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificateUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the Key Vault Secret which contains the encrypted Certificate which should be installed on the Virtual Machine. This certificate must also be specified in the <code class="docutils literal notranslate"><span class="pre">vault_certificates</span></code> block within the <code class="docutils literal notranslate"><span class="pre">os_profile_secrets</span></code> block.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the protocol of listener. Possible values are <code class="docutils literal notranslate"><span class="pre">HTTP</span></code> or <code class="docutils literal notranslate"><span class="pre">HTTPS</span></code>.</p></li>
 </ul>
 </li>
 </ul>
@@ -4660,9 +4725,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">plan</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.VirtualMachine.plan" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">plan</span></code> block.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the name of the Virtual Machine. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">product</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">publisher</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the name of the image from the marketplace.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">product</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the product of the image from the marketplace.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publisher</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the publisher of the image.</p></li>
 </ul>
 </dd></dl>
 
@@ -4689,15 +4754,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">storage_data_disks</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.VirtualMachine.storage_data_disks" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">storage_data_disk</span></code> blocks.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">caching</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">create_option</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">lun</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">managed_disk_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">managedDiskType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the name of the Virtual Machine. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">vhdUri</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">write_accelerator_enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">caching</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the caching requirements for the Data Disk. Possible values include <code class="docutils literal notranslate"><span class="pre">None</span></code>, <code class="docutils literal notranslate"><span class="pre">ReadOnly</span></code> and <code class="docutils literal notranslate"><span class="pre">ReadWrite</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">create_option</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies how the data disk should be created. Possible values are <code class="docutils literal notranslate"><span class="pre">Attach</span></code>, <code class="docutils literal notranslate"><span class="pre">FromImage</span></code> and <code class="docutils literal notranslate"><span class="pre">Empty</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Specifies the size of the data disk in gigabytes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lun</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Specifies the logical unit number of the data disk. This needs to be unique within all the Data Disks on the Virtual Machine.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">managed_disk_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the ID of an Existing Managed Disk which should be attached to this Virtual Machine. When this field is set <code class="docutils literal notranslate"><span class="pre">create_option</span></code> must be set to <code class="docutils literal notranslate"><span class="pre">Attach</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">managedDiskType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the type of managed disk to create. Possible values are either <code class="docutils literal notranslate"><span class="pre">Standard_LRS</span></code>, <code class="docutils literal notranslate"><span class="pre">StandardSSD_LRS</span></code>, <code class="docutils literal notranslate"><span class="pre">Premium_LRS</span></code> or <code class="docutils literal notranslate"><span class="pre">UltraSSD_LRS</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the Data Disk.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vhdUri</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the URI of the VHD file backing this Unmanaged Data Disk. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">write_accelerator_enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Specifies if Write Accelerator is enabled on the disk. This can only be enabled on <code class="docutils literal notranslate"><span class="pre">Premium_LRS</span></code> managed disks with no caching and <a class="reference external" href="https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/how-to-enable-write-accelerator">M-Series VMs</a>. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -4706,11 +4771,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">storage_image_reference</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.VirtualMachine.storage_image_reference" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">storage_image_reference</span></code> block.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the Virtual Machine.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">offer</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">publisher</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sku</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the ID of the Custom Image which the Virtual Machine should be created from. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">offer</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the offer of the image used to create the virtual machine. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publisher</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the publisher of the image used to create the virtual machine. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sku</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the SKU of the image used to create the virtual machine. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the version of the image used to create the virtual machine. Changing this forces a new resource to be created.</p></li>
 </ul>
 </dd></dl>
 
@@ -4719,16 +4784,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">storage_os_disk</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.VirtualMachine.storage_os_disk" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">storage_os_disk</span></code> block.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">caching</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">create_option</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">imageUri</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">managed_disk_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">managedDiskType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the name of the Virtual Machine. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">os_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">vhdUri</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">write_accelerator_enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">caching</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the caching requirements for the OS Disk. Possible values include <code class="docutils literal notranslate"><span class="pre">None</span></code>, <code class="docutils literal notranslate"><span class="pre">ReadOnly</span></code> and <code class="docutils literal notranslate"><span class="pre">ReadWrite</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">create_option</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies how the OS Disk should be created. Possible values are <code class="docutils literal notranslate"><span class="pre">Attach</span></code> (managed disks only) and <code class="docutils literal notranslate"><span class="pre">FromImage</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Specifies the size of the OS Disk in gigabytes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">imageUri</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the Image URI in the format <code class="docutils literal notranslate"><span class="pre">publisherName:offer:skus:version</span></code>. This field can also specify the <a class="reference external" href="https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-linux-cli-deploy-templates/#create-a-custom-vm-image">VHD uri</a> of a custom VM image to clone. When cloning a Custom (Unmanaged) Disk Image the <code class="docutils literal notranslate"><span class="pre">os_type</span></code> field must be set.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">managed_disk_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the ID of an existing Managed Disk which should be attached as the OS Disk of this Virtual Machine. If this is set then the <code class="docutils literal notranslate"><span class="pre">create_option</span></code> must be set to <code class="docutils literal notranslate"><span class="pre">Attach</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">managedDiskType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the type of Managed Disk which should be created. Possible values are <code class="docutils literal notranslate"><span class="pre">Standard_LRS</span></code>, <code class="docutils literal notranslate"><span class="pre">StandardSSD_LRS</span></code> or <code class="docutils literal notranslate"><span class="pre">Premium_LRS</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the name of the OS Disk.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">os_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the Operating System on the OS Disk. Possible values are <code class="docutils literal notranslate"><span class="pre">Linux</span></code> and <code class="docutils literal notranslate"><span class="pre">Windows</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vhdUri</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the URI of the VHD file backing this Unmanaged OS Disk. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">write_accelerator_enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Specifies if Write Accelerator is enabled on the disk. This can only be enabled on <code class="docutils literal notranslate"><span class="pre">Premium_LRS</span></code> managed disks with no caching and <a class="reference external" href="https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/how-to-enable-write-accelerator">M-Series VMs</a>. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -4791,104 +4856,104 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>additional_capabilities</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">ultraSsdEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ultraSsdEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should Ultra SSD disk be enabled for this Virtual Machine?</p></li>
 </ul>
 <p>The <strong>boot_diagnostics</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">storageUri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should Boot Diagnostics be enabled for this Virtual Machine?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storageUri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Storage Account’s Blob Endpoint which should hold the virtual machine’s diagnostic files.</p></li>
 </ul>
 <p>The <strong>identity</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">identityIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">identityIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies a list of user managed identity ids to be assigned to the VM. Required if <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">UserAssigned</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">principal_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Principal ID for the Service Principal associated with the Managed Service Identity of this Virtual Machine.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Managed Service Identity Type of this Virtual Machine. Possible values are <code class="docutils literal notranslate"><span class="pre">SystemAssigned</span></code> (where Azure will generate a Service Principal for you), <code class="docutils literal notranslate"><span class="pre">UserAssigned</span></code> (where you can specify the Service Principal ID’s) to be used by this Virtual Machine using the <code class="docutils literal notranslate"><span class="pre">identity_ids</span></code> field, and <code class="docutils literal notranslate"><span class="pre">SystemAssigned,</span> <span class="pre">UserAssigned</span></code> which assigns both a system managed identity as well as the specified user assigned identities.</p></li>
 </ul>
 <p>The <strong>os_profile</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">admin_password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">admin_username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">computer_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">custom_data</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">admin_password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The password associated with the local administrator account.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">admin_username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the local administrator account.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">computer_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the Virtual Machine.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">custom_data</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies custom data to supply to the machine. On Linux-based systems, this can be used as a cloud-init script. On other systems, this will be copied as a file on disk. Internally, this provider will base64 encode this value before sending it to the API. The maximum length of the binary array is 65535 bytes.</p></li>
 </ul>
 <p>The <strong>os_profile_linux_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">disable_password_authentication</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sshKeys</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">disable_password_authentication</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specifies whether password authentication should be disabled. If set to <code class="docutils literal notranslate"><span class="pre">false</span></code>, an <code class="docutils literal notranslate"><span class="pre">admin_password</span></code> must be specified.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sshKeys</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">ssh_keys</span></code> blocks. This field is required if <code class="docutils literal notranslate"><span class="pre">disable_password_authentication</span></code> is set to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">keyData</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">keyData</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Public SSH Key which should be written to the <code class="docutils literal notranslate"><span class="pre">path</span></code> defined above.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path of the destination file on the virtual machine</p></li>
 </ul>
 </li>
 </ul>
 <p>The <strong>os_profile_secrets</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">sourceVaultId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">vaultCertificates</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">sourceVaultId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the ID of the Key Vault to use.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vaultCertificates</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">vault_certificates</span></code> blocks.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">certificateStore</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">certificateUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificateStore</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the certificate store on the Virtual Machine where the certificate should be added to, such as <code class="docutils literal notranslate"><span class="pre">My</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificateUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Key Vault Secret. Stored secret is the Base64 encoding of a JSON Object that which is encoded in UTF-8 of which the contents need to be:</p></li>
 </ul>
 </li>
 </ul>
 <p>The <strong>os_profile_windows_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">additionalUnattendConfigs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">additionalUnattendConfigs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">additional_unattend_config</span></code> block.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">component</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">content</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">pass</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">settingName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">component</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the component to configure with the added content. The only allowable value is <code class="docutils literal notranslate"><span class="pre">Microsoft-Windows-Shell-Setup</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">content</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the base-64 encoded XML formatted content that is added to the unattend.xml file for the specified path and component.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pass</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the pass that the content applies to. The only allowable value is <code class="docutils literal notranslate"><span class="pre">oobeSystem</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">settingName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the setting to which the content applies. Possible values are: <code class="docutils literal notranslate"><span class="pre">FirstLogonCommands</span></code> and <code class="docutils literal notranslate"><span class="pre">AutoLogon</span></code>.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enableAutomaticUpgrades</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">provision_vm_agent</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">timezone</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">winrms</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">enableAutomaticUpgrades</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Are automatic updates enabled on this Virtual Machine? Defaults to <code class="docutils literal notranslate"><span class="pre">false.</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">provision_vm_agent</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should the Azure Virtual Machine Guest Agent be installed on this Virtual Machine? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timezone</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the time zone of the virtual machine, <a class="reference external" href="http://jackstromberg.com/2017/01/list-of-time-zones-consumed-by-azure/">the possible values are defined here</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">winrms</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">winrm</span></code> block.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">certificateUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificateUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Key Vault Secret which contains the encrypted Certificate which should be installed on the Virtual Machine. This certificate must also be specified in the <code class="docutils literal notranslate"><span class="pre">vault_certificates</span></code> block within the <code class="docutils literal notranslate"><span class="pre">os_profile_secrets</span></code> block.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the protocol of listener. Possible values are <code class="docutils literal notranslate"><span class="pre">HTTP</span></code> or <code class="docutils literal notranslate"><span class="pre">HTTPS</span></code>.</p></li>
 </ul>
 </li>
 </ul>
 <p>The <strong>plan</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the Virtual Machine. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">product</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">publisher</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the image from the marketplace.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">product</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the product of the image from the marketplace.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publisher</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the publisher of the image.</p></li>
 </ul>
 <p>The <strong>storage_data_disks</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">caching</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">create_option</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">lun</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">managed_disk_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">managedDiskType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the Virtual Machine. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">vhdUri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">write_accelerator_enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">caching</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the caching requirements for the Data Disk. Possible values include <code class="docutils literal notranslate"><span class="pre">None</span></code>, <code class="docutils literal notranslate"><span class="pre">ReadOnly</span></code> and <code class="docutils literal notranslate"><span class="pre">ReadWrite</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">create_option</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies how the data disk should be created. Possible values are <code class="docutils literal notranslate"><span class="pre">Attach</span></code>, <code class="docutils literal notranslate"><span class="pre">FromImage</span></code> and <code class="docutils literal notranslate"><span class="pre">Empty</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the size of the data disk in gigabytes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lun</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the logical unit number of the data disk. This needs to be unique within all the Data Disks on the Virtual Machine.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">managed_disk_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the ID of an Existing Managed Disk which should be attached to this Virtual Machine. When this field is set <code class="docutils literal notranslate"><span class="pre">create_option</span></code> must be set to <code class="docutils literal notranslate"><span class="pre">Attach</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">managedDiskType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the type of managed disk to create. Possible values are either <code class="docutils literal notranslate"><span class="pre">Standard_LRS</span></code>, <code class="docutils literal notranslate"><span class="pre">StandardSSD_LRS</span></code>, <code class="docutils literal notranslate"><span class="pre">Premium_LRS</span></code> or <code class="docutils literal notranslate"><span class="pre">UltraSSD_LRS</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Data Disk.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vhdUri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the URI of the VHD file backing this Unmanaged Data Disk. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">write_accelerator_enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specifies if Write Accelerator is enabled on the disk. This can only be enabled on <code class="docutils literal notranslate"><span class="pre">Premium_LRS</span></code> managed disks with no caching and <a class="reference external" href="https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/how-to-enable-write-accelerator">M-Series VMs</a>. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
 <p>The <strong>storage_image_reference</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Virtual Machine.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">offer</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">publisher</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sku</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the ID of the Custom Image which the Virtual Machine should be created from. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">offer</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the offer of the image used to create the virtual machine. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publisher</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the publisher of the image used to create the virtual machine. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sku</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the SKU of the image used to create the virtual machine. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the version of the image used to create the virtual machine. Changing this forces a new resource to be created.</p></li>
 </ul>
 <p>The <strong>storage_os_disk</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">caching</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">create_option</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">imageUri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">managed_disk_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">managedDiskType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the Virtual Machine. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">os_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">vhdUri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">write_accelerator_enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">caching</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the caching requirements for the OS Disk. Possible values include <code class="docutils literal notranslate"><span class="pre">None</span></code>, <code class="docutils literal notranslate"><span class="pre">ReadOnly</span></code> and <code class="docutils literal notranslate"><span class="pre">ReadWrite</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">create_option</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies how the OS Disk should be created. Possible values are <code class="docutils literal notranslate"><span class="pre">Attach</span></code> (managed disks only) and <code class="docutils literal notranslate"><span class="pre">FromImage</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the size of the OS Disk in gigabytes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">imageUri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the Image URI in the format <code class="docutils literal notranslate"><span class="pre">publisherName:offer:skus:version</span></code>. This field can also specify the <a class="reference external" href="https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-linux-cli-deploy-templates/#create-a-custom-vm-image">VHD uri</a> of a custom VM image to clone. When cloning a Custom (Unmanaged) Disk Image the <code class="docutils literal notranslate"><span class="pre">os_type</span></code> field must be set.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">managed_disk_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the ID of an existing Managed Disk which should be attached as the OS Disk of this Virtual Machine. If this is set then the <code class="docutils literal notranslate"><span class="pre">create_option</span></code> must be set to <code class="docutils literal notranslate"><span class="pre">Attach</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">managedDiskType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the type of Managed Disk which should be created. Possible values are <code class="docutils literal notranslate"><span class="pre">Standard_LRS</span></code>, <code class="docutils literal notranslate"><span class="pre">StandardSSD_LRS</span></code> or <code class="docutils literal notranslate"><span class="pre">Premium_LRS</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the OS Disk.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">os_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the Operating System on the OS Disk. Possible values are <code class="docutils literal notranslate"><span class="pre">Linux</span></code> and <code class="docutils literal notranslate"><span class="pre">Windows</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vhdUri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the URI of the VHD file backing this Unmanaged OS Disk. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">write_accelerator_enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specifies if Write Accelerator is enabled on the disk. This can only be enabled on <code class="docutils literal notranslate"><span class="pre">Premium_LRS</span></code> managed disks with no caching and <a class="reference external" href="https://docs.microsoft.com/en-us/azure/virtual-machines/workloads/sap/how-to-enable-write-accelerator">M-Series VMs</a>. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -5083,99 +5148,113 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_azure.compute.WindowsVirtualMachine">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">WindowsVirtualMachine</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">additional_capabilities=None</em>, <em class="sig-param">additional_unattend_contents=None</em>, <em class="sig-param">admin_password=None</em>, <em class="sig-param">admin_username=None</em>, <em class="sig-param">allow_extension_operations=None</em>, <em class="sig-param">availability_set_id=None</em>, <em class="sig-param">boot_diagnostics=None</em>, <em class="sig-param">computer_name=None</em>, <em class="sig-param">custom_data=None</em>, <em class="sig-param">dedicated_host_id=None</em>, <em class="sig-param">enable_automatic_updates=None</em>, <em class="sig-param">eviction_policy=None</em>, <em class="sig-param">identity=None</em>, <em class="sig-param">license_type=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">max_bid_price=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_interface_ids=None</em>, <em class="sig-param">os_disk=None</em>, <em class="sig-param">plan=None</em>, <em class="sig-param">priority=None</em>, <em class="sig-param">provision_vm_agent=None</em>, <em class="sig-param">proximity_placement_group_id=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">secrets=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">source_image_id=None</em>, <em class="sig-param">source_image_reference=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">timezone=None</em>, <em class="sig-param">winrm_listeners=None</em>, <em class="sig-param">zone=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.WindowsVirtualMachine" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a WindowsVirtualMachine resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[dict] additional_capabilities: A <code class="docutils literal notranslate"><span class="pre">additional_capabilities</span></code> block as defined below.
-:param pulumi.Input[list] additional_unattend_contents: One or more <code class="docutils literal notranslate"><span class="pre">additional_unattend_content</span></code> blocks as defined below. Changing this forces a new resource to be created.
-:param pulumi.Input[str] admin_password: The Password which should be used for the local-administrator on this Virtual Machine. Changing this forces a new resource to be created.
-:param pulumi.Input[str] admin_username: The username of the local administrator used for the Virtual Machine. Changing this forces a new resource to be created.
-:param pulumi.Input[bool] allow_extension_operations: Should Extension Operations be allowed on this Virtual Machine? Changing this forces a new resource to be created.
-:param pulumi.Input[str] availability_set_id: Specifies the ID of the Availability Set in which the Virtual Machine should exist. Changing this forces a new resource to be created.
-:param pulumi.Input[dict] boot_diagnostics: A <code class="docutils literal notranslate"><span class="pre">boot_diagnostics</span></code> block as defined below.
-:param pulumi.Input[str] computer_name: Specifies the Hostname which should be used for this Virtual Machine. If unspecified this defaults to the value for the <code class="docutils literal notranslate"><span class="pre">name</span></code> field. Changing this forces a new resource to be created.
-:param pulumi.Input[str] custom_data: The Base64-Encoded Custom Data which should be used for this Virtual Machine. Changing this forces a new resource to be created.
-:param pulumi.Input[str] dedicated_host_id: The ID of a Dedicated Host where this machine should be run on. Changing this forces a new resource to be created.
-:param pulumi.Input[bool] enable_automatic_updates: Specifies if Automatic Updates are Enabled for the Windows Virtual Machine. Changing this forces a new resource to be created.
-:param pulumi.Input[str] eviction_policy: Specifies what should happen when the Virtual Machine is evicted for price reasons when using a Spot instance. At this time the only supported value is <code class="docutils literal notranslate"><span class="pre">Deallocate</span></code>. Changing this forces a new resource to be created.
-:param pulumi.Input[dict] identity: An <code class="docutils literal notranslate"><span class="pre">identity</span></code> block as defined below.
-:param pulumi.Input[str] license_type: Specifies the type of on-premise license (also known as <a class="reference external" href="https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-hybrid-use-benefit-licensing">Azure Hybrid Use Benefit</a>) which should be used for this Virtual Machine. Possible values are <code class="docutils literal notranslate"><span class="pre">None</span></code>, <code class="docutils literal notranslate"><span class="pre">Windows_Client</span></code> and <code class="docutils literal notranslate"><span class="pre">Windows_Server</span></code>. Changing this forces a new resource to be created.
-:param pulumi.Input[str] location: The Azure location where the Windows Virtual Machine should exist. Changing this forces a new resource to be created.
-:param pulumi.Input[float] max_bid_price: The maximum price you’re willing to pay for this Virtual Machine, in US Dollars; which must be greater than the current spot price. If this bid price falls below the current spot price the Virtual Machine will be evicted using the <code class="docutils literal notranslate"><span class="pre">eviction_policy</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">-1</span></code>, which means that the Virtual Machine should not be evicted for price reasons.
-:param pulumi.Input[str] name: The name of the Windows Virtual Machine. Changing this forces a new resource to be created.
-:param pulumi.Input[list] network_interface_ids: . A list of Network Interface ID’s which should be attached to this Virtual Machine. The first Network Interface ID in this list will be the Primary Network Interface on the Virtual Machine.
-:param pulumi.Input[dict] os_disk: A <code class="docutils literal notranslate"><span class="pre">os_disk</span></code> block as defined below.
-:param pulumi.Input[dict] plan: A <code class="docutils literal notranslate"><span class="pre">plan</span></code> block as defined below. Changing this forces a new resource to be created.
-:param pulumi.Input[bool] provision_vm_agent: Should the Azure VM Agent be provisioned on this Virtual Machine? Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Changing this forces a new resource to be created.
-:param pulumi.Input[str] proximity_placement_group_id: The ID of the Proximity Placement Group which the Virtual Machine should be assigned to. Changing this forces a new resource to be created.
-:param pulumi.Input[str] resource_group_name: The name of the Resource Group in which the Windows Virtual Machine should be exist. Changing this forces a new resource to be created.
-:param pulumi.Input[list] secrets: One or more <code class="docutils literal notranslate"><span class="pre">secret</span></code> blocks as defined below.
-:param pulumi.Input[str] size: The SKU which should be used for this Virtual Machine, such as <code class="docutils literal notranslate"><span class="pre">Standard_F2</span></code>.
-:param pulumi.Input[str] source_image_id: The ID of the Image which this Virtual Machine should be created from. Changing this forces a new resource to be created.
-:param pulumi.Input[dict] source_image_reference: A <code class="docutils literal notranslate"><span class="pre">source_image_reference</span></code> block as defined below. Changing this forces a new resource to be created.
-:param pulumi.Input[dict] tags: A mapping of tags which should be assigned to this Virtual Machine.
-:param pulumi.Input[str] timezone: Specifies the Time Zone which should be used by the Virtual Machine, <a class="reference external" href="https://jackstromberg.com/2017/01/list-of-time-zones-consumed-by-azure/">the possible values are defined here</a>.
-:param pulumi.Input[list] winrm_listeners: One or more <code class="docutils literal notranslate"><span class="pre">winrm_listener</span></code> blocks as defined below.
-:param pulumi.Input[str] zone: The Zone in which this Virtual Machine should be created. Changing this forces a new resource to be created.</p>
+<dd><p>Manages a Windows Virtual Machine.</p>
+<blockquote>
+<div><p><strong>Note</strong> This provider will automatically remove the OS Disk by default - this behaviour can be configured using the <code class="docutils literal notranslate"><span class="pre">features</span></code> configuration within the Provider configuration block.</p>
+<p><strong>Note</strong> This resource does not support Unmanaged Disks. If you need to use Unmanaged Disks you can continue to use the <code class="docutils literal notranslate"><span class="pre">compute.VirtualMachine</span></code> resource instead.</p>
+<p><strong>Note</strong> This resource does not support attaching existing OS Disks. You can instead capture an image of the OS Disk or continue to use the <code class="docutils literal notranslate"><span class="pre">compute.VirtualMachine</span></code> resource instead.</p>
+<p>In this release there’s a known issue where the <code class="docutils literal notranslate"><span class="pre">public_ip_address</span></code> and <code class="docutils literal notranslate"><span class="pre">public_ip_addresses</span></code> fields may not be fully populated for Dynamic Public IP’s.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/windows_virtual_machine.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/windows_virtual_machine.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>additional_capabilities</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">additional_capabilities</span></code> block as defined below.</p></li>
+<li><p><strong>additional_unattend_contents</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">additional_unattend_content</span></code> blocks as defined below. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>admin_password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Password which should be used for the local-administrator on this Virtual Machine. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>admin_username</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The username of the local administrator used for the Virtual Machine. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>allow_extension_operations</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should Extension Operations be allowed on this Virtual Machine? Changing this forces a new resource to be created.</p></li>
+<li><p><strong>availability_set_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the ID of the Availability Set in which the Virtual Machine should exist. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>boot_diagnostics</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">boot_diagnostics</span></code> block as defined below.</p></li>
+<li><p><strong>computer_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the Hostname which should be used for this Virtual Machine. If unspecified this defaults to the value for the <code class="docutils literal notranslate"><span class="pre">name</span></code> field. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>custom_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Base64-Encoded Custom Data which should be used for this Virtual Machine. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>dedicated_host_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of a Dedicated Host where this machine should be run on. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>enable_automatic_updates</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies if Automatic Updates are Enabled for the Windows Virtual Machine. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>eviction_policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies what should happen when the Virtual Machine is evicted for price reasons when using a Spot instance. At this time the only supported value is <code class="docutils literal notranslate"><span class="pre">Deallocate</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>identity</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – An <code class="docutils literal notranslate"><span class="pre">identity</span></code> block as defined below.</p></li>
+<li><p><strong>license_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the type of on-premise license (also known as <a class="reference external" href="https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-hybrid-use-benefit-licensing">Azure Hybrid Use Benefit</a>) which should be used for this Virtual Machine. Possible values are <code class="docutils literal notranslate"><span class="pre">None</span></code>, <code class="docutils literal notranslate"><span class="pre">Windows_Client</span></code> and <code class="docutils literal notranslate"><span class="pre">Windows_Server</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Azure location where the Windows Virtual Machine should exist. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>max_bid_price</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum price you’re willing to pay for this Virtual Machine, in US Dollars; which must be greater than the current spot price. If this bid price falls below the current spot price the Virtual Machine will be evicted using the <code class="docutils literal notranslate"><span class="pre">eviction_policy</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">-1</span></code>, which means that the Virtual Machine should not be evicted for price reasons.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Windows Virtual Machine. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>network_interface_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – . A list of Network Interface ID’s which should be attached to this Virtual Machine. The first Network Interface ID in this list will be the Primary Network Interface on the Virtual Machine.</p></li>
+<li><p><strong>os_disk</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">os_disk</span></code> block as defined below.</p></li>
+<li><p><strong>plan</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">plan</span></code> block as defined below. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>provision_vm_agent</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should the Azure VM Agent be provisioned on this Virtual Machine? Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>proximity_placement_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Proximity Placement Group which the Virtual Machine should be assigned to. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Resource Group in which the Windows Virtual Machine should be exist. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>secrets</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">secret</span></code> blocks as defined below.</p></li>
+<li><p><strong>size</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The SKU which should be used for this Virtual Machine, such as <code class="docutils literal notranslate"><span class="pre">Standard_F2</span></code>.</p></li>
+<li><p><strong>source_image_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Image which this Virtual Machine should be created from. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>source_image_reference</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">source_image_reference</span></code> block as defined below. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags which should be assigned to this Virtual Machine.</p></li>
+<li><p><strong>timezone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Specifies the Time Zone which should be used by the Virtual Machine, <a class="reference external" href="https://jackstromberg.com/2017/01/list-of-time-zones-consumed-by-azure/">the possible values are defined here</a>.</p>
+</p></li>
+<li><p><strong>winrm_listeners</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">winrm_listener</span></code> blocks as defined below.</p></li>
+<li><p><strong>zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Zone in which this Virtual Machine should be created. Changing this forces a new resource to be created.</p></li>
+</ul>
+</dd>
+</dl>
 <p>The <strong>additional_capabilities</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">ultraSsdEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ultraSsdEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should the capacity to enable Data Disks of the <code class="docutils literal notranslate"><span class="pre">UltraSSD_LRS</span></code> storage account type be supported on this Virtual Machine? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>. Changing this forces a new resource to be created.</p></li>
 </ul>
 <p>The <strong>additional_unattend_contents</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">content</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">setting</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">content</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The XML formatted content that is added to the unattend.xml file for the specified path and component. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">setting</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the setting to which the content applies. Possible values are <code class="docutils literal notranslate"><span class="pre">AutoLogon</span></code> and <code class="docutils literal notranslate"><span class="pre">FirstLogonCommands</span></code>. Changing this forces a new resource to be created.</p></li>
 </ul>
 <p>The <strong>boot_diagnostics</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">storageAccountUri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storageAccountUri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Primary/Secondary Endpoint for the Azure Storage Account which should be used to store Boot Diagnostics, including Console Output and Screenshots from the Hypervisor.</p></li>
 </ul>
 <p>The <strong>identity</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">identityIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">identityIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of User Managed Identity ID’s which should be assigned to the Windows Virtual Machine.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">principal_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the System Managed Service Principal.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of Managed Identity which should be assigned to the Windows Virtual Machine. Possible values are <code class="docutils literal notranslate"><span class="pre">SystemAssigned</span></code>, <code class="docutils literal notranslate"><span class="pre">UserAssigned</span></code> and <code class="docutils literal notranslate"><span class="pre">SystemAssigned,</span> <span class="pre">UserAssigned</span></code>.</p></li>
 </ul>
 <p>The <strong>os_disk</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">caching</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">diffDiskSettings</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">caching</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Type of Caching which should be used for the Internal OS Disk. Possible values are <code class="docutils literal notranslate"><span class="pre">None</span></code>, <code class="docutils literal notranslate"><span class="pre">ReadOnly</span></code> and <code class="docutils literal notranslate"><span class="pre">ReadWrite</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">diffDiskSettings</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">diff_disk_settings</span></code> block as defined above.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">option</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">option</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the Ephemeral Disk Settings for the OS Disk. At this time the only possible value is <code class="docutils literal notranslate"><span class="pre">Local</span></code>. Changing this forces a new resource to be created.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">disk_encryption_set_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Windows Virtual Machine. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">write_accelerator_enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disk_encryption_set_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Disk Encryption Set which should be used to Encrypt this OS Disk.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The Size of the Internal OS Disk in GB, if you wish to vary from the size used in the image this Virtual Machine is sourced from.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name which should be used for the Internal OS Disk. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Type of Storage Account which should back this the Internal OS Disk. Possible values are <code class="docutils literal notranslate"><span class="pre">Standard_LRS</span></code>, <code class="docutils literal notranslate"><span class="pre">StandardSSD_LRS</span></code> and <code class="docutils literal notranslate"><span class="pre">Premium_LRS</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">write_accelerator_enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should Write Accelerator be Enabled for this OS Disk? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
 <p>The <strong>plan</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Windows Virtual Machine. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">product</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">publisher</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the Name of the Marketplace Image this Virtual Machine should be created from. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">product</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the Product of the Marketplace Image this Virtual Machine should be created from. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publisher</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the Publisher of the Marketplace Image this Virtual Machine should be created from. Changing this forces a new resource to be created.</p></li>
 </ul>
 <p>The <strong>secrets</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">certificates</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificates</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">certificate</span></code> blocks as defined above.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">store</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">store</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The certificate store on the Virtual Machine where the certificate should be added.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Secret URL of a Key Vault Certificate.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">key_vault_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key_vault_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Key Vault from which all Secrets should be sourced.</p></li>
 </ul>
 <p>The <strong>source_image_reference</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">offer</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">publisher</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publisher</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the Publisher of the Marketplace Image this Virtual Machine should be created from. Changing this forces a new resource to be created.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sku</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 <p>The <strong>winrm_listeners</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">certificateUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificateUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Secret URL of a Key Vault Certificate, which must be specified when <code class="docutils literal notranslate"><span class="pre">protocol</span></code> is set to <code class="docutils literal notranslate"><span class="pre">Https</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 <dl class="attribute">
@@ -5183,7 +5262,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">additional_capabilities</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.WindowsVirtualMachine.additional_capabilities" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">additional_capabilities</span></code> block as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">ultraSsdEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ultraSsdEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Should the capacity to enable Data Disks of the <code class="docutils literal notranslate"><span class="pre">UltraSSD_LRS</span></code> storage account type be supported on this Virtual Machine? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>. Changing this forces a new resource to be created.</p></li>
 </ul>
 </dd></dl>
 
@@ -5192,8 +5271,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">additional_unattend_contents</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.WindowsVirtualMachine.additional_unattend_contents" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">additional_unattend_content</span></code> blocks as defined below. Changing this forces a new resource to be created.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">content</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">setting</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">content</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The XML formatted content that is added to the unattend.xml file for the specified path and component. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">setting</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the setting to which the content applies. Possible values are <code class="docutils literal notranslate"><span class="pre">AutoLogon</span></code> and <code class="docutils literal notranslate"><span class="pre">FirstLogonCommands</span></code>. Changing this forces a new resource to be created.</p></li>
 </ul>
 </dd></dl>
 
@@ -5226,7 +5305,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">boot_diagnostics</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.WindowsVirtualMachine.boot_diagnostics" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">boot_diagnostics</span></code> block as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">storageAccountUri</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storageAccountUri</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Primary/Secondary Endpoint for the Azure Storage Account which should be used to store Boot Diagnostics, including Console Output and Screenshots from the Hypervisor.</p></li>
 </ul>
 </dd></dl>
 
@@ -5265,9 +5344,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">identity</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.WindowsVirtualMachine.identity" title="Permalink to this definition">¶</a></dt>
 <dd><p>An <code class="docutils literal notranslate"><span class="pre">identity</span></code> block as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">identityIds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">identityIds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of User Managed Identity ID’s which should be assigned to the Windows Virtual Machine.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">principal_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the System Managed Service Principal.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The type of Managed Identity which should be assigned to the Windows Virtual Machine. Possible values are <code class="docutils literal notranslate"><span class="pre">SystemAssigned</span></code>, <code class="docutils literal notranslate"><span class="pre">UserAssigned</span></code> and <code class="docutils literal notranslate"><span class="pre">SystemAssigned,</span> <span class="pre">UserAssigned</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -5306,17 +5385,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">os_disk</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.WindowsVirtualMachine.os_disk" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">os_disk</span></code> block as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">caching</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">diffDiskSettings</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">caching</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Type of Caching which should be used for the Internal OS Disk. Possible values are <code class="docutils literal notranslate"><span class="pre">None</span></code>, <code class="docutils literal notranslate"><span class="pre">ReadOnly</span></code> and <code class="docutils literal notranslate"><span class="pre">ReadWrite</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">diffDiskSettings</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A <code class="docutils literal notranslate"><span class="pre">diff_disk_settings</span></code> block as defined above.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">option</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">option</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the Ephemeral Disk Settings for the OS Disk. At this time the only possible value is <code class="docutils literal notranslate"><span class="pre">Local</span></code>. Changing this forces a new resource to be created.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">disk_encryption_set_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the Windows Virtual Machine. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">write_accelerator_enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disk_encryption_set_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the Disk Encryption Set which should be used to Encrypt this OS Disk.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The Size of the Internal OS Disk in GB, if you wish to vary from the size used in the image this Virtual Machine is sourced from.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name which should be used for the Internal OS Disk. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Type of Storage Account which should back this the Internal OS Disk. Possible values are <code class="docutils literal notranslate"><span class="pre">Standard_LRS</span></code>, <code class="docutils literal notranslate"><span class="pre">StandardSSD_LRS</span></code> and <code class="docutils literal notranslate"><span class="pre">Premium_LRS</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">write_accelerator_enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Should Write Accelerator be Enabled for this OS Disk? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -5325,9 +5404,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">plan</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.WindowsVirtualMachine.plan" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">plan</span></code> block as defined below. Changing this forces a new resource to be created.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the Windows Virtual Machine. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">product</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">publisher</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the Name of the Marketplace Image this Virtual Machine should be created from. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">product</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the Product of the Marketplace Image this Virtual Machine should be created from. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publisher</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the Publisher of the Marketplace Image this Virtual Machine should be created from. Changing this forces a new resource to be created.</p></li>
 </ul>
 </dd></dl>
 
@@ -5378,13 +5457,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">secrets</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.WindowsVirtualMachine.secrets" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">secret</span></code> blocks as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">certificates</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificates</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">certificate</span></code> blocks as defined above.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">store</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">store</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The certificate store on the Virtual Machine where the certificate should be added.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Secret URL of a Key Vault Certificate.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">key_vault_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key_vault_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the Key Vault from which all Secrets should be sourced.</p></li>
 </ul>
 </dd></dl>
 
@@ -5406,7 +5485,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">source_image_reference</span></code> block as defined below. Changing this forces a new resource to be created.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">offer</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">publisher</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publisher</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the Publisher of the Marketplace Image this Virtual Machine should be created from. Changing this forces a new resource to be created.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sku</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 </ul>
@@ -5435,7 +5514,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">winrm_listeners</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.WindowsVirtualMachine.winrm_listeners" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">winrm_listener</span></code> blocks as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">certificateUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificateUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Secret URL of a Key Vault Certificate, which must be specified when <code class="docutils literal notranslate"><span class="pre">protocol</span></code> is set to <code class="docutils literal notranslate"><span class="pre">Https</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 </ul>
 </dd></dl>
@@ -5500,63 +5579,63 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>additional_capabilities</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">ultraSsdEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ultraSsdEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should the capacity to enable Data Disks of the <code class="docutils literal notranslate"><span class="pre">UltraSSD_LRS</span></code> storage account type be supported on this Virtual Machine? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>. Changing this forces a new resource to be created.</p></li>
 </ul>
 <p>The <strong>additional_unattend_contents</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">content</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">setting</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">content</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The XML formatted content that is added to the unattend.xml file for the specified path and component. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">setting</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the setting to which the content applies. Possible values are <code class="docutils literal notranslate"><span class="pre">AutoLogon</span></code> and <code class="docutils literal notranslate"><span class="pre">FirstLogonCommands</span></code>. Changing this forces a new resource to be created.</p></li>
 </ul>
 <p>The <strong>boot_diagnostics</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">storageAccountUri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storageAccountUri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Primary/Secondary Endpoint for the Azure Storage Account which should be used to store Boot Diagnostics, including Console Output and Screenshots from the Hypervisor.</p></li>
 </ul>
 <p>The <strong>identity</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">identityIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">identityIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of User Managed Identity ID’s which should be assigned to the Windows Virtual Machine.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">principal_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the System Managed Service Principal.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of Managed Identity which should be assigned to the Windows Virtual Machine. Possible values are <code class="docutils literal notranslate"><span class="pre">SystemAssigned</span></code>, <code class="docutils literal notranslate"><span class="pre">UserAssigned</span></code> and <code class="docutils literal notranslate"><span class="pre">SystemAssigned,</span> <span class="pre">UserAssigned</span></code>.</p></li>
 </ul>
 <p>The <strong>os_disk</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">caching</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">diffDiskSettings</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">caching</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Type of Caching which should be used for the Internal OS Disk. Possible values are <code class="docutils literal notranslate"><span class="pre">None</span></code>, <code class="docutils literal notranslate"><span class="pre">ReadOnly</span></code> and <code class="docutils literal notranslate"><span class="pre">ReadWrite</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">diffDiskSettings</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">diff_disk_settings</span></code> block as defined above.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">option</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">option</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the Ephemeral Disk Settings for the OS Disk. At this time the only possible value is <code class="docutils literal notranslate"><span class="pre">Local</span></code>. Changing this forces a new resource to be created.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">disk_encryption_set_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Windows Virtual Machine. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">write_accelerator_enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disk_encryption_set_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Disk Encryption Set which should be used to Encrypt this OS Disk.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The Size of the Internal OS Disk in GB, if you wish to vary from the size used in the image this Virtual Machine is sourced from.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name which should be used for the Internal OS Disk. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Type of Storage Account which should back this the Internal OS Disk. Possible values are <code class="docutils literal notranslate"><span class="pre">Standard_LRS</span></code>, <code class="docutils literal notranslate"><span class="pre">StandardSSD_LRS</span></code> and <code class="docutils literal notranslate"><span class="pre">Premium_LRS</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">write_accelerator_enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should Write Accelerator be Enabled for this OS Disk? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
 <p>The <strong>plan</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Windows Virtual Machine. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">product</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">publisher</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the Name of the Marketplace Image this Virtual Machine should be created from. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">product</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the Product of the Marketplace Image this Virtual Machine should be created from. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publisher</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the Publisher of the Marketplace Image this Virtual Machine should be created from. Changing this forces a new resource to be created.</p></li>
 </ul>
 <p>The <strong>secrets</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">certificates</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificates</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">certificate</span></code> blocks as defined above.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">store</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">store</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The certificate store on the Virtual Machine where the certificate should be added.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Secret URL of a Key Vault Certificate.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">key_vault_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key_vault_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Key Vault from which all Secrets should be sourced.</p></li>
 </ul>
 <p>The <strong>source_image_reference</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">offer</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">publisher</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">publisher</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the Publisher of the Marketplace Image this Virtual Machine should be created from. Changing this forces a new resource to be created.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sku</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 <p>The <strong>winrm_listeners</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">certificateUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificateUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Secret URL of a Key Vault Certificate, which must be specified when <code class="docutils literal notranslate"><span class="pre">protocol</span></code> is set to <code class="docutils literal notranslate"><span class="pre">Https</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 </dd></dl>
@@ -5601,128 +5680,144 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.compute.WindowsVirtualMachineScaleSet">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">WindowsVirtualMachineScaleSet</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">additional_capabilities=None</em>, <em class="sig-param">additional_unattend_contents=None</em>, <em class="sig-param">admin_password=None</em>, <em class="sig-param">admin_username=None</em>, <em class="sig-param">automatic_os_upgrade_policy=None</em>, <em class="sig-param">boot_diagnostics=None</em>, <em class="sig-param">computer_name_prefix=None</em>, <em class="sig-param">custom_data=None</em>, <em class="sig-param">data_disks=None</em>, <em class="sig-param">do_not_run_extensions_on_overprovisioned_machines=None</em>, <em class="sig-param">enable_automatic_updates=None</em>, <em class="sig-param">eviction_policy=None</em>, <em class="sig-param">health_probe_id=None</em>, <em class="sig-param">identity=None</em>, <em class="sig-param">instances=None</em>, <em class="sig-param">license_type=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">max_bid_price=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_interfaces=None</em>, <em class="sig-param">os_disk=None</em>, <em class="sig-param">overprovision=None</em>, <em class="sig-param">plan=None</em>, <em class="sig-param">priority=None</em>, <em class="sig-param">provision_vm_agent=None</em>, <em class="sig-param">proximity_placement_group_id=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">rolling_upgrade_policy=None</em>, <em class="sig-param">secrets=None</em>, <em class="sig-param">single_placement_group=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">source_image_id=None</em>, <em class="sig-param">source_image_reference=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">timezone=None</em>, <em class="sig-param">upgrade_mode=None</em>, <em class="sig-param">winrm_listeners=None</em>, <em class="sig-param">zone_balance=None</em>, <em class="sig-param">zones=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.WindowsVirtualMachineScaleSet" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a WindowsVirtualMachineScaleSet resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[dict] additional_capabilities: A <code class="docutils literal notranslate"><span class="pre">additional_capabilities</span></code> block as defined below.
-:param pulumi.Input[list] additional_unattend_contents: One or more <code class="docutils literal notranslate"><span class="pre">additional_unattend_content</span></code> blocks as defined below.
-:param pulumi.Input[str] admin_password: The Password which should be used for the local-administrator on this Virtual Machine. Changing this forces a new resource to be created.
-:param pulumi.Input[str] admin_username: The username of the local administrator on each Virtual Machine Scale Set instance. Changing this forces a new resource to be created.
-:param pulumi.Input[dict] automatic_os_upgrade_policy: A <code class="docutils literal notranslate"><span class="pre">automatic_os_upgrade_policy</span></code> block as defined below. This is Required and can only be specified when <code class="docutils literal notranslate"><span class="pre">upgrade_mode</span></code> is set to <code class="docutils literal notranslate"><span class="pre">Automatic</span></code>.
-:param pulumi.Input[dict] boot_diagnostics: A <code class="docutils literal notranslate"><span class="pre">boot_diagnostics</span></code> block as defined below.
-:param pulumi.Input[str] computer_name_prefix: The prefix which should be used for the name of the Virtual Machines in this Scale Set. If unspecified this defaults to the value for the <code class="docutils literal notranslate"><span class="pre">name</span></code> field.
-:param pulumi.Input[str] custom_data: The Base64-Encoded Custom Data which should be used for this Virtual Machine Scale Set.
-:param pulumi.Input[list] data_disks: One or more <code class="docutils literal notranslate"><span class="pre">data_disk</span></code> blocks as defined below.
-:param pulumi.Input[bool] do_not_run_extensions_on_overprovisioned_machines: Should Virtual Machine Extensions be run on Overprovisioned Virtual Machines in the Scale Set? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.
-:param pulumi.Input[bool] enable_automatic_updates: Are automatic updates enabled for this Virtual Machine? Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.
-:param pulumi.Input[str] eviction_policy: The Policy which should be used Virtual Machines are Evicted from the Scale Set. Changing this forces a new resource to be created.
-:param pulumi.Input[str] health_probe_id: The ID of a Load Balancer Probe which should be used to determine the health of an instance. Changing this forces a new resource to be created. This is Required and can only be specified when <code class="docutils literal notranslate"><span class="pre">upgrade_mode</span></code> is set to <code class="docutils literal notranslate"><span class="pre">Automatic</span></code> or <code class="docutils literal notranslate"><span class="pre">Rolling</span></code>.
-:param pulumi.Input[dict] identity: A <code class="docutils literal notranslate"><span class="pre">identity</span></code> block as defined below.
-:param pulumi.Input[float] instances: The number of Virtual Machines in the Scale Set.
-:param pulumi.Input[str] license_type: Specifies the type of on-premise license (also known as <a class="reference external" href="https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-hybrid-use-benefit-licensing">Azure Hybrid Use Benefit</a>) which should be used for this Virtual Machine Scale Set. Possible values are <code class="docutils literal notranslate"><span class="pre">None</span></code>, <code class="docutils literal notranslate"><span class="pre">Windows_Client</span></code> and <code class="docutils literal notranslate"><span class="pre">Windows_Server</span></code>. Changing this forces a new resource to be created.
-:param pulumi.Input[str] location: The Azure location where the Windows Virtual Machine Scale Set should exist. Changing this forces a new resource to be created.
-:param pulumi.Input[float] max_bid_price: The maximum price you’re willing to pay for each Virtual Machine in this Scale Set, in US Dollars; which must be greater than the current spot price. If this bid price falls below the current spot price the Virtual Machines in the Scale Set will be evicted using the <code class="docutils literal notranslate"><span class="pre">eviction_policy</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">-1</span></code>, which means that each Virtual Machine in the Scale Set should not be evicted for price reasons.
-:param pulumi.Input[str] name: The name of the Windows Virtual Machine Scale Set. Changing this forces a new resource to be created.
-:param pulumi.Input[list] network_interfaces: One or more <code class="docutils literal notranslate"><span class="pre">network_interface</span></code> blocks as defined below.
-:param pulumi.Input[dict] os_disk: An <code class="docutils literal notranslate"><span class="pre">os_disk</span></code> block as defined below.
-:param pulumi.Input[bool] overprovision: Should Azure over-provision Virtual Machines in this Scale Set? This means that multiple Virtual Machines will be provisioned and Azure will keep the instances which become available first - which improves provisioning success rates and improves deployment time. You’re not billed for these over-provisioned VM’s and they don’t count towards the Subscription Quota. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.
-:param pulumi.Input[str] priority: The Priority of this Virtual Machine Scale Set. Possible values are <code class="docutils literal notranslate"><span class="pre">Regular</span></code> and <code class="docutils literal notranslate"><span class="pre">Spot</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Regular</span></code>. Changing this value forces a new resource.
-:param pulumi.Input[bool] provision_vm_agent: Should the Azure VM Agent be provisioned on each Virtual Machine in the Scale Set? Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Changing this value forces a new resource to be created.
-:param pulumi.Input[str] proximity_placement_group_id: The ID of the Proximity Placement Group in which the Virtual Machine Scale Set should be assigned to. Changing this forces a new resource to be created.
-:param pulumi.Input[str] resource_group_name: The name of the Resource Group in which the Windows Virtual Machine Scale Set should be exist. Changing this forces a new resource to be created.
-:param pulumi.Input[dict] rolling_upgrade_policy: A <code class="docutils literal notranslate"><span class="pre">rolling_upgrade_policy</span></code> block as defined below. This is Required and can only be specified when <code class="docutils literal notranslate"><span class="pre">upgrade_mode</span></code> is set to <code class="docutils literal notranslate"><span class="pre">Automatic</span></code> or <code class="docutils literal notranslate"><span class="pre">Rolling</span></code>.
-:param pulumi.Input[list] secrets: One or more <code class="docutils literal notranslate"><span class="pre">secret</span></code> blocks as defined below.
-:param pulumi.Input[bool] single_placement_group: Should this Virtual Machine Scale Set be limited to a Single Placement Group, which means the number of instances will be capped at 100 Virtual Machines. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.
-:param pulumi.Input[str] sku: The Virtual Machine SKU for the Scale Set, such as <code class="docutils literal notranslate"><span class="pre">Standard_F2</span></code>.
-:param pulumi.Input[str] source_image_id: The ID of an Image which each Virtual Machine in this Scale Set should be based on.
-:param pulumi.Input[dict] source_image_reference: A <code class="docutils literal notranslate"><span class="pre">source_image_reference</span></code> block as defined below.
-:param pulumi.Input[dict] tags: A mapping of tags which should be assigned to this Virtual Machine Scale Set.
-:param pulumi.Input[str] timezone: Specifies the time zone of the virtual machine, <a class="reference external" href="https://jackstromberg.com/2017/01/list-of-time-zones-consumed-by-azure/">the possible values are defined here</a>.
-:param pulumi.Input[str] upgrade_mode: Specifies how Upgrades (e.g. changing the Image/SKU) should be performed to Virtual Machine Instances. Possible values are <code class="docutils literal notranslate"><span class="pre">Automatic</span></code>, <code class="docutils literal notranslate"><span class="pre">Manual</span></code> and <code class="docutils literal notranslate"><span class="pre">Rolling</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Manual</span></code>.
-:param pulumi.Input[list] winrm_listeners: One or more <code class="docutils literal notranslate"><span class="pre">winrm_listener</span></code> blocks as defined below.
-:param pulumi.Input[bool] zone_balance: Should the Virtual Machines in this Scale Set be strictly evenly distributed across Availability Zones? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>. Changing this forces a new resource to be created.
-:param pulumi.Input[list] zones: A list of Availability Zones in which the Virtual Machines in this Scale Set should be created in. Changing this forces a new resource to be created.</p>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.compute.</code><code class="sig-name descname">WindowsVirtualMachineScaleSet</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">additional_capabilities=None</em>, <em class="sig-param">additional_unattend_contents=None</em>, <em class="sig-param">admin_password=None</em>, <em class="sig-param">admin_username=None</em>, <em class="sig-param">automatic_os_upgrade_policy=None</em>, <em class="sig-param">boot_diagnostics=None</em>, <em class="sig-param">computer_name_prefix=None</em>, <em class="sig-param">custom_data=None</em>, <em class="sig-param">data_disks=None</em>, <em class="sig-param">do_not_run_extensions_on_overprovisioned_machines=None</em>, <em class="sig-param">enable_automatic_updates=None</em>, <em class="sig-param">eviction_policy=None</em>, <em class="sig-param">health_probe_id=None</em>, <em class="sig-param">identity=None</em>, <em class="sig-param">instances=None</em>, <em class="sig-param">license_type=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">max_bid_price=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_interfaces=None</em>, <em class="sig-param">os_disk=None</em>, <em class="sig-param">overprovision=None</em>, <em class="sig-param">plan=None</em>, <em class="sig-param">priority=None</em>, <em class="sig-param">provision_vm_agent=None</em>, <em class="sig-param">proximity_placement_group_id=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">rolling_upgrade_policy=None</em>, <em class="sig-param">scale_in_policy=None</em>, <em class="sig-param">secrets=None</em>, <em class="sig-param">single_placement_group=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">source_image_id=None</em>, <em class="sig-param">source_image_reference=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">terminate_notification=None</em>, <em class="sig-param">timezone=None</em>, <em class="sig-param">upgrade_mode=None</em>, <em class="sig-param">winrm_listeners=None</em>, <em class="sig-param">zone_balance=None</em>, <em class="sig-param">zones=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.WindowsVirtualMachineScaleSet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages a Windows Virtual Machine Scale Set.</p>
+<blockquote>
+<div><p><strong>Note</strong> This provider will automatically update &amp; reimage the nodes in the Scale Set (if Required) during an Update - this behaviour can be configured using the <code class="docutils literal notranslate"><span class="pre">features</span></code> configuration within the Provider configuration block.</p>
+<p><strong>Note:</strong> This resource does not support Unmanaged Disks. If you need to use Unmanaged Disks you can continue to use the <code class="docutils literal notranslate"><span class="pre">compute.ScaleSet</span></code> resource instead</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/windows_virtual_machine_scale_set.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/windows_virtual_machine_scale_set.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>additional_capabilities</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">additional_capabilities</span></code> block as defined below.</p></li>
+<li><p><strong>additional_unattend_contents</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">additional_unattend_content</span></code> blocks as defined below.</p></li>
+<li><p><strong>admin_password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Password which should be used for the local-administrator on this Virtual Machine. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>admin_username</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The username of the local administrator on each Virtual Machine Scale Set instance. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>automatic_os_upgrade_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">automatic_os_upgrade_policy</span></code> block as defined below. This is Required and can only be specified when <code class="docutils literal notranslate"><span class="pre">upgrade_mode</span></code> is set to <code class="docutils literal notranslate"><span class="pre">Automatic</span></code>.</p></li>
+<li><p><strong>boot_diagnostics</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">boot_diagnostics</span></code> block as defined below.</p></li>
+<li><p><strong>computer_name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The prefix which should be used for the name of the Virtual Machines in this Scale Set. If unspecified this defaults to the value for the <code class="docutils literal notranslate"><span class="pre">name</span></code> field.</p></li>
+<li><p><strong>custom_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Base64-Encoded Custom Data which should be used for this Virtual Machine Scale Set.</p></li>
+<li><p><strong>data_disks</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">data_disk</span></code> blocks as defined below.</p></li>
+<li><p><strong>do_not_run_extensions_on_overprovisioned_machines</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should Virtual Machine Extensions be run on Overprovisioned Virtual Machines in the Scale Set? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>enable_automatic_updates</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Are automatic updates enabled for this Virtual Machine? Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><strong>eviction_policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Policy which should be used Virtual Machines are Evicted from the Scale Set. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>health_probe_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of a Load Balancer Probe which should be used to determine the health of an instance. Changing this forces a new resource to be created. This is Required and can only be specified when <code class="docutils literal notranslate"><span class="pre">upgrade_mode</span></code> is set to <code class="docutils literal notranslate"><span class="pre">Automatic</span></code> or <code class="docutils literal notranslate"><span class="pre">Rolling</span></code>.</p></li>
+<li><p><strong>identity</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">identity</span></code> block as defined below.</p></li>
+<li><p><strong>instances</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of Virtual Machines in the Scale Set.</p></li>
+<li><p><strong>license_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Specifies the type of on-premise license (also known as <a class="reference external" href="https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-hybrid-use-benefit-licensing">Azure Hybrid Use Benefit</a>) which should be used for this Virtual Machine Scale Set. Possible values are <code class="docutils literal notranslate"><span class="pre">None</span></code>, <code class="docutils literal notranslate"><span class="pre">Windows_Client</span></code> and <code class="docutils literal notranslate"><span class="pre">Windows_Server</span></code>. Changing this forces a new resource to be created.</p>
+</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Azure location where the Windows Virtual Machine Scale Set should exist. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>max_bid_price</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum price you’re willing to pay for each Virtual Machine in this Scale Set, in US Dollars; which must be greater than the current spot price. If this bid price falls below the current spot price the Virtual Machines in the Scale Set will be evicted using the <code class="docutils literal notranslate"><span class="pre">eviction_policy</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">-1</span></code>, which means that each Virtual Machine in the Scale Set should not be evicted for price reasons.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Windows Virtual Machine Scale Set. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>network_interfaces</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">network_interface</span></code> blocks as defined below.</p></li>
+<li><p><strong>os_disk</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – An <code class="docutils literal notranslate"><span class="pre">os_disk</span></code> block as defined below.</p></li>
+<li><p><strong>overprovision</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should Azure over-provision Virtual Machines in this Scale Set? This means that multiple Virtual Machines will be provisioned and Azure will keep the instances which become available first - which improves provisioning success rates and improves deployment time. You’re not billed for these over-provisioned VM’s and they don’t count towards the Subscription Quota. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>priority</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Priority of this Virtual Machine Scale Set. Possible values are <code class="docutils literal notranslate"><span class="pre">Regular</span></code> and <code class="docutils literal notranslate"><span class="pre">Spot</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Regular</span></code>. Changing this value forces a new resource.</p></li>
+<li><p><strong>provision_vm_agent</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should the Azure VM Agent be provisioned on each Virtual Machine in the Scale Set? Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Changing this value forces a new resource to be created.</p></li>
+<li><p><strong>proximity_placement_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Proximity Placement Group in which the Virtual Machine Scale Set should be assigned to. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Resource Group in which the Windows Virtual Machine Scale Set should be exist. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>rolling_upgrade_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">rolling_upgrade_policy</span></code> block as defined below. This is Required and can only be specified when <code class="docutils literal notranslate"><span class="pre">upgrade_mode</span></code> is set to <code class="docutils literal notranslate"><span class="pre">Automatic</span></code> or <code class="docutils literal notranslate"><span class="pre">Rolling</span></code>.</p></li>
+<li><p><strong>scale_in_policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The scale-in policy rule that decides which virtual machines are chosen for removal when a Virtual Machine Scale Set is scaled in. Possible values for the scale-in policy rules are <code class="docutils literal notranslate"><span class="pre">Default</span></code>, <code class="docutils literal notranslate"><span class="pre">NewestVM</span></code> and <code class="docutils literal notranslate"><span class="pre">OldestVM</span></code>, defaults to <code class="docutils literal notranslate"><span class="pre">Default</span></code>. For more information about scale in policy, please <a class="reference external" href="https://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-scale-in-policy">refer to this doc</a>.</p>
+</p></li>
+<li><p><strong>secrets</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">secret</span></code> blocks as defined below.</p></li>
+<li><p><strong>single_placement_group</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should this Virtual Machine Scale Set be limited to a Single Placement Group, which means the number of instances will be capped at 100 Virtual Machines. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><strong>sku</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Virtual Machine SKU for the Scale Set, such as <code class="docutils literal notranslate"><span class="pre">Standard_F2</span></code>.</p></li>
+<li><p><strong>source_image_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of an Image which each Virtual Machine in this Scale Set should be based on.</p></li>
+<li><p><strong>source_image_reference</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">source_image_reference</span></code> block as defined below.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags which should be assigned to this Virtual Machine Scale Set.</p></li>
+<li><p><strong>terminate_notification</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">terminate_notification</span></code> block as defined below.</p></li>
+<li><p><strong>timezone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Specifies the time zone of the virtual machine, <a class="reference external" href="https://jackstromberg.com/2017/01/list-of-time-zones-consumed-by-azure/">the possible values are defined here</a>.</p>
+</p></li>
+<li><p><strong>upgrade_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies how Upgrades (e.g. changing the Image/SKU) should be performed to Virtual Machine Instances. Possible values are <code class="docutils literal notranslate"><span class="pre">Automatic</span></code>, <code class="docutils literal notranslate"><span class="pre">Manual</span></code> and <code class="docutils literal notranslate"><span class="pre">Rolling</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Manual</span></code>.</p></li>
+<li><p><strong>winrm_listeners</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">winrm_listener</span></code> blocks as defined below.</p></li>
+<li><p><strong>zone_balance</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should the Virtual Machines in this Scale Set be strictly evenly distributed across Availability Zones? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>zones</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of Availability Zones in which the Virtual Machines in this Scale Set should be created in. Changing this forces a new resource to be created.</p></li>
+</ul>
+</dd>
+</dl>
 <p>The <strong>additional_capabilities</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">ultraSsdEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ultraSsdEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should the capacity to enable Data Disks of the <code class="docutils literal notranslate"><span class="pre">UltraSSD_LRS</span></code> storage account type be supported on this Virtual Machine Scale Set? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>. Changing this forces a new resource to be created.</p></li>
 </ul>
 <p>The <strong>additional_unattend_contents</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">content</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">setting</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">content</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The XML formatted content that is added to the unattend.xml file for the specified path and component. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">setting</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the setting to which the content applies. Possible values are <code class="docutils literal notranslate"><span class="pre">AutoLogon</span></code> and <code class="docutils literal notranslate"><span class="pre">FirstLogonCommands</span></code>. Changing this forces a new resource to be created.</p></li>
 </ul>
 <p>The <strong>automatic_os_upgrade_policy</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">disableAutomaticRollback</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enableAutomaticOsUpgrade</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disableAutomaticRollback</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should automatic rollbacks be disabled? Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enableAutomaticOsUpgrade</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should OS Upgrades automatically be applied to Scale Set instances in a rolling fashion when a newer version of the OS Image becomes available? Changing this forces a new resource to be created.</p></li>
 </ul>
 <p>The <strong>boot_diagnostics</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">storageAccountUri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storageAccountUri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Primary/Secondary Endpoint for the Azure Storage Account which should be used to store Boot Diagnostics, including Console Output and Screenshots from the Hypervisor.</p></li>
 </ul>
 <p>The <strong>data_disks</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">caching</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">disk_encryption_set_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">lun</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">write_accelerator_enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">caching</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of Caching which should be used for this Data Disk. Possible values are <code class="docutils literal notranslate"><span class="pre">None</span></code>, <code class="docutils literal notranslate"><span class="pre">ReadOnly</span></code> and <code class="docutils literal notranslate"><span class="pre">ReadWrite</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disk_encryption_set_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Disk Encryption Set which should be used to encrypt this Data Disk.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size of the Data Disk which should be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lun</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The Logical Unit Number of the Data Disk, which must be unique within the Virtual Machine.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Type of Storage Account which should back this Data Disk. Possible values include <code class="docutils literal notranslate"><span class="pre">Standard_LRS</span></code>, <code class="docutils literal notranslate"><span class="pre">StandardSSD_LRS</span></code>, <code class="docutils literal notranslate"><span class="pre">Premium_LRS</span></code> and <code class="docutils literal notranslate"><span class="pre">UltraSSD_LRS</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">write_accelerator_enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should Write Accelerator be enabled for this Data Disk? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
 <p>The <strong>identity</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">identityIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">identityIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of User Managed Identity ID’s which should be assigned to the Windows Virtual Machine Scale Set.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">principal_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the System Managed Service Principal.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of Managed Identity which should be assigned to the Windows Virtual Machine Scale Set. Possible values are <code class="docutils literal notranslate"><span class="pre">SystemAssigned</span></code>, <code class="docutils literal notranslate"><span class="pre">UserAssigned</span></code> and <code class="docutils literal notranslate"><span class="pre">SystemAssigned,</span> <span class="pre">UserAssigned</span></code>.</p></li>
 </ul>
 <p>The <strong>network_interfaces</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">dns_servers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enable_accelerated_networking</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enable_ip_forwarding</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ip_configurations</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">dns_servers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of IP Addresses of DNS Servers which should be assigned to the Network Interface.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enable_accelerated_networking</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Does this Network Interface support Accelerated Networking? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enable_ip_forwarding</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Does this Network Interface support IP Forwarding? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ip_configurations</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">ip_configuration</span></code> blocks as defined above.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">applicationGatewayBackendAddressPoolIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">applicationSecurityGroupIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">loadBalancerBackendAddressPoolIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">loadBalancerInboundNatRulesIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Windows Virtual Machine Scale Set. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">primary</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">public_ip_addresses</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">applicationGatewayBackendAddressPoolIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of Backend Address Pools ID’s from a Application Gateway which this Virtual Machine Scale Set should be connected to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">applicationSecurityGroupIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of Application Security Group ID’s which this Virtual Machine Scale Set should be connected to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">loadBalancerBackendAddressPoolIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of Backend Address Pools ID’s from a Load Balancer which this Virtual Machine Scale Set should be connected to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">loadBalancerInboundNatRulesIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of NAT Rule ID’s from a Load Balancer which this Virtual Machine Scale Set should be connected to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name which should be used for this IP Configuration.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">primary</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is this the Primary IP Configuration for this Network Interface? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public_ip_addresses</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">public_ip_address</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">domain_name_label</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">idle_timeout_in_minutes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ipTags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">domain_name_label</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Prefix which should be used for the Domain Name Label for each Virtual Machine Instance. Azure concatenates the Domain Name Label and Virtual Machine Index to create a unique Domain Name Label for each Virtual Machine.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">idle_timeout_in_minutes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The Idle Timeout in Minutes for the Public IP Address. Possible values are in the range <code class="docutils literal notranslate"><span class="pre">4</span></code> to <code class="docutils literal notranslate"><span class="pre">32</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipTags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">ip_tag</span></code> blocks as defined above.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">tag</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tag</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The IP Tag associated with the Public IP, such as <code class="docutils literal notranslate"><span class="pre">SQL</span></code> or <code class="docutils literal notranslate"><span class="pre">Storage</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Type of IP Tag, such as <code class="docutils literal notranslate"><span class="pre">FirstPartyUsage</span></code>.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Windows Virtual Machine Scale Set. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">public_ip_prefix_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of the Public IP Address Configuration.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public_ip_prefix_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Public IP Address Prefix from where Public IP Addresses should be allocated. Changing this forces a new resource to be created.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Subnet which this IP Configuration should be connected to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Internet Protocol Version which should be used for this IP Configuration. Possible values are <code class="docutils literal notranslate"><span class="pre">IPv4</span></code> and <code class="docutils literal notranslate"><span class="pre">IPv6</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">IPv4</span></code>.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Windows Virtual Machine Scale Set. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">network_security_group_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">primary</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name which should be used for this Network Interface. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">network_security_group_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of a Network Security Group which should be assigned to this Network Interface.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">primary</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is this the Primary IP Configuration?</p></li>
 </ul>
 <p>The <strong>os_disk</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">caching</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">diffDiskSettings</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">caching</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Type of Caching which should be used for the Internal OS Disk. Possible values are <code class="docutils literal notranslate"><span class="pre">None</span></code>, <code class="docutils literal notranslate"><span class="pre">ReadOnly</span></code> and <code class="docutils literal notranslate"><span class="pre">ReadWrite</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">diffDiskSettings</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">diff_disk_settings</span></code> block as defined above. Changing this forces a new resource to be created.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">option</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">disk_encryption_set_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">write_accelerator_enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disk_encryption_set_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Disk Encryption Set which should be used to encrypt this OS Disk.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The Size of the Internal OS Disk in GB, if you wish to vary from the size used in the image this Virtual Machine Scale Set is sourced from.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Type of Storage Account which should back this the Internal OS Disk. Possible values include <code class="docutils literal notranslate"><span class="pre">Standard_LRS</span></code>, <code class="docutils literal notranslate"><span class="pre">StandardSSD_LRS</span></code> and <code class="docutils literal notranslate"><span class="pre">Premium_LRS</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">write_accelerator_enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should Write Accelerator be Enabled for this OS Disk? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
 <p>The <strong>plan</strong> object supports the following:</p>
 <ul class="simple">
@@ -5732,39 +5827,44 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 <p>The <strong>rolling_upgrade_policy</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">maxBatchInstancePercent</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxUnhealthyInstancePercent</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxUnhealthyUpgradedInstancePercent</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">pauseTimeBetweenBatches</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxBatchInstancePercent</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum percent of total virtual machine instances that will be upgraded simultaneously by the rolling upgrade in one batch. As this is a maximum, unhealthy instances in previous or future batches can cause the percentage of instances in a batch to decrease to ensure higher reliability. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxUnhealthyInstancePercent</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum percentage of the total virtual machine instances in the scale set that can be simultaneously unhealthy, either as a result of being upgraded, or by being found in an unhealthy state by the virtual machine health checks before the rolling upgrade aborts. This constraint will be checked prior to starting any batch. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxUnhealthyUpgradedInstancePercent</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum percentage of upgraded virtual machine instances that can be found to be in an unhealthy state. This check will happen after each batch is upgraded. If this percentage is ever exceeded, the rolling update aborts. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pauseTimeBetweenBatches</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The wait time between completing the update for all virtual machines in one batch and starting the next batch. The time duration should be specified in ISO 8601 format. Changing this forces a new resource to be created.</p></li>
 </ul>
 <p>The <strong>secrets</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">certificates</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificates</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">certificate</span></code> blocks as defined above.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">store</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">store</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The certificate store on the Virtual Machine where the certificate should be added.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Secret URL of a Key Vault Certificate.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">key_vault_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key_vault_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Key Vault from which all Secrets should be sourced.</p></li>
 </ul>
 <p>The <strong>source_image_reference</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">offer</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">publisher</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sku</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Virtual Machine SKU for the Scale Set, such as <code class="docutils literal notranslate"><span class="pre">Standard_F2</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Internet Protocol Version which should be used for this IP Configuration. Possible values are <code class="docutils literal notranslate"><span class="pre">IPv4</span></code> and <code class="docutils literal notranslate"><span class="pre">IPv6</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">IPv4</span></code>.</p></li>
+</ul>
+<p>The <strong>terminate_notification</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should the terminate notification be enabled on this Virtual Machine Scale Set? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Length of time (in minutes, between 5 and 15) a notification to be sent to the VM on the instance metadata server till the VM gets deleted. The time duration should be specified in ISO 8601 format.</p></li>
 </ul>
 <p>The <strong>winrm_listeners</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">certificateUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificateUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Secret URL of a Key Vault Certificate, which must be specified when <code class="docutils literal notranslate"><span class="pre">protocol</span></code> is set to <code class="docutils literal notranslate"><span class="pre">Https</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Protocol of the WinRM Listener. Possible values are <code class="docutils literal notranslate"><span class="pre">Http</span></code> and <code class="docutils literal notranslate"><span class="pre">Https</span></code>.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_azure.compute.WindowsVirtualMachineScaleSet.additional_capabilities">
 <code class="sig-name descname">additional_capabilities</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.WindowsVirtualMachineScaleSet.additional_capabilities" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">additional_capabilities</span></code> block as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">ultraSsdEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ultraSsdEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Should the capacity to enable Data Disks of the <code class="docutils literal notranslate"><span class="pre">UltraSSD_LRS</span></code> storage account type be supported on this Virtual Machine Scale Set? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>. Changing this forces a new resource to be created.</p></li>
 </ul>
 </dd></dl>
 
@@ -5773,8 +5873,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">additional_unattend_contents</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.WindowsVirtualMachineScaleSet.additional_unattend_contents" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">additional_unattend_content</span></code> blocks as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">content</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">setting</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">content</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The XML formatted content that is added to the unattend.xml file for the specified path and component. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">setting</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the setting to which the content applies. Possible values are <code class="docutils literal notranslate"><span class="pre">AutoLogon</span></code> and <code class="docutils literal notranslate"><span class="pre">FirstLogonCommands</span></code>. Changing this forces a new resource to be created.</p></li>
 </ul>
 </dd></dl>
 
@@ -5795,8 +5895,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">automatic_os_upgrade_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.WindowsVirtualMachineScaleSet.automatic_os_upgrade_policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">automatic_os_upgrade_policy</span></code> block as defined below. This is Required and can only be specified when <code class="docutils literal notranslate"><span class="pre">upgrade_mode</span></code> is set to <code class="docutils literal notranslate"><span class="pre">Automatic</span></code>.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">disableAutomaticRollback</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enableAutomaticOsUpgrade</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disableAutomaticRollback</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Should automatic rollbacks be disabled? Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enableAutomaticOsUpgrade</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Should OS Upgrades automatically be applied to Scale Set instances in a rolling fashion when a newer version of the OS Image becomes available? Changing this forces a new resource to be created.</p></li>
 </ul>
 </dd></dl>
 
@@ -5805,7 +5905,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">boot_diagnostics</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.WindowsVirtualMachineScaleSet.boot_diagnostics" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">boot_diagnostics</span></code> block as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">storageAccountUri</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storageAccountUri</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Primary/Secondary Endpoint for the Azure Storage Account which should be used to store Boot Diagnostics, including Console Output and Screenshots from the Hypervisor.</p></li>
 </ul>
 </dd></dl>
 
@@ -5826,12 +5926,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">data_disks</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.WindowsVirtualMachineScaleSet.data_disks" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">data_disk</span></code> blocks as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">caching</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">disk_encryption_set_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">lun</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">write_accelerator_enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">caching</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The type of Caching which should be used for this Data Disk. Possible values are <code class="docutils literal notranslate"><span class="pre">None</span></code>, <code class="docutils literal notranslate"><span class="pre">ReadOnly</span></code> and <code class="docutils literal notranslate"><span class="pre">ReadWrite</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disk_encryption_set_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the Disk Encryption Set which should be used to encrypt this Data Disk.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The size of the Data Disk which should be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lun</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The Logical Unit Number of the Data Disk, which must be unique within the Virtual Machine.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Type of Storage Account which should back this Data Disk. Possible values include <code class="docutils literal notranslate"><span class="pre">Standard_LRS</span></code>, <code class="docutils literal notranslate"><span class="pre">StandardSSD_LRS</span></code>, <code class="docutils literal notranslate"><span class="pre">Premium_LRS</span></code> and <code class="docutils literal notranslate"><span class="pre">UltraSSD_LRS</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">write_accelerator_enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Should Write Accelerator be enabled for this Data Disk? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -5864,9 +5964,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">identity</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.WindowsVirtualMachineScaleSet.identity" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">identity</span></code> block as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">identityIds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">identityIds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of User Managed Identity ID’s which should be assigned to the Windows Virtual Machine Scale Set.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">principal_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the System Managed Service Principal.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The type of Managed Identity which should be assigned to the Windows Virtual Machine Scale Set. Possible values are <code class="docutils literal notranslate"><span class="pre">SystemAssigned</span></code>, <code class="docutils literal notranslate"><span class="pre">UserAssigned</span></code> and <code class="docutils literal notranslate"><span class="pre">SystemAssigned,</span> <span class="pre">UserAssigned</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -5905,38 +6005,38 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">network_interfaces</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.WindowsVirtualMachineScaleSet.network_interfaces" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">network_interface</span></code> blocks as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">dns_servers</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enable_accelerated_networking</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enable_ip_forwarding</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ip_configurations</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">dns_servers</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of IP Addresses of DNS Servers which should be assigned to the Network Interface.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enable_accelerated_networking</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Does this Network Interface support Accelerated Networking? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enable_ip_forwarding</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Does this Network Interface support IP Forwarding? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ip_configurations</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">ip_configuration</span></code> blocks as defined above.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">applicationGatewayBackendAddressPoolIds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">applicationSecurityGroupIds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">loadBalancerBackendAddressPoolIds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">loadBalancerInboundNatRulesIds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the Windows Virtual Machine Scale Set. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">primary</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">public_ip_addresses</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">applicationGatewayBackendAddressPoolIds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of Backend Address Pools ID’s from a Application Gateway which this Virtual Machine Scale Set should be connected to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">applicationSecurityGroupIds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of Application Security Group ID’s which this Virtual Machine Scale Set should be connected to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">loadBalancerBackendAddressPoolIds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of Backend Address Pools ID’s from a Load Balancer which this Virtual Machine Scale Set should be connected to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">loadBalancerInboundNatRulesIds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of NAT Rule ID’s from a Load Balancer which this Virtual Machine Scale Set should be connected to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Name which should be used for this IP Configuration.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">primary</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Is this the Primary IP Configuration for this Network Interface? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public_ip_addresses</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A <code class="docutils literal notranslate"><span class="pre">public_ip_address</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">domain_name_label</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">idle_timeout_in_minutes</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ipTags</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">domain_name_label</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Prefix which should be used for the Domain Name Label for each Virtual Machine Instance. Azure concatenates the Domain Name Label and Virtual Machine Index to create a unique Domain Name Label for each Virtual Machine.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">idle_timeout_in_minutes</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The Idle Timeout in Minutes for the Public IP Address. Possible values are in the range <code class="docutils literal notranslate"><span class="pre">4</span></code> to <code class="docutils literal notranslate"><span class="pre">32</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipTags</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">ip_tag</span></code> blocks as defined above.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">tag</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tag</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The IP Tag associated with the Public IP, such as <code class="docutils literal notranslate"><span class="pre">SQL</span></code> or <code class="docutils literal notranslate"><span class="pre">Storage</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Type of IP Tag, such as <code class="docutils literal notranslate"><span class="pre">FirstPartyUsage</span></code>.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the Windows Virtual Machine Scale Set. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">public_ip_prefix_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Name of the Public IP Address Configuration.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public_ip_prefix_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the Public IP Address Prefix from where Public IP Addresses should be allocated. Changing this forces a new resource to be created.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the Subnet which this IP Configuration should be connected to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Internet Protocol Version which should be used for this IP Configuration. Possible values are <code class="docutils literal notranslate"><span class="pre">IPv4</span></code> and <code class="docutils literal notranslate"><span class="pre">IPv6</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">IPv4</span></code>.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the Windows Virtual Machine Scale Set. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">network_security_group_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">primary</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Name which should be used for this Network Interface. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">network_security_group_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of a Network Security Group which should be assigned to this Network Interface.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">primary</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Is this the Primary IP Configuration?</p></li>
 </ul>
 </dd></dl>
 
@@ -5945,16 +6045,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">os_disk</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.WindowsVirtualMachineScaleSet.os_disk" title="Permalink to this definition">¶</a></dt>
 <dd><p>An <code class="docutils literal notranslate"><span class="pre">os_disk</span></code> block as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">caching</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">diffDiskSettings</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">caching</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Type of Caching which should be used for the Internal OS Disk. Possible values are <code class="docutils literal notranslate"><span class="pre">None</span></code>, <code class="docutils literal notranslate"><span class="pre">ReadOnly</span></code> and <code class="docutils literal notranslate"><span class="pre">ReadWrite</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">diffDiskSettings</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A <code class="docutils literal notranslate"><span class="pre">diff_disk_settings</span></code> block as defined above. Changing this forces a new resource to be created.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">option</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">disk_encryption_set_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">write_accelerator_enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disk_encryption_set_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the Disk Encryption Set which should be used to encrypt this OS Disk.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The Size of the Internal OS Disk in GB, if you wish to vary from the size used in the image this Virtual Machine Scale Set is sourced from.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Type of Storage Account which should back this the Internal OS Disk. Possible values include <code class="docutils literal notranslate"><span class="pre">Standard_LRS</span></code>, <code class="docutils literal notranslate"><span class="pre">StandardSSD_LRS</span></code> and <code class="docutils literal notranslate"><span class="pre">Premium_LRS</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">write_accelerator_enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Should Write Accelerator be Enabled for this OS Disk? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -5993,11 +6093,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">rolling_upgrade_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.WindowsVirtualMachineScaleSet.rolling_upgrade_policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">rolling_upgrade_policy</span></code> block as defined below. This is Required and can only be specified when <code class="docutils literal notranslate"><span class="pre">upgrade_mode</span></code> is set to <code class="docutils literal notranslate"><span class="pre">Automatic</span></code> or <code class="docutils literal notranslate"><span class="pre">Rolling</span></code>.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">maxBatchInstancePercent</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxUnhealthyInstancePercent</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxUnhealthyUpgradedInstancePercent</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">pauseTimeBetweenBatches</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxBatchInstancePercent</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The maximum percent of total virtual machine instances that will be upgraded simultaneously by the rolling upgrade in one batch. As this is a maximum, unhealthy instances in previous or future batches can cause the percentage of instances in a batch to decrease to ensure higher reliability. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxUnhealthyInstancePercent</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The maximum percentage of the total virtual machine instances in the scale set that can be simultaneously unhealthy, either as a result of being upgraded, or by being found in an unhealthy state by the virtual machine health checks before the rolling upgrade aborts. This constraint will be checked prior to starting any batch. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxUnhealthyUpgradedInstancePercent</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The maximum percentage of upgraded virtual machine instances that can be found to be in an unhealthy state. This check will happen after each batch is upgraded. If this percentage is ever exceeded, the rolling update aborts. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pauseTimeBetweenBatches</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The wait time between completing the update for all virtual machines in one batch and starting the next batch. The time duration should be specified in ISO 8601 format. Changing this forces a new resource to be created.</p></li>
 </ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.compute.WindowsVirtualMachineScaleSet.scale_in_policy">
+<code class="sig-name descname">scale_in_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.WindowsVirtualMachineScaleSet.scale_in_policy" title="Permalink to this definition">¶</a></dt>
+<dd><p>The scale-in policy rule that decides which virtual machines are chosen for removal when a Virtual Machine Scale Set is scaled in. Possible values for the scale-in policy rules are <code class="docutils literal notranslate"><span class="pre">Default</span></code>, <code class="docutils literal notranslate"><span class="pre">NewestVM</span></code> and <code class="docutils literal notranslate"><span class="pre">OldestVM</span></code>, defaults to <code class="docutils literal notranslate"><span class="pre">Default</span></code>. For more information about scale in policy, please <a class="reference external" href="https://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-scale-in-policy">refer to this doc</a>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -6005,13 +6111,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">secrets</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.WindowsVirtualMachineScaleSet.secrets" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">secret</span></code> blocks as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">certificates</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificates</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">certificate</span></code> blocks as defined above.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">store</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">store</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The certificate store on the Virtual Machine where the certificate should be added.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Secret URL of a Key Vault Certificate.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">key_vault_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key_vault_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the Key Vault from which all Secrets should be sourced.</p></li>
 </ul>
 </dd></dl>
 
@@ -6041,7 +6147,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">offer</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">publisher</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sku</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Virtual Machine SKU for the Scale Set, such as <code class="docutils literal notranslate"><span class="pre">Standard_F2</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Internet Protocol Version which should be used for this IP Configuration. Possible values are <code class="docutils literal notranslate"><span class="pre">IPv4</span></code> and <code class="docutils literal notranslate"><span class="pre">IPv6</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">IPv4</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -6049,6 +6155,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.compute.WindowsVirtualMachineScaleSet.tags">
 <code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.WindowsVirtualMachineScaleSet.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>A mapping of tags which should be assigned to this Virtual Machine Scale Set.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.compute.WindowsVirtualMachineScaleSet.terminate_notification">
+<code class="sig-name descname">terminate_notification</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.WindowsVirtualMachineScaleSet.terminate_notification" title="Permalink to this definition">¶</a></dt>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">terminate_notification</span></code> block as defined below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Should the terminate notification be enabled on this Virtual Machine Scale Set? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeout</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Length of time (in minutes, between 5 and 15) a notification to be sent to the VM on the instance metadata server till the VM gets deleted. The time duration should be specified in ISO 8601 format.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -6074,8 +6190,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">winrm_listeners</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.compute.WindowsVirtualMachineScaleSet.winrm_listeners" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">winrm_listener</span></code> blocks as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">certificateUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificateUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Secret URL of a Key Vault Certificate, which must be specified when <code class="docutils literal notranslate"><span class="pre">protocol</span></code> is set to <code class="docutils literal notranslate"><span class="pre">Https</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Protocol of the WinRM Listener. Possible values are <code class="docutils literal notranslate"><span class="pre">Http</span></code> and <code class="docutils literal notranslate"><span class="pre">Https</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -6093,7 +6209,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="method">
 <dt id="pulumi_azure.compute.WindowsVirtualMachineScaleSet.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">additional_capabilities=None</em>, <em class="sig-param">additional_unattend_contents=None</em>, <em class="sig-param">admin_password=None</em>, <em class="sig-param">admin_username=None</em>, <em class="sig-param">automatic_os_upgrade_policy=None</em>, <em class="sig-param">boot_diagnostics=None</em>, <em class="sig-param">computer_name_prefix=None</em>, <em class="sig-param">custom_data=None</em>, <em class="sig-param">data_disks=None</em>, <em class="sig-param">do_not_run_extensions_on_overprovisioned_machines=None</em>, <em class="sig-param">enable_automatic_updates=None</em>, <em class="sig-param">eviction_policy=None</em>, <em class="sig-param">health_probe_id=None</em>, <em class="sig-param">identity=None</em>, <em class="sig-param">instances=None</em>, <em class="sig-param">license_type=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">max_bid_price=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_interfaces=None</em>, <em class="sig-param">os_disk=None</em>, <em class="sig-param">overprovision=None</em>, <em class="sig-param">plan=None</em>, <em class="sig-param">priority=None</em>, <em class="sig-param">provision_vm_agent=None</em>, <em class="sig-param">proximity_placement_group_id=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">rolling_upgrade_policy=None</em>, <em class="sig-param">secrets=None</em>, <em class="sig-param">single_placement_group=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">source_image_id=None</em>, <em class="sig-param">source_image_reference=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">timezone=None</em>, <em class="sig-param">unique_id=None</em>, <em class="sig-param">upgrade_mode=None</em>, <em class="sig-param">winrm_listeners=None</em>, <em class="sig-param">zone_balance=None</em>, <em class="sig-param">zones=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.WindowsVirtualMachineScaleSet.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">additional_capabilities=None</em>, <em class="sig-param">additional_unattend_contents=None</em>, <em class="sig-param">admin_password=None</em>, <em class="sig-param">admin_username=None</em>, <em class="sig-param">automatic_os_upgrade_policy=None</em>, <em class="sig-param">boot_diagnostics=None</em>, <em class="sig-param">computer_name_prefix=None</em>, <em class="sig-param">custom_data=None</em>, <em class="sig-param">data_disks=None</em>, <em class="sig-param">do_not_run_extensions_on_overprovisioned_machines=None</em>, <em class="sig-param">enable_automatic_updates=None</em>, <em class="sig-param">eviction_policy=None</em>, <em class="sig-param">health_probe_id=None</em>, <em class="sig-param">identity=None</em>, <em class="sig-param">instances=None</em>, <em class="sig-param">license_type=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">max_bid_price=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_interfaces=None</em>, <em class="sig-param">os_disk=None</em>, <em class="sig-param">overprovision=None</em>, <em class="sig-param">plan=None</em>, <em class="sig-param">priority=None</em>, <em class="sig-param">provision_vm_agent=None</em>, <em class="sig-param">proximity_placement_group_id=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">rolling_upgrade_policy=None</em>, <em class="sig-param">scale_in_policy=None</em>, <em class="sig-param">secrets=None</em>, <em class="sig-param">single_placement_group=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">source_image_id=None</em>, <em class="sig-param">source_image_reference=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">terminate_notification=None</em>, <em class="sig-param">timezone=None</em>, <em class="sig-param">unique_id=None</em>, <em class="sig-param">upgrade_mode=None</em>, <em class="sig-param">winrm_listeners=None</em>, <em class="sig-param">zone_balance=None</em>, <em class="sig-param">zones=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.compute.WindowsVirtualMachineScaleSet.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing WindowsVirtualMachineScaleSet resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -6130,12 +6246,15 @@ properties used to qualify the lookup.</p>
 <li><p><strong>proximity_placement_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Proximity Placement Group in which the Virtual Machine Scale Set should be assigned to. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Resource Group in which the Windows Virtual Machine Scale Set should be exist. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>rolling_upgrade_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">rolling_upgrade_policy</span></code> block as defined below. This is Required and can only be specified when <code class="docutils literal notranslate"><span class="pre">upgrade_mode</span></code> is set to <code class="docutils literal notranslate"><span class="pre">Automatic</span></code> or <code class="docutils literal notranslate"><span class="pre">Rolling</span></code>.</p></li>
+<li><p><strong>scale_in_policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The scale-in policy rule that decides which virtual machines are chosen for removal when a Virtual Machine Scale Set is scaled in. Possible values for the scale-in policy rules are <code class="docutils literal notranslate"><span class="pre">Default</span></code>, <code class="docutils literal notranslate"><span class="pre">NewestVM</span></code> and <code class="docutils literal notranslate"><span class="pre">OldestVM</span></code>, defaults to <code class="docutils literal notranslate"><span class="pre">Default</span></code>. For more information about scale in policy, please <a class="reference external" href="https://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-scale-in-policy">refer to this doc</a>.</p>
+</p></li>
 <li><p><strong>secrets</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">secret</span></code> blocks as defined below.</p></li>
 <li><p><strong>single_placement_group</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should this Virtual Machine Scale Set be limited to a Single Placement Group, which means the number of instances will be capped at 100 Virtual Machines. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 <li><p><strong>sku</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Virtual Machine SKU for the Scale Set, such as <code class="docutils literal notranslate"><span class="pre">Standard_F2</span></code>.</p></li>
 <li><p><strong>source_image_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of an Image which each Virtual Machine in this Scale Set should be based on.</p></li>
 <li><p><strong>source_image_reference</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">source_image_reference</span></code> block as defined below.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags which should be assigned to this Virtual Machine Scale Set.</p></li>
+<li><p><strong>terminate_notification</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">terminate_notification</span></code> block as defined below.</p></li>
 <li><p><strong>timezone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Specifies the time zone of the virtual machine, <a class="reference external" href="https://jackstromberg.com/2017/01/list-of-time-zones-consumed-by-azure/">the possible values are defined here</a>.</p>
 </p></li>
 <li><p><strong>unique_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Unique ID for this Windows Virtual Machine Scale Set.</p></li>
@@ -6148,84 +6267,84 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>additional_capabilities</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">ultraSsdEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ultraSsdEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should the capacity to enable Data Disks of the <code class="docutils literal notranslate"><span class="pre">UltraSSD_LRS</span></code> storage account type be supported on this Virtual Machine Scale Set? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>. Changing this forces a new resource to be created.</p></li>
 </ul>
 <p>The <strong>additional_unattend_contents</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">content</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">setting</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">content</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The XML formatted content that is added to the unattend.xml file for the specified path and component. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">setting</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the setting to which the content applies. Possible values are <code class="docutils literal notranslate"><span class="pre">AutoLogon</span></code> and <code class="docutils literal notranslate"><span class="pre">FirstLogonCommands</span></code>. Changing this forces a new resource to be created.</p></li>
 </ul>
 <p>The <strong>automatic_os_upgrade_policy</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">disableAutomaticRollback</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enableAutomaticOsUpgrade</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disableAutomaticRollback</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should automatic rollbacks be disabled? Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enableAutomaticOsUpgrade</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should OS Upgrades automatically be applied to Scale Set instances in a rolling fashion when a newer version of the OS Image becomes available? Changing this forces a new resource to be created.</p></li>
 </ul>
 <p>The <strong>boot_diagnostics</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">storageAccountUri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storageAccountUri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Primary/Secondary Endpoint for the Azure Storage Account which should be used to store Boot Diagnostics, including Console Output and Screenshots from the Hypervisor.</p></li>
 </ul>
 <p>The <strong>data_disks</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">caching</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">disk_encryption_set_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">lun</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">write_accelerator_enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">caching</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of Caching which should be used for this Data Disk. Possible values are <code class="docutils literal notranslate"><span class="pre">None</span></code>, <code class="docutils literal notranslate"><span class="pre">ReadOnly</span></code> and <code class="docutils literal notranslate"><span class="pre">ReadWrite</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disk_encryption_set_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Disk Encryption Set which should be used to encrypt this Data Disk.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size of the Data Disk which should be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lun</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The Logical Unit Number of the Data Disk, which must be unique within the Virtual Machine.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Type of Storage Account which should back this Data Disk. Possible values include <code class="docutils literal notranslate"><span class="pre">Standard_LRS</span></code>, <code class="docutils literal notranslate"><span class="pre">StandardSSD_LRS</span></code>, <code class="docutils literal notranslate"><span class="pre">Premium_LRS</span></code> and <code class="docutils literal notranslate"><span class="pre">UltraSSD_LRS</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">write_accelerator_enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should Write Accelerator be enabled for this Data Disk? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
 <p>The <strong>identity</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">identityIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">identityIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of User Managed Identity ID’s which should be assigned to the Windows Virtual Machine Scale Set.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">principal_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the System Managed Service Principal.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of Managed Identity which should be assigned to the Windows Virtual Machine Scale Set. Possible values are <code class="docutils literal notranslate"><span class="pre">SystemAssigned</span></code>, <code class="docutils literal notranslate"><span class="pre">UserAssigned</span></code> and <code class="docutils literal notranslate"><span class="pre">SystemAssigned,</span> <span class="pre">UserAssigned</span></code>.</p></li>
 </ul>
 <p>The <strong>network_interfaces</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">dns_servers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enable_accelerated_networking</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enable_ip_forwarding</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ip_configurations</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">dns_servers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of IP Addresses of DNS Servers which should be assigned to the Network Interface.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enable_accelerated_networking</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Does this Network Interface support Accelerated Networking? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enable_ip_forwarding</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Does this Network Interface support IP Forwarding? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ip_configurations</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">ip_configuration</span></code> blocks as defined above.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">applicationGatewayBackendAddressPoolIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">applicationSecurityGroupIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">loadBalancerBackendAddressPoolIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">loadBalancerInboundNatRulesIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Windows Virtual Machine Scale Set. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">primary</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">public_ip_addresses</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">applicationGatewayBackendAddressPoolIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of Backend Address Pools ID’s from a Application Gateway which this Virtual Machine Scale Set should be connected to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">applicationSecurityGroupIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of Application Security Group ID’s which this Virtual Machine Scale Set should be connected to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">loadBalancerBackendAddressPoolIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of Backend Address Pools ID’s from a Load Balancer which this Virtual Machine Scale Set should be connected to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">loadBalancerInboundNatRulesIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of NAT Rule ID’s from a Load Balancer which this Virtual Machine Scale Set should be connected to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name which should be used for this IP Configuration.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">primary</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is this the Primary IP Configuration for this Network Interface? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public_ip_addresses</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">public_ip_address</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">domain_name_label</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">idle_timeout_in_minutes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ipTags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">domain_name_label</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Prefix which should be used for the Domain Name Label for each Virtual Machine Instance. Azure concatenates the Domain Name Label and Virtual Machine Index to create a unique Domain Name Label for each Virtual Machine.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">idle_timeout_in_minutes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The Idle Timeout in Minutes for the Public IP Address. Possible values are in the range <code class="docutils literal notranslate"><span class="pre">4</span></code> to <code class="docutils literal notranslate"><span class="pre">32</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipTags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">ip_tag</span></code> blocks as defined above.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">tag</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tag</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The IP Tag associated with the Public IP, such as <code class="docutils literal notranslate"><span class="pre">SQL</span></code> or <code class="docutils literal notranslate"><span class="pre">Storage</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Type of IP Tag, such as <code class="docutils literal notranslate"><span class="pre">FirstPartyUsage</span></code>.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Windows Virtual Machine Scale Set. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">public_ip_prefix_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of the Public IP Address Configuration.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public_ip_prefix_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Public IP Address Prefix from where Public IP Addresses should be allocated. Changing this forces a new resource to be created.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Subnet which this IP Configuration should be connected to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Internet Protocol Version which should be used for this IP Configuration. Possible values are <code class="docutils literal notranslate"><span class="pre">IPv4</span></code> and <code class="docutils literal notranslate"><span class="pre">IPv6</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">IPv4</span></code>.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Windows Virtual Machine Scale Set. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">network_security_group_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">primary</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name which should be used for this Network Interface. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">network_security_group_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of a Network Security Group which should be assigned to this Network Interface.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">primary</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is this the Primary IP Configuration?</p></li>
 </ul>
 <p>The <strong>os_disk</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">caching</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">diffDiskSettings</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">caching</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Type of Caching which should be used for the Internal OS Disk. Possible values are <code class="docutils literal notranslate"><span class="pre">None</span></code>, <code class="docutils literal notranslate"><span class="pre">ReadOnly</span></code> and <code class="docutils literal notranslate"><span class="pre">ReadWrite</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">diffDiskSettings</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">diff_disk_settings</span></code> block as defined above. Changing this forces a new resource to be created.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">option</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">disk_encryption_set_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">write_accelerator_enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disk_encryption_set_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Disk Encryption Set which should be used to encrypt this OS Disk.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The Size of the Internal OS Disk in GB, if you wish to vary from the size used in the image this Virtual Machine Scale Set is sourced from.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Type of Storage Account which should back this the Internal OS Disk. Possible values include <code class="docutils literal notranslate"><span class="pre">Standard_LRS</span></code>, <code class="docutils literal notranslate"><span class="pre">StandardSSD_LRS</span></code> and <code class="docutils literal notranslate"><span class="pre">Premium_LRS</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">write_accelerator_enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should Write Accelerator be Enabled for this OS Disk? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
 <p>The <strong>plan</strong> object supports the following:</p>
 <ul class="simple">
@@ -6235,32 +6354,37 @@ properties used to qualify the lookup.</p>
 </ul>
 <p>The <strong>rolling_upgrade_policy</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">maxBatchInstancePercent</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxUnhealthyInstancePercent</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxUnhealthyUpgradedInstancePercent</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">pauseTimeBetweenBatches</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxBatchInstancePercent</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum percent of total virtual machine instances that will be upgraded simultaneously by the rolling upgrade in one batch. As this is a maximum, unhealthy instances in previous or future batches can cause the percentage of instances in a batch to decrease to ensure higher reliability. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxUnhealthyInstancePercent</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum percentage of the total virtual machine instances in the scale set that can be simultaneously unhealthy, either as a result of being upgraded, or by being found in an unhealthy state by the virtual machine health checks before the rolling upgrade aborts. This constraint will be checked prior to starting any batch. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxUnhealthyUpgradedInstancePercent</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum percentage of upgraded virtual machine instances that can be found to be in an unhealthy state. This check will happen after each batch is upgraded. If this percentage is ever exceeded, the rolling update aborts. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pauseTimeBetweenBatches</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The wait time between completing the update for all virtual machines in one batch and starting the next batch. The time duration should be specified in ISO 8601 format. Changing this forces a new resource to be created.</p></li>
 </ul>
 <p>The <strong>secrets</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">certificates</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificates</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">certificate</span></code> blocks as defined above.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">store</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">store</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The certificate store on the Virtual Machine where the certificate should be added.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Secret URL of a Key Vault Certificate.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">key_vault_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key_vault_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Key Vault from which all Secrets should be sourced.</p></li>
 </ul>
 <p>The <strong>source_image_reference</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">offer</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">publisher</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sku</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Virtual Machine SKU for the Scale Set, such as <code class="docutils literal notranslate"><span class="pre">Standard_F2</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Internet Protocol Version which should be used for this IP Configuration. Possible values are <code class="docutils literal notranslate"><span class="pre">IPv4</span></code> and <code class="docutils literal notranslate"><span class="pre">IPv6</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">IPv4</span></code>.</p></li>
+</ul>
+<p>The <strong>terminate_notification</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should the terminate notification be enabled on this Virtual Machine Scale Set? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Length of time (in minutes, between 5 and 15) a notification to be sent to the VM on the instance metadata server till the VM gets deleted. The time duration should be specified in ISO 8601 format.</p></li>
 </ul>
 <p>The <strong>winrm_listeners</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">certificateUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificateUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Secret URL of a Key Vault Certificate, which must be specified when <code class="docutils literal notranslate"><span class="pre">protocol</span></code> is set to <code class="docutils literal notranslate"><span class="pre">Https</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Protocol of the WinRM Listener. Possible values are <code class="docutils literal notranslate"><span class="pre">Http</span></code> and <code class="docutils literal notranslate"><span class="pre">Https</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -6402,6 +6526,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> (<em>str</em>) – Specifies the name of the Managed Disk.</p></li>
 <li><p><strong>resource_group_name</strong> (<em>str</em>) – Specifies the name of the Resource Group where this Managed Disk exists.</p></li>
+<li><p><strong>tags</strong> (<em>dict</em>) – A mapping of tags assigned to the resource.</p></li>
+<li><p><strong>zones</strong> (<em>list</em>) – A list of Availability Zones where the Managed Disk exists.</p></li>
 </ul>
 </dd>
 </dl>

@@ -86,16 +86,17 @@ anything, please consult the source <a class="reference external" href="https://
 <p>The <strong>authentication_configuration</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">audience</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The intended audience to receive authentication tokens for the service. The default value is <a class="reference external" href="https://azurehealthcareapis.com">https://azurehealthcareapis.com</a></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">authority</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">authority</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Azure Active Directory (tenant) that serves as the authentication authority to access the service. The default authority is the Directory defined in the authentication scheme in use when running this provider.
+Authority must be registered to Azure AD and in the following format: <a class="reference external" href="https:/">https:/</a>/{Azure-AD-endpoint}/{tenant-id}.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">smartProxyEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enables the ‘SMART on FHIR’ option for mobile and web implementations.</p></li>
 </ul>
 <p>The <strong>cors_configuration</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">allowCredentials</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">allowedHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">allowedMethods</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">allowedOrigins</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxAgeInSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowCredentials</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If credentials are allowed via CORS.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A set of headers to be allowed via CORS.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedMethods</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The methods to be allowed via CORS.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedOrigins</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A set of origins to be allowed via CORS.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxAgeInSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The max age to be allowed via CORS.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_azure.healthcare.Service.authentication_configuration">
@@ -103,7 +104,8 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>An <code class="docutils literal notranslate"><span class="pre">authentication_configuration</span></code> block as defined below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">audience</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The intended audience to receive authentication tokens for the service. The default value is <a class="reference external" href="https://azurehealthcareapis.com">https://azurehealthcareapis.com</a></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">authority</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">authority</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Azure Active Directory (tenant) that serves as the authentication authority to access the service. The default authority is the Directory defined in the authentication scheme in use when running this provider.
+Authority must be registered to Azure AD and in the following format: <a class="reference external" href="https:/">https:/</a>/{Azure-AD-endpoint}/{tenant-id}.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">smartProxyEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Enables the ‘SMART on FHIR’ option for mobile and web implementations.</p></li>
 </ul>
 </dd></dl>
@@ -113,11 +115,11 @@ anything, please consult the source <a class="reference external" href="https://
 <code class="sig-name descname">cors_configuration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.healthcare.Service.cors_configuration" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">cors_configuration</span></code> block as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">allowCredentials</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">allowedHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">allowedMethods</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">allowedOrigins</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxAgeInSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowCredentials</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If credentials are allowed via CORS.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A set of headers to be allowed via CORS.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedMethods</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The methods to be allowed via CORS.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedOrigins</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A set of origins to be allowed via CORS.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxAgeInSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The max age to be allowed via CORS.</p></li>
 </ul>
 </dd></dl>
 
@@ -182,16 +184,17 @@ properties used to qualify the lookup.</p>
 <p>The <strong>authentication_configuration</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">audience</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The intended audience to receive authentication tokens for the service. The default value is <a class="reference external" href="https://azurehealthcareapis.com">https://azurehealthcareapis.com</a></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">authority</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">authority</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Azure Active Directory (tenant) that serves as the authentication authority to access the service. The default authority is the Directory defined in the authentication scheme in use when running this provider.
+Authority must be registered to Azure AD and in the following format: <a class="reference external" href="https:/">https:/</a>/{Azure-AD-endpoint}/{tenant-id}.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">smartProxyEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enables the ‘SMART on FHIR’ option for mobile and web implementations.</p></li>
 </ul>
 <p>The <strong>cors_configuration</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">allowCredentials</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">allowedHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">allowedMethods</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">allowedOrigins</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxAgeInSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowCredentials</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If credentials are allowed via CORS.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A set of headers to be allowed via CORS.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedMethods</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The methods to be allowed via CORS.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedOrigins</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A set of origins to be allowed via CORS.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxAgeInSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The max age to be allowed via CORS.</p></li>
 </ul>
 </dd></dl>
 
@@ -243,6 +246,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>location</strong> (<em>str</em>) – The Azure Region where the Service is located.</p></li>
 <li><p><strong>name</strong> (<em>str</em>) – Specifies the name of the Healthcare Service.</p></li>
 <li><p><strong>resource_group_name</strong> (<em>str</em>) – The name of the Resource Group in which the Healthcare Service exists.</p></li>
 </ul>

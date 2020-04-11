@@ -1,0 +1,191 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Namespace Pulumi.Kubernetes.Apps.V1
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Namespace Pulumi.Kubernetes.Apps.V1
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Kubernetes.Apps.V1">
+  
+  <h1 id="Pulumi_Kubernetes_Apps_V1" data-uid="Pulumi.Kubernetes.Apps.V1" class="text-break">Namespace Pulumi.Kubernetes.Apps.V1
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+    <h3 id="classes">Classes
+  </h3>
+      <h4><a class="xref" href="Pulumi.Kubernetes.Apps.V1.ControllerRevision.html">ControllerRevision</a></h4>
+      <section><p>ControllerRevision implements an immutable snapshot of state data. Clients are responsible
+for serializing and deserializing the objects that contain their internal state. Once a
+ControllerRevision has been successfully created, it can not be updated. The API Server will
+fail validation of all requests that attempt to mutate the Data field. ControllerRevisions
+may, however, be deleted. Note that, due to its use by both the DaemonSet and StatefulSet
+controllers for update and rollback, this object is beta. However, it may be subject to name
+and representation changes in future releases, and clients should not depend on its
+stability. It is primarily for internal use by controllers.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.Kubernetes.Apps.V1.ControllerRevisionList.html">ControllerRevisionList</a></h4>
+      <section><p>ControllerRevisionList is a resource containing a list of ControllerRevision objects.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.Kubernetes.Apps.V1.DaemonSet.html">DaemonSet</a></h4>
+      <section><p>DaemonSet represents the configuration of a daemon set.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.Kubernetes.Apps.V1.DaemonSetList.html">DaemonSetList</a></h4>
+      <section><p>DaemonSetList is a collection of daemon sets.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.Kubernetes.Apps.V1.Deployment.html">Deployment</a></h4>
+      <section><p>Deployment enables declarative updates for Pods and ReplicaSets.</p>
+<p>This resource waits until its status is ready before registering success
+for create/update, and populating output properties from the current state of the resource.
+The following conditions are used to determine whether the resource creation has
+succeeded or failed:</p>
+<ol>
+<li>The Deployment has begun to be updated by the Deployment controller. If the current
+generation of the Deployment is &amp;gt; 1, then this means that the current generation
+must
+be different from the generation reported by the last outputs.</li>
+<li>There exists a ReplicaSet whose revision is equal to the current revision of the
+Deployment.</li>
+<li>The Deployment's '.status.conditions' has a status of type 'Available' whose 'status'
+member is set to 'True'.</li>
+<li>If the Deployment has generation &amp;gt; 1, then '.status.conditions' has a status of
+type
+'Progressing', whose 'status' member is set to 'True', and whose 'reason' is
+'NewReplicaSetAvailable'. For generation &amp;lt;= 1, this status field does not exist,
+because it doesn't do a rollout (i.e., it simply creates the Deployment and
+corresponding ReplicaSet), and therefore there is no rollout to mark as 'Progressing'.</li>
+</ol>
+<p>If the Deployment has not reached a Ready state after 10 minutes, it will
+time out and mark the resource update as Failed. You can override the default timeout value
+by setting the 'customTimeouts' option on the resource.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.Kubernetes.Apps.V1.DeploymentList.html">DeploymentList</a></h4>
+      <section><p>DeploymentList is a list of Deployments.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.Kubernetes.Apps.V1.ReplicaSet.html">ReplicaSet</a></h4>
+      <section><p>ReplicaSet ensures that a specified number of pod replicas are running at any given time.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.Kubernetes.Apps.V1.ReplicaSetList.html">ReplicaSetList</a></h4>
+      <section><p>ReplicaSetList is a collection of ReplicaSets.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.Kubernetes.Apps.V1.StatefulSet.html">StatefulSet</a></h4>
+      <section><p>StatefulSet represents a set of pods with consistent identities. Identities are defined as:</p>
+<ul>
+<li>Network: A single stable DNS and hostname.</li>
+<li>Storage: As many VolumeClaims as requested.
+The StatefulSet guarantees that a given network identity will always map to the same storage
+identity.</li>
+</ul>
+<p>This resource waits until its status is ready before registering success
+for create/update, and populating output properties from the current state of the resource.
+The following conditions are used to determine whether the resource creation has
+succeeded or failed:</p>
+<ol>
+<li>The value of 'spec.replicas' matches '.status.replicas', '.status.currentReplicas',
+and '.status.readyReplicas'.</li>
+<li>The value of '.status.updateRevision' matches '.status.currentRevision'.</li>
+</ol>
+<p>If the StatefulSet has not reached a Ready state after 10 minutes, it will
+time out and mark the resource update as Failed. You can override the default timeout value
+by setting the 'customTimeouts' option on the resource.</p>
+</section>
+      <h4><a class="xref" href="Pulumi.Kubernetes.Apps.V1.StatefulSetList.html">StatefulSetList</a></h4>
+      <section><p>StatefulSetList is a collection of StatefulSets.</p>
+</section>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

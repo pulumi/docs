@@ -10,7 +10,6 @@ menu:
     parent: crossguard
 ---
 <!-- markdownlint-disable ul code -->
-{{% crossguard-preview %}}
 
 ## Overview
 
@@ -25,7 +24,7 @@ In this guide, we'll show you how to create a Policy Pack that configures and us
 ### Prerequisites
 
 - [Install Pulumi]({{< relref "/docs/get-started/install" >}})
-- [Install Node.js version 8 or later](https://nodejs.org/en/download/)
+- [Install Node.js](https://nodejs.org/en/download/)
 
 ### Verify your version of the Pulumi CLI
 
@@ -42,50 +41,11 @@ To use AWSGuard policies, you must create a Policy Pack that references the `@pu
     ```sh
     mkdir awsguard && cd awsguard
     ```
-1. Run the `pulumi policy new` command. Since Policy as Code is in preview, you will need to set `PULUMI_EXPERIMENTAL=true` as an environment variable.
+1. Run the `pulumi policy new` command.
 
-    {{< chooser os "macos,windows,linux" >}}
-
-{{% choosable os macos %}}
-
-On macOS, you can run `export PULUMI_EXPERIMENTAL=true` or simply prepend it to your commands as shown.
-
-```sh
-$ PULUMI_EXPERIMENTAL=true pulumi policy new awsguard-typescript
-```
-{{% /choosable %}}
-
-{{% choosable os linux %}}
-
-On Linux, you can run `export PULUMI_EXPERIMENTAL=true` or simply prepend it to your commands as shown.
-
-```sh
-$ PULUMI_EXPERIMENTAL=true pulumi policy new awsguard-typescript
-```
-
-{{% /choosable %}}
-
-{{% choosable os windows %}}
-
-On Windows, you must first set the environment variable before running the command.
-
-Windows cmd.exe:
-
-```bat
-> set PULUMI_EXPERIMENTAL=true
-> pulumi policy new awsguard-typescript
-```
-
-Windows PowerShell:
-
-```powershell
-> $env:PULUMI_EXPERIMENTAL = 'true'
-> pulumi policy new awsguard-typescript
-```
-
-{{% /choosable %}}
-
-{{< /chooser >}}
+    ```sh
+    $ pulumi policy new awsguard-typescript
+    ```
 
 1. Tweak the code in the `index.ts` file as desired. The default implementation provided by the `awsguard-typescript` template simply creates a new instance of `AwsGuard` with all policies set to have an enforcement level of advisory.
 
@@ -154,43 +114,9 @@ Policy Packs can be tested on a user's local workstation to facilitate rapid dev
 
     In the Pulumi project's directory run:
 
-    {{< chooser os "macos,windows,linux" >}}
-
-{{% choosable os macos %}}
-
-```sh
-$ PULUMI_EXPERIMENTAL=true pulumi preview --policy-pack <path-to-policy-pack-directory>
-```
-
-{{% /choosable %}}
-
-{{% choosable os linux %}}
-
-```sh
-$ PULUMI_EXPERIMENTAL=true pulumi preview --policy-pack <path-to-policy-pack-directory>
-```
-
-{{% /choosable %}}
-
-{{% choosable os windows %}}
-
-Windows cmd.exe:
-
-```bat
-> set PULUMI_EXPERIMENTAL=true
-> pulumi preview --policy-pack <path-to-policy-pack-directory>
-```
-
-Windows PowerShell:
-
-```powershell
-> $env:PULUMI_EXPERIMENTAL = 'true'
-> pulumi preview --policy-pack <path-to-policy-pack-directory>
-```
-
-{{% /choosable %}}
-
-{{< /chooser >}}
+    ```sh
+    $ pulumi preview --policy-pack <path-to-policy-pack-directory>
+    ```
 
     If the stack is not in compliance, the policy violation will be displayed. Since the enforcement level for all policies are set to advisory, a warning is shown for any resources that are not in compliance with the AWSGuard policies. In this case, logging must be defined for S3 buckets.
 

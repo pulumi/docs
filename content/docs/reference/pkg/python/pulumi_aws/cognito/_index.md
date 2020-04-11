@@ -40,9 +40,6 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.cognito.IdentityPool">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.cognito.</code><code class="sig-name descname">IdentityPool</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allow_unauthenticated_identities=None</em>, <em class="sig-param">cognito_identity_providers=None</em>, <em class="sig-param">developer_provider_name=None</em>, <em class="sig-param">identity_pool_name=None</em>, <em class="sig-param">openid_connect_provider_arns=None</em>, <em class="sig-param">saml_provider_arns=None</em>, <em class="sig-param">supported_login_providers=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cognito.IdentityPool" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an AWS Cognito Identity Pool.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cognito_identity_pool.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cognito_identity_pool.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -200,9 +197,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.cognito.IdentityPoolRoleAttachment">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.cognito.</code><code class="sig-name descname">IdentityPoolRoleAttachment</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">identity_pool_id=None</em>, <em class="sig-param">role_mappings=None</em>, <em class="sig-param">roles=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cognito.IdentityPoolRoleAttachment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an AWS Cognito Identity Pool Roles Attachment.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cognito_identity_pool_roles_attachment.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cognito_identity_pool_roles_attachment.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -348,9 +342,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.cognito.IdentityProvider">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.cognito.</code><code class="sig-name descname">IdentityProvider</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">attribute_mapping=None</em>, <em class="sig-param">idp_identifiers=None</em>, <em class="sig-param">provider_details=None</em>, <em class="sig-param">provider_name=None</em>, <em class="sig-param">provider_type=None</em>, <em class="sig-param">user_pool_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cognito.IdentityProvider" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Cognito User Identity Provider resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cognito_identity_provider.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cognito_identity_provider.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -467,9 +458,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.cognito.ResourceServer">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.cognito.</code><code class="sig-name descname">ResourceServer</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">identifier=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">scopes=None</em>, <em class="sig-param">user_pool_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cognito.ResourceServer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Cognito Resource Server.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cognito_resource_server.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cognito_resource_server.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -581,9 +569,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.cognito.UserGroup">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.cognito.</code><code class="sig-name descname">UserGroup</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">precedence=None</em>, <em class="sig-param">role_arn=None</em>, <em class="sig-param">user_pool_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cognito.UserGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Cognito User Group resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cognito_user_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cognito_user_group.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -688,11 +673,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.cognito.UserPool">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.cognito.</code><code class="sig-name descname">UserPool</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">admin_create_user_config=None</em>, <em class="sig-param">alias_attributes=None</em>, <em class="sig-param">auto_verified_attributes=None</em>, <em class="sig-param">device_configuration=None</em>, <em class="sig-param">email_configuration=None</em>, <em class="sig-param">email_verification_message=None</em>, <em class="sig-param">email_verification_subject=None</em>, <em class="sig-param">lambda_config=None</em>, <em class="sig-param">mfa_configuration=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">password_policy=None</em>, <em class="sig-param">schemas=None</em>, <em class="sig-param">sms_authentication_message=None</em>, <em class="sig-param">sms_configuration=None</em>, <em class="sig-param">sms_verification_message=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">user_pool_add_ons=None</em>, <em class="sig-param">username_attributes=None</em>, <em class="sig-param">verification_message_template=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cognito.UserPool" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.cognito.</code><code class="sig-name descname">UserPool</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">admin_create_user_config=None</em>, <em class="sig-param">alias_attributes=None</em>, <em class="sig-param">auto_verified_attributes=None</em>, <em class="sig-param">device_configuration=None</em>, <em class="sig-param">email_configuration=None</em>, <em class="sig-param">email_verification_message=None</em>, <em class="sig-param">email_verification_subject=None</em>, <em class="sig-param">lambda_config=None</em>, <em class="sig-param">mfa_configuration=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">password_policy=None</em>, <em class="sig-param">schemas=None</em>, <em class="sig-param">sms_authentication_message=None</em>, <em class="sig-param">sms_configuration=None</em>, <em class="sig-param">sms_verification_message=None</em>, <em class="sig-param">software_token_mfa_configuration=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">user_pool_add_ons=None</em>, <em class="sig-param">username_attributes=None</em>, <em class="sig-param">username_configuration=None</em>, <em class="sig-param">verification_message_template=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cognito.UserPool" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Cognito User Pool resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cognito_user_pool.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cognito_user_pool.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -706,16 +688,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>email_verification_message</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A string representing the email verification message. Conflicts with <code class="docutils literal notranslate"><span class="pre">verification_message_template</span></code> configuration block <code class="docutils literal notranslate"><span class="pre">email_message</span></code> argument.</p></li>
 <li><p><strong>email_verification_subject</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A string representing the email verification subject. Conflicts with <code class="docutils literal notranslate"><span class="pre">verification_message_template</span></code> configuration block <code class="docutils literal notranslate"><span class="pre">email_subject</span></code> argument.</p></li>
 <li><p><strong>lambda_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A container for the AWS Lambda triggers associated with the user pool.</p></li>
-<li><p><strong>mfa_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Set to enable multi-factor authentication. Must be one of the following values (ON, OFF, OPTIONAL)</p></li>
+<li><p><strong>mfa_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Multi-Factor Authentication (MFA) configuration for the User Pool. Defaults of <code class="docutils literal notranslate"><span class="pre">OFF</span></code>. Valid values:</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the attribute.</p></li>
 <li><p><strong>password_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A container for information about the user pool password policy.</p></li>
 <li><p><strong>schemas</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A container with the schema attributes of a user pool. Schema attributes from the <a class="reference external" href="https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-attributes.html#cognito-user-pools-standard-attributes">standard attribute set</a> only need to be specified if they are different from the default configuration. Maximum of 50 attributes.</p></li>
-<li><p><strong>sms_authentication_message</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A string representing the SMS authentication message.</p></li>
-<li><p><strong>sms_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The SMS Configuration.</p></li>
+<li><p><strong>sms_authentication_message</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A string representing the SMS authentication message. The message must contain the <code class="docutils literal notranslate"><span class="pre">{####}</span></code> placeholder, which will be replaced with the code.</p></li>
+<li><p><strong>sms_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration block for Short Message Service (SMS) settings. Detailed below. These settings apply to SMS user verification and SMS Multi-Factor Authentication (MFA). Due to Cognito API restrictions, the SMS configuration cannot be removed without recreating the Cognito User Pool. For user data safety, this resource will ignore the removal of this configuration by disabling drift detection. To force resource recreation after this configuration has been applied, see the <cite>``up`</cite> command and use –replace &lt;<a class="reference external" href="https://www.pulumi.com/docs/reference/cli/pulumi_up/">https://www.pulumi.com/docs/reference/cli/pulumi_up/</a>&gt;`_.</p></li>
 <li><p><strong>sms_verification_message</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A string representing the SMS verification message. Conflicts with <code class="docutils literal notranslate"><span class="pre">verification_message_template</span></code> configuration block <code class="docutils literal notranslate"><span class="pre">sms_message</span></code> argument.</p></li>
+<li><p><strong>software_token_mfa_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration block for software token Mult-Factor Authentication (MFA) settings. Detailed below.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the User Pool.</p></li>
 <li><p><strong>user_pool_add_ons</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration block for user pool add-ons to enable user pool advanced security mode features.</p></li>
 <li><p><strong>username_attributes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Specifies whether email addresses or phone numbers can be specified as usernames when a user signs up. Conflicts with <code class="docutils literal notranslate"><span class="pre">alias_attributes</span></code>.</p></li>
+<li><p><strong>username_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The Username Configuration.</p></li>
 <li><p><strong>verification_message_template</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The verification message templates configuration.</p></li>
 </ul>
 </dd>
@@ -740,6 +724,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>The <strong>email_configuration</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">emailSendingAccount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Instruct Cognito to either use its built-in functional or Amazon SES to send out emails.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fromEmailAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Sender’s email address or sender’s name with their email address (e.g. “<a class="reference external" href="mailto:john&#37;&#52;&#48;smith&#46;com">john<span>&#64;</span>smith<span>&#46;</span>com</a>” or “John Smith <a class="reference external" href="mailto:john&#37;&#52;&#48;smith&#46;com">john<span>&#64;</span>smith<span>&#46;</span>com</a>”)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">replyToEmailAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The REPLY-TO email address.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">source_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the email source.</p></li>
 </ul>
@@ -790,9 +775,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">externalId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The external ID used in IAM role trust relationships. For more information about using external IDs, see <a class="reference external" href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user_externalid.html">How to Use an External ID When Granting Access to Your AWS Resources to a Third Party</a>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">snsCallerArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the Amazon SNS caller. This is usually the IAM role that you’ve given Cognito permission to assume.</p></li>
 </ul>
+<p>The <strong>software_token_mfa_configuration</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Boolean whether to enable software token Multi-Factor (MFA) tokens, such as Time-based One-Time Password (TOTP). To disable software token MFA when <code class="docutils literal notranslate"><span class="pre">sms_configuration</span></code> is not present, the <code class="docutils literal notranslate"><span class="pre">mfa_configuration</span></code> argument must be set to <code class="docutils literal notranslate"><span class="pre">OFF</span></code> and the <code class="docutils literal notranslate"><span class="pre">software_token_mfa_configuration</span></code> configuration block must be fully removed.</p></li>
+</ul>
 <p>The <strong>user_pool_add_ons</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">advancedSecurityMode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The mode for advanced security, must be one of <code class="docutils literal notranslate"><span class="pre">OFF</span></code>, <code class="docutils literal notranslate"><span class="pre">AUDIT</span></code> or <code class="docutils literal notranslate"><span class="pre">ENFORCED</span></code>.</p></li>
+</ul>
+<p>The <strong>username_configuration</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">caseSensitive</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specifies whether username case sensitivity will be applied for all users in the user pool through Cognito APIs.</p></li>
 </ul>
 <p>The <strong>verification_message_template</strong> object supports the following:</p>
 <ul class="simple">
@@ -860,6 +853,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The Email Configuration.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">emailSendingAccount</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Instruct Cognito to either use its built-in functional or Amazon SES to send out emails.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fromEmailAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Sender’s email address or sender’s name with their email address (e.g. “<a class="reference external" href="mailto:john&#37;&#52;&#48;smith&#46;com">john<span>&#64;</span>smith<span>&#46;</span>com</a>” or “John Smith <a class="reference external" href="mailto:john&#37;&#52;&#48;smith&#46;com">john<span>&#64;</span>smith<span>&#46;</span>com</a>”)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">replyToEmailAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The REPLY-TO email address.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">source_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ARN of the email source.</p></li>
 </ul>
@@ -910,7 +904,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.cognito.UserPool.mfa_configuration">
 <code class="sig-name descname">mfa_configuration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cognito.UserPool.mfa_configuration" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set to enable multi-factor authentication. Must be one of the following values (ON, OFF, OPTIONAL)</p>
+<dd><p>Multi-Factor Authentication (MFA) configuration for the User Pool. Defaults of <code class="docutils literal notranslate"><span class="pre">OFF</span></code>. Valid values:</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -961,13 +955,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.cognito.UserPool.sms_authentication_message">
 <code class="sig-name descname">sms_authentication_message</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cognito.UserPool.sms_authentication_message" title="Permalink to this definition">¶</a></dt>
-<dd><p>A string representing the SMS authentication message.</p>
+<dd><p>A string representing the SMS authentication message. The message must contain the <code class="docutils literal notranslate"><span class="pre">{####}</span></code> placeholder, which will be replaced with the code.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_aws.cognito.UserPool.sms_configuration">
 <code class="sig-name descname">sms_configuration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cognito.UserPool.sms_configuration" title="Permalink to this definition">¶</a></dt>
-<dd><p>The SMS Configuration.</p>
+<dd><p>Configuration block for Short Message Service (SMS) settings. Detailed below. These settings apply to SMS user verification and SMS Multi-Factor Authentication (MFA). Due to Cognito API restrictions, the SMS configuration cannot be removed without recreating the Cognito User Pool. For user data safety, this resource will ignore the removal of this configuration by disabling drift detection. To force resource recreation after this configuration has been applied, see the <cite>``up`</cite> command and use –replace &lt;<a class="reference external" href="https://www.pulumi.com/docs/reference/cli/pulumi_up/">https://www.pulumi.com/docs/reference/cli/pulumi_up/</a>&gt;`_.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">externalId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The external ID used in IAM role trust relationships. For more information about using external IDs, see <a class="reference external" href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user_externalid.html">How to Use an External ID When Granting Access to Your AWS Resources to a Third Party</a>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">snsCallerArn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ARN of the Amazon SNS caller. This is usually the IAM role that you’ve given Cognito permission to assume.</p></li>
@@ -978,6 +972,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.cognito.UserPool.sms_verification_message">
 <code class="sig-name descname">sms_verification_message</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cognito.UserPool.sms_verification_message" title="Permalink to this definition">¶</a></dt>
 <dd><p>A string representing the SMS verification message. Conflicts with <code class="docutils literal notranslate"><span class="pre">verification_message_template</span></code> configuration block <code class="docutils literal notranslate"><span class="pre">sms_message</span></code> argument.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.cognito.UserPool.software_token_mfa_configuration">
+<code class="sig-name descname">software_token_mfa_configuration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cognito.UserPool.software_token_mfa_configuration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configuration block for software token Mult-Factor Authentication (MFA) settings. Detailed below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Boolean whether to enable software token Multi-Factor (MFA) tokens, such as Time-based One-Time Password (TOTP). To disable software token MFA when <code class="docutils literal notranslate"><span class="pre">sms_configuration</span></code> is not present, the <code class="docutils literal notranslate"><span class="pre">mfa_configuration</span></code> argument must be set to <code class="docutils literal notranslate"><span class="pre">OFF</span></code> and the <code class="docutils literal notranslate"><span class="pre">software_token_mfa_configuration</span></code> configuration block must be fully removed.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -1002,6 +1005,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.cognito.UserPool.username_configuration">
+<code class="sig-name descname">username_configuration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cognito.UserPool.username_configuration" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Username Configuration.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">caseSensitive</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Specifies whether username case sensitivity will be applied for all users in the user pool through Cognito APIs.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.cognito.UserPool.verification_message_template">
 <code class="sig-name descname">verification_message_template</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cognito.UserPool.verification_message_template" title="Permalink to this definition">¶</a></dt>
 <dd><p>The verification message templates configuration.</p>
@@ -1017,7 +1029,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="method">
 <dt id="pulumi_aws.cognito.UserPool.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">admin_create_user_config=None</em>, <em class="sig-param">alias_attributes=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">auto_verified_attributes=None</em>, <em class="sig-param">creation_date=None</em>, <em class="sig-param">device_configuration=None</em>, <em class="sig-param">email_configuration=None</em>, <em class="sig-param">email_verification_message=None</em>, <em class="sig-param">email_verification_subject=None</em>, <em class="sig-param">endpoint=None</em>, <em class="sig-param">lambda_config=None</em>, <em class="sig-param">last_modified_date=None</em>, <em class="sig-param">mfa_configuration=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">password_policy=None</em>, <em class="sig-param">schemas=None</em>, <em class="sig-param">sms_authentication_message=None</em>, <em class="sig-param">sms_configuration=None</em>, <em class="sig-param">sms_verification_message=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">user_pool_add_ons=None</em>, <em class="sig-param">username_attributes=None</em>, <em class="sig-param">verification_message_template=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cognito.UserPool.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">admin_create_user_config=None</em>, <em class="sig-param">alias_attributes=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">auto_verified_attributes=None</em>, <em class="sig-param">creation_date=None</em>, <em class="sig-param">device_configuration=None</em>, <em class="sig-param">email_configuration=None</em>, <em class="sig-param">email_verification_message=None</em>, <em class="sig-param">email_verification_subject=None</em>, <em class="sig-param">endpoint=None</em>, <em class="sig-param">lambda_config=None</em>, <em class="sig-param">last_modified_date=None</em>, <em class="sig-param">mfa_configuration=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">password_policy=None</em>, <em class="sig-param">schemas=None</em>, <em class="sig-param">sms_authentication_message=None</em>, <em class="sig-param">sms_configuration=None</em>, <em class="sig-param">sms_verification_message=None</em>, <em class="sig-param">software_token_mfa_configuration=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">user_pool_add_ons=None</em>, <em class="sig-param">username_attributes=None</em>, <em class="sig-param">username_configuration=None</em>, <em class="sig-param">verification_message_template=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cognito.UserPool.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing UserPool resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -1038,17 +1050,19 @@ properties used to qualify the lookup.</p>
 <li><p><strong>endpoint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The endpoint name of the user pool. Example format: cognito-idp.REGION.amazonaws.com/xxxx_yyyyy</p></li>
 <li><p><strong>lambda_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A container for the AWS Lambda triggers associated with the user pool.</p></li>
 <li><p><strong>last_modified_date</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The date the user pool was last modified.</p></li>
-<li><p><strong>mfa_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Set to enable multi-factor authentication. Must be one of the following values (ON, OFF, OPTIONAL)</p></li>
+<li><p><strong>mfa_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Multi-Factor Authentication (MFA) configuration for the User Pool. Defaults of <code class="docutils literal notranslate"><span class="pre">OFF</span></code>. Valid values:</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the attribute.</p></li>
 <li><p><strong>password_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A container for information about the user pool password policy.</p></li>
 <li><p><strong>schemas</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>A container with the schema attributes of a user pool. Schema attributes from the <a class="reference external" href="https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-attributes.html#cognito-user-pools-standard-attributes">standard attribute set</a> only need to be specified if they are different from the default configuration. Maximum of 50 attributes.</p>
 </p></li>
-<li><p><strong>sms_authentication_message</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A string representing the SMS authentication message.</p></li>
-<li><p><strong>sms_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The SMS Configuration.</p></li>
+<li><p><strong>sms_authentication_message</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A string representing the SMS authentication message. The message must contain the <code class="docutils literal notranslate"><span class="pre">{####}</span></code> placeholder, which will be replaced with the code.</p></li>
+<li><p><strong>sms_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration block for Short Message Service (SMS) settings. Detailed below. These settings apply to SMS user verification and SMS Multi-Factor Authentication (MFA). Due to Cognito API restrictions, the SMS configuration cannot be removed without recreating the Cognito User Pool. For user data safety, this resource will ignore the removal of this configuration by disabling drift detection. To force resource recreation after this configuration has been applied, see the <cite>``up`</cite> command and use –replace &lt;<a class="reference external" href="https://www.pulumi.com/docs/reference/cli/pulumi_up/">https://www.pulumi.com/docs/reference/cli/pulumi_up/</a>&gt;`_.</p></li>
 <li><p><strong>sms_verification_message</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A string representing the SMS verification message. Conflicts with <code class="docutils literal notranslate"><span class="pre">verification_message_template</span></code> configuration block <code class="docutils literal notranslate"><span class="pre">sms_message</span></code> argument.</p></li>
+<li><p><strong>software_token_mfa_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration block for software token Mult-Factor Authentication (MFA) settings. Detailed below.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the User Pool.</p></li>
 <li><p><strong>user_pool_add_ons</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Configuration block for user pool add-ons to enable user pool advanced security mode features.</p></li>
 <li><p><strong>username_attributes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Specifies whether email addresses or phone numbers can be specified as usernames when a user signs up. Conflicts with <code class="docutils literal notranslate"><span class="pre">alias_attributes</span></code>.</p></li>
+<li><p><strong>username_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The Username Configuration.</p></li>
 <li><p><strong>verification_message_template</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The verification message templates configuration.</p></li>
 </ul>
 </dd>
@@ -1073,6 +1087,7 @@ properties used to qualify the lookup.</p>
 <p>The <strong>email_configuration</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">emailSendingAccount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Instruct Cognito to either use its built-in functional or Amazon SES to send out emails.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fromEmailAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Sender’s email address or sender’s name with their email address (e.g. “<a class="reference external" href="mailto:john&#37;&#52;&#48;smith&#46;com">john<span>&#64;</span>smith<span>&#46;</span>com</a>” or “John Smith <a class="reference external" href="mailto:john&#37;&#52;&#48;smith&#46;com">john<span>&#64;</span>smith<span>&#46;</span>com</a>”)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">replyToEmailAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The REPLY-TO email address.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">source_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the email source.</p></li>
 </ul>
@@ -1123,9 +1138,17 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">externalId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The external ID used in IAM role trust relationships. For more information about using external IDs, see <a class="reference external" href="http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user_externalid.html">How to Use an External ID When Granting Access to Your AWS Resources to a Third Party</a>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">snsCallerArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the Amazon SNS caller. This is usually the IAM role that you’ve given Cognito permission to assume.</p></li>
 </ul>
+<p>The <strong>software_token_mfa_configuration</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Boolean whether to enable software token Multi-Factor (MFA) tokens, such as Time-based One-Time Password (TOTP). To disable software token MFA when <code class="docutils literal notranslate"><span class="pre">sms_configuration</span></code> is not present, the <code class="docutils literal notranslate"><span class="pre">mfa_configuration</span></code> argument must be set to <code class="docutils literal notranslate"><span class="pre">OFF</span></code> and the <code class="docutils literal notranslate"><span class="pre">software_token_mfa_configuration</span></code> configuration block must be fully removed.</p></li>
+</ul>
 <p>The <strong>user_pool_add_ons</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">advancedSecurityMode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The mode for advanced security, must be one of <code class="docutils literal notranslate"><span class="pre">OFF</span></code>, <code class="docutils literal notranslate"><span class="pre">AUDIT</span></code> or <code class="docutils literal notranslate"><span class="pre">ENFORCED</span></code>.</p></li>
+</ul>
+<p>The <strong>username_configuration</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">caseSensitive</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specifies whether username case sensitivity will be applied for all users in the user pool through Cognito APIs.</p></li>
 </ul>
 <p>The <strong>verification_message_template</strong> object supports the following:</p>
 <ul class="simple">
@@ -1178,11 +1201,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.cognito.UserPoolClient">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.cognito.</code><code class="sig-name descname">UserPoolClient</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allowed_oauth_flows=None</em>, <em class="sig-param">allowed_oauth_flows_user_pool_client=None</em>, <em class="sig-param">allowed_oauth_scopes=None</em>, <em class="sig-param">callback_urls=None</em>, <em class="sig-param">default_redirect_uri=None</em>, <em class="sig-param">explicit_auth_flows=None</em>, <em class="sig-param">generate_secret=None</em>, <em class="sig-param">logout_urls=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">read_attributes=None</em>, <em class="sig-param">refresh_token_validity=None</em>, <em class="sig-param">supported_identity_providers=None</em>, <em class="sig-param">user_pool_id=None</em>, <em class="sig-param">write_attributes=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cognito.UserPoolClient" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.cognito.</code><code class="sig-name descname">UserPoolClient</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allowed_oauth_flows=None</em>, <em class="sig-param">allowed_oauth_flows_user_pool_client=None</em>, <em class="sig-param">allowed_oauth_scopes=None</em>, <em class="sig-param">analytics_configuration=None</em>, <em class="sig-param">callback_urls=None</em>, <em class="sig-param">default_redirect_uri=None</em>, <em class="sig-param">explicit_auth_flows=None</em>, <em class="sig-param">generate_secret=None</em>, <em class="sig-param">logout_urls=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">prevent_user_existence_errors=None</em>, <em class="sig-param">read_attributes=None</em>, <em class="sig-param">refresh_token_validity=None</em>, <em class="sig-param">supported_identity_providers=None</em>, <em class="sig-param">user_pool_id=None</em>, <em class="sig-param">write_attributes=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cognito.UserPoolClient" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Cognito User Pool Client resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cognito_user_pool_client.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cognito_user_pool_client.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1191,12 +1211,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>allowed_oauth_flows</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of allowed OAuth flows (code, implicit, client_credentials).</p></li>
 <li><p><strong>allowed_oauth_flows_user_pool_client</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the client is allowed to follow the OAuth protocol when interacting with Cognito user pools.</p></li>
 <li><p><strong>allowed_oauth_scopes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of allowed OAuth scopes (phone, email, openid, profile, and aws.cognito.signin.user.admin).</p></li>
+<li><p><strong>analytics_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The Amazon Pinpoint analytics configuration for collecting metrics for this user pool.</p></li>
 <li><p><strong>callback_urls</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of allowed callback URLs for the identity providers.</p></li>
 <li><p><strong>default_redirect_uri</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The default redirect URI. Must be in the list of callback URLs.</p></li>
 <li><p><strong>explicit_auth_flows</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of authentication flows (ADMIN_NO_SRP_AUTH, CUSTOM_AUTH_FLOW_ONLY,  USER_PASSWORD_AUTH, ALLOW_ADMIN_USER_PASSWORD_AUTH, ALLOW_CUSTOM_AUTH, ALLOW_USER_PASSWORD_AUTH, ALLOW_USER_SRP_AUTH, ALLOW_REFRESH_TOKEN_AUTH).</p></li>
 <li><p><strong>generate_secret</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should an application secret be generated.</p></li>
 <li><p><strong>logout_urls</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of allowed logout URLs for the identity providers.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the application client.</p></li>
+<li><p><strong>prevent_user_existence_errors</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Choose which errors and responses are returned by Cognito APIs during authentication, account confirmation, and password recovery when the user does not exist in the user pool. When set to <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code> and the user does not exist, authentication returns an error indicating either the username or password was incorrect, and account confirmation and password recovery return a response indicating a code was sent to a simulated destination. When set to <code class="docutils literal notranslate"><span class="pre">LEGACY</span></code>, those APIs will return a <code class="docutils literal notranslate"><span class="pre">UserNotFoundException</span></code> exception if the user does not exist in the user pool.</p></li>
 <li><p><strong>read_attributes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of user pool attributes the application client can read from.</p></li>
 <li><p><strong>refresh_token_validity</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The time limit in days refresh tokens are valid for.</p></li>
 <li><p><strong>supported_identity_providers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of provider names for the identity providers that are supported on this client.</p></li>
@@ -1205,6 +1227,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
+<p>The <strong>analytics_configuration</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">application_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The application ID for an Amazon Pinpoint application.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">externalId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An ID for the Analytics Configuration.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of an IAM role that authorizes Amazon Cognito to publish events to Amazon Pinpoint analytics.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">userDataShared</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, Amazon Cognito will include user data in the events it publishes to Amazon Pinpoint analytics.</p></li>
+</ul>
 <dl class="attribute">
 <dt id="pulumi_aws.cognito.UserPoolClient.allowed_oauth_flows">
 <code class="sig-name descname">allowed_oauth_flows</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cognito.UserPoolClient.allowed_oauth_flows" title="Permalink to this definition">¶</a></dt>
@@ -1221,6 +1250,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.cognito.UserPoolClient.allowed_oauth_scopes">
 <code class="sig-name descname">allowed_oauth_scopes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cognito.UserPoolClient.allowed_oauth_scopes" title="Permalink to this definition">¶</a></dt>
 <dd><p>List of allowed OAuth scopes (phone, email, openid, profile, and aws.cognito.signin.user.admin).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.cognito.UserPoolClient.analytics_configuration">
+<code class="sig-name descname">analytics_configuration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cognito.UserPoolClient.analytics_configuration" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Amazon Pinpoint analytics configuration for collecting metrics for this user pool.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">application_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The application ID for an Amazon Pinpoint application.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">externalId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - An ID for the Analytics Configuration.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ARN of an IAM role that authorizes Amazon Cognito to publish events to Amazon Pinpoint analytics.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">userDataShared</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, Amazon Cognito will include user data in the events it publishes to Amazon Pinpoint analytics.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -1266,6 +1307,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.cognito.UserPoolClient.prevent_user_existence_errors">
+<code class="sig-name descname">prevent_user_existence_errors</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cognito.UserPoolClient.prevent_user_existence_errors" title="Permalink to this definition">¶</a></dt>
+<dd><p>Choose which errors and responses are returned by Cognito APIs during authentication, account confirmation, and password recovery when the user does not exist in the user pool. When set to <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code> and the user does not exist, authentication returns an error indicating either the username or password was incorrect, and account confirmation and password recovery return a response indicating a code was sent to a simulated destination. When set to <code class="docutils literal notranslate"><span class="pre">LEGACY</span></code>, those APIs will return a <code class="docutils literal notranslate"><span class="pre">UserNotFoundException</span></code> exception if the user does not exist in the user pool.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.cognito.UserPoolClient.read_attributes">
 <code class="sig-name descname">read_attributes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cognito.UserPoolClient.read_attributes" title="Permalink to this definition">¶</a></dt>
 <dd><p>List of user pool attributes the application client can read from.</p>
@@ -1297,7 +1344,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="method">
 <dt id="pulumi_aws.cognito.UserPoolClient.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allowed_oauth_flows=None</em>, <em class="sig-param">allowed_oauth_flows_user_pool_client=None</em>, <em class="sig-param">allowed_oauth_scopes=None</em>, <em class="sig-param">callback_urls=None</em>, <em class="sig-param">client_secret=None</em>, <em class="sig-param">default_redirect_uri=None</em>, <em class="sig-param">explicit_auth_flows=None</em>, <em class="sig-param">generate_secret=None</em>, <em class="sig-param">logout_urls=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">read_attributes=None</em>, <em class="sig-param">refresh_token_validity=None</em>, <em class="sig-param">supported_identity_providers=None</em>, <em class="sig-param">user_pool_id=None</em>, <em class="sig-param">write_attributes=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cognito.UserPoolClient.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allowed_oauth_flows=None</em>, <em class="sig-param">allowed_oauth_flows_user_pool_client=None</em>, <em class="sig-param">allowed_oauth_scopes=None</em>, <em class="sig-param">analytics_configuration=None</em>, <em class="sig-param">callback_urls=None</em>, <em class="sig-param">client_secret=None</em>, <em class="sig-param">default_redirect_uri=None</em>, <em class="sig-param">explicit_auth_flows=None</em>, <em class="sig-param">generate_secret=None</em>, <em class="sig-param">logout_urls=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">prevent_user_existence_errors=None</em>, <em class="sig-param">read_attributes=None</em>, <em class="sig-param">refresh_token_validity=None</em>, <em class="sig-param">supported_identity_providers=None</em>, <em class="sig-param">user_pool_id=None</em>, <em class="sig-param">write_attributes=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cognito.UserPoolClient.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing UserPoolClient resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -1309,6 +1356,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>allowed_oauth_flows</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of allowed OAuth flows (code, implicit, client_credentials).</p></li>
 <li><p><strong>allowed_oauth_flows_user_pool_client</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the client is allowed to follow the OAuth protocol when interacting with Cognito user pools.</p></li>
 <li><p><strong>allowed_oauth_scopes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of allowed OAuth scopes (phone, email, openid, profile, and aws.cognito.signin.user.admin).</p></li>
+<li><p><strong>analytics_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The Amazon Pinpoint analytics configuration for collecting metrics for this user pool.</p></li>
 <li><p><strong>callback_urls</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of allowed callback URLs for the identity providers.</p></li>
 <li><p><strong>client_secret</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The client secret of the user pool client.</p></li>
 <li><p><strong>default_redirect_uri</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The default redirect URI. Must be in the list of callback URLs.</p></li>
@@ -1316,6 +1364,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>generate_secret</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Should an application secret be generated.</p></li>
 <li><p><strong>logout_urls</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of allowed logout URLs for the identity providers.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the application client.</p></li>
+<li><p><strong>prevent_user_existence_errors</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Choose which errors and responses are returned by Cognito APIs during authentication, account confirmation, and password recovery when the user does not exist in the user pool. When set to <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code> and the user does not exist, authentication returns an error indicating either the username or password was incorrect, and account confirmation and password recovery return a response indicating a code was sent to a simulated destination. When set to <code class="docutils literal notranslate"><span class="pre">LEGACY</span></code>, those APIs will return a <code class="docutils literal notranslate"><span class="pre">UserNotFoundException</span></code> exception if the user does not exist in the user pool.</p></li>
 <li><p><strong>read_attributes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of user pool attributes the application client can read from.</p></li>
 <li><p><strong>refresh_token_validity</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The time limit in days refresh tokens are valid for.</p></li>
 <li><p><strong>supported_identity_providers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of provider names for the identity providers that are supported on this client.</p></li>
@@ -1324,6 +1373,13 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
+<p>The <strong>analytics_configuration</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">application_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The application ID for an Amazon Pinpoint application.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">externalId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An ID for the Analytics Configuration.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of an IAM role that authorizes Amazon Cognito to publish events to Amazon Pinpoint analytics.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">userDataShared</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, Amazon Cognito will include user data in the events it publishes to Amazon Pinpoint analytics.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="method">
@@ -1368,9 +1424,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.cognito.UserPoolDomain">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.cognito.</code><code class="sig-name descname">UserPoolDomain</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">certificate_arn=None</em>, <em class="sig-param">domain=None</em>, <em class="sig-param">user_pool_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cognito.UserPoolDomain" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Cognito User Pool Domain resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cognito_user_pool_domain.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cognito_user_pool_domain.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1489,9 +1542,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.cognito.get_user_pools">
 <code class="sig-prename descclassname">pulumi_aws.cognito.</code><code class="sig-name descname">get_user_pools</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cognito.get_user_pools" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get a list of cognito user pools.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/cognito_user_pools.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/cognito_user_pools.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – Name of the cognito user pools. Name is not a unique attribute for cognito user pool, so multiple pools might be returned with given name.</p>

@@ -1,0 +1,1105 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Saml
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Saml
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Okta.Idp.Saml">
+  
+  <h1 id="Pulumi_Okta_Idp_Saml" data-uid="Pulumi.Okta.Idp.Saml" class="text-break">Class Saml
+  </h1>
+  <div class="markdown level0 summary"><p>Creates a SAML Identity Provider.</p>
+<p>This resource allows you to create and configure a SAML Identity Provider.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/idp_saml.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/idp_saml.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Saml</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Okta.Idp.html">Pulumi.Okta.Idp</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.Okta.dll</h6>
+  <h5 id="Pulumi_Okta_Idp_Saml_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Saml : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Saml.cs/#L220">View Source</a>
+  </span>
+  <a id="Pulumi_Okta_Idp_Saml__ctor_" data-uid="Pulumi.Okta.Idp.Saml.#ctor*"></a>
+  <h4 id="Pulumi_Okta_Idp_Saml__ctor_System_String_Pulumi_Okta_Idp_SamlArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Okta.Idp.Saml.#ctor(System.String,Pulumi.Okta.Idp.SamlArgs,System.Nullable{CustomResourceOptions})">Saml(String, SamlArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Create a Saml resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Saml(string name, SamlArgs args, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Okta.Idp.SamlArgs.html">SamlArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Saml.cs/#L23">View Source</a>
+  </span>
+  <a id="Pulumi_Okta_Idp_Saml_AccountLinkAction_" data-uid="Pulumi.Okta.Idp.Saml.AccountLinkAction*"></a>
+  <h4 id="Pulumi_Okta_Idp_Saml_AccountLinkAction" data-uid="Pulumi.Okta.Idp.Saml.AccountLinkAction">AccountLinkAction</h4>
+  <div class="markdown level1 summary"><p>Specifies the account linking action for an IdP user.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; AccountLinkAction { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Saml.cs/#L29">View Source</a>
+  </span>
+  <a id="Pulumi_Okta_Idp_Saml_AccountLinkGroupIncludes_" data-uid="Pulumi.Okta.Idp.Saml.AccountLinkGroupIncludes*"></a>
+  <h4 id="Pulumi_Okta_Idp_Saml_AccountLinkGroupIncludes" data-uid="Pulumi.Okta.Idp.Saml.AccountLinkGroupIncludes">AccountLinkGroupIncludes</h4>
+  <div class="markdown level1 summary"><p>Group memberships to determine link candidates.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; AccountLinkGroupIncludes { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Saml.cs/#L35">View Source</a>
+  </span>
+  <a id="Pulumi_Okta_Idp_Saml_AcsBinding_" data-uid="Pulumi.Okta.Idp.Saml.AcsBinding*"></a>
+  <h4 id="Pulumi_Okta_Idp_Saml_AcsBinding" data-uid="Pulumi.Okta.Idp.Saml.AcsBinding">AcsBinding</h4>
+  <div class="markdown level1 summary"><p>The method of making an ACS request. It can be set to <code>&amp;quot;HTTP-POST&amp;quot;</code> or <code>&amp;quot;HTTP-REDIRECT&amp;quot;</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; AcsBinding { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Saml.cs/#L41">View Source</a>
+  </span>
+  <a id="Pulumi_Okta_Idp_Saml_AcsType_" data-uid="Pulumi.Okta.Idp.Saml.AcsType*"></a>
+  <h4 id="Pulumi_Okta_Idp_Saml_AcsType" data-uid="Pulumi.Okta.Idp.Saml.AcsType">AcsType</h4>
+  <div class="markdown level1 summary"><p>The type of ACS. It can be <code>&amp;quot;INSTANCE&amp;quot;</code> or <code>&amp;quot;ORG&amp;quot;</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; AcsType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Saml.cs/#L47">View Source</a>
+  </span>
+  <a id="Pulumi_Okta_Idp_Saml_Audience_" data-uid="Pulumi.Okta.Idp.Saml.Audience*"></a>
+  <h4 id="Pulumi_Okta_Idp_Saml_Audience" data-uid="Pulumi.Okta.Idp.Saml.Audience">Audience</h4>
+  <div class="markdown level1 summary"><p>The audience restriction for the IdP.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Audience { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Saml.cs/#L53">View Source</a>
+  </span>
+  <a id="Pulumi_Okta_Idp_Saml_DeprovisionedAction_" data-uid="Pulumi.Okta.Idp.Saml.DeprovisionedAction*"></a>
+  <h4 id="Pulumi_Okta_Idp_Saml_DeprovisionedAction" data-uid="Pulumi.Okta.Idp.Saml.DeprovisionedAction">DeprovisionedAction</h4>
+  <div class="markdown level1 summary"><p>Action for a previously deprovisioned IdP user during authentication. Can be <code>&amp;quot;NONE&amp;quot;</code> or <code>&amp;quot;REACTIVATE&amp;quot;</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; DeprovisionedAction { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Saml.cs/#L59">View Source</a>
+  </span>
+  <a id="Pulumi_Okta_Idp_Saml_GroupsAction_" data-uid="Pulumi.Okta.Idp.Saml.GroupsAction*"></a>
+  <h4 id="Pulumi_Okta_Idp_Saml_GroupsAction" data-uid="Pulumi.Okta.Idp.Saml.GroupsAction">GroupsAction</h4>
+  <div class="markdown level1 summary"><p>Provisioning action for IdP user's group memberships. It can be <code>&amp;quot;NONE&amp;quot;</code>, <code>&amp;quot;SYNC&amp;quot;</code>, <code>&amp;quot;APPEND&amp;quot;</code>, or <code>&amp;quot;ASSIGN&amp;quot;</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; GroupsAction { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Saml.cs/#L65">View Source</a>
+  </span>
+  <a id="Pulumi_Okta_Idp_Saml_GroupsAssignments_" data-uid="Pulumi.Okta.Idp.Saml.GroupsAssignments*"></a>
+  <h4 id="Pulumi_Okta_Idp_Saml_GroupsAssignments" data-uid="Pulumi.Okta.Idp.Saml.GroupsAssignments">GroupsAssignments</h4>
+  <div class="markdown level1 summary"><p>List of Okta Group IDs to add an IdP user as a member with the <code>&amp;quot;ASSIGN&amp;quot;</code> <code>groups_action</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; GroupsAssignments { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Saml.cs/#L71">View Source</a>
+  </span>
+  <a id="Pulumi_Okta_Idp_Saml_GroupsAttribute_" data-uid="Pulumi.Okta.Idp.Saml.GroupsAttribute*"></a>
+  <h4 id="Pulumi_Okta_Idp_Saml_GroupsAttribute" data-uid="Pulumi.Okta.Idp.Saml.GroupsAttribute">GroupsAttribute</h4>
+  <div class="markdown level1 summary"><p>IdP user profile attribute name (case-insensitive) for an array value that contains group memberships.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; GroupsAttribute { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Saml.cs/#L77">View Source</a>
+  </span>
+  <a id="Pulumi_Okta_Idp_Saml_GroupsFilters_" data-uid="Pulumi.Okta.Idp.Saml.GroupsFilters*"></a>
+  <h4 id="Pulumi_Okta_Idp_Saml_GroupsFilters" data-uid="Pulumi.Okta.Idp.Saml.GroupsFilters">GroupsFilters</h4>
+  <div class="markdown level1 summary"><p>Whitelist of Okta Group identifiers that are allowed for the <code>&amp;quot;APPEND&amp;quot;</code> or <code>&amp;quot;SYNC&amp;quot;</code> <code>groups_action</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; GroupsFilters { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Saml.cs/#L83">View Source</a>
+  </span>
+  <a id="Pulumi_Okta_Idp_Saml_Issuer_" data-uid="Pulumi.Okta.Idp.Saml.Issuer*"></a>
+  <h4 id="Pulumi_Okta_Idp_Saml_Issuer" data-uid="Pulumi.Okta.Idp.Saml.Issuer">Issuer</h4>
+  <div class="markdown level1 summary"><p>URI that identifies the issuer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Issuer { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Saml.cs/#L89">View Source</a>
+  </span>
+  <a id="Pulumi_Okta_Idp_Saml_IssuerMode_" data-uid="Pulumi.Okta.Idp.Saml.IssuerMode*"></a>
+  <h4 id="Pulumi_Okta_Idp_Saml_IssuerMode" data-uid="Pulumi.Okta.Idp.Saml.IssuerMode">IssuerMode</h4>
+  <div class="markdown level1 summary"><p>Indicates whether Okta uses the original Okta org domain URL, or a custom domain URL. It can be <code>&amp;quot;ORG_URL&amp;quot;</code> or <code>&amp;quot;CUSTOM_URL&amp;quot;</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; IssuerMode { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Saml.cs/#L95">View Source</a>
+  </span>
+  <a id="Pulumi_Okta_Idp_Saml_Kid_" data-uid="Pulumi.Okta.Idp.Saml.Kid*"></a>
+  <h4 id="Pulumi_Okta_Idp_Saml_Kid" data-uid="Pulumi.Okta.Idp.Saml.Kid">Kid</h4>
+  <div class="markdown level1 summary"><p>The ID of the signing key.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Kid { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Saml.cs/#L101">View Source</a>
+  </span>
+  <a id="Pulumi_Okta_Idp_Saml_Name_" data-uid="Pulumi.Okta.Idp.Saml.Name*"></a>
+  <h4 id="Pulumi_Okta_Idp_Saml_Name" data-uid="Pulumi.Okta.Idp.Saml.Name">Name</h4>
+  <div class="markdown level1 summary"><p>The Application's display name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Saml.cs/#L107">View Source</a>
+  </span>
+  <a id="Pulumi_Okta_Idp_Saml_NameFormat_" data-uid="Pulumi.Okta.Idp.Saml.NameFormat*"></a>
+  <h4 id="Pulumi_Okta_Idp_Saml_NameFormat" data-uid="Pulumi.Okta.Idp.Saml.NameFormat">NameFormat</h4>
+  <div class="markdown level1 summary"><p>The name identifier format to use. By default <code>&amp;quot;urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified&amp;quot;</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; NameFormat { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Saml.cs/#L113">View Source</a>
+  </span>
+  <a id="Pulumi_Okta_Idp_Saml_ProfileMaster_" data-uid="Pulumi.Okta.Idp.Saml.ProfileMaster*"></a>
+  <h4 id="Pulumi_Okta_Idp_Saml_ProfileMaster" data-uid="Pulumi.Okta.Idp.Saml.ProfileMaster">ProfileMaster</h4>
+  <div class="markdown level1 summary"><p>Determines if the IdP should act as a source of truth for user profile attributes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; ProfileMaster { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Saml.cs/#L119">View Source</a>
+  </span>
+  <a id="Pulumi_Okta_Idp_Saml_ProvisioningAction_" data-uid="Pulumi.Okta.Idp.Saml.ProvisioningAction*"></a>
+  <h4 id="Pulumi_Okta_Idp_Saml_ProvisioningAction" data-uid="Pulumi.Okta.Idp.Saml.ProvisioningAction">ProvisioningAction</h4>
+  <div class="markdown level1 summary"><p>Provisioning action for an IdP user during authentication.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ProvisioningAction { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Saml.cs/#L125">View Source</a>
+  </span>
+  <a id="Pulumi_Okta_Idp_Saml_RequestSignatureAlgorithm_" data-uid="Pulumi.Okta.Idp.Saml.RequestSignatureAlgorithm*"></a>
+  <h4 id="Pulumi_Okta_Idp_Saml_RequestSignatureAlgorithm" data-uid="Pulumi.Okta.Idp.Saml.RequestSignatureAlgorithm">RequestSignatureAlgorithm</h4>
+  <div class="markdown level1 summary"><p>The XML digital signature algorithm used when signing an AuthnRequest message.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; RequestSignatureAlgorithm { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Saml.cs/#L131">View Source</a>
+  </span>
+  <a id="Pulumi_Okta_Idp_Saml_RequestSignatureScope_" data-uid="Pulumi.Okta.Idp.Saml.RequestSignatureScope*"></a>
+  <h4 id="Pulumi_Okta_Idp_Saml_RequestSignatureScope" data-uid="Pulumi.Okta.Idp.Saml.RequestSignatureScope">RequestSignatureScope</h4>
+  <div class="markdown level1 summary"><p>Specifies whether or not to digitally sign an AuthnRequest messages to the IdP. It can be <code>&amp;quot;REQUEST&amp;quot;</code> or <code>&amp;quot;NONE&amp;quot;</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; RequestSignatureScope { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Saml.cs/#L137">View Source</a>
+  </span>
+  <a id="Pulumi_Okta_Idp_Saml_ResponseSignatureAlgorithm_" data-uid="Pulumi.Okta.Idp.Saml.ResponseSignatureAlgorithm*"></a>
+  <h4 id="Pulumi_Okta_Idp_Saml_ResponseSignatureAlgorithm" data-uid="Pulumi.Okta.Idp.Saml.ResponseSignatureAlgorithm">ResponseSignatureAlgorithm</h4>
+  <div class="markdown level1 summary"><p>The minimum XML digital signature algorithm allowed when verifying a SAMLResponse message or Assertion element.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ResponseSignatureAlgorithm { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Saml.cs/#L143">View Source</a>
+  </span>
+  <a id="Pulumi_Okta_Idp_Saml_ResponseSignatureScope_" data-uid="Pulumi.Okta.Idp.Saml.ResponseSignatureScope*"></a>
+  <h4 id="Pulumi_Okta_Idp_Saml_ResponseSignatureScope" data-uid="Pulumi.Okta.Idp.Saml.ResponseSignatureScope">ResponseSignatureScope</h4>
+  <div class="markdown level1 summary"><p>Specifies whether to verify a SAMLResponse message or Assertion element XML digital signature. It can be <code>&amp;quot;RESPONSE&amp;quot;</code>, <code>&amp;quot;ASSERTION&amp;quot;</code>, or <code>&amp;quot;ANY&amp;quot;</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ResponseSignatureScope { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Saml.cs/#L149">View Source</a>
+  </span>
+  <a id="Pulumi_Okta_Idp_Saml_SsoBinding_" data-uid="Pulumi.Okta.Idp.Saml.SsoBinding*"></a>
+  <h4 id="Pulumi_Okta_Idp_Saml_SsoBinding" data-uid="Pulumi.Okta.Idp.Saml.SsoBinding">SsoBinding</h4>
+  <div class="markdown level1 summary"><p>The method of making an SSO request. It can be set to <code>&amp;quot;HTTP-POST&amp;quot;</code> or <code>&amp;quot;HTTP-REDIRECT&amp;quot;</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SsoBinding { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Saml.cs/#L155">View Source</a>
+  </span>
+  <a id="Pulumi_Okta_Idp_Saml_SsoDestination_" data-uid="Pulumi.Okta.Idp.Saml.SsoDestination*"></a>
+  <h4 id="Pulumi_Okta_Idp_Saml_SsoDestination" data-uid="Pulumi.Okta.Idp.Saml.SsoDestination">SsoDestination</h4>
+  <div class="markdown level1 summary"><p>URI reference indicating the address to which the AuthnRequest message is sent.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SsoDestination { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Saml.cs/#L161">View Source</a>
+  </span>
+  <a id="Pulumi_Okta_Idp_Saml_SsoUrl_" data-uid="Pulumi.Okta.Idp.Saml.SsoUrl*"></a>
+  <h4 id="Pulumi_Okta_Idp_Saml_SsoUrl" data-uid="Pulumi.Okta.Idp.Saml.SsoUrl">SsoUrl</h4>
+  <div class="markdown level1 summary"><p>URL of binding-specific endpoint to send an AuthnRequest message to IdP.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SsoUrl { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Saml.cs/#L167">View Source</a>
+  </span>
+  <a id="Pulumi_Okta_Idp_Saml_Status_" data-uid="Pulumi.Okta.Idp.Saml.Status*"></a>
+  <h4 id="Pulumi_Okta_Idp_Saml_Status" data-uid="Pulumi.Okta.Idp.Saml.Status">Status</h4>
+  <div class="markdown level1 summary"><p>Status of the IdP.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Status { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Saml.cs/#L173">View Source</a>
+  </span>
+  <a id="Pulumi_Okta_Idp_Saml_SubjectFilter_" data-uid="Pulumi.Okta.Idp.Saml.SubjectFilter*"></a>
+  <h4 id="Pulumi_Okta_Idp_Saml_SubjectFilter" data-uid="Pulumi.Okta.Idp.Saml.SubjectFilter">SubjectFilter</h4>
+  <div class="markdown level1 summary"><p>Optional regular expression pattern used to filter untrusted IdP usernames.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SubjectFilter { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Saml.cs/#L179">View Source</a>
+  </span>
+  <a id="Pulumi_Okta_Idp_Saml_SubjectFormats_" data-uid="Pulumi.Okta.Idp.Saml.SubjectFormats*"></a>
+  <h4 id="Pulumi_Okta_Idp_Saml_SubjectFormats" data-uid="Pulumi.Okta.Idp.Saml.SubjectFormats">SubjectFormats</h4>
+  <div class="markdown level1 summary"><p>The name formate. By default <code>&amp;quot;urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified&amp;quot;</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; SubjectFormats { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Saml.cs/#L185">View Source</a>
+  </span>
+  <a id="Pulumi_Okta_Idp_Saml_SubjectMatchAttribute_" data-uid="Pulumi.Okta.Idp.Saml.SubjectMatchAttribute*"></a>
+  <h4 id="Pulumi_Okta_Idp_Saml_SubjectMatchAttribute" data-uid="Pulumi.Okta.Idp.Saml.SubjectMatchAttribute">SubjectMatchAttribute</h4>
+  <div class="markdown level1 summary"><p>Okta user profile attribute for matching transformed IdP username. Only for matchType <code>&amp;quot;CUSTOM_ATTRIBUTE&amp;quot;</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SubjectMatchAttribute { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Saml.cs/#L191">View Source</a>
+  </span>
+  <a id="Pulumi_Okta_Idp_Saml_SubjectMatchType_" data-uid="Pulumi.Okta.Idp.Saml.SubjectMatchType*"></a>
+  <h4 id="Pulumi_Okta_Idp_Saml_SubjectMatchType" data-uid="Pulumi.Okta.Idp.Saml.SubjectMatchType">SubjectMatchType</h4>
+  <div class="markdown level1 summary"><p>Determines the Okta user profile attribute match conditions for account linking and authentication of the transformed IdP username. By default it is set to <code>&amp;quot;USERNAME&amp;quot;</code>. It can be set to <code>&amp;quot;USERNAME&amp;quot;</code>, <code>&amp;quot;EMAIL&amp;quot;</code>, <code>&amp;quot;USERNAME_OR_EMAIL&amp;quot;</code> or <code>&amp;quot;CUSTOM_ATTRIBUTE&amp;quot;</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SubjectMatchType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Saml.cs/#L197">View Source</a>
+  </span>
+  <a id="Pulumi_Okta_Idp_Saml_SuspendedAction_" data-uid="Pulumi.Okta.Idp.Saml.SuspendedAction*"></a>
+  <h4 id="Pulumi_Okta_Idp_Saml_SuspendedAction" data-uid="Pulumi.Okta.Idp.Saml.SuspendedAction">SuspendedAction</h4>
+  <div class="markdown level1 summary"><p>Action for a previously suspended IdP user during authentication. Can be set to <code>&amp;quot;NONE&amp;quot;</code> or <code>&amp;quot;UNSUSPEND&amp;quot;</code></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SuspendedAction { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Saml.cs/#L203">View Source</a>
+  </span>
+  <a id="Pulumi_Okta_Idp_Saml_Type_" data-uid="Pulumi.Okta.Idp.Saml.Type*"></a>
+  <h4 id="Pulumi_Okta_Idp_Saml_Type" data-uid="Pulumi.Okta.Idp.Saml.Type">Type</h4>
+  <div class="markdown level1 summary"><p>Type of the IdP.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Type { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Saml.cs/#L209">View Source</a>
+  </span>
+  <a id="Pulumi_Okta_Idp_Saml_UsernameTemplate_" data-uid="Pulumi.Okta.Idp.Saml.UsernameTemplate*"></a>
+  <h4 id="Pulumi_Okta_Idp_Saml_UsernameTemplate" data-uid="Pulumi.Okta.Idp.Saml.UsernameTemplate">UsernameTemplate</h4>
+  <div class="markdown level1 summary"><p>Okta EL Expression to generate or transform a unique username for the IdP user.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; UsernameTemplate { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Saml.cs/#L250">View Source</a>
+  </span>
+  <a id="Pulumi_Okta_Idp_Saml_Get_" data-uid="Pulumi.Okta.Idp.Saml.Get*"></a>
+  <h4 id="Pulumi_Okta_Idp_Saml_Get_System_String_Input_System_String__Pulumi_Okta_Idp_SamlState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Okta.Idp.Saml.Get(System.String,Input{System.String},Pulumi.Okta.Idp.SamlState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, SamlState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Get an existing Saml resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Saml Get(string name, Input&lt;string&gt; id, SamlState state = null, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Okta.Idp.SamlState.html">SamlState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Okta.Idp.Saml.html">Saml</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Saml.cs/#L18" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

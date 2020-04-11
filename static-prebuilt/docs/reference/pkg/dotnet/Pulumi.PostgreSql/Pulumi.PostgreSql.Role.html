@@ -1,0 +1,774 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Role
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Role
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.PostgreSql.Role">
+  
+  <h1 id="Pulumi_PostgreSql_Role" data-uid="Pulumi.PostgreSql.Role" class="text-break">Class Role
+  </h1>
+  <div class="markdown level0 summary"><p>The <code>postgresql..Role</code> resource creates and manages a role on a PostgreSQL
+server.</p>
+<p>When a <code>postgresql..Role</code> resource is removed, the PostgreSQL ROLE will
+automatically run a <a href="https://www.postgresql.org/docs/current/static/sql-reassign-owned.html"><code>REASSIGN OWNED</code></a>
+and <a href="https://www.postgresql.org/docs/current/static/sql-drop-owned.html"><code>DROP OWNED</code></a> to
+the <code>CURRENT_USER</code> (normally the connected user for the provider).  If the
+specified PostgreSQL ROLE owns objects in multiple PostgreSQL databases in the
+same PostgreSQL Cluster, one PostgreSQL provider per database must be created
+and all but the final <code>postgresql..Role</code> must specify a <code>skip_drop_role</code>.</p>
+<blockquote>
+<p><strong>Note:</strong> All arguments including role name and password will be stored in the raw state as plain-text.
+<a href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/r/role.html.markdown">https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/r/role.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Role</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.PostgreSql.html">Pulumi.PostgreSql</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.PostgreSql.dll</h6>
+  <h5 id="Pulumi_PostgreSql_Role_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Role : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/master/sdk/dotnet/Role.cs/#L183">View Source</a>
+  </span>
+  <a id="Pulumi_PostgreSql_Role__ctor_" data-uid="Pulumi.PostgreSql.Role.#ctor*"></a>
+  <h4 id="Pulumi_PostgreSql_Role__ctor_System_String_Pulumi_PostgreSql_RoleArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.PostgreSql.Role.#ctor(System.String,Pulumi.PostgreSql.RoleArgs,System.Nullable{CustomResourceOptions})">Role(String, RoleArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Create a Role resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Role(string name, RoleArgs args = null, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.PostgreSql.RoleArgs.html">RoleArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/master/sdk/dotnet/Role.cs/#L36">View Source</a>
+  </span>
+  <a id="Pulumi_PostgreSql_Role_BypassRowLevelSecurity_" data-uid="Pulumi.PostgreSql.Role.BypassRowLevelSecurity*"></a>
+  <h4 id="Pulumi_PostgreSql_Role_BypassRowLevelSecurity" data-uid="Pulumi.PostgreSql.Role.BypassRowLevelSecurity">BypassRowLevelSecurity</h4>
+  <div class="markdown level1 summary"><p>Defines whether a role bypasses every
+row-level security (RLS) policy.  Default value is <code>false</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; BypassRowLevelSecurity { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/master/sdk/dotnet/Role.cs/#L44">View Source</a>
+  </span>
+  <a id="Pulumi_PostgreSql_Role_ConnectionLimit_" data-uid="Pulumi.PostgreSql.Role.ConnectionLimit*"></a>
+  <h4 id="Pulumi_PostgreSql_Role_ConnectionLimit" data-uid="Pulumi.PostgreSql.Role.ConnectionLimit">ConnectionLimit</h4>
+  <div class="markdown level1 summary"><p>If this role can log in, this specifies how
+many concurrent connections the role can establish. <code>-1</code> (the default) means no
+limit.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; ConnectionLimit { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/master/sdk/dotnet/Role.cs/#L51">View Source</a>
+  </span>
+  <a id="Pulumi_PostgreSql_Role_CreateDatabase_" data-uid="Pulumi.PostgreSql.Role.CreateDatabase*"></a>
+  <h4 id="Pulumi_PostgreSql_Role_CreateDatabase" data-uid="Pulumi.PostgreSql.Role.CreateDatabase">CreateDatabase</h4>
+  <div class="markdown level1 summary"><p>Defines a role's ability to execute <code>CREATE DATABASE</code>.  Default value is <code>false</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; CreateDatabase { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/master/sdk/dotnet/Role.cs/#L59">View Source</a>
+  </span>
+  <a id="Pulumi_PostgreSql_Role_CreateRole_" data-uid="Pulumi.PostgreSql.Role.CreateRole*"></a>
+  <h4 id="Pulumi_PostgreSql_Role_CreateRole" data-uid="Pulumi.PostgreSql.Role.CreateRole">CreateRole</h4>
+  <div class="markdown level1 summary"><p>Defines a role's ability to execute <code>CREATE ROLE</code>.
+A role with this privilege can also alter and drop other roles.  Default value
+is <code>false</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; CreateRole { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/master/sdk/dotnet/Role.cs/#L62">View Source</a>
+  </span>
+  <a id="Pulumi_PostgreSql_Role_Encrypted_" data-uid="Pulumi.PostgreSql.Role.Encrypted*"></a>
+  <h4 id="Pulumi_PostgreSql_Role_Encrypted" data-uid="Pulumi.PostgreSql.Role.Encrypted">Encrypted</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Encrypted { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/master/sdk/dotnet/Role.cs/#L72">View Source</a>
+  </span>
+  <a id="Pulumi_PostgreSql_Role_EncryptedPassword_" data-uid="Pulumi.PostgreSql.Role.EncryptedPassword*"></a>
+  <h4 id="Pulumi_PostgreSql_Role_EncryptedPassword" data-uid="Pulumi.PostgreSql.Role.EncryptedPassword">EncryptedPassword</h4>
+  <div class="markdown level1 summary"><p>Defines whether the password is stored
+encrypted in the system catalogs.  Default value is <code>true</code>.  NOTE: this value
+is always set (to the conservative and safe value), but may interfere with the
+behavior of
+<a href="https://www.postgresql.org/docs/current/static/runtime-config-connection.html#GUC-PASSWORD-ENCRYPTION">PostgreSQL's <code>password_encryption</code> setting</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; EncryptedPassword { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/master/sdk/dotnet/Role.cs/#L79">View Source</a>
+  </span>
+  <a id="Pulumi_PostgreSql_Role_Inherit_" data-uid="Pulumi.PostgreSql.Role.Inherit*"></a>
+  <h4 id="Pulumi_PostgreSql_Role_Inherit" data-uid="Pulumi.PostgreSql.Role.Inherit">Inherit</h4>
+  <div class="markdown level1 summary"><p>Defines whether a role &quot;inherits&quot; the privileges of
+roles it is a member of.  Default value is <code>true</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; Inherit { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/master/sdk/dotnet/Role.cs/#L87">View Source</a>
+  </span>
+  <a id="Pulumi_PostgreSql_Role_Login_" data-uid="Pulumi.PostgreSql.Role.Login*"></a>
+  <h4 id="Pulumi_PostgreSql_Role_Login" data-uid="Pulumi.PostgreSql.Role.Login">Login</h4>
+  <div class="markdown level1 summary"><p>Defines whether role is allowed to log in.  Roles without
+this attribute are useful for managing database privileges, but are not users
+in the usual sense of the word.  Default value is <code>false</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; Login { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/master/sdk/dotnet/Role.cs/#L94">View Source</a>
+  </span>
+  <a id="Pulumi_PostgreSql_Role_Name_" data-uid="Pulumi.PostgreSql.Role.Name*"></a>
+  <h4 id="Pulumi_PostgreSql_Role_Name" data-uid="Pulumi.PostgreSql.Role.Name">Name</h4>
+  <div class="markdown level1 summary"><p>The name of the role. Must be unique on the PostgreSQL
+server instance where it is configured.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/master/sdk/dotnet/Role.cs/#L101">View Source</a>
+  </span>
+  <a id="Pulumi_PostgreSql_Role_Password_" data-uid="Pulumi.PostgreSql.Role.Password*"></a>
+  <h4 id="Pulumi_PostgreSql_Role_Password" data-uid="Pulumi.PostgreSql.Role.Password">Password</h4>
+  <div class="markdown level1 summary"><p>Sets the role's password. A password is only of use
+for roles having the <code>login</code> attribute set to true.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Password { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/master/sdk/dotnet/Role.cs/#L109">View Source</a>
+  </span>
+  <a id="Pulumi_PostgreSql_Role_Replication_" data-uid="Pulumi.PostgreSql.Role.Replication*"></a>
+  <h4 id="Pulumi_PostgreSql_Role_Replication" data-uid="Pulumi.PostgreSql.Role.Replication">Replication</h4>
+  <div class="markdown level1 summary"><p>Defines whether a role is allowed to initiate
+streaming replication or put the system in and out of backup mode.  Default
+value is <code>false</code></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; Replication { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/master/sdk/dotnet/Role.cs/#L115">View Source</a>
+  </span>
+  <a id="Pulumi_PostgreSql_Role_Roles_" data-uid="Pulumi.PostgreSql.Role.Roles*"></a>
+  <h4 id="Pulumi_PostgreSql_Role_Roles" data-uid="Pulumi.PostgreSql.Role.Roles">Roles</h4>
+  <div class="markdown level1 summary"><p>Defines list of roles which will be granted to this new role.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; Roles { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/master/sdk/dotnet/Role.cs/#L123">View Source</a>
+  </span>
+  <a id="Pulumi_PostgreSql_Role_SearchPaths_" data-uid="Pulumi.PostgreSql.Role.SearchPaths*"></a>
+  <h4 id="Pulumi_PostgreSql_Role_SearchPaths" data-uid="Pulumi.PostgreSql.Role.SearchPaths">SearchPaths</h4>
+  <div class="markdown level1 summary"><p>Alters the search path of this new role. Note that
+due to limitations in the implementation, values cannot contain the substring
+<code>&amp;quot;, &amp;quot;</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; SearchPaths { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/master/sdk/dotnet/Role.cs/#L135">View Source</a>
+  </span>
+  <a id="Pulumi_PostgreSql_Role_SkipDropRole_" data-uid="Pulumi.PostgreSql.Role.SkipDropRole*"></a>
+  <h4 id="Pulumi_PostgreSql_Role_SkipDropRole" data-uid="Pulumi.PostgreSql.Role.SkipDropRole">SkipDropRole</h4>
+  <div class="markdown level1 summary"><p>When a PostgreSQL ROLE exists in multiple
+databases and the ROLE is dropped, the
+<a href="https://www.postgresql.org/docs/current/static/role-removal.html">cleanup of ownership of objects</a>
+in each of the respective databases must occur before the ROLE can be dropped
+from the catalog.  Set this option to true when there are multiple databases
+in a PostgreSQL cluster using the same PostgreSQL ROLE for object ownership.
+This is the third and final step taken when removing a ROLE from a database.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; SkipDropRole { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/master/sdk/dotnet/Role.cs/#L148">View Source</a>
+  </span>
+  <a id="Pulumi_PostgreSql_Role_SkipReassignOwned_" data-uid="Pulumi.PostgreSql.Role.SkipReassignOwned*"></a>
+  <h4 id="Pulumi_PostgreSql_Role_SkipReassignOwned" data-uid="Pulumi.PostgreSql.Role.SkipReassignOwned">SkipReassignOwned</h4>
+  <div class="markdown level1 summary"><p>When a PostgreSQL ROLE exists in multiple
+databases and the ROLE is dropped, a
+<a href="https://www.postgresql.org/docs/current/static/sql-reassign-owned.html"><code>REASSIGN OWNED</code></a> in
+must be executed on each of the respective databases before the <code>DROP ROLE</code>
+can be executed to dropped the ROLE from the catalog.  This is the first and
+second steps taken when removing a ROLE from a database (the second step being
+an implicit
+<a href="https://www.postgresql.org/docs/current/static/sql-drop-owned.html"><code>DROP OWNED</code></a>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; SkipReassignOwned { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/master/sdk/dotnet/Role.cs/#L154">View Source</a>
+  </span>
+  <a id="Pulumi_PostgreSql_Role_StatementTimeout_" data-uid="Pulumi.PostgreSql.Role.StatementTimeout*"></a>
+  <h4 id="Pulumi_PostgreSql_Role_StatementTimeout" data-uid="Pulumi.PostgreSql.Role.StatementTimeout">StatementTimeout</h4>
+  <div class="markdown level1 summary"><p>Defines <a href="https://www.postgresql.org/docs/current/runtime-config-client.html#RUNTIME-CONFIG-CLIENT-STATEMENT"><code>statement_timeout</code></a> setting for this role which allows to abort any statement that takes more than the specified amount of time.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; StatementTimeout { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/master/sdk/dotnet/Role.cs/#L162">View Source</a>
+  </span>
+  <a id="Pulumi_PostgreSql_Role_Superuser_" data-uid="Pulumi.PostgreSql.Role.Superuser*"></a>
+  <h4 id="Pulumi_PostgreSql_Role_Superuser" data-uid="Pulumi.PostgreSql.Role.Superuser">Superuser</h4>
+  <div class="markdown level1 summary"><p>Defines whether the role is a &quot;superuser&quot;, and
+therefore can override all access restrictions within the database.  Default
+value is <code>false</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; Superuser { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/master/sdk/dotnet/Role.cs/#L172">View Source</a>
+  </span>
+  <a id="Pulumi_PostgreSql_Role_ValidUntil_" data-uid="Pulumi.PostgreSql.Role.ValidUntil*"></a>
+  <h4 id="Pulumi_PostgreSql_Role_ValidUntil" data-uid="Pulumi.PostgreSql.Role.ValidUntil">ValidUntil</h4>
+  <div class="markdown level1 summary"><p>Defines the date and time after which the role's
+password is no longer valid.  Established connections past this <code>valid_time</code>
+will have to be manually terminated.  This value corresponds to a PostgreSQL
+datetime. If omitted or the magic value <code>NULL</code> is used, <code>valid_until</code> will be
+set to <code>infinity</code>.  Default is <code>NULL</code>, therefore <code>infinity</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ValidUntil { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-postgresql/blob/master/sdk/dotnet/Role.cs/#L213">View Source</a>
+  </span>
+  <a id="Pulumi_PostgreSql_Role_Get_" data-uid="Pulumi.PostgreSql.Role.Get*"></a>
+  <h4 id="Pulumi_PostgreSql_Role_Get_System_String_Input_System_String__Pulumi_PostgreSql_RoleState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.PostgreSql.Role.Get(System.String,Input{System.String},Pulumi.PostgreSql.RoleState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, RoleState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Get an existing Role resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Role Get(string name, Input&lt;string&gt; id, RoleState state = null, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.PostgreSql.RoleState.html">RoleState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.PostgreSql.Role.html">Role</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-postgresql/blob/master/sdk/dotnet/Role.cs/#L30" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

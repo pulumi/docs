@@ -1,0 +1,624 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Certificate
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Certificate
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Aws.Acm.Certificate">
+  
+  <h1 id="Pulumi_Aws_Acm_Certificate" data-uid="Pulumi.Aws.Acm.Certificate" class="text-break">Class Certificate
+  </h1>
+  <div class="markdown level0 summary"><p>The ACM certificate resource allows requesting and management of certificates
+from the Amazon Certificate Manager.</p>
+<p>It deals with requesting certificates and managing their attributes and life-cycle.
+This resource does not deal with validation of a certificate but can provide inputs
+for other resources implementing the validation. It does not wait for a certificate to be issued.
+Use a <code>aws.acm.CertificateValidation</code> resource for this.</p>
+<p>Most commonly, this resource is used to together with <code>aws.route53.Record</code> and
+<code>aws.acm.CertificateValidation</code> to request a DNS validated certificate,
+deploy the required validation records and wait for validation to complete.</p>
+<p>Domain validation through E-Mail is also supported but should be avoided as it requires a manual step outside
+of this provider.</p>
+<p>It's recommended to specify <code>create_before_destroy = true</code> in a [lifecycle][1] block to replace a certificate
+which is currently in use (eg, by <code>aws.lb.Listener</code>).</p>
+<h2 id="options-configuration-block">options Configuration Block</h2>
+<p>Supported nested arguments for the <code>options</code> configuration block:</p>
+<ul>
+<li><code>certificate_transparency_logging_preference</code> - (Optional) Specifies whether certificate details should be added to a certificate transparency log. Valid values are <code>ENABLED</code> or <code>DISABLED</code>. See <a href="https://docs.aws.amazon.com/acm/latest/userguide/acm-concepts.html#concept-transparency">https://docs.aws.amazon.com/acm/latest/userguide/acm-concepts.html#concept-transparency</a> for more details.</li>
+</ul>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/acm_certificate.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/acm_certificate.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">Certificate</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Acm.html">Pulumi.Aws.Acm</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
+  <h5 id="Pulumi_Aws_Acm_Certificate_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Certificate : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Acm/Certificate.cs/#L120">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Acm_Certificate__ctor_" data-uid="Pulumi.Aws.Acm.Certificate.#ctor*"></a>
+  <h4 id="Pulumi_Aws_Acm_Certificate__ctor_System_String_Pulumi_Aws_Acm_CertificateArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Acm.Certificate.#ctor(System.String,Pulumi.Aws.Acm.CertificateArgs,Pulumi.CustomResourceOptions)">Certificate(String, CertificateArgs, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Create a Certificate resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Certificate(string name, CertificateArgs args = null, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Aws.Acm.CertificateArgs.html">CertificateArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Acm/Certificate.cs/#L44">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Acm_Certificate_Arn_" data-uid="Pulumi.Aws.Acm.Certificate.Arn*"></a>
+  <h4 id="Pulumi_Aws_Acm_Certificate_Arn" data-uid="Pulumi.Aws.Acm.Certificate.Arn">Arn</h4>
+  <div class="markdown level1 summary"><p>The ARN of the certificate</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Arn { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Acm/Certificate.cs/#L50">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Acm_Certificate_CertificateAuthorityArn_" data-uid="Pulumi.Aws.Acm.Certificate.CertificateAuthorityArn*"></a>
+  <h4 id="Pulumi_Aws_Acm_Certificate_CertificateAuthorityArn" data-uid="Pulumi.Aws.Acm.Certificate.CertificateAuthorityArn">CertificateAuthorityArn</h4>
+  <div class="markdown level1 summary"><p>ARN of an ACMPCA</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; CertificateAuthorityArn { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Acm/Certificate.cs/#L56">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Acm_Certificate_CertificateBody_" data-uid="Pulumi.Aws.Acm.Certificate.CertificateBody*"></a>
+  <h4 id="Pulumi_Aws_Acm_Certificate_CertificateBody" data-uid="Pulumi.Aws.Acm.Certificate.CertificateBody">CertificateBody</h4>
+  <div class="markdown level1 summary"><p>The certificate's PEM-formatted public key</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; CertificateBody { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Acm/Certificate.cs/#L63">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Acm_Certificate_CertificateChain_" data-uid="Pulumi.Aws.Acm.Certificate.CertificateChain*"></a>
+  <h4 id="Pulumi_Aws_Acm_Certificate_CertificateChain" data-uid="Pulumi.Aws.Acm.Certificate.CertificateChain">CertificateChain</h4>
+  <div class="markdown level1 summary"><p>The certificate's PEM-formatted chain</p>
+<ul>
+<li>Creating a private CA issued certificate</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; CertificateChain { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Acm/Certificate.cs/#L69">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Acm_Certificate_DomainName_" data-uid="Pulumi.Aws.Acm.Certificate.DomainName*"></a>
+  <h4 id="Pulumi_Aws_Acm_Certificate_DomainName" data-uid="Pulumi.Aws.Acm.Certificate.DomainName">DomainName</h4>
+  <div class="markdown level1 summary"><p>A domain name for which the certificate should be issued</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; DomainName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Acm/Certificate.cs/#L75">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Acm_Certificate_DomainValidationOptions_" data-uid="Pulumi.Aws.Acm.Certificate.DomainValidationOptions*"></a>
+  <h4 id="Pulumi_Aws_Acm_Certificate_DomainValidationOptions" data-uid="Pulumi.Aws.Acm.Certificate.DomainValidationOptions">DomainValidationOptions</h4>
+  <div class="markdown level1 summary"><p>A list of attributes to feed into other resources to complete certificate validation. Can have more than one element, e.g. if SANs are defined. Only set if <code>DNS</code>-validation was used.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;CertificateDomainValidationOptions&gt;&gt; DomainValidationOptions { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Acm.Outputs.CertificateDomainValidationOptions.html">CertificateDomainValidationOptions</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Acm/Certificate.cs/#L78">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Acm_Certificate_Options_" data-uid="Pulumi.Aws.Acm.Certificate.Options*"></a>
+  <h4 id="Pulumi_Aws_Acm_Certificate_Options" data-uid="Pulumi.Aws.Acm.Certificate.Options">Options</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;CertificateOptions&gt; Options { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.Acm.Outputs.CertificateOptions.html">CertificateOptions</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Acm/Certificate.cs/#L84">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Acm_Certificate_PrivateKey_" data-uid="Pulumi.Aws.Acm.Certificate.PrivateKey*"></a>
+  <h4 id="Pulumi_Aws_Acm_Certificate_PrivateKey" data-uid="Pulumi.Aws.Acm.Certificate.PrivateKey">PrivateKey</h4>
+  <div class="markdown level1 summary"><p>The certificate's PEM-formatted private key</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; PrivateKey { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Acm/Certificate.cs/#L90">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Acm_Certificate_SubjectAlternativeNames_" data-uid="Pulumi.Aws.Acm.Certificate.SubjectAlternativeNames*"></a>
+  <h4 id="Pulumi_Aws_Acm_Certificate_SubjectAlternativeNames" data-uid="Pulumi.Aws.Acm.Certificate.SubjectAlternativeNames">SubjectAlternativeNames</h4>
+  <div class="markdown level1 summary"><p>A list of domains that should be SANs in the issued certificate</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; SubjectAlternativeNames { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Acm/Certificate.cs/#L96">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Acm_Certificate_Tags_" data-uid="Pulumi.Aws.Acm.Certificate.Tags*"></a>
+  <h4 id="Pulumi_Aws_Acm_Certificate_Tags" data-uid="Pulumi.Aws.Acm.Certificate.Tags">Tags</h4>
+  <div class="markdown level1 summary"><p>A mapping of tags to assign to the resource.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Tags { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Acm/Certificate.cs/#L102">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Acm_Certificate_ValidationEmails_" data-uid="Pulumi.Aws.Acm.Certificate.ValidationEmails*"></a>
+  <h4 id="Pulumi_Aws_Acm_Certificate_ValidationEmails" data-uid="Pulumi.Aws.Acm.Certificate.ValidationEmails">ValidationEmails</h4>
+  <div class="markdown level1 summary"><p>A list of addresses that received a validation E-Mail. Only set if <code>EMAIL</code>-validation was used.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; ValidationEmails { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Acm/Certificate.cs/#L109">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Acm_Certificate_ValidationMethod_" data-uid="Pulumi.Aws.Acm.Certificate.ValidationMethod*"></a>
+  <h4 id="Pulumi_Aws_Acm_Certificate_ValidationMethod" data-uid="Pulumi.Aws.Acm.Certificate.ValidationMethod">ValidationMethod</h4>
+  <div class="markdown level1 summary"><p>Which method to use for validation. <code>DNS</code> or <code>EMAIL</code> are valid, <code>NONE</code> can be used for certificates that were imported into ACM and then into state managed by this provider.</p>
+<ul>
+<li>Importing an existing certificate</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ValidationMethod { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Acm/Certificate.cs/#L150">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Acm_Certificate_Get_" data-uid="Pulumi.Aws.Acm.Certificate.Get*"></a>
+  <h4 id="Pulumi_Aws_Acm_Certificate_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_Acm_CertificateState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Acm.Certificate.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.Acm.CertificateState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, CertificateState, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Get an existing Certificate resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Certificate Get(string name, Input&lt;string&gt; id, CertificateState state = null, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Aws.Acm.CertificateState.html">CertificateState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Aws.Acm.Certificate.html">Certificate</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Acm/Certificate.cs/#L39" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

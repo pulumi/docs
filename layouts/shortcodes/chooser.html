@@ -1,5 +1,12 @@
+{{ $type := .Get 0 }}
+{{ $options := .Get 1 }}
+{{ $mode := .Get 2 }}
+{{ if eq $options "nodejs" }}
+    {{ $options = "javascript,typescript" }}
+{{ end }}
 <div>
 <pulumi-chooser
-    type="{{ .Get 0 }}"
-    options="{{ .Get 1 }}"
-    mode="{{ .Get 2 }}">{{ .Inner | markdownify }}</pulumi-chooser></div>
+    type="{{ $type }}"
+    options="{{ $options }}"
+    mode="{{ $mode }}">{{ .Inner | markdownify }}</pulumi-chooser>
+</div>

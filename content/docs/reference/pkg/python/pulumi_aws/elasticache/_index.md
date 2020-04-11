@@ -36,7 +36,6 @@ a difference in its planning phase because the actual modification has not yet t
 place. You can use the <code class="docutils literal notranslate"><span class="pre">apply_immediately</span></code> flag to instruct the service to apply the
 change immediately. Using <code class="docutils literal notranslate"><span class="pre">apply_immediately</span></code> can result in a brief downtime as the server reboots.
 See the AWS Docs on [Modifying an ElastiCache Cache Cluster][2] for more information.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticache_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticache_cluster.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -617,7 +616,6 @@ begin taking a daily snapshot of the cache cluster.</p>
 <dd><p>Provides an ElastiCache parameter group resource.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Attempting to remove the <code class="docutils literal notranslate"><span class="pre">reserved-memory</span></code> parameter when <code class="docutils literal notranslate"><span class="pre">family</span></code> is set to <code class="docutils literal notranslate"><span class="pre">redis2.6</span></code> or <code class="docutils literal notranslate"><span class="pre">redis2.8</span></code> may show a perpetual difference in this provider due to an Elasticache API limitation. Leave that parameter configured with any value to workaround the issue.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticache_parameter_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticache_parameter_group.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -741,7 +739,6 @@ actual modification has not yet taken place. You can use the
 <code class="docutils literal notranslate"><span class="pre">apply_immediately</span></code> flag to instruct the service to apply the change
 immediately. Using <code class="docutils literal notranslate"><span class="pre">apply_immediately</span></code> can result in a brief downtime as
 servers reboots.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticache_replication_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticache_replication_group.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1098,7 +1095,6 @@ clusters.</p>
 <div><p><strong>NOTE:</strong> ElastiCache Security Groups are for use only when working with an
 ElastiCache cluster <strong>outside</strong> of a VPC. If you are using a VPC, see the
 ElastiCache Subnet Group resource.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticache_security_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticache_security_group.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1197,7 +1193,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>NOTE:</strong> ElastiCache Subnet Groups are only for use when working with an
 ElastiCache cluster <strong>inside</strong> of a VPC. If you are on EC2 Classic, see the
 ElastiCache Security Group resource.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticache_subnet_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticache_subnet_group.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1289,12 +1284,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.elasticache.get_cluster">
 <code class="sig-prename descclassname">pulumi_aws.elasticache.</code><code class="sig-name descname">get_cluster</code><span class="sig-paren">(</span><em class="sig-param">cluster_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticache.get_cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information about an Elasticache Cluster</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/elasticache_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/elasticache_cluster.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>cluster_id</strong> (<em>str</em>) – Group identifier.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cluster_id</strong> (<em>str</em>) – Group identifier.</p></li>
+<li><p><strong>tags</strong> (<em>dict</em>) – The tags assigned to the resource</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
@@ -1303,9 +1298,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.elasticache.get_replication_group">
 <code class="sig-prename descclassname">pulumi_aws.elasticache.</code><code class="sig-name descname">get_replication_group</code><span class="sig-paren">(</span><em class="sig-param">replication_group_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticache.get_replication_group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information about an Elasticache Replication Group.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/elasticache_replication_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/elasticache_replication_group.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>replication_group_id</strong> (<em>str</em>) – The identifier for the replication group.</p>

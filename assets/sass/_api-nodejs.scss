@@ -42,7 +42,9 @@ ul.api {
         @apply truncate mt-0;
 
         a {
-            @apply btn bg-transparent inline-block p-1;
+            @apply btn truncate bg-transparent inline-block p-1;
+
+            max-width: 250px;
 
             &:hover {
                 @apply rounded bg-gray-200;
@@ -76,9 +78,10 @@ ul.api {
                 }
             }
 
-            &.datasource {
+            &.datasource, // TODO: Remove `datasource` when it's no longer referenced anywhere.
+            &.function {
                 &:before {
-                    content: "D";
+                    content: "F";
                     @apply bg-red-700;
                 }
             }

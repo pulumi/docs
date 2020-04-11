@@ -47,80 +47,83 @@ for more information. Defaults to <code class="docutils literal notranslate"><sp
 </dl>
 <p>The <strong>blob_properties</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">corsRules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">corsRules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">cors_rule</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">allowedHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">allowedMethods</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">allowedOrigins</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">exposedHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxAgeInSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of headers that are allowed to be a part of the cross-origin request.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedMethods</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of http headers that are allowed to be executed by the origin. Valid options are
+<code class="docutils literal notranslate"><span class="pre">DELETE</span></code>, <code class="docutils literal notranslate"><span class="pre">GET</span></code>, <code class="docutils literal notranslate"><span class="pre">HEAD</span></code>, <code class="docutils literal notranslate"><span class="pre">MERGE</span></code>, <code class="docutils literal notranslate"><span class="pre">POST</span></code>, <code class="docutils literal notranslate"><span class="pre">OPTIONS</span></code> or <code class="docutils literal notranslate"><span class="pre">PUT</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedOrigins</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of origin domains that will be allowed by CORS.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">exposedHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of response headers that are exposed to CORS clients.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxAgeInSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of seconds the client should cache a preflight response.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">deleteRetentionPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteRetentionPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">delete_retention_policy</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">days</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">days</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the number of days that the blob should be retained, between <code class="docutils literal notranslate"><span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">365</span></code> days. Defaults to <code class="docutils literal notranslate"><span class="pre">7</span></code>.</p></li>
 </ul>
 </li>
 </ul>
 <p>The <strong>custom_domain</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the storage account. Changing this forces a new resource to be created. This must be unique across the entire Azure service, not just within the resource group.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">useSubdomain</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Custom Domain Name to use for the Storage Account, which will be validated by Azure.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">useSubdomain</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should the Custom Domain Name be validated by using indirect CNAME validation?</p></li>
 </ul>
 <p>The <strong>identity</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">principal_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Principal ID for the Service Principal associated with the Identity of this Storage Account.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">tenant_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Tenant ID for the Service Principal associated with the Identity of this Storage Account.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the identity type of the Storage Account. At this time the only allowed value is <code class="docutils literal notranslate"><span class="pre">SystemAssigned</span></code>.</p></li>
 </ul>
 <p>The <strong>network_rules</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">bypasses</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">default_action</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ip_rules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">virtual_network_subnet_ids</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bypasses</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies whether traffic is bypassed for Logging/Metrics/AzureServices. Valid options are
+any combination of <code class="docutils literal notranslate"><span class="pre">Logging</span></code>, <code class="docutils literal notranslate"><span class="pre">Metrics</span></code>, <code class="docutils literal notranslate"><span class="pre">AzureServices</span></code>, or <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">default_action</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the default action of allow or deny when no other rules match. Valid options are <code class="docutils literal notranslate"><span class="pre">Deny</span></code> or <code class="docutils literal notranslate"><span class="pre">Allow</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ip_rules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - List of public IP or IP ranges in CIDR Format. Only IPV4 addresses are allowed. Private IP address ranges (as defined in <a class="reference external" href="https://tools.ietf.org/html/rfc1918#section-3">RFC 1918</a>) are not allowed.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtual_network_subnet_ids</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of resource ids for subnets.</p></li>
 </ul>
 <p>The <strong>queue_properties</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">corsRules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">corsRules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">cors_rule</span></code> block as defined above.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">allowedHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">allowedMethods</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">allowedOrigins</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">exposedHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxAgeInSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of headers that are allowed to be a part of the cross-origin request.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedMethods</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of http headers that are allowed to be executed by the origin. Valid options are
+<code class="docutils literal notranslate"><span class="pre">DELETE</span></code>, <code class="docutils literal notranslate"><span class="pre">GET</span></code>, <code class="docutils literal notranslate"><span class="pre">HEAD</span></code>, <code class="docutils literal notranslate"><span class="pre">MERGE</span></code>, <code class="docutils literal notranslate"><span class="pre">POST</span></code>, <code class="docutils literal notranslate"><span class="pre">OPTIONS</span></code> or <code class="docutils literal notranslate"><span class="pre">PUT</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedOrigins</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of origin domains that will be allowed by CORS.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">exposedHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of response headers that are exposed to CORS clients.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxAgeInSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of seconds the client should cache a preflight response.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">hourMetrics</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">hourMetrics</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">hour_metrics</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">includeApis</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">retentionPolicyDays</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether hour metrics are enabled for the Queue service. Changing this forces a new resource.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">includeApis</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether metrics should generate summary statistics for called API operations.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">retentionPolicyDays</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the number of days that logs will be retained. Changing this forces a new resource.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The version of storage analytics to configure. Changing this forces a new resource.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">logging</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">logging</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">logging</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">delete</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">read</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">retentionPolicyDays</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">write</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">delete</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether all delete requests should be logged. Changing this forces a new resource.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">read</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether all read requests should be logged. Changing this forces a new resource.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">retentionPolicyDays</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the number of days that logs will be retained. Changing this forces a new resource.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The version of storage analytics to configure. Changing this forces a new resource.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">write</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether all write requests should be logged. Changing this forces a new resource.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">minuteMetrics</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">minuteMetrics</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">minute_metrics</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">includeApis</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">retentionPolicyDays</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether minute metrics are enabled for the Queue service. Changing this forces a new resource.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">includeApis</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether metrics should generate summary statistics for called API operations.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">retentionPolicyDays</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the number of days that logs will be retained. Changing this forces a new resource.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The version of storage analytics to configure. Changing this forces a new resource.</p></li>
 </ul>
 </li>
 </ul>
 <p>The <strong>static_website</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">error404Document</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">indexDocument</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">error404Document</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The absolute path to a custom webpage that should be used when a request is made which does not correspond to an existing file.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">indexDocument</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The webpage that Azure Storage serves for requests to the root of a website or any subfolder. For example, index.html. The value is case-sensitive.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_azure.storage.Account.access_tier">
@@ -151,18 +154,19 @@ for more information. Defaults to <code class="docutils literal notranslate"><sp
 <code class="sig-name descname">blob_properties</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.Account.blob_properties" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">blob_properties</span></code> block as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">corsRules</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">corsRules</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A <code class="docutils literal notranslate"><span class="pre">cors_rule</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">allowedHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">allowedMethods</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">allowedOrigins</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">exposedHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxAgeInSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of headers that are allowed to be a part of the cross-origin request.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedMethods</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of http headers that are allowed to be executed by the origin. Valid options are
+<code class="docutils literal notranslate"><span class="pre">DELETE</span></code>, <code class="docutils literal notranslate"><span class="pre">GET</span></code>, <code class="docutils literal notranslate"><span class="pre">HEAD</span></code>, <code class="docutils literal notranslate"><span class="pre">MERGE</span></code>, <code class="docutils literal notranslate"><span class="pre">POST</span></code>, <code class="docutils literal notranslate"><span class="pre">OPTIONS</span></code> or <code class="docutils literal notranslate"><span class="pre">PUT</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedOrigins</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of origin domains that will be allowed by CORS.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">exposedHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of response headers that are exposed to CORS clients.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxAgeInSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of seconds the client should cache a preflight response.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">deleteRetentionPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteRetentionPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A <code class="docutils literal notranslate"><span class="pre">delete_retention_policy</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">days</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">days</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Specifies the number of days that the blob should be retained, between <code class="docutils literal notranslate"><span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">365</span></code> days. Defaults to <code class="docutils literal notranslate"><span class="pre">7</span></code>.</p></li>
 </ul>
 </li>
 </ul>
@@ -173,8 +177,8 @@ for more information. Defaults to <code class="docutils literal notranslate"><sp
 <code class="sig-name descname">custom_domain</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.Account.custom_domain" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">custom_domain</span></code> block as documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the name of the storage account. Changing this forces a new resource to be created. This must be unique across the entire Azure service, not just within the resource group.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">useSubdomain</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Custom Domain Name to use for the Storage Account, which will be validated by Azure.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">useSubdomain</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Should the Custom Domain Name be validated by using indirect CNAME validation?</p></li>
 </ul>
 </dd></dl>
 
@@ -192,7 +196,7 @@ for more information. Defaults to <code class="docutils literal notranslate"><sp
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">principal_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Principal ID for the Service Principal associated with the Identity of this Storage Account.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">tenant_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Tenant ID for the Service Principal associated with the Identity of this Storage Account.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the identity type of the Storage Account. At this time the only allowed value is <code class="docutils literal notranslate"><span class="pre">SystemAssigned</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -219,10 +223,11 @@ for more information. Defaults to <code class="docutils literal notranslate"><sp
 <code class="sig-name descname">network_rules</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.Account.network_rules" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">network_rules</span></code> block as documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">bypasses</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">default_action</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ip_rules</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">virtual_network_subnet_ids</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bypasses</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Specifies whether traffic is bypassed for Logging/Metrics/AzureServices. Valid options are
+any combination of <code class="docutils literal notranslate"><span class="pre">Logging</span></code>, <code class="docutils literal notranslate"><span class="pre">Metrics</span></code>, <code class="docutils literal notranslate"><span class="pre">AzureServices</span></code>, or <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">default_action</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the default action of allow or deny when no other rules match. Valid options are <code class="docutils literal notranslate"><span class="pre">Deny</span></code> or <code class="docutils literal notranslate"><span class="pre">Allow</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ip_rules</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - List of public IP or IP ranges in CIDR Format. Only IPV4 addresses are allowed. Private IP address ranges (as defined in <a class="reference external" href="https://tools.ietf.org/html/rfc1918#section-3">RFC 1918</a>) are not allowed.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtual_network_subnet_ids</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of resource ids for subnets.</p></li>
 </ul>
 </dd></dl>
 
@@ -327,38 +332,39 @@ for more information. Defaults to <code class="docutils literal notranslate"><sp
 <code class="sig-name descname">queue_properties</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.Account.queue_properties" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">queue_properties</span></code> block as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">corsRules</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">corsRules</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A <code class="docutils literal notranslate"><span class="pre">cors_rule</span></code> block as defined above.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">allowedHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">allowedMethods</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">allowedOrigins</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">exposedHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxAgeInSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of headers that are allowed to be a part of the cross-origin request.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedMethods</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of http headers that are allowed to be executed by the origin. Valid options are
+<code class="docutils literal notranslate"><span class="pre">DELETE</span></code>, <code class="docutils literal notranslate"><span class="pre">GET</span></code>, <code class="docutils literal notranslate"><span class="pre">HEAD</span></code>, <code class="docutils literal notranslate"><span class="pre">MERGE</span></code>, <code class="docutils literal notranslate"><span class="pre">POST</span></code>, <code class="docutils literal notranslate"><span class="pre">OPTIONS</span></code> or <code class="docutils literal notranslate"><span class="pre">PUT</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedOrigins</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of origin domains that will be allowed by CORS.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">exposedHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of response headers that are exposed to CORS clients.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxAgeInSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of seconds the client should cache a preflight response.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">hourMetrics</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">hourMetrics</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A <code class="docutils literal notranslate"><span class="pre">hour_metrics</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">includeApis</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">retentionPolicyDays</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Indicates whether hour metrics are enabled for the Queue service. Changing this forces a new resource.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">includeApis</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Indicates whether metrics should generate summary statistics for called API operations.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">retentionPolicyDays</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Specifies the number of days that logs will be retained. Changing this forces a new resource.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The version of storage analytics to configure. Changing this forces a new resource.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">logging</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">logging</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A <code class="docutils literal notranslate"><span class="pre">logging</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">delete</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">read</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">retentionPolicyDays</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">write</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">delete</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Indicates whether all delete requests should be logged. Changing this forces a new resource.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">read</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Indicates whether all read requests should be logged. Changing this forces a new resource.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">retentionPolicyDays</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Specifies the number of days that logs will be retained. Changing this forces a new resource.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The version of storage analytics to configure. Changing this forces a new resource.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">write</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Indicates whether all write requests should be logged. Changing this forces a new resource.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">minuteMetrics</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">minuteMetrics</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A <code class="docutils literal notranslate"><span class="pre">minute_metrics</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">includeApis</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">retentionPolicyDays</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Indicates whether minute metrics are enabled for the Queue service. Changing this forces a new resource.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">includeApis</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Indicates whether metrics should generate summary statistics for called API operations.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">retentionPolicyDays</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Specifies the number of days that logs will be retained. Changing this forces a new resource.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The version of storage analytics to configure. Changing this forces a new resource.</p></li>
 </ul>
 </li>
 </ul>
@@ -471,8 +477,8 @@ for more information. Defaults to <code class="docutils literal notranslate"><sp
 <code class="sig-name descname">static_website</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.Account.static_website" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">static_website</span></code> block as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">error404Document</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">indexDocument</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">error404Document</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The absolute path to a custom webpage that should be used when a request is made which does not correspond to an existing file.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">indexDocument</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The webpage that Azure Storage serves for requests to the root of a website or any subfolder. For example, index.html. The value is case-sensitive.</p></li>
 </ul>
 </dd></dl>
 
@@ -549,80 +555,83 @@ for more information. Defaults to <code class="docutils literal notranslate"><sp
 </dl>
 <p>The <strong>blob_properties</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">corsRules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">corsRules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">cors_rule</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">allowedHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">allowedMethods</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">allowedOrigins</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">exposedHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxAgeInSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of headers that are allowed to be a part of the cross-origin request.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedMethods</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of http headers that are allowed to be executed by the origin. Valid options are
+<code class="docutils literal notranslate"><span class="pre">DELETE</span></code>, <code class="docutils literal notranslate"><span class="pre">GET</span></code>, <code class="docutils literal notranslate"><span class="pre">HEAD</span></code>, <code class="docutils literal notranslate"><span class="pre">MERGE</span></code>, <code class="docutils literal notranslate"><span class="pre">POST</span></code>, <code class="docutils literal notranslate"><span class="pre">OPTIONS</span></code> or <code class="docutils literal notranslate"><span class="pre">PUT</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedOrigins</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of origin domains that will be allowed by CORS.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">exposedHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of response headers that are exposed to CORS clients.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxAgeInSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of seconds the client should cache a preflight response.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">deleteRetentionPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteRetentionPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">delete_retention_policy</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">days</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">days</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the number of days that the blob should be retained, between <code class="docutils literal notranslate"><span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">365</span></code> days. Defaults to <code class="docutils literal notranslate"><span class="pre">7</span></code>.</p></li>
 </ul>
 </li>
 </ul>
 <p>The <strong>custom_domain</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the storage account. Changing this forces a new resource to be created. This must be unique across the entire Azure service, not just within the resource group.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">useSubdomain</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Custom Domain Name to use for the Storage Account, which will be validated by Azure.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">useSubdomain</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should the Custom Domain Name be validated by using indirect CNAME validation?</p></li>
 </ul>
 <p>The <strong>identity</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">principal_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Principal ID for the Service Principal associated with the Identity of this Storage Account.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">tenant_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Tenant ID for the Service Principal associated with the Identity of this Storage Account.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the identity type of the Storage Account. At this time the only allowed value is <code class="docutils literal notranslate"><span class="pre">SystemAssigned</span></code>.</p></li>
 </ul>
 <p>The <strong>network_rules</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">bypasses</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">default_action</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ip_rules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">virtual_network_subnet_ids</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bypasses</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies whether traffic is bypassed for Logging/Metrics/AzureServices. Valid options are
+any combination of <code class="docutils literal notranslate"><span class="pre">Logging</span></code>, <code class="docutils literal notranslate"><span class="pre">Metrics</span></code>, <code class="docutils literal notranslate"><span class="pre">AzureServices</span></code>, or <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">default_action</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the default action of allow or deny when no other rules match. Valid options are <code class="docutils literal notranslate"><span class="pre">Deny</span></code> or <code class="docutils literal notranslate"><span class="pre">Allow</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ip_rules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - List of public IP or IP ranges in CIDR Format. Only IPV4 addresses are allowed. Private IP address ranges (as defined in <a class="reference external" href="https://tools.ietf.org/html/rfc1918#section-3">RFC 1918</a>) are not allowed.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtual_network_subnet_ids</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of resource ids for subnets.</p></li>
 </ul>
 <p>The <strong>queue_properties</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">corsRules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">corsRules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">cors_rule</span></code> block as defined above.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">allowedHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">allowedMethods</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">allowedOrigins</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">exposedHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxAgeInSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of headers that are allowed to be a part of the cross-origin request.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedMethods</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of http headers that are allowed to be executed by the origin. Valid options are
+<code class="docutils literal notranslate"><span class="pre">DELETE</span></code>, <code class="docutils literal notranslate"><span class="pre">GET</span></code>, <code class="docutils literal notranslate"><span class="pre">HEAD</span></code>, <code class="docutils literal notranslate"><span class="pre">MERGE</span></code>, <code class="docutils literal notranslate"><span class="pre">POST</span></code>, <code class="docutils literal notranslate"><span class="pre">OPTIONS</span></code> or <code class="docutils literal notranslate"><span class="pre">PUT</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedOrigins</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of origin domains that will be allowed by CORS.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">exposedHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of response headers that are exposed to CORS clients.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxAgeInSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of seconds the client should cache a preflight response.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">hourMetrics</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">hourMetrics</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">hour_metrics</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">includeApis</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">retentionPolicyDays</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether hour metrics are enabled for the Queue service. Changing this forces a new resource.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">includeApis</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether metrics should generate summary statistics for called API operations.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">retentionPolicyDays</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the number of days that logs will be retained. Changing this forces a new resource.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The version of storage analytics to configure. Changing this forces a new resource.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">logging</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">logging</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">logging</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">delete</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">read</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">retentionPolicyDays</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">write</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">delete</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether all delete requests should be logged. Changing this forces a new resource.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">read</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether all read requests should be logged. Changing this forces a new resource.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">retentionPolicyDays</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the number of days that logs will be retained. Changing this forces a new resource.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The version of storage analytics to configure. Changing this forces a new resource.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">write</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether all write requests should be logged. Changing this forces a new resource.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">minuteMetrics</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">minuteMetrics</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">minute_metrics</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">includeApis</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">retentionPolicyDays</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether minute metrics are enabled for the Queue service. Changing this forces a new resource.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">includeApis</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether metrics should generate summary statistics for called API operations.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">retentionPolicyDays</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the number of days that logs will be retained. Changing this forces a new resource.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The version of storage analytics to configure. Changing this forces a new resource.</p></li>
 </ul>
 </li>
 </ul>
 <p>The <strong>static_website</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">error404Document</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">indexDocument</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">error404Document</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The absolute path to a custom webpage that should be used when a request is made which does not correspond to an existing file.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">indexDocument</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The webpage that Azure Storage serves for requests to the root of a website or any subfolder. For example, index.html. The value is case-sensitive.</p></li>
 </ul>
 </dd></dl>
 
@@ -681,7 +690,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>bypasses</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Specifies whether traffic is bypassed for Logging/Metrics/AzureServices. Valid options are any combination of <code class="docutils literal notranslate"><span class="pre">Logging</span></code>, <code class="docutils literal notranslate"><span class="pre">Metrics</span></code>, <code class="docutils literal notranslate"><span class="pre">AzureServices</span></code>, or <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p></li>
 <li><p><strong>default_action</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the default action of allow or deny when no other rules match. Valid options are <code class="docutils literal notranslate"><span class="pre">Deny</span></code> or <code class="docutils literal notranslate"><span class="pre">Allow</span></code>.</p></li>
-<li><p><strong>ip_rules</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of public IP or IP ranges in CIDR Format. Only IPV4 addresses are allowed. Private IP address ranges (as defined in <a class="reference external" href="https://tools.ietf.org/html/rfc1918#section-3">RFC 1918</a>) are not allowed.</p></li>
+<li><p><strong>ip_rules</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>List of public IP or IP ranges in CIDR Format. Only IPV4 addresses are allowed. Private IP address ranges (as defined in <a class="reference external" href="https://tools.ietf.org/html/rfc1918#section-3">RFC 1918</a>) are not allowed.</p>
+</p></li>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the storage account. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>storage_account_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the storage account. Changing this forces a new resource to be created. This must be unique across the entire Azure service, not just within the resource group.</p></li>
 <li><p><strong>virtual_network_subnet_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of virtual network subnet ids to to secure the storage account.</p></li>
@@ -807,7 +817,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_azure.storage.AwaitableGetStorageContainerResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.storage.</code><code class="sig-name descname">AwaitableGetStorageContainerResult</code><span class="sig-paren">(</span><em class="sig-param">container_access_type=None</em>, <em class="sig-param">has_immutability_policy=None</em>, <em class="sig-param">has_legal_hold=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">storage_account_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.AwaitableGetStorageContainerResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.storage.</code><code class="sig-name descname">AwaitableGetStorageContainerResult</code><span class="sig-paren">(</span><em class="sig-param">container_access_type=None</em>, <em class="sig-param">has_immutability_policy=None</em>, <em class="sig-param">has_legal_hold=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_manager_id=None</em>, <em class="sig-param">storage_account_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.AwaitableGetStorageContainerResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -1038,6 +1048,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_azure.storage.Container.resource_manager_id">
+<code class="sig-name descname">resource_manager_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.Container.resource_manager_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Resource Manager ID of this Storage Container.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_azure.storage.Container.storage_account_name">
 <code class="sig-name descname">storage_account_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.Container.storage_account_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the Storage Account where the Container should be created.</p>
@@ -1045,7 +1061,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="method">
 <dt id="pulumi_azure.storage.Container.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">container_access_type=None</em>, <em class="sig-param">has_immutability_policy=None</em>, <em class="sig-param">has_legal_hold=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">storage_account_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.Container.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">container_access_type=None</em>, <em class="sig-param">has_immutability_policy=None</em>, <em class="sig-param">has_legal_hold=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_manager_id=None</em>, <em class="sig-param">storage_account_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.Container.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Container resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -1059,6 +1075,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>has_legal_hold</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Is there a Legal Hold configured on this Storage Container?</p></li>
 <li><p><strong>metadata</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of MetaData for this Container.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Container which should be created within the Storage Account.</p></li>
+<li><p><strong>resource_manager_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Resource Manager ID of this Storage Container.</p></li>
 <li><p><strong>storage_account_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Storage Account where the Container should be created.</p></li>
 </ul>
 </dd>
@@ -1619,7 +1636,7 @@ for more information.</p>
 
 <dl class="class">
 <dt id="pulumi_azure.storage.GetStorageContainerResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.storage.</code><code class="sig-name descname">GetStorageContainerResult</code><span class="sig-paren">(</span><em class="sig-param">container_access_type=None</em>, <em class="sig-param">has_immutability_policy=None</em>, <em class="sig-param">has_legal_hold=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">storage_account_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.GetStorageContainerResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.storage.</code><code class="sig-name descname">GetStorageContainerResult</code><span class="sig-paren">(</span><em class="sig-param">container_access_type=None</em>, <em class="sig-param">has_immutability_policy=None</em>, <em class="sig-param">has_legal_hold=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_manager_id=None</em>, <em class="sig-param">storage_account_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.GetStorageContainerResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getStorageContainer.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.storage.GetStorageContainerResult.container_access_type">
@@ -1649,6 +1666,12 @@ for more information.</p>
 <dt id="pulumi_azure.storage.GetStorageContainerResult.metadata">
 <code class="sig-name descname">metadata</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.GetStorageContainerResult.metadata" title="Permalink to this definition">¶</a></dt>
 <dd><p>A mapping of MetaData for this Container.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.storage.GetStorageContainerResult.resource_manager_id">
+<code class="sig-name descname">resource_manager_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.GetStorageContainerResult.resource_manager_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Resource Manager ID of this Storage Container.</p>
 </dd></dl>
 
 </dd></dl>
@@ -1934,28 +1957,28 @@ Changing this forces a new resource to be created.</p></li>
 </dl>
 <p>The <strong>acls</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">access_policies</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">access_policies</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - An <code class="docutils literal notranslate"><span class="pre">access_policy</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">expiry</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">permissions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">start</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">expiry</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ISO8061 UTC time at which this Access Policy should be valid until.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">permissions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The permissions which should associated with this Shared Identifier.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">start</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ISO8061 UTC time at which this Access Policy should be valid from.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the File Share.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID which should be used for this Shared Identifier.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_azure.storage.Share.acls">
 <code class="sig-name descname">acls</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.Share.acls" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">acl</span></code> blocks as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">access_policies</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">access_policies</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - An <code class="docutils literal notranslate"><span class="pre">access_policy</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">expiry</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">permissions</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">start</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">expiry</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ISO8061 UTC time at which this Access Policy should be valid until.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">permissions</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The permissions which should associated with this Shared Identifier.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">start</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ISO8061 UTC time at which this Access Policy should be valid from.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the File Share.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID which should be used for this Shared Identifier.</p></li>
 </ul>
 </dd></dl>
 
@@ -1978,6 +2001,12 @@ Changing this forces a new resource to be created.</p></li>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_azure.storage.Share.resource_manager_id">
+<code class="sig-name descname">resource_manager_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.Share.resource_manager_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Resource Manager ID of this File Share.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_azure.storage.Share.storage_account_name">
 <code class="sig-name descname">storage_account_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.Share.storage_account_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies the storage account in which to create the share.
@@ -1992,7 +2021,7 @@ Changing this forces a new resource to be created.</p>
 
 <dl class="method">
 <dt id="pulumi_azure.storage.Share.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">acls=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">quota=None</em>, <em class="sig-param">storage_account_name=None</em>, <em class="sig-param">url=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.Share.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">acls=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">quota=None</em>, <em class="sig-param">resource_manager_id=None</em>, <em class="sig-param">storage_account_name=None</em>, <em class="sig-param">url=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.storage.Share.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Share resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -2005,6 +2034,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>metadata</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of MetaData for this File Share.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the share. Must be unique within the storage account where the share is located.</p></li>
 <li><p><strong>quota</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum size of the share, in gigabytes. For Standard storage accounts, this must be greater than 0 and less than 5120 GB (5 TB). For Premium FileStorage storage accounts, this must be greater than 100 GB and less than 102400 GB (100 TB). Default is 5120.</p></li>
+<li><p><strong>resource_manager_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Resource Manager ID of this File Share.</p></li>
 <li><p><strong>storage_account_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the storage account in which to create the share.
 Changing this forces a new resource to be created.</p></li>
 <li><p><strong>url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URL of the File Share</p></li>
@@ -2013,14 +2043,14 @@ Changing this forces a new resource to be created.</p></li>
 </dl>
 <p>The <strong>acls</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">access_policies</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">access_policies</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - An <code class="docutils literal notranslate"><span class="pre">access_policy</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">expiry</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">permissions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">start</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">expiry</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ISO8061 UTC time at which this Access Policy should be valid until.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">permissions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The permissions which should associated with this Shared Identifier.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">start</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ISO8061 UTC time at which this Access Policy should be valid from.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the File Share.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID which should be used for this Shared Identifier.</p></li>
 </ul>
 </dd></dl>
 
@@ -2184,28 +2214,28 @@ Changing this forces a new resource to be created.</p></li>
 </dl>
 <p>The <strong>acls</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">access_policies</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">access_policies</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - An <code class="docutils literal notranslate"><span class="pre">access_policy</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">expiry</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">permissions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">start</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">expiry</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ISO8061 UTC time at which this Access Policy should be valid until.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">permissions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The permissions which should associated with this Shared Identifier.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">start</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ISO8061 UTC time at which this Access Policy should be valid from.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Table within the Storage Account.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID which should be used for this Shared Identifier.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_azure.storage.Table.acls">
 <code class="sig-name descname">acls</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.storage.Table.acls" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">acl</span></code> blocks as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">access_policies</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">access_policies</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - An <code class="docutils literal notranslate"><span class="pre">access_policy</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">expiry</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">permissions</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">start</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">expiry</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ISO8061 UTC time at which this Access Policy should be valid until.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">permissions</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The permissions which should associated with this Shared Identifier.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">start</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ISO8061 UTC time at which this Access Policy should be valid from.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the Table within the Storage Account.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID which should be used for this Shared Identifier.</p></li>
 </ul>
 </dd></dl>
 
@@ -2242,14 +2272,14 @@ Changing this forces a new resource to be created.</p></li>
 </dl>
 <p>The <strong>acls</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">access_policies</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">access_policies</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - An <code class="docutils literal notranslate"><span class="pre">access_policy</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">expiry</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">permissions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">start</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">expiry</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ISO8061 UTC time at which this Access Policy should be valid until.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">permissions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The permissions which should associated with this Shared Identifier.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">start</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ISO8061 UTC time at which this Access Policy should be valid from.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Table within the Storage Account.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID which should be used for this Shared Identifier.</p></li>
 </ul>
 </dd></dl>
 
@@ -2501,6 +2531,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>cache_control</strong> (<em>str</em>) – The <code class="docutils literal notranslate"><span class="pre">Cache-Control</span></code> response header that is sent when this SAS token is used.</p></li>
+<li><p><strong>connection_string</strong> (<em>str</em>) – The connection string for the storage account to which this SAS applies. Typically directly from the <code class="docutils literal notranslate"><span class="pre">primary_connection_string</span></code> attribute of an <code class="docutils literal notranslate"><span class="pre">storage.Account</span></code> resource.</p></li>
 <li><p><strong>container_name</strong> (<em>str</em>) – Name of the container.</p></li>
 <li><p><strong>content_disposition</strong> (<em>str</em>) – The <code class="docutils literal notranslate"><span class="pre">Content-Disposition</span></code> response header that is sent when this SAS token is used.</p></li>
 <li><p><strong>content_encoding</strong> (<em>str</em>) – The <code class="docutils literal notranslate"><span class="pre">Content-Encoding</span></code> response header that is sent when this SAS token is used.</p></li>
@@ -2516,12 +2547,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <p>The <strong>permissions</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">add</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">create</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">delete</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">list</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">read</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">write</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">add</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Should Add permissions be enabled for this SAS?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">create</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Should Create permissions be enabled for this SAS?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">delete</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Should Delete permissions be enabled for this SAS?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">list</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Should List permissions be enabled for this SAS?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">read</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Should Read permissions be enabled for this SAS?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">write</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Should Write permissions be enabled for this SAS?</p></li>
 </ul>
 </dd></dl>
 
@@ -2550,27 +2581,27 @@ and <em>not</em> a <a class="reference external" href="https://docs.microsoft.co
 </dl>
 <p>The <strong>permissions</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">add</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">create</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">delete</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">list</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">process</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">read</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">update</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">write</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">add</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Should Add permissions be enabled for this SAS?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">create</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Should Create permissions be enabled for this SAS?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">delete</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Should Delete permissions be enabled for this SAS?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">list</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Should List permissions be enabled for this SAS?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">process</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Should Process permissions be enabled for this SAS?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">read</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Should Read permissions be enabled for this SAS?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">update</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Should Update permissions be enabled for this SAS?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">write</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Should Write permissions be enabled for this SAS?</p></li>
 </ul>
 <p>The <strong>resource_types</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">container</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">object</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">service</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">container</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Should permission be granted to the container?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">object</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Should permission be granted only to a specific object?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">service</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Should permission be granted to the entire service?</p></li>
 </ul>
 <p>The <strong>services</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">blob</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">file</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">queue</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">table</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">blob</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Should permission be granted to <code class="docutils literal notranslate"><span class="pre">blob</span></code> services within this storage account?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">file</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Should permission be granted to <code class="docutils literal notranslate"><span class="pre">file</span></code> services within this storage account?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">queue</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Should permission be granted to <code class="docutils literal notranslate"><span class="pre">queue</span></code> services within this storage account?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">table</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Should permission be granted to <code class="docutils literal notranslate"><span class="pre">table</span></code> services within this storage account?</p></li>
 </ul>
 </dd></dl>
 
@@ -2598,8 +2629,9 @@ and <em>not</em> a <a class="reference external" href="https://docs.microsoft.co
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>metadata</strong> (<em>dict</em>) – A mapping of MetaData for this Container.</p></li>
 <li><p><strong>name</strong> (<em>str</em>) – The name of the Container.</p></li>
-<li><p><strong>storage_account_name</strong> (<em>str</em>) – The name of the Storage Account where the Container was created.</p></li>
+<li><p><strong>storage_account_name</strong> (<em>str</em>) – The name of the Storage Account where the Container exists.</p></li>
 </ul>
 </dd>
 </dl>

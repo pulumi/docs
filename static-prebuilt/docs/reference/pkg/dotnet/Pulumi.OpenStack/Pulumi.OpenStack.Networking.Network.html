@@ -1,0 +1,727 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Network
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Network
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.OpenStack.Networking.Network">
+  
+  <h1 id="Pulumi_OpenStack_Networking_Network" data-uid="Pulumi.OpenStack.Networking.Network" class="text-break">Class Network
+  </h1>
+  <div class="markdown level0 summary"><p>Manages a V2 Neutron network resource within OpenStack.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_network_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_network_v2.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Network</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.OpenStack.Networking.html">Pulumi.OpenStack.Networking</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.OpenStack.dll</h6>
+  <h5 id="Pulumi_OpenStack_Networking_Network_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Network : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/Network.cs/#L156">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Networking_Network__ctor_" data-uid="Pulumi.OpenStack.Networking.Network.#ctor*"></a>
+  <h4 id="Pulumi_OpenStack_Networking_Network__ctor_System_String_Pulumi_OpenStack_Networking_NetworkArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.OpenStack.Networking.Network.#ctor(System.String,Pulumi.OpenStack.Networking.NetworkArgs,System.Nullable{CustomResourceOptions})">Network(String, NetworkArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Create a Network resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Network(string name, NetworkArgs args = null, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.OpenStack.Networking.NetworkArgs.html">NetworkArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/Network.cs/#L23">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Networking_Network_AdminStateUp_" data-uid="Pulumi.OpenStack.Networking.Network.AdminStateUp*"></a>
+  <h4 id="Pulumi_OpenStack_Networking_Network_AdminStateUp" data-uid="Pulumi.OpenStack.Networking.Network.AdminStateUp">AdminStateUp</h4>
+  <div class="markdown level1 summary"><p>The administrative state of the network.
+Acceptable values are &quot;true&quot; and &quot;false&quot;. Changing this value updates the
+state of the existing network.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool&gt; AdminStateUp { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/Network.cs/#L30">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Networking_Network_AllTags_" data-uid="Pulumi.OpenStack.Networking.Network.AllTags*"></a>
+  <h4 id="Pulumi_OpenStack_Networking_Network_AllTags" data-uid="Pulumi.OpenStack.Networking.Network.AllTags">AllTags</h4>
+  <div class="markdown level1 summary"><p>The collection of tags assigned on the network, which have been
+explicitly and implicitly added.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; AllTags { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/Network.cs/#L39">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Networking_Network_AvailabilityZoneHints_" data-uid="Pulumi.OpenStack.Networking.Network.AvailabilityZoneHints*"></a>
+  <h4 id="Pulumi_OpenStack_Networking_Network_AvailabilityZoneHints" data-uid="Pulumi.OpenStack.Networking.Network.AvailabilityZoneHints">AvailabilityZoneHints</h4>
+  <div class="markdown level1 summary"><p>An availability zone is used to make
+network resources highly available. Used for resources with high availability
+so that they are scheduled on different availability zones. Changing this
+creates a new network.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; AvailabilityZoneHints { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/Network.cs/#L46">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Networking_Network_Description_" data-uid="Pulumi.OpenStack.Networking.Network.Description*"></a>
+  <h4 id="Pulumi_OpenStack_Networking_Network_Description" data-uid="Pulumi.OpenStack.Networking.Network.Description">Description</h4>
+  <div class="markdown level1 summary"><p>Human-readable description of the network. Changing this
+updates the name of the existing network.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/Network.cs/#L55">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Networking_Network_DnsDomain_" data-uid="Pulumi.OpenStack.Networking.Network.DnsDomain*"></a>
+  <h4 id="Pulumi_OpenStack_Networking_Network_DnsDomain" data-uid="Pulumi.OpenStack.Networking.Network.DnsDomain">DnsDomain</h4>
+  <div class="markdown level1 summary"><p>The network DNS domain. Available, when Neutron DNS
+extension is enabled. The <code>dns_domain</code> of a network in conjunction with the
+<code>dns_name</code> attribute of its ports will be published in an external DNS
+service when Neutron is configured to integrate with such a service.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; DnsDomain { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/Network.cs/#L63">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Networking_Network_External_" data-uid="Pulumi.OpenStack.Networking.Network.External*"></a>
+  <h4 id="Pulumi_OpenStack_Networking_Network_External" data-uid="Pulumi.OpenStack.Networking.Network.External">External</h4>
+  <div class="markdown level1 summary"><p>Specifies whether the network resource has the
+external routing facility. Valid values are true and false. Defaults to
+false. Changing this updates the external attribute of the existing network.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool&gt; External { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/Network.cs/#L71">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Networking_Network_Mtu_" data-uid="Pulumi.OpenStack.Networking.Network.Mtu*"></a>
+  <h4 id="Pulumi_OpenStack_Networking_Network_Mtu" data-uid="Pulumi.OpenStack.Networking.Network.Mtu">Mtu</h4>
+  <div class="markdown level1 summary"><p>The network MTU. Available for read-only, when Neutron
+<code>net-mtu</code> extension is enabled. Available for the modification, when
+Neutron <code>net-mtu-writable</code> extension is enabled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int&gt; Mtu { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/Network.cs/#L78">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Networking_Network_Name_" data-uid="Pulumi.OpenStack.Networking.Network.Name*"></a>
+  <h4 id="Pulumi_OpenStack_Networking_Network_Name" data-uid="Pulumi.OpenStack.Networking.Network.Name">Name</h4>
+  <div class="markdown level1 summary"><p>The name of the network. Changing this updates the name of
+the existing network.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/Network.cs/#L88">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Networking_Network_PortSecurityEnabled_" data-uid="Pulumi.OpenStack.Networking.Network.PortSecurityEnabled*"></a>
+  <h4 id="Pulumi_OpenStack_Networking_Network_PortSecurityEnabled" data-uid="Pulumi.OpenStack.Networking.Network.PortSecurityEnabled">PortSecurityEnabled</h4>
+  <div class="markdown level1 summary"><p>Whether to explicitly enable or disable
+port security on the network. Port Security is usually enabled by default, so
+omitting this argument will usually result in a value of &quot;true&quot;. Setting this
+explicitly to <code>false</code> will disable port security. Valid values are <code>true</code> and
+<code>false</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool&gt; PortSecurityEnabled { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/Network.cs/#L94">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Networking_Network_QosPolicyId_" data-uid="Pulumi.OpenStack.Networking.Network.QosPolicyId*"></a>
+  <h4 id="Pulumi_OpenStack_Networking_Network_QosPolicyId" data-uid="Pulumi.OpenStack.Networking.Network.QosPolicyId">QosPolicyId</h4>
+  <div class="markdown level1 summary"><p>Reference to the associated QoS policy.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; QosPolicyId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/Network.cs/#L103">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Networking_Network_Region_" data-uid="Pulumi.OpenStack.Networking.Network.Region*"></a>
+  <h4 id="Pulumi_OpenStack_Networking_Network_Region" data-uid="Pulumi.OpenStack.Networking.Network.Region">Region</h4>
+  <div class="markdown level1 summary"><p>The region in which to obtain the V2 Networking client.
+A Networking client is needed to create a Neutron network. If omitted, the
+<code>region</code> argument of the provider is used. Changing this creates a new
+network.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Region { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/Network.cs/#L109">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Networking_Network_Segments_" data-uid="Pulumi.OpenStack.Networking.Network.Segments*"></a>
+  <h4 id="Pulumi_OpenStack_Networking_Network_Segments" data-uid="Pulumi.OpenStack.Networking.Network.Segments">Segments</h4>
+  <div class="markdown level1 summary"><p>An array of one or more provider segment objects.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;NetworkSegments&gt;&gt; Segments { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.OpenStack.Networking.Outputs.NetworkSegments.html">NetworkSegments</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/Network.cs/#L117">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Networking_Network_Shared_" data-uid="Pulumi.OpenStack.Networking.Network.Shared*"></a>
+  <h4 id="Pulumi_OpenStack_Networking_Network_Shared" data-uid="Pulumi.OpenStack.Networking.Network.Shared">Shared</h4>
+  <div class="markdown level1 summary"><p>Specifies whether the network resource can be accessed
+by any tenant or not. Changing this updates the sharing capabilities of the
+existing network.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool&gt; Shared { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/Network.cs/#L123">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Networking_Network_Tags_" data-uid="Pulumi.OpenStack.Networking.Network.Tags*"></a>
+  <h4 id="Pulumi_OpenStack_Networking_Network_Tags" data-uid="Pulumi.OpenStack.Networking.Network.Tags">Tags</h4>
+  <div class="markdown level1 summary"><p>A set of string tags for the network.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; Tags { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/Network.cs/#L130">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Networking_Network_TenantId_" data-uid="Pulumi.OpenStack.Networking.Network.TenantId*"></a>
+  <h4 id="Pulumi_OpenStack_Networking_Network_TenantId" data-uid="Pulumi.OpenStack.Networking.Network.TenantId">TenantId</h4>
+  <div class="markdown level1 summary"><p>The owner of the network. Required if admin wants to
+create a network for another tenant. Changing this creates a new network.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; TenantId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/Network.cs/#L139">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Networking_Network_TransparentVlan_" data-uid="Pulumi.OpenStack.Networking.Network.TransparentVlan*"></a>
+  <h4 id="Pulumi_OpenStack_Networking_Network_TransparentVlan" data-uid="Pulumi.OpenStack.Networking.Network.TransparentVlan">TransparentVlan</h4>
+  <div class="markdown level1 summary"><p>Specifies whether the network resource has the
+VLAN transparent attribute set. Valid values are true and false. Defaults to
+false. Changing this updates the <code>transparent_vlan</code> attribute of the existing
+network.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool&gt; TransparentVlan { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/Network.cs/#L145">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Networking_Network_ValueSpecs_" data-uid="Pulumi.OpenStack.Networking.Network.ValueSpecs*"></a>
+  <h4 id="Pulumi_OpenStack_Networking_Network_ValueSpecs" data-uid="Pulumi.OpenStack.Networking.Network.ValueSpecs">ValueSpecs</h4>
+  <div class="markdown level1 summary"><p>Map of additional options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;?&gt; ValueSpecs { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/Network.cs/#L186">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Networking_Network_Get_" data-uid="Pulumi.OpenStack.Networking.Network.Get*"></a>
+  <h4 id="Pulumi_OpenStack_Networking_Network_Get_System_String_Input_System_String__Pulumi_OpenStack_Networking_NetworkState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.OpenStack.Networking.Network.Get(System.String,Input{System.String},Pulumi.OpenStack.Networking.NetworkState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, NetworkState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Get an existing Network resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Network Get(string name, Input&lt;string&gt; id, NetworkState state = null, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.OpenStack.Networking.NetworkState.html">NetworkState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.OpenStack.Networking.Network.html">Network</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Networking/Network.cs/#L16" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

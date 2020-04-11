@@ -8,49 +8,14 @@ menu:
     parent: pac
 aliases: ["/docs/get-started/policy-as-code/enforcing-a-policy-pack/"]
 ---
-{{% crossguard-preview %}}
 
 Once you’ve validated the behavior of your policies, an organization administrator can publish them to the Pulumi Console to be enforced across your organization. Any Pulumi client (a developer’s workstation, CI/CD tool, etc) that interacts with a stack via the Pulumi Console will have policy enforcement during the execution of `preview` and `update`. Policy Packs are versioned by the Pulumi Console so that updated policies can be published and applied as ready and also reverted to previous versions as needed.
 
 1. From within the Policy Pack directory, run the following command to publish your pack:
 
-    {{< chooser os "macos,windows,linux" >}}
-
-{{% choosable os macos %}}
-
-```sh
-$ PULUMI_EXPERIMENTAL=true pulumi policy publish [org-name]
-```
-
-{{% /choosable %}}
-
-{{% choosable os linux %}}
-
-```sh
-$ PULUMI_EXPERIMENTAL=true pulumi policy publish [org-name]
-```
-
-{{% /choosable %}}
-
-{{% choosable os windows %}}
-
-Windows cmd.exe:
-
-```bat
-> set PULUMI_EXPERIMENTAL=true
-> pulumi policy publish [org-name]
-```
-
-Windows PowerShell:
-
-```powershell
-> $env:PULUMI_EXPERIMENTAL = 'true'
-> pulumi policy publish [org-name]
-```
-
-{{% /choosable %}}
-
-{{< /chooser >}}
+    ```sh
+    $ pulumi policy publish [org-name]
+    ```
 
     The `[org-name]` is optional. If not specified, the pack will be published to your user account.
 
@@ -67,83 +32,15 @@ Windows PowerShell:
 <!-- markdownlint-disable ul -->
 1. You can enable this Policy Pack to your organization’s default Policy Group by running:
 
-    {{< chooser os "macos,windows,linux" >}}
-
-{{% choosable os macos %}}
-
-```sh
-$ PULUMI_EXPERIMENTAL=true pulumi policy enable <org-name>/<policy-pack-name> <version>
-```
-
-{{% /choosable %}}
-
-{{% choosable os linux %}}
-
-```sh
-$ PULUMI_EXPERIMENTAL=true pulumi policy enable <org-name>/<policy-pack-name> <version>
-```
-
-{{% /choosable %}}
-
-{{% choosable os windows %}}
-
-Windows cmd.exe:
-
-```bat
-> set PULUMI_EXPERIMENTAL=true
-> pulumi policy enable <org-name>/<policy-pack-name> <version>
-```
-
-Windows PowerShell:
-
-```powershell
-> $env:PULUMI_EXPERIMENTAL = 'true'
-> pulumi policy enable <org-name>/<policy-pack-name> <version>
-```
-
-{{% /choosable %}}
-
-{{< /chooser >}}
+    ```sh
+    $ pulumi policy enable <org-name>/<policy-pack-name> <latest|version>
+    ```
 
     For example, to enable the Policy Pack created in the previous step:
 
-    {{< chooser os "macos,windows,linux" >}}
-
-{{% choosable os macos %}}
-
-```sh
-$ PULUMI_EXPERIMENTAL=true pulumi policy enable pulumi/policy-pack-typescript latest
-```
-
-{{% /choosable %}}
-
-{{% choosable os linux %}}
-
-```sh
-$ PULUMI_EXPERIMENTAL=true pulumi policy enable pulumi/policy-pack-typescript latest
-```
-
-{{% /choosable %}}
-
-{{% choosable os windows %}}
-
-Windows cmd.exe:
-
-```bat
-> set PULUMI_EXPERIMENTAL=true
-> pulumi policy enable pulumi/policy-pack-typescript latest
-```
-
-Windows PowerShell:
-
-```powershell
-> $env:PULUMI_EXPERIMENTAL = 'true'
-> pulumi policy enable pulumi/policy-pack-typescript latest
-```
-
-{{% /choosable %}}
-
-{{< /chooser >}}
+    ```sh
+    $ pulumi policy enable pulumi/policy-pack-typescript latest
+    ```
 
     The CLI by default enables the Policy Pack to your default Policy Group. If you would like to add the Policy Pack to a different Policy Group, you can use the `--policy-group` flag.
 

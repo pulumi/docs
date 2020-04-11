@@ -1,0 +1,938 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Service
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Service
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Aws.Ecs.Service">
+  
+  <h1 id="Pulumi_Aws_Ecs_Service" data-uid="Pulumi.Aws.Ecs.Service" class="text-break">Class Service
+  </h1>
+  <div class="markdown level0 summary"><blockquote>
+<p><strong>Note:</strong> To prevent a race condition during service deletion, make sure to set <code>depends_on</code> to the related <code>aws.iam.RolePolicy</code>; otherwise, the policy may be destroyed too soon and the ECS service will then get stuck in the <code>DRAINING</code> state.</p>
+</blockquote>
+<p>Provides an ECS service - effectively a task that is expected to run until an error occurs or a user terminates it (typically a webserver or a database).</p>
+<p>See <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs_services.html">ECS Services section in AWS developer guide</a>.</p>
+<h2 id="capacity_provider_strategy">capacity_provider_strategy</h2>
+<p>The <code>capacity_provider_strategy</code> configuration block supports the following:</p>
+<ul>
+<li><code>capacity_provider</code> - (Required) The short name or full Amazon Resource Name (ARN) of the capacity provider.</li>
+<li><code>weight</code> - (Required) The relative percentage of the total number of launched tasks that should use the specified capacity provider.</li>
+<li><code>base</code> - (Optional) The number of tasks, at a minimum, to run on the specified capacity provider. Only one capacity provider in a capacity provider strategy can have a base defined.</li>
+</ul>
+<h2 id="deployment_controller">deployment_controller</h2>
+<p>The <code>deployment_controller</code> configuration block supports the following:</p>
+<ul>
+<li><code>type</code> - (Optional) Type of deployment controller. Valid values: <code>CODE_DEPLOY</code>, <code>ECS</code>. Default: <code>ECS</code>.</li>
+</ul>
+<h2 id="load_balancer">load_balancer</h2>
+<p><code>load_balancer</code> supports the following:</p>
+<ul>
+<li><code>elb_name</code> - (Required for ELB Classic) The name of the ELB (Classic) to associate with the service.</li>
+<li><code>target_group_arn</code> - (Required for ALB/NLB) The ARN of the Load Balancer target group to associate with the service.</li>
+<li><code>container_name</code> - (Required) The name of the container to associate with the load balancer (as it appears in a container definition).</li>
+<li><code>container_port</code> - (Required) The port on the container to associate with the load balancer.</li>
+</ul>
+<blockquote>
+<p><strong>Version note:</strong> Multiple <code>load_balancer</code> configuration block support was added in version 2.22.0 of the provider. This allows configuration of <a href="https://aws.amazon.com/about-aws/whats-new/2019/07/amazon-ecs-services-now-support-multiple-load-balancer-target-groups/">ECS service support for multiple target groups</a>.</p>
+</blockquote>
+<h2 id="ordered_placement_strategy">ordered_placement_strategy</h2>
+<p><code>ordered_placement_strategy</code> supports the following:</p>
+<ul>
+<li><code>type</code> - (Required) The type of placement strategy. Must be one of: <code>binpack</code>, <code>random</code>, or <code>spread</code></li>
+<li><code>field</code> - (Optional) For the <code>spread</code> placement strategy, valid values are <code>instanceId</code> (or <code>host</code>,
+which has the same effect), or any platform or custom attribute that is applied to a container instance.
+For the <code>binpack</code> type, valid values are <code>memory</code> and <code>cpu</code>. For the <code>random</code> type, this attribute is not
+needed. For more information, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_PlacementStrategy.html">Placement Strategy</a>.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> for <code>spread</code>, <code>host</code> and <code>instanceId</code> will be normalized, by AWS, to be <code>instanceId</code>. This means the statefile will show <code>instanceId</code> but your config will differ if you use <code>host</code>.</p>
+</blockquote>
+<h2 id="placement_constraints">placement_constraints</h2>
+<p><code>placement_constraints</code> support the following:</p>
+<ul>
+<li><code>type</code> - (Required) The type of constraint. The only valid values at this time are <code>memberOf</code> and <code>distinctInstance</code>.</li>
+<li><code>expression</code> -  (Optional) Cluster Query Language expression to apply to the constraint. Does not need to be specified
+for the <code>distinctInstance</code> type.
+For more information, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-query-language.html">Cluster Query Language in the Amazon EC2 Container
+Service Developer
+Guide</a>.</li>
+</ul>
+<h2 id="network_configuration">network_configuration</h2>
+<p><code>network_configuration</code> support the following:</p>
+<ul>
+<li><code>subnets</code> - (Required) The subnets associated with the task or service.</li>
+<li><code>security_groups</code> - (Optional) The security groups associated with the task or service. If you do not specify a security group, the default security group for the VPC is used.</li>
+<li><code>assign_public_ip</code> - (Optional) Assign a public IP address to the ENI (Fargate launch type only). Valid values are <code>true</code> or <code>false</code>. Default <code>false</code>.</li>
+</ul>
+<p>For more information, see <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-networking.html">Task Networking</a></p>
+<h2 id="service_registries">service_registries</h2>
+<p><code>service_registries</code> support the following:</p>
+<ul>
+<li><code>registry_arn</code> - (Required) The ARN of the Service Registry. The currently supported service registry is Amazon Route 53 Auto Naming Service(<code>aws.servicediscovery.Service</code>). For more information, see <a href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_autonaming_Service.html">Service</a></li>
+<li><code>port</code> - (Optional) The port value used if your Service Discovery service specified an SRV record.</li>
+<li><code>container_port</code> - (Optional) The port value, already specified in the task definition, to be used for your service discovery service.</li>
+<li><code>container_name</code> - (Optional) The container name value, already specified in the task definition, to be used for your service discovery service.</li>
+</ul>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecs_service.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecs_service.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">Service</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Ecs.html">Pulumi.Aws.Ecs</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
+  <h5 id="Pulumi_Aws_Ecs_Service_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Service : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ecs/Service.cs/#L231">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Ecs_Service__ctor_" data-uid="Pulumi.Aws.Ecs.Service.#ctor*"></a>
+  <h4 id="Pulumi_Aws_Ecs_Service__ctor_System_String_Pulumi_Aws_Ecs_ServiceArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Ecs.Service.#ctor(System.String,Pulumi.Aws.Ecs.ServiceArgs,Pulumi.CustomResourceOptions)">Service(String, ServiceArgs, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Create a Service resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Service(string name, ServiceArgs args, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Aws.Ecs.ServiceArgs.html">ServiceArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ecs/Service.cs/#L93">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Ecs_Service_CapacityProviderStrategies_" data-uid="Pulumi.Aws.Ecs.Service.CapacityProviderStrategies*"></a>
+  <h4 id="Pulumi_Aws_Ecs_Service_CapacityProviderStrategies" data-uid="Pulumi.Aws.Ecs.Service.CapacityProviderStrategies">CapacityProviderStrategies</h4>
+  <div class="markdown level1 summary"><p>The capacity provider strategy to use for the service. Can be one or more.  Defined below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;ServiceCapacityProviderStrategies&gt;&gt; CapacityProviderStrategies { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Ecs.Outputs.ServiceCapacityProviderStrategies.html">ServiceCapacityProviderStrategies</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ecs/Service.cs/#L99">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Ecs_Service_Cluster_" data-uid="Pulumi.Aws.Ecs.Service.Cluster*"></a>
+  <h4 id="Pulumi_Aws_Ecs_Service_Cluster" data-uid="Pulumi.Aws.Ecs.Service.Cluster">Cluster</h4>
+  <div class="markdown level1 summary"><p>ARN of an ECS cluster</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Cluster { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ecs/Service.cs/#L105">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Ecs_Service_DeploymentController_" data-uid="Pulumi.Aws.Ecs.Service.DeploymentController*"></a>
+  <h4 id="Pulumi_Aws_Ecs_Service_DeploymentController" data-uid="Pulumi.Aws.Ecs.Service.DeploymentController">DeploymentController</h4>
+  <div class="markdown level1 summary"><p>Configuration block containing deployment controller configuration. Defined below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ServiceDeploymentController&gt; DeploymentController { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.Ecs.Outputs.ServiceDeploymentController.html">ServiceDeploymentController</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ecs/Service.cs/#L111">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Ecs_Service_DeploymentMaximumPercent_" data-uid="Pulumi.Aws.Ecs.Service.DeploymentMaximumPercent*"></a>
+  <h4 id="Pulumi_Aws_Ecs_Service_DeploymentMaximumPercent" data-uid="Pulumi.Aws.Ecs.Service.DeploymentMaximumPercent">DeploymentMaximumPercent</h4>
+  <div class="markdown level1 summary"><p>The upper limit (as a percentage of the service's desiredCount) of the number of running tasks that can be running in a service during a deployment. Not valid when using the <code>DAEMON</code> scheduling strategy.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; DeploymentMaximumPercent { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ecs/Service.cs/#L117">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Ecs_Service_DeploymentMinimumHealthyPercent_" data-uid="Pulumi.Aws.Ecs.Service.DeploymentMinimumHealthyPercent*"></a>
+  <h4 id="Pulumi_Aws_Ecs_Service_DeploymentMinimumHealthyPercent" data-uid="Pulumi.Aws.Ecs.Service.DeploymentMinimumHealthyPercent">DeploymentMinimumHealthyPercent</h4>
+  <div class="markdown level1 summary"><p>The lower limit (as a percentage of the service's desiredCount) of the number of running tasks that must remain running and healthy in a service during a deployment.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; DeploymentMinimumHealthyPercent { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ecs/Service.cs/#L123">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Ecs_Service_DesiredCount_" data-uid="Pulumi.Aws.Ecs.Service.DesiredCount*"></a>
+  <h4 id="Pulumi_Aws_Ecs_Service_DesiredCount" data-uid="Pulumi.Aws.Ecs.Service.DesiredCount">DesiredCount</h4>
+  <div class="markdown level1 summary"><p>The number of instances of the task definition to place and keep running. Defaults to 0. Do not specify if using the <code>DAEMON</code> scheduling strategy.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; DesiredCount { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ecs/Service.cs/#L129">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Ecs_Service_EnableEcsManagedTags_" data-uid="Pulumi.Aws.Ecs.Service.EnableEcsManagedTags*"></a>
+  <h4 id="Pulumi_Aws_Ecs_Service_EnableEcsManagedTags" data-uid="Pulumi.Aws.Ecs.Service.EnableEcsManagedTags">EnableEcsManagedTags</h4>
+  <div class="markdown level1 summary"><p>Specifies whether to enable Amazon ECS managed tags for the tasks within the service.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; EnableEcsManagedTags { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ecs/Service.cs/#L135">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Ecs_Service_HealthCheckGracePeriodSeconds_" data-uid="Pulumi.Aws.Ecs.Service.HealthCheckGracePeriodSeconds*"></a>
+  <h4 id="Pulumi_Aws_Ecs_Service_HealthCheckGracePeriodSeconds" data-uid="Pulumi.Aws.Ecs.Service.HealthCheckGracePeriodSeconds">HealthCheckGracePeriodSeconds</h4>
+  <div class="markdown level1 summary"><p>Seconds to ignore failing load balancer health checks on newly instantiated tasks to prevent premature shutdown, up to 2147483647. Only valid for services configured to use load balancers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; HealthCheckGracePeriodSeconds { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ecs/Service.cs/#L141">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Ecs_Service_IamRole_" data-uid="Pulumi.Aws.Ecs.Service.IamRole*"></a>
+  <h4 id="Pulumi_Aws_Ecs_Service_IamRole" data-uid="Pulumi.Aws.Ecs.Service.IamRole">IamRole</h4>
+  <div class="markdown level1 summary"><p>ARN of the IAM role that allows Amazon ECS to make calls to your load balancer on your behalf. This parameter is required if you are using a load balancer with your service, but only if your task definition does not use the <code>awsvpc</code> network mode. If using <code>awsvpc</code> network mode, do not specify this role. If your account has already created the Amazon ECS service-linked role, that role is used by default for your service unless you specify a role here.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; IamRole { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ecs/Service.cs/#L147">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Ecs_Service_LaunchType_" data-uid="Pulumi.Aws.Ecs.Service.LaunchType*"></a>
+  <h4 id="Pulumi_Aws_Ecs_Service_LaunchType" data-uid="Pulumi.Aws.Ecs.Service.LaunchType">LaunchType</h4>
+  <div class="markdown level1 summary"><p>The launch type on which to run your service. The valid values are <code>EC2</code> and <code>FARGATE</code>. Defaults to <code>EC2</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; LaunchType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ecs/Service.cs/#L153">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Ecs_Service_LoadBalancers_" data-uid="Pulumi.Aws.Ecs.Service.LoadBalancers*"></a>
+  <h4 id="Pulumi_Aws_Ecs_Service_LoadBalancers" data-uid="Pulumi.Aws.Ecs.Service.LoadBalancers">LoadBalancers</h4>
+  <div class="markdown level1 summary"><p>A load balancer block. Load balancers documented below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;ServiceLoadBalancers&gt;&gt; LoadBalancers { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Ecs.Outputs.ServiceLoadBalancers.html">ServiceLoadBalancers</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ecs/Service.cs/#L159">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Ecs_Service_Name_" data-uid="Pulumi.Aws.Ecs.Service.Name*"></a>
+  <h4 id="Pulumi_Aws_Ecs_Service_Name" data-uid="Pulumi.Aws.Ecs.Service.Name">Name</h4>
+  <div class="markdown level1 summary"><p>The name of the service (up to 255 letters, numbers, hyphens, and underscores)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ecs/Service.cs/#L165">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Ecs_Service_NetworkConfiguration_" data-uid="Pulumi.Aws.Ecs.Service.NetworkConfiguration*"></a>
+  <h4 id="Pulumi_Aws_Ecs_Service_NetworkConfiguration" data-uid="Pulumi.Aws.Ecs.Service.NetworkConfiguration">NetworkConfiguration</h4>
+  <div class="markdown level1 summary"><p>The network configuration for the service. This parameter is required for task definitions that use the <code>awsvpc</code> network mode to receive their own Elastic Network Interface, and it is not supported for other network modes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ServiceNetworkConfiguration&gt; NetworkConfiguration { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.Ecs.Outputs.ServiceNetworkConfiguration.html">ServiceNetworkConfiguration</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ecs/Service.cs/#L171">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Ecs_Service_OrderedPlacementStrategies_" data-uid="Pulumi.Aws.Ecs.Service.OrderedPlacementStrategies*"></a>
+  <h4 id="Pulumi_Aws_Ecs_Service_OrderedPlacementStrategies" data-uid="Pulumi.Aws.Ecs.Service.OrderedPlacementStrategies">OrderedPlacementStrategies</h4>
+  <div class="markdown level1 summary"><p>Service level strategy rules that are taken into consideration during task placement. List from top to bottom in order of precedence. The maximum number of <code>ordered_placement_strategy</code> blocks is <code>5</code>. Defined below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;ServiceOrderedPlacementStrategies&gt;&gt; OrderedPlacementStrategies { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Ecs.Outputs.ServiceOrderedPlacementStrategies.html">ServiceOrderedPlacementStrategies</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ecs/Service.cs/#L178">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Ecs_Service_PlacementConstraints_" data-uid="Pulumi.Aws.Ecs.Service.PlacementConstraints*"></a>
+  <h4 id="Pulumi_Aws_Ecs_Service_PlacementConstraints" data-uid="Pulumi.Aws.Ecs.Service.PlacementConstraints">PlacementConstraints</h4>
+  <div class="markdown level1 summary"><p>rules that are taken into consideration during task placement. Maximum number of
+<code>placement_constraints</code> is <code>10</code>. Defined below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;ServicePlacementConstraints&gt;&gt; PlacementConstraints { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Aws.Ecs.Outputs.ServicePlacementConstraints.html">ServicePlacementConstraints</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ecs/Service.cs/#L184">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Ecs_Service_PlatformVersion_" data-uid="Pulumi.Aws.Ecs.Service.PlatformVersion*"></a>
+  <h4 id="Pulumi_Aws_Ecs_Service_PlatformVersion" data-uid="Pulumi.Aws.Ecs.Service.PlatformVersion">PlatformVersion</h4>
+  <div class="markdown level1 summary"><p>The platform version on which to run your service. Only applicable for <code>launch_type</code> set to <code>FARGATE</code>. Defaults to <code>LATEST</code>. More information about Fargate platform versions can be found in the <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html">AWS ECS User Guide</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; PlatformVersion { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ecs/Service.cs/#L190">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Ecs_Service_PropagateTags_" data-uid="Pulumi.Aws.Ecs.Service.PropagateTags*"></a>
+  <h4 id="Pulumi_Aws_Ecs_Service_PropagateTags" data-uid="Pulumi.Aws.Ecs.Service.PropagateTags">PropagateTags</h4>
+  <div class="markdown level1 summary"><p>Specifies whether to propagate the tags from the task definition or the service to the tasks. The valid values are <code>SERVICE</code> and <code>TASK_DEFINITION</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; PropagateTags { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ecs/Service.cs/#L196">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Ecs_Service_SchedulingStrategy_" data-uid="Pulumi.Aws.Ecs.Service.SchedulingStrategy*"></a>
+  <h4 id="Pulumi_Aws_Ecs_Service_SchedulingStrategy" data-uid="Pulumi.Aws.Ecs.Service.SchedulingStrategy">SchedulingStrategy</h4>
+  <div class="markdown level1 summary"><p>The scheduling strategy to use for the service. The valid values are <code>REPLICA</code> and <code>DAEMON</code>. Defaults to <code>REPLICA</code>. Note that <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/scheduling_tasks.html"><em>Fargate tasks do not support the <code>DAEMON</code> scheduling strategy</em></a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SchedulingStrategy { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ecs/Service.cs/#L202">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Ecs_Service_ServiceRegistries_" data-uid="Pulumi.Aws.Ecs.Service.ServiceRegistries*"></a>
+  <h4 id="Pulumi_Aws_Ecs_Service_ServiceRegistries" data-uid="Pulumi.Aws.Ecs.Service.ServiceRegistries">ServiceRegistries</h4>
+  <div class="markdown level1 summary"><p>The service discovery registries for the service. The maximum number of <code>service_registries</code> blocks is <code>1</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ServiceServiceRegistries&gt; ServiceRegistries { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.Ecs.Outputs.ServiceServiceRegistries.html">ServiceServiceRegistries</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ecs/Service.cs/#L208">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Ecs_Service_Tags_" data-uid="Pulumi.Aws.Ecs.Service.Tags*"></a>
+  <h4 id="Pulumi_Aws_Ecs_Service_Tags" data-uid="Pulumi.Aws.Ecs.Service.Tags">Tags</h4>
+  <div class="markdown level1 summary"><p>Key-value mapping of resource tags</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Tags { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ecs/Service.cs/#L214">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Ecs_Service_TaskDefinition_" data-uid="Pulumi.Aws.Ecs.Service.TaskDefinition*"></a>
+  <h4 id="Pulumi_Aws_Ecs_Service_TaskDefinition" data-uid="Pulumi.Aws.Ecs.Service.TaskDefinition">TaskDefinition</h4>
+  <div class="markdown level1 summary"><p>The family and revision (<code>family:revision</code>) or full ARN of the task definition that you want to run in your service.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; TaskDefinition { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ecs/Service.cs/#L220">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Ecs_Service_WaitForSteadyState_" data-uid="Pulumi.Aws.Ecs.Service.WaitForSteadyState*"></a>
+  <h4 id="Pulumi_Aws_Ecs_Service_WaitForSteadyState" data-uid="Pulumi.Aws.Ecs.Service.WaitForSteadyState">WaitForSteadyState</h4>
+  <div class="markdown level1 summary"><p>If <code>true</code>, this provider will wait for the service to reach a steady state (like <a href="https://docs.aws.amazon.com/cli/latest/reference/ecs/wait/services-stable.html"><code>aws ecs wait services-stable</code></a>) before continuing. Default <code>false</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; WaitForSteadyState { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ecs/Service.cs/#L261">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Ecs_Service_Get_" data-uid="Pulumi.Aws.Ecs.Service.Get*"></a>
+  <h4 id="Pulumi_Aws_Ecs_Service_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_Ecs_ServiceState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Ecs.Service.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.Ecs.ServiceState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, ServiceState, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Get an existing Service resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Service Get(string name, Input&lt;string&gt; id, ServiceState state = null, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Aws.Ecs.ServiceState.html">ServiceState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Aws.Ecs.Service.html">Service</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Ecs/Service.cs/#L88" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

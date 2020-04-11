@@ -1,0 +1,693 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Listener
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Listener
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.OpenStack.LoadBalancer.Listener">
+  
+  <h1 id="Pulumi_OpenStack_LoadBalancer_Listener" data-uid="Pulumi.OpenStack.LoadBalancer.Listener" class="text-break">Class Listener
+  </h1>
+  <div class="markdown level0 summary"><p>Manages a V2 listener resource within OpenStack.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/lb_listener_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/lb_listener_v2.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Listener</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.OpenStack.LoadBalancer.html">Pulumi.OpenStack.LoadBalancer</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.OpenStack.dll</h6>
+  <h5 id="Pulumi_OpenStack_LoadBalancer_Listener_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Listener : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Loadbalancer/Listener.cs/#L143">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_LoadBalancer_Listener__ctor_" data-uid="Pulumi.OpenStack.LoadBalancer.Listener.#ctor*"></a>
+  <h4 id="Pulumi_OpenStack_LoadBalancer_Listener__ctor_System_String_Pulumi_OpenStack_LoadBalancer_ListenerArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.OpenStack.LoadBalancer.Listener.#ctor(System.String,Pulumi.OpenStack.LoadBalancer.ListenerArgs,System.Nullable{CustomResourceOptions})">Listener(String, ListenerArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Create a Listener resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Listener(string name, ListenerArgs args, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.OpenStack.LoadBalancer.ListenerArgs.html">ListenerArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Loadbalancer/Listener.cs/#L22">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_LoadBalancer_Listener_AdminStateUp_" data-uid="Pulumi.OpenStack.LoadBalancer.Listener.AdminStateUp*"></a>
+  <h4 id="Pulumi_OpenStack_LoadBalancer_Listener_AdminStateUp" data-uid="Pulumi.OpenStack.LoadBalancer.Listener.AdminStateUp">AdminStateUp</h4>
+  <div class="markdown level1 summary"><p>The administrative state of the Listener.
+A valid value is true (UP) or false (DOWN).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; AdminStateUp { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Loadbalancer/Listener.cs/#L29">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_LoadBalancer_Listener_ConnectionLimit_" data-uid="Pulumi.OpenStack.LoadBalancer.Listener.ConnectionLimit*"></a>
+  <h4 id="Pulumi_OpenStack_LoadBalancer_Listener_ConnectionLimit" data-uid="Pulumi.OpenStack.LoadBalancer.Listener.ConnectionLimit">ConnectionLimit</h4>
+  <div class="markdown level1 summary"><p>The maximum number of connections allowed
+for the Listener.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int&gt; ConnectionLimit { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Loadbalancer/Listener.cs/#L36">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_LoadBalancer_Listener_DefaultPoolId_" data-uid="Pulumi.OpenStack.LoadBalancer.Listener.DefaultPoolId*"></a>
+  <h4 id="Pulumi_OpenStack_LoadBalancer_Listener_DefaultPoolId" data-uid="Pulumi.OpenStack.LoadBalancer.Listener.DefaultPoolId">DefaultPoolId</h4>
+  <div class="markdown level1 summary"><p>The ID of the default pool with which the
+Listener is associated.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; DefaultPoolId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Loadbalancer/Listener.cs/#L46">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_LoadBalancer_Listener_DefaultTlsContainerRef_" data-uid="Pulumi.OpenStack.LoadBalancer.Listener.DefaultTlsContainerRef*"></a>
+  <h4 id="Pulumi_OpenStack_LoadBalancer_Listener_DefaultTlsContainerRef" data-uid="Pulumi.OpenStack.LoadBalancer.Listener.DefaultTlsContainerRef">DefaultTlsContainerRef</h4>
+  <div class="markdown level1 summary"><p>A reference to a Barbican Secrets
+container which stores TLS information. This is required if the protocol
+is <code>TERMINATED_HTTPS</code>. See
+<a href="https://wiki.openstack.org/wiki/Network/LBaaS/docs/how-to-create-tls-loadbalancer">here</a>
+for more information.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; DefaultTlsContainerRef { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Loadbalancer/Listener.cs/#L52">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_LoadBalancer_Listener_Description_" data-uid="Pulumi.OpenStack.LoadBalancer.Listener.Description*"></a>
+  <h4 id="Pulumi_OpenStack_LoadBalancer_Listener_Description" data-uid="Pulumi.OpenStack.LoadBalancer.Listener.Description">Description</h4>
+  <div class="markdown level1 summary"><p>Human-readable description for the Listener.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Loadbalancer/Listener.cs/#L59">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_LoadBalancer_Listener_LoadbalancerId_" data-uid="Pulumi.OpenStack.LoadBalancer.Listener.LoadbalancerId*"></a>
+  <h4 id="Pulumi_OpenStack_LoadBalancer_Listener_LoadbalancerId" data-uid="Pulumi.OpenStack.LoadBalancer.Listener.LoadbalancerId">LoadbalancerId</h4>
+  <div class="markdown level1 summary"><p>The load balancer on which to provision this
+Listener. Changing this creates a new Listener.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; LoadbalancerId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Loadbalancer/Listener.cs/#L66">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_LoadBalancer_Listener_Name_" data-uid="Pulumi.OpenStack.LoadBalancer.Listener.Name*"></a>
+  <h4 id="Pulumi_OpenStack_LoadBalancer_Listener_Name" data-uid="Pulumi.OpenStack.LoadBalancer.Listener.Name">Name</h4>
+  <div class="markdown level1 summary"><p>Human-readable name for the Listener. Does not have
+to be unique.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Loadbalancer/Listener.cs/#L74">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_LoadBalancer_Listener_Protocol_" data-uid="Pulumi.OpenStack.LoadBalancer.Listener.Protocol*"></a>
+  <h4 id="Pulumi_OpenStack_LoadBalancer_Listener_Protocol" data-uid="Pulumi.OpenStack.LoadBalancer.Listener.Protocol">Protocol</h4>
+  <div class="markdown level1 summary"><p>The protocol - can either be TCP, HTTP, HTTPS,
+TERMINATED_HTTPS or UDP (supported only in Octavia). Changing this creates a
+new Listener.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Protocol { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Loadbalancer/Listener.cs/#L81">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_LoadBalancer_Listener_ProtocolPort_" data-uid="Pulumi.OpenStack.LoadBalancer.Listener.ProtocolPort*"></a>
+  <h4 id="Pulumi_OpenStack_LoadBalancer_Listener_ProtocolPort" data-uid="Pulumi.OpenStack.LoadBalancer.Listener.ProtocolPort">ProtocolPort</h4>
+  <div class="markdown level1 summary"><p>The port on which to listen for client traffic.
+Changing this creates a new Listener.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int&gt; ProtocolPort { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Loadbalancer/Listener.cs/#L90">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_LoadBalancer_Listener_Region_" data-uid="Pulumi.OpenStack.LoadBalancer.Listener.Region*"></a>
+  <h4 id="Pulumi_OpenStack_LoadBalancer_Listener_Region" data-uid="Pulumi.OpenStack.LoadBalancer.Listener.Region">Region</h4>
+  <div class="markdown level1 summary"><p>The region in which to obtain the V2 Networking client.
+A Networking client is needed to create an . If omitted, the
+<code>region</code> argument of the provider is used. Changing this creates a new
+Listener.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Region { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Loadbalancer/Listener.cs/#L99">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_LoadBalancer_Listener_SniContainerRefs_" data-uid="Pulumi.OpenStack.LoadBalancer.Listener.SniContainerRefs*"></a>
+  <h4 id="Pulumi_OpenStack_LoadBalancer_Listener_SniContainerRefs" data-uid="Pulumi.OpenStack.LoadBalancer.Listener.SniContainerRefs">SniContainerRefs</h4>
+  <div class="markdown level1 summary"><p>A list of references to Barbican Secrets
+containers which store SNI information. See
+<a href="https://wiki.openstack.org/wiki/Network/LBaaS/docs/how-to-create-tls-loadbalancer">here</a>
+for more information.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; SniContainerRefs { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Loadbalancer/Listener.cs/#L107">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_LoadBalancer_Listener_TenantId_" data-uid="Pulumi.OpenStack.LoadBalancer.Listener.TenantId*"></a>
+  <h4 id="Pulumi_OpenStack_LoadBalancer_Listener_TenantId" data-uid="Pulumi.OpenStack.LoadBalancer.Listener.TenantId">TenantId</h4>
+  <div class="markdown level1 summary"><p>Required for admins. The UUID of the tenant who owns
+the Listener.  Only administrative users can specify a tenant UUID
+other than their own. Changing this creates a new Listener.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; TenantId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Loadbalancer/Listener.cs/#L113">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_LoadBalancer_Listener_TimeoutClientData_" data-uid="Pulumi.OpenStack.LoadBalancer.Listener.TimeoutClientData*"></a>
+  <h4 id="Pulumi_OpenStack_LoadBalancer_Listener_TimeoutClientData" data-uid="Pulumi.OpenStack.LoadBalancer.Listener.TimeoutClientData">TimeoutClientData</h4>
+  <div class="markdown level1 summary"><p>The client inactivity timeout in milliseconds.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int&gt; TimeoutClientData { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Loadbalancer/Listener.cs/#L119">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_LoadBalancer_Listener_TimeoutMemberConnect_" data-uid="Pulumi.OpenStack.LoadBalancer.Listener.TimeoutMemberConnect*"></a>
+  <h4 id="Pulumi_OpenStack_LoadBalancer_Listener_TimeoutMemberConnect" data-uid="Pulumi.OpenStack.LoadBalancer.Listener.TimeoutMemberConnect">TimeoutMemberConnect</h4>
+  <div class="markdown level1 summary"><p>The member connection timeout in milliseconds.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int&gt; TimeoutMemberConnect { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Loadbalancer/Listener.cs/#L125">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_LoadBalancer_Listener_TimeoutMemberData_" data-uid="Pulumi.OpenStack.LoadBalancer.Listener.TimeoutMemberData*"></a>
+  <h4 id="Pulumi_OpenStack_LoadBalancer_Listener_TimeoutMemberData" data-uid="Pulumi.OpenStack.LoadBalancer.Listener.TimeoutMemberData">TimeoutMemberData</h4>
+  <div class="markdown level1 summary"><p>The member inactivity timeout in milliseconds.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int&gt; TimeoutMemberData { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Loadbalancer/Listener.cs/#L132">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_LoadBalancer_Listener_TimeoutTcpInspect_" data-uid="Pulumi.OpenStack.LoadBalancer.Listener.TimeoutTcpInspect*"></a>
+  <h4 id="Pulumi_OpenStack_LoadBalancer_Listener_TimeoutTcpInspect" data-uid="Pulumi.OpenStack.LoadBalancer.Listener.TimeoutTcpInspect">TimeoutTcpInspect</h4>
+  <div class="markdown level1 summary"><p>The time in milliseconds, to wait for additional
+TCP packets for content inspection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int&gt; TimeoutTcpInspect { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Loadbalancer/Listener.cs/#L173">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_LoadBalancer_Listener_Get_" data-uid="Pulumi.OpenStack.LoadBalancer.Listener.Get*"></a>
+  <h4 id="Pulumi_OpenStack_LoadBalancer_Listener_Get_System_String_Input_System_String__Pulumi_OpenStack_LoadBalancer_ListenerState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.OpenStack.LoadBalancer.Listener.Get(System.String,Input{System.String},Pulumi.OpenStack.LoadBalancer.ListenerState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, ListenerState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Get an existing Listener resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Listener Get(string name, Input&lt;string&gt; id, ListenerState state = null, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.OpenStack.LoadBalancer.ListenerState.html">ListenerState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.OpenStack.LoadBalancer.Listener.html">Listener</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Loadbalancer/Listener.cs/#L16" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

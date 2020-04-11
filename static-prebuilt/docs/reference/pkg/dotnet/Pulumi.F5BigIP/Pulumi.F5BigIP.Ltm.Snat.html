@@ -1,0 +1,538 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Snat
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Snat
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.F5BigIP.Ltm.Snat">
+  
+  <h1 id="Pulumi_F5BigIP_Ltm_Snat" data-uid="Pulumi.F5BigIP.Ltm.Snat" class="text-break">Class Snat
+  </h1>
+  <div class="markdown level0 summary"><p><code>f5bigip.ltm.Snat</code> Manages a snat configuration</p>
+<p>For resources should be named with their &quot;full path&quot;. The full path is the combination of the partition + name of the resource. For example /Common/my-pool.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/ltm_snat.html.markdown">https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/ltm_snat.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Snat</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.F5BigIP.Ltm.html">Pulumi.F5BigIP.Ltm</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.F5BigIP.dll</h6>
+  <h5 id="Pulumi_F5BigIP_Ltm_Snat_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Snat : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/Snat.cs/#L94">View Source</a>
+  </span>
+  <a id="Pulumi_F5BigIP_Ltm_Snat__ctor_" data-uid="Pulumi.F5BigIP.Ltm.Snat.#ctor*"></a>
+  <h4 id="Pulumi_F5BigIP_Ltm_Snat__ctor_System_String_Pulumi_F5BigIP_Ltm_SnatArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.F5BigIP.Ltm.Snat.#ctor(System.String,Pulumi.F5BigIP.Ltm.SnatArgs,System.Nullable{CustomResourceOptions})">Snat(String, SnatArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Create a Snat resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Snat(string name, SnatArgs args, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.F5BigIP.Ltm.SnatArgs.html">SnatArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/Snat.cs/#L23">View Source</a>
+  </span>
+  <a id="Pulumi_F5BigIP_Ltm_Snat_Autolasthop_" data-uid="Pulumi.F5BigIP.Ltm.Snat.Autolasthop*"></a>
+  <h4 id="Pulumi_F5BigIP_Ltm_Snat_Autolasthop" data-uid="Pulumi.F5BigIP.Ltm.Snat.Autolasthop">Autolasthop</h4>
+  <div class="markdown level1 summary"><p>Specifies whether to automatically map last hop for pools or not. The default is to use next level's defaul</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Autolasthop { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/Snat.cs/#L29">View Source</a>
+  </span>
+  <a id="Pulumi_F5BigIP_Ltm_Snat_FullPath_" data-uid="Pulumi.F5BigIP.Ltm.Snat.FullPath*"></a>
+  <h4 id="Pulumi_F5BigIP_Ltm_Snat_FullPath" data-uid="Pulumi.F5BigIP.Ltm.Snat.FullPath">FullPath</h4>
+  <div class="markdown level1 summary"><p>Fullpath</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; FullPath { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/Snat.cs/#L35">View Source</a>
+  </span>
+  <a id="Pulumi_F5BigIP_Ltm_Snat_Mirror_" data-uid="Pulumi.F5BigIP.Ltm.Snat.Mirror*"></a>
+  <h4 id="Pulumi_F5BigIP_Ltm_Snat_Mirror" data-uid="Pulumi.F5BigIP.Ltm.Snat.Mirror">Mirror</h4>
+  <div class="markdown level1 summary"><p>Enables or disables mirroring of SNAT connections.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Mirror { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/Snat.cs/#L41">View Source</a>
+  </span>
+  <a id="Pulumi_F5BigIP_Ltm_Snat_Name_" data-uid="Pulumi.F5BigIP.Ltm.Snat.Name*"></a>
+  <h4 id="Pulumi_F5BigIP_Ltm_Snat_Name" data-uid="Pulumi.F5BigIP.Ltm.Snat.Name">Name</h4>
+  <div class="markdown level1 summary"><p>Name of the snat</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/Snat.cs/#L47">View Source</a>
+  </span>
+  <a id="Pulumi_F5BigIP_Ltm_Snat_Origins_" data-uid="Pulumi.F5BigIP.Ltm.Snat.Origins*"></a>
+  <h4 id="Pulumi_F5BigIP_Ltm_Snat_Origins" data-uid="Pulumi.F5BigIP.Ltm.Snat.Origins">Origins</h4>
+  <div class="markdown level1 summary"><p>IP or hostname of the snat</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;SnatOrigins&gt;&gt; Origins { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.F5BigIP.Ltm.Outputs.SnatOrigins.html">SnatOrigins</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/Snat.cs/#L53">View Source</a>
+  </span>
+  <a id="Pulumi_F5BigIP_Ltm_Snat_Partition_" data-uid="Pulumi.F5BigIP.Ltm.Snat.Partition*"></a>
+  <h4 id="Pulumi_F5BigIP_Ltm_Snat_Partition" data-uid="Pulumi.F5BigIP.Ltm.Snat.Partition">Partition</h4>
+  <div class="markdown level1 summary"><p>Displays the administrative partition within which this profile resides</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Partition { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/Snat.cs/#L59">View Source</a>
+  </span>
+  <a id="Pulumi_F5BigIP_Ltm_Snat_Snatpool_" data-uid="Pulumi.F5BigIP.Ltm.Snat.Snatpool*"></a>
+  <h4 id="Pulumi_F5BigIP_Ltm_Snat_Snatpool" data-uid="Pulumi.F5BigIP.Ltm.Snat.Snatpool">Snatpool</h4>
+  <div class="markdown level1 summary"><p>Specifies the name of a SNAT pool. You can only use this option when automap and translation are not used.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Snatpool { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/Snat.cs/#L65">View Source</a>
+  </span>
+  <a id="Pulumi_F5BigIP_Ltm_Snat_Sourceport_" data-uid="Pulumi.F5BigIP.Ltm.Snat.Sourceport*"></a>
+  <h4 id="Pulumi_F5BigIP_Ltm_Snat_Sourceport" data-uid="Pulumi.F5BigIP.Ltm.Snat.Sourceport">Sourceport</h4>
+  <div class="markdown level1 summary"><p>Specifies whether the system preserves the source port of the connection. The default is preserve. Use of the preserve-strict setting should be restricted to UDP only under very special circumstances such as nPath or transparent (that is, no translation of any other L3/L4 field), where there is a 1:1 relationship between virtual IP addresses and node addresses, or when clustered multi-processing (CMP) is disabled. The change setting is useful for obfuscating internal network addresses.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Sourceport { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/Snat.cs/#L71">View Source</a>
+  </span>
+  <a id="Pulumi_F5BigIP_Ltm_Snat_Translation_" data-uid="Pulumi.F5BigIP.Ltm.Snat.Translation*"></a>
+  <h4 id="Pulumi_F5BigIP_Ltm_Snat_Translation" data-uid="Pulumi.F5BigIP.Ltm.Snat.Translation">Translation</h4>
+  <div class="markdown level1 summary"><p>Specifies the name of a translated IP address. Note that translated addresses are outside the traffic management system. You can only use this option when automap and snatpool are not used.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Translation { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/Snat.cs/#L77">View Source</a>
+  </span>
+  <a id="Pulumi_F5BigIP_Ltm_Snat_Vlans_" data-uid="Pulumi.F5BigIP.Ltm.Snat.Vlans*"></a>
+  <h4 id="Pulumi_F5BigIP_Ltm_Snat_Vlans" data-uid="Pulumi.F5BigIP.Ltm.Snat.Vlans">Vlans</h4>
+  <div class="markdown level1 summary"><p>Specifies the name of the VLAN to which you want to assign the SNAT. The default is vlans-enabled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; Vlans { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/Snat.cs/#L83">View Source</a>
+  </span>
+  <a id="Pulumi_F5BigIP_Ltm_Snat_Vlansdisabled_" data-uid="Pulumi.F5BigIP.Ltm.Snat.Vlansdisabled*"></a>
+  <h4 id="Pulumi_F5BigIP_Ltm_Snat_Vlansdisabled" data-uid="Pulumi.F5BigIP.Ltm.Snat.Vlansdisabled">Vlansdisabled</h4>
+  <div class="markdown level1 summary"><p>Disables the SNAT on all VLANs.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; Vlansdisabled { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/Snat.cs/#L124">View Source</a>
+  </span>
+  <a id="Pulumi_F5BigIP_Ltm_Snat_Get_" data-uid="Pulumi.F5BigIP.Ltm.Snat.Get*"></a>
+  <h4 id="Pulumi_F5BigIP_Ltm_Snat_Get_System_String_Input_System_String__Pulumi_F5BigIP_Ltm_SnatState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.F5BigIP.Ltm.Snat.Get(System.String,Input{System.String},Pulumi.F5BigIP.Ltm.SnatState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, SnatState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Get an existing Snat resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Snat Get(string name, Input&lt;string&gt; id, SnatState state = null, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.F5BigIP.Ltm.SnatState.html">SnatState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.F5BigIP.Ltm.Snat.html">Snat</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/Snat.cs/#L18" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

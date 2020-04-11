@@ -1,0 +1,524 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class PodStatus
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class PodStatus
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.PodStatus">
+  
+  <h1 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_PodStatus" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.PodStatus" class="text-break">Class PodStatus
+  </h1>
+  <div class="markdown level0 summary"><p>PodStatus represents information about the status of a pod. Status may trail the actual
+state of a system, especially if the node that hosts the pod cannot contact the control
+plane.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">PodStatus</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.html">Pulumi.Kubernetes.Types.Outputs.Core.V1</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.Kubernetes.dll</h6>
+  <h5 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_PodStatus_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class PodStatus</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L19679">View Source</a>
+  </span>
+  <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_PodStatus_Conditions" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.PodStatus.Conditions">Conditions</h4>
+  <div class="markdown level1 summary"><p>Current service state of pod. More info:
+<a href="https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-conditions">https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-conditions</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;PodCondition&gt; Conditions</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.PodCondition.html">PodCondition</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L19686">View Source</a>
+  </span>
+  <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_PodStatus_ContainerStatuses" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.PodStatus.ContainerStatuses">ContainerStatuses</h4>
+  <div class="markdown level1 summary"><p>The list has one entry per container in the manifest. Each entry is currently the output
+of <code>docker inspect</code>. More info:
+<a href="https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-and-container-status">https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-and-container-status</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;ContainerStatus&gt; ContainerStatuses</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.ContainerStatus.html">ContainerStatus</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L19692">View Source</a>
+  </span>
+  <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_PodStatus_EphemeralContainerStatuses" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.PodStatus.EphemeralContainerStatuses">EphemeralContainerStatuses</h4>
+  <div class="markdown level1 summary"><p>Status for any ephemeral containers that have run in this pod. This field is alpha-level
+and is only populated by servers that enable the EphemeralContainers feature.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;ContainerStatus&gt; EphemeralContainerStatuses</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.ContainerStatus.html">ContainerStatus</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L19697">View Source</a>
+  </span>
+  <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_PodStatus_HostIP" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.PodStatus.HostIP">HostIP</h4>
+  <div class="markdown level1 summary"><p>IP address of the host to which the pod is assigned. Empty if not yet scheduled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly string HostIP</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L19705">View Source</a>
+  </span>
+  <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_PodStatus_InitContainerStatuses" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.PodStatus.InitContainerStatuses">InitContainerStatuses</h4>
+  <div class="markdown level1 summary"><p>The list has one entry per init container in the manifest. The most recent successful
+init container will have ready = true, the most recently started container will have
+startTime set. More info:
+<a href="https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-and-container-status">https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-and-container-status</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;ContainerStatus&gt; InitContainerStatuses</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.ContainerStatus.html">ContainerStatus</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L19710">View Source</a>
+  </span>
+  <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_PodStatus_Message" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.PodStatus.Message">Message</h4>
+  <div class="markdown level1 summary"><p>A human readable message indicating details about why the pod is in this condition.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly string Message</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L19721">View Source</a>
+  </span>
+  <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_PodStatus_NominatedNodeName" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.PodStatus.NominatedNodeName">NominatedNodeName</h4>
+  <div class="markdown level1 summary"><p>nominatedNodeName is set only when this pod preempts other pods on the node, but it
+cannot be scheduled right away as preemption victims receive their graceful termination
+periods. This field does not guarantee that the pod will be scheduled on this node.
+Scheduler may decide to place the pod elsewhere if other nodes become available sooner.
+Scheduler may also decide to give the resources on this node to a higher priority pod
+that is created after preemption. As a result, this field may be different than
+PodSpec.nodeName when the pod is scheduled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly string NominatedNodeName</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L19741">View Source</a>
+  </span>
+  <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_PodStatus_Phase" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.PodStatus.Phase">Phase</h4>
+  <div class="markdown level1 summary"><p>The phase of a Pod is a simple, high-level summary of where the Pod is in its lifecycle.
+The conditions array, the reason and message fields, and the individual container status
+arrays contain more detail about the pod's status. There are five possible phase values:</p>
+<p>Pending: The pod has been accepted by the Kubernetes system, but one or more of the
+container images has not been created. This includes time before being scheduled as well
+as time spent downloading images over the network, which could take a while. Running:
+The pod has been bound to a node, and all of the containers have been created. At least
+one container is still running, or is in the process of starting or restarting.
+Succeeded: All containers in the pod have terminated in success, and will not be
+restarted. Failed: All containers in the pod have terminated, and at least one container
+has terminated in failure. The container either exited with non-zero status or was
+terminated by the system. Unknown: For some reason the state of the pod could not be
+obtained, typically due to an error in communicating with the host of the pod.</p>
+<p>More info: <a href="https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-phase">https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-phase</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly string Phase</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L19747">View Source</a>
+  </span>
+  <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_PodStatus_PodIP" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.PodStatus.PodIP">PodIP</h4>
+  <div class="markdown level1 summary"><p>IP address allocated to the pod. Routable at least within the cluster. Empty if not yet
+allocated.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly string PodIP</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L19754">View Source</a>
+  </span>
+  <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_PodStatus_PodIPs" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.PodStatus.PodIPs">PodIPs</h4>
+  <div class="markdown level1 summary"><p>podIPs holds the IP addresses allocated to the pod. If this field is specified, the 0th
+entry must match the podIP field. Pods may be allocated at most 1 value for each of IPv4
+and IPv6. This list is empty if no IPs have been allocated yet.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;PodIP&gt; PodIPs</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.PodIP.html">PodIP</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L19761">View Source</a>
+  </span>
+  <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_PodStatus_QosClass" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.PodStatus.QosClass">QosClass</h4>
+  <div class="markdown level1 summary"><p>The Quality of Service (QOS) classification assigned to the pod based on resource
+requirements See PodQOSClass type for available QOS classes More info:
+<a href="https://git.k8s.io/community/contributors/design-proposals/node/resource-qos.md">https://git.k8s.io/community/contributors/design-proposals/node/resource-qos.md</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly string QosClass</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L19767">View Source</a>
+  </span>
+  <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_PodStatus_Reason" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.PodStatus.Reason">Reason</h4>
+  <div class="markdown level1 summary"><p>A brief CamelCase message indicating details about why the pod is in this state. e.g.
+'Evicted'</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly string Reason</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L19773">View Source</a>
+  </span>
+  <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_PodStatus_StartTime" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.PodStatus.StartTime">StartTime</h4>
+  <div class="markdown level1 summary"><p>RFC 3339 date and time at which the object was acknowledged by the Kubelet. This is
+before the Kubelet pulled the container image(s) for the pod.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly string StartTime</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L19672" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

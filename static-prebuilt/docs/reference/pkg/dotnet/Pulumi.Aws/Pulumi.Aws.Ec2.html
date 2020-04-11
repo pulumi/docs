@@ -1,0 +1,1258 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Namespace Pulumi.Aws.Ec2
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Namespace Pulumi.Aws.Ec2
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Aws.Ec2">
+  
+  <h1 id="Pulumi_Aws_Ec2" data-uid="Pulumi.Aws.Ec2" class="text-break">Namespace Pulumi.Aws.Ec2
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+    <h3 id="classes">Classes
+  </h3>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.Ami.html">Ami</a></h4>
+      <section><p>The AMI resource allows the creation and management of a completely-custom
+<em>Amazon Machine Image</em> (AMI).</p>
+<p>If you just want to duplicate an existing AMI, possibly copying it to another
+region, it's better to use <code>aws.ec2.AmiCopy</code> instead.</p>
+<p>If you just want to share an existing AMI with another AWS account,
+it's better to use <code>aws.ec2.AmiLaunchPermission</code> instead.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ami.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ami.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.AmiArgs.html">AmiArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.AmiCopy.html">AmiCopy</a></h4>
+      <section><p>The &quot;AMI copy&quot; resource allows duplication of an Amazon Machine Image (AMI),
+including cross-region copies.</p>
+<p>If the source AMI has associated EBS snapshots, those will also be duplicated
+along with the AMI.</p>
+<p>This is useful for taking a single AMI provisioned in one region and making
+it available in another for a multi-region deployment.</p>
+<p>Copying an AMI can take several minutes. The creation of this resource will
+block until the new AMI is available for use on new instances.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ami_copy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ami_copy.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.AmiCopyArgs.html">AmiCopyArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.AmiCopyState.html">AmiCopyState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.AmiFromInstance.html">AmiFromInstance</a></h4>
+      <section><p>The &quot;AMI from instance&quot; resource allows the creation of an Amazon Machine
+Image (AMI) modelled after an existing EBS-backed EC2 instance.</p>
+<p>The created AMI will refer to implicitly-created snapshots of the instance's
+EBS volumes and mimick its assigned block device configuration at the time
+the resource is created.</p>
+<p>This resource is best applied to an instance that is stopped when this instance
+is created, so that the contents of the created image are predictable. When
+applied to an instance that is running, <em>the instance will be stopped before taking
+the snapshots and then started back up again</em>, resulting in a period of
+downtime.</p>
+<p>Note that the source instance is inspected only at the initial creation of this
+resource. Ongoing updates to the referenced instance will not be propagated into
+the generated AMI. Users may taint or otherwise recreate the resource in order
+to produce a fresh snapshot.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ami_from_instance.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ami_from_instance.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.AmiFromInstanceArgs.html">AmiFromInstanceArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.AmiFromInstanceState.html">AmiFromInstanceState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.AmiLaunchPermission.html">AmiLaunchPermission</a></h4>
+      <section><p>Adds launch permission to Amazon Machine Image (AMI) from another AWS account.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ami_launch_permission.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ami_launch_permission.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.AmiLaunchPermissionArgs.html">AmiLaunchPermissionArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.AmiLaunchPermissionState.html">AmiLaunchPermissionState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.AmiState.html">AmiState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.CapacityReservation.html">CapacityReservation</a></h4>
+      <section><p>Provides an EC2 Capacity Reservation. This allows you to reserve capacity for your Amazon EC2 instances in a specific Availability Zone for any duration.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_capacity_reservation.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_capacity_reservation.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.CapacityReservationArgs.html">CapacityReservationArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.CapacityReservationState.html">CapacityReservationState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.CustomerGateway.html">CustomerGateway</a></h4>
+      <section><p>Provides a customer gateway inside a VPC. These objects can be connected to VPN gateways via VPN connections, and allow you to establish tunnels between your network and the VPC.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/customer_gateway.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/customer_gateway.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.CustomerGatewayArgs.html">CustomerGatewayArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.CustomerGatewayState.html">CustomerGatewayState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.DefaultNetworkAcl.html">DefaultNetworkAcl</a></h4>
+      <section><p>Provides a resource to manage the default AWS Network ACL. VPC Only.</p>
+<p>Each VPC created in AWS comes with a Default Network ACL that can be managed, but not
+destroyed. <strong>This is an advanced resource</strong>, and has special caveats to be aware
+of when using it. Please read this document in its entirety before using this
+resource.</p>
+<p>The <code>aws.ec2.DefaultNetworkAcl</code> behaves differently from normal resources, in that
+this provider does not <em>create</em> this resource, but instead attempts to &quot;adopt&quot; it
+into management. We can do this because each VPC created has a Default Network
+ACL that cannot be destroyed, and is created with a known set of default rules.</p>
+<p>When this provider first adopts the Default Network ACL, it <strong>immediately removes all
+rules in the ACL</strong>. It then proceeds to create any rules specified in the
+configuration. This step is required so that only the rules specified in the
+configuration are created.</p>
+<p>This resource treats its inline rules as absolute; only the rules defined
+inline are created, and any additions/removals external to this resource will
+result in diffs being shown. For these reasons, this resource is incompatible with the
+<code>aws.ec2.NetworkAclRule</code> resource.</p>
+<p>For more information about Network ACLs, see the AWS Documentation on
+[Network ACLs][aws-network-acls].</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_network_acl.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_network_acl.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.DefaultNetworkAclArgs.html">DefaultNetworkAclArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.DefaultNetworkAclState.html">DefaultNetworkAclState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.DefaultRouteTable.html">DefaultRouteTable</a></h4>
+      <section><p>Provides a resource to manage a Default VPC Routing Table.</p>
+<p>Each VPC created in AWS comes with a Default Route Table that can be managed, but not
+destroyed. <strong>This is an advanced resource</strong>, and has special caveats to be aware
+of when using it. Please read this document in its entirety before using this
+resource. It is recommended you <strong>do not</strong> use both <code>aws.ec2.DefaultRouteTable</code> to
+manage the default route table <strong>and</strong> use the <code>aws.ec2.MainRouteTableAssociation</code>,
+due to possible conflict in routes.</p>
+<p>The <code>aws.ec2.DefaultRouteTable</code> behaves differently from normal resources, in that
+this provider does not <em>create</em> this resource, but instead attempts to &quot;adopt&quot; it
+into management. We can do this because each VPC created has a Default Route
+Table that cannot be destroyed, and is created with a single route.</p>
+<p>When this provider first adopts the Default Route Table, it <strong>immediately removes all
+defined routes</strong>. It then proceeds to create any routes specified in the
+configuration. This step is required so that only the routes specified in the
+configuration present in the Default Route Table.</p>
+<p>For more information about Route Tables, see the AWS Documentation on
+[Route Tables][aws-route-tables].</p>
+<p>For more information about managing normal Route Tables in this provider, see our
+documentation on [aws.ec2.RouteTable][tf-route-tables].</p>
+<blockquote>
+<p><strong>NOTE on Route Tables and Routes:</strong> This provider currently
+provides both a standalone Route resource and a Route Table resource with routes
+defined in-line. At this time you cannot use a Route Table with in-line routes
+in conjunction with any Route resources. Doing so will cause
+a conflict of rule settings and will overwrite routes.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_route_table.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_route_table.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.DefaultRouteTableArgs.html">DefaultRouteTableArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.DefaultRouteTableState.html">DefaultRouteTableState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.DefaultSecurityGroup.html">DefaultSecurityGroup</a></h4>
+      <section><p>Provides a resource to manage the default AWS Security Group.</p>
+<p>For EC2 Classic accounts, each region comes with a Default Security Group.
+Additionally, each VPC created in AWS comes with a Default Security Group that can be managed, but not
+destroyed. <strong>This is an advanced resource</strong>, and has special caveats to be aware
+of when using it. Please read this document in its entirety before using this
+resource.</p>
+<p>The <code>aws.ec2.DefaultSecurityGroup</code> behaves differently from normal resources, in that
+this provider does not <em>create</em> this resource, but instead &quot;adopts&quot; it
+into management. We can do this because these default security groups cannot be
+destroyed, and are created with a known set of default ingress/egress rules.</p>
+<p>When this provider first adopts the Default Security Group, it <strong>immediately removes all
+ingress and egress rules in the Security Group</strong>. It then proceeds to create any rules specified in the
+configuration. This step is required so that only the rules specified in the
+configuration are created.</p>
+<p>This resource treats its inline rules as absolute; only the rules defined
+inline are created, and any additions/removals external to this resource will
+result in diff shown. For these reasons, this resource is incompatible with the
+<code>aws.ec2.SecurityGroupRule</code> resource.</p>
+<p>For more information about Default Security Groups, see the AWS Documentation on
+[Default Security Groups][aws-default-security-groups].</p>
+<h2 id="usage">Usage</h2>
+<p>With the exceptions mentioned above, <code>aws.ec2.DefaultSecurityGroup</code> should
+identical behavior to <code>aws.ec2.SecurityGroup</code>. Please consult <a href="https://www.terraform.io/docs/providers/aws/r/security_group.html">AWS_SECURITY_GROUP</a>
+for further usage documentation.</p>
+<h3 id="removing-awsec2defaultsecuritygroup-from-your-configuration">Removing <code>aws.ec2.DefaultSecurityGroup</code> from your configuration</h3>
+<p>Each AWS VPC (or region, if using EC2 Classic) comes with a Default Security
+Group that cannot be deleted. The <code>aws.ec2.DefaultSecurityGroup</code> allows you to
+manage this Security Group, but this provider cannot destroy it. Removing this resource
+from your configuration will remove it from your statefile and management, but
+will not destroy the Security Group. All ingress or egress rules will be left as
+they are at the time of removal. You can resume managing them via the AWS Console.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_security_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_security_group.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.DefaultSecurityGroupArgs.html">DefaultSecurityGroupArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.DefaultSecurityGroupState.html">DefaultSecurityGroupState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.DefaultSubnet.html">DefaultSubnet</a></h4>
+      <section><p>Provides a resource to manage a <a href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/default-vpc.html#default-vpc-basics">default AWS VPC subnet</a>
+in the current region.</p>
+<p>The <code>aws.ec2.DefaultSubnet</code> behaves differently from normal resources, in that
+this provider does not <em>create</em> this resource, but instead &quot;adopts&quot; it
+into management.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_subnet.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_subnet.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.DefaultSubnetArgs.html">DefaultSubnetArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.DefaultSubnetState.html">DefaultSubnetState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.DefaultVpc.html">DefaultVpc</a></h4>
+      <section><p>Provides a resource to manage the <a href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/default-vpc.html">default AWS VPC</a>
+in the current region.</p>
+<p>For AWS accounts created after 2013-12-04, each region comes with a Default VPC.
+<strong>This is an advanced resource</strong>, and has special caveats to be aware of when
+using it. Please read this document in its entirety before using this resource.</p>
+<p>The <code>aws.ec2.DefaultVpc</code> behaves differently from normal resources, in that
+this provider does not <em>create</em> this resource, but instead &quot;adopts&quot; it
+into management.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_vpc.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_vpc.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.DefaultVpcArgs.html">DefaultVpcArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.DefaultVpcDhcpOptions.html">DefaultVpcDhcpOptions</a></h4>
+      <section><p>Provides a resource to manage the <a href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_DHCP_Options.html#AmazonDNS">default AWS DHCP Options Set</a>
+in the current region.</p>
+<p>Each AWS region comes with a default set of DHCP options.
+<strong>This is an advanced resource</strong>, and has special caveats to be aware of when
+using it. Please read this document in its entirety before using this resource.</p>
+<p>The <code>aws.ec2.DefaultVpcDhcpOptions</code> behaves differently from normal resources, in that
+this provider does not <em>create</em> this resource, but instead &quot;adopts&quot; it
+into management.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_vpc_dhcp_options.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/default_vpc_dhcp_options.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.DefaultVpcDhcpOptionsArgs.html">DefaultVpcDhcpOptionsArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.DefaultVpcDhcpOptionsState.html">DefaultVpcDhcpOptionsState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.DefaultVpcState.html">DefaultVpcState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.EgressOnlyInternetGateway.html">EgressOnlyInternetGateway</a></h4>
+      <section><p>[IPv6 only] Creates an egress-only Internet gateway for your VPC.
+An egress-only Internet gateway is used to enable outbound communication
+over IPv6 from instances in your VPC to the Internet, and prevents hosts
+outside of your VPC from initiating an IPv6 connection with your instance.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/egress_only_internet_gateway.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/egress_only_internet_gateway.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.EgressOnlyInternetGatewayArgs.html">EgressOnlyInternetGatewayArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.EgressOnlyInternetGatewayState.html">EgressOnlyInternetGatewayState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.Eip.html">Eip</a></h4>
+      <section><p>Provides an Elastic IP resource.</p>
+<blockquote>
+<p><strong>Note:</strong> EIP may require IGW to exist prior to association. Use <code>depends_on</code> to set an explicit dependency on the IGW.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note:</strong> Do not use <code>network_interface</code> to associate the EIP to <code>aws.lb.LoadBalancer</code> or <code>aws.ec2.NatGateway</code> resources. Instead use the <code>allocation_id</code> available in those resources to allow AWS to manage the association, otherwise you will see <code>AuthFailure</code> errors.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/eip.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/eip.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.EipArgs.html">EipArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.EipAssociation.html">EipAssociation</a></h4>
+      <section><p>Provides an AWS EIP Association as a top level resource, to associate and
+disassociate Elastic IPs from AWS Instances and Network Interfaces.</p>
+<blockquote>
+<p><strong>NOTE:</strong> Do not use this resource to associate an EIP to <code>aws.lb.LoadBalancer</code> or <code>aws.ec2.NatGateway</code> resources. Instead use the <code>allocation_id</code> available in those resources to allow AWS to manage the association, otherwise you will see <code>AuthFailure</code> errors.</p>
+</blockquote>
+<blockquote>
+<p><strong>NOTE:</strong> <code>aws.ec2.EipAssociation</code> is useful in scenarios where EIPs are either
+pre-existing or distributed to customers or users and therefore cannot be changed.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/eip_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/eip_association.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.EipAssociationArgs.html">EipAssociationArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.EipAssociationState.html">EipAssociationState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.EipState.html">EipState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.Fleet.html">Fleet</a></h4>
+      <section><p>Provides a resource to manage EC2 Fleets.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_fleet.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_fleet.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.FleetArgs.html">FleetArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.FleetState.html">FleetState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.FlowLog.html">FlowLog</a></h4>
+      <section><p>Provides a VPC/Subnet/ENI Flow Log to capture IP traffic for a specific network
+interface, subnet, or VPC. Logs are sent to a CloudWatch Log Group or a S3 Bucket.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/flow_log.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/flow_log.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.FlowLogArgs.html">FlowLogArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.FlowLogState.html">FlowLogState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.GetCustomerGatewayArgs.html">GetCustomerGatewayArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.GetCustomerGatewayResult.html">GetCustomerGatewayResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.GetInstanceArgs.html">GetInstanceArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.GetInstanceResult.html">GetInstanceResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.GetInstancesArgs.html">GetInstancesArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.GetInstancesResult.html">GetInstancesResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.GetInstanceTypeOfferingArgs.html">GetInstanceTypeOfferingArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.GetInstanceTypeOfferingResult.html">GetInstanceTypeOfferingResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.GetInstanceTypeOfferingsArgs.html">GetInstanceTypeOfferingsArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.GetInstanceTypeOfferingsResult.html">GetInstanceTypeOfferingsResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.GetInternetGatewayArgs.html">GetInternetGatewayArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.GetInternetGatewayResult.html">GetInternetGatewayResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.GetLaunchConfigurationArgs.html">GetLaunchConfigurationArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.GetLaunchConfigurationResult.html">GetLaunchConfigurationResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.GetLaunchTemplateArgs.html">GetLaunchTemplateArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.GetLaunchTemplateResult.html">GetLaunchTemplateResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.GetNatGatewayArgs.html">GetNatGatewayArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.GetNatGatewayResult.html">GetNatGatewayResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.GetNetworkAclsArgs.html">GetNetworkAclsArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.GetNetworkAclsResult.html">GetNetworkAclsResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.GetNetworkInterfaceArgs.html">GetNetworkInterfaceArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.GetNetworkInterfaceResult.html">GetNetworkInterfaceResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.GetNetworkInterfacesArgs.html">GetNetworkInterfacesArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.GetNetworkInterfacesResult.html">GetNetworkInterfacesResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.GetRouteArgs.html">GetRouteArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.GetRouteResult.html">GetRouteResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.GetRouteTableArgs.html">GetRouteTableArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.GetRouteTableResult.html">GetRouteTableResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.GetRouteTablesArgs.html">GetRouteTablesArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.GetRouteTablesResult.html">GetRouteTablesResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.GetSecurityGroupArgs.html">GetSecurityGroupArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.GetSecurityGroupResult.html">GetSecurityGroupResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.GetSecurityGroupsArgs.html">GetSecurityGroupsArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.GetSecurityGroupsResult.html">GetSecurityGroupsResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.GetSubnetArgs.html">GetSubnetArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.GetSubnetIdsArgs.html">GetSubnetIdsArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.GetSubnetIdsResult.html">GetSubnetIdsResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.GetSubnetResult.html">GetSubnetResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.GetVpcArgs.html">GetVpcArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.GetVpcDhcpOptionsArgs.html">GetVpcDhcpOptionsArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.GetVpcDhcpOptionsResult.html">GetVpcDhcpOptionsResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.GetVpcEndpointArgs.html">GetVpcEndpointArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.GetVpcEndpointResult.html">GetVpcEndpointResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.GetVpcEndpointServiceArgs.html">GetVpcEndpointServiceArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.GetVpcEndpointServiceResult.html">GetVpcEndpointServiceResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.GetVpcPeeringConnectionArgs.html">GetVpcPeeringConnectionArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.GetVpcPeeringConnectionResult.html">GetVpcPeeringConnectionResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.GetVpcResult.html">GetVpcResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.GetVpcsArgs.html">GetVpcsArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.GetVpcsResult.html">GetVpcsResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.GetVpnGatewayArgs.html">GetVpnGatewayArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.GetVpnGatewayResult.html">GetVpnGatewayResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.Instance.html">Instance</a></h4>
+      <section><p>Provides an EC2 instance resource. This allows instances to be created, updated,
+and deleted. Instances also support <a href="https://www.terraform.io/docs/provisioners/index.html">provisioning</a>.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/instance.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/instance.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.InstanceArgs.html">InstanceArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.InstanceState.html">InstanceState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.InternetGateway.html">InternetGateway</a></h4>
+      <section><p>Provides a resource to create a VPC Internet Gateway.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/internet_gateway.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/internet_gateway.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.InternetGatewayArgs.html">InternetGatewayArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.InternetGatewayState.html">InternetGatewayState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.Invokes.html">Invokes</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.KeyPair.html">KeyPair</a></h4>
+      <section><p>Provides an <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html">EC2 key pair</a> resource. A key pair is used to control login access to EC2 instances.</p>
+<p>Currently this resource requires an existing user-supplied key pair. This key pair's public key will be registered with AWS to allow logging-in to EC2 instances.</p>
+<p>When importing an existing key pair the public key material may be in any format supported by AWS. Supported formats (per the <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html#how-to-generate-your-own-key-and-import-it-to-aws">AWS documentation</a>) are:</p>
+<ul>
+<li>OpenSSH public key format (the format in ~/.ssh/authorized_keys)</li>
+<li>Base64 encoded DER format</li>
+<li>SSH public key file format as specified in RFC4716</li>
+</ul>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/key_pair.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/key_pair.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.KeyPairArgs.html">KeyPairArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.KeyPairState.html">KeyPairState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.LaunchConfiguration.html">LaunchConfiguration</a></h4>
+      <section><p>Provides a resource to create a new launch configuration, used for autoscaling groups.</p>
+<h2 id="block-devices">Block devices</h2>
+<p>Each of the <code>*_block_device</code> attributes controls a portion of the AWS
+Launch Configuration's &quot;Block Device Mapping&quot;. It's a good idea to familiarize yourself with <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html">AWS's Block Device
+Mapping docs</a>
+to understand the implications of using these attributes.</p>
+<p>The <code>root_block_device</code> mapping supports the following:</p>
+<ul>
+<li><code>volume_type</code> - (Optional) The type of volume. Can be <code>&amp;quot;standard&amp;quot;</code>, <code>&amp;quot;gp2&amp;quot;</code>,
+or <code>&amp;quot;io1&amp;quot;</code>. (Default: <code>&amp;quot;standard&amp;quot;</code>).</li>
+<li><code>volume_size</code> - (Optional) The size of the volume in gigabytes.</li>
+<li><code>iops</code> - (Optional) The amount of provisioned
+<a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html">IOPS</a>.
+This must be set with a <code>volume_type</code> of <code>&amp;quot;io1&amp;quot;</code>.</li>
+<li><code>delete_on_termination</code> - (Optional) Whether the volume should be destroyed
+on instance termination (Default: <code>true</code>).</li>
+<li><code>encrypted</code> - (Optional) Whether the volume should be encrypted or not. (Default: <code>false</code>).</li>
+</ul>
+<p>Modifying any of the <code>root_block_device</code> settings requires resource
+replacement.</p>
+<p>Each <code>ebs_block_device</code> supports the following:</p>
+<ul>
+<li><code>device_name</code> - (Required) The name of the device to mount.</li>
+<li><code>snapshot_id</code> - (Optional) The Snapshot ID to mount.</li>
+<li><code>volume_type</code> - (Optional) The type of volume. Can be <code>&amp;quot;standard&amp;quot;</code>, <code>&amp;quot;gp2&amp;quot;</code>,
+or <code>&amp;quot;io1&amp;quot;</code>. (Default: <code>&amp;quot;standard&amp;quot;</code>).</li>
+<li><code>volume_size</code> - (Optional) The size of the volume in gigabytes.</li>
+<li><code>iops</code> - (Optional) The amount of provisioned
+<a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html">IOPS</a>.
+This must be set with a <code>volume_type</code> of <code>&amp;quot;io1&amp;quot;</code>.</li>
+<li><code>delete_on_termination</code> - (Optional) Whether the volume should be destroyed
+on instance termination (Default: <code>true</code>).</li>
+<li><code>encrypted</code> - (Optional) Whether the volume should be encrypted or not. Do not use this option if you are using <code>snapshot_id</code> as the encrypted flag will be determined by the snapshot. (Default: <code>false</code>).</li>
+</ul>
+<p>Modifying any <code>ebs_block_device</code> currently requires resource replacement.</p>
+<p>Each <code>ephemeral_block_device</code> supports the following:</p>
+<ul>
+<li><code>device_name</code> - The name of the block device to mount on the instance.</li>
+<li><code>virtual_name</code> - The <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#InstanceStoreDeviceNames">Instance Store Device
+Name</a>
+(e.g. <code>&amp;quot;ephemeral0&amp;quot;</code>)</li>
+</ul>
+<p>Each AWS Instance type has a different set of Instance Store block devices
+available for attachment. AWS <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#StorageOnInstanceTypes">publishes a
+list</a>
+of which ephemeral devices are available on each type. The devices are always
+identified by the <code>virtual_name</code> in the format <code>&amp;quot;ephemeral{0..N}&amp;quot;</code>.</p>
+<blockquote>
+<p><strong>NOTE:</strong> Changes to <code>*_block_device</code> configuration of <em>existing</em> resources
+cannot currently be detected by this provider. After updating to block device
+configuration, resource recreation can be manually triggered by using the
+<a href="https://www.terraform.io/docs/commands/taint.html"><code>taint</code> command</a>.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/launch_configuration.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/launch_configuration.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.LaunchConfigurationArgs.html">LaunchConfigurationArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.LaunchConfigurationState.html">LaunchConfigurationState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.LaunchTemplate.html">LaunchTemplate</a></h4>
+      <section><p>Provides an EC2 launch template resource. Can be used to create instances or auto scaling groups.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/launch_template.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/launch_template.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.LaunchTemplateArgs.html">LaunchTemplateArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.LaunchTemplateState.html">LaunchTemplateState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.MainRouteTableAssociation.html">MainRouteTableAssociation</a></h4>
+      <section><p>Provides a resource for managing the main routing table of a VPC.</p>
+<h2 id="notes">Notes</h2>
+<p>On VPC creation, the AWS API always creates an initial Main Route Table. This
+resource records the ID of that Route Table under <code>original_route_table_id</code>.
+The &quot;Delete&quot; action for a <code>main_route_table_association</code> consists of resetting
+this original table as the Main Route Table for the VPC. You'll see this
+additional Route Table in the AWS console; it must remain intact in order for
+the <code>main_route_table_association</code> delete to work properly.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/main_route_table_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/main_route_table_association.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.MainRouteTableAssociationArgs.html">MainRouteTableAssociationArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.MainRouteTableAssociationState.html">MainRouteTableAssociationState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.NatGateway.html">NatGateway</a></h4>
+      <section><p>Provides a resource to create a VPC NAT Gateway.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/nat_gateway.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/nat_gateway.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.NatGatewayArgs.html">NatGatewayArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.NatGatewayState.html">NatGatewayState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.NetworkAcl.html">NetworkAcl</a></h4>
+      <section><p>Provides an network ACL resource. You might set up network ACLs with rules similar
+to your security groups in order to add an additional layer of security to your VPC.</p>
+<blockquote>
+<p><strong>NOTE on Network ACLs and Network ACL Rules:</strong> This provider currently
+provides both a standalone Network ACL Rule resource and a Network ACL resource with rules
+defined in-line. At this time you cannot use a Network ACL with in-line rules
+in conjunction with any Network ACL Rule resources. Doing so will cause
+a conflict of rule settings and will overwrite rules.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/network_acl.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/network_acl.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.NetworkAclArgs.html">NetworkAclArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.NetworkAclRule.html">NetworkAclRule</a></h4>
+      <section><p>Creates an entry (a rule) in a network ACL with the specified rule number.</p>
+<blockquote>
+<p><strong>NOTE on Network ACLs and Network ACL Rules:</strong> This provider currently
+provides both a standalone Network ACL Rule resource and a Network ACL resource with rules
+defined in-line. At this time you cannot use a Network ACL with in-line rules
+in conjunction with any Network ACL Rule resources. Doing so will cause
+a conflict of rule settings and will overwrite rules.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/network_acl_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/network_acl_rule.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.NetworkAclRuleArgs.html">NetworkAclRuleArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.NetworkAclRuleState.html">NetworkAclRuleState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.NetworkAclState.html">NetworkAclState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.NetworkInterface.html">NetworkInterface</a></h4>
+      <section><p>Provides an Elastic network interface (ENI) resource.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/network_interface.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/network_interface.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.NetworkInterfaceArgs.html">NetworkInterfaceArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.NetworkInterfaceAttachment.html">NetworkInterfaceAttachment</a></h4>
+      <section><p>Attach an Elastic network interface (ENI) resource with EC2 instance.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/network_interface_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/network_interface_attachment.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.NetworkInterfaceAttachmentArgs.html">NetworkInterfaceAttachmentArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.NetworkInterfaceAttachmentState.html">NetworkInterfaceAttachmentState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.NetworkInterfaceSecurityGroupAttachment.html">NetworkInterfaceSecurityGroupAttachment</a></h4>
+      <section><p>This resource attaches a security group to an Elastic Network Interface (ENI).
+It can be used to attach a security group to any existing ENI, be it a
+secondary ENI or one attached as the primary interface on an instance.</p>
+<blockquote>
+<p><strong>NOTE on instances, interfaces, and security groups:</strong> This provider currently
+provides the capability to assign security groups via the <a href="https://www.terraform.io/docs/providers/aws/d/instance.html"><code>aws.ec2.Instance</code></a>
+and the <a href="https://www.terraform.io/docs/providers/aws/r/network_interface.html"><code>aws.ec2.NetworkInterface</code></a> resources. Using this resource in
+conjunction with security groups provided in-line in those resources will cause
+conflicts, and will lead to spurious diffs and undefined behavior - please use
+one or the other.</p>
+</blockquote>
+<h2 id="output-reference">Output Reference</h2>
+<p>There are no outputs for this resource.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/network_interface_sg_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/network_interface_sg_attachment.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.NetworkInterfaceSecurityGroupAttachmentArgs.html">NetworkInterfaceSecurityGroupAttachmentArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.NetworkInterfaceSecurityGroupAttachmentState.html">NetworkInterfaceSecurityGroupAttachmentState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.NetworkInterfaceState.html">NetworkInterfaceState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.PeeringConnectionOptions.html">PeeringConnectionOptions</a></h4>
+      <section><p>Provides a resource to manage VPC peering connection options.</p>
+<blockquote>
+<p><strong>NOTE on VPC Peering Connections and VPC Peering Connection Options:</strong> This provider provides
+both a standalone VPC Peering Connection Options and a VPC Peering Connection
+resource with <code>accepter</code> and <code>requester</code> attributes. Do not manage options for the same VPC peering
+connection in both a VPC Peering Connection resource and a VPC Peering Connection Options resource.
+Doing so will cause a conflict of options and will overwrite the options.
+Using a VPC Peering Connection Options resource decouples management of the connection options from
+management of the VPC Peering Connection and allows options to be set correctly in cross-region and
+cross-account scenarios.</p>
+</blockquote>
+<p>Basic usage:</p>
+<p>Basic cross-account usage:</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_peering_connection_options.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_peering_connection_options.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.PeeringConnectionOptionsArgs.html">PeeringConnectionOptionsArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.PeeringConnectionOptionsState.html">PeeringConnectionOptionsState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.PlacementGroup.html">PlacementGroup</a></h4>
+      <section><p>Provides an EC2 placement group. Read more about placement groups
+in <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html">AWS Docs</a>.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/placement_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/placement_group.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.PlacementGroupArgs.html">PlacementGroupArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.PlacementGroupState.html">PlacementGroupState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.ProxyProtocolPolicy.html">ProxyProtocolPolicy</a></h4>
+      <section><p>Provides a proxy protocol policy, which allows an ELB to carry a client connection information to a backend.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/proxy_protocol_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/proxy_protocol_policy.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.ProxyProtocolPolicyArgs.html">ProxyProtocolPolicyArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.ProxyProtocolPolicyState.html">ProxyProtocolPolicyState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.Route.html">Route</a></h4>
+      <section><p>Provides a resource to create a routing table entry (a route) in a VPC routing table.</p>
+<blockquote>
+<p><strong>NOTE on Route Tables and Routes:</strong> This provider currently
+provides both a standalone Route resource and a Route Table resource with routes
+defined in-line. At this time you cannot use a Route Table with in-line routes
+in conjunction with any Route resources. Doing so will cause
+a conflict of rule settings and will overwrite rules.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.RouteArgs.html">RouteArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.RouteState.html">RouteState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.RouteTable.html">RouteTable</a></h4>
+      <section><p>Provides a resource to create a VPC routing table.</p>
+<blockquote>
+<p><strong>NOTE on Route Tables and Routes:</strong> This provider currently
+provides both a standalone Route resource and a Route Table resource with routes
+defined in-line. At this time you cannot use a Route Table with in-line routes
+in conjunction with any Route resources. Doing so will cause
+a conflict of rule settings and will overwrite rules.</p>
+</blockquote>
+<blockquote>
+<p><strong>NOTE on <code>gateway_id</code> and <code>nat_gateway_id</code>:</strong> The AWS API is very forgiving with these two
+attributes and the <code>aws.ec2.RouteTable</code> resource can be created with a NAT ID specified as a Gateway ID attribute.
+This <em>will</em> lead to a permanent diff between your configuration and statefile, as the API returns the correct
+parameters in the returned route table. If you're experiencing constant diffs in your <code>aws.ec2.RouteTable</code> resources,
+the first thing to check is whether or not you're specifying a NAT ID instead of a Gateway ID, or vice-versa.</p>
+</blockquote>
+<blockquote>
+<p><strong>NOTE on <code>propagating_vgws</code> and the <code>aws.ec2.VpnGatewayRoutePropagation</code> resource:</strong>
+If the <code>propagating_vgws</code> argument is present, it's not supported to <em>also</em>
+define route propagations using <code>aws.ec2.VpnGatewayRoutePropagation</code>, since
+this resource will delete any propagating gateways not explicitly listed in
+<code>propagating_vgws</code>. Omit this argument when defining route propagation using
+the separate resource.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route_table.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route_table.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.RouteTableArgs.html">RouteTableArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.RouteTableAssociation.html">RouteTableAssociation</a></h4>
+      <section><p>Provides a resource to create an association between a route table and a subnet or a route table and an
+internet gateway or virtual private gateway.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route_table_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route_table_association.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.RouteTableAssociationArgs.html">RouteTableAssociationArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.RouteTableAssociationState.html">RouteTableAssociationState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.RouteTableState.html">RouteTableState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.SecurityGroup.html">SecurityGroup</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.SecurityGroupArgs.html">SecurityGroupArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.SecurityGroupRule.html">SecurityGroupRule</a></h4>
+      <section><p>Provides a security group rule resource. Represents a single <code>ingress</code> or
+<code>egress</code> group rule, which can be added to external Security Groups.</p>
+<blockquote>
+<p><strong>NOTE on Security Groups and Security Group Rules:</strong> This provider currently
+provides both a standalone Security Group Rule resource (a single <code>ingress</code> or
+<code>egress</code> rule), and a Security Group resource with <code>ingress</code> and <code>egress</code> rules
+defined in-line. At this time you cannot use a Security Group with in-line rules
+in conjunction with any Security Group Rule resources. Doing so will cause
+a conflict of rule settings and will overwrite rules.</p>
+</blockquote>
+<blockquote>
+<p><strong>NOTE:</strong> Setting <code>protocol = &amp;quot;all&amp;quot;</code> or <code>protocol = -1</code> with <code>from_port</code> and <code>to_port</code> will result in the EC2 API creating a security group rule with all ports open. This API behavior cannot be controlled by this provider and may generate warnings in the future.</p>
+</blockquote>
+<blockquote>
+<p><strong>NOTE:</strong> Referencing Security Groups across VPC peering has certain restrictions. More information is available in the <a href="https://docs.aws.amazon.com/vpc/latest/peering/vpc-peering-security-groups.html">VPC Peering User Guide</a>.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/security_group_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/security_group_rule.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.SecurityGroupRuleArgs.html">SecurityGroupRuleArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.SecurityGroupRuleState.html">SecurityGroupRuleState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.SecurityGroupState.html">SecurityGroupState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.SnapshotCreateVolumePermission.html">SnapshotCreateVolumePermission</a></h4>
+      <section><p>Adds permission to create volumes off of a given EBS Snapshot.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/snapshot_create_volume_permission.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/snapshot_create_volume_permission.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.SnapshotCreateVolumePermissionArgs.html">SnapshotCreateVolumePermissionArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.SnapshotCreateVolumePermissionState.html">SnapshotCreateVolumePermissionState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.SpotDatafeedSubscription.html">SpotDatafeedSubscription</a></h4>
+      <section><blockquote>
+<p><strong>Note:</strong> There is only a single subscription allowed per account.</p>
+</blockquote>
+<p>To help you understand the charges for your Spot instances, Amazon EC2 provides a data feed that describes your Spot instance usage and pricing.
+This data feed is sent to an Amazon S3 bucket that you specify when you subscribe to the data feed.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/spot_datafeed_subscription.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/spot_datafeed_subscription.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.SpotDatafeedSubscriptionArgs.html">SpotDatafeedSubscriptionArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.SpotDatafeedSubscriptionState.html">SpotDatafeedSubscriptionState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.SpotFleetRequest.html">SpotFleetRequest</a></h4>
+      <section><p>Provides an EC2 Spot Fleet Request resource. This allows a fleet of Spot
+instances to be requested on the Spot market.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/spot_fleet_request.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/spot_fleet_request.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.SpotFleetRequestArgs.html">SpotFleetRequestArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.SpotFleetRequestState.html">SpotFleetRequestState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.SpotInstanceRequest.html">SpotInstanceRequest</a></h4>
+      <section><p>Provides an EC2 Spot Instance Request resource. This allows instances to be
+requested on the spot market.</p>
+<p>By default this provider creates Spot Instance Requests with a <code>persistent</code> type,
+which means that for the duration of their lifetime, AWS will launch an
+instance with the configured details if and when the spot market will accept
+the requested price.</p>
+<p>On destruction, this provider will make an attempt to terminate the associated Spot
+Instance if there is one present.</p>
+<p>Spot Instances requests with a <code>one-time</code> type will close the spot request
+when the instance is terminated either by the request being below the current spot
+price availability or by a user.</p>
+<blockquote>
+<p><strong>NOTE:</strong> Because their behavior depends on the live status of the spot
+market, Spot Instance Requests have a unique lifecycle that makes them behave
+differently than other resources. Most importantly: there is <strong>no
+guarantee</strong> that a Spot Instance exists to fulfill the request at any given
+point in time. See the <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-instances.html">AWS Spot Instance
+documentation</a>
+for more information.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/spot_instance_request.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/spot_instance_request.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.SpotInstanceRequestArgs.html">SpotInstanceRequestArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.SpotInstanceRequestState.html">SpotInstanceRequestState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.Subnet.html">Subnet</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.SubnetArgs.html">SubnetArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.SubnetState.html">SubnetState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.TrafficMirrorFilter.html">TrafficMirrorFilter</a></h4>
+      <section><p>Provides an Traffic mirror filter.<br>
+Read <a href="https://docs.aws.amazon.com/vpc/latest/mirroring/traffic-mirroring-considerations.html">limits and considerations</a> for traffic mirroring</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_traffic_mirror_filter.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_traffic_mirror_filter.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.TrafficMirrorFilterArgs.html">TrafficMirrorFilterArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.TrafficMirrorFilterRule.html">TrafficMirrorFilterRule</a></h4>
+      <section><p>Provides an Traffic mirror filter rule.<br>
+Read <a href="https://docs.aws.amazon.com/vpc/latest/mirroring/traffic-mirroring-considerations.html">limits and considerations</a> for traffic mirroring</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_traffic_mirror_filter_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_traffic_mirror_filter_rule.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.TrafficMirrorFilterRuleArgs.html">TrafficMirrorFilterRuleArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.TrafficMirrorFilterRuleState.html">TrafficMirrorFilterRuleState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.TrafficMirrorFilterState.html">TrafficMirrorFilterState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.TrafficMirrorSession.html">TrafficMirrorSession</a></h4>
+      <section><p>Provides an Traffic mirror session.<br>
+Read <a href="https://docs.aws.amazon.com/vpc/latest/mirroring/traffic-mirroring-considerations.html">limits and considerations</a> for traffic mirroring</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_traffic_mirror_session.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_traffic_mirror_session.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.TrafficMirrorSessionArgs.html">TrafficMirrorSessionArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.TrafficMirrorSessionState.html">TrafficMirrorSessionState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.TrafficMirrorTarget.html">TrafficMirrorTarget</a></h4>
+      <section><p>Provides an Traffic mirror target.<br>
+Read <a href="https://docs.aws.amazon.com/vpc/latest/mirroring/traffic-mirroring-considerations.html">limits and considerations</a> for traffic mirroring</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_traffic_mirror_target.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ec2_traffic_mirror_target.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.TrafficMirrorTargetArgs.html">TrafficMirrorTargetArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.TrafficMirrorTargetState.html">TrafficMirrorTargetState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.VolumeAttachment.html">VolumeAttachment</a></h4>
+      <section><p>Provides an AWS EBS Volume Attachment as a top level resource, to attach and
+detach volumes from AWS Instances.</p>
+<blockquote>
+<p><strong>NOTE on EBS block devices:</strong> If you use <code>ebs_block_device</code> on an <code>aws.ec2.Instance</code>, this provider will assume management over the full set of non-root EBS block devices for the instance, and treats additional block devices as drift. For this reason, <code>ebs_block_device</code> cannot be mixed with external <code>aws.ebs.Volume</code> + <code>aws_ebs_volume_attachment</code> resources for a given instance.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/volume_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/volume_attachment.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.VolumeAttachmentArgs.html">VolumeAttachmentArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.VolumeAttachmentState.html">VolumeAttachmentState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.Vpc.html">Vpc</a></h4>
+      <section><p>Provides a VPC resource.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.VpcArgs.html">VpcArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.VpcDhcpOptions.html">VpcDhcpOptions</a></h4>
+      <section><p>Provides a VPC DHCP Options resource.</p>
+<h2 id="remarks">Remarks</h2>
+<ul>
+<li>Notice that all arguments are optional but you have to specify at least one argument.</li>
+<li><code>domain_name_servers</code>, <code>netbios_name_servers</code>, <code>ntp_servers</code> are limited by AWS to maximum four servers only.</li>
+<li>To actually use the DHCP Options Set you need to associate it to a VPC using <a href="https://www.terraform.io/docs/providers/aws/r/vpc_dhcp_options_association.html"><code>aws.ec2.VpcDhcpOptionsAssociation</code></a>.</li>
+<li>If you delete a DHCP Options Set, all VPCs using it will be associated to AWS's <code>default</code> DHCP Option Set.</li>
+<li>In most cases unless you're configuring your own DNS you'll want to set <code>domain_name_servers</code> to <code>AmazonProvidedDNS</code>.</li>
+</ul>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_dhcp_options.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_dhcp_options.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.VpcDhcpOptionsArgs.html">VpcDhcpOptionsArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.VpcDhcpOptionsAssociation.html">VpcDhcpOptionsAssociation</a></h4>
+      <section><p>Provides a VPC DHCP Options Association resource.</p>
+<h2 id="remarks">Remarks</h2>
+<ul>
+<li>You can only associate one DHCP Options Set to a given VPC ID.</li>
+<li>Removing the DHCP Options Association automatically sets AWS's <code>default</code> DHCP Options Set to the VPC.</li>
+</ul>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_dhcp_options_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_dhcp_options_association.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.VpcDhcpOptionsAssociationArgs.html">VpcDhcpOptionsAssociationArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.VpcDhcpOptionsAssociationState.html">VpcDhcpOptionsAssociationState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.VpcDhcpOptionsState.html">VpcDhcpOptionsState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.VpcEndpoint.html">VpcEndpoint</a></h4>
+      <section><p>Provides a VPC Endpoint resource.</p>
+<blockquote>
+<p><strong>NOTE on VPC Endpoints and VPC Endpoint Associations:</strong> This provider provides both standalone VPC Endpoint Associations for
+Route Tables - (an association between a VPC endpoint and a single <code>route_table_id</code>) and
+Subnets - (an association between a VPC endpoint and a single <code>subnet_id</code>) and
+a VPC Endpoint resource with <code>route_table_ids</code> and <code>subnet_ids</code> attributes.
+Do not use the same resource ID in both a VPC Endpoint resource and a VPC Endpoint Association resource.
+Doing so will cause a conflict of associations and will overwrite the association.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_endpoint.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_endpoint.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.VpcEndpointArgs.html">VpcEndpointArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.VpcEndpointConnectionNotification.html">VpcEndpointConnectionNotification</a></h4>
+      <section><p>Provides a VPC Endpoint connection notification resource.
+Connection notifications notify subscribers of VPC Endpoint events.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_endpoint_connection_notification.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_endpoint_connection_notification.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.VpcEndpointConnectionNotificationArgs.html">VpcEndpointConnectionNotificationArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.VpcEndpointConnectionNotificationState.html">VpcEndpointConnectionNotificationState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.VpcEndpointRouteTableAssociation.html">VpcEndpointRouteTableAssociation</a></h4>
+      <section><p>Manages a VPC Endpoint Route Table Association</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_endpoint_route_table_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_endpoint_route_table_association.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.VpcEndpointRouteTableAssociationArgs.html">VpcEndpointRouteTableAssociationArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.VpcEndpointRouteTableAssociationState.html">VpcEndpointRouteTableAssociationState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.VpcEndpointService.html">VpcEndpointService</a></h4>
+      <section><p>Provides a VPC Endpoint Service resource.
+Service consumers can create an <em>Interface</em> VPC Endpoint to connect to the service.</p>
+<blockquote>
+<p><strong>NOTE on VPC Endpoint Services and VPC Endpoint Service Allowed Principals:</strong> This provider provides
+both a standalone VPC Endpoint Service Allowed Principal resource
+and a VPC Endpoint Service resource with an <code>allowed_principals</code> attribute. Do not use the same principal ARN in both
+a VPC Endpoint Service resource and a VPC Endpoint Service Allowed Principal resource. Doing so will cause a conflict
+and will overwrite the association.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_endpoint_service.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_endpoint_service.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.VpcEndpointServiceAllowedPrinciple.html">VpcEndpointServiceAllowedPrinciple</a></h4>
+      <section><p>Provides a resource to allow a principal to discover a VPC endpoint service.</p>
+<blockquote>
+<p><strong>NOTE on VPC Endpoint Services and VPC Endpoint Service Allowed Principals:</strong> This provider provides
+both a standalone VPC Endpoint Service Allowed Principal resource
+and a VPC Endpoint Service resource with an <code>allowed_principals</code> attribute. Do not use the same principal ARN in both
+a VPC Endpoint Service resource and a VPC Endpoint Service Allowed Principal resource. Doing so will cause a conflict
+and will overwrite the association.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_endpoint_service_allowed_principal.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_endpoint_service_allowed_principal.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.VpcEndpointServiceAllowedPrincipleArgs.html">VpcEndpointServiceAllowedPrincipleArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.VpcEndpointServiceAllowedPrincipleState.html">VpcEndpointServiceAllowedPrincipleState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.VpcEndpointServiceArgs.html">VpcEndpointServiceArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.VpcEndpointServiceState.html">VpcEndpointServiceState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.VpcEndpointState.html">VpcEndpointState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.VpcEndpointSubnetAssociation.html">VpcEndpointSubnetAssociation</a></h4>
+      <section><p>Provides a resource to create an association between a VPC endpoint and a subnet.</p>
+<blockquote>
+<p><strong>NOTE on VPC Endpoints and VPC Endpoint Subnet Associations:</strong> This provider provides
+both a standalone VPC Endpoint Subnet Association (an association between a VPC endpoint
+and a single <code>subnet_id</code>) and a VPC Endpoint resource with a <code>subnet_ids</code>
+attribute. Do not use the same subnet ID in both a VPC Endpoint resource and a VPC Endpoint Subnet
+Association resource. Doing so will cause a conflict of associations and will overwrite the association.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_endpoint_subnet_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_endpoint_subnet_association.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.VpcEndpointSubnetAssociationArgs.html">VpcEndpointSubnetAssociationArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.VpcEndpointSubnetAssociationState.html">VpcEndpointSubnetAssociationState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.VpcIpv4CidrBlockAssociation.html">VpcIpv4CidrBlockAssociation</a></h4>
+      <section><p>Provides a resource to associate additional IPv4 CIDR blocks with a VPC.</p>
+<p>When a VPC is created, a primary IPv4 CIDR block for the VPC must be specified.
+The <code>aws.ec2.VpcIpv4CidrBlockAssociation</code> resource allows further IPv4 CIDR blocks to be added to the VPC.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_ipv4_cidr_block_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_ipv4_cidr_block_association.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.VpcIpv4CidrBlockAssociationArgs.html">VpcIpv4CidrBlockAssociationArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.VpcIpv4CidrBlockAssociationState.html">VpcIpv4CidrBlockAssociationState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.VpcPeeringConnection.html">VpcPeeringConnection</a></h4>
+      <section><p>Provides a resource to manage a VPC peering connection.</p>
+<blockquote>
+<p><strong>NOTE on VPC Peering Connections and VPC Peering Connection Options:</strong> This provider provides
+both a standalone VPC Peering Connection Options and a VPC Peering Connection
+resource with <code>accepter</code> and <code>requester</code> attributes. Do not manage options for the same VPC peering
+connection in both a VPC Peering Connection resource and a VPC Peering Connection Options resource.
+Doing so will cause a conflict of options and will overwrite the options.
+Using a VPC Peering Connection Options resource decouples management of the connection options from
+management of the VPC Peering Connection and allows options to be set correctly in cross-account scenarios.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note:</strong> For cross-account (requester's AWS account differs from the accepter's AWS account) or inter-region
+VPC Peering Connections use the <code>aws.ec2.VpcPeeringConnection</code> resource to manage the requester's side of the
+connection and use the <code>aws.ec2.VpcPeeringConnectionAccepter</code> resource to manage the accepter's side of the connection.</p>
+</blockquote>
+<h2 id="notes">Notes</h2>
+<p>If both VPCs are not in the same AWS account do not enable the <code>auto_accept</code> attribute.
+The accepter can manage its side of the connection using the <code>aws.ec2.VpcPeeringConnectionAccepter</code> resource
+or accept the connection manually using the AWS Management Console, AWS CLI, through SDKs, etc.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_peering_connection.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_peering_connection.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.VpcPeeringConnectionAccepter.html">VpcPeeringConnectionAccepter</a></h4>
+      <section><p>Provides a resource to manage the accepter's side of a VPC Peering Connection.</p>
+<p>When a cross-account (requester's AWS account differs from the accepter's AWS account) or an inter-region
+VPC Peering Connection is created, a VPC Peering Connection resource is automatically created in the
+accepter's account.
+The requester can use the <code>aws.ec2.VpcPeeringConnection</code> resource to manage its side of the connection
+and the accepter can use the <code>aws.ec2.VpcPeeringConnectionAccepter</code> resource to &quot;adopt&quot; its side of the
+connection into management.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_peering_connection_accepter.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_peering_connection_accepter.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.VpcPeeringConnectionAccepterArgs.html">VpcPeeringConnectionAccepterArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.VpcPeeringConnectionAccepterState.html">VpcPeeringConnectionAccepterState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.VpcPeeringConnectionArgs.html">VpcPeeringConnectionArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.VpcPeeringConnectionState.html">VpcPeeringConnectionState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.VpcState.html">VpcState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.VpnConnection.html">VpnConnection</a></h4>
+      <section><p>Manages an EC2 VPN connection. These objects can be connected to customer gateways, and allow you to establish tunnels between your network and Amazon.</p>
+<blockquote>
+<p><strong>Note:</strong> All arguments including <code>tunnel1_preshared_key</code> and <code>tunnel2_preshared_key</code> will be stored in the raw state as plain-text.
+<a href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note:</strong> The CIDR blocks in the arguments <code>tunnel1_inside_cidr</code> and <code>tunnel2_inside_cidr</code> must have a prefix of /30 and be a part of a specific range.
+<a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_VpnTunnelOptionsSpecification.html">Read more about this in the AWS documentation</a>.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpn_connection.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpn_connection.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.VpnConnectionArgs.html">VpnConnectionArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.VpnConnectionRoute.html">VpnConnectionRoute</a></h4>
+      <section><p>Provides a static route between a VPN connection and a customer gateway.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpn_connection_route.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpn_connection_route.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.VpnConnectionRouteArgs.html">VpnConnectionRouteArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.VpnConnectionRouteState.html">VpnConnectionRouteState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.VpnConnectionState.html">VpnConnectionState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.VpnGateway.html">VpnGateway</a></h4>
+      <section><p>Provides a resource to create a VPC VPN Gateway.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpn_gateway.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpn_gateway.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.VpnGatewayArgs.html">VpnGatewayArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.VpnGatewayAttachment.html">VpnGatewayAttachment</a></h4>
+      <section><p>Provides a Virtual Private Gateway attachment resource, allowing for an existing
+hardware VPN gateway to be attached and/or detached from a VPC.</p>
+<blockquote>
+<p><strong>Note:</strong> The <code>aws.ec2.VpnGateway</code>
+resource can also automatically attach the Virtual Private Gateway it creates
+to an existing VPC by setting the <code>vpc_id</code> attribute accordingly.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpn_gateway_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpn_gateway_attachment.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.VpnGatewayAttachmentArgs.html">VpnGatewayAttachmentArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.VpnGatewayAttachmentState.html">VpnGatewayAttachmentState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.VpnGatewayRoutePropagation.html">VpnGatewayRoutePropagation</a></h4>
+      <section><p>Requests automatic route propagation between a VPN gateway and a route table.</p>
+<blockquote>
+<p><strong>Note:</strong> This resource should not be used with a route table that has
+the <code>propagating_vgws</code> argument set. If that argument is set, any route
+propagation not explicitly listed in its value will be removed.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpn_gateway_route_propagation.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpn_gateway_route_propagation.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.VpnGatewayRoutePropagationArgs.html">VpnGatewayRoutePropagationArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.VpnGatewayRoutePropagationState.html">VpnGatewayRoutePropagationState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Aws.Ec2.VpnGatewayState.html">VpnGatewayState</a></h4>
+      <section></section>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

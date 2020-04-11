@@ -3,13 +3,14 @@
 title: "PrivateVirtualInterface"
 block_external_search_index: true
 ---
-<style>
-table td p { margin-top: 0; margin-bottom: 0; }
-</style>
+
+
 
 Provides a Direct Connect private virtual interface resource.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -23,862 +24,579 @@ const foo = new aws.directconnect.PrivateVirtualInterface("foo", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/dx_private_virtual_interface.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
 ## Create a PrivateVirtualInterface Resource
 
-{{< langchoose csharp nojavascript >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/directconnect/#PrivateVirtualInterface">PrivateVirtualInterface</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/directconnect/#PrivateVirtualInterfaceArgs">PrivateVirtualInterfaceArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+{{% choosable language nodejs %}}
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/directconnect/#PrivateVirtualInterface">PrivateVirtualInterface</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/directconnect/#PrivateVirtualInterfaceArgs">PrivateVirtualInterfaceArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+{{% /choosable %}}
 
+{{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">PrivateVirtualInterface</span><span class="p">(resource_name, opts=None, </span>address_family=None<span class="p">, </span>amazon_address=None<span class="p">, </span>bgp_asn=None<span class="p">, </span>bgp_auth_key=None<span class="p">, </span>connection_id=None<span class="p">, </span>customer_address=None<span class="p">, </span>dx_gateway_id=None<span class="p">, </span>mtu=None<span class="p">, </span>name=None<span class="p">, </span>tags=None<span class="p">, </span>vlan=None<span class="p">, </span>vpn_gateway_id=None<span class="p">, __props__=None);</span></code></pre></div>
+{{% /choosable %}}
 
+{{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewPrivateVirtualInterface<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/directconnect?tab=doc#PrivateVirtualInterfaceArgs">PrivateVirtualInterfaceArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/directconnect?tab=doc#PrivateVirtualInterface">PrivateVirtualInterface</a></span>, error)</span></code></pre></div>
+{{% /choosable %}}
 
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Directconnect.PrivateVirtualInterface.html">PrivateVirtualInterface</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Directconnect.PrivateVirtualInterfaceArgs.html">PrivateVirtualInterfaceArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+{{% choosable language csharp %}}
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Directconnect.PrivateVirtualInterface.html">PrivateVirtualInterface</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DirectConnect.PrivateVirtualInterfaceArgs.html">PrivateVirtualInterfaceArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+{{% /choosable %}}
 
-Creates a PrivateVirtualInterface resource with the given unique name, arguments, and options.
+{{% choosable language nodejs %}}
 
-{{% lang nodejs %}}
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The arguments to use to populate this resource's properties.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 
-<ul class="pl-10">
-    <li><strong>name</strong> &ndash; (Required) The unique name of the resulting resource.</li>
-    <li><strong>args</strong> &ndash;  (Optional)  The arguments to use to populate this resource's properties.</li>
-    <li><strong>opts</strong> &ndash; (Optional) A bag of options that control this resource's behavior.</li>
-</ul>
+{{% /choosable %}}
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
+{{% /choosable %}}
 
-{{% lang go %}}
+{{% choosable language go %}}
 
-<ul class="pl-10">
-    <li><strong>name</strong> &ndash; (Required) The unique name of the resulting resource.</li>
-    <li><strong>args</strong> &ndash;  (Optional)  The arguments to use to populate this resource's properties.</li>
-    <li><strong>opts</strong> &ndash; (Optional) A bag of options that control this resource's behavior.</li>
-</ul>
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The arguments to use to populate this resource's properties.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 
-{{% /lang %}}
+{{% /choosable %}}
 
-{{% lang csharp %}}
+{{% choosable language csharp %}}
 
-<ul class="pl-10">
-    <li><strong>name</strong> &ndash; (Required) The unique name of the resulting resource.</li>
-    <li><strong>args</strong> &ndash;  (Optional)  The arguments to use to populate this resource's properties.</li>
-    <li><strong>opts</strong> &ndash; (Optional) A bag of options that control this resource's behavior.</li>
-</ul>
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The arguments to use to populate this resource's properties.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 
-{{% /lang %}}
+{{% /choosable %}}
 
-The following arguments are supported:
-
-
-{{< langchoose csharp nojavascript >}}
+#### Resource Arguments
 
 
-{{% lang csharp %}}
 
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Address<wbr>Family</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The address family for the BGP peer. `ipv4 ` or `ipv6`.
- {{% /md %}}
+{{% choosable language csharp %}}
+<dl class="resources-properties">
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Amazon<wbr>Address</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
- {{% /md %}}
+    <dt class="property-required"
+            title="Required">
+        <span>Address<wbr>Family</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The address family for the BGP peer. `ipv4 ` or `ipv6`.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Bgp<wbr>Asn</td>
-            <td class="align-top">
-                
-                <code>int</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Amazon<wbr>Address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Bgp<wbr>Auth<wbr>Key</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The authentication key for BGP configuration.
- {{% /md %}}
+    <dt class="property-required"
+            title="Required">
+        <span>Bgp<wbr>Asn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Connection<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Bgp<wbr>Auth<wbr>Key</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The authentication key for BGP configuration.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Customer<wbr>Address</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
- {{% /md %}}
+    <dt class="property-required"
+            title="Required">
+        <span>Connection<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Dx<wbr>Gateway<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ID of the Direct Connect gateway to which to connect the virtual interface.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Customer<wbr>Address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Mtu</td>
-            <td class="align-top">
-                
-                <code>int?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The maximum transmission unit (MTU) is the size, in bytes, of the largest permissible packet that can be passed over the connection.
+    <dt class="property-optional"
+            title="Optional">
+        <span>Dx<wbr>Gateway<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Direct Connect gateway to which to connect the virtual interface.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Mtu</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int?</span>
+    </dt>
+    <dd>{{% md %}}The maximum transmission unit (MTU) is the size, in bytes, of the largest permissible packet that can be passed over the connection.
 The MTU of a virtual private interface can be either `1500` or `9001` (jumbo frames). Default is `1500`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Name</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The name for the virtual interface.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The name for the virtual interface.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Tags</td>
-            <td class="align-top">
-                
-                <code>Dictionary<string, object>?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A mapping of tags to assign to the resource.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary<string, object>?</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Vlan</td>
-            <td class="align-top">
-                
-                <code>int</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The VLAN ID.
- {{% /md %}}
+    <dt class="property-required"
+            title="Required">
+        <span>Vlan</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The VLAN ID.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Vpn<wbr>Gateway<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ID of the virtual private gateway to which to connect the virtual interface.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Vpn<wbr>Gateway<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The ID of the virtual private gateway to which to connect the virtual interface.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language go %}}
+<dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Address<wbr>Family</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The address family for the BGP peer. `ipv4 ` or `ipv6`.
+{{% /md %}}</dd>
 
-{{% lang go %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Amazon<wbr>Address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
+{{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>Bgp<wbr>Asn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
+{{% /md %}}</dd>
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Address<wbr>Family</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The address family for the BGP peer. `ipv4 ` or `ipv6`.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Bgp<wbr>Auth<wbr>Key</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The authentication key for BGP configuration.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Amazon<wbr>Address</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
- {{% /md %}}
+    <dt class="property-required"
+            title="Required">
+        <span>Connection<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Bgp<wbr>Asn</td>
-            <td class="align-top">
-                
-                <code>int</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Customer<wbr>Address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Bgp<wbr>Auth<wbr>Key</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The authentication key for BGP configuration.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Dx<wbr>Gateway<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Direct Connect gateway to which to connect the virtual interface.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Connection<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Customer<wbr>Address</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Dx<wbr>Gateway<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ID of the Direct Connect gateway to which to connect the virtual interface.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Mtu</td>
-            <td class="align-top">
-                
-                <code>*int</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The maximum transmission unit (MTU) is the size, in bytes, of the largest permissible packet that can be passed over the connection.
+    <dt class="property-optional"
+            title="Optional">
+        <span>Mtu</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*int</span>
+    </dt>
+    <dd>{{% md %}}The maximum transmission unit (MTU) is the size, in bytes, of the largest permissible packet that can be passed over the connection.
 The MTU of a virtual private interface can be either `1500` or `9001` (jumbo frames). Default is `1500`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Name</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The name for the virtual interface.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The name for the virtual interface.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Tags</td>
-            <td class="align-top">
-                
-                <code>map[string]interface{}</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A mapping of tags to assign to the resource.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Vlan</td>
-            <td class="align-top">
-                
-                <code>int</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The VLAN ID.
- {{% /md %}}
+    <dt class="property-required"
+            title="Required">
+        <span>Vlan</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The VLAN ID.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Vpn<wbr>Gateway<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ID of the virtual private gateway to which to connect the virtual interface.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Vpn<wbr>Gateway<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the virtual private gateway to which to connect the virtual interface.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>address<wbr>Family</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The address family for the BGP peer. `ipv4 ` or `ipv6`.
+{{% /md %}}</dd>
 
-{{% lang nodejs %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>amazon<wbr>Address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
+{{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>bgp<wbr>Asn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
+{{% /md %}}</dd>
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">address<wbr>Family</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The address family for the BGP peer. `ipv4 ` or `ipv6`.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>bgp<wbr>Auth<wbr>Key</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The authentication key for BGP configuration.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">amazon<wbr>Address</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
- {{% /md %}}
+    <dt class="property-required"
+            title="Required">
+        <span>connection<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">bgp<wbr>Asn</td>
-            <td class="align-top">
-                
-                <code>number</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>customer<wbr>Address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">bgp<wbr>Auth<wbr>Key</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The authentication key for BGP configuration.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>dx<wbr>Gateway<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Direct Connect gateway to which to connect the virtual interface.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">connection<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">customer<wbr>Address</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">dx<wbr>Gateway<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ID of the Direct Connect gateway to which to connect the virtual interface.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">mtu</td>
-            <td class="align-top">
-                
-                <code>number?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The maximum transmission unit (MTU) is the size, in bytes, of the largest permissible packet that can be passed over the connection.
+    <dt class="property-optional"
+            title="Optional">
+        <span>mtu</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number?</span>
+    </dt>
+    <dd>{{% md %}}The maximum transmission unit (MTU) is the size, in bytes, of the largest permissible packet that can be passed over the connection.
 The MTU of a virtual private interface can be either `1500` or `9001` (jumbo frames). Default is `1500`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">name</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The name for the virtual interface.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The name for the virtual interface.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">tags</td>
-            <td class="align-top">
-                
-                <code>{[key: string]: any}?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A mapping of tags to assign to the resource.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}?</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">vlan</td>
-            <td class="align-top">
-                
-                <code>number</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The VLAN ID.
- {{% /md %}}
+    <dt class="property-required"
+            title="Required">
+        <span>vlan</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The VLAN ID.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">vpn<wbr>Gateway<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ID of the virtual private gateway to which to connect the virtual interface.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>vpn<wbr>Gateway<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The ID of the virtual private gateway to which to connect the virtual interface.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>address_<wbr>family</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The address family for the BGP peer. `ipv4 ` or `ipv6`.
+{{% /md %}}</dd>
 
-{{% lang python %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>amazon_<wbr>address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
+{{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>bgp_<wbr>asn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
+{{% /md %}}</dd>
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">address_<wbr>family</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The address family for the BGP peer. `ipv4 ` or `ipv6`.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>bgp_<wbr>auth_<wbr>key</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The authentication key for BGP configuration.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">amazon_<wbr>address</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
- {{% /md %}}
+    <dt class="property-required"
+            title="Required">
+        <span>connection_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">bgp_<wbr>asn</td>
-            <td class="align-top">
-                
-                <code>float</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>customer_<wbr>address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">bgp_<wbr>auth_<wbr>key</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The authentication key for BGP configuration.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>dx_<wbr>gateway_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Direct Connect gateway to which to connect the virtual interface.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">connection_<wbr>id</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">customer_<wbr>address</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">dx_<wbr>gateway_<wbr>id</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ID of the Direct Connect gateway to which to connect the virtual interface.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">mtu</td>
-            <td class="align-top">
-                
-                <code>float</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The maximum transmission unit (MTU) is the size, in bytes, of the largest permissible packet that can be passed over the connection.
+    <dt class="property-optional"
+            title="Optional">
+        <span>mtu</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The maximum transmission unit (MTU) is the size, in bytes, of the largest permissible packet that can be passed over the connection.
 The MTU of a virtual private interface can be either `1500` or `9001` (jumbo frames). Default is `1500`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">name</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The name for the virtual interface.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name for the virtual interface.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">tags</td>
-            <td class="align-top">
-                
-                <code>Dict[str, Any]</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A mapping of tags to assign to the resource.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">vlan</td>
-            <td class="align-top">
-                
-                <code>float</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The VLAN ID.
- {{% /md %}}
+    <dt class="property-required"
+            title="Required">
+        <span>vlan</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The VLAN ID.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">vpn_<wbr>gateway_<wbr>id</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ID of the virtual private gateway to which to connect the virtual interface.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>vpn_<wbr>gateway_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the virtual private gateway to which to connect the virtual interface.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
+</dl>
+{{% /choosable %}}
 
 
 
@@ -892,919 +610,609 @@ The following output properties are available:
 
 
 
-{{< langchoose csharp nojavascript >}}
 
+{{% choosable language csharp %}}
+<dl class="resources-properties">
 
-{{% lang csharp %}}
+    <dt class="property-"
+            title="">
+        <span>Address<wbr>Family</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The address family for the BGP peer. `ipv4 ` or `ipv6`.
+{{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>Amazon<wbr>Address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
+{{% /md %}}</dd>
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Address<wbr>Family</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The address family for the BGP peer. `ipv4 ` or `ipv6`.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Amazon<wbr>Side<wbr>Asn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Amazon<wbr>Address</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the virtual interface.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Amazon<wbr>Side<wbr>Asn</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}}  {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Aws<wbr>Device</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Direct Connect endpoint on which the virtual interface terminates.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Arn</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The ARN of the virtual interface.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Bgp<wbr>Asn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Aws<wbr>Device</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The Direct Connect endpoint on which the virtual interface terminates.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Bgp<wbr>Auth<wbr>Key</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The authentication key for BGP configuration.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Bgp<wbr>Asn</td>
-            <td class="align-top">
-                
-                <code>int</code>
-            </td>
-            <td class="align-top">{{% md %}} The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Connection<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Bgp<wbr>Auth<wbr>Key</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The authentication key for BGP configuration.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Customer<wbr>Address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Connection<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Dx<wbr>Gateway<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Direct Connect gateway to which to connect the virtual interface.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Customer<wbr>Address</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Jumbo<wbr>Frame<wbr>Capable</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether jumbo frames (9001 MTU) are supported.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Dx<wbr>Gateway<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} The ID of the Direct Connect gateway to which to connect the virtual interface.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Jumbo<wbr>Frame<wbr>Capable</td>
-            <td class="align-top">
-                
-                <code>bool</code>
-            </td>
-            <td class="align-top">{{% md %}} Indicates whether jumbo frames (9001 MTU) are supported.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Mtu</td>
-            <td class="align-top">
-                
-                <code>int?</code>
-            </td>
-            <td class="align-top">{{% md %}} The maximum transmission unit (MTU) is the size, in bytes, of the largest permissible packet that can be passed over the connection.
+    <dt class="property-"
+            title="">
+        <span>Mtu</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int?</span>
+    </dt>
+    <dd>{{% md %}}The maximum transmission unit (MTU) is the size, in bytes, of the largest permissible packet that can be passed over the connection.
 The MTU of a virtual private interface can be either `1500` or `9001` (jumbo frames). Default is `1500`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Name</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The name for the virtual interface.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name for the virtual interface.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Tags</td>
-            <td class="align-top">
-                
-                <code>Dictionary<string, object>?</code>
-            </td>
-            <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary<string, object>?</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Vlan</td>
-            <td class="align-top">
-                
-                <code>int</code>
-            </td>
-            <td class="align-top">{{% md %}} The VLAN ID.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Vlan</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The VLAN ID.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Vpn<wbr>Gateway<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} The ID of the virtual private gateway to which to connect the virtual interface.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Vpn<wbr>Gateway<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The ID of the virtual private gateway to which to connect the virtual interface.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language go %}}
+<dl class="resources-properties">
 
+    <dt class="property-"
+            title="">
+        <span>Address<wbr>Family</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The address family for the BGP peer. `ipv4 ` or `ipv6`.
+{{% /md %}}</dd>
 
-{{% lang go %}}
+    <dt class="property-"
+            title="">
+        <span>Amazon<wbr>Address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
+{{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>Amazon<wbr>Side<wbr>Asn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Address<wbr>Family</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The address family for the BGP peer. `ipv4 ` or `ipv6`.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the virtual interface.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Amazon<wbr>Address</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Aws<wbr>Device</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Direct Connect endpoint on which the virtual interface terminates.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Amazon<wbr>Side<wbr>Asn</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}}  {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Bgp<wbr>Asn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Arn</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The ARN of the virtual interface.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Bgp<wbr>Auth<wbr>Key</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The authentication key for BGP configuration.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Aws<wbr>Device</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The Direct Connect endpoint on which the virtual interface terminates.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Connection<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Bgp<wbr>Asn</td>
-            <td class="align-top">
-                
-                <code>int</code>
-            </td>
-            <td class="align-top">{{% md %}} The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Customer<wbr>Address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Bgp<wbr>Auth<wbr>Key</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The authentication key for BGP configuration.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Dx<wbr>Gateway<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Direct Connect gateway to which to connect the virtual interface.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Connection<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Jumbo<wbr>Frame<wbr>Capable</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether jumbo frames (9001 MTU) are supported.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Customer<wbr>Address</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Dx<wbr>Gateway<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} The ID of the Direct Connect gateway to which to connect the virtual interface.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Jumbo<wbr>Frame<wbr>Capable</td>
-            <td class="align-top">
-                
-                <code>bool</code>
-            </td>
-            <td class="align-top">{{% md %}} Indicates whether jumbo frames (9001 MTU) are supported.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Mtu</td>
-            <td class="align-top">
-                
-                <code>*int</code>
-            </td>
-            <td class="align-top">{{% md %}} The maximum transmission unit (MTU) is the size, in bytes, of the largest permissible packet that can be passed over the connection.
+    <dt class="property-"
+            title="">
+        <span>Mtu</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*int</span>
+    </dt>
+    <dd>{{% md %}}The maximum transmission unit (MTU) is the size, in bytes, of the largest permissible packet that can be passed over the connection.
 The MTU of a virtual private interface can be either `1500` or `9001` (jumbo frames). Default is `1500`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Name</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The name for the virtual interface.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name for the virtual interface.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Tags</td>
-            <td class="align-top">
-                
-                <code>map[string]interface{}</code>
-            </td>
-            <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Vlan</td>
-            <td class="align-top">
-                
-                <code>int</code>
-            </td>
-            <td class="align-top">{{% md %}} The VLAN ID.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Vlan</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The VLAN ID.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Vpn<wbr>Gateway<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} The ID of the virtual private gateway to which to connect the virtual interface.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Vpn<wbr>Gateway<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the virtual private gateway to which to connect the virtual interface.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
+    <dt class="property-"
+            title="">
+        <span>address<wbr>Family</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The address family for the BGP peer. `ipv4 ` or `ipv6`.
+{{% /md %}}</dd>
 
-{{% lang nodejs %}}
+    <dt class="property-"
+            title="">
+        <span>amazon<wbr>Address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
+{{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>amazon<wbr>Side<wbr>Asn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">address<wbr>Family</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The address family for the BGP peer. `ipv4 ` or `ipv6`.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the virtual interface.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">amazon<wbr>Address</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>aws<wbr>Device</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Direct Connect endpoint on which the virtual interface terminates.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">amazon<wbr>Side<wbr>Asn</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}}  {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>bgp<wbr>Asn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">arn</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The ARN of the virtual interface.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>bgp<wbr>Auth<wbr>Key</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The authentication key for BGP configuration.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">aws<wbr>Device</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The Direct Connect endpoint on which the virtual interface terminates.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>connection<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">bgp<wbr>Asn</td>
-            <td class="align-top">
-                
-                <code>number</code>
-            </td>
-            <td class="align-top">{{% md %}} The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>customer<wbr>Address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">bgp<wbr>Auth<wbr>Key</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The authentication key for BGP configuration.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>dx<wbr>Gateway<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Direct Connect gateway to which to connect the virtual interface.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">connection<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>jumbo<wbr>Frame<wbr>Capable</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether jumbo frames (9001 MTU) are supported.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">customer<wbr>Address</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">dx<wbr>Gateway<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} The ID of the Direct Connect gateway to which to connect the virtual interface.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">jumbo<wbr>Frame<wbr>Capable</td>
-            <td class="align-top">
-                
-                <code>boolean</code>
-            </td>
-            <td class="align-top">{{% md %}} Indicates whether jumbo frames (9001 MTU) are supported.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">mtu</td>
-            <td class="align-top">
-                
-                <code>number?</code>
-            </td>
-            <td class="align-top">{{% md %}} The maximum transmission unit (MTU) is the size, in bytes, of the largest permissible packet that can be passed over the connection.
+    <dt class="property-"
+            title="">
+        <span>mtu</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number?</span>
+    </dt>
+    <dd>{{% md %}}The maximum transmission unit (MTU) is the size, in bytes, of the largest permissible packet that can be passed over the connection.
 The MTU of a virtual private interface can be either `1500` or `9001` (jumbo frames). Default is `1500`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">name</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The name for the virtual interface.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name for the virtual interface.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">tags</td>
-            <td class="align-top">
-                
-                <code>{[key: string]: any}?</code>
-            </td>
-            <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}?</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">vlan</td>
-            <td class="align-top">
-                
-                <code>number</code>
-            </td>
-            <td class="align-top">{{% md %}} The VLAN ID.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>vlan</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The VLAN ID.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">vpn<wbr>Gateway<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} The ID of the virtual private gateway to which to connect the virtual interface.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>vpn<wbr>Gateway<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The ID of the virtual private gateway to which to connect the virtual interface.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
 
+    <dt class="property-"
+            title="">
+        <span>address_<wbr>family</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The address family for the BGP peer. `ipv4 ` or `ipv6`.
+{{% /md %}}</dd>
 
-{{% lang python %}}
+    <dt class="property-"
+            title="">
+        <span>amazon_<wbr>address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
+{{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>amazon_<wbr>side_<wbr>asn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">address_<wbr>family</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} The address family for the BGP peer. `ipv4 ` or `ipv6`.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the virtual interface.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">amazon_<wbr>address</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>aws_<wbr>device</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Direct Connect endpoint on which the virtual interface terminates.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">amazon_<wbr>side_<wbr>asn</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}}  {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>bgp_<wbr>asn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">arn</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} The ARN of the virtual interface.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>bgp_<wbr>auth_<wbr>key</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The authentication key for BGP configuration.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">aws_<wbr>device</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} The Direct Connect endpoint on which the virtual interface terminates.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>connection_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">bgp_<wbr>asn</td>
-            <td class="align-top">
-                
-                <code>float</code>
-            </td>
-            <td class="align-top">{{% md %}} The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>customer_<wbr>address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">bgp_<wbr>auth_<wbr>key</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} The authentication key for BGP configuration.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>dx_<wbr>gateway_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Direct Connect gateway to which to connect the virtual interface.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">connection_<wbr>id</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>jumbo_<wbr>frame_<wbr>capable</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether jumbo frames (9001 MTU) are supported.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">customer_<wbr>address</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">dx_<wbr>gateway_<wbr>id</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} The ID of the Direct Connect gateway to which to connect the virtual interface.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">jumbo_<wbr>frame_<wbr>capable</td>
-            <td class="align-top">
-                
-                <code>bool</code>
-            </td>
-            <td class="align-top">{{% md %}} Indicates whether jumbo frames (9001 MTU) are supported.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">mtu</td>
-            <td class="align-top">
-                
-                <code>float</code>
-            </td>
-            <td class="align-top">{{% md %}} The maximum transmission unit (MTU) is the size, in bytes, of the largest permissible packet that can be passed over the connection.
+    <dt class="property-"
+            title="">
+        <span>mtu</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The maximum transmission unit (MTU) is the size, in bytes, of the largest permissible packet that can be passed over the connection.
 The MTU of a virtual private interface can be either `1500` or `9001` (jumbo frames). Default is `1500`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">name</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} The name for the virtual interface.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name for the virtual interface.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">tags</td>
-            <td class="align-top">
-                
-                <code>Dict[str, Any]</code>
-            </td>
-            <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">vlan</td>
-            <td class="align-top">
-                
-                <code>float</code>
-            </td>
-            <td class="align-top">{{% md %}} The VLAN ID.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>vlan</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The VLAN ID.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">vpn_<wbr>gateway_<wbr>id</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} The ID of the virtual private gateway to which to connect the virtual interface.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>vpn_<wbr>gateway_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the virtual private gateway to which to connect the virtual interface.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
+</dl>
+{{% /choosable %}}
 
 
 
@@ -1815,1095 +1223,728 @@ The MTU of a virtual private interface can be either `1500` or `9001` (jumbo fra
 
 ## Look up an Existing PrivateVirtualInterface Resource
 
-{{< langchoose csharp nojavascript >}}
-
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">pulumi.Input&lt;pulumi.ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/directconnect/#PrivateVirtualInterfaceState">PrivateVirtualInterfaceState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/directconnect/#PrivateVirtualInterface">PrivateVirtualInterface</a></span></code></pre></div>
-
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>address_family=None<span class="p">, </span>amazon_address=None<span class="p">, </span>amazon_side_asn=None<span class="p">, </span>arn=None<span class="p">, </span>aws_device=None<span class="p">, </span>bgp_asn=None<span class="p">, </span>bgp_auth_key=None<span class="p">, </span>connection_id=None<span class="p">, </span>customer_address=None<span class="p">, </span>dx_gateway_id=None<span class="p">, </span>jumbo_frame_capable=None<span class="p">, </span>mtu=None<span class="p">, </span>name=None<span class="p">, </span>tags=None<span class="p">, </span>vlan=None<span class="p">, </span>vpn_gateway_id=None<span class="p">, __props__=None);</span></code></pre></div>
-
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPrivateVirtualInterface<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">pulumi.IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/directconnect?tab=doc#PrivateVirtualInterfaceState">PrivateVirtualInterfaceState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/directconnect?tab=doc#PrivateVirtualInterface">PrivateVirtualInterface</a></span>, error)</span></code></pre></div>
-
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Directconnect.PrivateVirtualInterface.html">PrivateVirtualInterface</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Pulumi.Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Directconnect.PrivateVirtualInterfaceState.html">PrivateVirtualInterfaceState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
-
 Get an existing PrivateVirtualInterface resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 
-{{% lang nodejs %}}
+{{< chooser language "javascript,typescript,python,go,csharp  " / >}}
 
-<ul class="pl-10">
-    <li><strong>name</strong> &ndash; (Required) The unique name of the resulting resource.</li>
-    <li><strong>id</strong> &ndash; (Required) The _unique_ provider ID of the resource to lookup.</li>
-    <li><strong>state</strong> &ndash; (Optional) Any extra arguments used during the lookup.</li>
-    <li><strong>opts</strong> &ndash; (Optional) A bag of options that control this resource's behavior.</li>
-</ul>
+{{% choosable language nodejs %}}
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/directconnect/#PrivateVirtualInterfaceState">PrivateVirtualInterfaceState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/directconnect/#PrivateVirtualInterface">PrivateVirtualInterface</a></span></code></pre></div>
+{{% /choosable %}}
 
-{{% /lang %}}
+{{% choosable language python %}}
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>address_family=None<span class="p">, </span>amazon_address=None<span class="p">, </span>amazon_side_asn=None<span class="p">, </span>arn=None<span class="p">, </span>aws_device=None<span class="p">, </span>bgp_asn=None<span class="p">, </span>bgp_auth_key=None<span class="p">, </span>connection_id=None<span class="p">, </span>customer_address=None<span class="p">, </span>dx_gateway_id=None<span class="p">, </span>jumbo_frame_capable=None<span class="p">, </span>mtu=None<span class="p">, </span>name=None<span class="p">, </span>tags=None<span class="p">, </span>vlan=None<span class="p">, </span>vpn_gateway_id=None<span class="p">, __props__=None);</span></code></pre></div>
+{{% /choosable %}}
 
-{{% lang go %}}
+{{% choosable language go %}}
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPrivateVirtualInterface<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/directconnect?tab=doc#PrivateVirtualInterfaceState">PrivateVirtualInterfaceState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/directconnect?tab=doc#PrivateVirtualInterface">PrivateVirtualInterface</a></span>, error)</span></code></pre></div>
+{{% /choosable %}}
 
-<ul class="pl-10">
-    <li><strong>name</strong> &ndash; (Required) The unique name of the resulting resource.</li>
-    <li><strong>id</strong> &ndash; (Required) The _unique_ provider ID of the resource to lookup.</li>
-    <li><strong>state</strong> &ndash; (Optional) Any extra arguments used during the lookup.</li>
-    <li><strong>opts</strong> &ndash; (Optional) A bag of options that control this resource's behavior.</li>
-</ul>
+{{% choosable language csharp %}}
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Directconnect.PrivateVirtualInterface.html">PrivateVirtualInterface</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Directconnect.PrivateVirtualInterfaceState.html">PrivateVirtualInterfaceState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+{{% /choosable %}}
 
-{{% /lang %}}
+{{% choosable language nodejs %}}
 
-{{% lang csharp %}}
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resulting resource.</dd>
+    <dt class="property-required" title="Required">
+        <span>id</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The <em>unique</em> provider ID of the resource to lookup.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>state</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>Any extra arguments used during the lookup.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 
-<ul class="pl-10">
-    <li><strong>name</strong> &ndash; (Required) The unique name of the resulting resource.</li>
-    <li><strong>id</strong> &ndash; (Required) The _unique_ provider ID of the resource to lookup.</li>
-    <li><strong>state</strong> &ndash; (Optional) Any extra arguments used during the lookup.</li>
-    <li><strong>opts</strong> &ndash; (Optional) A bag of options that control this resource's behavior.</li>
-</ul>
+{{% /choosable %}}
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>resource_name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resulting resource.</dd>
+    <dt class="property-required" title="Optional">
+        <span>id</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The <em>unique</em> provider ID of the resource to lookup.</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resulting resource.</dd>
+    <dt class="property-required" title="Required">
+        <span>id</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The <em>unique</em> provider ID of the resource to lookup.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>state</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>Any extra arguments used during the lookup.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resulting resource.</dd>
+    <dt class="property-required" title="Required">
+        <span>id</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The <em>unique</em> provider ID of the resource to lookup.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>state</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>Any extra arguments used during the lookup.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
+
+{{% /choosable %}}
 
 The following state arguments are supported:
 
 
-{{< langchoose csharp nojavascript >}}
 
+{{% choosable language csharp %}}
+<dl class="resources-properties">
 
-{{% lang csharp %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Address<wbr>Family</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The address family for the BGP peer. `ipv4 ` or `ipv6`.
+{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Amazon<wbr>Address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
+{{% /md %}}</dd>
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Address<wbr>Family</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The address family for the BGP peer. `ipv4 ` or `ipv6`.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Amazon<wbr>Side<wbr>Asn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Amazon<wbr>Address</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the virtual interface.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Amazon<wbr>Side<wbr>Asn</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Aws<wbr>Device</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The Direct Connect endpoint on which the virtual interface terminates.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Arn</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ARN of the virtual interface.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Bgp<wbr>Asn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int?</span>
+    </dt>
+    <dd>{{% md %}}The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Aws<wbr>Device</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The Direct Connect endpoint on which the virtual interface terminates.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Bgp<wbr>Auth<wbr>Key</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The authentication key for BGP configuration.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Bgp<wbr>Asn</td>
-            <td class="align-top">
-                
-                <code>int?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Connection<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Bgp<wbr>Auth<wbr>Key</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The authentication key for BGP configuration.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Customer<wbr>Address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Connection<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Dx<wbr>Gateway<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Direct Connect gateway to which to connect the virtual interface.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Customer<wbr>Address</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Jumbo<wbr>Frame<wbr>Capable</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool?</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether jumbo frames (9001 MTU) are supported.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Dx<wbr>Gateway<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ID of the Direct Connect gateway to which to connect the virtual interface.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Jumbo<wbr>Frame<wbr>Capable</td>
-            <td class="align-top">
-                
-                <code>bool?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Indicates whether jumbo frames (9001 MTU) are supported.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Mtu</td>
-            <td class="align-top">
-                
-                <code>int?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The maximum transmission unit (MTU) is the size, in bytes, of the largest permissible packet that can be passed over the connection.
+    <dt class="property-optional"
+            title="Optional">
+        <span>Mtu</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int?</span>
+    </dt>
+    <dd>{{% md %}}The maximum transmission unit (MTU) is the size, in bytes, of the largest permissible packet that can be passed over the connection.
 The MTU of a virtual private interface can be either `1500` or `9001` (jumbo frames). Default is `1500`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Name</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The name for the virtual interface.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The name for the virtual interface.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Tags</td>
-            <td class="align-top">
-                
-                <code>Dictionary<string, object>?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A mapping of tags to assign to the resource.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary<string, object>?</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Vlan</td>
-            <td class="align-top">
-                
-                <code>int?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The VLAN ID.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Vlan</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int?</span>
+    </dt>
+    <dd>{{% md %}}The VLAN ID.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Vpn<wbr>Gateway<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ID of the virtual private gateway to which to connect the virtual interface.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Vpn<wbr>Gateway<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The ID of the virtual private gateway to which to connect the virtual interface.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language go %}}
+<dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Address<wbr>Family</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The address family for the BGP peer. `ipv4 ` or `ipv6`.
+{{% /md %}}</dd>
 
-{{% lang go %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Amazon<wbr>Address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
+{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Amazon<wbr>Side<wbr>Asn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Address<wbr>Family</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The address family for the BGP peer. `ipv4 ` or `ipv6`.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the virtual interface.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Amazon<wbr>Address</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Aws<wbr>Device</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The Direct Connect endpoint on which the virtual interface terminates.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Amazon<wbr>Side<wbr>Asn</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Bgp<wbr>Asn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*int</span>
+    </dt>
+    <dd>{{% md %}}The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Arn</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ARN of the virtual interface.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Bgp<wbr>Auth<wbr>Key</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The authentication key for BGP configuration.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Aws<wbr>Device</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The Direct Connect endpoint on which the virtual interface terminates.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Connection<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Bgp<wbr>Asn</td>
-            <td class="align-top">
-                
-                <code>*int</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Customer<wbr>Address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Bgp<wbr>Auth<wbr>Key</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The authentication key for BGP configuration.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Dx<wbr>Gateway<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Direct Connect gateway to which to connect the virtual interface.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Connection<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Jumbo<wbr>Frame<wbr>Capable</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether jumbo frames (9001 MTU) are supported.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Customer<wbr>Address</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Dx<wbr>Gateway<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ID of the Direct Connect gateway to which to connect the virtual interface.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Jumbo<wbr>Frame<wbr>Capable</td>
-            <td class="align-top">
-                
-                <code>*bool</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Indicates whether jumbo frames (9001 MTU) are supported.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Mtu</td>
-            <td class="align-top">
-                
-                <code>*int</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The maximum transmission unit (MTU) is the size, in bytes, of the largest permissible packet that can be passed over the connection.
+    <dt class="property-optional"
+            title="Optional">
+        <span>Mtu</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*int</span>
+    </dt>
+    <dd>{{% md %}}The maximum transmission unit (MTU) is the size, in bytes, of the largest permissible packet that can be passed over the connection.
 The MTU of a virtual private interface can be either `1500` or `9001` (jumbo frames). Default is `1500`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Name</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The name for the virtual interface.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The name for the virtual interface.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Tags</td>
-            <td class="align-top">
-                
-                <code>map[string]interface{}</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A mapping of tags to assign to the resource.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Vlan</td>
-            <td class="align-top">
-                
-                <code>*int</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The VLAN ID.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Vlan</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*int</span>
+    </dt>
+    <dd>{{% md %}}The VLAN ID.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Vpn<wbr>Gateway<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ID of the virtual private gateway to which to connect the virtual interface.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Vpn<wbr>Gateway<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the virtual private gateway to which to connect the virtual interface.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>address<wbr>Family</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The address family for the BGP peer. `ipv4 ` or `ipv6`.
+{{% /md %}}</dd>
 
-{{% lang nodejs %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>amazon<wbr>Address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
+{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>amazon<wbr>Side<wbr>Asn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">address<wbr>Family</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The address family for the BGP peer. `ipv4 ` or `ipv6`.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the virtual interface.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">amazon<wbr>Address</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>aws<wbr>Device</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The Direct Connect endpoint on which the virtual interface terminates.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">amazon<wbr>Side<wbr>Asn</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>bgp<wbr>Asn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number?</span>
+    </dt>
+    <dd>{{% md %}}The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">arn</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ARN of the virtual interface.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>bgp<wbr>Auth<wbr>Key</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The authentication key for BGP configuration.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">aws<wbr>Device</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The Direct Connect endpoint on which the virtual interface terminates.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>connection<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">bgp<wbr>Asn</td>
-            <td class="align-top">
-                
-                <code>number?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>customer<wbr>Address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">bgp<wbr>Auth<wbr>Key</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The authentication key for BGP configuration.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>dx<wbr>Gateway<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Direct Connect gateway to which to connect the virtual interface.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">connection<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>jumbo<wbr>Frame<wbr>Capable</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean?</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether jumbo frames (9001 MTU) are supported.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">customer<wbr>Address</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">dx<wbr>Gateway<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ID of the Direct Connect gateway to which to connect the virtual interface.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">jumbo<wbr>Frame<wbr>Capable</td>
-            <td class="align-top">
-                
-                <code>boolean?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Indicates whether jumbo frames (9001 MTU) are supported.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">mtu</td>
-            <td class="align-top">
-                
-                <code>number?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The maximum transmission unit (MTU) is the size, in bytes, of the largest permissible packet that can be passed over the connection.
+    <dt class="property-optional"
+            title="Optional">
+        <span>mtu</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number?</span>
+    </dt>
+    <dd>{{% md %}}The maximum transmission unit (MTU) is the size, in bytes, of the largest permissible packet that can be passed over the connection.
 The MTU of a virtual private interface can be either `1500` or `9001` (jumbo frames). Default is `1500`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">name</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The name for the virtual interface.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The name for the virtual interface.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">tags</td>
-            <td class="align-top">
-                
-                <code>{[key: string]: any}?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A mapping of tags to assign to the resource.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}?</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">vlan</td>
-            <td class="align-top">
-                
-                <code>number?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The VLAN ID.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>vlan</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number?</span>
+    </dt>
+    <dd>{{% md %}}The VLAN ID.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">vpn<wbr>Gateway<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ID of the virtual private gateway to which to connect the virtual interface.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>vpn<wbr>Gateway<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The ID of the virtual private gateway to which to connect the virtual interface.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>address_<wbr>family</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The address family for the BGP peer. `ipv4 ` or `ipv6`.
+{{% /md %}}</dd>
 
-{{% lang python %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>amazon_<wbr>address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
+{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>amazon_<wbr>side_<wbr>asn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">address_<wbr>family</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The address family for the BGP peer. `ipv4 ` or `ipv6`.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the virtual interface.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">amazon_<wbr>address</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>aws_<wbr>device</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Direct Connect endpoint on which the virtual interface terminates.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">amazon_<wbr>side_<wbr>asn</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>bgp_<wbr>asn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">arn</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ARN of the virtual interface.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>bgp_<wbr>auth_<wbr>key</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The authentication key for BGP configuration.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">aws_<wbr>device</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The Direct Connect endpoint on which the virtual interface terminates.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>connection_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">bgp_<wbr>asn</td>
-            <td class="align-top">
-                
-                <code>float</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>customer_<wbr>address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">bgp_<wbr>auth_<wbr>key</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The authentication key for BGP configuration.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>dx_<wbr>gateway_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Direct Connect gateway to which to connect the virtual interface.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">connection_<wbr>id</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>jumbo_<wbr>frame_<wbr>capable</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether jumbo frames (9001 MTU) are supported.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">customer_<wbr>address</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">dx_<wbr>gateway_<wbr>id</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ID of the Direct Connect gateway to which to connect the virtual interface.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">jumbo_<wbr>frame_<wbr>capable</td>
-            <td class="align-top">
-                
-                <code>bool</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Indicates whether jumbo frames (9001 MTU) are supported.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">mtu</td>
-            <td class="align-top">
-                
-                <code>float</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The maximum transmission unit (MTU) is the size, in bytes, of the largest permissible packet that can be passed over the connection.
+    <dt class="property-optional"
+            title="Optional">
+        <span>mtu</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The maximum transmission unit (MTU) is the size, in bytes, of the largest permissible packet that can be passed over the connection.
 The MTU of a virtual private interface can be either `1500` or `9001` (jumbo frames). Default is `1500`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">name</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The name for the virtual interface.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name for the virtual interface.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">tags</td>
-            <td class="align-top">
-                
-                <code>Dict[str, Any]</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A mapping of tags to assign to the resource.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">vlan</td>
-            <td class="align-top">
-                
-                <code>float</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The VLAN ID.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>vlan</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The VLAN ID.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">vpn_<wbr>gateway_<wbr>id</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ID of the virtual private gateway to which to connect the virtual interface.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>vpn_<wbr>gateway_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the virtual private gateway to which to connect the virtual interface.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
+</dl>
+{{% /choosable %}}
 
 
 
@@ -2912,4 +1953,16 @@ The ID of the virtual private gateway to which to connect the virtual interface.
 
 
 
+
+
+
+<h3>Package Details</h3>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
 

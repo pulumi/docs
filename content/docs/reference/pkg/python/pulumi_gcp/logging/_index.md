@@ -20,7 +20,7 @@ anything, please consult the source <a class="reference external" href="https://
 <a class="reference external" href="https://cloud.google.com/logging/docs/">the official documentation</a> and
 <a class="reference external" href="https://cloud.google.com/logging/docs/exclusions">Excluding Logs</a>.</p>
 <p>Note that you must have the “Logs Configuration Writer” IAM role (<code class="docutils literal notranslate"><span class="pre">roles/logging.configWriter</span></code>)
-granted to the credentials used with this provider.</p>
+granted to the credentials used with the provider.</p>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/logging_billing_account_exclusion.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/logging_billing_account_exclusion.html.markdown</a>.</p>
 </div></blockquote>
@@ -415,18 +415,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.logging.FolderSink">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.logging.</code><code class="sig-name descname">FolderSink</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">bigquery_options=None</em>, <em class="sig-param">destination=None</em>, <em class="sig-param">filter=None</em>, <em class="sig-param">folder=None</em>, <em class="sig-param">include_children=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.logging.FolderSink" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a FolderSink resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[dict] bigquery_options: Options that affect sinks exporting data to BigQuery. Structure documented below.
-:param pulumi.Input[str] destination: The destination of the sink (or, in other words, where logs are written to). Can be a</p>
+<dd><p>Manages a folder-level logging sink. For more information see
+<a class="reference external" href="https://cloud.google.com/logging/docs/">the official documentation</a> and
+<a class="reference external" href="https://cloud.google.com/logging/docs/api/tasks/exporting-logs">Exporting Logs in the API</a>.</p>
+<p>Note that you must have the “Logs Configuration Writer” IAM role (<code class="docutils literal notranslate"><span class="pre">roles/logging.configWriter</span></code>)
+granted to the credentials used with this provider.</p>
 <blockquote>
-<div><p>Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
-The writer associated with the sink must have access to write to the above resource.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/logging_folder_sink.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/logging_folder_sink.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>bigquery_options</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Options that affect sinks exporting data to BigQuery. Structure documented below.</p></li>
+<li><p><strong>destination</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The destination of the sink (or, in other words, where logs are written to). Can be a
+Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
+The writer associated with the sink must have access to write to the above resource.</p></li>
 <li><p><strong>filter</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The filter to apply when exporting logs. Only log entries that match the filter are exported.
 See <a class="reference external" href="https://cloud.google.com/logging/docs/view/advanced_filters">Advanced Log Filters</a> for information on how to
 write a filter.</p>
@@ -571,16 +576,28 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.logging.Metric">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.logging.</code><code class="sig-name descname">Metric</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">bucket_options=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">filter=None</em>, <em class="sig-param">label_extractors=None</em>, <em class="sig-param">metric_descriptor=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">value_extractor=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.logging.Metric" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Metric resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[dict] bucket_options: The bucketOptions are required when the logs-based metric is using a DISTRIBUTION value type and it describes the bucket</p>
+<dd><p>Logs-based metric can also be used to extract values from logs and create a a distribution
+of the values. The distribution records the statistics of the extracted values along with
+an optional histogram of the values as specified by the bucket options.</p>
+<p>To get more information about Metric, see:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://cloud.google.com/logging/docs/reference/v2/rest/v2/projects.metrics/create">API documentation</a></p></li>
+<li><p>How-to Guides</p>
+<ul>
+<li><p><a class="reference external" href="https://cloud.google.com/logging/docs/apis">Official Documentation</a></p></li>
+</ul>
+</li>
+</ul>
 <blockquote>
-<div><p>boundaries used to create a histogram of the extracted values.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/logging_metric.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/logging_metric.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>bucket_options</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The bucketOptions are required when the logs-based metric is using a DISTRIBUTION value type and it describes the bucket
+boundaries used to create a histogram of the extracted values.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description of this metric, which is used in documentation. The maximum length of the description is 8000 characters.</p></li>
 <li><p><strong>filter</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An advanced logs filter (<a class="reference external" href="https://cloud.google.com/logging/docs/view/advanced-filters">https://cloud.google.com/logging/docs/view/advanced-filters</a>) which is used to match log
 entries.</p></li>
@@ -958,18 +975,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.logging.OrganizationSink">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.logging.</code><code class="sig-name descname">OrganizationSink</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">bigquery_options=None</em>, <em class="sig-param">destination=None</em>, <em class="sig-param">filter=None</em>, <em class="sig-param">include_children=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">org_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.logging.OrganizationSink" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a OrganizationSink resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[dict] bigquery_options: Options that affect sinks exporting data to BigQuery. Structure documented below.
-:param pulumi.Input[str] destination: The destination of the sink (or, in other words, where logs are written to). Can be a</p>
+<dd><p>Manages a organization-level logging sink. For more information see
+<a class="reference external" href="https://cloud.google.com/logging/docs/">the official documentation</a> and
+<a class="reference external" href="https://cloud.google.com/logging/docs/api/tasks/exporting-logs">Exporting Logs in the API</a>.</p>
+<p>Note that you must have the “Logs Configuration Writer” IAM role (<code class="docutils literal notranslate"><span class="pre">roles/logging.configWriter</span></code>)
+granted to the credentials used with this provider.</p>
 <blockquote>
-<div><p>Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
-The writer associated with the sink must have access to write to the above resource.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/logging_organization_sink.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/logging_organization_sink.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>bigquery_options</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Options that affect sinks exporting data to BigQuery. Structure documented below.</p></li>
+<li><p><strong>destination</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The destination of the sink (or, in other words, where logs are written to). Can be a
+Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
+The writer associated with the sink must have access to write to the above resource.</p></li>
 <li><p><strong>filter</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The filter to apply when exporting logs. Only log entries that match the filter are exported.
 See <a class="reference external" href="https://cloud.google.com/logging/docs/view/advanced_filters">Advanced Log Filters</a> for information on how to
 write a filter.</p>
@@ -1238,18 +1260,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.logging.ProjectSink">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.logging.</code><code class="sig-name descname">ProjectSink</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">bigquery_options=None</em>, <em class="sig-param">destination=None</em>, <em class="sig-param">filter=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">unique_writer_identity=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.logging.ProjectSink" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a ProjectSink resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[dict] bigquery_options: Options that affect sinks exporting data to BigQuery. Structure documented below.
-:param pulumi.Input[str] destination: The destination of the sink (or, in other words, where logs are written to). Can be a</p>
+<dd><p>Manages a project-level logging sink. For more information see
+<a class="reference external" href="https://cloud.google.com/logging/docs/">the official documentation</a>,
+<a class="reference external" href="https://cloud.google.com/logging/docs/api/tasks/exporting-logs">Exporting Logs in the API</a>
+and
+<a class="reference external" href="https://cloud.google.com/logging/docs/reference/v2/rest/">API</a>.</p>
 <blockquote>
-<div><p>Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
-The writer associated with the sink must have access to write to the above resource.</p>
+<div><p><strong>Note:</strong> You must have <a class="reference external" href="https://cloud.google.com/logging/docs/access-control">granted the “Logs Configuration Writer”</a> IAM role (<code class="docutils literal notranslate"><span class="pre">roles/logging.configWriter</span></code>) to the credentials used with this provider.</p>
+<p><strong>Note</strong> You must <a class="reference external" href="https://console.cloud.google.com/apis/library/cloudresourcemanager.googleapis.com">enable the Cloud Resource Manager API</a></p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/logging_project_sink.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/logging_project_sink.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>bigquery_options</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Options that affect sinks exporting data to BigQuery. Structure documented below.</p></li>
+<li><p><strong>destination</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The destination of the sink (or, in other words, where logs are written to). Can be a
+Cloud Storage bucket, a PubSub topic, or a BigQuery dataset. Examples:
+The writer associated with the sink must have access to write to the above resource.</p></li>
 <li><p><strong>filter</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The filter to apply when exporting logs. Only log entries that match the filter are exported.
 See <a class="reference external" href="https://cloud.google.com/logging/docs/view/advanced_filters">Advanced Log Filters</a> for information on how to
 write a filter.</p>

@@ -11,7 +11,38 @@
 {{ end }}
 
 {{ define "main" }}
-    <section class="bg-purple-800 pt-24 text-white px-4 justify-center text-center" id="editions">
+    <section class="bg-purple-800 pt-12 text-white px-4 justify-center text-center" id="editions">
+        <div class="container mx-auto lg:flex justify-center pb-8 hidden lg:block">
+            <div class="lg:w-3/4 pr-1">
+                <div class="container" style="border-bottom: 2px solid #a48bb3">
+                    <p class="text-purple-200 text-sm font-bold">
+                        CLOUD-HOSTED
+                        <span class="tooltip">
+                            <span class="tooltip-text">
+                                Easy hosting in the cloud so that state
+                                management is automatically reliable and secure.
+                            </span>
+                            <i class="w-8 fas fa-question-circle text-purple-500"></i>
+                        </span>
+                    </p>
+                </div>
+            </div>
+            <div class="lg:w-1/4 pl-4">
+                <div class="container" style="border-bottom: 2px solid #a48bb3">
+                    <p class="text-purple-200 text-sm font-bold">
+                        CLOUD- or SELF-HOSTED
+                        <span class="tooltip">
+                            <span class="tooltip-text">
+                                Get the convenience of cloud hosting with built-in
+                                reliability and security, or host your own server for
+                                ultimate customization and control.
+                            </span>
+                            <i class="w-8 fas fa-question-circle text-purple-500"></i>
+                        </span>
+                    </p>
+                </div>
+            </div>
+        </div>
         <div class="container mx-auto lg:flex justify-center">
             <div class="bg-white rounded py-8 px-8 lg:w-1/4 mb-4 lg:mb-0" id="community-edition">
                 <div class="text-center flex flex-col justify-between h-full">
@@ -334,7 +365,7 @@
             </div>
 
             <div class="pricing-item-heading">
-                CrossGuard Policy as Code <span class="badge badge-preview">PREVIEW</span>
+                CrossGuard Policy as Code
             </div>
 
             <div class="pricing-item">
@@ -502,7 +533,7 @@
             </p>
             <p>
                 Finally, all paid editions offer a 14-day free trial. If this isn't a sufficient duration for
-                your project, <a href="{{ relref . "/contact" }}">please contact us</a>, and we are happy to work
+                your project, <a href="{{ relref . "/contact.md" }}">please contact us</a>, and we are happy to work
                 out a custom trial period for you that makes sense given your proof-of-concept timeline. After your
                 trial expires, no data will be lost, and there is a grace period with soft enforcement.
             </p>
@@ -615,7 +646,7 @@
                 Do you want to use Pulumi in your organization, but aren't sure how to bring it up with your boss?
                 We've created a sample email to help you explain its benefits. Feel free to use the full letter or
                 pieces of it. We are always happy to meet to learn more about your needs and explain these
-                benefits in person &mdash; <a href="{{ relref . "/contact" }}">just let us know.</a>
+                benefits in person &mdash; <a href="{{ relref . "/contact.md" }}">just let us know.</a>
             </p>
             <h3>Sample Email</h3 class="text-white">
             <p>

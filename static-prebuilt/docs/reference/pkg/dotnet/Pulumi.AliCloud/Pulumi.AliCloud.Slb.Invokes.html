@@ -1,0 +1,745 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Invokes
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Invokes
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.AliCloud.Slb.Invokes">
+  
+  <h1 id="Pulumi_AliCloud_Slb_Invokes" data-uid="Pulumi.AliCloud.Slb.Invokes" class="text-break">Class Invokes
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Invokes</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.AliCloud.Slb.html">Pulumi.AliCloud.Slb</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.AliCloud.dll</h6>
+  <h5 id="Pulumi_AliCloud_Slb_Invokes_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class Invokes</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/GetAcls.cs/#L35">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Slb_Invokes_GetAcls_" data-uid="Pulumi.AliCloud.Slb.Invokes.GetAcls*"></a>
+  <h4 id="Pulumi_AliCloud_Slb_Invokes_GetAcls_Pulumi_AliCloud_Slb_GetAclsArgs_Pulumi_InvokeOptions_" data-uid="Pulumi.AliCloud.Slb.Invokes.GetAcls(Pulumi.AliCloud.Slb.GetAclsArgs,Pulumi.InvokeOptions)">GetAcls(GetAclsArgs, InvokeOptions)</h4>
+  <div class="markdown level1 summary"><p>This data source provides the acls in the region.</p>
+<h2 id="entry-block">Entry Block</h2>
+<p>The entry mapping supports the following:</p>
+<ul>
+<li><code>entry</code>   - An IP addresses or CIDR blocks.</li>
+<li><code>comment</code> - the comment of the entry.</li>
+</ul>
+<h2 id="listener-block">Listener Block</h2>
+<p>The Listener mapping supports the following:</p>
+<ul>
+<li><code>load_balancer_id</code> - the id of load balancer instance, the listener belongs to.</li>
+<li><code>frontend_port</code> - the listener port.</li>
+<li><code>protocol</code>      - the listener protocol (such as tcp/udp/http/https, etc).</li>
+<li><code>acl_type</code>      - the type of acl (such as white/black).</li>
+</ul>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_acls.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_acls.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;GetAclsResult&gt; GetAcls(GetAclsArgs args = null, InvokeOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.AliCloud.Slb.GetAclsArgs.html">GetAclsArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Pulumi.AliCloud.Slb.GetAclsResult.html">GetAclsResult</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/GetAttachments.cs/#L19">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Slb_Invokes_GetAttachments_" data-uid="Pulumi.AliCloud.Slb.Invokes.GetAttachments*"></a>
+  <h4 id="Pulumi_AliCloud_Slb_Invokes_GetAttachments_Pulumi_AliCloud_Slb_GetAttachmentsArgs_Pulumi_InvokeOptions_" data-uid="Pulumi.AliCloud.Slb.Invokes.GetAttachments(Pulumi.AliCloud.Slb.GetAttachmentsArgs,Pulumi.InvokeOptions)">GetAttachments(GetAttachmentsArgs, InvokeOptions)</h4>
+  <div class="markdown level1 summary"><p>This data source provides the server load balancer attachments of the current Alibaba Cloud user.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_attachments.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_attachments.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;GetAttachmentsResult&gt; GetAttachments(GetAttachmentsArgs args, InvokeOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.AliCloud.Slb.GetAttachmentsArgs.html">GetAttachmentsArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Pulumi.AliCloud.Slb.GetAttachmentsResult.html">GetAttachmentsResult</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/GetBackendServers.cs/#L21">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Slb_Invokes_GetBackendServers_" data-uid="Pulumi.AliCloud.Slb.Invokes.GetBackendServers*"></a>
+  <h4 id="Pulumi_AliCloud_Slb_Invokes_GetBackendServers_Pulumi_AliCloud_Slb_GetBackendServersArgs_Pulumi_InvokeOptions_" data-uid="Pulumi.AliCloud.Slb.Invokes.GetBackendServers(Pulumi.AliCloud.Slb.GetBackendServersArgs,Pulumi.InvokeOptions)">GetBackendServers(GetBackendServersArgs, InvokeOptions)</h4>
+  <div class="markdown level1 summary"><p>This data source provides the server load balancer backend servers related to a server load balancer..</p>
+<blockquote>
+<p><strong>NOTE:</strong> Available in 1.53.0+</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_backend_servers.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_backend_servers.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;GetBackendServersResult&gt; GetBackendServers(GetBackendServersArgs args, InvokeOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.AliCloud.Slb.GetBackendServersArgs.html">GetBackendServersArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Pulumi.AliCloud.Slb.GetBackendServersResult.html">GetBackendServersResult</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/GetCaCertificates.cs/#L19">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Slb_Invokes_GetCaCertificates_" data-uid="Pulumi.AliCloud.Slb.Invokes.GetCaCertificates*"></a>
+  <h4 id="Pulumi_AliCloud_Slb_Invokes_GetCaCertificates_Pulumi_AliCloud_Slb_GetCaCertificatesArgs_Pulumi_InvokeOptions_" data-uid="Pulumi.AliCloud.Slb.Invokes.GetCaCertificates(Pulumi.AliCloud.Slb.GetCaCertificatesArgs,Pulumi.InvokeOptions)">GetCaCertificates(GetCaCertificatesArgs, InvokeOptions)</h4>
+  <div class="markdown level1 summary"><p>This data source provides the CA certificate list.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_ca_certificates.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_ca_certificates.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;GetCaCertificatesResult&gt; GetCaCertificates(GetCaCertificatesArgs args = null, InvokeOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.AliCloud.Slb.GetCaCertificatesArgs.html">GetCaCertificatesArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Pulumi.AliCloud.Slb.GetCaCertificatesResult.html">GetCaCertificatesResult</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/GetDomainExtensions.cs/#L21">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Slb_Invokes_GetDomainExtensions_" data-uid="Pulumi.AliCloud.Slb.Invokes.GetDomainExtensions*"></a>
+  <h4 id="Pulumi_AliCloud_Slb_Invokes_GetDomainExtensions_Pulumi_AliCloud_Slb_GetDomainExtensionsArgs_Pulumi_InvokeOptions_" data-uid="Pulumi.AliCloud.Slb.Invokes.GetDomainExtensions(Pulumi.AliCloud.Slb.GetDomainExtensionsArgs,Pulumi.InvokeOptions)">GetDomainExtensions(GetDomainExtensionsArgs, InvokeOptions)</h4>
+  <div class="markdown level1 summary"><p>This data source provides the domain extensions associated with a server load balancer listener.</p>
+<blockquote>
+<p><strong>NOTE:</strong> Available in 1.60.0+</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_domain_extensions.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_domain_extensions.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;GetDomainExtensionsResult&gt; GetDomainExtensions(GetDomainExtensionsArgs args, InvokeOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.AliCloud.Slb.GetDomainExtensionsArgs.html">GetDomainExtensionsArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Pulumi.AliCloud.Slb.GetDomainExtensionsResult.html">GetDomainExtensionsResult</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/GetListeners.cs/#L19">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Slb_Invokes_GetListeners_" data-uid="Pulumi.AliCloud.Slb.Invokes.GetListeners*"></a>
+  <h4 id="Pulumi_AliCloud_Slb_Invokes_GetListeners_Pulumi_AliCloud_Slb_GetListenersArgs_Pulumi_InvokeOptions_" data-uid="Pulumi.AliCloud.Slb.Invokes.GetListeners(Pulumi.AliCloud.Slb.GetListenersArgs,Pulumi.InvokeOptions)">GetListeners(GetListenersArgs, InvokeOptions)</h4>
+  <div class="markdown level1 summary"><p>This data source provides the listeners related to a server load balancer of the current Alibaba Cloud user.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_listeners.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_listeners.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;GetListenersResult&gt; GetListeners(GetListenersArgs args, InvokeOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.AliCloud.Slb.GetListenersArgs.html">GetListenersArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Pulumi.AliCloud.Slb.GetListenersResult.html">GetListenersResult</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/GetLoadBalancers.cs/#L19">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Slb_Invokes_GetLoadBalancers_" data-uid="Pulumi.AliCloud.Slb.Invokes.GetLoadBalancers*"></a>
+  <h4 id="Pulumi_AliCloud_Slb_Invokes_GetLoadBalancers_Pulumi_AliCloud_Slb_GetLoadBalancersArgs_Pulumi_InvokeOptions_" data-uid="Pulumi.AliCloud.Slb.Invokes.GetLoadBalancers(Pulumi.AliCloud.Slb.GetLoadBalancersArgs,Pulumi.InvokeOptions)">GetLoadBalancers(GetLoadBalancersArgs, InvokeOptions)</h4>
+  <div class="markdown level1 summary"><p>This data source provides the server load balancers of the current Alibaba Cloud user.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slbs.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slbs.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;GetLoadBalancersResult&gt; GetLoadBalancers(GetLoadBalancersArgs args = null, InvokeOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.AliCloud.Slb.GetLoadBalancersArgs.html">GetLoadBalancersArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Pulumi.AliCloud.Slb.GetLoadBalancersResult.html">GetLoadBalancersResult</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/GetMasterSlaveServerGroups.cs/#L21">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Slb_Invokes_GetMasterSlaveServerGroups_" data-uid="Pulumi.AliCloud.Slb.Invokes.GetMasterSlaveServerGroups*"></a>
+  <h4 id="Pulumi_AliCloud_Slb_Invokes_GetMasterSlaveServerGroups_Pulumi_AliCloud_Slb_GetMasterSlaveServerGroupsArgs_Pulumi_InvokeOptions_" data-uid="Pulumi.AliCloud.Slb.Invokes.GetMasterSlaveServerGroups(Pulumi.AliCloud.Slb.GetMasterSlaveServerGroupsArgs,Pulumi.InvokeOptions)">GetMasterSlaveServerGroups(GetMasterSlaveServerGroupsArgs, InvokeOptions)</h4>
+  <div class="markdown level1 summary"><p>This data source provides the master slave server groups related to a server load balancer.</p>
+<blockquote>
+<p><strong>NOTE:</strong> Available in 1.54.0+</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_master_slave_server_groups.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_master_slave_server_groups.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;GetMasterSlaveServerGroupsResult&gt; GetMasterSlaveServerGroups(GetMasterSlaveServerGroupsArgs args, InvokeOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.AliCloud.Slb.GetMasterSlaveServerGroupsArgs.html">GetMasterSlaveServerGroupsArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Pulumi.AliCloud.Slb.GetMasterSlaveServerGroupsResult.html">GetMasterSlaveServerGroupsResult</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/GetRules.cs/#L19">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Slb_Invokes_GetRules_" data-uid="Pulumi.AliCloud.Slb.Invokes.GetRules*"></a>
+  <h4 id="Pulumi_AliCloud_Slb_Invokes_GetRules_Pulumi_AliCloud_Slb_GetRulesArgs_Pulumi_InvokeOptions_" data-uid="Pulumi.AliCloud.Slb.Invokes.GetRules(Pulumi.AliCloud.Slb.GetRulesArgs,Pulumi.InvokeOptions)">GetRules(GetRulesArgs, InvokeOptions)</h4>
+  <div class="markdown level1 summary"><p>This data source provides the rules associated with a server load balancer listener.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_rules.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_rules.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;GetRulesResult&gt; GetRules(GetRulesArgs args, InvokeOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.AliCloud.Slb.GetRulesArgs.html">GetRulesArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Pulumi.AliCloud.Slb.GetRulesResult.html">GetRulesResult</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/GetServerCertificates.cs/#L19">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Slb_Invokes_GetServerCertificates_" data-uid="Pulumi.AliCloud.Slb.Invokes.GetServerCertificates*"></a>
+  <h4 id="Pulumi_AliCloud_Slb_Invokes_GetServerCertificates_Pulumi_AliCloud_Slb_GetServerCertificatesArgs_Pulumi_InvokeOptions_" data-uid="Pulumi.AliCloud.Slb.Invokes.GetServerCertificates(Pulumi.AliCloud.Slb.GetServerCertificatesArgs,Pulumi.InvokeOptions)">GetServerCertificates(GetServerCertificatesArgs, InvokeOptions)</h4>
+  <div class="markdown level1 summary"><p>This data source provides the server certificate list.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_server_certificates.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_server_certificates.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;GetServerCertificatesResult&gt; GetServerCertificates(GetServerCertificatesArgs args = null, InvokeOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.AliCloud.Slb.GetServerCertificatesArgs.html">GetServerCertificatesArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Pulumi.AliCloud.Slb.GetServerCertificatesResult.html">GetServerCertificatesResult</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/GetServerGroups.cs/#L19">View Source</a>
+  </span>
+  <a id="Pulumi_AliCloud_Slb_Invokes_GetServerGroups_" data-uid="Pulumi.AliCloud.Slb.Invokes.GetServerGroups*"></a>
+  <h4 id="Pulumi_AliCloud_Slb_Invokes_GetServerGroups_Pulumi_AliCloud_Slb_GetServerGroupsArgs_Pulumi_InvokeOptions_" data-uid="Pulumi.AliCloud.Slb.Invokes.GetServerGroups(Pulumi.AliCloud.Slb.GetServerGroupsArgs,Pulumi.InvokeOptions)">GetServerGroups(GetServerGroupsArgs, InvokeOptions)</h4>
+  <div class="markdown level1 summary"><p>This data source provides the VServer groups related to a server load balancer.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_server_groups.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_server_groups.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Task&lt;GetServerGroupsResult&gt; GetServerGroups(GetServerGroupsArgs args, InvokeOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.AliCloud.Slb.GetServerGroupsArgs.html">GetServerGroupsArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Pulumi.AliCloud.Slb.GetServerGroupsResult.html">GetServerGroupsResult</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-alicloud/blob/master/sdk/dotnet/Slb/GetServerGroups.cs/#L12" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

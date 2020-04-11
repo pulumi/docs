@@ -17,9 +17,6 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.backup.Plan">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.backup.</code><code class="sig-name descname">Plan</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">rules=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.backup.Plan" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an AWS Backup plan resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/backup_plan.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/backup_plan.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -168,9 +165,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.backup.Selection">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.backup.</code><code class="sig-name descname">Selection</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">iam_role_arn=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">plan_id=None</em>, <em class="sig-param">resources=None</em>, <em class="sig-param">selection_tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.backup.Selection" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages selection conditions for AWS Backup plan resources.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/backup_selection.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/backup_selection.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -295,9 +289,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.backup.Vault">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.backup.</code><code class="sig-name descname">Vault</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">kms_key_arn=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.backup.Vault" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an AWS Backup vault resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/backup_vault.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/backup_vault.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

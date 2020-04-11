@@ -3,6 +3,9 @@
 title: "API Gateway for an AWS Lambda"
 meta_desc: "In this week's edition of Modern Infrastructure as Code Wednesday, we’ll show you how to set up an API Gateway for an AWS Lambda function in 30 minutes."
 
+# A featured webinar will display first in the list.
+featured: true
+
 # If the video is pre-recorded or live.
 pre_recorded: true
 
@@ -44,7 +47,9 @@ main:
     # URL for embedding a URL for ungated webinars.
     youtube_url: "https://www.youtube.com/embed/yYWqcgs6FlA"
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2020-03-18 10:00:00 -07:00
+    sortable_date: 2020-03-18T10:00:00.000-07:00
+    # Duration of the webinar.
+    duration: "32 minutes"
     # Datetime of the webinar.
     datetime: ""
     # Description of the webinar.

@@ -15,7 +15,7 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_consul"></span><dl class="class">
 <dt id="pulumi_consul.AclAuthMethod">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">AclAuthMethod</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">config=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.AclAuthMethod" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">AclAuthMethod</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">config=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.AclAuthMethod" title="Permalink to this definition">¶</a></dt>
 <dd><p>Starting with Consul 1.5.0, the .AclAuthMethod resource can be used to
 managed Consul ACL auth methods.</p>
 <blockquote>
@@ -29,6 +29,7 @@ managed Consul ACL auth methods.</p>
 <li><p><strong>config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The raw configuration for this ACL auth method.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A free form human readable description of the auth method.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the ACL auth method.</p></li>
+<li><p><strong>namespace</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The namespace to create the policy within.</p></li>
 <li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of the ACL auth method.</p></li>
 </ul>
 </dd>
@@ -52,6 +53,12 @@ managed Consul ACL auth methods.</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_consul.AclAuthMethod.namespace">
+<code class="sig-name descname">namespace</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_consul.AclAuthMethod.namespace" title="Permalink to this definition">¶</a></dt>
+<dd><p>The namespace to create the policy within.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_consul.AclAuthMethod.type">
 <code class="sig-name descname">type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_consul.AclAuthMethod.type" title="Permalink to this definition">¶</a></dt>
 <dd><p>The type of the ACL auth method.</p>
@@ -59,7 +66,7 @@ managed Consul ACL auth methods.</p>
 
 <dl class="method">
 <dt id="pulumi_consul.AclAuthMethod.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">config=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.AclAuthMethod.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">config=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace=None</em>, <em class="sig-param">type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.AclAuthMethod.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing AclAuthMethod resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -71,6 +78,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The raw configuration for this ACL auth method.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A free form human readable description of the auth method.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the ACL auth method.</p></li>
+<li><p><strong>namespace</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The namespace to create the policy within.</p></li>
 <li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of the ACL auth method.</p></li>
 </ul>
 </dd>
@@ -117,7 +125,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_consul.AclBindingRule">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">AclBindingRule</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auth_method=None</em>, <em class="sig-param">bind_name=None</em>, <em class="sig-param">bind_type=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">selector=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.AclBindingRule" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">AclBindingRule</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auth_method=None</em>, <em class="sig-param">bind_name=None</em>, <em class="sig-param">bind_type=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">namespace=None</em>, <em class="sig-param">selector=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.AclBindingRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Starting with Consul 1.5.0, the .AclBindingRule resource can be used to
 managed Consul ACL binding rules.</p>
 <blockquote>
@@ -134,6 +142,8 @@ managed Consul ACL binding rules.</p>
 created at login.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A free form human readable description of the
 binding rule.</p></li>
+<li><p><strong>namespace</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The namespace to create the binding
+rule within.</p></li>
 <li><p><strong>selector</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The expression used to math this rule against valid
 identities returned from an auth method validation.</p></li>
 </ul>
@@ -166,6 +176,13 @@ binding rule.</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_consul.AclBindingRule.namespace">
+<code class="sig-name descname">namespace</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_consul.AclBindingRule.namespace" title="Permalink to this definition">¶</a></dt>
+<dd><p>The namespace to create the binding
+rule within.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_consul.AclBindingRule.selector">
 <code class="sig-name descname">selector</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_consul.AclBindingRule.selector" title="Permalink to this definition">¶</a></dt>
 <dd><p>The expression used to math this rule against valid
@@ -174,7 +191,7 @@ identities returned from an auth method validation.</p>
 
 <dl class="method">
 <dt id="pulumi_consul.AclBindingRule.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auth_method=None</em>, <em class="sig-param">bind_name=None</em>, <em class="sig-param">bind_type=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">selector=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.AclBindingRule.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auth_method=None</em>, <em class="sig-param">bind_name=None</em>, <em class="sig-param">bind_type=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">namespace=None</em>, <em class="sig-param">selector=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.AclBindingRule.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing AclBindingRule resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -189,6 +206,8 @@ properties used to qualify the lookup.</p>
 created at login.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A free form human readable description of the
 binding rule.</p></li>
+<li><p><strong>namespace</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The namespace to create the binding
+rule within.</p></li>
 <li><p><strong>selector</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The expression used to math this rule against valid
 identities returned from an auth method validation.</p></li>
 </ul>
@@ -236,7 +255,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_consul.AclPolicy">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">AclPolicy</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">datacenters=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">rules=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.AclPolicy" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">AclPolicy</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">datacenters=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace=None</em>, <em class="sig-param">rules=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.AclPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Starting with Consul 1.4.0, the .AclPolicy can be used to managed Consul ACL policies.</p>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-consul/blob/master/website/docs/r/acl_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-consul/blob/master/website/docs/r/acl_policy.html.markdown</a>.</p>
@@ -249,6 +268,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>datacenters</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The datacenters of the policy.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the policy.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the policy.</p></li>
+<li><p><strong>namespace</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The namespace to create the policy within.</p></li>
 <li><p><strong>rules</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The rules of the policy.</p></li>
 </ul>
 </dd>
@@ -272,6 +292,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_consul.AclPolicy.namespace">
+<code class="sig-name descname">namespace</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_consul.AclPolicy.namespace" title="Permalink to this definition">¶</a></dt>
+<dd><p>The namespace to create the policy within.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_consul.AclPolicy.rules">
 <code class="sig-name descname">rules</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_consul.AclPolicy.rules" title="Permalink to this definition">¶</a></dt>
 <dd><p>The rules of the policy.</p>
@@ -279,7 +305,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="method">
 <dt id="pulumi_consul.AclPolicy.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">datacenters=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">rules=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.AclPolicy.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">datacenters=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace=None</em>, <em class="sig-param">rules=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.AclPolicy.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing AclPolicy resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -291,6 +317,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>datacenters</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The datacenters of the policy.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the policy.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the policy.</p></li>
+<li><p><strong>namespace</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The namespace to create the policy within.</p></li>
 <li><p><strong>rules</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The rules of the policy.</p></li>
 </ul>
 </dd>
@@ -337,7 +364,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_consul.AclRole">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">AclRole</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">policies=None</em>, <em class="sig-param">service_identities=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.AclRole" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">AclRole</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace=None</em>, <em class="sig-param">policies=None</em>, <em class="sig-param">service_identities=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.AclRole" title="Permalink to this definition">¶</a></dt>
 <dd><p>Starting with Consul 1.5.0, the .AclRole can be used to managed Consul ACL roles.</p>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-consul/blob/master/website/docs/r/acl_role.markdown">https://github.com/terraform-providers/terraform-provider-consul/blob/master/website/docs/r/acl_role.markdown</a>.</p>
@@ -349,6 +376,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A free form human readable description of the role.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the ACL role.</p></li>
+<li><p><strong>namespace</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The namespace to create the role within.</p></li>
 <li><p><strong>policies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of policies that should be applied to the role.</p></li>
 <li><p><strong>service_identities</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of service identities that should
 be applied to the role.</p></li>
@@ -373,6 +401,12 @@ be applied to the role.</p></li>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_consul.AclRole.namespace">
+<code class="sig-name descname">namespace</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_consul.AclRole.namespace" title="Permalink to this definition">¶</a></dt>
+<dd><p>The namespace to create the role within.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_consul.AclRole.policies">
 <code class="sig-name descname">policies</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_consul.AclRole.policies" title="Permalink to this definition">¶</a></dt>
 <dd><p>The list of policies that should be applied to the role.</p>
@@ -391,7 +425,7 @@ be applied to the role.</p>
 
 <dl class="method">
 <dt id="pulumi_consul.AclRole.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">policies=None</em>, <em class="sig-param">service_identities=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.AclRole.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace=None</em>, <em class="sig-param">policies=None</em>, <em class="sig-param">service_identities=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.AclRole.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing AclRole resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -402,6 +436,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A free form human readable description of the role.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the ACL role.</p></li>
+<li><p><strong>namespace</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The namespace to create the role within.</p></li>
 <li><p><strong>policies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of policies that should be applied to the role.</p></li>
 <li><p><strong>service_identities</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of service identities that should
 be applied to the role.</p></li>
@@ -455,7 +490,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_consul.AclToken">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">AclToken</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">accessor_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">local=None</em>, <em class="sig-param">policies=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.AclToken" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">AclToken</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">accessor_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">local=None</em>, <em class="sig-param">namespace=None</em>, <em class="sig-param">policies=None</em>, <em class="sig-param">roles=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.AclToken" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.AclToken</span></code> resource writes an ACL token into Consul.</p>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-consul/blob/master/website/docs/r/acl_token.html.markdown">https://github.com/terraform-providers/terraform-provider-consul/blob/master/website/docs/r/acl_token.html.markdown</a>.</p>
@@ -469,7 +504,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 generate a random uuid.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the token.</p></li>
 <li><p><strong>local</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – The flag to set the token local to the current datacenter.</p></li>
+<li><p><strong>namespace</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The namespace to create the token within.</p></li>
 <li><p><strong>policies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of policies attached to the token.</p></li>
+<li><p><strong>roles</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of roles attached to the token.</p></li>
 </ul>
 </dd>
 </dl>
@@ -493,14 +530,26 @@ generate a random uuid.</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_consul.AclToken.namespace">
+<code class="sig-name descname">namespace</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_consul.AclToken.namespace" title="Permalink to this definition">¶</a></dt>
+<dd><p>The namespace to create the token within.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_consul.AclToken.policies">
 <code class="sig-name descname">policies</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_consul.AclToken.policies" title="Permalink to this definition">¶</a></dt>
 <dd><p>The list of policies attached to the token.</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pulumi_consul.AclToken.roles">
+<code class="sig-name descname">roles</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_consul.AclToken.roles" title="Permalink to this definition">¶</a></dt>
+<dd><p>The list of roles attached to the token.</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_consul.AclToken.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">accessor_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">local=None</em>, <em class="sig-param">policies=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.AclToken.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">accessor_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">local=None</em>, <em class="sig-param">namespace=None</em>, <em class="sig-param">policies=None</em>, <em class="sig-param">roles=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.AclToken.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing AclToken resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -513,7 +562,9 @@ properties used to qualify the lookup.</p>
 generate a random uuid.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the token.</p></li>
 <li><p><strong>local</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – The flag to set the token local to the current datacenter.</p></li>
+<li><p><strong>namespace</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The namespace to create the token within.</p></li>
 <li><p><strong>policies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of policies attached to the token.</p></li>
+<li><p><strong>roles</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of roles attached to the token.</p></li>
 </ul>
 </dd>
 </dl>
@@ -637,7 +688,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_consul.AgentService">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">AgentService</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">address=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.AgentService" title="Permalink to this definition">¶</a></dt>
 <dd><p>!&gt; The <code class="docutils literal notranslate"><span class="pre">.AgentService</span></code> resource has been deprecated in version 2.0.0 of the provider
-and will be removed in a future release. Please read the <a class="reference external" href="https://www.terraform.io/docs/providers/consul/upgrading.html#deprecation-of-consul_agent_service">upgrade guide</a>
+and will be removed in a future release. Please read the <a class="reference external" href="https://www.terraform.io/docs/providers/consul/guides/upgrading.html#deprecation-of-consul_agent_service">upgrade guide</a>
 for more information.</p>
 <p>Provides access to the agent service data in Consul. This can be used to
 define a service associated with a particular agent. Currently, defining
@@ -915,22 +966,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_consul.AwaitableGetAclAuthMethodResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">AwaitableGetAclAuthMethodResult</code><span class="sig-paren">(</span><em class="sig-param">config=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.AwaitableGetAclAuthMethodResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">AwaitableGetAclAuthMethodResult</code><span class="sig-paren">(</span><em class="sig-param">config=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace=None</em>, <em class="sig-param">type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.AwaitableGetAclAuthMethodResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_consul.AwaitableGetAclPolicyResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">AwaitableGetAclPolicyResult</code><span class="sig-paren">(</span><em class="sig-param">datacenters=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">rules=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.AwaitableGetAclPolicyResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">AwaitableGetAclPolicyResult</code><span class="sig-paren">(</span><em class="sig-param">datacenters=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace=None</em>, <em class="sig-param">rules=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.AwaitableGetAclPolicyResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_consul.AwaitableGetAclRoleResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">AwaitableGetAclRoleResult</code><span class="sig-paren">(</span><em class="sig-param">description=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">policies=None</em>, <em class="sig-param">service_identities=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.AwaitableGetAclRoleResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">AwaitableGetAclRoleResult</code><span class="sig-paren">(</span><em class="sig-param">description=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace=None</em>, <em class="sig-param">policies=None</em>, <em class="sig-param">service_identities=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.AwaitableGetAclRoleResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_consul.AwaitableGetAclTokenResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">AwaitableGetAclTokenResult</code><span class="sig-paren">(</span><em class="sig-param">accessor_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">local=None</em>, <em class="sig-param">policies=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.AwaitableGetAclTokenResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">AwaitableGetAclTokenResult</code><span class="sig-paren">(</span><em class="sig-param">accessor_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">local=None</em>, <em class="sig-param">namespace=None</em>, <em class="sig-param">policies=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.AwaitableGetAclTokenResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -970,12 +1021,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_consul.AwaitableGetKeyPrefixResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">AwaitableGetKeyPrefixResult</code><span class="sig-paren">(</span><em class="sig-param">datacenter=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">path_prefix=None</em>, <em class="sig-param">subkey_collection=None</em>, <em class="sig-param">subkeys=None</em>, <em class="sig-param">token=None</em>, <em class="sig-param">var=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.AwaitableGetKeyPrefixResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">AwaitableGetKeyPrefixResult</code><span class="sig-paren">(</span><em class="sig-param">datacenter=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">namespace=None</em>, <em class="sig-param">path_prefix=None</em>, <em class="sig-param">subkey_collection=None</em>, <em class="sig-param">subkeys=None</em>, <em class="sig-param">token=None</em>, <em class="sig-param">var=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.AwaitableGetKeyPrefixResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_consul.AwaitableGetKeysResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">AwaitableGetKeysResult</code><span class="sig-paren">(</span><em class="sig-param">datacenter=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">keys=None</em>, <em class="sig-param">token=None</em>, <em class="sig-param">var=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.AwaitableGetKeysResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">AwaitableGetKeysResult</code><span class="sig-paren">(</span><em class="sig-param">datacenter=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">keys=None</em>, <em class="sig-param">namespace=None</em>, <em class="sig-param">token=None</em>, <em class="sig-param">var=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.AwaitableGetKeysResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -1002,7 +1053,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_consul.CatalogEntry">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">CatalogEntry</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">address=None</em>, <em class="sig-param">datacenter=None</em>, <em class="sig-param">node=None</em>, <em class="sig-param">services=None</em>, <em class="sig-param">token=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.CatalogEntry" title="Permalink to this definition">¶</a></dt>
 <dd><p>!&gt; The <code class="docutils literal notranslate"><span class="pre">.CatalogEntry</span></code> resource has been deprecated in version 2.0.0 of the provider
-and will be removed in a future release. Please read the <a class="reference external" href="https://www.terraform.io/docs/providers/consul/upgrading.html#deprecation-of-consul_catalog_entry">upgrade guide</a>
+and will be removed in a future release. Please read the <a class="reference external" href="https://www.terraform.io/docs/providers/consul/guides/upgrading.html#deprecation-of-consul_catalog_entry">upgrade guide</a>
 for more information.</p>
 <p>Registers a node or service with the <a class="reference external" href="https://www.consul.io/docs/agent/http/catalog.html#catalog_register">Consul Catalog</a>.
 Currently, defining health checks is not supported.</p>
@@ -1246,7 +1297,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_consul.GetAclAuthMethodResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">GetAclAuthMethodResult</code><span class="sig-paren">(</span><em class="sig-param">config=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.GetAclAuthMethodResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">GetAclAuthMethodResult</code><span class="sig-paren">(</span><em class="sig-param">config=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace=None</em>, <em class="sig-param">type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.GetAclAuthMethodResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getAclAuthMethod.</p>
 <dl class="attribute">
 <dt id="pulumi_consul.GetAclAuthMethodResult.config">
@@ -1276,7 +1327,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_consul.GetAclPolicyResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">GetAclPolicyResult</code><span class="sig-paren">(</span><em class="sig-param">datacenters=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">rules=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.GetAclPolicyResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">GetAclPolicyResult</code><span class="sig-paren">(</span><em class="sig-param">datacenters=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace=None</em>, <em class="sig-param">rules=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.GetAclPolicyResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getAclPolicy.</p>
 <dl class="attribute">
 <dt id="pulumi_consul.GetAclPolicyResult.datacenters">
@@ -1306,7 +1357,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_consul.GetAclRoleResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">GetAclRoleResult</code><span class="sig-paren">(</span><em class="sig-param">description=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">policies=None</em>, <em class="sig-param">service_identities=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.GetAclRoleResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">GetAclRoleResult</code><span class="sig-paren">(</span><em class="sig-param">description=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace=None</em>, <em class="sig-param">policies=None</em>, <em class="sig-param">service_identities=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.GetAclRoleResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getAclRole.</p>
 <dl class="attribute">
 <dt id="pulumi_consul.GetAclRoleResult.description">
@@ -1338,7 +1389,7 @@ Role. Each entry has a <code class="docutils literal notranslate"><span class="p
 
 <dl class="class">
 <dt id="pulumi_consul.GetAclTokenResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">GetAclTokenResult</code><span class="sig-paren">(</span><em class="sig-param">accessor_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">local=None</em>, <em class="sig-param">policies=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.GetAclTokenResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">GetAclTokenResult</code><span class="sig-paren">(</span><em class="sig-param">accessor_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">local=None</em>, <em class="sig-param">namespace=None</em>, <em class="sig-param">policies=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.GetAclTokenResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getAclToken.</p>
 <dl class="attribute">
 <dt id="pulumi_consul.GetAclTokenResult.description">
@@ -1585,7 +1636,7 @@ available information.</p>
 
 <dl class="class">
 <dt id="pulumi_consul.GetKeyPrefixResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">GetKeyPrefixResult</code><span class="sig-paren">(</span><em class="sig-param">datacenter=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">path_prefix=None</em>, <em class="sig-param">subkey_collection=None</em>, <em class="sig-param">subkeys=None</em>, <em class="sig-param">token=None</em>, <em class="sig-param">var=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.GetKeyPrefixResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">GetKeyPrefixResult</code><span class="sig-paren">(</span><em class="sig-param">datacenter=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">namespace=None</em>, <em class="sig-param">path_prefix=None</em>, <em class="sig-param">subkey_collection=None</em>, <em class="sig-param">subkeys=None</em>, <em class="sig-param">token=None</em>, <em class="sig-param">var=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.GetKeyPrefixResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getKeyPrefix.</p>
 <dl class="attribute">
 <dt id="pulumi_consul.GetKeyPrefixResult.datacenter">
@@ -1620,7 +1671,7 @@ block is provided.</p>
 
 <dl class="class">
 <dt id="pulumi_consul.GetKeysResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">GetKeysResult</code><span class="sig-paren">(</span><em class="sig-param">datacenter=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">keys=None</em>, <em class="sig-param">token=None</em>, <em class="sig-param">var=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.GetKeysResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">GetKeysResult</code><span class="sig-paren">(</span><em class="sig-param">datacenter=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">keys=None</em>, <em class="sig-param">namespace=None</em>, <em class="sig-param">token=None</em>, <em class="sig-param">var=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.GetKeysResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getKeys.</p>
 <dl class="attribute">
 <dt id="pulumi_consul.GetKeysResult.datacenter">
@@ -1796,7 +1847,7 @@ each individual node.  The list of per-node attributes is detailed below.</p>
 
 <dl class="class">
 <dt id="pulumi_consul.Intention">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">Intention</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">action=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">destination_name=None</em>, <em class="sig-param">meta=None</em>, <em class="sig-param">source_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.Intention" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">Intention</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">action=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">destination_name=None</em>, <em class="sig-param">destination_namespace=None</em>, <em class="sig-param">meta=None</em>, <em class="sig-param">source_name=None</em>, <em class="sig-param">source_namespace=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.Intention" title="Permalink to this definition">¶</a></dt>
 <dd><p><a class="reference external" href="https://www.consul.io/docs/connect/intentions.html">Intentions</a> are used to define
 rules for which services may connect to one another when using <a class="reference external" href="https://www.consul.io/docs/connect/index.html">Consul Connect</a>.</p>
 <p>It is appropriate to either reference existing services or specify non-existent services
@@ -1816,10 +1867,14 @@ registered on nodes that have a running Consul agent.</p>
 tooling, but is not used internally.</p></li>
 <li><p><strong>destination_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the destination service for the intention. This
 service does not have to exist.</p></li>
+<li><p><strong>destination_namespace</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The destination
+namespace of the intention.</p></li>
 <li><p><strong>meta</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key/value pairs that are opaque to Consul and are associated
 with the intention.</p></li>
 <li><p><strong>source_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the source service for the intention. This
 service does not have to exist.</p></li>
+<li><p><strong>source_namespace</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The source namespace of the
+intention.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1844,6 +1899,13 @@ service does not have to exist.</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_consul.Intention.destination_namespace">
+<code class="sig-name descname">destination_namespace</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_consul.Intention.destination_namespace" title="Permalink to this definition">¶</a></dt>
+<dd><p>The destination
+namespace of the intention.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_consul.Intention.meta">
 <code class="sig-name descname">meta</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_consul.Intention.meta" title="Permalink to this definition">¶</a></dt>
 <dd><p>Key/value pairs that are opaque to Consul and are associated
@@ -1857,9 +1919,16 @@ with the intention.</p>
 service does not have to exist.</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pulumi_consul.Intention.source_namespace">
+<code class="sig-name descname">source_namespace</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_consul.Intention.source_namespace" title="Permalink to this definition">¶</a></dt>
+<dd><p>The source namespace of the
+intention.</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_consul.Intention.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">action=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">destination_name=None</em>, <em class="sig-param">meta=None</em>, <em class="sig-param">source_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.Intention.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">action=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">destination_name=None</em>, <em class="sig-param">destination_namespace=None</em>, <em class="sig-param">meta=None</em>, <em class="sig-param">source_name=None</em>, <em class="sig-param">source_namespace=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.Intention.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Intention resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -1873,10 +1942,14 @@ properties used to qualify the lookup.</p>
 tooling, but is not used internally.</p></li>
 <li><p><strong>destination_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the destination service for the intention. This
 service does not have to exist.</p></li>
+<li><p><strong>destination_namespace</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The destination
+namespace of the intention.</p></li>
 <li><p><strong>meta</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key/value pairs that are opaque to Consul and are associated
 with the intention.</p></li>
 <li><p><strong>source_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the source service for the intention. This
 service does not have to exist.</p></li>
+<li><p><strong>source_namespace</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The source namespace of the
+intention.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1922,7 +1995,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_consul.KeyPrefix">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">KeyPrefix</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">datacenter=None</em>, <em class="sig-param">path_prefix=None</em>, <em class="sig-param">subkey_collection=None</em>, <em class="sig-param">subkeys=None</em>, <em class="sig-param">token=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.KeyPrefix" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">KeyPrefix</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">datacenter=None</em>, <em class="sig-param">namespace=None</em>, <em class="sig-param">path_prefix=None</em>, <em class="sig-param">subkey_collection=None</em>, <em class="sig-param">subkeys=None</em>, <em class="sig-param">token=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.KeyPrefix" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a KeyPrefix resource with the given unique name, props, and options.
 :param str resource_name: The name of the resource.
 :param pulumi.ResourceOptions opts: Options for the resource.
@@ -1933,6 +2006,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>namespace</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The namespace to create the keys within.</p></li>
 <li><p><strong>path_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the common prefix shared by all keys
 that will be managed by this resource instance. In most cases this will
 end with a slash, to manage a “folder” of keys.</p></li>
@@ -1958,6 +2032,12 @@ token that the agent provides by default.</p></li>
 <code class="sig-name descname">datacenter</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_consul.KeyPrefix.datacenter" title="Permalink to this definition">¶</a></dt>
 <dd><p>The datacenter to use. This overrides the
 agent’s default datacenter and the datacenter in the provider setup.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_consul.KeyPrefix.namespace">
+<code class="sig-name descname">namespace</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_consul.KeyPrefix.namespace" title="Permalink to this definition">¶</a></dt>
+<dd><p>The namespace to create the keys within.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1998,7 +2078,7 @@ token that the agent provides by default.</p>
 
 <dl class="method">
 <dt id="pulumi_consul.KeyPrefix.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">datacenter=None</em>, <em class="sig-param">path_prefix=None</em>, <em class="sig-param">subkey_collection=None</em>, <em class="sig-param">subkeys=None</em>, <em class="sig-param">token=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.KeyPrefix.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">datacenter=None</em>, <em class="sig-param">namespace=None</em>, <em class="sig-param">path_prefix=None</em>, <em class="sig-param">subkey_collection=None</em>, <em class="sig-param">subkeys=None</em>, <em class="sig-param">token=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.KeyPrefix.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing KeyPrefix resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -2009,6 +2089,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>datacenter</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The datacenter to use. This overrides the
 agent’s default datacenter and the datacenter in the provider setup.</p></li>
+<li><p><strong>namespace</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The namespace to create the keys within.</p></li>
 <li><p><strong>path_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the common prefix shared by all keys
 that will be managed by this resource instance. In most cases this will
 end with a slash, to manage a “folder” of keys.</p></li>
@@ -2071,7 +2152,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_consul.Keys">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">Keys</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">datacenter=None</em>, <em class="sig-param">keys=None</em>, <em class="sig-param">token=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.Keys" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">Keys</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">datacenter=None</em>, <em class="sig-param">keys=None</em>, <em class="sig-param">namespace=None</em>, <em class="sig-param">token=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.Keys" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a Keys resource with the given unique name, props, and options.
 :param str resource_name: The name of the resource.
 :param pulumi.ResourceOptions opts: Options for the resource.
@@ -2084,6 +2165,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>keys</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Specifies a key in Consul to be written.
 Supported values documented below.</p></li>
+<li><p><strong>namespace</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The namespace to create the keys within.</p></li>
 <li><p><strong>token</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ACL token to use. This overrides the
 token that the agent provides by default.</p></li>
 </ul>
@@ -2121,6 +2203,12 @@ Supported values documented below.</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_consul.Keys.namespace">
+<code class="sig-name descname">namespace</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_consul.Keys.namespace" title="Permalink to this definition">¶</a></dt>
+<dd><p>The namespace to create the keys within.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_consul.Keys.token">
 <code class="sig-name descname">token</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_consul.Keys.token" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ACL token to use. This overrides the
@@ -2129,7 +2217,7 @@ token that the agent provides by default.</p>
 
 <dl class="method">
 <dt id="pulumi_consul.Keys.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">datacenter=None</em>, <em class="sig-param">keys=None</em>, <em class="sig-param">token=None</em>, <em class="sig-param">var=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.Keys.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">datacenter=None</em>, <em class="sig-param">keys=None</em>, <em class="sig-param">namespace=None</em>, <em class="sig-param">token=None</em>, <em class="sig-param">var=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.Keys.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Keys resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -2142,6 +2230,7 @@ properties used to qualify the lookup.</p>
 agent’s default datacenter and the datacenter in the provider setup.</p></li>
 <li><p><strong>keys</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Specifies a key in Consul to be written.
 Supported values documented below.</p></li>
+<li><p><strong>namespace</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The namespace to create the keys within.</p></li>
 <li><p><strong>token</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ACL token to use. This overrides the
 token that the agent provides by default.</p></li>
 </ul>
@@ -2586,7 +2675,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_consul.Provider">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">Provider</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">address=None</em>, <em class="sig-param">ca_file=None</em>, <em class="sig-param">ca_path=None</em>, <em class="sig-param">cert_file=None</em>, <em class="sig-param">datacenter=None</em>, <em class="sig-param">http_auth=None</em>, <em class="sig-param">insecure_https=None</em>, <em class="sig-param">key_file=None</em>, <em class="sig-param">scheme=None</em>, <em class="sig-param">token=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.Provider" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">Provider</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">address=None</em>, <em class="sig-param">ca_file=None</em>, <em class="sig-param">ca_path=None</em>, <em class="sig-param">cert_file=None</em>, <em class="sig-param">datacenter=None</em>, <em class="sig-param">http_auth=None</em>, <em class="sig-param">insecure_https=None</em>, <em class="sig-param">key_file=None</em>, <em class="sig-param">namespace=None</em>, <em class="sig-param">scheme=None</em>, <em class="sig-param">token=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.Provider" title="Permalink to this definition">¶</a></dt>
 <dd><p>The provider type for the consul package. By default, resources use package-wide configuration
 settings, however an explicit <code class="docutils literal notranslate"><span class="pre">Provider</span></code> instance may be created and passed during resource
 construction to achieve fine-grained programmatic control over provider settings. See the
@@ -2642,7 +2731,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_consul.Service">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">Service</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">address=None</em>, <em class="sig-param">checks=None</em>, <em class="sig-param">datacenter=None</em>, <em class="sig-param">external=None</em>, <em class="sig-param">meta=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">node=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">service_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.Service" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">Service</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">address=None</em>, <em class="sig-param">checks=None</em>, <em class="sig-param">datacenter=None</em>, <em class="sig-param">external=None</em>, <em class="sig-param">meta=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace=None</em>, <em class="sig-param">node=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">service_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.Service" title="Permalink to this definition">¶</a></dt>
 <dd><p>A high-level resource for creating a Service in Consul in the Consul catalog. This
 is appropriate for registering <a class="reference external" href="https://www.consul.io/docs/guides/external.html">external services</a> and
 can be used to create services addressable by Consul that cannot be registered
@@ -2664,6 +2753,7 @@ agent’s default datacenter and the datacenter in the provider setup.</p></li>
 <li><p><strong>meta</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of arbitrary KV metadata linked to the service
 instance.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the header.</p></li>
+<li><p><strong>namespace</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The namespace to create the service within.</p></li>
 <li><p><strong>node</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the node the to register the service on.</p></li>
 <li><p><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The port of the service.</p></li>
 <li><p><strong>service_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the service.</p></li>
@@ -2727,6 +2817,12 @@ instance.</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_consul.Service.namespace">
+<code class="sig-name descname">namespace</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_consul.Service.namespace" title="Permalink to this definition">¶</a></dt>
+<dd><p>The namespace to create the service within.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_consul.Service.node">
 <code class="sig-name descname">node</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_consul.Service.node" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the node the to register the service on.</p>
@@ -2753,7 +2849,7 @@ but can be used to distinguish between services or nodes.</p>
 
 <dl class="method">
 <dt id="pulumi_consul.Service.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">address=None</em>, <em class="sig-param">checks=None</em>, <em class="sig-param">datacenter=None</em>, <em class="sig-param">external=None</em>, <em class="sig-param">meta=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">node=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">service_id=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.Service.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">address=None</em>, <em class="sig-param">checks=None</em>, <em class="sig-param">datacenter=None</em>, <em class="sig-param">external=None</em>, <em class="sig-param">meta=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace=None</em>, <em class="sig-param">node=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">service_id=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.Service.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Service resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -2769,6 +2865,7 @@ agent’s default datacenter and the datacenter in the provider setup.</p></li>
 <li><p><strong>meta</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of arbitrary KV metadata linked to the service
 instance.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the header.</p></li>
+<li><p><strong>namespace</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The namespace to create the service within.</p></li>
 <li><p><strong>node</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the node the to register the service on.</p></li>
 <li><p><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The port of the service.</p></li>
 <li><p><strong>service_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the service.</p></li>
@@ -2846,7 +2943,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_consul.get_acl_auth_method">
-<code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">get_acl_auth_method</code><span class="sig-paren">(</span><em class="sig-param">config=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.get_acl_auth_method" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">get_acl_auth_method</code><span class="sig-paren">(</span><em class="sig-param">config=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.get_acl_auth_method" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.AclAuthMethod</span></code> data source returns the information related to a
 <a class="reference external" href="https://www.consul.io/docs/acl/acl-auth-methods.html">Consul Auth Method</a>.</p>
 <blockquote>
@@ -2854,14 +2951,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the ACL Auth Method.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – The name of the ACL Auth Method.</p></li>
+<li><p><strong>namespace</strong> (<em>str</em>) – The namespace to lookup the auth method.</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_consul.get_acl_policy">
-<code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">get_acl_policy</code><span class="sig-paren">(</span><em class="sig-param">datacenters=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">rules=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.get_acl_policy" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">get_acl_policy</code><span class="sig-paren">(</span><em class="sig-param">datacenters=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace=None</em>, <em class="sig-param">rules=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.get_acl_policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.AclPolicy</span></code> data source returns the information related to a
 <a class="reference external" href="https://www.consul.io/docs/acl/acl-system.html#acl-policies">Consul ACL Policy</a>.</p>
 <blockquote>
@@ -2869,14 +2969,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the ACL Policy.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – The name of the ACL Policy.</p></li>
+<li><p><strong>namespace</strong> (<em>str</em>) – The namespace to lookup the policy.</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_consul.get_acl_role">
-<code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">get_acl_role</code><span class="sig-paren">(</span><em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">policies=None</em>, <em class="sig-param">service_identities=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.get_acl_role" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">get_acl_role</code><span class="sig-paren">(</span><em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace=None</em>, <em class="sig-param">policies=None</em>, <em class="sig-param">service_identities=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.get_acl_role" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.AclRole</span></code> data source returns the information related to a
 <a class="reference external" href="https://www.consul.io/api/acl/roles.html">Consul ACL Role</a>.</p>
 <blockquote>
@@ -2884,7 +2987,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the ACL Role.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – The name of the ACL Role.</p></li>
+<li><p><strong>namespace</strong> (<em>str</em>) – The namespace to lookup the role.</p></li>
+</ul>
 </dd>
 </dl>
 <p>The <strong>policies</strong> object supports the following:</p>
@@ -2901,7 +3007,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_consul.get_acl_token">
-<code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">get_acl_token</code><span class="sig-paren">(</span><em class="sig-param">accessor_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">local=None</em>, <em class="sig-param">policies=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.get_acl_token" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">get_acl_token</code><span class="sig-paren">(</span><em class="sig-param">accessor_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">local=None</em>, <em class="sig-param">namespace=None</em>, <em class="sig-param">policies=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.get_acl_token" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.AclToken</span></code> data source returns the information related to the
 <code class="docutils literal notranslate"><span class="pre">.AclToken</span></code> resource with the exception of its secret ID.</p>
 <p>If you want to get the secret ID associated with a token, use the
@@ -2911,7 +3017,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>accessor_id</strong> (<em>str</em>) – The accessor ID of the ACL token.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>accessor_id</strong> (<em>str</em>) – The accessor ID of the ACL token.</p></li>
+<li><p><strong>namespace</strong> (<em>str</em>) – The namespace to lookup the ACL token.</p></li>
+</ul>
 </dd>
 </dl>
 <p>The <strong>policies</strong> object supports the following:</p>
@@ -2953,7 +3062,7 @@ from the agent specified in the <code class="docutils literal notranslate"><span
 <code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">get_agent_self</code><span class="sig-paren">(</span><em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.get_agent_self" title="Permalink to this definition">¶</a></dt>
 <dd><blockquote>
 <div><p><strong>Warning:</strong> The <code class="docutils literal notranslate"><span class="pre">.getAgentSelf</span></code> resource has been deprecated and will be removed
-from a future release of the provider. Read the <a class="reference external" href="https://www.terraform.io/docs/providers/consul/upgrading.html#deprecation-of-consul_agent_self">upgrade instructions</a> for more information.</p>
+from a future release of the provider. Read the <a class="reference external" href="https://www.terraform.io/docs/providers/consul/guides/upgrading.html#deprecation-of-consul_agent_self">upgrade instructions</a> for more information.</p>
 </div></blockquote>
 <p>The <code class="docutils literal notranslate"><span class="pre">.getAgentSelf</span></code> data source returns
 <a class="reference external" href="https://www.consul.io/docs/agent/http/agent.html#agent_self">configuration and status data</a>
@@ -3005,6 +3114,7 @@ default datacenter and the datacenter in the provider setup.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">allowStale</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">datacenter</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">namespace</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">near</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">nodeMeta</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">requireConsistent</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
@@ -3022,6 +3132,7 @@ default datacenter and the datacenter in the provider setup.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">allowStale</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">datacenter</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">namespace</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">near</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">nodeMeta</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">requireConsistent</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
@@ -3033,13 +3144,14 @@ default datacenter and the datacenter in the provider setup.</p>
 
 <dl class="function">
 <dt id="pulumi_consul.get_key_prefix">
-<code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">get_key_prefix</code><span class="sig-paren">(</span><em class="sig-param">datacenter=None</em>, <em class="sig-param">path_prefix=None</em>, <em class="sig-param">subkey_collection=None</em>, <em class="sig-param">token=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.get_key_prefix" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">get_key_prefix</code><span class="sig-paren">(</span><em class="sig-param">datacenter=None</em>, <em class="sig-param">namespace=None</em>, <em class="sig-param">path_prefix=None</em>, <em class="sig-param">subkey_collection=None</em>, <em class="sig-param">token=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.get_key_prefix" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing resource.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>datacenter</strong> (<em>str</em>) – The datacenter to use. This overrides the
 agent’s default datacenter and the datacenter in the provider setup.</p></li>
+<li><p><strong>namespace</strong> (<em>str</em>) – The namespace to create the keys within.</p></li>
 <li><p><strong>path_prefix</strong> (<em>str</em>) – Specifies the common prefix shared by all keys
 that will be read by this data source instance. In most cases, this will
 end with a slash to read a “folder” of subkeys.</p></li>
@@ -3060,7 +3172,7 @@ token that the agent provides by default.</p></li>
 
 <dl class="function">
 <dt id="pulumi_consul.get_keys">
-<code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">get_keys</code><span class="sig-paren">(</span><em class="sig-param">datacenter=None</em>, <em class="sig-param">keys=None</em>, <em class="sig-param">token=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.get_keys" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">get_keys</code><span class="sig-paren">(</span><em class="sig-param">datacenter=None</em>, <em class="sig-param">keys=None</em>, <em class="sig-param">namespace=None</em>, <em class="sig-param">token=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.get_keys" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.Keys</span></code> resource reads values from the Consul key/value store.
 This is a powerful way dynamically set values in templates.</p>
 <blockquote>
@@ -3073,6 +3185,7 @@ This is a powerful way dynamically set values in templates.</p>
 agent’s default datacenter and the datacenter in the provider setup.</p></li>
 <li><p><strong>keys</strong> (<em>list</em>) – Specifies a key in Consul to be read. Supported
 values documented below. Multiple blocks supported.</p></li>
+<li><p><strong>namespace</strong> (<em>str</em>) – The namespace to lookup the keys.</p></li>
 <li><p><strong>token</strong> (<em>str</em>) – The ACL token to use. This overrides the
 token that the agent provides by default.</p></li>
 </ul>
@@ -3151,6 +3264,7 @@ to return based on a single matching tag..</p></li>
 same value found in <code class="docutils literal notranslate"><span class="pre">query_options</span></code> parameter specified below, or if that is
 empty, the <code class="docutils literal notranslate"><span class="pre">datacenter</span></code> value found in the Consul agent that this provider is
 configured to talk to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">namespace</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">near</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">nodeMeta</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">requireConsistent</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
@@ -3214,6 +3328,7 @@ source, which provides a detailed response about a specific Consul service.</p>
 same value found in <code class="docutils literal notranslate"><span class="pre">query_options</span></code> parameter specified below, or if that is
 empty, the <code class="docutils literal notranslate"><span class="pre">datacenter</span></code> value found in the Consul agent that this provider is
 configured to talk to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">namespace</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">near</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">nodeMeta</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">requireConsistent</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>

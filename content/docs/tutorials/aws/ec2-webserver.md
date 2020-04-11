@@ -72,7 +72,7 @@ $ pulumi new aws-csharp --name myproject
 
 Open {{< langfile >}} and replace the contents with the following:
 
-{{< chooser language "javascript,typescript,python,csharp" >}}
+{{< chooser language "javascript,typescript,python,csharp" / >}}
 
 {{% choosable language javascript %}}
 

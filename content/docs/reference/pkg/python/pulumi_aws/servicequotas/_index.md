@@ -93,9 +93,6 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.servicequotas.ServiceQuota">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.servicequotas.</code><code class="sig-name descname">ServiceQuota</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">quota_code=None</em>, <em class="sig-param">service_code=None</em>, <em class="sig-param">value=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.servicequotas.ServiceQuota" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an individual Service Quota.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/servicequotas_service_quota.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/servicequotas_service_quota.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -223,9 +220,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.servicequotas.get_service">
 <code class="sig-prename descclassname">pulumi_aws.servicequotas.</code><code class="sig-name descname">get_service</code><span class="sig-paren">(</span><em class="sig-param">service_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.servicequotas.get_service" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieve information about a Service Quotas Service.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/servicequotas_service.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/servicequotas_service.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>service_name</strong> (<em>str</em>) – <p>Service name to lookup within Service Quotas. Available values can be found with the <a class="reference external" href="https://docs.aws.amazon.com/cli/latest/reference/service-quotas/list-services.html">AWS CLI service-quotas list-services command</a>.</p>
@@ -238,9 +232,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.servicequotas.get_service_quota">
 <code class="sig-prename descclassname">pulumi_aws.servicequotas.</code><code class="sig-name descname">get_service_quota</code><span class="sig-paren">(</span><em class="sig-param">quota_code=None</em>, <em class="sig-param">quota_name=None</em>, <em class="sig-param">service_code=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.servicequotas.get_service_quota" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieve information about a Service Quota.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/servicequotas_service_quota.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/servicequotas_service_quota.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

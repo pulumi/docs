@@ -45,19 +45,19 @@ anything, please consult the source <a class="reference external" href="https://
 :param pulumi.Input[str] version_set_id: The ID of the Version Set which this API is associated with.</p>
 <p>The <strong>import_</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">contentFormat</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">contentValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">wsdlSelector</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">contentFormat</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The format of the content from which the API Definition should be imported. Possible values are: <code class="docutils literal notranslate"><span class="pre">swagger-json</span></code>, <code class="docutils literal notranslate"><span class="pre">swagger-link-json</span></code>, <code class="docutils literal notranslate"><span class="pre">wadl-link-json</span></code>, <code class="docutils literal notranslate"><span class="pre">wadl-xml</span></code>, <code class="docutils literal notranslate"><span class="pre">wsdl</span></code> and <code class="docutils literal notranslate"><span class="pre">wsdl-link</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">contentValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Content from which the API Definition should be imported. When a <code class="docutils literal notranslate"><span class="pre">content_format</span></code> of <code class="docutils literal notranslate"><span class="pre">*-link-*</span></code> is specified this must be a URL, otherwise this must be defined inline.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">wsdlSelector</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">wsdl_selector</span></code> block as defined below, which allows you to limit the import of a WSDL to only a subset of the document. This can only be specified when <code class="docutils literal notranslate"><span class="pre">content_format</span></code> is <code class="docutils literal notranslate"><span class="pre">wsdl</span></code> or <code class="docutils literal notranslate"><span class="pre">wsdl-link</span></code>.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">endpointName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">service_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">endpointName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of endpoint (port) to import from WSDL.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">service_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of service to import from WSDL.</p></li>
 </ul>
 </li>
 </ul>
 <p>The <strong>subscription_key_parameter_names</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">header</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">query</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">header</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the HTTP Header which should be used for the Subscription Key.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">query</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the QueryString parameter which should be used for the Subscription Key.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_azure.apimanagement.Api.api_management_name">
@@ -82,12 +82,12 @@ anything, please consult the source <a class="reference external" href="https://
 <code class="sig-name descname">import_</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.apimanagement.Api.import_" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">import</span></code> block as documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">contentFormat</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">contentValue</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">wsdlSelector</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">contentFormat</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The format of the content from which the API Definition should be imported. Possible values are: <code class="docutils literal notranslate"><span class="pre">swagger-json</span></code>, <code class="docutils literal notranslate"><span class="pre">swagger-link-json</span></code>, <code class="docutils literal notranslate"><span class="pre">wadl-link-json</span></code>, <code class="docutils literal notranslate"><span class="pre">wadl-xml</span></code>, <code class="docutils literal notranslate"><span class="pre">wsdl</span></code> and <code class="docutils literal notranslate"><span class="pre">wsdl-link</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">contentValue</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Content from which the API Definition should be imported. When a <code class="docutils literal notranslate"><span class="pre">content_format</span></code> of <code class="docutils literal notranslate"><span class="pre">*-link-*</span></code> is specified this must be a URL, otherwise this must be defined inline.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">wsdlSelector</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A <code class="docutils literal notranslate"><span class="pre">wsdl_selector</span></code> block as defined below, which allows you to limit the import of a WSDL to only a subset of the document. This can only be specified when <code class="docutils literal notranslate"><span class="pre">content_format</span></code> is <code class="docutils literal notranslate"><span class="pre">wsdl</span></code> or <code class="docutils literal notranslate"><span class="pre">wsdl-link</span></code>.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">endpointName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">service_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">endpointName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of endpoint (port) to import from WSDL.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">service_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of service to import from WSDL.</p></li>
 </ul>
 </li>
 </ul>
@@ -152,8 +152,8 @@ anything, please consult the source <a class="reference external" href="https://
 <code class="sig-name descname">subscription_key_parameter_names</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.apimanagement.Api.subscription_key_parameter_names" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">subscription_key_parameter_names</span></code> block as documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">header</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">query</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">header</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the HTTP Header which should be used for the Subscription Key.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">query</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the QueryString parameter which should be used for the Subscription Key.</p></li>
 </ul>
 </dd></dl>
 
@@ -202,19 +202,19 @@ properties used to qualify the lookup.</p>
 :param pulumi.Input[str] version_set_id: The ID of the Version Set which this API is associated with.</p>
 <p>The <strong>import_</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">contentFormat</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">contentValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">wsdlSelector</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">contentFormat</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The format of the content from which the API Definition should be imported. Possible values are: <code class="docutils literal notranslate"><span class="pre">swagger-json</span></code>, <code class="docutils literal notranslate"><span class="pre">swagger-link-json</span></code>, <code class="docutils literal notranslate"><span class="pre">wadl-link-json</span></code>, <code class="docutils literal notranslate"><span class="pre">wadl-xml</span></code>, <code class="docutils literal notranslate"><span class="pre">wsdl</span></code> and <code class="docutils literal notranslate"><span class="pre">wsdl-link</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">contentValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Content from which the API Definition should be imported. When a <code class="docutils literal notranslate"><span class="pre">content_format</span></code> of <code class="docutils literal notranslate"><span class="pre">*-link-*</span></code> is specified this must be a URL, otherwise this must be defined inline.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">wsdlSelector</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">wsdl_selector</span></code> block as defined below, which allows you to limit the import of a WSDL to only a subset of the document. This can only be specified when <code class="docutils literal notranslate"><span class="pre">content_format</span></code> is <code class="docutils literal notranslate"><span class="pre">wsdl</span></code> or <code class="docutils literal notranslate"><span class="pre">wsdl-link</span></code>.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">endpointName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">service_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">endpointName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of endpoint (port) to import from WSDL.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">service_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of service to import from WSDL.</p></li>
 </ul>
 </li>
 </ul>
 <p>The <strong>subscription_key_parameter_names</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">header</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">query</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">header</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the HTTP Header which should be used for the Subscription Key.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">query</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the QueryString parameter which should be used for the Subscription Key.</p></li>
 </ul>
 </dd></dl>
 
@@ -284,87 +284,87 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <p>The <strong>request</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A description for this API Operation, which may include HTML formatting tags.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">headers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A description of the HTTP Request, which may include HTML tags.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">headers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">header</span></code> blocks as defined above.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">defaultValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A description for this API Operation, which may include HTML formatting tags.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">required</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The default value for this Header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A description of this Header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of this Header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">required</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is this Header Required?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Type of this Header, such as a <code class="docutils literal notranslate"><span class="pre">string</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more acceptable values for this Header.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">queryParameters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">queryParameters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">query_parameter</span></code> blocks as defined above.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">defaultValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A description for this API Operation, which may include HTML formatting tags.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">required</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The default value for this Query Parameter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A description of this Query Parameter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of this Query Parameter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">required</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is this Query Parameter Required?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Type of this Query Parameter, such as a <code class="docutils literal notranslate"><span class="pre">string</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more acceptable values for this Query Parameter.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">representations</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">representations</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">representation</span></code> blocks as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">content_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">formParameters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">content_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Content Type of this representation, such as <code class="docutils literal notranslate"><span class="pre">application/json</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">formParameters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">form_parameter</span></code> block as defined above.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">defaultValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A description for this API Operation, which may include HTML formatting tags.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">required</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The default value for this Form Parameter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A description of this Form Parameter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of this Form Parameter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">required</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is this Form Parameter Required?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Type of this Form Parameter, such as a <code class="docutils literal notranslate"><span class="pre">string</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more acceptable values for this Form Parameter.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sample</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">schema_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">typeName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sample</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An example of this representation.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">schema_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of an API Management Schema which represents this Response.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">typeName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Type Name defined by the Schema.</p></li>
 </ul>
 </li>
 </ul>
 <p>The <strong>responses</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A description for this API Operation, which may include HTML formatting tags.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">headers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A description of the HTTP Response, which may include HTML tags.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">headers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">header</span></code> blocks as defined above.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">defaultValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A description for this API Operation, which may include HTML formatting tags.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">required</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The default value for this Header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A description of this Header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of this Header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">required</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is this Header Required?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Type of this Header, such as a <code class="docutils literal notranslate"><span class="pre">string</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more acceptable values for this Header.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">representations</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">representations</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">representation</span></code> blocks as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">content_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">formParameters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">content_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Content Type of this representation, such as <code class="docutils literal notranslate"><span class="pre">application/json</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">formParameters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">form_parameter</span></code> block as defined above.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">defaultValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A description for this API Operation, which may include HTML formatting tags.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">required</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The default value for this Form Parameter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A description of this Form Parameter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of this Form Parameter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">required</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is this Form Parameter Required?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Type of this Form Parameter, such as a <code class="docutils literal notranslate"><span class="pre">string</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more acceptable values for this Form Parameter.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sample</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">schema_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">typeName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sample</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An example of this representation.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">schema_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of an API Management Schema which represents this Response.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">typeName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Type Name defined by the Schema.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">statusCode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">statusCode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The HTTP Status Code.</p></li>
 </ul>
 <p>The <strong>template_parameters</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">defaultValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A description for this API Operation, which may include HTML formatting tags.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">required</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The default value for this Template Parameter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A description of this Template Parameter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of this Template Parameter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">required</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is this Template Parameter Required?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Type of this Template Parameter, such as a <code class="docutils literal notranslate"><span class="pre">string</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more acceptable values for this Template Parameter.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_azure.apimanagement.ApiOperation.api_management_name">
@@ -407,43 +407,43 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">request</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.apimanagement.ApiOperation.request" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">request</span></code> block as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A description for this API Operation, which may include HTML formatting tags.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">headers</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A description of the HTTP Request, which may include HTML tags.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">headers</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">header</span></code> blocks as defined above.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">defaultValue</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A description for this API Operation, which may include HTML formatting tags.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">required</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultValue</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The default value for this Header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A description of this Header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Name of this Header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">required</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Is this Header Required?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Type of this Header, such as a <code class="docutils literal notranslate"><span class="pre">string</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - One or more acceptable values for this Header.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">queryParameters</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">queryParameters</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">query_parameter</span></code> blocks as defined above.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">defaultValue</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A description for this API Operation, which may include HTML formatting tags.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">required</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultValue</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The default value for this Query Parameter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A description of this Query Parameter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Name of this Query Parameter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">required</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Is this Query Parameter Required?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Type of this Query Parameter, such as a <code class="docutils literal notranslate"><span class="pre">string</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - One or more acceptable values for this Query Parameter.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">representations</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">representations</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">representation</span></code> blocks as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">content_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">formParameters</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">content_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Content Type of this representation, such as <code class="docutils literal notranslate"><span class="pre">application/json</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">formParameters</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">form_parameter</span></code> block as defined above.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">defaultValue</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A description for this API Operation, which may include HTML formatting tags.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">required</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultValue</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The default value for this Form Parameter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A description of this Form Parameter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Name of this Form Parameter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">required</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Is this Form Parameter Required?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Type of this Form Parameter, such as a <code class="docutils literal notranslate"><span class="pre">string</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - One or more acceptable values for this Form Parameter.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sample</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">schema_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">typeName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sample</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - An example of this representation.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">schema_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of an API Management Schema which represents this Response.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">typeName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Type Name defined by the Schema.</p></li>
 </ul>
 </li>
 </ul>
@@ -460,36 +460,36 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">responses</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.apimanagement.ApiOperation.responses" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">response</span></code> blocks as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A description for this API Operation, which may include HTML formatting tags.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">headers</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A description of the HTTP Response, which may include HTML tags.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">headers</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">header</span></code> blocks as defined above.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">defaultValue</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A description for this API Operation, which may include HTML formatting tags.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">required</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultValue</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The default value for this Header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A description of this Header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Name of this Header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">required</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Is this Header Required?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Type of this Header, such as a <code class="docutils literal notranslate"><span class="pre">string</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - One or more acceptable values for this Header.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">representations</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">representations</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">representation</span></code> blocks as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">content_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">formParameters</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">content_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Content Type of this representation, such as <code class="docutils literal notranslate"><span class="pre">application/json</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">formParameters</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">form_parameter</span></code> block as defined above.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">defaultValue</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A description for this API Operation, which may include HTML formatting tags.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">required</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultValue</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The default value for this Form Parameter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A description of this Form Parameter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Name of this Form Parameter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">required</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Is this Form Parameter Required?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Type of this Form Parameter, such as a <code class="docutils literal notranslate"><span class="pre">string</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - One or more acceptable values for this Form Parameter.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sample</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">schema_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">typeName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sample</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - An example of this representation.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">schema_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of an API Management Schema which represents this Response.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">typeName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Type Name defined by the Schema.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">statusCode</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">statusCode</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The HTTP Status Code.</p></li>
 </ul>
 </dd></dl>
 
@@ -498,12 +498,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">template_parameters</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.apimanagement.ApiOperation.template_parameters" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">template_parameter</span></code> blocks as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">defaultValue</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A description for this API Operation, which may include HTML formatting tags.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">required</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultValue</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The default value for this Template Parameter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A description of this Template Parameter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Name of this Template Parameter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">required</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Is this Template Parameter Required?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Type of this Template Parameter, such as a <code class="docutils literal notranslate"><span class="pre">string</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - One or more acceptable values for this Template Parameter.</p></li>
 </ul>
 </dd></dl>
 
@@ -540,87 +540,87 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>request</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A description for this API Operation, which may include HTML formatting tags.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">headers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A description of the HTTP Request, which may include HTML tags.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">headers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">header</span></code> blocks as defined above.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">defaultValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A description for this API Operation, which may include HTML formatting tags.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">required</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The default value for this Header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A description of this Header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of this Header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">required</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is this Header Required?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Type of this Header, such as a <code class="docutils literal notranslate"><span class="pre">string</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more acceptable values for this Header.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">queryParameters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">queryParameters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">query_parameter</span></code> blocks as defined above.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">defaultValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A description for this API Operation, which may include HTML formatting tags.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">required</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The default value for this Query Parameter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A description of this Query Parameter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of this Query Parameter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">required</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is this Query Parameter Required?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Type of this Query Parameter, such as a <code class="docutils literal notranslate"><span class="pre">string</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more acceptable values for this Query Parameter.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">representations</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">representations</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">representation</span></code> blocks as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">content_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">formParameters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">content_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Content Type of this representation, such as <code class="docutils literal notranslate"><span class="pre">application/json</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">formParameters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">form_parameter</span></code> block as defined above.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">defaultValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A description for this API Operation, which may include HTML formatting tags.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">required</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The default value for this Form Parameter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A description of this Form Parameter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of this Form Parameter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">required</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is this Form Parameter Required?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Type of this Form Parameter, such as a <code class="docutils literal notranslate"><span class="pre">string</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more acceptable values for this Form Parameter.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sample</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">schema_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">typeName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sample</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An example of this representation.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">schema_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of an API Management Schema which represents this Response.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">typeName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Type Name defined by the Schema.</p></li>
 </ul>
 </li>
 </ul>
 <p>The <strong>responses</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A description for this API Operation, which may include HTML formatting tags.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">headers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A description of the HTTP Response, which may include HTML tags.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">headers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">header</span></code> blocks as defined above.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">defaultValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A description for this API Operation, which may include HTML formatting tags.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">required</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The default value for this Header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A description of this Header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of this Header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">required</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is this Header Required?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Type of this Header, such as a <code class="docutils literal notranslate"><span class="pre">string</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more acceptable values for this Header.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">representations</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">representations</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">representation</span></code> blocks as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">content_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">formParameters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">content_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Content Type of this representation, such as <code class="docutils literal notranslate"><span class="pre">application/json</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">formParameters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">form_parameter</span></code> block as defined above.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">defaultValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A description for this API Operation, which may include HTML formatting tags.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">required</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The default value for this Form Parameter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A description of this Form Parameter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of this Form Parameter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">required</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is this Form Parameter Required?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Type of this Form Parameter, such as a <code class="docutils literal notranslate"><span class="pre">string</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more acceptable values for this Form Parameter.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sample</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">schema_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">typeName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sample</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An example of this representation.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">schema_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of an API Management Schema which represents this Response.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">typeName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Type Name defined by the Schema.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">statusCode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">statusCode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The HTTP Status Code.</p></li>
 </ul>
 <p>The <strong>template_parameters</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">defaultValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A description for this API Operation, which may include HTML formatting tags.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">required</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The default value for this Template Parameter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A description of this Template Parameter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of this Template Parameter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">required</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is this Template Parameter Required?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Type of this Template Parameter, such as a <code class="docutils literal notranslate"><span class="pre">string</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more acceptable values for this Template Parameter.</p></li>
 </ul>
 </dd></dl>
 
@@ -786,6 +786,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>api_management_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the API Management Service. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>api_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the API Management API within the API Management Service. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>xml_content</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The XML Content for this Policy as a string.</p></li>
 <li><p><strong>xml_link</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A link to a Policy XML Document, which must be publicly available.</p></li>
 </ul>
 </dd>
@@ -809,6 +810,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_azure.apimanagement.ApiPolicy.xml_content">
+<code class="sig-name descname">xml_content</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.apimanagement.ApiPolicy.xml_content" title="Permalink to this definition">¶</a></dt>
+<dd><p>The XML Content for this Policy as a string.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_azure.apimanagement.ApiPolicy.xml_link">
 <code class="sig-name descname">xml_link</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.apimanagement.ApiPolicy.xml_link" title="Permalink to this definition">¶</a></dt>
 <dd><p>A link to a Policy XML Document, which must be publicly available.</p>
@@ -828,6 +835,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>api_management_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the API Management Service. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>api_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the API Management API within the API Management Service. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Resource Group in which the API Management Service exists. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>xml_content</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The XML Content for this Policy as a string.</p></li>
 <li><p><strong>xml_link</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A link to a Policy XML Document, which must be publicly available.</p></li>
 </ul>
 </dd>
@@ -1157,8 +1165,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <p>The <strong>token_body_parameters</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of this Authorization Server. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of the Parameter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Value of the Parameter.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_azure.apimanagement.AuthorizationServer.api_management_name">
@@ -1302,8 +1310,8 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>token_body_parameters</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of this Authorization Server. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of the Parameter.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Value of the Parameter.</p></li>
 </ul>
 </dd></dl>
 
@@ -1404,39 +1412,39 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <p>The <strong>credentials</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">authorization</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">authorization</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - An <code class="docutils literal notranslate"><span class="pre">authorization</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">parameter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">scheme</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">parameter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The authentication Parameter value.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scheme</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The authentication Scheme name.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">certificates</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">header</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">query</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificates</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of client certificate thumbprints to present to the backend host. The certificates must exist within the API Management Service.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">header</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A mapping of header parameters to pass to the backend host. The keys are the header names and the values are a comma separated string of header values. This is converted to a list before being passed to the API.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">query</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A mapping of query parameters to pass to the backend host. The keys are the query names and the values are a comma separated string of query values. This is converted to a list before being passed to the API.</p></li>
 </ul>
 <p>The <strong>proxy</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The URL of the backend host.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The password to connect to the proxy server.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The URL of the proxy server.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The username to connect to the proxy server.</p></li>
 </ul>
 <p>The <strong>service_fabric_cluster</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">clientCertificateThumbprint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">managementEndpoints</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxPartitionResolutionRetries</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">serverCertificateThumbprints</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">serverX509Names</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">clientCertificateThumbprint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The client certificate thumbprint for the management endpoint.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">managementEndpoints</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of cluster management endpoints.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxPartitionResolutionRetries</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum number of retries when attempting resolve the partition.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serverCertificateThumbprints</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of thumbprints of the server certificates of the Service Fabric cluster.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serverX509Names</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">server_x509_name</span></code> blocks as documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">issuerCertificateThumbprint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">issuerCertificateThumbprint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The thumbprint for the issuer of the certificate.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the API Management backend. Changing this forces a new resource to be created.</p></li>
 </ul>
 </li>
 </ul>
 <p>The <strong>tls</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">validateCertificateChain</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">validateCertificateName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">validateCertificateChain</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Flag indicating whether SSL certificate chain validation should be done when using self-signed certificates for the backend host.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">validateCertificateName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Flag indicating whether SSL certificate name validation should be done when using self-signed certificates for the backend host.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_azure.apimanagement.Backend.api_management_name">
@@ -1449,15 +1457,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">credentials</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.apimanagement.Backend.credentials" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">credentials</span></code> block as documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">authorization</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">authorization</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - An <code class="docutils literal notranslate"><span class="pre">authorization</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">parameter</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">scheme</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">parameter</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The authentication Parameter value.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scheme</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The authentication Scheme name.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">certificates</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">header</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">query</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificates</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of client certificate thumbprints to present to the backend host. The certificates must exist within the API Management Service.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">header</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A mapping of header parameters to pass to the backend host. The keys are the header names and the values are a comma separated string of header values. This is converted to a list before being passed to the API.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">query</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A mapping of query parameters to pass to the backend host. The keys are the query names and the values are a comma separated string of query values. This is converted to a list before being passed to the API.</p></li>
 </ul>
 </dd></dl>
 
@@ -1484,9 +1492,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">proxy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.apimanagement.Backend.proxy" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">proxy</span></code> block as documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The URL of the backend host.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The password to connect to the proxy server.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The URL of the proxy server.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The username to connect to the proxy server.</p></li>
 </ul>
 </dd></dl>
 
@@ -1507,13 +1515,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">service_fabric_cluster</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.apimanagement.Backend.service_fabric_cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">service_fabric_cluster</span></code> block as documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">clientCertificateThumbprint</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">managementEndpoints</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxPartitionResolutionRetries</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">serverCertificateThumbprints</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">serverX509Names</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">clientCertificateThumbprint</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The client certificate thumbprint for the management endpoint.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">managementEndpoints</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of cluster management endpoints.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxPartitionResolutionRetries</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The maximum number of retries when attempting resolve the partition.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serverCertificateThumbprints</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of thumbprints of the server certificates of the Service Fabric cluster.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serverX509Names</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">server_x509_name</span></code> blocks as documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">issuerCertificateThumbprint</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">issuerCertificateThumbprint</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The thumbprint for the issuer of the certificate.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the API Management backend. Changing this forces a new resource to be created.</p></li>
 </ul>
 </li>
@@ -1531,8 +1539,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">tls</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.apimanagement.Backend.tls" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">tls</span></code> block as documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">validateCertificateChain</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">validateCertificateName</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">validateCertificateChain</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Flag indicating whether SSL certificate chain validation should be done when using self-signed certificates for the backend host.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">validateCertificateName</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Flag indicating whether SSL certificate name validation should be done when using self-signed certificates for the backend host.</p></li>
 </ul>
 </dd></dl>
 
@@ -1570,39 +1578,39 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>credentials</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">authorization</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">authorization</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - An <code class="docutils literal notranslate"><span class="pre">authorization</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">parameter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">scheme</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">parameter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The authentication Parameter value.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scheme</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The authentication Scheme name.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">certificates</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">header</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">query</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificates</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of client certificate thumbprints to present to the backend host. The certificates must exist within the API Management Service.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">header</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A mapping of header parameters to pass to the backend host. The keys are the header names and the values are a comma separated string of header values. This is converted to a list before being passed to the API.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">query</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A mapping of query parameters to pass to the backend host. The keys are the query names and the values are a comma separated string of query values. This is converted to a list before being passed to the API.</p></li>
 </ul>
 <p>The <strong>proxy</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The URL of the backend host.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The password to connect to the proxy server.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The URL of the proxy server.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The username to connect to the proxy server.</p></li>
 </ul>
 <p>The <strong>service_fabric_cluster</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">clientCertificateThumbprint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">managementEndpoints</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxPartitionResolutionRetries</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">serverCertificateThumbprints</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">serverX509Names</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">clientCertificateThumbprint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The client certificate thumbprint for the management endpoint.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">managementEndpoints</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of cluster management endpoints.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxPartitionResolutionRetries</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum number of retries when attempting resolve the partition.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serverCertificateThumbprints</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of thumbprints of the server certificates of the Service Fabric cluster.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serverX509Names</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">server_x509_name</span></code> blocks as documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">issuerCertificateThumbprint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">issuerCertificateThumbprint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The thumbprint for the issuer of the certificate.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the API Management backend. Changing this forces a new resource to be created.</p></li>
 </ul>
 </li>
 </ul>
 <p>The <strong>tls</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">validateCertificateChain</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">validateCertificateName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">validateCertificateChain</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Flag indicating whether SSL certificate chain validation should be done when using self-signed certificates for the backend host.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">validateCertificateName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Flag indicating whether SSL certificate name validation should be done when using self-signed certificates for the backend host.</p></li>
 </ul>
 </dd></dl>
 
@@ -2980,12 +2988,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <p>The <strong>application_insights</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">instrumentation_key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instrumentation_key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The instrumentation key used to push data to Application Insights.</p></li>
 </ul>
 <p>The <strong>eventhub</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">connection_string</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of this Logger, which must be unique within the API Management Service. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">connection_string</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The connection string of an EventHub Namespace.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of an EventHub.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_azure.apimanagement.Logger.api_management_name">
@@ -2998,7 +3006,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">application_insights</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.apimanagement.Logger.application_insights" title="Permalink to this definition">¶</a></dt>
 <dd><p>An <code class="docutils literal notranslate"><span class="pre">application_insights</span></code> block as documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">instrumentation_key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instrumentation_key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The instrumentation key used to push data to Application Insights.</p></li>
 </ul>
 </dd></dl>
 
@@ -3019,8 +3027,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">eventhub</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.apimanagement.Logger.eventhub" title="Permalink to this definition">¶</a></dt>
 <dd><p>An <code class="docutils literal notranslate"><span class="pre">eventhub</span></code> block as documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">connection_string</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of this Logger, which must be unique within the API Management Service. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">connection_string</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The connection string of an EventHub Namespace.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of an EventHub.</p></li>
 </ul>
 </dd></dl>
 
@@ -3059,12 +3067,12 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>application_insights</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">instrumentation_key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instrumentation_key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The instrumentation key used to push data to Application Insights.</p></li>
 </ul>
 <p>The <strong>eventhub</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">connection_string</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of this Logger, which must be unique within the API Management Service. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">connection_string</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The connection string of an EventHub Namespace.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of an EventHub.</p></li>
 </ul>
 </dd></dl>
 
@@ -3859,52 +3867,52 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>The <strong>additional_locations</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">gateway_regional_url</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The URL of the Regional Gateway for the API Management Service in the specified region.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">location</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Azure location where the API Management Service exists. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">location</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Azure Region in which the API Management Service should be expanded to.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">public_ip_addresses</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Public Static Load Balanced IP addresses of the API Management service in the additional location. Available only for Basic, Standard and Premium SKU.</p></li>
 </ul>
 <p>The <strong>certificates</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">certificatePassword</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">encodedCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">storeName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificatePassword</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The password for the certificate.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">encodedCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Base64 Encoded PFX Certificate.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storeName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Certificate Store where this certificate should be stored. Possible values are <code class="docutils literal notranslate"><span class="pre">CertificateAuthority</span></code> and <code class="docutils literal notranslate"><span class="pre">Root</span></code>.</p></li>
 </ul>
 <p>The <strong>hostname_configuration</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">managements</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">managements</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">management</span></code> blocks as documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">certificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - One or more (up to 10) <code class="docutils literal notranslate"><span class="pre">certificate</span></code> blocks as defined below.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">certificatePassword</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">host_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">key_vault_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">negotiateClientCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Base64 Encoded Certificate.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificatePassword</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The password associated with the certificate provided above.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">host_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Hostname to use for the Management API.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key_vault_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type <code class="docutils literal notranslate"><span class="pre">application/x-pkcs12</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">negotiateClientCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should Client Certificate Negotiation be enabled for this Hostname? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">portals</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">portals</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">portal</span></code> blocks as documented below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">certificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - One or more (up to 10) <code class="docutils literal notranslate"><span class="pre">certificate</span></code> blocks as defined below.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">certificatePassword</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">host_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">key_vault_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">negotiateClientCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificatePassword</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The password for the certificate.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">host_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Hostname to use for the Management API.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key_vault_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type <code class="docutils literal notranslate"><span class="pre">application/x-pkcs12</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">negotiateClientCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should Client Certificate Negotiation be enabled for this Hostname? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">proxies</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">proxies</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">proxy</span></code> blocks as documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">certificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - One or more (up to 10) <code class="docutils literal notranslate"><span class="pre">certificate</span></code> blocks as defined below.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">certificatePassword</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">defaultSslBinding</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">host_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">key_vault_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">negotiateClientCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Base64 Encoded Certificate.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificatePassword</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The password associated with the certificate provided above.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultSslBinding</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is the certificate associated with this Hostname the Default SSL Certificate? This is used when an SNI header isn’t specified by a client. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">host_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Hostname to use for the Management API.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key_vault_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type <code class="docutils literal notranslate"><span class="pre">application/x-pkcs12</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">negotiateClientCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should Client Certificate Negotiation be enabled for this Hostname? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">scms</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">scms</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">scm</span></code> blocks as documented below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">certificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - One or more (up to 10) <code class="docutils literal notranslate"><span class="pre">certificate</span></code> blocks as defined below.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">certificatePassword</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">host_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">key_vault_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">negotiateClientCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificatePassword</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The password for the certificate.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">host_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Hostname to use for the Management API.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key_vault_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type <code class="docutils literal notranslate"><span class="pre">application/x-pkcs12</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">negotiateClientCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should Client Certificate Negotiation be enabled for this Hostname? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
 </li>
 </ul>
@@ -3912,39 +3920,39 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">principal_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Principal ID associated with this Managed Service Identity.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">tenant_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Tenant ID associated with this Managed Service Identity.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the type of Managed Service Identity that should be configured on this API Management Service. At this time the only supported value is<code class="docutils literal notranslate"><span class="pre">SystemAssigned</span></code>.</p></li>
 </ul>
 <p>The <strong>policy</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">xml_content</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">xml_link</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">xml_content</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The XML Content for this Policy.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">xml_link</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A link to an API Management Policy XML Document, which must be publicly available.</p></li>
 </ul>
 <p>The <strong>protocols</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">enable_http2</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enable_http2</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should HTTP/2 be supported by the API Management Service? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
 <p>The <strong>security</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">enableBackendSsl30</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enableBackendTls10</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enableBackendTls11</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enableFrontendSsl30</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enableFrontendTls10</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enableFrontendTls11</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enableTripleDesCiphers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enableBackendSsl30</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should SSL 3.0 be enabled on the backend of the gateway? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enableBackendTls10</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should TLS 1.0 be enabled on the backend of the gateway? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enableBackendTls11</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should TLS 1.1 be enabled on the backend of the gateway? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enableFrontendSsl30</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should SSL 3.0 be enabled on the frontend of the gateway? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enableFrontendTls10</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should TLS 1.0 be enabled on the frontend of the gateway? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enableFrontendTls11</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should TLS 1.1 be enabled on the frontend of the gateway? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enableTripleDesCiphers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should the <code class="docutils literal notranslate"><span class="pre">TLS_RSA_WITH_3DES_EDE_CBC_SHA</span></code> cipher be enabled for alL TLS versions (1.0, 1.1 and 1.2)? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
 <p>The <strong>sign_in</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should anonymous users be redirected to the sign in page?</p></li>
 </ul>
 <p>The <strong>sign_up</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">termsOfService</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Can users sign up on the development portal?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">termsOfService</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">terms_of_service</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">consentRequired</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">text</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">consentRequired</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should the user be asked for consent during sign up?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should Terms of Service be displayed during sign up?.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">text</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Terms of Service which users are required to agree to in order to sign up.</p></li>
 </ul>
 </li>
 </ul>
@@ -3954,7 +3962,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">additional_location</span></code> blocks as defined below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">gateway_regional_url</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The URL of the Regional Gateway for the API Management Service in the specified region.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">location</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Azure location where the API Management Service exists. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">location</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the Azure Region in which the API Management Service should be expanded to.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">public_ip_addresses</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Public Static Load Balanced IP addresses of the API Management service in the additional location. Available only for Basic, Standard and Premium SKU.</p></li>
 </ul>
 </dd></dl>
@@ -3964,9 +3972,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">certificates</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.apimanagement.Service.certificates" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more (up to 10) <code class="docutils literal notranslate"><span class="pre">certificate</span></code> blocks as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">certificatePassword</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">encodedCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">storeName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificatePassword</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The password for the certificate.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">encodedCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Base64 Encoded PFX Certificate.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storeName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the Certificate Store where this certificate should be stored. Possible values are <code class="docutils literal notranslate"><span class="pre">CertificateAuthority</span></code> and <code class="docutils literal notranslate"><span class="pre">Root</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -3987,41 +3995,41 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">hostname_configuration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.apimanagement.Service.hostname_configuration" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">hostname_configuration</span></code> block as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">managements</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">managements</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">management</span></code> blocks as documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">certificate</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - One or more (up to 10) <code class="docutils literal notranslate"><span class="pre">certificate</span></code> blocks as defined below.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">certificatePassword</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">host_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">key_vault_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">negotiateClientCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificate</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Base64 Encoded Certificate.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificatePassword</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The password associated with the certificate provided above.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">host_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Hostname to use for the Management API.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key_vault_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type <code class="docutils literal notranslate"><span class="pre">application/x-pkcs12</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">negotiateClientCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Should Client Certificate Negotiation be enabled for this Hostname? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">portals</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">portals</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">portal</span></code> blocks as documented below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">certificate</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - One or more (up to 10) <code class="docutils literal notranslate"><span class="pre">certificate</span></code> blocks as defined below.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">certificatePassword</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">host_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">key_vault_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">negotiateClientCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificatePassword</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The password for the certificate.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">host_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Hostname to use for the Management API.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key_vault_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type <code class="docutils literal notranslate"><span class="pre">application/x-pkcs12</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">negotiateClientCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Should Client Certificate Negotiation be enabled for this Hostname? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">proxies</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">proxies</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">proxy</span></code> blocks as documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">certificate</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - One or more (up to 10) <code class="docutils literal notranslate"><span class="pre">certificate</span></code> blocks as defined below.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">certificatePassword</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">defaultSslBinding</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">host_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">key_vault_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">negotiateClientCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificate</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Base64 Encoded Certificate.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificatePassword</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The password associated with the certificate provided above.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultSslBinding</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Is the certificate associated with this Hostname the Default SSL Certificate? This is used when an SNI header isn’t specified by a client. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">host_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Hostname to use for the Management API.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key_vault_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type <code class="docutils literal notranslate"><span class="pre">application/x-pkcs12</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">negotiateClientCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Should Client Certificate Negotiation be enabled for this Hostname? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">scms</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">scms</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">scm</span></code> blocks as documented below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">certificate</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - One or more (up to 10) <code class="docutils literal notranslate"><span class="pre">certificate</span></code> blocks as defined below.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">certificatePassword</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">host_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">key_vault_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">negotiateClientCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificatePassword</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The password for the certificate.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">host_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Hostname to use for the Management API.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key_vault_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type <code class="docutils literal notranslate"><span class="pre">application/x-pkcs12</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">negotiateClientCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Should Client Certificate Negotiation be enabled for this Hostname? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
 </li>
 </ul>
@@ -4034,7 +4042,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">principal_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Principal ID associated with this Managed Service Identity.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">tenant_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Tenant ID associated with this Managed Service Identity.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the type of Managed Service Identity that should be configured on this API Management Service. At this time the only supported value is<code class="docutils literal notranslate"><span class="pre">SystemAssigned</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -4067,8 +4075,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.apimanagement.Service.policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">policy</span></code> block as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">xml_content</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">xml_link</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">xml_content</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The XML Content for this Policy.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">xml_link</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A link to an API Management Policy XML Document, which must be publicly available.</p></li>
 </ul>
 </dd></dl>
 
@@ -4083,7 +4091,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">protocols</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.apimanagement.Service.protocols" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">protocols</span></code> block as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">enable_http2</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enable_http2</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Should HTTP/2 be supported by the API Management Service? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -4122,13 +4130,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">security</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.apimanagement.Service.security" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">security</span></code> block as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">enableBackendSsl30</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enableBackendTls10</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enableBackendTls11</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enableFrontendSsl30</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enableFrontendTls10</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enableFrontendTls11</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enableTripleDesCiphers</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enableBackendSsl30</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Should SSL 3.0 be enabled on the backend of the gateway? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enableBackendTls10</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Should TLS 1.0 be enabled on the backend of the gateway? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enableBackendTls11</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Should TLS 1.1 be enabled on the backend of the gateway? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enableFrontendSsl30</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Should SSL 3.0 be enabled on the frontend of the gateway? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enableFrontendTls10</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Should TLS 1.0 be enabled on the frontend of the gateway? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enableFrontendTls11</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Should TLS 1.1 be enabled on the frontend of the gateway? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enableTripleDesCiphers</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Should the <code class="docutils literal notranslate"><span class="pre">TLS_RSA_WITH_3DES_EDE_CBC_SHA</span></code> cipher be enabled for alL TLS versions (1.0, 1.1 and 1.2)? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -4137,7 +4145,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">sign_in</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.apimanagement.Service.sign_in" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">sign_in</span></code> block as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Should anonymous users be redirected to the sign in page?</p></li>
 </ul>
 </dd></dl>
 
@@ -4146,12 +4154,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">sign_up</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.apimanagement.Service.sign_up" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">sign_up</span></code> block as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">termsOfService</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Can users sign up on the development portal?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">termsOfService</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A <code class="docutils literal notranslate"><span class="pre">terms_of_service</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">consentRequired</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">text</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">consentRequired</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Should the user be asked for consent during sign up?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Should Terms of Service be displayed during sign up?.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">text</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Terms of Service which users are required to agree to in order to sign up.</p></li>
 </ul>
 </li>
 </ul>
@@ -4209,52 +4217,52 @@ properties used to qualify the lookup.</p>
 <p>The <strong>additional_locations</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">gateway_regional_url</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The URL of the Regional Gateway for the API Management Service in the specified region.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">location</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Azure location where the API Management Service exists. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">location</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Azure Region in which the API Management Service should be expanded to.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">public_ip_addresses</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Public Static Load Balanced IP addresses of the API Management service in the additional location. Available only for Basic, Standard and Premium SKU.</p></li>
 </ul>
 <p>The <strong>certificates</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">certificatePassword</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">encodedCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">storeName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificatePassword</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The password for the certificate.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">encodedCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Base64 Encoded PFX Certificate.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storeName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Certificate Store where this certificate should be stored. Possible values are <code class="docutils literal notranslate"><span class="pre">CertificateAuthority</span></code> and <code class="docutils literal notranslate"><span class="pre">Root</span></code>.</p></li>
 </ul>
 <p>The <strong>hostname_configuration</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">managements</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">managements</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">management</span></code> blocks as documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">certificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - One or more (up to 10) <code class="docutils literal notranslate"><span class="pre">certificate</span></code> blocks as defined below.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">certificatePassword</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">host_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">key_vault_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">negotiateClientCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Base64 Encoded Certificate.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificatePassword</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The password associated with the certificate provided above.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">host_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Hostname to use for the Management API.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key_vault_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type <code class="docutils literal notranslate"><span class="pre">application/x-pkcs12</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">negotiateClientCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should Client Certificate Negotiation be enabled for this Hostname? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">portals</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">portals</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">portal</span></code> blocks as documented below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">certificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - One or more (up to 10) <code class="docutils literal notranslate"><span class="pre">certificate</span></code> blocks as defined below.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">certificatePassword</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">host_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">key_vault_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">negotiateClientCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificatePassword</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The password for the certificate.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">host_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Hostname to use for the Management API.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key_vault_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type <code class="docutils literal notranslate"><span class="pre">application/x-pkcs12</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">negotiateClientCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should Client Certificate Negotiation be enabled for this Hostname? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">proxies</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">proxies</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">proxy</span></code> blocks as documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">certificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - One or more (up to 10) <code class="docutils literal notranslate"><span class="pre">certificate</span></code> blocks as defined below.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">certificatePassword</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">defaultSslBinding</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">host_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">key_vault_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">negotiateClientCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Base64 Encoded Certificate.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificatePassword</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The password associated with the certificate provided above.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultSslBinding</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is the certificate associated with this Hostname the Default SSL Certificate? This is used when an SNI header isn’t specified by a client. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">host_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Hostname to use for the Management API.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key_vault_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type <code class="docutils literal notranslate"><span class="pre">application/x-pkcs12</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">negotiateClientCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should Client Certificate Negotiation be enabled for this Hostname? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">scms</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">scms</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">scm</span></code> blocks as documented below.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">certificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - One or more (up to 10) <code class="docutils literal notranslate"><span class="pre">certificate</span></code> blocks as defined below.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">certificatePassword</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">host_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">key_vault_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">negotiateClientCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificatePassword</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The password for the certificate.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">host_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Hostname to use for the Management API.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key_vault_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type <code class="docutils literal notranslate"><span class="pre">application/x-pkcs12</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">negotiateClientCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should Client Certificate Negotiation be enabled for this Hostname? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
 </li>
 </ul>
@@ -4262,39 +4270,39 @@ properties used to qualify the lookup.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">principal_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Principal ID associated with this Managed Service Identity.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">tenant_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Tenant ID associated with this Managed Service Identity.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the type of Managed Service Identity that should be configured on this API Management Service. At this time the only supported value is<code class="docutils literal notranslate"><span class="pre">SystemAssigned</span></code>.</p></li>
 </ul>
 <p>The <strong>policy</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">xml_content</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">xml_link</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">xml_content</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The XML Content for this Policy.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">xml_link</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A link to an API Management Policy XML Document, which must be publicly available.</p></li>
 </ul>
 <p>The <strong>protocols</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">enable_http2</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enable_http2</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should HTTP/2 be supported by the API Management Service? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
 <p>The <strong>security</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">enableBackendSsl30</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enableBackendTls10</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enableBackendTls11</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enableFrontendSsl30</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enableFrontendTls10</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enableFrontendTls11</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enableTripleDesCiphers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enableBackendSsl30</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should SSL 3.0 be enabled on the backend of the gateway? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enableBackendTls10</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should TLS 1.0 be enabled on the backend of the gateway? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enableBackendTls11</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should TLS 1.1 be enabled on the backend of the gateway? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enableFrontendSsl30</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should SSL 3.0 be enabled on the frontend of the gateway? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enableFrontendTls10</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should TLS 1.0 be enabled on the frontend of the gateway? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enableFrontendTls11</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should TLS 1.1 be enabled on the frontend of the gateway? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enableTripleDesCiphers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should the <code class="docutils literal notranslate"><span class="pre">TLS_RSA_WITH_3DES_EDE_CBC_SHA</span></code> cipher be enabled for alL TLS versions (1.0, 1.1 and 1.2)? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
 <p>The <strong>sign_in</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should anonymous users be redirected to the sign in page?</p></li>
 </ul>
 <p>The <strong>sign_up</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">termsOfService</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Can users sign up on the development portal?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">termsOfService</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">terms_of_service</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">consentRequired</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">text</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">consentRequired</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should the user be asked for consent during sign up?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should Terms of Service be displayed during sign up?.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">text</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Terms of Service which users are required to agree to in order to sign up.</p></li>
 </ul>
 </li>
 </ul>

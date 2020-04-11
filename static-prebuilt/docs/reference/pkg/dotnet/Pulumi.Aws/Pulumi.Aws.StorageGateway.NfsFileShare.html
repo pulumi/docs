@@ -1,0 +1,710 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class NfsFileShare
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class NfsFileShare
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Aws.StorageGateway.NfsFileShare">
+  
+  <h1 id="Pulumi_Aws_StorageGateway_NfsFileShare" data-uid="Pulumi.Aws.StorageGateway.NfsFileShare" class="text-break">Class NfsFileShare
+  </h1>
+  <div class="markdown level0 summary"><p>Manages an AWS Storage Gateway NFS File Share.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_nfs_file_share.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_nfs_file_share.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">NfsFileShare</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.StorageGateway.html">Pulumi.Aws.StorageGateway</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
+  <h5 id="Pulumi_Aws_StorageGateway_NfsFileShare_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class NfsFileShare : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Storagegateway/NfsFileShare.cs/#L123">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_StorageGateway_NfsFileShare__ctor_" data-uid="Pulumi.Aws.StorageGateway.NfsFileShare.#ctor*"></a>
+  <h4 id="Pulumi_Aws_StorageGateway_NfsFileShare__ctor_System_String_Pulumi_Aws_StorageGateway_NfsFileShareArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.StorageGateway.NfsFileShare.#ctor(System.String,Pulumi.Aws.StorageGateway.NfsFileShareArgs,Pulumi.CustomResourceOptions)">NfsFileShare(String, NfsFileShareArgs, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Create a NfsFileShare resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NfsFileShare(string name, NfsFileShareArgs args, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Aws.StorageGateway.NfsFileShareArgs.html">NfsFileShareArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Storagegateway/NfsFileShare.cs/#L22">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_StorageGateway_NfsFileShare_Arn_" data-uid="Pulumi.Aws.StorageGateway.NfsFileShare.Arn*"></a>
+  <h4 id="Pulumi_Aws_StorageGateway_NfsFileShare_Arn" data-uid="Pulumi.Aws.StorageGateway.NfsFileShare.Arn">Arn</h4>
+  <div class="markdown level1 summary"><p>Amazon Resource Name (ARN) of the NFS File Share.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Arn { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Storagegateway/NfsFileShare.cs/#L28">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_StorageGateway_NfsFileShare_ClientLists_" data-uid="Pulumi.Aws.StorageGateway.NfsFileShare.ClientLists*"></a>
+  <h4 id="Pulumi_Aws_StorageGateway_NfsFileShare_ClientLists" data-uid="Pulumi.Aws.StorageGateway.NfsFileShare.ClientLists">ClientLists</h4>
+  <div class="markdown level1 summary"><p>The list of clients that are allowed to access the file gateway. The list must contain either valid IP addresses or valid CIDR blocks. Set to <code>[&amp;quot;0.0.0.0/0&amp;quot;]</code> to not limit access. Minimum 1 item. Maximum 100 items.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; ClientLists { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Storagegateway/NfsFileShare.cs/#L34">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_StorageGateway_NfsFileShare_DefaultStorageClass_" data-uid="Pulumi.Aws.StorageGateway.NfsFileShare.DefaultStorageClass*"></a>
+  <h4 id="Pulumi_Aws_StorageGateway_NfsFileShare_DefaultStorageClass" data-uid="Pulumi.Aws.StorageGateway.NfsFileShare.DefaultStorageClass">DefaultStorageClass</h4>
+  <div class="markdown level1 summary"><p>The default storage class for objects put into an Amazon S3 bucket by the file gateway. Defaults to <code>S3_STANDARD</code>. Valid values: <code>S3_STANDARD</code>, <code>S3_STANDARD_IA</code>, <code>S3_ONEZONE_IA</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; DefaultStorageClass { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Storagegateway/NfsFileShare.cs/#L40">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_StorageGateway_NfsFileShare_FileshareId_" data-uid="Pulumi.Aws.StorageGateway.NfsFileShare.FileshareId*"></a>
+  <h4 id="Pulumi_Aws_StorageGateway_NfsFileShare_FileshareId" data-uid="Pulumi.Aws.StorageGateway.NfsFileShare.FileshareId">FileshareId</h4>
+  <div class="markdown level1 summary"><p>ID of the NFS File Share.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; FileshareId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Storagegateway/NfsFileShare.cs/#L46">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_StorageGateway_NfsFileShare_GatewayArn_" data-uid="Pulumi.Aws.StorageGateway.NfsFileShare.GatewayArn*"></a>
+  <h4 id="Pulumi_Aws_StorageGateway_NfsFileShare_GatewayArn" data-uid="Pulumi.Aws.StorageGateway.NfsFileShare.GatewayArn">GatewayArn</h4>
+  <div class="markdown level1 summary"><p>Amazon Resource Name (ARN) of the file gateway.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; GatewayArn { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Storagegateway/NfsFileShare.cs/#L52">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_StorageGateway_NfsFileShare_GuessMimeTypeEnabled_" data-uid="Pulumi.Aws.StorageGateway.NfsFileShare.GuessMimeTypeEnabled*"></a>
+  <h4 id="Pulumi_Aws_StorageGateway_NfsFileShare_GuessMimeTypeEnabled" data-uid="Pulumi.Aws.StorageGateway.NfsFileShare.GuessMimeTypeEnabled">GuessMimeTypeEnabled</h4>
+  <div class="markdown level1 summary"><p>Boolean value that enables guessing of the MIME type for uploaded objects based on file extensions. Defaults to <code>true</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; GuessMimeTypeEnabled { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Storagegateway/NfsFileShare.cs/#L58">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_StorageGateway_NfsFileShare_KmsEncrypted_" data-uid="Pulumi.Aws.StorageGateway.NfsFileShare.KmsEncrypted*"></a>
+  <h4 id="Pulumi_Aws_StorageGateway_NfsFileShare_KmsEncrypted" data-uid="Pulumi.Aws.StorageGateway.NfsFileShare.KmsEncrypted">KmsEncrypted</h4>
+  <div class="markdown level1 summary"><p>Boolean value if <code>true</code> to use Amazon S3 server side encryption with your own AWS KMS key, or <code>false</code> to use a key managed by Amazon S3. Defaults to <code>false</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; KmsEncrypted { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Storagegateway/NfsFileShare.cs/#L64">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_StorageGateway_NfsFileShare_KmsKeyArn_" data-uid="Pulumi.Aws.StorageGateway.NfsFileShare.KmsKeyArn*"></a>
+  <h4 id="Pulumi_Aws_StorageGateway_NfsFileShare_KmsKeyArn" data-uid="Pulumi.Aws.StorageGateway.NfsFileShare.KmsKeyArn">KmsKeyArn</h4>
+  <div class="markdown level1 summary"><p>Amazon Resource Name (ARN) for KMS key used for Amazon S3 server side encryption. This value can only be set when <code>kms_encrypted</code> is true.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; KmsKeyArn { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Storagegateway/NfsFileShare.cs/#L70">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_StorageGateway_NfsFileShare_LocationArn_" data-uid="Pulumi.Aws.StorageGateway.NfsFileShare.LocationArn*"></a>
+  <h4 id="Pulumi_Aws_StorageGateway_NfsFileShare_LocationArn" data-uid="Pulumi.Aws.StorageGateway.NfsFileShare.LocationArn">LocationArn</h4>
+  <div class="markdown level1 summary"><p>The ARN of the backed storage used for storing file data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; LocationArn { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Storagegateway/NfsFileShare.cs/#L76">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_StorageGateway_NfsFileShare_NfsFileShareDefaults_" data-uid="Pulumi.Aws.StorageGateway.NfsFileShare.NfsFileShareDefaults*"></a>
+  <h4 id="Pulumi_Aws_StorageGateway_NfsFileShare_NfsFileShareDefaults" data-uid="Pulumi.Aws.StorageGateway.NfsFileShare.NfsFileShareDefaults">NfsFileShareDefaults</h4>
+  <div class="markdown level1 summary"><p>Nested argument with file share default values. More information below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;NfsFileShareNfsFileShareDefaults&gt; NfsFileShareDefaults { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.StorageGateway.Outputs.NfsFileShareNfsFileShareDefaults.html">NfsFileShareNfsFileShareDefaults</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Storagegateway/NfsFileShare.cs/#L82">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_StorageGateway_NfsFileShare_ObjectAcl_" data-uid="Pulumi.Aws.StorageGateway.NfsFileShare.ObjectAcl*"></a>
+  <h4 id="Pulumi_Aws_StorageGateway_NfsFileShare_ObjectAcl" data-uid="Pulumi.Aws.StorageGateway.NfsFileShare.ObjectAcl">ObjectAcl</h4>
+  <div class="markdown level1 summary"><p>Access Control List permission for S3 bucket objects. Defaults to <code>private</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ObjectAcl { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Storagegateway/NfsFileShare.cs/#L88">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_StorageGateway_NfsFileShare_ReadOnly_" data-uid="Pulumi.Aws.StorageGateway.NfsFileShare.ReadOnly*"></a>
+  <h4 id="Pulumi_Aws_StorageGateway_NfsFileShare_ReadOnly" data-uid="Pulumi.Aws.StorageGateway.NfsFileShare.ReadOnly">ReadOnly</h4>
+  <div class="markdown level1 summary"><p>Boolean to indicate write status of file share. File share does not accept writes if <code>true</code>. Defaults to <code>false</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; ReadOnly { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Storagegateway/NfsFileShare.cs/#L94">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_StorageGateway_NfsFileShare_RequesterPays_" data-uid="Pulumi.Aws.StorageGateway.NfsFileShare.RequesterPays*"></a>
+  <h4 id="Pulumi_Aws_StorageGateway_NfsFileShare_RequesterPays" data-uid="Pulumi.Aws.StorageGateway.NfsFileShare.RequesterPays">RequesterPays</h4>
+  <div class="markdown level1 summary"><p>Boolean who pays the cost of the request and the data download from the Amazon S3 bucket. Set this value to <code>true</code> if you want the requester to pay instead of the bucket owner. Defaults to <code>false</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; RequesterPays { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Storagegateway/NfsFileShare.cs/#L100">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_StorageGateway_NfsFileShare_RoleArn_" data-uid="Pulumi.Aws.StorageGateway.NfsFileShare.RoleArn*"></a>
+  <h4 id="Pulumi_Aws_StorageGateway_NfsFileShare_RoleArn" data-uid="Pulumi.Aws.StorageGateway.NfsFileShare.RoleArn">RoleArn</h4>
+  <div class="markdown level1 summary"><p>The ARN of the AWS Identity and Access Management (IAM) role that a file gateway assumes when it accesses the underlying storage.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; RoleArn { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Storagegateway/NfsFileShare.cs/#L106">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_StorageGateway_NfsFileShare_Squash_" data-uid="Pulumi.Aws.StorageGateway.NfsFileShare.Squash*"></a>
+  <h4 id="Pulumi_Aws_StorageGateway_NfsFileShare_Squash" data-uid="Pulumi.Aws.StorageGateway.NfsFileShare.Squash">Squash</h4>
+  <div class="markdown level1 summary"><p>Maps a user to anonymous user. Defaults to <code>RootSquash</code>. Valid values: <code>RootSquash</code> (only root is mapped to anonymous user), <code>NoSquash</code> (no one is mapped to anonymous user), <code>AllSquash</code> (everyone is mapped to anonymous user)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Squash { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Storagegateway/NfsFileShare.cs/#L112">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_StorageGateway_NfsFileShare_Tags_" data-uid="Pulumi.Aws.StorageGateway.NfsFileShare.Tags*"></a>
+  <h4 id="Pulumi_Aws_StorageGateway_NfsFileShare_Tags" data-uid="Pulumi.Aws.StorageGateway.NfsFileShare.Tags">Tags</h4>
+  <div class="markdown level1 summary"><p>Key-value mapping of resource tags</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Tags { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Storagegateway/NfsFileShare.cs/#L153">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_StorageGateway_NfsFileShare_Get_" data-uid="Pulumi.Aws.StorageGateway.NfsFileShare.Get*"></a>
+  <h4 id="Pulumi_Aws_StorageGateway_NfsFileShare_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_StorageGateway_NfsFileShareState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.StorageGateway.NfsFileShare.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.StorageGateway.NfsFileShareState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, NfsFileShareState, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Get an existing NfsFileShare resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static NfsFileShare Get(string name, Input&lt;string&gt; id, NfsFileShareState state = null, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Aws.StorageGateway.NfsFileShareState.html">NfsFileShareState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Aws.StorageGateway.NfsFileShare.html">NfsFileShare</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Storagegateway/NfsFileShare.cs/#L17" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

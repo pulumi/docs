@@ -33,7 +33,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether this action group is enabled. If an action group is not enabled, then none of its receivers will receive communications. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 <li><p><strong>itsm_receivers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">itsm_receiver</span></code> blocks as defined below.</p></li>
 <li><p><strong>logic_app_receivers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">logic_app_receiver</span></code> blocks as defined below.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the webhook receiver. Names must be unique (case-insensitive) across all receivers within an action group.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Action Group. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the Action Group instance.</p></li>
 <li><p><strong>short_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The short name of the action group. This will be used in SMS messages.</p></li>
 <li><p><strong>sms_receivers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">sms_receiver</span></code> blocks as defined below.</p></li>
@@ -45,7 +45,7 @@ anything, please consult the source <a class="reference external" href="https://
 </dl>
 <p>The <strong>arm_role_receivers</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the webhook receiver. Names must be unique (case-insensitive) across all receivers within an action group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the ARM role receiver.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">roleId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The arm role id.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">useCommonAlertSchema</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enables or disables the common alert schema.</p></li>
 </ul>
@@ -53,7 +53,7 @@ anything, please consult the source <a class="reference external" href="https://
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">automationAccountId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The automation account ID which holds this runbook and authenticates to Azure resources.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">isGlobalRunbook</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether this instance is global runbook.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the webhook receiver. Names must be unique (case-insensitive) across all receivers within an action group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the automation runbook receiver.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">runbook_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name for this runbook.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">service_uri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The URI where webhooks should be sent.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">useCommonAlertSchema</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enables or disables the common alert schema.</p></li>
@@ -61,27 +61,27 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 <p>The <strong>azure_app_push_receivers</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">email_address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The email address of this receiver.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the webhook receiver. Names must be unique (case-insensitive) across all receivers within an action group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">email_address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The email address of the user signed into the mobile app who will receive push notifications from this receiver.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Azure app push receiver.</p></li>
 </ul>
 <p>The <strong>azure_function_receivers</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">functionAppResourceId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">functionName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The function name in the function app.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">httpTriggerUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The http trigger url where http request sent to.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the webhook receiver. Names must be unique (case-insensitive) across all receivers within an action group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Azure Function receiver.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">useCommonAlertSchema</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enables or disables the common alert schema.</p></li>
 </ul>
 <p>The <strong>email_receivers</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">email_address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The email address of this receiver.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the webhook receiver. Names must be unique (case-insensitive) across all receivers within an action group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the email receiver. Names must be unique (case-insensitive) across all receivers within an action group.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">useCommonAlertSchema</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enables or disables the common alert schema.</p></li>
 </ul>
 <p>The <strong>itsm_receivers</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">connectionId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The unique connection identifier of the ITSM connection.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the webhook receiver. Names must be unique (case-insensitive) across all receivers within an action group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the ITSM receiver.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">region</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The region of the workspace.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ticketConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A JSON blob for the configurations of the ITSM action. CreateMultipleWorkItems option will be part of this blob as well.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">workspace_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Azure Log Analytics workspace ID where this connection is defined.</p></li>
@@ -89,20 +89,20 @@ anything, please consult the source <a class="reference external" href="https://
 <p>The <strong>logic_app_receivers</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">callbackUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The callback url where http request sent to.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the webhook receiver. Names must be unique (case-insensitive) across all receivers within an action group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the logic app receiver.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">resource_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Azure resource ID of the logic app.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">useCommonAlertSchema</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enables or disables the common alert schema.</p></li>
 </ul>
 <p>The <strong>sms_receivers</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">countryCode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The country code of the voice receiver.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the webhook receiver. Names must be unique (case-insensitive) across all receivers within an action group.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">phoneNumber</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The phone number of the voice receiver.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">countryCode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The country code of the SMS receiver.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the SMS receiver. Names must be unique (case-insensitive) across all receivers within an action group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">phoneNumber</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The phone number of the SMS receiver.</p></li>
 </ul>
 <p>The <strong>voice_receivers</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">countryCode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The country code of the voice receiver.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the webhook receiver. Names must be unique (case-insensitive) across all receivers within an action group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the voice receiver.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">phoneNumber</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The phone number of the voice receiver.</p></li>
 </ul>
 <p>The <strong>webhook_receivers</strong> object supports the following:</p>
@@ -116,7 +116,7 @@ anything, please consult the source <a class="reference external" href="https://
 <code class="sig-name descname">arm_role_receivers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.ActionGroup.arm_role_receivers" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">arm_role_receiver</span></code> blocks as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the webhook receiver. Names must be unique (case-insensitive) across all receivers within an action group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the ARM role receiver.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">roleId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The arm role id.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">useCommonAlertSchema</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Enables or disables the common alert schema.</p></li>
 </ul>
@@ -129,7 +129,7 @@ anything, please consult the source <a class="reference external" href="https://
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">automationAccountId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The automation account ID which holds this runbook and authenticates to Azure resources.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">isGlobalRunbook</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Indicates whether this instance is global runbook.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the webhook receiver. Names must be unique (case-insensitive) across all receivers within an action group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the automation runbook receiver.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">runbook_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name for this runbook.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">service_uri</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The URI where webhooks should be sent.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">useCommonAlertSchema</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Enables or disables the common alert schema.</p></li>
@@ -142,8 +142,8 @@ anything, please consult the source <a class="reference external" href="https://
 <code class="sig-name descname">azure_app_push_receivers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.ActionGroup.azure_app_push_receivers" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">azure_app_push_receiver</span></code> blocks as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">email_address</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The email address of this receiver.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the webhook receiver. Names must be unique (case-insensitive) across all receivers within an action group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">email_address</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The email address of the user signed into the mobile app who will receive push notifications from this receiver.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the Azure app push receiver.</p></li>
 </ul>
 </dd></dl>
 
@@ -155,7 +155,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><code class="docutils literal notranslate"><span class="pre">functionAppResourceId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">functionName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The function name in the function app.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">httpTriggerUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The http trigger url where http request sent to.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the webhook receiver. Names must be unique (case-insensitive) across all receivers within an action group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the Azure Function receiver.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">useCommonAlertSchema</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Enables or disables the common alert schema.</p></li>
 </ul>
 </dd></dl>
@@ -166,7 +166,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">email_receiver</span></code> blocks as defined below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">email_address</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The email address of this receiver.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the webhook receiver. Names must be unique (case-insensitive) across all receivers within an action group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the email receiver. Names must be unique (case-insensitive) across all receivers within an action group.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">useCommonAlertSchema</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Enables or disables the common alert schema.</p></li>
 </ul>
 </dd></dl>
@@ -183,7 +183,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">itsm_receiver</span></code> blocks as defined below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">connectionId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The unique connection identifier of the ITSM connection.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the webhook receiver. Names must be unique (case-insensitive) across all receivers within an action group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the ITSM receiver.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">region</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The region of the workspace.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ticketConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A JSON blob for the configurations of the ITSM action. CreateMultipleWorkItems option will be part of this blob as well.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">workspace_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Azure Log Analytics workspace ID where this connection is defined.</p></li>
@@ -196,7 +196,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">logic_app_receiver</span></code> blocks as defined below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">callbackUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The callback url where http request sent to.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the webhook receiver. Names must be unique (case-insensitive) across all receivers within an action group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the logic app receiver.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">resource_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Azure resource ID of the logic app.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">useCommonAlertSchema</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Enables or disables the common alert schema.</p></li>
 </ul>
@@ -205,7 +205,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dl class="attribute">
 <dt id="pulumi_azure.monitoring.ActionGroup.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.ActionGroup.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the webhook receiver. Names must be unique (case-insensitive) across all receivers within an action group.</p>
+<dd><p>The name of the Action Group. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -225,9 +225,9 @@ anything, please consult the source <a class="reference external" href="https://
 <code class="sig-name descname">sms_receivers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.ActionGroup.sms_receivers" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">sms_receiver</span></code> blocks as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">countryCode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The country code of the voice receiver.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the webhook receiver. Names must be unique (case-insensitive) across all receivers within an action group.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">phoneNumber</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The phone number of the voice receiver.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">countryCode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The country code of the SMS receiver.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the SMS receiver. Names must be unique (case-insensitive) across all receivers within an action group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">phoneNumber</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The phone number of the SMS receiver.</p></li>
 </ul>
 </dd></dl>
 
@@ -243,7 +243,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">voice_receiver</span></code> blocks as defined below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">countryCode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The country code of the voice receiver.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the webhook receiver. Names must be unique (case-insensitive) across all receivers within an action group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the voice receiver.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">phoneNumber</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The phone number of the voice receiver.</p></li>
 </ul>
 </dd></dl>
@@ -278,7 +278,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether this action group is enabled. If an action group is not enabled, then none of its receivers will receive communications. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 <li><p><strong>itsm_receivers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">itsm_receiver</span></code> blocks as defined below.</p></li>
 <li><p><strong>logic_app_receivers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">logic_app_receiver</span></code> blocks as defined below.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the webhook receiver. Names must be unique (case-insensitive) across all receivers within an action group.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Action Group. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the Action Group instance.</p></li>
 <li><p><strong>short_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The short name of the action group. This will be used in SMS messages.</p></li>
 <li><p><strong>sms_receivers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more <code class="docutils literal notranslate"><span class="pre">sms_receiver</span></code> blocks as defined below.</p></li>
@@ -290,7 +290,7 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>arm_role_receivers</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the webhook receiver. Names must be unique (case-insensitive) across all receivers within an action group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the ARM role receiver.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">roleId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The arm role id.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">useCommonAlertSchema</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enables or disables the common alert schema.</p></li>
 </ul>
@@ -298,7 +298,7 @@ properties used to qualify the lookup.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">automationAccountId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The automation account ID which holds this runbook and authenticates to Azure resources.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">isGlobalRunbook</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether this instance is global runbook.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the webhook receiver. Names must be unique (case-insensitive) across all receivers within an action group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the automation runbook receiver.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">runbook_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name for this runbook.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">service_uri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The URI where webhooks should be sent.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">useCommonAlertSchema</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enables or disables the common alert schema.</p></li>
@@ -306,27 +306,27 @@ properties used to qualify the lookup.</p>
 </ul>
 <p>The <strong>azure_app_push_receivers</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">email_address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The email address of this receiver.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the webhook receiver. Names must be unique (case-insensitive) across all receivers within an action group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">email_address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The email address of the user signed into the mobile app who will receive push notifications from this receiver.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Azure app push receiver.</p></li>
 </ul>
 <p>The <strong>azure_function_receivers</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">functionAppResourceId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">functionName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The function name in the function app.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">httpTriggerUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The http trigger url where http request sent to.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the webhook receiver. Names must be unique (case-insensitive) across all receivers within an action group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Azure Function receiver.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">useCommonAlertSchema</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enables or disables the common alert schema.</p></li>
 </ul>
 <p>The <strong>email_receivers</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">email_address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The email address of this receiver.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the webhook receiver. Names must be unique (case-insensitive) across all receivers within an action group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the email receiver. Names must be unique (case-insensitive) across all receivers within an action group.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">useCommonAlertSchema</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enables or disables the common alert schema.</p></li>
 </ul>
 <p>The <strong>itsm_receivers</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">connectionId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The unique connection identifier of the ITSM connection.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the webhook receiver. Names must be unique (case-insensitive) across all receivers within an action group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the ITSM receiver.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">region</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The region of the workspace.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ticketConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A JSON blob for the configurations of the ITSM action. CreateMultipleWorkItems option will be part of this blob as well.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">workspace_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Azure Log Analytics workspace ID where this connection is defined.</p></li>
@@ -334,20 +334,20 @@ properties used to qualify the lookup.</p>
 <p>The <strong>logic_app_receivers</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">callbackUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The callback url where http request sent to.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the webhook receiver. Names must be unique (case-insensitive) across all receivers within an action group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the logic app receiver.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">resource_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Azure resource ID of the logic app.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">useCommonAlertSchema</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enables or disables the common alert schema.</p></li>
 </ul>
 <p>The <strong>sms_receivers</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">countryCode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The country code of the voice receiver.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the webhook receiver. Names must be unique (case-insensitive) across all receivers within an action group.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">phoneNumber</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The phone number of the voice receiver.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">countryCode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The country code of the SMS receiver.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the SMS receiver. Names must be unique (case-insensitive) across all receivers within an action group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">phoneNumber</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The phone number of the SMS receiver.</p></li>
 </ul>
 <p>The <strong>voice_receivers</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">countryCode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The country code of the voice receiver.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the webhook receiver. Names must be unique (case-insensitive) across all receivers within an action group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the voice receiver.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">phoneNumber</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The phone number of the voice receiver.</p></li>
 </ul>
 <p>The <strong>webhook_receivers</strong> object supports the following:</p>
@@ -421,29 +421,29 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <p>The <strong>actions</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">actionGroupId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">webhookProperties</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">actionGroupId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Action Group can be sourced from the <code class="docutils literal notranslate"><span class="pre">monitoring.ActionGroup</span></code> resource.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">webhookProperties</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The map of custom string properties to include with the post operation. These data are appended to the webhook payload.</p></li>
 </ul>
 <p>The <strong>criteria</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">caller</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">category</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">level</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">operationName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">resourceGroup</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">resource_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">resourceProvider</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">resourceType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">status</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subStatus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">caller</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The email address or Azure Active Directory identifier of the user who performed the operation.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">category</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The category of the operation. Possible values are <code class="docutils literal notranslate"><span class="pre">Administrative</span></code>, <code class="docutils literal notranslate"><span class="pre">Autoscale</span></code>, <code class="docutils literal notranslate"><span class="pre">Policy</span></code>, <code class="docutils literal notranslate"><span class="pre">Recommendation</span></code>, <code class="docutils literal notranslate"><span class="pre">ResourceHealth</span></code>, <code class="docutils literal notranslate"><span class="pre">Security</span></code> and <code class="docutils literal notranslate"><span class="pre">ServiceHealth</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">level</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The severity level of the event. Possible values are <code class="docutils literal notranslate"><span class="pre">Verbose</span></code>, <code class="docutils literal notranslate"><span class="pre">Informational</span></code>, <code class="docutils literal notranslate"><span class="pre">Warning</span></code>, <code class="docutils literal notranslate"><span class="pre">Error</span></code>, and <code class="docutils literal notranslate"><span class="pre">Critical</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">operationName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Resource Manager Role-Based Access Control operation name. Supported operation should be of the form: <code class="docutils literal notranslate"><span class="pre">&lt;resourceProvider&gt;/&lt;resourceType&gt;/&lt;operation&gt;</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resourceGroup</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of resource group monitored by the activity log alert.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resource_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The specific resource monitored by the activity log alert. It should be within one of the <code class="docutils literal notranslate"><span class="pre">scopes</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resourceProvider</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the resource provider monitored by the activity log alert.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resourceType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The resource type monitored by the activity log alert.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">status</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The status of the event. For example, <code class="docutils literal notranslate"><span class="pre">Started</span></code>, <code class="docutils literal notranslate"><span class="pre">Failed</span></code>, or <code class="docutils literal notranslate"><span class="pre">Succeeded</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subStatus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The sub status of the event.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_azure.monitoring.ActivityLogAlert.actions">
 <code class="sig-name descname">actions</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.ActivityLogAlert.actions" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">action</span></code> blocks as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">actionGroupId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">webhookProperties</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">actionGroupId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the Action Group can be sourced from the <code class="docutils literal notranslate"><span class="pre">monitoring.ActionGroup</span></code> resource.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">webhookProperties</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The map of custom string properties to include with the post operation. These data are appended to the webhook payload.</p></li>
 </ul>
 </dd></dl>
 
@@ -452,16 +452,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">criteria</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.ActivityLogAlert.criteria" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">criteria</span></code> block as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">caller</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">category</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">level</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">operationName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">resourceGroup</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">resource_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">resourceProvider</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">resourceType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">status</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subStatus</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">caller</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The email address or Azure Active Directory identifier of the user who performed the operation.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">category</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The category of the operation. Possible values are <code class="docutils literal notranslate"><span class="pre">Administrative</span></code>, <code class="docutils literal notranslate"><span class="pre">Autoscale</span></code>, <code class="docutils literal notranslate"><span class="pre">Policy</span></code>, <code class="docutils literal notranslate"><span class="pre">Recommendation</span></code>, <code class="docutils literal notranslate"><span class="pre">ResourceHealth</span></code>, <code class="docutils literal notranslate"><span class="pre">Security</span></code> and <code class="docutils literal notranslate"><span class="pre">ServiceHealth</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">level</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The severity level of the event. Possible values are <code class="docutils literal notranslate"><span class="pre">Verbose</span></code>, <code class="docutils literal notranslate"><span class="pre">Informational</span></code>, <code class="docutils literal notranslate"><span class="pre">Warning</span></code>, <code class="docutils literal notranslate"><span class="pre">Error</span></code>, and <code class="docutils literal notranslate"><span class="pre">Critical</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">operationName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Resource Manager Role-Based Access Control operation name. Supported operation should be of the form: <code class="docutils literal notranslate"><span class="pre">&lt;resourceProvider&gt;/&lt;resourceType&gt;/&lt;operation&gt;</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resourceGroup</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of resource group monitored by the activity log alert.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resource_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The specific resource monitored by the activity log alert. It should be within one of the <code class="docutils literal notranslate"><span class="pre">scopes</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resourceProvider</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the resource provider monitored by the activity log alert.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resourceType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The resource type monitored by the activity log alert.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">status</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The status of the event. For example, <code class="docutils literal notranslate"><span class="pre">Started</span></code>, <code class="docutils literal notranslate"><span class="pre">Failed</span></code>, or <code class="docutils literal notranslate"><span class="pre">Succeeded</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subStatus</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The sub status of the event.</p></li>
 </ul>
 </dd></dl>
 
@@ -525,21 +525,21 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>actions</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">actionGroupId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">webhookProperties</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">actionGroupId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Action Group can be sourced from the <code class="docutils literal notranslate"><span class="pre">monitoring.ActionGroup</span></code> resource.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">webhookProperties</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The map of custom string properties to include with the post operation. These data are appended to the webhook payload.</p></li>
 </ul>
 <p>The <strong>criteria</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">caller</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">category</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">level</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">operationName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">resourceGroup</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">resource_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">resourceProvider</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">resourceType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">status</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subStatus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">caller</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The email address or Azure Active Directory identifier of the user who performed the operation.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">category</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The category of the operation. Possible values are <code class="docutils literal notranslate"><span class="pre">Administrative</span></code>, <code class="docutils literal notranslate"><span class="pre">Autoscale</span></code>, <code class="docutils literal notranslate"><span class="pre">Policy</span></code>, <code class="docutils literal notranslate"><span class="pre">Recommendation</span></code>, <code class="docutils literal notranslate"><span class="pre">ResourceHealth</span></code>, <code class="docutils literal notranslate"><span class="pre">Security</span></code> and <code class="docutils literal notranslate"><span class="pre">ServiceHealth</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">level</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The severity level of the event. Possible values are <code class="docutils literal notranslate"><span class="pre">Verbose</span></code>, <code class="docutils literal notranslate"><span class="pre">Informational</span></code>, <code class="docutils literal notranslate"><span class="pre">Warning</span></code>, <code class="docutils literal notranslate"><span class="pre">Error</span></code>, and <code class="docutils literal notranslate"><span class="pre">Critical</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">operationName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Resource Manager Role-Based Access Control operation name. Supported operation should be of the form: <code class="docutils literal notranslate"><span class="pre">&lt;resourceProvider&gt;/&lt;resourceType&gt;/&lt;operation&gt;</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resourceGroup</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of resource group monitored by the activity log alert.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resource_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The specific resource monitored by the activity log alert. It should be within one of the <code class="docutils literal notranslate"><span class="pre">scopes</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resourceProvider</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the resource provider monitored by the activity log alert.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resourceType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The resource type monitored by the activity log alert.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">status</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The status of the event. For example, <code class="docutils literal notranslate"><span class="pre">Started</span></code>, <code class="docutils literal notranslate"><span class="pre">Failed</span></code>, or <code class="docutils literal notranslate"><span class="pre">Succeeded</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subStatus</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The sub status of the event.</p></li>
 </ul>
 </dd></dl>
 
@@ -606,65 +606,65 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <p>The <strong>notification</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">email</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">email</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">email</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">customEmails</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sendToSubscriptionAdministrator</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sendToSubscriptionCoAdministrator</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">customEmails</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies a list of custom email addresses to which the email notifications will be sent.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sendToSubscriptionAdministrator</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should email notifications be sent to the subscription administrator? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sendToSubscriptionCoAdministrator</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should email notifications be sent to the subscription co-administrator? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">webhooks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">webhooks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">webhook</span></code> blocks as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">properties</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">service_uri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">properties</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A map of settings.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">service_uri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The HTTPS URI which should receive scale notifications.</p></li>
 </ul>
 </li>
 </ul>
 <p>The <strong>profiles</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">capacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">capacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">capacity</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">default</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maximum</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">minimum</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">default</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of instances that are available for scaling if metrics are not available for evaluation. The default is only used if the current instance count is lower than the default. Valid values are between <code class="docutils literal notranslate"><span class="pre">0</span></code> and <code class="docutils literal notranslate"><span class="pre">1000</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maximum</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum number of instances for this resource. Valid values are between <code class="docutils literal notranslate"><span class="pre">0</span></code> and <code class="docutils literal notranslate"><span class="pre">1000</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minimum</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The minimum number of instances for this resource. Valid values are between <code class="docutils literal notranslate"><span class="pre">0</span></code> and <code class="docutils literal notranslate"><span class="pre">1000</span></code>.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">fixedDate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">fixedDate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">fixed_date</span></code> block as defined below. This cannot be specified if a <code class="docutils literal notranslate"><span class="pre">recurrence</span></code> block is specified.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">end</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">start</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">timezone</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">end</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the end date for the profile, formatted as an RFC3339 date string.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">start</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the start date for the profile, formatted as an RFC3339 date string.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timezone</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Time Zone of the <code class="docutils literal notranslate"><span class="pre">start</span></code> and <code class="docutils literal notranslate"><span class="pre">end</span></code> times. A list of <a class="reference external" href="https://msdn.microsoft.com/en-us/library/azure/dn931928.aspx">possible values can be found here</a>. Defaults to <code class="docutils literal notranslate"><span class="pre">UTC</span></code>.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the AutoScale Setting. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">recurrence</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the profile.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">recurrence</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">recurrence</span></code> block as defined below. This cannot be specified if a <code class="docutils literal notranslate"><span class="pre">fixed_date</span></code> block is specified.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">days</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">hours</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">minutes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">timezone</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">days</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of days that this profile takes effect on. Possible values include <code class="docutils literal notranslate"><span class="pre">Monday</span></code>, <code class="docutils literal notranslate"><span class="pre">Tuesday</span></code>, <code class="docutils literal notranslate"><span class="pre">Wednesday</span></code>, <code class="docutils literal notranslate"><span class="pre">Thursday</span></code>, <code class="docutils literal notranslate"><span class="pre">Friday</span></code>, <code class="docutils literal notranslate"><span class="pre">Saturday</span></code> and <code class="docutils literal notranslate"><span class="pre">Sunday</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hours</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - A list containing a single item, which specifies the Hour interval at which this recurrence should be triggered (in 24-hour time). Possible values are from <code class="docutils literal notranslate"><span class="pre">0</span></code> to <code class="docutils literal notranslate"><span class="pre">23</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minutes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - A list containing a single item which specifies the Minute interval at which this recurrence should be triggered.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timezone</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Time Zone used for the <code class="docutils literal notranslate"><span class="pre">hours</span></code> field. A list of <a class="reference external" href="https://msdn.microsoft.com/en-us/library/azure/dn931928.aspx">possible values can be found here</a>. Defaults to <code class="docutils literal notranslate"><span class="pre">UTC</span></code>.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">rules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">rules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more (up to 10) <code class="docutils literal notranslate"><span class="pre">rule</span></code> blocks as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">metricTrigger</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">metricTrigger</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">metric_trigger</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">metricName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">metricResourceId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">statistic</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">threshold</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">timeAggregation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">timeGrain</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">time_window</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">metricName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the metric that defines what the rule monitors, such as <code class="docutils literal notranslate"><span class="pre">Percentage</span> <span class="pre">CPU</span></code> for <code class="docutils literal notranslate"><span class="pre">Virtual</span> <span class="pre">Machine</span> <span class="pre">Scale</span> <span class="pre">Sets</span></code> and <code class="docutils literal notranslate"><span class="pre">CpuPercentage</span></code> for <code class="docutils literal notranslate"><span class="pre">App</span> <span class="pre">Service</span> <span class="pre">Plan</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">metricResourceId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Resource which the Rule monitors.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the operator used to compare the metric data and threshold. Possible values are: <code class="docutils literal notranslate"><span class="pre">Equals</span></code>, <code class="docutils literal notranslate"><span class="pre">NotEquals</span></code>, <code class="docutils literal notranslate"><span class="pre">GreaterThan</span></code>, <code class="docutils literal notranslate"><span class="pre">GreaterThanOrEqual</span></code>, <code class="docutils literal notranslate"><span class="pre">LessThan</span></code>, <code class="docutils literal notranslate"><span class="pre">LessThanOrEqual</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">statistic</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies how the metrics from multiple instances are combined. Possible values are <code class="docutils literal notranslate"><span class="pre">Average</span></code>, <code class="docutils literal notranslate"><span class="pre">Min</span></code> and <code class="docutils literal notranslate"><span class="pre">Max</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">threshold</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the threshold of the metric that triggers the scale action.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeAggregation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies how the data that’s collected should be combined over time. Possible values include <code class="docutils literal notranslate"><span class="pre">Average</span></code>, <code class="docutils literal notranslate"><span class="pre">Count</span></code>, <code class="docutils literal notranslate"><span class="pre">Maximum</span></code>, <code class="docutils literal notranslate"><span class="pre">Minimum</span></code>, <code class="docutils literal notranslate"><span class="pre">Last</span></code> and <code class="docutils literal notranslate"><span class="pre">Total</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Average</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeGrain</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the granularity of metrics that the rule monitors, which must be one of the pre-defined values returned from the metric definitions for the metric. This value must be between 1 minute and 12 hours an be formatted as an ISO 8601 string.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">time_window</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the time range for which data is collected, which must be greater than the delay in metric collection (which varies from resource to resource). This value must be between 5 minutes and 12 hours and be formatted as an ISO 8601 string.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">scaleAction</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">scaleAction</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">scale_action</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">cooldown</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">direction</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cooldown</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The amount of time to wait since the last scaling action before this action occurs. Must be between 1 minute and 1 week and formatted as a ISO 8601 string.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">direction</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The scale direction. Possible values are <code class="docutils literal notranslate"><span class="pre">Increase</span></code> and <code class="docutils literal notranslate"><span class="pre">Decrease</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of action that should occur. Possible values are <code class="docutils literal notranslate"><span class="pre">ChangeCount</span></code>, <code class="docutils literal notranslate"><span class="pre">ExactCount</span></code> and <code class="docutils literal notranslate"><span class="pre">PercentChangeCount</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of instances involved in the scaling action. Defaults to <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p></li>
 </ul>
 </li>
 </ul>
@@ -693,17 +693,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">notification</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.AutoscaleSetting.notification" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies a <code class="docutils literal notranslate"><span class="pre">notification</span></code> block as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">email</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">email</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A <code class="docutils literal notranslate"><span class="pre">email</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">customEmails</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sendToSubscriptionAdministrator</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sendToSubscriptionCoAdministrator</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">customEmails</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Specifies a list of custom email addresses to which the email notifications will be sent.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sendToSubscriptionAdministrator</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Should email notifications be sent to the subscription administrator? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sendToSubscriptionCoAdministrator</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Should email notifications be sent to the subscription co-administrator? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">webhooks</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">webhooks</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">webhook</span></code> blocks as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">properties</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">service_uri</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">properties</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A map of settings.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">service_uri</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The HTTPS URI which should receive scale notifications.</p></li>
 </ul>
 </li>
 </ul>
@@ -714,49 +714,49 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">profiles</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.AutoscaleSetting.profiles" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specifies one or more (up to 20) <code class="docutils literal notranslate"><span class="pre">profile</span></code> blocks as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">capacity</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">capacity</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A <code class="docutils literal notranslate"><span class="pre">capacity</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">default</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maximum</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">minimum</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">default</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of instances that are available for scaling if metrics are not available for evaluation. The default is only used if the current instance count is lower than the default. Valid values are between <code class="docutils literal notranslate"><span class="pre">0</span></code> and <code class="docutils literal notranslate"><span class="pre">1000</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maximum</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The maximum number of instances for this resource. Valid values are between <code class="docutils literal notranslate"><span class="pre">0</span></code> and <code class="docutils literal notranslate"><span class="pre">1000</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minimum</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The minimum number of instances for this resource. Valid values are between <code class="docutils literal notranslate"><span class="pre">0</span></code> and <code class="docutils literal notranslate"><span class="pre">1000</span></code>.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">fixedDate</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">fixedDate</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A <code class="docutils literal notranslate"><span class="pre">fixed_date</span></code> block as defined below. This cannot be specified if a <code class="docutils literal notranslate"><span class="pre">recurrence</span></code> block is specified.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">end</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">start</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">timezone</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">end</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the end date for the profile, formatted as an RFC3339 date string.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">start</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the start date for the profile, formatted as an RFC3339 date string.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timezone</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Time Zone of the <code class="docutils literal notranslate"><span class="pre">start</span></code> and <code class="docutils literal notranslate"><span class="pre">end</span></code> times. A list of <a class="reference external" href="https://msdn.microsoft.com/en-us/library/azure/dn931928.aspx">possible values can be found here</a>. Defaults to <code class="docutils literal notranslate"><span class="pre">UTC</span></code>.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the AutoScale Setting. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">recurrence</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the name of the profile.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">recurrence</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A <code class="docutils literal notranslate"><span class="pre">recurrence</span></code> block as defined below. This cannot be specified if a <code class="docutils literal notranslate"><span class="pre">fixed_date</span></code> block is specified.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">days</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">hours</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">minutes</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">timezone</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">days</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of days that this profile takes effect on. Possible values include <code class="docutils literal notranslate"><span class="pre">Monday</span></code>, <code class="docutils literal notranslate"><span class="pre">Tuesday</span></code>, <code class="docutils literal notranslate"><span class="pre">Wednesday</span></code>, <code class="docutils literal notranslate"><span class="pre">Thursday</span></code>, <code class="docutils literal notranslate"><span class="pre">Friday</span></code>, <code class="docutils literal notranslate"><span class="pre">Saturday</span></code> and <code class="docutils literal notranslate"><span class="pre">Sunday</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hours</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - A list containing a single item, which specifies the Hour interval at which this recurrence should be triggered (in 24-hour time). Possible values are from <code class="docutils literal notranslate"><span class="pre">0</span></code> to <code class="docutils literal notranslate"><span class="pre">23</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minutes</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - A list containing a single item which specifies the Minute interval at which this recurrence should be triggered.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timezone</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Time Zone used for the <code class="docutils literal notranslate"><span class="pre">hours</span></code> field. A list of <a class="reference external" href="https://msdn.microsoft.com/en-us/library/azure/dn931928.aspx">possible values can be found here</a>. Defaults to <code class="docutils literal notranslate"><span class="pre">UTC</span></code>.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">rules</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">rules</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - One or more (up to 10) <code class="docutils literal notranslate"><span class="pre">rule</span></code> blocks as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">metricTrigger</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">metricTrigger</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A <code class="docutils literal notranslate"><span class="pre">metric_trigger</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">metricName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">metricResourceId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">statistic</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">threshold</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">timeAggregation</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">timeGrain</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">time_window</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">metricName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the metric that defines what the rule monitors, such as <code class="docutils literal notranslate"><span class="pre">Percentage</span> <span class="pre">CPU</span></code> for <code class="docutils literal notranslate"><span class="pre">Virtual</span> <span class="pre">Machine</span> <span class="pre">Scale</span> <span class="pre">Sets</span></code> and <code class="docutils literal notranslate"><span class="pre">CpuPercentage</span></code> for <code class="docutils literal notranslate"><span class="pre">App</span> <span class="pre">Service</span> <span class="pre">Plan</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">metricResourceId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the Resource which the Rule monitors.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the operator used to compare the metric data and threshold. Possible values are: <code class="docutils literal notranslate"><span class="pre">Equals</span></code>, <code class="docutils literal notranslate"><span class="pre">NotEquals</span></code>, <code class="docutils literal notranslate"><span class="pre">GreaterThan</span></code>, <code class="docutils literal notranslate"><span class="pre">GreaterThanOrEqual</span></code>, <code class="docutils literal notranslate"><span class="pre">LessThan</span></code>, <code class="docutils literal notranslate"><span class="pre">LessThanOrEqual</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">statistic</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies how the metrics from multiple instances are combined. Possible values are <code class="docutils literal notranslate"><span class="pre">Average</span></code>, <code class="docutils literal notranslate"><span class="pre">Min</span></code> and <code class="docutils literal notranslate"><span class="pre">Max</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">threshold</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Specifies the threshold of the metric that triggers the scale action.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeAggregation</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies how the data that’s collected should be combined over time. Possible values include <code class="docutils literal notranslate"><span class="pre">Average</span></code>, <code class="docutils literal notranslate"><span class="pre">Count</span></code>, <code class="docutils literal notranslate"><span class="pre">Maximum</span></code>, <code class="docutils literal notranslate"><span class="pre">Minimum</span></code>, <code class="docutils literal notranslate"><span class="pre">Last</span></code> and <code class="docutils literal notranslate"><span class="pre">Total</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Average</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeGrain</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the granularity of metrics that the rule monitors, which must be one of the pre-defined values returned from the metric definitions for the metric. This value must be between 1 minute and 12 hours an be formatted as an ISO 8601 string.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">time_window</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the time range for which data is collected, which must be greater than the delay in metric collection (which varies from resource to resource). This value must be between 5 minutes and 12 hours and be formatted as an ISO 8601 string.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">scaleAction</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">scaleAction</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A <code class="docutils literal notranslate"><span class="pre">scale_action</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">cooldown</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">direction</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cooldown</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The amount of time to wait since the last scaling action before this action occurs. Must be between 1 minute and 1 week and formatted as a ISO 8601 string.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">direction</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The scale direction. Possible values are <code class="docutils literal notranslate"><span class="pre">Increase</span></code> and <code class="docutils literal notranslate"><span class="pre">Decrease</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The type of action that should occur. Possible values are <code class="docutils literal notranslate"><span class="pre">ChangeCount</span></code>, <code class="docutils literal notranslate"><span class="pre">ExactCount</span></code> and <code class="docutils literal notranslate"><span class="pre">PercentChangeCount</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of instances involved in the scaling action. Defaults to <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p></li>
 </ul>
 </li>
 </ul>
@@ -806,65 +806,65 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>notification</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">email</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">email</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">email</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">customEmails</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sendToSubscriptionAdministrator</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sendToSubscriptionCoAdministrator</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">customEmails</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies a list of custom email addresses to which the email notifications will be sent.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sendToSubscriptionAdministrator</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should email notifications be sent to the subscription administrator? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sendToSubscriptionCoAdministrator</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should email notifications be sent to the subscription co-administrator? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">webhooks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">webhooks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">webhook</span></code> blocks as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">properties</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">service_uri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">properties</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A map of settings.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">service_uri</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The HTTPS URI which should receive scale notifications.</p></li>
 </ul>
 </li>
 </ul>
 <p>The <strong>profiles</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">capacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">capacity</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">capacity</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">default</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maximum</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">minimum</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">default</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of instances that are available for scaling if metrics are not available for evaluation. The default is only used if the current instance count is lower than the default. Valid values are between <code class="docutils literal notranslate"><span class="pre">0</span></code> and <code class="docutils literal notranslate"><span class="pre">1000</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maximum</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum number of instances for this resource. Valid values are between <code class="docutils literal notranslate"><span class="pre">0</span></code> and <code class="docutils literal notranslate"><span class="pre">1000</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minimum</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The minimum number of instances for this resource. Valid values are between <code class="docutils literal notranslate"><span class="pre">0</span></code> and <code class="docutils literal notranslate"><span class="pre">1000</span></code>.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">fixedDate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">fixedDate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">fixed_date</span></code> block as defined below. This cannot be specified if a <code class="docutils literal notranslate"><span class="pre">recurrence</span></code> block is specified.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">end</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">start</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">timezone</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">end</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the end date for the profile, formatted as an RFC3339 date string.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">start</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the start date for the profile, formatted as an RFC3339 date string.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timezone</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Time Zone of the <code class="docutils literal notranslate"><span class="pre">start</span></code> and <code class="docutils literal notranslate"><span class="pre">end</span></code> times. A list of <a class="reference external" href="https://msdn.microsoft.com/en-us/library/azure/dn931928.aspx">possible values can be found here</a>. Defaults to <code class="docutils literal notranslate"><span class="pre">UTC</span></code>.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the AutoScale Setting. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">recurrence</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the profile.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">recurrence</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">recurrence</span></code> block as defined below. This cannot be specified if a <code class="docutils literal notranslate"><span class="pre">fixed_date</span></code> block is specified.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">days</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">hours</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">minutes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">timezone</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">days</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of days that this profile takes effect on. Possible values include <code class="docutils literal notranslate"><span class="pre">Monday</span></code>, <code class="docutils literal notranslate"><span class="pre">Tuesday</span></code>, <code class="docutils literal notranslate"><span class="pre">Wednesday</span></code>, <code class="docutils literal notranslate"><span class="pre">Thursday</span></code>, <code class="docutils literal notranslate"><span class="pre">Friday</span></code>, <code class="docutils literal notranslate"><span class="pre">Saturday</span></code> and <code class="docutils literal notranslate"><span class="pre">Sunday</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hours</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - A list containing a single item, which specifies the Hour interval at which this recurrence should be triggered (in 24-hour time). Possible values are from <code class="docutils literal notranslate"><span class="pre">0</span></code> to <code class="docutils literal notranslate"><span class="pre">23</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minutes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - A list containing a single item which specifies the Minute interval at which this recurrence should be triggered.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timezone</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Time Zone used for the <code class="docutils literal notranslate"><span class="pre">hours</span></code> field. A list of <a class="reference external" href="https://msdn.microsoft.com/en-us/library/azure/dn931928.aspx">possible values can be found here</a>. Defaults to <code class="docutils literal notranslate"><span class="pre">UTC</span></code>.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">rules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">rules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more (up to 10) <code class="docutils literal notranslate"><span class="pre">rule</span></code> blocks as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">metricTrigger</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">metricTrigger</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">metric_trigger</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">metricName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">metricResourceId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">statistic</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">threshold</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">timeAggregation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">timeGrain</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">time_window</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">metricName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the metric that defines what the rule monitors, such as <code class="docutils literal notranslate"><span class="pre">Percentage</span> <span class="pre">CPU</span></code> for <code class="docutils literal notranslate"><span class="pre">Virtual</span> <span class="pre">Machine</span> <span class="pre">Scale</span> <span class="pre">Sets</span></code> and <code class="docutils literal notranslate"><span class="pre">CpuPercentage</span></code> for <code class="docutils literal notranslate"><span class="pre">App</span> <span class="pre">Service</span> <span class="pre">Plan</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">metricResourceId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Resource which the Rule monitors.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the operator used to compare the metric data and threshold. Possible values are: <code class="docutils literal notranslate"><span class="pre">Equals</span></code>, <code class="docutils literal notranslate"><span class="pre">NotEquals</span></code>, <code class="docutils literal notranslate"><span class="pre">GreaterThan</span></code>, <code class="docutils literal notranslate"><span class="pre">GreaterThanOrEqual</span></code>, <code class="docutils literal notranslate"><span class="pre">LessThan</span></code>, <code class="docutils literal notranslate"><span class="pre">LessThanOrEqual</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">statistic</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies how the metrics from multiple instances are combined. Possible values are <code class="docutils literal notranslate"><span class="pre">Average</span></code>, <code class="docutils literal notranslate"><span class="pre">Min</span></code> and <code class="docutils literal notranslate"><span class="pre">Max</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">threshold</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the threshold of the metric that triggers the scale action.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeAggregation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies how the data that’s collected should be combined over time. Possible values include <code class="docutils literal notranslate"><span class="pre">Average</span></code>, <code class="docutils literal notranslate"><span class="pre">Count</span></code>, <code class="docutils literal notranslate"><span class="pre">Maximum</span></code>, <code class="docutils literal notranslate"><span class="pre">Minimum</span></code>, <code class="docutils literal notranslate"><span class="pre">Last</span></code> and <code class="docutils literal notranslate"><span class="pre">Total</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Average</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeGrain</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the granularity of metrics that the rule monitors, which must be one of the pre-defined values returned from the metric definitions for the metric. This value must be between 1 minute and 12 hours an be formatted as an ISO 8601 string.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">time_window</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the time range for which data is collected, which must be greater than the delay in metric collection (which varies from resource to resource). This value must be between 5 minutes and 12 hours and be formatted as an ISO 8601 string.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">scaleAction</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">scaleAction</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">scale_action</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">cooldown</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">direction</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cooldown</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The amount of time to wait since the last scaling action before this action occurs. Must be between 1 minute and 1 week and formatted as a ISO 8601 string.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">direction</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The scale direction. Possible values are <code class="docutils literal notranslate"><span class="pre">Increase</span></code> and <code class="docutils literal notranslate"><span class="pre">Decrease</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of action that should occur. Possible values are <code class="docutils literal notranslate"><span class="pre">ChangeCount</span></code>, <code class="docutils literal notranslate"><span class="pre">ExactCount</span></code> and <code class="docutils literal notranslate"><span class="pre">PercentChangeCount</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of instances involved in the scaling action. Defaults to <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p></li>
 </ul>
 </li>
 </ul>
@@ -926,6 +926,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd></dd></dl>
 
 <dl class="class">
+<dt id="pulumi_azure.monitoring.AwaitableGetScheduledQueryRulesAlertResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.monitoring.</code><code class="sig-name descname">AwaitableGetScheduledQueryRulesAlertResult</code><span class="sig-paren">(</span><em class="sig-param">actions=None</em>, <em class="sig-param">authorized_resource_ids=None</em>, <em class="sig-param">data_source_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">frequency=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">query=None</em>, <em class="sig-param">query_type=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">severity=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">throttling=None</em>, <em class="sig-param">time_window=None</em>, <em class="sig-param">triggers=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.AwaitableGetScheduledQueryRulesAlertResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_azure.monitoring.AwaitableGetScheduledQueryRulesLogResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.monitoring.</code><code class="sig-name descname">AwaitableGetScheduledQueryRulesLogResult</code><span class="sig-paren">(</span><em class="sig-param">authorized_resource_ids=None</em>, <em class="sig-param">criterias=None</em>, <em class="sig-param">data_source_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.AwaitableGetScheduledQueryRulesLogResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_azure.monitoring.DiagnosticSetting">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.monitoring.</code><code class="sig-name descname">DiagnosticSetting</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">eventhub_authorization_rule_id=None</em>, <em class="sig-param">eventhub_name=None</em>, <em class="sig-param">log_analytics_destination_type=None</em>, <em class="sig-param">log_analytics_workspace_id=None</em>, <em class="sig-param">logs=None</em>, <em class="sig-param">metrics=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">storage_account_id=None</em>, <em class="sig-param">target_resource_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.DiagnosticSetting" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Diagnostic Setting for an existing Resource.</p>
@@ -951,23 +961,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <p>The <strong>logs</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">category</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">retention_policy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">category</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of a Diagnostic Log Category for this Resource.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is this Diagnostic Log enabled? Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">retention_policy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">retention_policy</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">days</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">days</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of days for which this Retention Policy should apply.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is this Retention Policy enabled?</p></li>
 </ul>
 </li>
 </ul>
 <p>The <strong>metrics</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">category</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">retention_policy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">category</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of a Diagnostic Metric Category for this Resource.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is this Diagnostic Metric enabled? Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">retention_policy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">retention_policy</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">days</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">days</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of days for which this Retention Policy should apply.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is this Retention Policy enabled?</p></li>
 </ul>
 </li>
 </ul>
@@ -1000,12 +1010,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">logs</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.DiagnosticSetting.logs" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">log</span></code> blocks as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">category</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">retention_policy</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">category</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of a Diagnostic Log Category for this Resource.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Is this Diagnostic Log enabled? Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">retention_policy</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A <code class="docutils literal notranslate"><span class="pre">retention_policy</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">days</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">days</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of days for which this Retention Policy should apply.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Is this Retention Policy enabled?</p></li>
 </ul>
 </li>
 </ul>
@@ -1016,12 +1026,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">metrics</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.DiagnosticSetting.metrics" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">metric</span></code> blocks as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">category</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">retention_policy</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">category</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of a Diagnostic Metric Category for this Resource.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Is this Diagnostic Metric enabled? Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">retention_policy</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A <code class="docutils literal notranslate"><span class="pre">retention_policy</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">days</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">days</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of days for which this Retention Policy should apply.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Is this Retention Policy enabled?</p></li>
 </ul>
 </li>
 </ul>
@@ -1070,23 +1080,23 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>logs</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">category</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">retention_policy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">category</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of a Diagnostic Log Category for this Resource.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is this Diagnostic Log enabled? Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">retention_policy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">retention_policy</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">days</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">days</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of days for which this Retention Policy should apply.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is this Retention Policy enabled?</p></li>
 </ul>
 </li>
 </ul>
 <p>The <strong>metrics</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">category</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">retention_policy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">category</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of a Diagnostic Metric Category for this Resource.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is this Diagnostic Metric enabled? Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">retention_policy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">retention_policy</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">days</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">days</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of days for which this Retention Policy should apply.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is this Retention Policy enabled?</p></li>
 </ul>
 </li>
 </ul>
@@ -1281,6 +1291,126 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_azure.monitoring.GetScheduledQueryRulesAlertResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.monitoring.</code><code class="sig-name descname">GetScheduledQueryRulesAlertResult</code><span class="sig-paren">(</span><em class="sig-param">actions=None</em>, <em class="sig-param">authorized_resource_ids=None</em>, <em class="sig-param">data_source_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">frequency=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">query=None</em>, <em class="sig-param">query_type=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">severity=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">throttling=None</em>, <em class="sig-param">time_window=None</em>, <em class="sig-param">triggers=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.GetScheduledQueryRulesAlertResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getScheduledQueryRulesAlert.</p>
+<dl class="attribute">
+<dt id="pulumi_azure.monitoring.GetScheduledQueryRulesAlertResult.actions">
+<code class="sig-name descname">actions</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.GetScheduledQueryRulesAlertResult.actions" title="Permalink to this definition">¶</a></dt>
+<dd><p>An <code class="docutils literal notranslate"><span class="pre">action</span></code> block as defined below.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.monitoring.GetScheduledQueryRulesAlertResult.authorized_resource_ids">
+<code class="sig-name descname">authorized_resource_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.GetScheduledQueryRulesAlertResult.authorized_resource_ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of Resource IDs referred into query.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.monitoring.GetScheduledQueryRulesAlertResult.data_source_id">
+<code class="sig-name descname">data_source_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.GetScheduledQueryRulesAlertResult.data_source_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The resource URI over which log search query is to be run.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.monitoring.GetScheduledQueryRulesAlertResult.description">
+<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.GetScheduledQueryRulesAlertResult.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>The description of the scheduled query rule.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.monitoring.GetScheduledQueryRulesAlertResult.enabled">
+<code class="sig-name descname">enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.GetScheduledQueryRulesAlertResult.enabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether this scheduled query rule is enabled.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.monitoring.GetScheduledQueryRulesAlertResult.frequency">
+<code class="sig-name descname">frequency</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.GetScheduledQueryRulesAlertResult.frequency" title="Permalink to this definition">¶</a></dt>
+<dd><p>Frequency at which rule condition should be evaluated.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.monitoring.GetScheduledQueryRulesAlertResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.GetScheduledQueryRulesAlertResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.monitoring.GetScheduledQueryRulesAlertResult.query">
+<code class="sig-name descname">query</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.GetScheduledQueryRulesAlertResult.query" title="Permalink to this definition">¶</a></dt>
+<dd><p>Log search query.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.monitoring.GetScheduledQueryRulesAlertResult.severity">
+<code class="sig-name descname">severity</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.GetScheduledQueryRulesAlertResult.severity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Severity of the alert.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.monitoring.GetScheduledQueryRulesAlertResult.throttling">
+<code class="sig-name descname">throttling</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.GetScheduledQueryRulesAlertResult.throttling" title="Permalink to this definition">¶</a></dt>
+<dd><p>Time for which alerts should be throttled or suppressed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.monitoring.GetScheduledQueryRulesAlertResult.time_window">
+<code class="sig-name descname">time_window</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.GetScheduledQueryRulesAlertResult.time_window" title="Permalink to this definition">¶</a></dt>
+<dd><p>Time window for which data needs to be fetched for query.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.monitoring.GetScheduledQueryRulesAlertResult.triggers">
+<code class="sig-name descname">triggers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.GetScheduledQueryRulesAlertResult.triggers" title="Permalink to this definition">¶</a></dt>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">trigger</span></code> block as defined below.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_azure.monitoring.GetScheduledQueryRulesLogResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.monitoring.</code><code class="sig-name descname">GetScheduledQueryRulesLogResult</code><span class="sig-paren">(</span><em class="sig-param">authorized_resource_ids=None</em>, <em class="sig-param">criterias=None</em>, <em class="sig-param">data_source_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.GetScheduledQueryRulesLogResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getScheduledQueryRulesLog.</p>
+<dl class="attribute">
+<dt id="pulumi_azure.monitoring.GetScheduledQueryRulesLogResult.criterias">
+<code class="sig-name descname">criterias</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.GetScheduledQueryRulesLogResult.criterias" title="Permalink to this definition">¶</a></dt>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">criteria</span></code> block as defined below.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.monitoring.GetScheduledQueryRulesLogResult.data_source_id">
+<code class="sig-name descname">data_source_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.GetScheduledQueryRulesLogResult.data_source_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The resource URI over which log search query is to be run.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.monitoring.GetScheduledQueryRulesLogResult.description">
+<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.GetScheduledQueryRulesLogResult.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>The description of the scheduled query rule.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.monitoring.GetScheduledQueryRulesLogResult.enabled">
+<code class="sig-name descname">enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.GetScheduledQueryRulesLogResult.enabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether this scheduled query rule is enabled.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.monitoring.GetScheduledQueryRulesLogResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.GetScheduledQueryRulesLogResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.monitoring.GetScheduledQueryRulesLogResult.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.GetScheduledQueryRulesLogResult.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the dimension.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_azure.monitoring.LogProfile">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.monitoring.</code><code class="sig-name descname">LogProfile</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">categories=None</em>, <em class="sig-param">locations=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">retention_policy=None</em>, <em class="sig-param">servicebus_rule_id=None</em>, <em class="sig-param">storage_account_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.LogProfile" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a <a class="reference external" href="https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-overview-activity-logs#export-the-activity-log-with-a-log-profile">Log Profile</a>. A Log Profile configures how Activity Logs are exported.</p>
@@ -1305,8 +1435,8 @@ new resource to be created.</p></li>
 </dl>
 <p>The <strong>retention_policy</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">days</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">days</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of days for the retention policy. Defaults to 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - A boolean value to indicate whether the retention policy is enabled.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_azure.monitoring.LogProfile.categories">
@@ -1332,8 +1462,8 @@ new resource to be created.</p>
 <code class="sig-name descname">retention_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.LogProfile.retention_policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">retention_policy</span></code> block as documented below. A retention policy for how long Activity Logs are retained in the storage account.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">days</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">days</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of days for the retention policy. Defaults to 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - A boolean value to indicate whether the retention policy is enabled.</p></li>
 </ul>
 </dd></dl>
 
@@ -1372,8 +1502,8 @@ new resource to be created.</p></li>
 </dl>
 <p>The <strong>retention_policy</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">days</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">days</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of days for the retention policy. Defaults to 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - A boolean value to indicate whether the retention policy is enabled.</p></li>
 </ul>
 </dd></dl>
 
@@ -1444,31 +1574,31 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <p>The <strong>actions</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">actionGroupId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">webhookProperties</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">actionGroupId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Action Group can be sourced from the <code class="docutils literal notranslate"><span class="pre">monitoring.ActionGroup</span></code> resource</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">webhookProperties</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The map of custom string properties to include with the post operation. These data are appended to the webhook payload.</p></li>
 </ul>
 <p>The <strong>criterias</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">aggregation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">dimensions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">aggregation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The statistic that runs over the metric values. Possible values are <code class="docutils literal notranslate"><span class="pre">Average</span></code>, <code class="docutils literal notranslate"><span class="pre">Count</span></code>, <code class="docutils literal notranslate"><span class="pre">Minimum</span></code>, <code class="docutils literal notranslate"><span class="pre">Maximum</span></code> and <code class="docutils literal notranslate"><span class="pre">Total</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dimensions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">dimension</span></code> blocks as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Metric Alert. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - One of the dimension names.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The dimension operator. Possible values are <code class="docutils literal notranslate"><span class="pre">Include</span></code> and <code class="docutils literal notranslate"><span class="pre">Exclude</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The list of dimension values.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">metricName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">metricNamespace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">threshold</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">metricName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - One of the metric names to be monitored.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">metricNamespace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - One of the metric namespaces to be monitored.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The criteria operator. Possible values are <code class="docutils literal notranslate"><span class="pre">Equals</span></code>, <code class="docutils literal notranslate"><span class="pre">NotEquals</span></code>, <code class="docutils literal notranslate"><span class="pre">GreaterThan</span></code>, <code class="docutils literal notranslate"><span class="pre">GreaterThanOrEqual</span></code>, <code class="docutils literal notranslate"><span class="pre">LessThan</span></code> and <code class="docutils literal notranslate"><span class="pre">LessThanOrEqual</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">threshold</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The criteria threshold value that activates the alert.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_azure.monitoring.MetricAlert.actions">
 <code class="sig-name descname">actions</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.MetricAlert.actions" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">action</span></code> blocks as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">actionGroupId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">webhookProperties</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">actionGroupId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the Action Group can be sourced from the <code class="docutils literal notranslate"><span class="pre">monitoring.ActionGroup</span></code> resource</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">webhookProperties</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The map of custom string properties to include with the post operation. These data are appended to the webhook payload.</p></li>
 </ul>
 </dd></dl>
 
@@ -1483,18 +1613,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">criterias</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.MetricAlert.criterias" title="Permalink to this definition">¶</a></dt>
 <dd><p>One or more <code class="docutils literal notranslate"><span class="pre">criteria</span></code> blocks as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">aggregation</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">dimensions</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">aggregation</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The statistic that runs over the metric values. Possible values are <code class="docutils literal notranslate"><span class="pre">Average</span></code>, <code class="docutils literal notranslate"><span class="pre">Count</span></code>, <code class="docutils literal notranslate"><span class="pre">Minimum</span></code>, <code class="docutils literal notranslate"><span class="pre">Maximum</span></code> and <code class="docutils literal notranslate"><span class="pre">Total</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dimensions</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">dimension</span></code> blocks as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the Metric Alert. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - One of the dimension names.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The dimension operator. Possible values are <code class="docutils literal notranslate"><span class="pre">Include</span></code> and <code class="docutils literal notranslate"><span class="pre">Exclude</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The list of dimension values.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">metricName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">metricNamespace</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">threshold</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">metricName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - One of the metric names to be monitored.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">metricNamespace</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - One of the metric namespaces to be monitored.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The criteria operator. Possible values are <code class="docutils literal notranslate"><span class="pre">Equals</span></code>, <code class="docutils literal notranslate"><span class="pre">NotEquals</span></code>, <code class="docutils literal notranslate"><span class="pre">GreaterThan</span></code>, <code class="docutils literal notranslate"><span class="pre">GreaterThanOrEqual</span></code>, <code class="docutils literal notranslate"><span class="pre">LessThan</span></code> and <code class="docutils literal notranslate"><span class="pre">LessThanOrEqual</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">threshold</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The criteria threshold value that activates the alert.</p></li>
 </ul>
 </dd></dl>
 
@@ -1580,23 +1710,23 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>actions</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">actionGroupId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">webhookProperties</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">actionGroupId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Action Group can be sourced from the <code class="docutils literal notranslate"><span class="pre">monitoring.ActionGroup</span></code> resource</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">webhookProperties</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The map of custom string properties to include with the post operation. These data are appended to the webhook payload.</p></li>
 </ul>
 <p>The <strong>criterias</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">aggregation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">dimensions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">aggregation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The statistic that runs over the metric values. Possible values are <code class="docutils literal notranslate"><span class="pre">Average</span></code>, <code class="docutils literal notranslate"><span class="pre">Count</span></code>, <code class="docutils literal notranslate"><span class="pre">Minimum</span></code>, <code class="docutils literal notranslate"><span class="pre">Maximum</span></code> and <code class="docutils literal notranslate"><span class="pre">Total</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dimensions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">dimension</span></code> blocks as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Metric Alert. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - One of the dimension names.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The dimension operator. Possible values are <code class="docutils literal notranslate"><span class="pre">Include</span></code> and <code class="docutils literal notranslate"><span class="pre">Exclude</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The list of dimension values.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">metricName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">metricNamespace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">threshold</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">metricName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - One of the metric names to be monitored.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">metricNamespace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - One of the metric namespaces to be monitored.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The criteria operator. Possible values are <code class="docutils literal notranslate"><span class="pre">Equals</span></code>, <code class="docutils literal notranslate"><span class="pre">NotEquals</span></code>, <code class="docutils literal notranslate"><span class="pre">GreaterThan</span></code>, <code class="docutils literal notranslate"><span class="pre">GreaterThanOrEqual</span></code>, <code class="docutils literal notranslate"><span class="pre">LessThan</span></code> and <code class="docutils literal notranslate"><span class="pre">LessThanOrEqual</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">threshold</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The criteria threshold value that activates the alert.</p></li>
 </ul>
 </dd></dl>
 
@@ -1679,7 +1809,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">metricColumn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">metricTriggerType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Evaluation operation for rule - ‘Equal’, ‘GreaterThan’ or ‘LessThan’.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">threshold</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Result or count threshold based on which rule should be triggered.  Values must be between 0 and 10000 inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">threshold</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The threshold of the metric trigger.    Values must be between 0 and 10000 inclusive.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Evaluation operation for rule - ‘Equal’, ‘GreaterThan’ or ‘LessThan’.</p></li>
@@ -1772,7 +1902,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">metricColumn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">metricTriggerType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Evaluation operation for rule - ‘Equal’, ‘GreaterThan’ or ‘LessThan’.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">threshold</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Result or count threshold based on which rule should be triggered.  Values must be between 0 and 10000 inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">threshold</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The threshold of the metric trigger.    Values must be between 0 and 10000 inclusive.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Evaluation operation for rule - ‘Equal’, ‘GreaterThan’ or ‘LessThan’.</p></li>
@@ -1820,7 +1950,7 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">metricColumn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">metricTriggerType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Evaluation operation for rule - ‘Equal’, ‘GreaterThan’ or ‘LessThan’.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">threshold</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Result or count threshold based on which rule should be triggered.  Values must be between 0 and 10000 inclusive.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">threshold</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The threshold of the metric trigger.    Values must be between 0 and 10000 inclusive.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">operator</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Evaluation operation for rule - ‘Equal’, ‘GreaterThan’ or ‘LessThan’.</p></li>
@@ -1882,7 +2012,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>data_source_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resource uri over which log search query is to be run.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the scheduled query rule.</p></li>
 <li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether this scheduled query rule is enabled.  Default is <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the dimension.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the scheduled query rule. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the scheduled query rule instance.</p></li>
 </ul>
 </dd>
@@ -1935,7 +2065,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.monitoring.ScheduledQueryRulesLog.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.monitoring.ScheduledQueryRulesLog.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>Name of the dimension.</p>
+<dd><p>The name of the scheduled query rule. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1959,7 +2089,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>data_source_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The resource uri over which log search query is to be run.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the scheduled query rule.</p></li>
 <li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether this scheduled query rule is enabled.  Default is <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the dimension.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the scheduled query rule. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the scheduled query rule instance.</p></li>
 </ul>
 </dd>
@@ -2056,6 +2186,40 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – Specifies the Name of the Log Profile.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_azure.monitoring.get_scheduled_query_rules_alert">
+<code class="sig-prename descclassname">pulumi_azure.monitoring.</code><code class="sig-name descname">get_scheduled_query_rules_alert</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.get_scheduled_query_rules_alert" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to access the properties of an AlertingAction scheduled query rule.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/monitor_scheduled_query_rules_alert.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/monitor_scheduled_query_rules_alert.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – Specifies the name of the scheduled query rule.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>str</em>) – Specifies the name of the resource group where the scheduled query rule is located.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_azure.monitoring.get_scheduled_query_rules_log">
+<code class="sig-prename descclassname">pulumi_azure.monitoring.</code><code class="sig-name descname">get_scheduled_query_rules_log</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.monitoring.get_scheduled_query_rules_log" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to access the properties of a LogToMetricAction scheduled query rule.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/monitor_scheduled_query_rules_log.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/monitor_scheduled_query_rules_log.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – Specifies the name of the scheduled query rule.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>str</em>) – Specifies the name of the resource group where the scheduled query rule is located.</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>

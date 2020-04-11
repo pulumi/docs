@@ -1,0 +1,482 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Dashboard
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Dashboard
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.NewRelic.Dashboard">
+  
+  <h1 id="Pulumi_NewRelic_Dashboard" data-uid="Pulumi.NewRelic.Dashboard" class="text-break">Class Dashboard
+  </h1>
+  <div class="markdown level0 summary"><p>Use this resource to create and manage New Relic dashboards.</p>
+<h2 id="attribute-refence">Attribute Refence</h2>
+<p>In addition to all arguments above, the following attributes are exported:</p>
+<ul>
+<li><code>dashboard_url</code> - The URL for viewing the dashboard.</li>
+</ul>
+<h3 id="nested-widget-blocks">Nested <code>widget</code> blocks</h3>
+<p>All nested <code>widget</code> blocks support the following common arguments:</p>
+<ul>
+<li><code>title</code> - (Required) A title for the widget.</li>
+<li><code>visualization</code> - (Required) How the widget visualizes data.  Valid values are <code>billboard</code>, <code>gauge</code>, <code>billboard_comparison</code>, <code>facet_bar_chart</code>, <code>faceted_line_chart</code>, <code>facet_pie_chart</code>, <code>facet_table</code>, <code>faceted_area_chart</code>, <code>heatmap</code>, <code>attribute_sheet</code>, <code>single_event</code>, <code>histogram</code>, <code>funnel</code>, <code>raw_json</code>, <code>event_feed</code>, <code>event_table</code>, <code>uniques_list</code>, <code>line_chart</code>, <code>comparison_line_chart</code>, <code>markdown</code>, and <code>metric_line_chart</code>.</li>
+<li><code>row</code> - (Required) Row position of widget from top left, starting at <code>1</code>.</li>
+<li><code>column</code> - (Required) Column position of widget from top left, starting at <code>1</code>.</li>
+<li><code>width</code> - (Optional) Width of the widget.  Valid values are <code>1</code> to <code>3</code> inclusive.  Defaults to <code>1</code>.</li>
+<li><code>height</code> - (Optional) Height of the widget.  Valid values are <code>1</code> to <code>3</code> inclusive.  Defaults to <code>1</code>.</li>
+<li><code>notes</code> - (Optional) Description of the widget.</li>
+</ul>
+<p>Each <code>visualization</code> type supports an additional set of arguments:</p>
+<ul>
+<li><code>billboard</code>, <code>billboard_comparison</code>:</li>
+<li><code>nrql</code> - (Required) Valid NRQL query string. See <a href="https://docs.newrelic.com/docs/insights/nrql-new-relic-query-language/using-nrql/introduction-nrql">Writing NRQL Queries</a> for help.</li>
+<li><code>threshold_red</code> - (Optional) Threshold above which the displayed value will be styled with a red color.</li>
+<li><code>threshold_yellow</code> - (Optional) Threshold above which the displayed value will be styled with a yellow color.</li>
+<li><code>gauge</code>:</li>
+<li><code>nrql</code> - (Required) Valid NRQL query string. See <a href="https://docs.newrelic.com/docs/insights/nrql-new-relic-query-language/using-nrql/introduction-nrql">Writing NRQL Queries</a> for help.</li>
+<li><code>threshold_red</code> - (Required) Threshold above which the displayed value will be styled with a red color.</li>
+<li><code>threshold_yellow</code> - (Optional) Threshold above which the displayed value will be styled with a yellow color.</li>
+<li><code>facet_bar_chart</code>, <code>facet_pie_chart</code>, <code>facet_table</code>, <code>faceted_area_chart</code>, <code>faceted_line_chart</code>, or <code>heatmap</code>:</li>
+<li><code>nrql</code> - (Required) Valid NRQL query string. See <a href="https://docs.newrelic.com/docs/insights/nrql-new-relic-query-language/using-nrql/introduction-nrql">Writing NRQL Queries</a> for help.</li>
+<li><code>drilldown_dashboard_id</code> - (Optional) The ID of a dashboard to link to from the widget's facets.</li>
+<li><code>attribute_sheet</code>, <code>comparison_line_chart</code>, <code>event_feed</code>, <code>event_table</code>, <code>funnel</code>, <code>histogram</code>, <code>line_chart</code>, <code>raw_json</code>, <code>single_event</code>, or <code>uniques_list</code>:</li>
+<li><code>nrql</code> - (Required) Valid NRQL query string. See <a href="https://docs.newrelic.com/docs/insights/nrql-new-relic-query-language/using-nrql/introduction-nrql">Writing NRQL Queries</a> for help.</li>
+<li><code>markdown</code>:</li>
+<li><code>source</code> - (Required) The markdown source to be rendered in the widget.</li>
+<li><code>metric_line_chart</code>:</li>
+<li><code>entity_ids</code> - (Required) A collection of entity ids to display data for.  These are typically application IDs.</li>
+<li><code>metric</code> - (Required) A nested block that describes a metric.  Nested <code>metric</code> blocks support the following arguments:
+<ul>
+<li><code>name</code> - (Required) The metric name to display.</li>
+<li><code>values</code> - (Required) The metric values to display.</li>
+</ul>
+</li>
+<li><code>duration</code> - (Required) The duration, in ms, of the time window represented in the chart.</li>
+<li><code>end_time</code> - (Optional) The end time of the time window represented in the chart in epoch time.  When not set, the time window will end at the current time.</li>
+<li><code>facet</code> - (Optional) Can be set to &quot;host&quot; to facet the metric data by host.</li>
+<li><code>limit</code> - (Optional) The limit of distinct data series to display.</li>
+<li><code>application_breakdown</code>:</li>
+<li><code>entity_ids</code> - (Required) A collection of entity IDs to display data. These are typically application IDs.</li>
+</ul>
+<h3 id="nested-filter-block">Nested <code>filter</code> block</h3>
+<p>The optional filter block supports the following arguments:</p>
+<ul>
+<li><code>event_types</code> - (Optional) A list of event types to enable filtering for.</li>
+<li><code>attributes</code> - (Optional) A list of attributes belonging to the specified event types to enable filtering for.</li>
+</ul>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/dashboard.html.markdown">https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/dashboard.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Dashboard</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.NewRelic.html">Pulumi.NewRelic</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.NewRelic.dll</h6>
+  <h5 id="Pulumi_NewRelic_Dashboard_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Dashboard : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/master/sdk/dotnet/Dashboard.cs/#L119">View Source</a>
+  </span>
+  <a id="Pulumi_NewRelic_Dashboard__ctor_" data-uid="Pulumi.NewRelic.Dashboard.#ctor*"></a>
+  <h4 id="Pulumi_NewRelic_Dashboard__ctor_System_String_Pulumi_NewRelic_DashboardArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.NewRelic.Dashboard.#ctor(System.String,Pulumi.NewRelic.DashboardArgs,System.Nullable{CustomResourceOptions})">Dashboard(String, DashboardArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Create a Dashboard resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Dashboard(string name, DashboardArgs args, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.NewRelic.DashboardArgs.html">DashboardArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/master/sdk/dotnet/Dashboard.cs/#L72">View Source</a>
+  </span>
+  <a id="Pulumi_NewRelic_Dashboard_DashboardUrl_" data-uid="Pulumi.NewRelic.Dashboard.DashboardUrl*"></a>
+  <h4 id="Pulumi_NewRelic_Dashboard_DashboardUrl" data-uid="Pulumi.NewRelic.Dashboard.DashboardUrl">DashboardUrl</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; DashboardUrl { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/master/sdk/dotnet/Dashboard.cs/#L78">View Source</a>
+  </span>
+  <a id="Pulumi_NewRelic_Dashboard_Editable_" data-uid="Pulumi.NewRelic.Dashboard.Editable*"></a>
+  <h4 id="Pulumi_NewRelic_Dashboard_Editable" data-uid="Pulumi.NewRelic.Dashboard.Editable">Editable</h4>
+  <div class="markdown level1 summary"><p>Determines who can edit the dashboard in an account. Valid values are <code>all</code>,  <code>editable_by_all</code>, <code>editable_by_owner</code>, or <code>read_only</code>.  Defaults to <code>editable_by_all</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Editable { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/master/sdk/dotnet/Dashboard.cs/#L84">View Source</a>
+  </span>
+  <a id="Pulumi_NewRelic_Dashboard_Filter_" data-uid="Pulumi.NewRelic.Dashboard.Filter*"></a>
+  <h4 id="Pulumi_NewRelic_Dashboard_Filter" data-uid="Pulumi.NewRelic.Dashboard.Filter">Filter</h4>
+  <div class="markdown level1 summary"><p>A nested block that describes a dashboard filter.  Exactly one nested <code>filter</code> block is allowed. See Nested filter block below for details.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;DashboardFilter&gt; Filter { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.NewRelic.Outputs.DashboardFilter.html">DashboardFilter</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/master/sdk/dotnet/Dashboard.cs/#L90">View Source</a>
+  </span>
+  <a id="Pulumi_NewRelic_Dashboard_Icon_" data-uid="Pulumi.NewRelic.Dashboard.Icon*"></a>
+  <h4 id="Pulumi_NewRelic_Dashboard_Icon" data-uid="Pulumi.NewRelic.Dashboard.Icon">Icon</h4>
+  <div class="markdown level1 summary"><p>The icon for the dashboard.  Valid values are <code>adjust</code>, <code>archive</code>, <code>bar-chart</code>, <code>bell</code>, <code>bolt</code>, <code>bug</code>, <code>bullhorn</code>, <code>bullseye</code>, <code>clock-o</code>, <code>cloud</code>, <code>cog</code>, <code>comments-o</code>, <code>crosshairs</code>, <code>dashboard</code>, <code>envelope</code>, <code>fire</code>, <code>flag</code>, <code>flask</code>, <code>globe</code>, <code>heart</code>, <code>leaf</code>, <code>legal</code>, <code>life-ring</code>, <code>line-chart</code>, <code>magic</code>, <code>mobile</code>, <code>money</code>, <code>none</code>, <code>paper-plane</code>, <code>pie-chart</code>, <code>puzzle-piece</code>, <code>road</code>, <code>rocket</code>, <code>shopping-cart</code>, <code>sitemap</code>, <code>sliders</code>, <code>tablet</code>, <code>thumbs-down</code>, <code>thumbs-up</code>, <code>trophy</code>, <code>usd</code>, <code>user</code>, and <code>users</code>.  Defaults to <code>bar-chart</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Icon { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/master/sdk/dotnet/Dashboard.cs/#L96">View Source</a>
+  </span>
+  <a id="Pulumi_NewRelic_Dashboard_Title_" data-uid="Pulumi.NewRelic.Dashboard.Title*"></a>
+  <h4 id="Pulumi_NewRelic_Dashboard_Title" data-uid="Pulumi.NewRelic.Dashboard.Title">Title</h4>
+  <div class="markdown level1 summary"><p>The title of the dashboard.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Title { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/master/sdk/dotnet/Dashboard.cs/#L102">View Source</a>
+  </span>
+  <a id="Pulumi_NewRelic_Dashboard_Visibility_" data-uid="Pulumi.NewRelic.Dashboard.Visibility*"></a>
+  <h4 id="Pulumi_NewRelic_Dashboard_Visibility" data-uid="Pulumi.NewRelic.Dashboard.Visibility">Visibility</h4>
+  <div class="markdown level1 summary"><p>Determines who can see the dashboard in an account. Valid values are <code>all</code> or <code>owner</code>.  Defaults to <code>all</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Visibility { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/master/sdk/dotnet/Dashboard.cs/#L108">View Source</a>
+  </span>
+  <a id="Pulumi_NewRelic_Dashboard_Widgets_" data-uid="Pulumi.NewRelic.Dashboard.Widgets*"></a>
+  <h4 id="Pulumi_NewRelic_Dashboard_Widgets" data-uid="Pulumi.NewRelic.Dashboard.Widgets">Widgets</h4>
+  <div class="markdown level1 summary"><p>A nested block that describes a visualization.  Up to 300 <code>widget</code> blocks are allowed in a dashboard definition.  See Nested widget blocks below for details.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;DashboardWidgets&gt;&gt; Widgets { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.NewRelic.Outputs.DashboardWidgets.html">DashboardWidgets</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/master/sdk/dotnet/Dashboard.cs/#L149">View Source</a>
+  </span>
+  <a id="Pulumi_NewRelic_Dashboard_Get_" data-uid="Pulumi.NewRelic.Dashboard.Get*"></a>
+  <h4 id="Pulumi_NewRelic_Dashboard_Get_System_String_Input_System_String__Pulumi_NewRelic_DashboardState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.NewRelic.Dashboard.Get(System.String,Input{System.String},Pulumi.NewRelic.DashboardState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, DashboardState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Get an existing Dashboard resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Dashboard Get(string name, Input&lt;string&gt; id, DashboardState state = null, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.NewRelic.DashboardState.html">DashboardState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.NewRelic.Dashboard.html">Dashboard</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-newrelic/blob/master/sdk/dotnet/Dashboard.cs/#L70" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

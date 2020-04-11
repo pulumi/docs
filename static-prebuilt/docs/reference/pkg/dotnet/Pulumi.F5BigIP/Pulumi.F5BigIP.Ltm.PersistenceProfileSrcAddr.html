@@ -1,0 +1,577 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class PersistenceProfileSrcAddr
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class PersistenceProfileSrcAddr
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.F5BigIP.Ltm.PersistenceProfileSrcAddr">
+  
+  <h1 id="Pulumi_F5BigIP_Ltm_PersistenceProfileSrcAddr" data-uid="Pulumi.F5BigIP.Ltm.PersistenceProfileSrcAddr" class="text-break">Class PersistenceProfileSrcAddr
+  </h1>
+  <div class="markdown level0 summary"><p>Configures a source address persistence profile</p>
+<h2 id="reference">Reference</h2>
+<p><code>name</code> - (Required) Name of the virtual address</p>
+<p><code>defaults_from</code> - (Required) Parent cookie persistence profile</p>
+<p><code>match_across_pools</code> (Optional) (enabled or disabled) match across pools with given persistence record</p>
+<p><code>match_across_services</code> (Optional) (enabled or disabled) match across services with given persistence record</p>
+<p><code>match_across_virtuals</code> (Optional) (enabled or disabled) match across virtual servers with given persistence record</p>
+<p><code>mirror</code> (Optional) (enabled or disabled) mirror persistence record</p>
+<p><code>timeout</code> (Optional) (enabled or disabled) Timeout for persistence of the session in seconds</p>
+<p><code>override_conn_limit</code> (Optional) (enabled or disabled) Enable or dissable pool member connection limits are overridden for persisted clients. Per-virtual connection limits remain hard limits and are not overridden.</p>
+<p><code>hash_algorithm</code> (Optional) Specify the hash algorithm</p>
+<p><code>mask</code> (Optional) Identify a range of source IP addresses to manage together as a single source address affinity persistent connection when connecting to the pool. Must be a valid IPv4 or IPv6 mask.</p>
+<p><code>map_proxies</code> (Optional) (enabled or disabled) Directs all to the same single pool member</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/ltm_persistence_profile_srcaddr.html.markdown">https://github.com/terraform-providers/terraform-provider-bigip/blob/master/website/docs/r/ltm_persistence_profile_srcaddr.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">PersistenceProfileSrcAddr</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.F5BigIP.Ltm.html">Pulumi.F5BigIP.Ltm</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.F5BigIP.dll</h6>
+  <h5 id="Pulumi_F5BigIP_Ltm_PersistenceProfileSrcAddr_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class PersistenceProfileSrcAddr : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/PersistenceProfileSrcAddr.cs/#L121">View Source</a>
+  </span>
+  <a id="Pulumi_F5BigIP_Ltm_PersistenceProfileSrcAddr__ctor_" data-uid="Pulumi.F5BigIP.Ltm.PersistenceProfileSrcAddr.#ctor*"></a>
+  <h4 id="Pulumi_F5BigIP_Ltm_PersistenceProfileSrcAddr__ctor_System_String_Pulumi_F5BigIP_Ltm_PersistenceProfileSrcAddrArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.F5BigIP.Ltm.PersistenceProfileSrcAddr.#ctor(System.String,Pulumi.F5BigIP.Ltm.PersistenceProfileSrcAddrArgs,System.Nullable{CustomResourceOptions})">PersistenceProfileSrcAddr(String, PersistenceProfileSrcAddrArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Create a PersistenceProfileSrcAddr resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PersistenceProfileSrcAddr(string name, PersistenceProfileSrcAddrArgs args, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.F5BigIP.Ltm.PersistenceProfileSrcAddrArgs.html">PersistenceProfileSrcAddrArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/PersistenceProfileSrcAddr.cs/#L42">View Source</a>
+  </span>
+  <a id="Pulumi_F5BigIP_Ltm_PersistenceProfileSrcAddr_AppService_" data-uid="Pulumi.F5BigIP.Ltm.PersistenceProfileSrcAddr.AppService*"></a>
+  <h4 id="Pulumi_F5BigIP_Ltm_PersistenceProfileSrcAddr_AppService" data-uid="Pulumi.F5BigIP.Ltm.PersistenceProfileSrcAddr.AppService">AppService</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; AppService { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/PersistenceProfileSrcAddr.cs/#L48">View Source</a>
+  </span>
+  <a id="Pulumi_F5BigIP_Ltm_PersistenceProfileSrcAddr_DefaultsFrom_" data-uid="Pulumi.F5BigIP.Ltm.PersistenceProfileSrcAddr.DefaultsFrom*"></a>
+  <h4 id="Pulumi_F5BigIP_Ltm_PersistenceProfileSrcAddr_DefaultsFrom" data-uid="Pulumi.F5BigIP.Ltm.PersistenceProfileSrcAddr.DefaultsFrom">DefaultsFrom</h4>
+  <div class="markdown level1 summary"><p>Inherit defaults from parent profile</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; DefaultsFrom { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/PersistenceProfileSrcAddr.cs/#L54">View Source</a>
+  </span>
+  <a id="Pulumi_F5BigIP_Ltm_PersistenceProfileSrcAddr_HashAlgorithm_" data-uid="Pulumi.F5BigIP.Ltm.PersistenceProfileSrcAddr.HashAlgorithm*"></a>
+  <h4 id="Pulumi_F5BigIP_Ltm_PersistenceProfileSrcAddr_HashAlgorithm" data-uid="Pulumi.F5BigIP.Ltm.PersistenceProfileSrcAddr.HashAlgorithm">HashAlgorithm</h4>
+  <div class="markdown level1 summary"><p>Specify the hash algorithm</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; HashAlgorithm { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/PersistenceProfileSrcAddr.cs/#L60">View Source</a>
+  </span>
+  <a id="Pulumi_F5BigIP_Ltm_PersistenceProfileSrcAddr_MapProxies_" data-uid="Pulumi.F5BigIP.Ltm.PersistenceProfileSrcAddr.MapProxies*"></a>
+  <h4 id="Pulumi_F5BigIP_Ltm_PersistenceProfileSrcAddr_MapProxies" data-uid="Pulumi.F5BigIP.Ltm.PersistenceProfileSrcAddr.MapProxies">MapProxies</h4>
+  <div class="markdown level1 summary"><p>To enable _ disable directs all to the same single pool member</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; MapProxies { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/PersistenceProfileSrcAddr.cs/#L67">View Source</a>
+  </span>
+  <a id="Pulumi_F5BigIP_Ltm_PersistenceProfileSrcAddr_Mask_" data-uid="Pulumi.F5BigIP.Ltm.PersistenceProfileSrcAddr.Mask*"></a>
+  <h4 id="Pulumi_F5BigIP_Ltm_PersistenceProfileSrcAddr_Mask" data-uid="Pulumi.F5BigIP.Ltm.PersistenceProfileSrcAddr.Mask">Mask</h4>
+  <div class="markdown level1 summary"><p>Identify a range of source IP addresses to manage together as a single source address affinity persistent
+connection when connecting to the pool. Must be a valid IPv4 or IPv6 mask.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Mask { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/PersistenceProfileSrcAddr.cs/#L73">View Source</a>
+  </span>
+  <a id="Pulumi_F5BigIP_Ltm_PersistenceProfileSrcAddr_MatchAcrossPools_" data-uid="Pulumi.F5BigIP.Ltm.PersistenceProfileSrcAddr.MatchAcrossPools*"></a>
+  <h4 id="Pulumi_F5BigIP_Ltm_PersistenceProfileSrcAddr_MatchAcrossPools" data-uid="Pulumi.F5BigIP.Ltm.PersistenceProfileSrcAddr.MatchAcrossPools">MatchAcrossPools</h4>
+  <div class="markdown level1 summary"><p>To enable _ disable match across pools with given persistence record</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; MatchAcrossPools { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/PersistenceProfileSrcAddr.cs/#L79">View Source</a>
+  </span>
+  <a id="Pulumi_F5BigIP_Ltm_PersistenceProfileSrcAddr_MatchAcrossServices_" data-uid="Pulumi.F5BigIP.Ltm.PersistenceProfileSrcAddr.MatchAcrossServices*"></a>
+  <h4 id="Pulumi_F5BigIP_Ltm_PersistenceProfileSrcAddr_MatchAcrossServices" data-uid="Pulumi.F5BigIP.Ltm.PersistenceProfileSrcAddr.MatchAcrossServices">MatchAcrossServices</h4>
+  <div class="markdown level1 summary"><p>To enable _ disable match across services with given persistence record</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; MatchAcrossServices { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/PersistenceProfileSrcAddr.cs/#L85">View Source</a>
+  </span>
+  <a id="Pulumi_F5BigIP_Ltm_PersistenceProfileSrcAddr_MatchAcrossVirtuals_" data-uid="Pulumi.F5BigIP.Ltm.PersistenceProfileSrcAddr.MatchAcrossVirtuals*"></a>
+  <h4 id="Pulumi_F5BigIP_Ltm_PersistenceProfileSrcAddr_MatchAcrossVirtuals" data-uid="Pulumi.F5BigIP.Ltm.PersistenceProfileSrcAddr.MatchAcrossVirtuals">MatchAcrossVirtuals</h4>
+  <div class="markdown level1 summary"><p>To enable _ disable match across services with given persistence record</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; MatchAcrossVirtuals { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/PersistenceProfileSrcAddr.cs/#L91">View Source</a>
+  </span>
+  <a id="Pulumi_F5BigIP_Ltm_PersistenceProfileSrcAddr_Mirror_" data-uid="Pulumi.F5BigIP.Ltm.PersistenceProfileSrcAddr.Mirror*"></a>
+  <h4 id="Pulumi_F5BigIP_Ltm_PersistenceProfileSrcAddr_Mirror" data-uid="Pulumi.F5BigIP.Ltm.PersistenceProfileSrcAddr.Mirror">Mirror</h4>
+  <div class="markdown level1 summary"><p>To enable _ disable</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Mirror { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/PersistenceProfileSrcAddr.cs/#L97">View Source</a>
+  </span>
+  <a id="Pulumi_F5BigIP_Ltm_PersistenceProfileSrcAddr_Name_" data-uid="Pulumi.F5BigIP.Ltm.PersistenceProfileSrcAddr.Name*"></a>
+  <h4 id="Pulumi_F5BigIP_Ltm_PersistenceProfileSrcAddr_Name" data-uid="Pulumi.F5BigIP.Ltm.PersistenceProfileSrcAddr.Name">Name</h4>
+  <div class="markdown level1 summary"><p>Name of the persistence profile</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/PersistenceProfileSrcAddr.cs/#L104">View Source</a>
+  </span>
+  <a id="Pulumi_F5BigIP_Ltm_PersistenceProfileSrcAddr_OverrideConnLimit_" data-uid="Pulumi.F5BigIP.Ltm.PersistenceProfileSrcAddr.OverrideConnLimit*"></a>
+  <h4 id="Pulumi_F5BigIP_Ltm_PersistenceProfileSrcAddr_OverrideConnLimit" data-uid="Pulumi.F5BigIP.Ltm.PersistenceProfileSrcAddr.OverrideConnLimit">OverrideConnLimit</h4>
+  <div class="markdown level1 summary"><p>To enable _ disable that pool member connection limits are overridden for persisted clients. Per-virtual
+connection limits remain hard limits and are not overridden.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; OverrideConnLimit { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/PersistenceProfileSrcAddr.cs/#L110">View Source</a>
+  </span>
+  <a id="Pulumi_F5BigIP_Ltm_PersistenceProfileSrcAddr_Timeout_" data-uid="Pulumi.F5BigIP.Ltm.PersistenceProfileSrcAddr.Timeout*"></a>
+  <h4 id="Pulumi_F5BigIP_Ltm_PersistenceProfileSrcAddr_Timeout" data-uid="Pulumi.F5BigIP.Ltm.PersistenceProfileSrcAddr.Timeout">Timeout</h4>
+  <div class="markdown level1 summary"><p>Timeout for persistence of the session</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; Timeout { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/PersistenceProfileSrcAddr.cs/#L151">View Source</a>
+  </span>
+  <a id="Pulumi_F5BigIP_Ltm_PersistenceProfileSrcAddr_Get_" data-uid="Pulumi.F5BigIP.Ltm.PersistenceProfileSrcAddr.Get*"></a>
+  <h4 id="Pulumi_F5BigIP_Ltm_PersistenceProfileSrcAddr_Get_System_String_Input_System_String__Pulumi_F5BigIP_Ltm_PersistenceProfileSrcAddrState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.F5BigIP.Ltm.PersistenceProfileSrcAddr.Get(System.String,Input{System.String},Pulumi.F5BigIP.Ltm.PersistenceProfileSrcAddrState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, PersistenceProfileSrcAddrState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Get an existing PersistenceProfileSrcAddr resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static PersistenceProfileSrcAddr Get(string name, Input&lt;string&gt; id, PersistenceProfileSrcAddrState state = null, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.F5BigIP.Ltm.PersistenceProfileSrcAddrState.html">PersistenceProfileSrcAddrState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.F5BigIP.Ltm.PersistenceProfileSrcAddr.html">PersistenceProfileSrcAddr</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-f5bigip/blob/master/sdk/dotnet/Ltm/PersistenceProfileSrcAddr.cs/#L40" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

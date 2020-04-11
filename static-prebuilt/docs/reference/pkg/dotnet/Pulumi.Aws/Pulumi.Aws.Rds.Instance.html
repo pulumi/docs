@@ -1,0 +1,1945 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Instance
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Instance
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Aws.Rds.Instance">
+  
+  <h1 id="Pulumi_Aws_Rds_Instance" data-uid="Pulumi.Aws.Rds.Instance" class="text-break">Class Instance
+  </h1>
+  <div class="markdown level0 summary"><p>Provides an RDS instance resource.  A DB instance is an isolated database
+environment in the cloud.  A DB instance can contain multiple user-created
+databases.</p>
+<p>Changes to a DB instance can occur when you manually change a parameter, such as
+<code>allocated_storage</code>, and are reflected in the next maintenance window. Because
+of this, this provider may report a difference in its planning phase because a
+modification has not yet taken place. You can use the <code>apply_immediately</code> flag
+to instruct the service to apply the change immediately (see documentation
+below).</p>
+<p>When upgrading the major version of an engine, <code>allow_major_version_upgrade</code>
+must be set to <code>true</code>.</p>
+<blockquote>
+<p><strong>Note:</strong> using <code>apply_immediately</code> can result in a brief downtime as the
+server reboots. See the AWS Docs on [RDS Maintenance][2] for more information.</p>
+</blockquote>
+<blockquote>
+<p><strong>Note:</strong> All arguments including the username and password will be stored in
+the raw state as plain-text. <a href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in
+state</a>.</p>
+</blockquote>
+<h2 id="rds-instance-class-types">RDS Instance Class Types</h2>
+<p>Amazon RDS supports three types of instance classes: Standard, Memory Optimized,
+and Burstable Performance. For more information please read the AWS RDS documentation
+about <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB Instance Class Types</a></p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/db_instance.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/db_instance.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">Instance</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Rds.html">Pulumi.Aws.Rds</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
+  <h5 id="Pulumi_Aws_Rds_Instance_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Instance : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/Instance.cs/#L476">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Rds_Instance__ctor_" data-uid="Pulumi.Aws.Rds.Instance.#ctor*"></a>
+  <h4 id="Pulumi_Aws_Rds_Instance__ctor_System_String_Pulumi_Aws_Rds_InstanceArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Rds.Instance.#ctor(System.String,Pulumi.Aws.Rds.InstanceArgs,Pulumi.CustomResourceOptions)">Instance(String, InstanceArgs, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Create a Instance resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Instance(string name, InstanceArgs args, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Aws.Rds.InstanceArgs.html">InstanceArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/Instance.cs/#L47">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Rds_Instance_Address_" data-uid="Pulumi.Aws.Rds.Instance.Address*"></a>
+  <h4 id="Pulumi_Aws_Rds_Instance_Address" data-uid="Pulumi.Aws.Rds.Instance.Address">Address</h4>
+  <div class="markdown level1 summary"><p>The hostname of the RDS instance. See also <code>endpoint</code> and <code>port</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Address { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/Instance.cs/#L53">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Rds_Instance_AllocatedStorage_" data-uid="Pulumi.Aws.Rds.Instance.AllocatedStorage*"></a>
+  <h4 id="Pulumi_Aws_Rds_Instance_AllocatedStorage" data-uid="Pulumi.Aws.Rds.Instance.AllocatedStorage">AllocatedStorage</h4>
+  <div class="markdown level1 summary"><p>The allocated storage in gibibytes. If <code>max_allocated_storage</code> is configured, this argument represents the initial storage allocation and differences from the configuration will be ignored automatically when Storage Autoscaling occurs.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int&gt; AllocatedStorage { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/Instance.cs/#L61">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Rds_Instance_AllowMajorVersionUpgrade_" data-uid="Pulumi.Aws.Rds.Instance.AllowMajorVersionUpgrade*"></a>
+  <h4 id="Pulumi_Aws_Rds_Instance_AllowMajorVersionUpgrade" data-uid="Pulumi.Aws.Rds.Instance.AllowMajorVersionUpgrade">AllowMajorVersionUpgrade</h4>
+  <div class="markdown level1 summary"><p>Indicates that major version
+upgrades are allowed. Changing this parameter does not result in an outage and
+the change is asynchronously applied as soon as possible.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; AllowMajorVersionUpgrade { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/Instance.cs/#L70">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Rds_Instance_ApplyImmediately_" data-uid="Pulumi.Aws.Rds.Instance.ApplyImmediately*"></a>
+  <h4 id="Pulumi_Aws_Rds_Instance_ApplyImmediately" data-uid="Pulumi.Aws.Rds.Instance.ApplyImmediately">ApplyImmediately</h4>
+  <div class="markdown level1 summary"><p>Specifies whether any database modifications
+are applied immediately, or during the next maintenance window. Default is
+<code>false</code>. See <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html">Amazon RDS Documentation for more
+information.</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool&gt; ApplyImmediately { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/Instance.cs/#L76">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Rds_Instance_Arn_" data-uid="Pulumi.Aws.Rds.Instance.Arn*"></a>
+  <h4 id="Pulumi_Aws_Rds_Instance_Arn" data-uid="Pulumi.Aws.Rds.Instance.Arn">Arn</h4>
+  <div class="markdown level1 summary"><p>The ARN of the RDS instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Arn { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/Instance.cs/#L84">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Rds_Instance_AutoMinorVersionUpgrade_" data-uid="Pulumi.Aws.Rds.Instance.AutoMinorVersionUpgrade*"></a>
+  <h4 id="Pulumi_Aws_Rds_Instance_AutoMinorVersionUpgrade" data-uid="Pulumi.Aws.Rds.Instance.AutoMinorVersionUpgrade">AutoMinorVersionUpgrade</h4>
+  <div class="markdown level1 summary"><p>Indicates that minor engine upgrades
+will be applied automatically to the DB instance during the maintenance window.
+Defaults to true.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; AutoMinorVersionUpgrade { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/Instance.cs/#L90">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Rds_Instance_AvailabilityZone_" data-uid="Pulumi.Aws.Rds.Instance.AvailabilityZone*"></a>
+  <h4 id="Pulumi_Aws_Rds_Instance_AvailabilityZone" data-uid="Pulumi.Aws.Rds.Instance.AvailabilityZone">AvailabilityZone</h4>
+  <div class="markdown level1 summary"><p>The AZ for the RDS instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; AvailabilityZone { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/Instance.cs/#L97">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Rds_Instance_BackupRetentionPeriod_" data-uid="Pulumi.Aws.Rds.Instance.BackupRetentionPeriod*"></a>
+  <h4 id="Pulumi_Aws_Rds_Instance_BackupRetentionPeriod" data-uid="Pulumi.Aws.Rds.Instance.BackupRetentionPeriod">BackupRetentionPeriod</h4>
+  <div class="markdown level1 summary"><p>The days to retain backups for. Must be
+between <code>0</code> and <code>35</code>. Must be greater than <code>0</code> if the database is used as a source for a Read Replica. [See Read Replica][1].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int&gt; BackupRetentionPeriod { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/Instance.cs/#L105">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Rds_Instance_BackupWindow_" data-uid="Pulumi.Aws.Rds.Instance.BackupWindow*"></a>
+  <h4 id="Pulumi_Aws_Rds_Instance_BackupWindow" data-uid="Pulumi.Aws.Rds.Instance.BackupWindow">BackupWindow</h4>
+  <div class="markdown level1 summary"><p>The daily time range (in UTC) during which
+automated backups are created if they are enabled. Example: &quot;09:46-10:16&quot;. Must
+not overlap with <code>maintenance_window</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; BackupWindow { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/Instance.cs/#L111">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Rds_Instance_CaCertIdentifier_" data-uid="Pulumi.Aws.Rds.Instance.CaCertIdentifier*"></a>
+  <h4 id="Pulumi_Aws_Rds_Instance_CaCertIdentifier" data-uid="Pulumi.Aws.Rds.Instance.CaCertIdentifier">CaCertIdentifier</h4>
+  <div class="markdown level1 summary"><p>The identifier of the CA certificate for the DB instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; CaCertIdentifier { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/Instance.cs/#L121">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Rds_Instance_CharacterSetName_" data-uid="Pulumi.Aws.Rds.Instance.CharacterSetName*"></a>
+  <h4 id="Pulumi_Aws_Rds_Instance_CharacterSetName" data-uid="Pulumi.Aws.Rds.Instance.CharacterSetName">CharacterSetName</h4>
+  <div class="markdown level1 summary"><p>The character set name to use for DB
+encoding in Oracle instances. This can't be changed. See <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.OracleCharacterSets.html">Oracle Character Sets
+Supported in Amazon
+RDS</a>
+for more information.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; CharacterSetName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/Instance.cs/#L127">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Rds_Instance_CopyTagsToSnapshot_" data-uid="Pulumi.Aws.Rds.Instance.CopyTagsToSnapshot*"></a>
+  <h4 id="Pulumi_Aws_Rds_Instance_CopyTagsToSnapshot" data-uid="Pulumi.Aws.Rds.Instance.CopyTagsToSnapshot">CopyTagsToSnapshot</h4>
+  <div class="markdown level1 summary"><p>Copy all Instance <code>tags</code> to snapshots. Default is <code>false</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; CopyTagsToSnapshot { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/Instance.cs/#L139">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Rds_Instance_DbSubnetGroupName_" data-uid="Pulumi.Aws.Rds.Instance.DbSubnetGroupName*"></a>
+  <h4 id="Pulumi_Aws_Rds_Instance_DbSubnetGroupName" data-uid="Pulumi.Aws.Rds.Instance.DbSubnetGroupName">DbSubnetGroupName</h4>
+  <div class="markdown level1 summary"><p>Name of <a href="https://www.terraform.io/docs/providers/aws/r/db_subnet_group.html">DB subnet group</a>. DB instance will
+be created in the VPC associated with the DB subnet group. If unspecified, will
+be created in the <code>default</code> VPC, or in EC2 Classic, if available. When working
+with read replicas, it should be specified only if the source database
+specifies an instance in another AWS Region. See <a href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstanceReadReplica.html">DBSubnetGroupName in API
+action CreateDBInstanceReadReplica</a>
+for additional read replica contraints.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; DbSubnetGroupName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/Instance.cs/#L145">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Rds_Instance_DeleteAutomatedBackups_" data-uid="Pulumi.Aws.Rds.Instance.DeleteAutomatedBackups*"></a>
+  <h4 id="Pulumi_Aws_Rds_Instance_DeleteAutomatedBackups" data-uid="Pulumi.Aws.Rds.Instance.DeleteAutomatedBackups">DeleteAutomatedBackups</h4>
+  <div class="markdown level1 summary"><p>Specifies whether to remove automated backups immediately after the DB instance is deleted. Default is <code>true</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; DeleteAutomatedBackups { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/Instance.cs/#L151">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Rds_Instance_DeletionProtection_" data-uid="Pulumi.Aws.Rds.Instance.DeletionProtection*"></a>
+  <h4 id="Pulumi_Aws_Rds_Instance_DeletionProtection" data-uid="Pulumi.Aws.Rds.Instance.DeletionProtection">DeletionProtection</h4>
+  <div class="markdown level1 summary"><p>If the DB instance should have deletion protection enabled. The database can't be deleted when this value is set to <code>true</code>. The default is <code>false</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; DeletionProtection { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/Instance.cs/#L157">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Rds_Instance_Domain_" data-uid="Pulumi.Aws.Rds.Instance.Domain*"></a>
+  <h4 id="Pulumi_Aws_Rds_Instance_Domain" data-uid="Pulumi.Aws.Rds.Instance.Domain">Domain</h4>
+  <div class="markdown level1 summary"><p>The ID of the Directory Service Active Directory domain to create the instance in.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Domain { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/Instance.cs/#L163">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Rds_Instance_DomainIamRoleName_" data-uid="Pulumi.Aws.Rds.Instance.DomainIamRoleName*"></a>
+  <h4 id="Pulumi_Aws_Rds_Instance_DomainIamRoleName" data-uid="Pulumi.Aws.Rds.Instance.DomainIamRoleName">DomainIamRoleName</h4>
+  <div class="markdown level1 summary"><p>The name of the IAM role to be used when making API calls to the Directory Service.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; DomainIamRoleName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/Instance.cs/#L169">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Rds_Instance_EnabledCloudwatchLogsExports_" data-uid="Pulumi.Aws.Rds.Instance.EnabledCloudwatchLogsExports*"></a>
+  <h4 id="Pulumi_Aws_Rds_Instance_EnabledCloudwatchLogsExports" data-uid="Pulumi.Aws.Rds.Instance.EnabledCloudwatchLogsExports">EnabledCloudwatchLogsExports</h4>
+  <div class="markdown level1 summary"><p>List of log types to enable for exporting to CloudWatch logs. If omitted, no logs will be exported. Valid values (depending on <code>engine</code>): <code>agent</code> (MSSQL), <code>alert</code>, <code>audit</code>, <code>error</code>, <code>general</code>, <code>listener</code>, <code>slowquery</code>, <code>trace</code>, <code>postgresql</code> (PostgreSQL), <code>upgrade</code> (PostgreSQL).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; EnabledCloudwatchLogsExports { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/Instance.cs/#L175">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Rds_Instance_Endpoint_" data-uid="Pulumi.Aws.Rds.Instance.Endpoint*"></a>
+  <h4 id="Pulumi_Aws_Rds_Instance_Endpoint" data-uid="Pulumi.Aws.Rds.Instance.Endpoint">Endpoint</h4>
+  <div class="markdown level1 summary"><p>The connection endpoint in <code>address:port</code> format.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Endpoint { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/Instance.cs/#L186">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Rds_Instance_Engine_" data-uid="Pulumi.Aws.Rds.Instance.Engine*"></a>
+  <h4 id="Pulumi_Aws_Rds_Instance_Engine" data-uid="Pulumi.Aws.Rds.Instance.Engine">Engine</h4>
+  <div class="markdown level1 summary"><p>(Required unless a <code>snapshot_identifier</code> or <code>replicate_source_db</code>
+is provided) The database engine to use.  For supported values, see the Engine parameter in <a href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html">API action CreateDBInstance</a>.
+Note that for Amazon Aurora instances the engine must match the <a href="https://www.terraform.io/docs/providers/aws/r/rds_cluster.html">DB cluster</a>'s engine'.
+For information on the difference between the available Aurora MySQL engines
+see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/AuroraMySQL.Updates.20180206.html">Comparison between Aurora MySQL 1 and Aurora MySQL 2</a>
+in the Amazon RDS User Guide.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Engine { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/Instance.cs/#L196">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Rds_Instance_EngineVersion_" data-uid="Pulumi.Aws.Rds.Instance.EngineVersion*"></a>
+  <h4 id="Pulumi_Aws_Rds_Instance_EngineVersion" data-uid="Pulumi.Aws.Rds.Instance.EngineVersion">EngineVersion</h4>
+  <div class="markdown level1 summary"><p>The engine version to use. If <code>auto_minor_version_upgrade</code>
+is enabled, you can provide a prefix of the version such as <code>5.7</code> (for <code>5.7.10</code>) and
+this attribute will ignore differences in the patch version automatically (e.g. <code>5.7.17</code>).
+For supported values, see the EngineVersion parameter in <a href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html">API action CreateDBInstance</a>.
+Note that for Amazon Aurora instances the engine version must match the <a href="https://www.terraform.io/docs/providers/aws/r/rds_cluster.html">DB cluster</a>'s engine version'.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; EngineVersion { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/Instance.cs/#L204">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Rds_Instance_FinalSnapshotIdentifier_" data-uid="Pulumi.Aws.Rds.Instance.FinalSnapshotIdentifier*"></a>
+  <h4 id="Pulumi_Aws_Rds_Instance_FinalSnapshotIdentifier" data-uid="Pulumi.Aws.Rds.Instance.FinalSnapshotIdentifier">FinalSnapshotIdentifier</h4>
+  <div class="markdown level1 summary"><p>The name of your final DB snapshot
+when this DB instance is deleted. Must be provided if <code>skip_final_snapshot</code> is
+set to <code>false</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; FinalSnapshotIdentifier { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/Instance.cs/#L211">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Rds_Instance_HostedZoneId_" data-uid="Pulumi.Aws.Rds.Instance.HostedZoneId*"></a>
+  <h4 id="Pulumi_Aws_Rds_Instance_HostedZoneId" data-uid="Pulumi.Aws.Rds.Instance.HostedZoneId">HostedZoneId</h4>
+  <div class="markdown level1 summary"><p>The canonical hosted zone ID of the DB instance (to be used
+in a Route 53 Alias record).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; HostedZoneId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/Instance.cs/#L219">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Rds_Instance_IamDatabaseAuthenticationEnabled_" data-uid="Pulumi.Aws.Rds.Instance.IamDatabaseAuthenticationEnabled*"></a>
+  <h4 id="Pulumi_Aws_Rds_Instance_IamDatabaseAuthenticationEnabled" data-uid="Pulumi.Aws.Rds.Instance.IamDatabaseAuthenticationEnabled">IamDatabaseAuthenticationEnabled</h4>
+  <div class="markdown level1 summary"><p>Specifies whether or
+mappings of AWS Identity and Access Management (IAM) accounts to database
+accounts is enabled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; IamDatabaseAuthenticationEnabled { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/Instance.cs/#L226">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Rds_Instance_Identifier_" data-uid="Pulumi.Aws.Rds.Instance.Identifier*"></a>
+  <h4 id="Pulumi_Aws_Rds_Instance_Identifier" data-uid="Pulumi.Aws.Rds.Instance.Identifier">Identifier</h4>
+  <div class="markdown level1 summary"><p>The name of the RDS instance,
+if omitted, this provider will assign a random, unique identifier.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Identifier { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/Instance.cs/#L233">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Rds_Instance_IdentifierPrefix_" data-uid="Pulumi.Aws.Rds.Instance.IdentifierPrefix*"></a>
+  <h4 id="Pulumi_Aws_Rds_Instance_IdentifierPrefix" data-uid="Pulumi.Aws.Rds.Instance.IdentifierPrefix">IdentifierPrefix</h4>
+  <div class="markdown level1 summary"><p>Creates a unique
+identifier beginning with the specified prefix. Conflicts with <code>identifier</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; IdentifierPrefix { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/Instance.cs/#L239">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Rds_Instance_InstanceClass_" data-uid="Pulumi.Aws.Rds.Instance.InstanceClass*"></a>
+  <h4 id="Pulumi_Aws_Rds_Instance_InstanceClass" data-uid="Pulumi.Aws.Rds.Instance.InstanceClass">InstanceClass</h4>
+  <div class="markdown level1 summary"><p>The instance type of the RDS instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; InstanceClass { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/Instance.cs/#L246">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Rds_Instance_Iops_" data-uid="Pulumi.Aws.Rds.Instance.Iops*"></a>
+  <h4 id="Pulumi_Aws_Rds_Instance_Iops" data-uid="Pulumi.Aws.Rds.Instance.Iops">Iops</h4>
+  <div class="markdown level1 summary"><p>The amount of provisioned IOPS. Setting this implies a
+storage_type of &quot;io1&quot;.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; Iops { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/Instance.cs/#L253">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Rds_Instance_KmsKeyId_" data-uid="Pulumi.Aws.Rds.Instance.KmsKeyId*"></a>
+  <h4 id="Pulumi_Aws_Rds_Instance_KmsKeyId" data-uid="Pulumi.Aws.Rds.Instance.KmsKeyId">KmsKeyId</h4>
+  <div class="markdown level1 summary"><p>The ARN for the KMS encryption key. If creating an
+encrypted replica, set this to the destination KMS ARN.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; KmsKeyId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/Instance.cs/#L260">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Rds_Instance_LicenseModel_" data-uid="Pulumi.Aws.Rds.Instance.LicenseModel*"></a>
+  <h4 id="Pulumi_Aws_Rds_Instance_LicenseModel" data-uid="Pulumi.Aws.Rds.Instance.LicenseModel">LicenseModel</h4>
+  <div class="markdown level1 summary"><p>(Optional, but required for some DB engines, i.e. Oracle
+SE1) License model information for this DB instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; LicenseModel { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/Instance.cs/#L270">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Rds_Instance_MaintenanceWindow_" data-uid="Pulumi.Aws.Rds.Instance.MaintenanceWindow*"></a>
+  <h4 id="Pulumi_Aws_Rds_Instance_MaintenanceWindow" data-uid="Pulumi.Aws.Rds.Instance.MaintenanceWindow">MaintenanceWindow</h4>
+  <div class="markdown level1 summary"><p>The window to perform maintenance in.
+Syntax: &quot;ddd:hh24:mi-ddd:hh24:mi&quot;. Eg: &quot;Mon:00:00-Mon:03:00&quot;. See <a href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_UpgradeDBInstance.Maintenance.html#AdjustingTheMaintenanceWindow">RDS
+Maintenance Window
+docs</a>
+for more information.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; MaintenanceWindow { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/Instance.cs/#L276">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Rds_Instance_MaxAllocatedStorage_" data-uid="Pulumi.Aws.Rds.Instance.MaxAllocatedStorage*"></a>
+  <h4 id="Pulumi_Aws_Rds_Instance_MaxAllocatedStorage" data-uid="Pulumi.Aws.Rds.Instance.MaxAllocatedStorage">MaxAllocatedStorage</h4>
+  <div class="markdown level1 summary"><p>When configured, the upper limit to which Amazon RDS can automatically scale the storage of the DB instance. Configuring this will automatically ignore differences to <code>allocated_storage</code>. Must be greater than or equal to <code>allocated_storage</code> or <code>0</code> to disable Storage Autoscaling.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; MaxAllocatedStorage { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/Instance.cs/#L285">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Rds_Instance_MonitoringInterval_" data-uid="Pulumi.Aws.Rds.Instance.MonitoringInterval*"></a>
+  <h4 id="Pulumi_Aws_Rds_Instance_MonitoringInterval" data-uid="Pulumi.Aws.Rds.Instance.MonitoringInterval">MonitoringInterval</h4>
+  <div class="markdown level1 summary"><p>The interval, in seconds, between points
+when Enhanced Monitoring metrics are collected for the DB instance. To disable
+collecting Enhanced Monitoring metrics, specify 0. The default is 0. Valid
+Values: 0, 1, 5, 10, 15, 30, 60.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; MonitoringInterval { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/Instance.cs/#L295">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Rds_Instance_MonitoringRoleArn_" data-uid="Pulumi.Aws.Rds.Instance.MonitoringRoleArn*"></a>
+  <h4 id="Pulumi_Aws_Rds_Instance_MonitoringRoleArn" data-uid="Pulumi.Aws.Rds.Instance.MonitoringRoleArn">MonitoringRoleArn</h4>
+  <div class="markdown level1 summary"><p>The ARN for the IAM role that permits RDS
+to send enhanced monitoring metrics to CloudWatch Logs. You can find more
+information on the <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.html">AWS
+Documentation</a>
+what IAM permissions are needed to allow Enhanced Monitoring for RDS Instances.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; MonitoringRoleArn { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/Instance.cs/#L301">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Rds_Instance_MultiAz_" data-uid="Pulumi.Aws.Rds.Instance.MultiAz*"></a>
+  <h4 id="Pulumi_Aws_Rds_Instance_MultiAz" data-uid="Pulumi.Aws.Rds.Instance.MultiAz">MultiAz</h4>
+  <div class="markdown level1 summary"><p>Specifies if the RDS instance is multi-AZ</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool&gt; MultiAz { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/Instance.cs/#L307">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Rds_Instance_Name_" data-uid="Pulumi.Aws.Rds.Instance.Name*"></a>
+  <h4 id="Pulumi_Aws_Rds_Instance_Name" data-uid="Pulumi.Aws.Rds.Instance.Name">Name</h4>
+  <div class="markdown level1 summary"><p>The name of the database to create when the DB instance is created. If this parameter is not specified, no database is created in the DB instance. Note that this does not apply for Oracle or SQL Server engines. See the <a href="http://docs.aws.amazon.com/cli/latest/reference/rds/create-db-instance.html">AWS documentation</a> for more details on what applies for those engines.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/Instance.cs/#L313">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Rds_Instance_OptionGroupName_" data-uid="Pulumi.Aws.Rds.Instance.OptionGroupName*"></a>
+  <h4 id="Pulumi_Aws_Rds_Instance_OptionGroupName" data-uid="Pulumi.Aws.Rds.Instance.OptionGroupName">OptionGroupName</h4>
+  <div class="markdown level1 summary"><p>Name of the DB option group to associate.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; OptionGroupName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/Instance.cs/#L320">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Rds_Instance_ParameterGroupName_" data-uid="Pulumi.Aws.Rds.Instance.ParameterGroupName*"></a>
+  <h4 id="Pulumi_Aws_Rds_Instance_ParameterGroupName" data-uid="Pulumi.Aws.Rds.Instance.ParameterGroupName">ParameterGroupName</h4>
+  <div class="markdown level1 summary"><p>Name of the DB parameter group to
+associate.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ParameterGroupName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/Instance.cs/#L328">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Rds_Instance_Password_" data-uid="Pulumi.Aws.Rds.Instance.Password*"></a>
+  <h4 id="Pulumi_Aws_Rds_Instance_Password" data-uid="Pulumi.Aws.Rds.Instance.Password">Password</h4>
+  <div class="markdown level1 summary"><p>(Required unless a <code>snapshot_identifier</code> or <code>replicate_source_db</code>
+is provided) Password for the master DB user. Note that this may show up in
+logs, and it will be stored in the state file.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Password { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/Instance.cs/#L334">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Rds_Instance_PerformanceInsightsEnabled_" data-uid="Pulumi.Aws.Rds.Instance.PerformanceInsightsEnabled*"></a>
+  <h4 id="Pulumi_Aws_Rds_Instance_PerformanceInsightsEnabled" data-uid="Pulumi.Aws.Rds.Instance.PerformanceInsightsEnabled">PerformanceInsightsEnabled</h4>
+  <div class="markdown level1 summary"><p>Specifies whether Performance Insights are enabled. Defaults to false.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; PerformanceInsightsEnabled { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/Instance.cs/#L340">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Rds_Instance_PerformanceInsightsKmsKeyId_" data-uid="Pulumi.Aws.Rds.Instance.PerformanceInsightsKmsKeyId*"></a>
+  <h4 id="Pulumi_Aws_Rds_Instance_PerformanceInsightsKmsKeyId" data-uid="Pulumi.Aws.Rds.Instance.PerformanceInsightsKmsKeyId">PerformanceInsightsKmsKeyId</h4>
+  <div class="markdown level1 summary"><p>The ARN for the KMS key to encrypt Performance Insights data. When specifying <code>performance_insights_kms_key_id</code>, <code>performance_insights_enabled</code> needs to be set to true. Once KMS key is set, it can never be changed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; PerformanceInsightsKmsKeyId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/Instance.cs/#L346">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Rds_Instance_PerformanceInsightsRetentionPeriod_" data-uid="Pulumi.Aws.Rds.Instance.PerformanceInsightsRetentionPeriod*"></a>
+  <h4 id="Pulumi_Aws_Rds_Instance_PerformanceInsightsRetentionPeriod" data-uid="Pulumi.Aws.Rds.Instance.PerformanceInsightsRetentionPeriod">PerformanceInsightsRetentionPeriod</h4>
+  <div class="markdown level1 summary"><p>The amount of time in days to retain Performance Insights data. Either 7 (7 days) or 731 (2 years). When specifying <code>performance_insights_retention_period</code>, <code>performance_insights_enabled</code> needs to be set to true. Defaults to '7'.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int&gt; PerformanceInsightsRetentionPeriod { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/Instance.cs/#L352">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Rds_Instance_Port_" data-uid="Pulumi.Aws.Rds.Instance.Port*"></a>
+  <h4 id="Pulumi_Aws_Rds_Instance_Port" data-uid="Pulumi.Aws.Rds.Instance.Port">Port</h4>
+  <div class="markdown level1 summary"><p>The port on which the DB accepts connections.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int&gt; Port { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/Instance.cs/#L359">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Rds_Instance_PubliclyAccessible_" data-uid="Pulumi.Aws.Rds.Instance.PubliclyAccessible*"></a>
+  <h4 id="Pulumi_Aws_Rds_Instance_PubliclyAccessible" data-uid="Pulumi.Aws.Rds.Instance.PubliclyAccessible">PubliclyAccessible</h4>
+  <div class="markdown level1 summary"><p>Bool to control if instance is publicly
+accessible. Default is <code>false</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; PubliclyAccessible { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/Instance.cs/#L362">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Rds_Instance_Replicas_" data-uid="Pulumi.Aws.Rds.Instance.Replicas*"></a>
+  <h4 id="Pulumi_Aws_Rds_Instance_Replicas" data-uid="Pulumi.Aws.Rds.Instance.Replicas">Replicas</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; Replicas { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/Instance.cs/#L374">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Rds_Instance_ReplicateSourceDb_" data-uid="Pulumi.Aws.Rds.Instance.ReplicateSourceDb*"></a>
+  <h4 id="Pulumi_Aws_Rds_Instance_ReplicateSourceDb" data-uid="Pulumi.Aws.Rds.Instance.ReplicateSourceDb">ReplicateSourceDb</h4>
+  <div class="markdown level1 summary"><p>Specifies that this resource is a Replicate
+database, and to use this value as the source database. This correlates to the
+<code>identifier</code> of another Amazon RDS Database to replicate. Note that if you are
+creating a cross-region replica of an encrypted database you will also need to
+specify a <code>kms_key_id</code>. See [DB Instance Replication][1] and <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ReadRepl.html">Working with
+PostgreSQL and MySQL Read Replicas</a>
+for more information on using Replication.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ReplicateSourceDb { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/Instance.cs/#L380">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Rds_Instance_ResourceId_" data-uid="Pulumi.Aws.Rds.Instance.ResourceId*"></a>
+  <h4 id="Pulumi_Aws_Rds_Instance_ResourceId" data-uid="Pulumi.Aws.Rds.Instance.ResourceId">ResourceId</h4>
+  <div class="markdown level1 summary"><p>The RDS Resource ID of this instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ResourceId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/Instance.cs/#L386">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Rds_Instance_S3Import_" data-uid="Pulumi.Aws.Rds.Instance.S3Import*"></a>
+  <h4 id="Pulumi_Aws_Rds_Instance_S3Import" data-uid="Pulumi.Aws.Rds.Instance.S3Import">S3Import</h4>
+  <div class="markdown level1 summary"><p>Restore from a Percona Xtrabackup in S3.  See <a href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/MySQL.Procedural.Importing.html">Importing Data into an Amazon RDS MySQL DB Instance</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;InstanceS3Import&gt; S3Import { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.Rds.Outputs.InstanceS3Import.html">InstanceS3Import</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/Instance.cs/#L394">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Rds_Instance_SecurityGroupNames_" data-uid="Pulumi.Aws.Rds.Instance.SecurityGroupNames*"></a>
+  <h4 id="Pulumi_Aws_Rds_Instance_SecurityGroupNames" data-uid="Pulumi.Aws.Rds.Instance.SecurityGroupNames">SecurityGroupNames</h4>
+  <div class="markdown level1 summary"><p>List of DB Security Groups to
+associate. Only used for <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_VPC.html#USER_VPC.FindDefaultVPC">DB Instances on the <em>EC2-Classic</em>
+Platform</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; SecurityGroupNames { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/Instance.cs/#L404">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Rds_Instance_SkipFinalSnapshot_" data-uid="Pulumi.Aws.Rds.Instance.SkipFinalSnapshot*"></a>
+  <h4 id="Pulumi_Aws_Rds_Instance_SkipFinalSnapshot" data-uid="Pulumi.Aws.Rds.Instance.SkipFinalSnapshot">SkipFinalSnapshot</h4>
+  <div class="markdown level1 summary"><p>Determines whether a final DB snapshot is
+created before the DB instance is deleted. If true is specified, no DBSnapshot
+is created. If false is specified, a DB snapshot is created before the DB
+instance is deleted, using the value from <code>final_snapshot_identifier</code>. Default
+is <code>false</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; SkipFinalSnapshot { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/Instance.cs/#L412">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Rds_Instance_SnapshotIdentifier_" data-uid="Pulumi.Aws.Rds.Instance.SnapshotIdentifier*"></a>
+  <h4 id="Pulumi_Aws_Rds_Instance_SnapshotIdentifier" data-uid="Pulumi.Aws.Rds.Instance.SnapshotIdentifier">SnapshotIdentifier</h4>
+  <div class="markdown level1 summary"><p>Specifies whether or not to create this
+database from a snapshot. This correlates to the snapshot ID you'd find in the
+RDS console, e.g: rds:production-2015-06-26-06-05.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SnapshotIdentifier { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/Instance.cs/#L418">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Rds_Instance_Status_" data-uid="Pulumi.Aws.Rds.Instance.Status*"></a>
+  <h4 id="Pulumi_Aws_Rds_Instance_Status" data-uid="Pulumi.Aws.Rds.Instance.Status">Status</h4>
+  <div class="markdown level1 summary"><p>The RDS instance status.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Status { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/Instance.cs/#L427">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Rds_Instance_StorageEncrypted_" data-uid="Pulumi.Aws.Rds.Instance.StorageEncrypted*"></a>
+  <h4 id="Pulumi_Aws_Rds_Instance_StorageEncrypted" data-uid="Pulumi.Aws.Rds.Instance.StorageEncrypted">StorageEncrypted</h4>
+  <div class="markdown level1 summary"><p>Specifies whether the DB instance is
+encrypted. Note that if you are creating a cross-region read replica this field
+is ignored and you should instead declare <code>kms_key_id</code> with a valid ARN. The
+default is <code>false</code> if not specified.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; StorageEncrypted { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/Instance.cs/#L435">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Rds_Instance_StorageType_" data-uid="Pulumi.Aws.Rds.Instance.StorageType*"></a>
+  <h4 id="Pulumi_Aws_Rds_Instance_StorageType" data-uid="Pulumi.Aws.Rds.Instance.StorageType">StorageType</h4>
+  <div class="markdown level1 summary"><p>One of &quot;standard&quot; (magnetic), &quot;gp2&quot; (general
+purpose SSD), or &quot;io1&quot; (provisioned IOPS SSD). The default is &quot;io1&quot; if <code>iops</code> is
+specified, &quot;gp2&quot; if not.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; StorageType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/Instance.cs/#L441">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Rds_Instance_Tags_" data-uid="Pulumi.Aws.Rds.Instance.Tags*"></a>
+  <h4 id="Pulumi_Aws_Rds_Instance_Tags" data-uid="Pulumi.Aws.Rds.Instance.Tags">Tags</h4>
+  <div class="markdown level1 summary"><p>A mapping of tags to assign to the resource.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Tags { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/Instance.cs/#L451">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Rds_Instance_Timezone_" data-uid="Pulumi.Aws.Rds.Instance.Timezone*"></a>
+  <h4 id="Pulumi_Aws_Rds_Instance_Timezone" data-uid="Pulumi.Aws.Rds.Instance.Timezone">Timezone</h4>
+  <div class="markdown level1 summary"><p>Time zone of the DB instance. <code>timezone</code> is currently
+only supported by Microsoft SQL Server. The <code>timezone</code> can only be set on
+creation. See <a href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_SQLServer.html#SQLServer.Concepts.General.TimeZone">MSSQL User
+Guide</a>
+for more information.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Timezone { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/Instance.cs/#L458">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Rds_Instance_Username_" data-uid="Pulumi.Aws.Rds.Instance.Username*"></a>
+  <h4 id="Pulumi_Aws_Rds_Instance_Username" data-uid="Pulumi.Aws.Rds.Instance.Username">Username</h4>
+  <div class="markdown level1 summary"><p>(Required unless a <code>snapshot_identifier</code> or <code>replicate_source_db</code>
+is provided) Username for the master DB user.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Username { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/Instance.cs/#L465">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Rds_Instance_VpcSecurityGroupIds_" data-uid="Pulumi.Aws.Rds.Instance.VpcSecurityGroupIds*"></a>
+  <h4 id="Pulumi_Aws_Rds_Instance_VpcSecurityGroupIds" data-uid="Pulumi.Aws.Rds.Instance.VpcSecurityGroupIds">VpcSecurityGroupIds</h4>
+  <div class="markdown level1 summary"><p>List of VPC security groups to
+associate.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; VpcSecurityGroupIds { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/Instance.cs/#L506">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Rds_Instance_Get_" data-uid="Pulumi.Aws.Rds.Instance.Get*"></a>
+  <h4 id="Pulumi_Aws_Rds_Instance_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_Rds_InstanceState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Rds.Instance.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.Rds.InstanceState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, InstanceState, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Get an existing Instance resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Instance Get(string name, Input&lt;string&gt; id, InstanceState state = null, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Aws.Rds.InstanceState.html">InstanceState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Aws.Rds.Instance.html">Instance</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Rds/Instance.cs/#L42" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

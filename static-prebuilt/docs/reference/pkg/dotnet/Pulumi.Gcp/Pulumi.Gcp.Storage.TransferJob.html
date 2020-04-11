@@ -1,0 +1,529 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class TransferJob
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class TransferJob
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Gcp.Storage.TransferJob">
+  
+  <h1 id="Pulumi_Gcp_Storage_TransferJob" data-uid="Pulumi.Gcp.Storage.TransferJob" class="text-break">Class TransferJob
+  </h1>
+  <div class="markdown level0 summary"><p>Creates a new Transfer Job in Google Cloud Storage Transfer.</p>
+<p>To get more information about Google Cloud Storage Transfer, see:</p>
+<ul>
+<li><a href="https://cloud.google.com/storage-transfer/docs/overview">Overview</a></li>
+<li><a href="https://cloud.google.com/storage-transfer/docs/reference/rest/v1/transferJobs#TransferJob">API documentation</a></li>
+<li>How-to Guides</li>
+<li><a href="https://cloud.google.com/storage-transfer/docs/configure-access">Configuring Access to Data Sources and Sinks</a></li>
+</ul>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_transfer_job.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_transfer_job.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">TransferJob</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Gcp.Storage.html">Pulumi.Gcp.Storage</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.Gcp.dll</h6>
+  <h5 id="Pulumi_Gcp_Storage_TransferJob_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class TransferJob : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Storage/TransferJob.cs/#L89">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_Storage_TransferJob__ctor_" data-uid="Pulumi.Gcp.Storage.TransferJob.#ctor*"></a>
+  <h4 id="Pulumi_Gcp_Storage_TransferJob__ctor_System_String_Pulumi_Gcp_Storage_TransferJobArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Storage.TransferJob.#ctor(System.String,Pulumi.Gcp.Storage.TransferJobArgs,Pulumi.CustomResourceOptions)">TransferJob(String, TransferJobArgs, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Create a TransferJob resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TransferJob(string name, TransferJobArgs args, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Gcp.Storage.TransferJobArgs.html">TransferJobArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Storage/TransferJob.cs/#L29">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_Storage_TransferJob_CreationTime_" data-uid="Pulumi.Gcp.Storage.TransferJob.CreationTime*"></a>
+  <h4 id="Pulumi_Gcp_Storage_TransferJob_CreationTime" data-uid="Pulumi.Gcp.Storage.TransferJob.CreationTime">CreationTime</h4>
+  <div class="markdown level1 summary"><p>When the Transfer Job was created.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; CreationTime { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Storage/TransferJob.cs/#L35">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_Storage_TransferJob_DeletionTime_" data-uid="Pulumi.Gcp.Storage.TransferJob.DeletionTime*"></a>
+  <h4 id="Pulumi_Gcp_Storage_TransferJob_DeletionTime" data-uid="Pulumi.Gcp.Storage.TransferJob.DeletionTime">DeletionTime</h4>
+  <div class="markdown level1 summary"><p>When the Transfer Job was deleted.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; DeletionTime { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Storage/TransferJob.cs/#L41">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_Storage_TransferJob_Description_" data-uid="Pulumi.Gcp.Storage.TransferJob.Description*"></a>
+  <h4 id="Pulumi_Gcp_Storage_TransferJob_Description" data-uid="Pulumi.Gcp.Storage.TransferJob.Description">Description</h4>
+  <div class="markdown level1 summary"><p>Unique description to identify the Transfer Job.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Storage/TransferJob.cs/#L47">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_Storage_TransferJob_LastModificationTime_" data-uid="Pulumi.Gcp.Storage.TransferJob.LastModificationTime*"></a>
+  <h4 id="Pulumi_Gcp_Storage_TransferJob_LastModificationTime" data-uid="Pulumi.Gcp.Storage.TransferJob.LastModificationTime">LastModificationTime</h4>
+  <div class="markdown level1 summary"><p>When the Transfer Job was last modified.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; LastModificationTime { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Storage/TransferJob.cs/#L53">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_Storage_TransferJob_Name_" data-uid="Pulumi.Gcp.Storage.TransferJob.Name*"></a>
+  <h4 id="Pulumi_Gcp_Storage_TransferJob_Name" data-uid="Pulumi.Gcp.Storage.TransferJob.Name">Name</h4>
+  <div class="markdown level1 summary"><p>The name of the Transfer Job.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Storage/TransferJob.cs/#L60">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_Storage_TransferJob_Project_" data-uid="Pulumi.Gcp.Storage.TransferJob.Project*"></a>
+  <h4 id="Pulumi_Gcp_Storage_TransferJob_Project" data-uid="Pulumi.Gcp.Storage.TransferJob.Project">Project</h4>
+  <div class="markdown level1 summary"><p>The project in which the resource belongs. If it
+is not provided, the provider project is used.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Project { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Storage/TransferJob.cs/#L66">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_Storage_TransferJob_Schedule_" data-uid="Pulumi.Gcp.Storage.TransferJob.Schedule*"></a>
+  <h4 id="Pulumi_Gcp_Storage_TransferJob_Schedule" data-uid="Pulumi.Gcp.Storage.TransferJob.Schedule">Schedule</h4>
+  <div class="markdown level1 summary"><p>Schedule specification defining when the Transfer Job should be scheduled to start, end and and what time to run. Structure documented below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;TransferJobSchedule&gt; Schedule { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Gcp.Storage.Outputs.TransferJobSchedule.html">TransferJobSchedule</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Storage/TransferJob.cs/#L72">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_Storage_TransferJob_Status_" data-uid="Pulumi.Gcp.Storage.TransferJob.Status*"></a>
+  <h4 id="Pulumi_Gcp_Storage_TransferJob_Status" data-uid="Pulumi.Gcp.Storage.TransferJob.Status">Status</h4>
+  <div class="markdown level1 summary"><p>Status of the job. Default: <code>ENABLED</code>. <strong>NOTE: The effect of the new job status takes place during a subsequent job run. For example, if you change the job status from ENABLED to DISABLED, and an operation spawned by the transfer is running, the status change would not affect the current operation.</strong></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Status { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Storage/TransferJob.cs/#L78">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_Storage_TransferJob_TransferSpec_" data-uid="Pulumi.Gcp.Storage.TransferJob.TransferSpec*"></a>
+  <h4 id="Pulumi_Gcp_Storage_TransferJob_TransferSpec" data-uid="Pulumi.Gcp.Storage.TransferJob.TransferSpec">TransferSpec</h4>
+  <div class="markdown level1 summary"><p>Transfer specification. Structure documented below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;TransferJobTransferSpec&gt; TransferSpec { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Gcp.Storage.Outputs.TransferJobTransferSpec.html">TransferJobTransferSpec</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Storage/TransferJob.cs/#L119">View Source</a>
+  </span>
+  <a id="Pulumi_Gcp_Storage_TransferJob_Get_" data-uid="Pulumi.Gcp.Storage.TransferJob.Get*"></a>
+  <h4 id="Pulumi_Gcp_Storage_TransferJob_Get_System_String_Pulumi_Input_System_String__Pulumi_Gcp_Storage_TransferJobState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Gcp.Storage.TransferJob.Get(System.String,Pulumi.Input{System.String},Pulumi.Gcp.Storage.TransferJobState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, TransferJobState, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Get an existing TransferJob resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TransferJob Get(string name, Input&lt;string&gt; id, TransferJobState state = null, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Gcp.Storage.TransferJobState.html">TransferJobState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Gcp.Storage.TransferJob.html">TransferJob</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-gcp/blob/master/sdk/dotnet/Storage/TransferJob.cs/#L24" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

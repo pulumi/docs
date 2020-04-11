@@ -1,0 +1,775 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class SiteConnection
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class SiteConnection
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection">
+  
+  <h1 id="Pulumi_OpenStack_VPNaaS_SiteConnection" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection" class="text-break">Class SiteConnection
+  </h1>
+  <div class="markdown level0 summary"><p>Manages a V2 Neutron IPSec site connection resource within OpenStack.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/vpnaas_site_connection_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/vpnaas_site_connection_v2.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">SiteConnection</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.OpenStack.VPNaaS.html">Pulumi.OpenStack.VPNaaS</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.OpenStack.dll</h6>
+  <h5 id="Pulumi_OpenStack_VPNaaS_SiteConnection_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class SiteConnection : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Vpnaas/SiteConnection.cs/#L160">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_VPNaaS_SiteConnection__ctor_" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.#ctor*"></a>
+  <h4 id="Pulumi_OpenStack_VPNaaS_SiteConnection__ctor_System_String_Pulumi_OpenStack_VPNaaS_SiteConnectionArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.#ctor(System.String,Pulumi.OpenStack.VPNaaS.SiteConnectionArgs,System.Nullable{CustomResourceOptions})">SiteConnection(String, SiteConnectionArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Create a SiteConnection resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SiteConnection(string name, SiteConnectionArgs args, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.OpenStack.VPNaaS.SiteConnectionArgs.html">SiteConnectionArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Vpnaas/SiteConnection.cs/#L22">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_VPNaaS_SiteConnection_AdminStateUp_" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.AdminStateUp*"></a>
+  <h4 id="Pulumi_OpenStack_VPNaaS_SiteConnection_AdminStateUp" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.AdminStateUp">AdminStateUp</h4>
+  <div class="markdown level1 summary"><p>The administrative state of the resource. Can either be up(true) or down(false).
+Changing this updates the administrative state of the existing connection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; AdminStateUp { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Vpnaas/SiteConnection.cs/#L29">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_VPNaaS_SiteConnection_Description_" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.Description*"></a>
+  <h4 id="Pulumi_OpenStack_VPNaaS_SiteConnection_Description" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.Description">Description</h4>
+  <div class="markdown level1 summary"><p>The human-readable description for the connection.
+Changing this updates the description of the existing connection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Vpnaas/SiteConnection.cs/#L38">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_VPNaaS_SiteConnection_Dpds_" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.Dpds*"></a>
+  <h4 id="Pulumi_OpenStack_VPNaaS_SiteConnection_Dpds" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.Dpds">Dpds</h4>
+  <div class="markdown level1 summary"><p>A dictionary with dead peer detection (DPD) protocol controls.</p>
+<ul>
+<li><code>action</code> - (Optional) The dead peer detection (DPD) action.
+A valid value is clear, hold, restart, disabled, or restart-by-peer.
+Default value is hold.</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;SiteConnectionDpds&gt;&gt; Dpds { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.OpenStack.VPNaaS.Outputs.SiteConnectionDpds.html">SiteConnectionDpds</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Vpnaas/SiteConnection.cs/#L44">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_VPNaaS_SiteConnection_IkepolicyId_" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.IkepolicyId*"></a>
+  <h4 id="Pulumi_OpenStack_VPNaaS_SiteConnection_IkepolicyId" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.IkepolicyId">IkepolicyId</h4>
+  <div class="markdown level1 summary"><p>The ID of the IKE policy. Changing this creates a new connection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; IkepolicyId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Vpnaas/SiteConnection.cs/#L50">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_VPNaaS_SiteConnection_Initiator_" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.Initiator*"></a>
+  <h4 id="Pulumi_OpenStack_VPNaaS_SiteConnection_Initiator" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.Initiator">Initiator</h4>
+  <div class="markdown level1 summary"><p>A valid value is response-only or bi-directional. Default is bi-directional.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Initiator { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Vpnaas/SiteConnection.cs/#L56">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_VPNaaS_SiteConnection_IpsecpolicyId_" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.IpsecpolicyId*"></a>
+  <h4 id="Pulumi_OpenStack_VPNaaS_SiteConnection_IpsecpolicyId" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.IpsecpolicyId">IpsecpolicyId</h4>
+  <div class="markdown level1 summary"><p>The ID of the IPsec policy. Changing this creates a new connection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; IpsecpolicyId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Vpnaas/SiteConnection.cs/#L65">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_VPNaaS_SiteConnection_LocalEpGroupId_" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.LocalEpGroupId*"></a>
+  <h4 id="Pulumi_OpenStack_VPNaaS_SiteConnection_LocalEpGroupId" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.LocalEpGroupId">LocalEpGroupId</h4>
+  <div class="markdown level1 summary"><p>The ID for the endpoint group that contains private subnets for the local side of the connection.
+You must specify this parameter with the peer_ep_group_id parameter unless
+in backward- compatible mode where peer_cidrs is provided with a subnet_id for the VPN service.
+Changing this updates the existing connection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; LocalEpGroupId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Vpnaas/SiteConnection.cs/#L73">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_VPNaaS_SiteConnection_LocalId_" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.LocalId*"></a>
+  <h4 id="Pulumi_OpenStack_VPNaaS_SiteConnection_LocalId" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.LocalId">LocalId</h4>
+  <div class="markdown level1 summary"><p>An ID to be used instead of the external IP address for a virtual router used in traffic between instances on different networks in east-west traffic.
+Most often, local ID would be domain name, email address, etc.
+If this is not configured then the external IP address will be used as the ID.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; LocalId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Vpnaas/SiteConnection.cs/#L80">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_VPNaaS_SiteConnection_Mtu_" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.Mtu*"></a>
+  <h4 id="Pulumi_OpenStack_VPNaaS_SiteConnection_Mtu" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.Mtu">Mtu</h4>
+  <div class="markdown level1 summary"><p>The maximum transmission unit (MTU) value to address fragmentation.
+Minimum value is 68 for IPv4, and 1280 for IPv6.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int&gt; Mtu { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Vpnaas/SiteConnection.cs/#L87">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_VPNaaS_SiteConnection_Name_" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.Name*"></a>
+  <h4 id="Pulumi_OpenStack_VPNaaS_SiteConnection_Name" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.Name">Name</h4>
+  <div class="markdown level1 summary"><p>The name of the connection. Changing this updates the name of
+the existing connection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Vpnaas/SiteConnection.cs/#L93">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_VPNaaS_SiteConnection_PeerAddress_" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.PeerAddress*"></a>
+  <h4 id="Pulumi_OpenStack_VPNaaS_SiteConnection_PeerAddress" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.PeerAddress">PeerAddress</h4>
+  <div class="markdown level1 summary"><p>The peer gateway public IPv4 or IPv6 address or FQDN.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; PeerAddress { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Vpnaas/SiteConnection.cs/#L99">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_VPNaaS_SiteConnection_PeerCidrs_" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.PeerCidrs*"></a>
+  <h4 id="Pulumi_OpenStack_VPNaaS_SiteConnection_PeerCidrs" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.PeerCidrs">PeerCidrs</h4>
+  <div class="markdown level1 summary"><p>Unique list of valid peer private CIDRs in the form &lt; net_address &gt; / &lt; prefix &gt; .</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; PeerCidrs { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Vpnaas/SiteConnection.cs/#L107">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_VPNaaS_SiteConnection_PeerEpGroupId_" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.PeerEpGroupId*"></a>
+  <h4 id="Pulumi_OpenStack_VPNaaS_SiteConnection_PeerEpGroupId" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.PeerEpGroupId">PeerEpGroupId</h4>
+  <div class="markdown level1 summary"><p>The ID for the endpoint group that contains private CIDRs in the form &lt; net_address &gt; / &lt; prefix &gt; for the peer side of the connection.
+You must specify this parameter with the local_ep_group_id parameter unless in backward-compatible mode
+where peer_cidrs is provided with a subnet_id for the VPN service.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; PeerEpGroupId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Vpnaas/SiteConnection.cs/#L115">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_VPNaaS_SiteConnection_PeerId_" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.PeerId*"></a>
+  <h4 id="Pulumi_OpenStack_VPNaaS_SiteConnection_PeerId" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.PeerId">PeerId</h4>
+  <div class="markdown level1 summary"><p>The peer router identity for authentication. A valid value is an IPv4 address, IPv6 address, e-mail address, key ID, or FQDN.
+Typically, this value matches the peer_address value.
+Changing this updates the existing policy.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; PeerId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Vpnaas/SiteConnection.cs/#L121">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_VPNaaS_SiteConnection_Psk_" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.Psk*"></a>
+  <h4 id="Pulumi_OpenStack_VPNaaS_SiteConnection_Psk" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.Psk">Psk</h4>
+  <div class="markdown level1 summary"><p>The pre-shared key. A valid value is any string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Psk { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Vpnaas/SiteConnection.cs/#L130">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_VPNaaS_SiteConnection_Region_" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.Region*"></a>
+  <h4 id="Pulumi_OpenStack_VPNaaS_SiteConnection_Region" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.Region">Region</h4>
+  <div class="markdown level1 summary"><p>The region in which to obtain the V2 Networking client.
+A Networking client is needed to create an IPSec site connection. If omitted, the
+<code>region</code> argument of the provider is used. Changing this creates a new
+site connection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Region { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Vpnaas/SiteConnection.cs/#L137">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_VPNaaS_SiteConnection_TenantId_" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.TenantId*"></a>
+  <h4 id="Pulumi_OpenStack_VPNaaS_SiteConnection_TenantId" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.TenantId">TenantId</h4>
+  <div class="markdown level1 summary"><p>The owner of the connection. Required if admin wants to
+create a connection for another project. Changing this creates a new connection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; TenantId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Vpnaas/SiteConnection.cs/#L143">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_VPNaaS_SiteConnection_ValueSpecs_" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.ValueSpecs*"></a>
+  <h4 id="Pulumi_OpenStack_VPNaaS_SiteConnection_ValueSpecs" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.ValueSpecs">ValueSpecs</h4>
+  <div class="markdown level1 summary"><p>Map of additional options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;?&gt; ValueSpecs { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Vpnaas/SiteConnection.cs/#L149">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_VPNaaS_SiteConnection_VpnserviceId_" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.VpnserviceId*"></a>
+  <h4 id="Pulumi_OpenStack_VPNaaS_SiteConnection_VpnserviceId" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.VpnserviceId">VpnserviceId</h4>
+  <div class="markdown level1 summary"><p>The ID of the VPN service. Changing this creates a new connection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; VpnserviceId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Vpnaas/SiteConnection.cs/#L190">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_VPNaaS_SiteConnection_Get_" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.Get*"></a>
+  <h4 id="Pulumi_OpenStack_VPNaaS_SiteConnection_Get_System_String_Input_System_String__Pulumi_OpenStack_VPNaaS_SiteConnectionState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.OpenStack.VPNaaS.SiteConnection.Get(System.String,Input{System.String},Pulumi.OpenStack.VPNaaS.SiteConnectionState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, SiteConnectionState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Get an existing SiteConnection resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SiteConnection Get(string name, Input&lt;string&gt; id, SiteConnectionState state = null, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.OpenStack.VPNaaS.SiteConnectionState.html">SiteConnectionState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.OpenStack.VPNaaS.SiteConnection.html">SiteConnection</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Vpnaas/SiteConnection.cs/#L16" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

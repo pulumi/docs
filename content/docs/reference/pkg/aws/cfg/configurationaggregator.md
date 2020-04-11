@@ -3,14 +3,15 @@
 title: "ConfigurationAggregator"
 block_external_search_index: true
 ---
-<style>
-table td p { margin-top: 0; margin-bottom: 0; }
-</style>
+
+
 
 Manages an AWS Config Configuration Aggregator
 
+{{% examples %}}
 ## Example Usage
 
+{{% example %}}
 ### Account Based Aggregation
 
 ```typescript
@@ -25,6 +26,8 @@ const account = new aws.cfg.ConfigurationAggregator("account", {
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Organization Based Aggregation
 
 ```typescript
@@ -56,381 +59,290 @@ const organizationConfigurationAggregator = new aws.cfg.ConfigurationAggregator(
         allRegions: true,
         roleArn: organizationRole.arn,
     },
-}, {dependsOn: [organizationRolePolicyAttachment]});
+}, { dependsOn: [organizationRolePolicyAttachment] });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/config_configuration_aggregator.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
 ## Create a ConfigurationAggregator Resource
 
-{{< langchoose csharp nojavascript >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cfg/#ConfigurationAggregator">ConfigurationAggregator</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cfg/#ConfigurationAggregatorArgs">ConfigurationAggregatorArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+{{% choosable language nodejs %}}
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cfg/#ConfigurationAggregator">ConfigurationAggregator</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cfg/#ConfigurationAggregatorArgs">ConfigurationAggregatorArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+{{% /choosable %}}
 
+{{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ConfigurationAggregator</span><span class="p">(resource_name, opts=None, </span>account_aggregation_source=None<span class="p">, </span>name=None<span class="p">, </span>organization_aggregation_source=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+{{% /choosable %}}
 
+{{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewConfigurationAggregator<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cfg?tab=doc#ConfigurationAggregatorArgs">ConfigurationAggregatorArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cfg?tab=doc#ConfigurationAggregator">ConfigurationAggregator</a></span>, error)</span></code></pre></div>
+{{% /choosable %}}
 
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cfg.ConfigurationAggregator.html">ConfigurationAggregator</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cfg.ConfigurationAggregatorArgs.html">ConfigurationAggregatorArgs</a></span>? <span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+{{% choosable language csharp %}}
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cfg.ConfigurationAggregator.html">ConfigurationAggregator</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cfg.ConfigurationAggregatorArgs.html">ConfigurationAggregatorArgs</a></span>? <span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+{{% /choosable %}}
 
-Creates a ConfigurationAggregator resource with the given unique name, arguments, and options.
+{{% choosable language nodejs %}}
 
-{{% lang nodejs %}}
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The arguments to use to populate this resource's properties.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 
-<ul class="pl-10">
-    <li><strong>name</strong> &ndash; (Required) The unique name of the resulting resource.</li>
-    <li><strong>args</strong> &ndash;  (Optional)  The arguments to use to populate this resource's properties.</li>
-    <li><strong>opts</strong> &ndash; (Optional) A bag of options that control this resource's behavior.</li>
-</ul>
+{{% /choosable %}}
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
+{{% /choosable %}}
 
-{{% lang go %}}
+{{% choosable language go %}}
 
-<ul class="pl-10">
-    <li><strong>name</strong> &ndash; (Required) The unique name of the resulting resource.</li>
-    <li><strong>args</strong> &ndash;  (Optional)  The arguments to use to populate this resource's properties.</li>
-    <li><strong>opts</strong> &ndash; (Optional) A bag of options that control this resource's behavior.</li>
-</ul>
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The arguments to use to populate this resource's properties.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 
-{{% /lang %}}
+{{% /choosable %}}
 
-{{% lang csharp %}}
+{{% choosable language csharp %}}
 
-<ul class="pl-10">
-    <li><strong>name</strong> &ndash; (Required) The unique name of the resulting resource.</li>
-    <li><strong>args</strong> &ndash;  (Optional)  The arguments to use to populate this resource's properties.</li>
-    <li><strong>opts</strong> &ndash; (Optional) A bag of options that control this resource's behavior.</li>
-</ul>
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The arguments to use to populate this resource's properties.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 
-{{% /lang %}}
+{{% /choosable %}}
 
-The following arguments are supported:
-
-
-{{< langchoose csharp nojavascript >}}
-
-
-{{% lang csharp %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Account<wbr>Aggregation<wbr>Source</td>
-            <td class="align-top">
-                
-                <code><a href="#configurationaggregatoraccountaggregationsource">Configuration<wbr>Aggregator<wbr>Account<wbr>Aggregation<wbr>Source<wbr>Args?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The account(s) to aggregate config data from as documented below.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Name</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The name of the configuration aggregator.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Organization<wbr>Aggregation<wbr>Source</td>
-            <td class="align-top">
-                
-                <code><a href="#configurationaggregatororganizationaggregationsource">Configuration<wbr>Aggregator<wbr>Organization<wbr>Aggregation<wbr>Source<wbr>Args?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The organization to aggregate config data from as documented below.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Tags</td>
-            <td class="align-top">
-                
-                <code>Dictionary<string, object>?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A mapping of tags to assign to the resource.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+#### Resource Arguments
 
 
-{{% /lang %}}
 
 
-{{% lang go %}}
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Account<wbr>Aggregation<wbr>Source</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#configurationaggregatoraccountaggregationsource">Configuration<wbr>Aggregator<wbr>Account<wbr>Aggregation<wbr>Source<wbr>Args?</a></span>
+    </dt>
+    <dd>{{% md %}}The account(s) to aggregate config data from as documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The name of the configuration aggregator.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Organization<wbr>Aggregation<wbr>Source</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#configurationaggregatororganizationaggregationsource">Configuration<wbr>Aggregator<wbr>Organization<wbr>Aggregation<wbr>Source<wbr>Args?</a></span>
+    </dt>
+    <dd>{{% md %}}The organization to aggregate config data from as documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary<string, object>?</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Account<wbr>Aggregation<wbr>Source</td>
-            <td class="align-top">
-                
-                <code><a href="#configurationaggregatoraccountaggregationsource">*Configuration<wbr>Aggregator<wbr>Account<wbr>Aggregation<wbr>Source</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The account(s) to aggregate config data from as documented below.
- {{% /md %}}
+{{% choosable language go %}}
+<dl class="resources-properties">
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Name</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The name of the configuration aggregator.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Account<wbr>Aggregation<wbr>Source</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#configurationaggregatoraccountaggregationsource">*Configuration<wbr>Aggregator<wbr>Account<wbr>Aggregation<wbr>Source</a></span>
+    </dt>
+    <dd>{{% md %}}The account(s) to aggregate config data from as documented below.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Organization<wbr>Aggregation<wbr>Source</td>
-            <td class="align-top">
-                
-                <code><a href="#configurationaggregatororganizationaggregationsource">*Configuration<wbr>Aggregator<wbr>Organization<wbr>Aggregation<wbr>Source</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The organization to aggregate config data from as documented below.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The name of the configuration aggregator.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Tags</td>
-            <td class="align-top">
-                
-                <code>map[string]interface{}</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A mapping of tags to assign to the resource.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Organization<wbr>Aggregation<wbr>Source</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#configurationaggregatororganizationaggregationsource">*Configuration<wbr>Aggregator<wbr>Organization<wbr>Aggregation<wbr>Source</a></span>
+    </dt>
+    <dd>{{% md %}}The organization to aggregate config data from as documented below.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>account<wbr>Aggregation<wbr>Source</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#configurationaggregatoraccountaggregationsource">Configuration<wbr>Aggregator<wbr>Account<wbr>Aggregation<wbr>Source?</a></span>
+    </dt>
+    <dd>{{% md %}}The account(s) to aggregate config data from as documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The name of the configuration aggregator.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>organization<wbr>Aggregation<wbr>Source</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#configurationaggregatororganizationaggregationsource">Configuration<wbr>Aggregator<wbr>Organization<wbr>Aggregation<wbr>Source?</a></span>
+    </dt>
+    <dd>{{% md %}}The organization to aggregate config data from as documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}?</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% lang nodejs %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>account_<wbr>aggregation_<wbr>source</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#configurationaggregatoraccountaggregationsource">Dict[Configuration<wbr>Aggregator<wbr>Account<wbr>Aggregation<wbr>Source]</a></span>
+    </dt>
+    <dd>{{% md %}}The account(s) to aggregate config data from as documented below.
+{{% /md %}}</dd>
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">account<wbr>Aggregation<wbr>Source</td>
-            <td class="align-top">
-                
-                <code><a href="#configurationaggregatoraccountaggregationsource">Configuration<wbr>Aggregator<wbr>Account<wbr>Aggregation<wbr>Source?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The account(s) to aggregate config data from as documented below.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the configuration aggregator.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">name</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The name of the configuration aggregator.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>organization_<wbr>aggregation_<wbr>source</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#configurationaggregatororganizationaggregationsource">Dict[Configuration<wbr>Aggregator<wbr>Organization<wbr>Aggregation<wbr>Source]</a></span>
+    </dt>
+    <dd>{{% md %}}The organization to aggregate config data from as documented below.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">organization<wbr>Aggregation<wbr>Source</td>
-            <td class="align-top">
-                
-                <code><a href="#configurationaggregatororganizationaggregationsource">Configuration<wbr>Aggregator<wbr>Organization<wbr>Aggregation<wbr>Source?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The organization to aggregate config data from as documented below.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">tags</td>
-            <td class="align-top">
-                
-                <code>{[key: string]: any}?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A mapping of tags to assign to the resource.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang python %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">account_<wbr>aggregation_<wbr>source</td>
-            <td class="align-top">
-                
-                <code><a href="#configurationaggregatoraccountaggregationsource">Dict[Configuration<wbr>Aggregator<wbr>Account<wbr>Aggregation<wbr>Source]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The account(s) to aggregate config data from as documented below.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">name</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The name of the configuration aggregator.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">organization_<wbr>aggregation_<wbr>source</td>
-            <td class="align-top">
-                
-                <code><a href="#configurationaggregatororganizationaggregationsource">Dict[Configuration<wbr>Aggregator<wbr>Organization<wbr>Aggregation<wbr>Source]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The organization to aggregate config data from as documented below.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">tags</td>
-            <td class="align-top">
-                
-                <code>Dict[str, Any]</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A mapping of tags to assign to the resource.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
+</dl>
+{{% /choosable %}}
 
 
 
@@ -444,347 +356,213 @@ The following output properties are available:
 
 
 
-{{< langchoose csharp nojavascript >}}
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Account<wbr>Aggregation<wbr>Source</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#configurationaggregatoraccountaggregationsource">Configuration<wbr>Aggregator<wbr>Account<wbr>Aggregation<wbr>Source?</a></span>
+    </dt>
+    <dd>{{% md %}}The account(s) to aggregate config data from as documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the aggregator
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the configuration aggregator.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Organization<wbr>Aggregation<wbr>Source</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#configurationaggregatororganizationaggregationsource">Configuration<wbr>Aggregator<wbr>Organization<wbr>Aggregation<wbr>Source?</a></span>
+    </dt>
+    <dd>{{% md %}}The organization to aggregate config data from as documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary<string, object>?</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% lang csharp %}}
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Account<wbr>Aggregation<wbr>Source</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#configurationaggregatoraccountaggregationsource">*Configuration<wbr>Aggregator<wbr>Account<wbr>Aggregation<wbr>Source</a></span>
+    </dt>
+    <dd>{{% md %}}The account(s) to aggregate config data from as documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the aggregator
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the configuration aggregator.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Organization<wbr>Aggregation<wbr>Source</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#configurationaggregatororganizationaggregationsource">*Configuration<wbr>Aggregator<wbr>Organization<wbr>Aggregation<wbr>Source</a></span>
+    </dt>
+    <dd>{{% md %}}The organization to aggregate config data from as documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Account<wbr>Aggregation<wbr>Source</td>
-            <td class="align-top">
-                
-                <code><a href="#configurationaggregatoraccountaggregationsource">Configuration<wbr>Aggregator<wbr>Account<wbr>Aggregation<wbr>Source?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} The account(s) to aggregate config data from as documented below.
- {{% /md %}}
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Arn</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The ARN of the aggregator
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>account<wbr>Aggregation<wbr>Source</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#configurationaggregatoraccountaggregationsource">Configuration<wbr>Aggregator<wbr>Account<wbr>Aggregation<wbr>Source?</a></span>
+    </dt>
+    <dd>{{% md %}}The account(s) to aggregate config data from as documented below.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Name</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The name of the configuration aggregator.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the aggregator
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Organization<wbr>Aggregation<wbr>Source</td>
-            <td class="align-top">
-                
-                <code><a href="#configurationaggregatororganizationaggregationsource">Configuration<wbr>Aggregator<wbr>Organization<wbr>Aggregation<wbr>Source?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} The organization to aggregate config data from as documented below.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the configuration aggregator.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Tags</td>
-            <td class="align-top">
-                
-                <code>Dictionary<string, object>?</code>
-            </td>
-            <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>organization<wbr>Aggregation<wbr>Source</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#configurationaggregatororganizationaggregationsource">Configuration<wbr>Aggregator<wbr>Organization<wbr>Aggregation<wbr>Source?</a></span>
+    </dt>
+    <dd>{{% md %}}The organization to aggregate config data from as documented below.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+    <dt class="property-"
+            title="">
+        <span>tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}?</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
 
+    <dt class="property-"
+            title="">
+        <span>account_<wbr>aggregation_<wbr>source</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#configurationaggregatoraccountaggregationsource">Dict[Configuration<wbr>Aggregator<wbr>Account<wbr>Aggregation<wbr>Source]</a></span>
+    </dt>
+    <dd>{{% md %}}The account(s) to aggregate config data from as documented below.
+{{% /md %}}</dd>
 
-{{% lang go %}}
+    <dt class="property-"
+            title="">
+        <span>arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the aggregator
+{{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the configuration aggregator.
+{{% /md %}}</dd>
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Account<wbr>Aggregation<wbr>Source</td>
-            <td class="align-top">
-                
-                <code><a href="#configurationaggregatoraccountaggregationsource">*Configuration<wbr>Aggregator<wbr>Account<wbr>Aggregation<wbr>Source</a></code>
-            </td>
-            <td class="align-top">{{% md %}} The account(s) to aggregate config data from as documented below.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>organization_<wbr>aggregation_<wbr>source</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#configurationaggregatororganizationaggregationsource">Dict[Configuration<wbr>Aggregator<wbr>Organization<wbr>Aggregation<wbr>Source]</a></span>
+    </dt>
+    <dd>{{% md %}}The organization to aggregate config data from as documented below.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Arn</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The ARN of the aggregator
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Name</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The name of the configuration aggregator.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Organization<wbr>Aggregation<wbr>Source</td>
-            <td class="align-top">
-                
-                <code><a href="#configurationaggregatororganizationaggregationsource">*Configuration<wbr>Aggregator<wbr>Organization<wbr>Aggregation<wbr>Source</a></code>
-            </td>
-            <td class="align-top">{{% md %}} The organization to aggregate config data from as documented below.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Tags</td>
-            <td class="align-top">
-                
-                <code>map[string]interface{}</code>
-            </td>
-            <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang nodejs %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">account<wbr>Aggregation<wbr>Source</td>
-            <td class="align-top">
-                
-                <code><a href="#configurationaggregatoraccountaggregationsource">Configuration<wbr>Aggregator<wbr>Account<wbr>Aggregation<wbr>Source?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} The account(s) to aggregate config data from as documented below.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">arn</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The ARN of the aggregator
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">name</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The name of the configuration aggregator.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">organization<wbr>Aggregation<wbr>Source</td>
-            <td class="align-top">
-                
-                <code><a href="#configurationaggregatororganizationaggregationsource">Configuration<wbr>Aggregator<wbr>Organization<wbr>Aggregation<wbr>Source?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} The organization to aggregate config data from as documented below.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">tags</td>
-            <td class="align-top">
-                
-                <code>{[key: string]: any}?</code>
-            </td>
-            <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang python %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">account_<wbr>aggregation_<wbr>source</td>
-            <td class="align-top">
-                
-                <code><a href="#configurationaggregatoraccountaggregationsource">Dict[Configuration<wbr>Aggregator<wbr>Account<wbr>Aggregation<wbr>Source]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} The account(s) to aggregate config data from as documented below.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">arn</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} The ARN of the aggregator
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">name</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} The name of the configuration aggregator.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">organization_<wbr>aggregation_<wbr>source</td>
-            <td class="align-top">
-                
-                <code><a href="#configurationaggregatororganizationaggregationsource">Dict[Configuration<wbr>Aggregator<wbr>Organization<wbr>Aggregation<wbr>Source]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} The organization to aggregate config data from as documented below.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">tags</td>
-            <td class="align-top">
-                
-                <code>Dict[str, Any]</code>
-            </td>
-            <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
+</dl>
+{{% /choosable %}}
 
 
 
@@ -795,435 +573,332 @@ The following output properties are available:
 
 ## Look up an Existing ConfigurationAggregator Resource
 
-{{< langchoose csharp nojavascript >}}
-
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">pulumi.Input&lt;pulumi.ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cfg/#ConfigurationAggregatorState">ConfigurationAggregatorState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cfg/#ConfigurationAggregator">ConfigurationAggregator</a></span></code></pre></div>
-
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>account_aggregation_source=None<span class="p">, </span>arn=None<span class="p">, </span>name=None<span class="p">, </span>organization_aggregation_source=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
-
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetConfigurationAggregator<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">pulumi.IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cfg?tab=doc#ConfigurationAggregatorState">ConfigurationAggregatorState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cfg?tab=doc#ConfigurationAggregator">ConfigurationAggregator</a></span>, error)</span></code></pre></div>
-
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cfg.ConfigurationAggregator.html">ConfigurationAggregator</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Pulumi.Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cfg.ConfigurationAggregatorState.html">ConfigurationAggregatorState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
-
 Get an existing ConfigurationAggregator resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 
-{{% lang nodejs %}}
+{{< chooser language "javascript,typescript,python,go,csharp  " / >}}
 
-<ul class="pl-10">
-    <li><strong>name</strong> &ndash; (Required) The unique name of the resulting resource.</li>
-    <li><strong>id</strong> &ndash; (Required) The _unique_ provider ID of the resource to lookup.</li>
-    <li><strong>state</strong> &ndash; (Optional) Any extra arguments used during the lookup.</li>
-    <li><strong>opts</strong> &ndash; (Optional) A bag of options that control this resource's behavior.</li>
-</ul>
+{{% choosable language nodejs %}}
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cfg/#ConfigurationAggregatorState">ConfigurationAggregatorState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cfg/#ConfigurationAggregator">ConfigurationAggregator</a></span></code></pre></div>
+{{% /choosable %}}
 
-{{% /lang %}}
+{{% choosable language python %}}
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>account_aggregation_source=None<span class="p">, </span>arn=None<span class="p">, </span>name=None<span class="p">, </span>organization_aggregation_source=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+{{% /choosable %}}
 
-{{% lang go %}}
+{{% choosable language go %}}
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetConfigurationAggregator<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cfg?tab=doc#ConfigurationAggregatorState">ConfigurationAggregatorState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cfg?tab=doc#ConfigurationAggregator">ConfigurationAggregator</a></span>, error)</span></code></pre></div>
+{{% /choosable %}}
 
-<ul class="pl-10">
-    <li><strong>name</strong> &ndash; (Required) The unique name of the resulting resource.</li>
-    <li><strong>id</strong> &ndash; (Required) The _unique_ provider ID of the resource to lookup.</li>
-    <li><strong>state</strong> &ndash; (Optional) Any extra arguments used during the lookup.</li>
-    <li><strong>opts</strong> &ndash; (Optional) A bag of options that control this resource's behavior.</li>
-</ul>
+{{% choosable language csharp %}}
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cfg.ConfigurationAggregator.html">ConfigurationAggregator</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cfg.ConfigurationAggregatorState.html">ConfigurationAggregatorState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+{{% /choosable %}}
 
-{{% /lang %}}
+{{% choosable language nodejs %}}
 
-{{% lang csharp %}}
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resulting resource.</dd>
+    <dt class="property-required" title="Required">
+        <span>id</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The <em>unique</em> provider ID of the resource to lookup.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>state</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>Any extra arguments used during the lookup.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 
-<ul class="pl-10">
-    <li><strong>name</strong> &ndash; (Required) The unique name of the resulting resource.</li>
-    <li><strong>id</strong> &ndash; (Required) The _unique_ provider ID of the resource to lookup.</li>
-    <li><strong>state</strong> &ndash; (Optional) Any extra arguments used during the lookup.</li>
-    <li><strong>opts</strong> &ndash; (Optional) A bag of options that control this resource's behavior.</li>
-</ul>
+{{% /choosable %}}
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>resource_name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resulting resource.</dd>
+    <dt class="property-required" title="Optional">
+        <span>id</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The <em>unique</em> provider ID of the resource to lookup.</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resulting resource.</dd>
+    <dt class="property-required" title="Required">
+        <span>id</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The <em>unique</em> provider ID of the resource to lookup.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>state</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>Any extra arguments used during the lookup.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resulting resource.</dd>
+    <dt class="property-required" title="Required">
+        <span>id</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The <em>unique</em> provider ID of the resource to lookup.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>state</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>Any extra arguments used during the lookup.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
+
+{{% /choosable %}}
 
 The following state arguments are supported:
 
 
-{{< langchoose csharp nojavascript >}}
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Account<wbr>Aggregation<wbr>Source</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#configurationaggregatoraccountaggregationsource">Configuration<wbr>Aggregator<wbr>Account<wbr>Aggregation<wbr>Source<wbr>Args?</a></span>
+    </dt>
+    <dd>{{% md %}}The account(s) to aggregate config data from as documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the aggregator
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The name of the configuration aggregator.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Organization<wbr>Aggregation<wbr>Source</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#configurationaggregatororganizationaggregationsource">Configuration<wbr>Aggregator<wbr>Organization<wbr>Aggregation<wbr>Source<wbr>Args?</a></span>
+    </dt>
+    <dd>{{% md %}}The organization to aggregate config data from as documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary<string, object>?</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% lang csharp %}}
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Account<wbr>Aggregation<wbr>Source</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#configurationaggregatoraccountaggregationsource">*Configuration<wbr>Aggregator<wbr>Account<wbr>Aggregation<wbr>Source</a></span>
+    </dt>
+    <dd>{{% md %}}The account(s) to aggregate config data from as documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the aggregator
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The name of the configuration aggregator.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Organization<wbr>Aggregation<wbr>Source</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#configurationaggregatororganizationaggregationsource">*Configuration<wbr>Aggregator<wbr>Organization<wbr>Aggregation<wbr>Source</a></span>
+    </dt>
+    <dd>{{% md %}}The organization to aggregate config data from as documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Account<wbr>Aggregation<wbr>Source</td>
-            <td class="align-top">
-                
-                <code><a href="#configurationaggregatoraccountaggregationsource">Configuration<wbr>Aggregator<wbr>Account<wbr>Aggregation<wbr>Source<wbr>Args?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The account(s) to aggregate config data from as documented below.
- {{% /md %}}
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Arn</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ARN of the aggregator
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>account<wbr>Aggregation<wbr>Source</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#configurationaggregatoraccountaggregationsource">Configuration<wbr>Aggregator<wbr>Account<wbr>Aggregation<wbr>Source?</a></span>
+    </dt>
+    <dd>{{% md %}}The account(s) to aggregate config data from as documented below.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Name</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The name of the configuration aggregator.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the aggregator
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Organization<wbr>Aggregation<wbr>Source</td>
-            <td class="align-top">
-                
-                <code><a href="#configurationaggregatororganizationaggregationsource">Configuration<wbr>Aggregator<wbr>Organization<wbr>Aggregation<wbr>Source<wbr>Args?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The organization to aggregate config data from as documented below.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The name of the configuration aggregator.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Tags</td>
-            <td class="align-top">
-                
-                <code>Dictionary<string, object>?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A mapping of tags to assign to the resource.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>organization<wbr>Aggregation<wbr>Source</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#configurationaggregatororganizationaggregationsource">Configuration<wbr>Aggregator<wbr>Organization<wbr>Aggregation<wbr>Source?</a></span>
+    </dt>
+    <dd>{{% md %}}The organization to aggregate config data from as documented below.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+    <dt class="property-optional"
+            title="Optional">
+        <span>tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}?</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>account_<wbr>aggregation_<wbr>source</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#configurationaggregatoraccountaggregationsource">Dict[Configuration<wbr>Aggregator<wbr>Account<wbr>Aggregation<wbr>Source]</a></span>
+    </dt>
+    <dd>{{% md %}}The account(s) to aggregate config data from as documented below.
+{{% /md %}}</dd>
 
-{{% lang go %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the aggregator
+{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the configuration aggregator.
+{{% /md %}}</dd>
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Account<wbr>Aggregation<wbr>Source</td>
-            <td class="align-top">
-                
-                <code><a href="#configurationaggregatoraccountaggregationsource">*Configuration<wbr>Aggregator<wbr>Account<wbr>Aggregation<wbr>Source</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The account(s) to aggregate config data from as documented below.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>organization_<wbr>aggregation_<wbr>source</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#configurationaggregatororganizationaggregationsource">Dict[Configuration<wbr>Aggregator<wbr>Organization<wbr>Aggregation<wbr>Source]</a></span>
+    </dt>
+    <dd>{{% md %}}The organization to aggregate config data from as documented below.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Arn</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ARN of the aggregator
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Name</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The name of the configuration aggregator.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Organization<wbr>Aggregation<wbr>Source</td>
-            <td class="align-top">
-                
-                <code><a href="#configurationaggregatororganizationaggregationsource">*Configuration<wbr>Aggregator<wbr>Organization<wbr>Aggregation<wbr>Source</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The organization to aggregate config data from as documented below.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Tags</td>
-            <td class="align-top">
-                
-                <code>map[string]interface{}</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A mapping of tags to assign to the resource.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang nodejs %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">account<wbr>Aggregation<wbr>Source</td>
-            <td class="align-top">
-                
-                <code><a href="#configurationaggregatoraccountaggregationsource">Configuration<wbr>Aggregator<wbr>Account<wbr>Aggregation<wbr>Source?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The account(s) to aggregate config data from as documented below.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">arn</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ARN of the aggregator
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">name</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The name of the configuration aggregator.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">organization<wbr>Aggregation<wbr>Source</td>
-            <td class="align-top">
-                
-                <code><a href="#configurationaggregatororganizationaggregationsource">Configuration<wbr>Aggregator<wbr>Organization<wbr>Aggregation<wbr>Source?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The organization to aggregate config data from as documented below.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">tags</td>
-            <td class="align-top">
-                
-                <code>{[key: string]: any}?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A mapping of tags to assign to the resource.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang python %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">account_<wbr>aggregation_<wbr>source</td>
-            <td class="align-top">
-                
-                <code><a href="#configurationaggregatoraccountaggregationsource">Dict[Configuration<wbr>Aggregator<wbr>Account<wbr>Aggregation<wbr>Source]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The account(s) to aggregate config data from as documented below.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">arn</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ARN of the aggregator
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">name</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The name of the configuration aggregator.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">organization_<wbr>aggregation_<wbr>source</td>
-            <td class="align-top">
-                
-                <code><a href="#configurationaggregatororganizationaggregationsource">Dict[Configuration<wbr>Aggregator<wbr>Organization<wbr>Aggregation<wbr>Source]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The organization to aggregate config data from as documented below.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">tags</td>
-            <td class="align-top">
-                
-                <code>Dict[str, Any]</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A mapping of tags to assign to the resource.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
+</dl>
+{{% /choosable %}}
 
 
 
@@ -1236,567 +911,319 @@ A mapping of tags to assign to the resource.
 
 ## Supporting Types
 
-#### ConfigurationAggregatorAccountAggregationSource
-{{% lang nodejs %}}
+<h4>Configuration<wbr>Aggregator<wbr>Account<wbr>Aggregation<wbr>Source</h4>
+{{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ConfigurationAggregatorAccountAggregationSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ConfigurationAggregatorAccountAggregationSource">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
-{{% lang go %}}
+{{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cfg?tab=doc#ConfigurationAggregatorAccountAggregationSourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cfg?tab=doc#ConfigurationAggregatorAccountAggregationSourceOutput">output</a> API doc for this type.
-{{% /lang %}}
-
-{{% lang csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cfg.ConfigurationAggregatorAccountAggregationSourceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cfg.ConfigurationAggregatorAccountAggregationSource.html">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
 
 
-{{< langchoose csharp nojavascript >}}
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Account<wbr>Ids</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List<string></span>
+    </dt>
+    <dd>{{% md %}}List of 12-digit account IDs of the account(s) being aggregated.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>All<wbr>Regions</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool?</span>
+    </dt>
+    <dd>{{% md %}}If true, aggregate existing AWS Config regions and future regions.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Regions</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List<string>?</span>
+    </dt>
+    <dd>{{% md %}}List of source regions being aggregated.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% lang csharp %}}
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Account<wbr>Ids</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of 12-digit account IDs of the account(s) being aggregated.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>All<wbr>Regions</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*bool</span>
+    </dt>
+    <dd>{{% md %}}If true, aggregate existing AWS Config regions and future regions.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Regions</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of source regions being aggregated.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Account<wbr>Ids</td>
-            <td class="align-top">
-                
-                <code>List<string></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-List of 12-digit account IDs of the account(s) being aggregated.
- {{% /md %}}
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">All<wbr>Regions</td>
-            <td class="align-top">
-                
-                <code>bool?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-If true, aggregate existing AWS Config regions and future regions.
- {{% /md %}}
+    <dt class="property-required"
+            title="Required">
+        <span>account<wbr>Ids</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of 12-digit account IDs of the account(s) being aggregated.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Regions</td>
-            <td class="align-top">
-                
-                <code>List<string>?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-List of source regions being aggregated.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>all<wbr>Regions</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean?</span>
+    </dt>
+    <dd>{{% md %}}If true, aggregate existing AWS Config regions and future regions.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+    <dt class="property-optional"
+            title="Optional">
+        <span>regions</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]?</span>
+    </dt>
+    <dd>{{% md %}}List of source regions being aggregated.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>account_<wbr>ids</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}List of 12-digit account IDs of the account(s) being aggregated.
+{{% /md %}}</dd>
 
-{{% lang go %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>all<wbr>Regions</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, aggregate existing AWS Config regions and future regions.
+{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>regions</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}List of source regions being aggregated.
+{{% /md %}}</dd>
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Account<wbr>Ids</td>
-            <td class="align-top">
-                
-                <code>[]string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-List of 12-digit account IDs of the account(s) being aggregated.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">All<wbr>Regions</td>
-            <td class="align-top">
-                
-                <code>*bool</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-If true, aggregate existing AWS Config regions and future regions.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Regions</td>
-            <td class="align-top">
-                
-                <code>[]string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-List of source regions being aggregated.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang nodejs %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">account<wbr>Ids</td>
-            <td class="align-top">
-                
-                <code>string[]</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-List of 12-digit account IDs of the account(s) being aggregated.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">all<wbr>Regions</td>
-            <td class="align-top">
-                
-                <code>boolean?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-If true, aggregate existing AWS Config regions and future regions.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">regions</td>
-            <td class="align-top">
-                
-                <code>string[]?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-List of source regions being aggregated.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang python %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">account_<wbr>ids</td>
-            <td class="align-top">
-                
-                <code>List[str]</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-List of 12-digit account IDs of the account(s) being aggregated.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">all<wbr>Regions</td>
-            <td class="align-top">
-                
-                <code>bool</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-If true, aggregate existing AWS Config regions and future regions.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">regions</td>
-            <td class="align-top">
-                
-                <code>List[str]</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-List of source regions being aggregated.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
+</dl>
+{{% /choosable %}}
 
 
 
 
 
-#### ConfigurationAggregatorOrganizationAggregationSource
-{{% lang nodejs %}}
+<h4>Configuration<wbr>Aggregator<wbr>Organization<wbr>Aggregation<wbr>Source</h4>
+{{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ConfigurationAggregatorOrganizationAggregationSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ConfigurationAggregatorOrganizationAggregationSource">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
-{{% lang go %}}
+{{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cfg?tab=doc#ConfigurationAggregatorOrganizationAggregationSourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cfg?tab=doc#ConfigurationAggregatorOrganizationAggregationSourceOutput">output</a> API doc for this type.
-{{% /lang %}}
-
-{{% lang csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cfg.ConfigurationAggregatorOrganizationAggregationSourceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cfg.ConfigurationAggregatorOrganizationAggregationSource.html">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
 
 
-{{< langchoose csharp nojavascript >}}
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>All<wbr>Regions</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool?</span>
+    </dt>
+    <dd>{{% md %}}If true, aggregate existing AWS Config regions and future regions.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Regions</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List<string>?</span>
+    </dt>
+    <dd>{{% md %}}List of source regions being aggregated.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Role<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ARN of the IAM role used to retrieve AWS Organization details associated with the aggregator account.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% lang csharp %}}
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>All<wbr>Regions</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*bool</span>
+    </dt>
+    <dd>{{% md %}}If true, aggregate existing AWS Config regions and future regions.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Regions</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of source regions being aggregated.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Role<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ARN of the IAM role used to retrieve AWS Organization details associated with the aggregator account.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">All<wbr>Regions</td>
-            <td class="align-top">
-                
-                <code>bool?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-If true, aggregate existing AWS Config regions and future regions.
- {{% /md %}}
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Regions</td>
-            <td class="align-top">
-                
-                <code>List<string>?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-List of source regions being aggregated.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>all<wbr>Regions</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean?</span>
+    </dt>
+    <dd>{{% md %}}If true, aggregate existing AWS Config regions and future regions.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Role<wbr>Arn</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-ARN of the IAM role used to retrieve AWS Organization details associated with the aggregator account.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>regions</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]?</span>
+    </dt>
+    <dd>{{% md %}}List of source regions being aggregated.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+    <dt class="property-required"
+            title="Required">
+        <span>role<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ARN of the IAM role used to retrieve AWS Organization details associated with the aggregator account.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>all<wbr>Regions</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, aggregate existing AWS Config regions and future regions.
+{{% /md %}}</dd>
 
-{{% lang go %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>regions</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}List of source regions being aggregated.
+{{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>role_<wbr>arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}ARN of the IAM role used to retrieve AWS Organization details associated with the aggregator account.
+{{% /md %}}</dd>
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">All<wbr>Regions</td>
-            <td class="align-top">
-                
-                <code>*bool</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-If true, aggregate existing AWS Config regions and future regions.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Regions</td>
-            <td class="align-top">
-                
-                <code>[]string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-List of source regions being aggregated.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Role<wbr>Arn</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-ARN of the IAM role used to retrieve AWS Organization details associated with the aggregator account.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang nodejs %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">all<wbr>Regions</td>
-            <td class="align-top">
-                
-                <code>boolean?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-If true, aggregate existing AWS Config regions and future regions.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">regions</td>
-            <td class="align-top">
-                
-                <code>string[]?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-List of source regions being aggregated.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">role<wbr>Arn</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-ARN of the IAM role used to retrieve AWS Organization details associated with the aggregator account.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang python %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">all<wbr>Regions</td>
-            <td class="align-top">
-                
-                <code>bool</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-If true, aggregate existing AWS Config regions and future regions.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">regions</td>
-            <td class="align-top">
-                
-                <code>List[str]</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-List of source regions being aggregated.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">role_<wbr>arn</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-ARN of the IAM role used to retrieve AWS Organization details associated with the aggregator account.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
+</dl>
+{{% /choosable %}}
 
 
 
 
 
 
+
+
+
+<h3>Package Details</h3>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
 

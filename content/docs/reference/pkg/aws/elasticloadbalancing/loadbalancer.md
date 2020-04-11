@@ -3,9 +3,8 @@
 title: "LoadBalancer"
 block_external_search_index: true
 ---
-<style>
-table td p { margin-top: 0; margin-bottom: 0; }
-</style>
+
+
 
 Provides an Elastic Load Balancer resource, also known as a "Classic
 Load Balancer" after the release of
@@ -18,7 +17,9 @@ provides both a standalone ELB Attachment resource
 instances in conjunction with a ELB Attachment resources. Doing so will cause a
 conflict and will overwrite attachments.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -69,6 +70,8 @@ const bar = new aws.elb.LoadBalancer("bar", {
 });
 ```
 
+{{% /example %}}
+{{% /examples %}}
 ## Note on ECDSA Key Algorithm
 
 If the ARN of the `ssl_certificate_id` that is pointed to references a
@@ -77,1114 +80,732 @@ P256 and P384 curves.  Using a certificate signed by a key using a different
 curve could produce the error `ERR_SSL_VERSION_OR_CIPHER_MISMATCH` in your
 browser.
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elb.html.markdown.
-
 
 
 ## Create a LoadBalancer Resource
 
-{{< langchoose csharp nojavascript >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/elasticloadbalancing/#LoadBalancer">LoadBalancer</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/elasticloadbalancing/#LoadBalancerArgs">LoadBalancerArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+{{% choosable language nodejs %}}
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/elasticloadbalancing/#LoadBalancer">LoadBalancer</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/elasticloadbalancing/#LoadBalancerArgs">LoadBalancerArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+{{% /choosable %}}
 
+{{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">LoadBalancer</span><span class="p">(resource_name, opts=None, </span>access_logs=None<span class="p">, </span>availability_zones=None<span class="p">, </span>connection_draining=None<span class="p">, </span>connection_draining_timeout=None<span class="p">, </span>cross_zone_load_balancing=None<span class="p">, </span>health_check=None<span class="p">, </span>idle_timeout=None<span class="p">, </span>instances=None<span class="p">, </span>internal=None<span class="p">, </span>listeners=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>security_groups=None<span class="p">, </span>source_security_group=None<span class="p">, </span>subnets=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+{{% /choosable %}}
 
+{{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewLoadBalancer<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/elasticloadbalancing?tab=doc#LoadBalancerArgs">LoadBalancerArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/elasticloadbalancing?tab=doc#LoadBalancer">LoadBalancer</a></span>, error)</span></code></pre></div>
+{{% /choosable %}}
 
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Elasticloadbalancing.LoadBalancer.html">LoadBalancer</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Elasticloadbalancing.LoadBalancerArgs.html">LoadBalancerArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+{{% choosable language csharp %}}
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Elasticloadbalancing.LoadBalancer.html">LoadBalancer</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticLoadBalancing.LoadBalancerArgs.html">LoadBalancerArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+{{% /choosable %}}
 
-Creates a LoadBalancer resource with the given unique name, arguments, and options.
+{{% choosable language nodejs %}}
 
-{{% lang nodejs %}}
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The arguments to use to populate this resource's properties.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 
-<ul class="pl-10">
-    <li><strong>name</strong> &ndash; (Required) The unique name of the resulting resource.</li>
-    <li><strong>args</strong> &ndash;  (Optional)  The arguments to use to populate this resource's properties.</li>
-    <li><strong>opts</strong> &ndash; (Optional) A bag of options that control this resource's behavior.</li>
-</ul>
+{{% /choosable %}}
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
+{{% /choosable %}}
 
-{{% lang go %}}
+{{% choosable language go %}}
 
-<ul class="pl-10">
-    <li><strong>name</strong> &ndash; (Required) The unique name of the resulting resource.</li>
-    <li><strong>args</strong> &ndash;  (Optional)  The arguments to use to populate this resource's properties.</li>
-    <li><strong>opts</strong> &ndash; (Optional) A bag of options that control this resource's behavior.</li>
-</ul>
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The arguments to use to populate this resource's properties.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 
-{{% /lang %}}
+{{% /choosable %}}
 
-{{% lang csharp %}}
+{{% choosable language csharp %}}
 
-<ul class="pl-10">
-    <li><strong>name</strong> &ndash; (Required) The unique name of the resulting resource.</li>
-    <li><strong>args</strong> &ndash;  (Optional)  The arguments to use to populate this resource's properties.</li>
-    <li><strong>opts</strong> &ndash; (Optional) A bag of options that control this resource's behavior.</li>
-</ul>
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The arguments to use to populate this resource's properties.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 
-{{% /lang %}}
+{{% /choosable %}}
 
-The following arguments are supported:
-
-
-{{< langchoose csharp nojavascript >}}
+#### Resource Arguments
 
 
-{{% lang csharp %}}
 
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Access<wbr>Logs</td>
-            <td class="align-top">
-                
-                <code><a href="#loadbalanceraccesslogs">Load<wbr>Balancer<wbr>Access<wbr>Logs<wbr>Args?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-An Access Logs block. Access Logs documented below.
- {{% /md %}}
+{{% choosable language csharp %}}
+<dl class="resources-properties">
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Availability<wbr>Zones</td>
-            <td class="align-top">
-                
-                <code>List<string>?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The AZ&#39;s to serve traffic in.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Access<wbr>Logs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loadbalanceraccesslogs">Load<wbr>Balancer<wbr>Access<wbr>Logs<wbr>Args?</a></span>
+    </dt>
+    <dd>{{% md %}}An Access Logs block. Access Logs documented below.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Connection<wbr>Draining</td>
-            <td class="align-top">
-                
-                <code>bool?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Boolean to enable connection draining. Default: `false`
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Availability<wbr>Zones</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List<string>?</span>
+    </dt>
+    <dd>{{% md %}}The AZ's to serve traffic in.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Connection<wbr>Draining<wbr>Timeout</td>
-            <td class="align-top">
-                
-                <code>int?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The time in seconds to allow for connections to drain. Default: `300`
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Connection<wbr>Draining</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool?</span>
+    </dt>
+    <dd>{{% md %}}Boolean to enable connection draining. Default: `false`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Cross<wbr>Zone<wbr>Load<wbr>Balancing</td>
-            <td class="align-top">
-                
-                <code>bool?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Enable cross-zone load balancing. Default: `true`
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Connection<wbr>Draining<wbr>Timeout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int?</span>
+    </dt>
+    <dd>{{% md %}}The time in seconds to allow for connections to drain. Default: `300`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Health<wbr>Check</td>
-            <td class="align-top">
-                
-                <code><a href="#loadbalancerhealthcheck">Load<wbr>Balancer<wbr>Health<wbr>Check<wbr>Args?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A health_check block. Health Check documented below.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cross<wbr>Zone<wbr>Load<wbr>Balancing</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool?</span>
+    </dt>
+    <dd>{{% md %}}Enable cross-zone load balancing. Default: `true`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Idle<wbr>Timeout</td>
-            <td class="align-top">
-                
-                <code>int?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The time in seconds that the connection is allowed to be idle. Default: `60`
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Health<wbr>Check</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loadbalancerhealthcheck">Load<wbr>Balancer<wbr>Health<wbr>Check<wbr>Args?</a></span>
+    </dt>
+    <dd>{{% md %}}A health_check block. Health Check documented below.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Instances</td>
-            <td class="align-top">
-                
-                <code>List<string>?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A list of instance ids to place in the ELB pool.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Idle<wbr>Timeout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int?</span>
+    </dt>
+    <dd>{{% md %}}The time in seconds that the connection is allowed to be idle. Default: `60`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Internal</td>
-            <td class="align-top">
-                
-                <code>bool?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-If true, ELB will be an internal ELB.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Instances</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List<string>?</span>
+    </dt>
+    <dd>{{% md %}}A list of instance ids to place in the ELB pool.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Listeners</td>
-            <td class="align-top">
-                
-                <code><a href="#loadbalancerlistener">List&lt;Load<wbr>Balancer<wbr>Listener<wbr>Args&gt;</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-A list of listener blocks. Listeners documented below.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Internal</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool?</span>
+    </dt>
+    <dd>{{% md %}}If true, ELB will be an internal ELB.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Name</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The name of the ELB. By default generated by this provider.
- {{% /md %}}
+    <dt class="property-required"
+            title="Required">
+        <span>Listeners</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loadbalancerlistener">List&lt;Load<wbr>Balancer<wbr>Listener<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of listener blocks. Listeners documented below.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Name<wbr>Prefix</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Creates a unique name beginning with the specified
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The name of the ELB. By default generated by this provider.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name<wbr>Prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Creates a unique name beginning with the specified
 prefix. Conflicts with `name`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Security<wbr>Groups</td>
-            <td class="align-top">
-                
-                <code>List<string>?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A list of security group IDs to assign to the ELB.
+    <dt class="property-optional"
+            title="Optional">
+        <span>Security<wbr>Groups</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List<string>?</span>
+    </dt>
+    <dd>{{% md %}}A list of security group IDs to assign to the ELB.
 Only valid if creating an ELB within a VPC
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Source<wbr>Security<wbr>Group</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The name of the security group that you can use as
-part of your inbound rules for your load balancer&#39;s back-end application
+    <dt class="property-optional"
+            title="Optional">
+        <span>Source<wbr>Security<wbr>Group</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The name of the security group that you can use as
+part of your inbound rules for your load balancer's back-end application
 instances. Use this for Classic or Default VPC only.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Subnets</td>
-            <td class="align-top">
-                
-                <code>List<string>?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A list of subnet IDs to attach to the ELB.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Subnets</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List<string>?</span>
+    </dt>
+    <dd>{{% md %}}A list of subnet IDs to attach to the ELB.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Tags</td>
-            <td class="align-top">
-                
-                <code>Dictionary<string, object>?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A mapping of tags to assign to the resource.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary<string, object>?</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language go %}}
+<dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Access<wbr>Logs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loadbalanceraccesslogs">*Load<wbr>Balancer<wbr>Access<wbr>Logs</a></span>
+    </dt>
+    <dd>{{% md %}}An Access Logs block. Access Logs documented below.
+{{% /md %}}</dd>
 
-{{% lang go %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Availability<wbr>Zones</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The AZ's to serve traffic in.
+{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Connection<wbr>Draining</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean to enable connection draining. Default: `false`
+{{% /md %}}</dd>
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Access<wbr>Logs</td>
-            <td class="align-top">
-                
-                <code><a href="#loadbalanceraccesslogs">*Load<wbr>Balancer<wbr>Access<wbr>Logs</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-An Access Logs block. Access Logs documented below.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Connection<wbr>Draining<wbr>Timeout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*int</span>
+    </dt>
+    <dd>{{% md %}}The time in seconds to allow for connections to drain. Default: `300`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Availability<wbr>Zones</td>
-            <td class="align-top">
-                
-                <code>[]string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The AZ&#39;s to serve traffic in.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cross<wbr>Zone<wbr>Load<wbr>Balancing</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*bool</span>
+    </dt>
+    <dd>{{% md %}}Enable cross-zone load balancing. Default: `true`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Connection<wbr>Draining</td>
-            <td class="align-top">
-                
-                <code>*bool</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Boolean to enable connection draining. Default: `false`
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Health<wbr>Check</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loadbalancerhealthcheck">*Load<wbr>Balancer<wbr>Health<wbr>Check</a></span>
+    </dt>
+    <dd>{{% md %}}A health_check block. Health Check documented below.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Connection<wbr>Draining<wbr>Timeout</td>
-            <td class="align-top">
-                
-                <code>*int</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The time in seconds to allow for connections to drain. Default: `300`
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Idle<wbr>Timeout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*int</span>
+    </dt>
+    <dd>{{% md %}}The time in seconds that the connection is allowed to be idle. Default: `60`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Cross<wbr>Zone<wbr>Load<wbr>Balancing</td>
-            <td class="align-top">
-                
-                <code>*bool</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Enable cross-zone load balancing. Default: `true`
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Instances</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of instance ids to place in the ELB pool.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Health<wbr>Check</td>
-            <td class="align-top">
-                
-                <code><a href="#loadbalancerhealthcheck">*Load<wbr>Balancer<wbr>Health<wbr>Check</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A health_check block. Health Check documented below.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Internal</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*bool</span>
+    </dt>
+    <dd>{{% md %}}If true, ELB will be an internal ELB.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Idle<wbr>Timeout</td>
-            <td class="align-top">
-                
-                <code>*int</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The time in seconds that the connection is allowed to be idle. Default: `60`
- {{% /md %}}
+    <dt class="property-required"
+            title="Required">
+        <span>Listeners</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loadbalancerlistener">[]Load<wbr>Balancer<wbr>Listener</a></span>
+    </dt>
+    <dd>{{% md %}}A list of listener blocks. Listeners documented below.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Instances</td>
-            <td class="align-top">
-                
-                <code>[]string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A list of instance ids to place in the ELB pool.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The name of the ELB. By default generated by this provider.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Internal</td>
-            <td class="align-top">
-                
-                <code>*bool</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-If true, ELB will be an internal ELB.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Listeners</td>
-            <td class="align-top">
-                
-                <code><a href="#loadbalancerlistener">[]Load<wbr>Balancer<wbr>Listener</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-A list of listener blocks. Listeners documented below.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Name</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The name of the ELB. By default generated by this provider.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Name<wbr>Prefix</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Creates a unique name beginning with the specified
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name<wbr>Prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}Creates a unique name beginning with the specified
 prefix. Conflicts with `name`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Security<wbr>Groups</td>
-            <td class="align-top">
-                
-                <code>[]string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A list of security group IDs to assign to the ELB.
+    <dt class="property-optional"
+            title="Optional">
+        <span>Security<wbr>Groups</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of security group IDs to assign to the ELB.
 Only valid if creating an ELB within a VPC
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Source<wbr>Security<wbr>Group</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The name of the security group that you can use as
-part of your inbound rules for your load balancer&#39;s back-end application
+    <dt class="property-optional"
+            title="Optional">
+        <span>Source<wbr>Security<wbr>Group</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The name of the security group that you can use as
+part of your inbound rules for your load balancer's back-end application
 instances. Use this for Classic or Default VPC only.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Subnets</td>
-            <td class="align-top">
-                
-                <code>[]string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A list of subnet IDs to attach to the ELB.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Subnets</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of subnet IDs to attach to the ELB.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Tags</td>
-            <td class="align-top">
-                
-                <code>map[string]interface{}</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A mapping of tags to assign to the resource.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>access<wbr>Logs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loadbalanceraccesslogs">Load<wbr>Balancer<wbr>Access<wbr>Logs?</a></span>
+    </dt>
+    <dd>{{% md %}}An Access Logs block. Access Logs documented below.
+{{% /md %}}</dd>
 
-{{% lang nodejs %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>availability<wbr>Zones</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]?</span>
+    </dt>
+    <dd>{{% md %}}The AZ's to serve traffic in.
+{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>connection<wbr>Draining</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean?</span>
+    </dt>
+    <dd>{{% md %}}Boolean to enable connection draining. Default: `false`
+{{% /md %}}</dd>
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">access<wbr>Logs</td>
-            <td class="align-top">
-                
-                <code><a href="#loadbalanceraccesslogs">Load<wbr>Balancer<wbr>Access<wbr>Logs?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-An Access Logs block. Access Logs documented below.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>connection<wbr>Draining<wbr>Timeout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number?</span>
+    </dt>
+    <dd>{{% md %}}The time in seconds to allow for connections to drain. Default: `300`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">availability<wbr>Zones</td>
-            <td class="align-top">
-                
-                <code>string[]?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The AZ&#39;s to serve traffic in.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>cross<wbr>Zone<wbr>Load<wbr>Balancing</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean?</span>
+    </dt>
+    <dd>{{% md %}}Enable cross-zone load balancing. Default: `true`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">connection<wbr>Draining</td>
-            <td class="align-top">
-                
-                <code>boolean?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Boolean to enable connection draining. Default: `false`
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>health<wbr>Check</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loadbalancerhealthcheck">Load<wbr>Balancer<wbr>Health<wbr>Check?</a></span>
+    </dt>
+    <dd>{{% md %}}A health_check block. Health Check documented below.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">connection<wbr>Draining<wbr>Timeout</td>
-            <td class="align-top">
-                
-                <code>number?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The time in seconds to allow for connections to drain. Default: `300`
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>idle<wbr>Timeout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number?</span>
+    </dt>
+    <dd>{{% md %}}The time in seconds that the connection is allowed to be idle. Default: `60`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">cross<wbr>Zone<wbr>Load<wbr>Balancing</td>
-            <td class="align-top">
-                
-                <code>boolean?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Enable cross-zone load balancing. Default: `true`
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>instances</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]?</span>
+    </dt>
+    <dd>{{% md %}}A list of instance ids to place in the ELB pool.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">health<wbr>Check</td>
-            <td class="align-top">
-                
-                <code><a href="#loadbalancerhealthcheck">Load<wbr>Balancer<wbr>Health<wbr>Check?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A health_check block. Health Check documented below.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>internal</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean?</span>
+    </dt>
+    <dd>{{% md %}}If true, ELB will be an internal ELB.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">idle<wbr>Timeout</td>
-            <td class="align-top">
-                
-                <code>number?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The time in seconds that the connection is allowed to be idle. Default: `60`
- {{% /md %}}
+    <dt class="property-required"
+            title="Required">
+        <span>listeners</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loadbalancerlistener">Load<wbr>Balancer<wbr>Listener[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of listener blocks. Listeners documented below.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">instances</td>
-            <td class="align-top">
-                
-                <code>string[]?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A list of instance ids to place in the ELB pool.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The name of the ELB. By default generated by this provider.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">internal</td>
-            <td class="align-top">
-                
-                <code>boolean?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-If true, ELB will be an internal ELB.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">listeners</td>
-            <td class="align-top">
-                
-                <code><a href="#loadbalancerlistener">Load<wbr>Balancer<wbr>Listener[]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-A list of listener blocks. Listeners documented below.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">name</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The name of the ELB. By default generated by this provider.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">name<wbr>Prefix</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Creates a unique name beginning with the specified
+    <dt class="property-optional"
+            title="Optional">
+        <span>name<wbr>Prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Creates a unique name beginning with the specified
 prefix. Conflicts with `name`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">security<wbr>Groups</td>
-            <td class="align-top">
-                
-                <code>string[]?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A list of security group IDs to assign to the ELB.
+    <dt class="property-optional"
+            title="Optional">
+        <span>security<wbr>Groups</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]?</span>
+    </dt>
+    <dd>{{% md %}}A list of security group IDs to assign to the ELB.
 Only valid if creating an ELB within a VPC
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">source<wbr>Security<wbr>Group</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The name of the security group that you can use as
-part of your inbound rules for your load balancer&#39;s back-end application
+    <dt class="property-optional"
+            title="Optional">
+        <span>source<wbr>Security<wbr>Group</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The name of the security group that you can use as
+part of your inbound rules for your load balancer's back-end application
 instances. Use this for Classic or Default VPC only.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">subnets</td>
-            <td class="align-top">
-                
-                <code>string[]?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A list of subnet IDs to attach to the ELB.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>subnets</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]?</span>
+    </dt>
+    <dd>{{% md %}}A list of subnet IDs to attach to the ELB.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">tags</td>
-            <td class="align-top">
-                
-                <code>{[key: string]: any}?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A mapping of tags to assign to the resource.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}?</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>access_<wbr>logs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loadbalanceraccesslogs">Dict[Load<wbr>Balancer<wbr>Access<wbr>Logs]</a></span>
+    </dt>
+    <dd>{{% md %}}An Access Logs block. Access Logs documented below.
+{{% /md %}}</dd>
 
-{{% lang python %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>availability_<wbr>zones</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}The AZ's to serve traffic in.
+{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>connection_<wbr>draining</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean to enable connection draining. Default: `false`
+{{% /md %}}</dd>
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">access_<wbr>logs</td>
-            <td class="align-top">
-                
-                <code><a href="#loadbalanceraccesslogs">Dict[Load<wbr>Balancer<wbr>Access<wbr>Logs]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-An Access Logs block. Access Logs documented below.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>connection_<wbr>draining_<wbr>timeout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The time in seconds to allow for connections to drain. Default: `300`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">availability_<wbr>zones</td>
-            <td class="align-top">
-                
-                <code>List[str]</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The AZ&#39;s to serve traffic in.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>cross_<wbr>zone_<wbr>load_<wbr>balancing</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable cross-zone load balancing. Default: `true`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">connection_<wbr>draining</td>
-            <td class="align-top">
-                
-                <code>bool</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Boolean to enable connection draining. Default: `false`
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>health_<wbr>check</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loadbalancerhealthcheck">Dict[Load<wbr>Balancer<wbr>Health<wbr>Check]</a></span>
+    </dt>
+    <dd>{{% md %}}A health_check block. Health Check documented below.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">connection_<wbr>draining_<wbr>timeout</td>
-            <td class="align-top">
-                
-                <code>float</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The time in seconds to allow for connections to drain. Default: `300`
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>idle_<wbr>timeout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The time in seconds that the connection is allowed to be idle. Default: `60`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">cross_<wbr>zone_<wbr>load_<wbr>balancing</td>
-            <td class="align-top">
-                
-                <code>bool</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Enable cross-zone load balancing. Default: `true`
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>instances</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of instance ids to place in the ELB pool.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">health_<wbr>check</td>
-            <td class="align-top">
-                
-                <code><a href="#loadbalancerhealthcheck">Dict[Load<wbr>Balancer<wbr>Health<wbr>Check]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A health_check block. Health Check documented below.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>internal</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, ELB will be an internal ELB.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">idle_<wbr>timeout</td>
-            <td class="align-top">
-                
-                <code>float</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The time in seconds that the connection is allowed to be idle. Default: `60`
- {{% /md %}}
+    <dt class="property-required"
+            title="Required">
+        <span>listeners</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loadbalancerlistener">List[Load<wbr>Balancer<wbr>Listener]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of listener blocks. Listeners documented below.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">instances</td>
-            <td class="align-top">
-                
-                <code>List[str]</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A list of instance ids to place in the ELB pool.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the ELB. By default generated by this provider.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">internal</td>
-            <td class="align-top">
-                
-                <code>bool</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-If true, ELB will be an internal ELB.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">listeners</td>
-            <td class="align-top">
-                
-                <code><a href="#loadbalancerlistener">List[Load<wbr>Balancer<wbr>Listener]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-A list of listener blocks. Listeners documented below.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">name</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The name of the ELB. By default generated by this provider.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">name_<wbr>prefix</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Creates a unique name beginning with the specified
+    <dt class="property-optional"
+            title="Optional">
+        <span>name_<wbr>prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Creates a unique name beginning with the specified
 prefix. Conflicts with `name`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">security_<wbr>groups</td>
-            <td class="align-top">
-                
-                <code>List[str]</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A list of security group IDs to assign to the ELB.
+    <dt class="property-optional"
+            title="Optional">
+        <span>security_<wbr>groups</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of security group IDs to assign to the ELB.
 Only valid if creating an ELB within a VPC
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">source_<wbr>security_<wbr>group</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The name of the security group that you can use as
-part of your inbound rules for your load balancer&#39;s back-end application
+    <dt class="property-optional"
+            title="Optional">
+        <span>source_<wbr>security_<wbr>group</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the security group that you can use as
+part of your inbound rules for your load balancer's back-end application
 instances. Use this for Classic or Default VPC only.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">subnets</td>
-            <td class="align-top">
-                
-                <code>List[str]</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A list of subnet IDs to attach to the ELB.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>subnets</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of subnet IDs to attach to the ELB.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">tags</td>
-            <td class="align-top">
-                
-                <code>Dict[str, Any]</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A mapping of tags to assign to the resource.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
+</dl>
+{{% /choosable %}}
 
 
 
@@ -1198,1151 +819,777 @@ The following output properties are available:
 
 
 
-{{< langchoose csharp nojavascript >}}
 
+{{% choosable language csharp %}}
+<dl class="resources-properties">
 
-{{% lang csharp %}}
+    <dt class="property-"
+            title="">
+        <span>Access<wbr>Logs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loadbalanceraccesslogs">Load<wbr>Balancer<wbr>Access<wbr>Logs?</a></span>
+    </dt>
+    <dd>{{% md %}}An Access Logs block. Access Logs documented below.
+{{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the ELB
+{{% /md %}}</dd>
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Access<wbr>Logs</td>
-            <td class="align-top">
-                
-                <code><a href="#loadbalanceraccesslogs">Load<wbr>Balancer<wbr>Access<wbr>Logs?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} An Access Logs block. Access Logs documented below.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Availability<wbr>Zones</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List<string></span>
+    </dt>
+    <dd>{{% md %}}The AZ's to serve traffic in.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Arn</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The ARN of the ELB
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Connection<wbr>Draining</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool?</span>
+    </dt>
+    <dd>{{% md %}}Boolean to enable connection draining. Default: `false`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Availability<wbr>Zones</td>
-            <td class="align-top">
-                
-                <code>List<string></code>
-            </td>
-            <td class="align-top">{{% md %}} The AZ&#39;s to serve traffic in.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Connection<wbr>Draining<wbr>Timeout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int?</span>
+    </dt>
+    <dd>{{% md %}}The time in seconds to allow for connections to drain. Default: `300`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Connection<wbr>Draining</td>
-            <td class="align-top">
-                
-                <code>bool?</code>
-            </td>
-            <td class="align-top">{{% md %}} Boolean to enable connection draining. Default: `false`
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Cross<wbr>Zone<wbr>Load<wbr>Balancing</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool?</span>
+    </dt>
+    <dd>{{% md %}}Enable cross-zone load balancing. Default: `true`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Connection<wbr>Draining<wbr>Timeout</td>
-            <td class="align-top">
-                
-                <code>int?</code>
-            </td>
-            <td class="align-top">{{% md %}} The time in seconds to allow for connections to drain. Default: `300`
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Dns<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The DNS name of the ELB
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Cross<wbr>Zone<wbr>Load<wbr>Balancing</td>
-            <td class="align-top">
-                
-                <code>bool?</code>
-            </td>
-            <td class="align-top">{{% md %}} Enable cross-zone load balancing. Default: `true`
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Health<wbr>Check</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loadbalancerhealthcheck">Load<wbr>Balancer<wbr>Health<wbr>Check</a></span>
+    </dt>
+    <dd>{{% md %}}A health_check block. Health Check documented below.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Dns<wbr>Name</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The DNS name of the ELB
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Idle<wbr>Timeout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int?</span>
+    </dt>
+    <dd>{{% md %}}The time in seconds that the connection is allowed to be idle. Default: `60`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Health<wbr>Check</td>
-            <td class="align-top">
-                
-                <code><a href="#loadbalancerhealthcheck">Load<wbr>Balancer<wbr>Health<wbr>Check</a></code>
-            </td>
-            <td class="align-top">{{% md %}} A health_check block. Health Check documented below.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Instances</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List<string></span>
+    </dt>
+    <dd>{{% md %}}A list of instance ids to place in the ELB pool.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Idle<wbr>Timeout</td>
-            <td class="align-top">
-                
-                <code>int?</code>
-            </td>
-            <td class="align-top">{{% md %}} The time in seconds that the connection is allowed to be idle. Default: `60`
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Internal</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, ELB will be an internal ELB.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Instances</td>
-            <td class="align-top">
-                
-                <code>List<string></code>
-            </td>
-            <td class="align-top">{{% md %}} A list of instance ids to place in the ELB pool.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Listeners</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loadbalancerlistener">List&lt;Load<wbr>Balancer<wbr>Listener&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of listener blocks. Listeners documented below.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Internal</td>
-            <td class="align-top">
-                
-                <code>bool</code>
-            </td>
-            <td class="align-top">{{% md %}} If true, ELB will be an internal ELB.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the ELB. By default generated by this provider.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Listeners</td>
-            <td class="align-top">
-                
-                <code><a href="#loadbalancerlistener">List&lt;Load<wbr>Balancer<wbr>Listener&gt;</a></code>
-            </td>
-            <td class="align-top">{{% md %}} A list of listener blocks. Listeners documented below.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Name</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The name of the ELB. By default generated by this provider.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Name<wbr>Prefix</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} Creates a unique name beginning with the specified
+    <dt class="property-"
+            title="">
+        <span>Name<wbr>Prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Creates a unique name beginning with the specified
 prefix. Conflicts with `name`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Security<wbr>Groups</td>
-            <td class="align-top">
-                
-                <code>List<string></code>
-            </td>
-            <td class="align-top">{{% md %}} A list of security group IDs to assign to the ELB.
+    <dt class="property-"
+            title="">
+        <span>Security<wbr>Groups</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List<string></span>
+    </dt>
+    <dd>{{% md %}}A list of security group IDs to assign to the ELB.
 Only valid if creating an ELB within a VPC
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Source<wbr>Security<wbr>Group</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The name of the security group that you can use as
-part of your inbound rules for your load balancer&#39;s back-end application
+    <dt class="property-"
+            title="">
+        <span>Source<wbr>Security<wbr>Group</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the security group that you can use as
+part of your inbound rules for your load balancer's back-end application
 instances. Use this for Classic or Default VPC only.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Source<wbr>Security<wbr>Group<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The ID of the security group that you can use as
-part of your inbound rules for your load balancer&#39;s back-end application
+    <dt class="property-"
+            title="">
+        <span>Source<wbr>Security<wbr>Group<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the security group that you can use as
+part of your inbound rules for your load balancer's back-end application
 instances. Only available on ELBs launched in a VPC.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Subnets</td>
-            <td class="align-top">
-                
-                <code>List<string></code>
-            </td>
-            <td class="align-top">{{% md %}} A list of subnet IDs to attach to the ELB.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Subnets</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List<string></span>
+    </dt>
+    <dd>{{% md %}}A list of subnet IDs to attach to the ELB.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Tags</td>
-            <td class="align-top">
-                
-                <code>Dictionary<string, object>?</code>
-            </td>
-            <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary<string, object>?</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Zone<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The canonical hosted zone ID of the ELB (to be used in a Route 53 Alias record)
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Zone<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The canonical hosted zone ID of the ELB (to be used in a Route 53 Alias record)
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language go %}}
+<dl class="resources-properties">
 
+    <dt class="property-"
+            title="">
+        <span>Access<wbr>Logs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loadbalanceraccesslogs">*Load<wbr>Balancer<wbr>Access<wbr>Logs</a></span>
+    </dt>
+    <dd>{{% md %}}An Access Logs block. Access Logs documented below.
+{{% /md %}}</dd>
 
-{{% lang go %}}
+    <dt class="property-"
+            title="">
+        <span>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the ELB
+{{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>Availability<wbr>Zones</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The AZ's to serve traffic in.
+{{% /md %}}</dd>
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Access<wbr>Logs</td>
-            <td class="align-top">
-                
-                <code><a href="#loadbalanceraccesslogs">*Load<wbr>Balancer<wbr>Access<wbr>Logs</a></code>
-            </td>
-            <td class="align-top">{{% md %}} An Access Logs block. Access Logs documented below.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Connection<wbr>Draining</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean to enable connection draining. Default: `false`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Arn</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The ARN of the ELB
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Connection<wbr>Draining<wbr>Timeout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*int</span>
+    </dt>
+    <dd>{{% md %}}The time in seconds to allow for connections to drain. Default: `300`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Availability<wbr>Zones</td>
-            <td class="align-top">
-                
-                <code>[]string</code>
-            </td>
-            <td class="align-top">{{% md %}} The AZ&#39;s to serve traffic in.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Cross<wbr>Zone<wbr>Load<wbr>Balancing</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*bool</span>
+    </dt>
+    <dd>{{% md %}}Enable cross-zone load balancing. Default: `true`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Connection<wbr>Draining</td>
-            <td class="align-top">
-                
-                <code>*bool</code>
-            </td>
-            <td class="align-top">{{% md %}} Boolean to enable connection draining. Default: `false`
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Dns<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The DNS name of the ELB
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Connection<wbr>Draining<wbr>Timeout</td>
-            <td class="align-top">
-                
-                <code>*int</code>
-            </td>
-            <td class="align-top">{{% md %}} The time in seconds to allow for connections to drain. Default: `300`
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Health<wbr>Check</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loadbalancerhealthcheck">Load<wbr>Balancer<wbr>Health<wbr>Check</a></span>
+    </dt>
+    <dd>{{% md %}}A health_check block. Health Check documented below.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Cross<wbr>Zone<wbr>Load<wbr>Balancing</td>
-            <td class="align-top">
-                
-                <code>*bool</code>
-            </td>
-            <td class="align-top">{{% md %}} Enable cross-zone load balancing. Default: `true`
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Idle<wbr>Timeout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*int</span>
+    </dt>
+    <dd>{{% md %}}The time in seconds that the connection is allowed to be idle. Default: `60`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Dns<wbr>Name</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The DNS name of the ELB
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Instances</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of instance ids to place in the ELB pool.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Health<wbr>Check</td>
-            <td class="align-top">
-                
-                <code><a href="#loadbalancerhealthcheck">Load<wbr>Balancer<wbr>Health<wbr>Check</a></code>
-            </td>
-            <td class="align-top">{{% md %}} A health_check block. Health Check documented below.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Internal</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, ELB will be an internal ELB.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Idle<wbr>Timeout</td>
-            <td class="align-top">
-                
-                <code>*int</code>
-            </td>
-            <td class="align-top">{{% md %}} The time in seconds that the connection is allowed to be idle. Default: `60`
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Listeners</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loadbalancerlistener">[]Load<wbr>Balancer<wbr>Listener</a></span>
+    </dt>
+    <dd>{{% md %}}A list of listener blocks. Listeners documented below.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Instances</td>
-            <td class="align-top">
-                
-                <code>[]string</code>
-            </td>
-            <td class="align-top">{{% md %}} A list of instance ids to place in the ELB pool.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the ELB. By default generated by this provider.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Internal</td>
-            <td class="align-top">
-                
-                <code>bool</code>
-            </td>
-            <td class="align-top">{{% md %}} If true, ELB will be an internal ELB.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Listeners</td>
-            <td class="align-top">
-                
-                <code><a href="#loadbalancerlistener">[]Load<wbr>Balancer<wbr>Listener</a></code>
-            </td>
-            <td class="align-top">{{% md %}} A list of listener blocks. Listeners documented below.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Name</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The name of the ELB. By default generated by this provider.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Name<wbr>Prefix</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} Creates a unique name beginning with the specified
+    <dt class="property-"
+            title="">
+        <span>Name<wbr>Prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}Creates a unique name beginning with the specified
 prefix. Conflicts with `name`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Security<wbr>Groups</td>
-            <td class="align-top">
-                
-                <code>[]string</code>
-            </td>
-            <td class="align-top">{{% md %}} A list of security group IDs to assign to the ELB.
+    <dt class="property-"
+            title="">
+        <span>Security<wbr>Groups</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of security group IDs to assign to the ELB.
 Only valid if creating an ELB within a VPC
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Source<wbr>Security<wbr>Group</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The name of the security group that you can use as
-part of your inbound rules for your load balancer&#39;s back-end application
+    <dt class="property-"
+            title="">
+        <span>Source<wbr>Security<wbr>Group</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the security group that you can use as
+part of your inbound rules for your load balancer's back-end application
 instances. Use this for Classic or Default VPC only.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Source<wbr>Security<wbr>Group<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The ID of the security group that you can use as
-part of your inbound rules for your load balancer&#39;s back-end application
+    <dt class="property-"
+            title="">
+        <span>Source<wbr>Security<wbr>Group<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the security group that you can use as
+part of your inbound rules for your load balancer's back-end application
 instances. Only available on ELBs launched in a VPC.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Subnets</td>
-            <td class="align-top">
-                
-                <code>[]string</code>
-            </td>
-            <td class="align-top">{{% md %}} A list of subnet IDs to attach to the ELB.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Subnets</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of subnet IDs to attach to the ELB.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Tags</td>
-            <td class="align-top">
-                
-                <code>map[string]interface{}</code>
-            </td>
-            <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Zone<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The canonical hosted zone ID of the ELB (to be used in a Route 53 Alias record)
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Zone<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The canonical hosted zone ID of the ELB (to be used in a Route 53 Alias record)
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
+    <dt class="property-"
+            title="">
+        <span>access<wbr>Logs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loadbalanceraccesslogs">Load<wbr>Balancer<wbr>Access<wbr>Logs?</a></span>
+    </dt>
+    <dd>{{% md %}}An Access Logs block. Access Logs documented below.
+{{% /md %}}</dd>
 
-{{% lang nodejs %}}
+    <dt class="property-"
+            title="">
+        <span>arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the ELB
+{{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>availability<wbr>Zones</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The AZ's to serve traffic in.
+{{% /md %}}</dd>
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">access<wbr>Logs</td>
-            <td class="align-top">
-                
-                <code><a href="#loadbalanceraccesslogs">Load<wbr>Balancer<wbr>Access<wbr>Logs?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} An Access Logs block. Access Logs documented below.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>connection<wbr>Draining</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean?</span>
+    </dt>
+    <dd>{{% md %}}Boolean to enable connection draining. Default: `false`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">arn</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The ARN of the ELB
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>connection<wbr>Draining<wbr>Timeout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number?</span>
+    </dt>
+    <dd>{{% md %}}The time in seconds to allow for connections to drain. Default: `300`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">availability<wbr>Zones</td>
-            <td class="align-top">
-                
-                <code>string[]</code>
-            </td>
-            <td class="align-top">{{% md %}} The AZ&#39;s to serve traffic in.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>cross<wbr>Zone<wbr>Load<wbr>Balancing</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean?</span>
+    </dt>
+    <dd>{{% md %}}Enable cross-zone load balancing. Default: `true`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">connection<wbr>Draining</td>
-            <td class="align-top">
-                
-                <code>boolean?</code>
-            </td>
-            <td class="align-top">{{% md %}} Boolean to enable connection draining. Default: `false`
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>dns<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The DNS name of the ELB
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">connection<wbr>Draining<wbr>Timeout</td>
-            <td class="align-top">
-                
-                <code>number?</code>
-            </td>
-            <td class="align-top">{{% md %}} The time in seconds to allow for connections to drain. Default: `300`
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>health<wbr>Check</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loadbalancerhealthcheck">Load<wbr>Balancer<wbr>Health<wbr>Check</a></span>
+    </dt>
+    <dd>{{% md %}}A health_check block. Health Check documented below.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">cross<wbr>Zone<wbr>Load<wbr>Balancing</td>
-            <td class="align-top">
-                
-                <code>boolean?</code>
-            </td>
-            <td class="align-top">{{% md %}} Enable cross-zone load balancing. Default: `true`
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>idle<wbr>Timeout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number?</span>
+    </dt>
+    <dd>{{% md %}}The time in seconds that the connection is allowed to be idle. Default: `60`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">dns<wbr>Name</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The DNS name of the ELB
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>instances</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of instance ids to place in the ELB pool.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">health<wbr>Check</td>
-            <td class="align-top">
-                
-                <code><a href="#loadbalancerhealthcheck">Load<wbr>Balancer<wbr>Health<wbr>Check</a></code>
-            </td>
-            <td class="align-top">{{% md %}} A health_check block. Health Check documented below.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>internal</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If true, ELB will be an internal ELB.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">idle<wbr>Timeout</td>
-            <td class="align-top">
-                
-                <code>number?</code>
-            </td>
-            <td class="align-top">{{% md %}} The time in seconds that the connection is allowed to be idle. Default: `60`
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>listeners</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loadbalancerlistener">Load<wbr>Balancer<wbr>Listener[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of listener blocks. Listeners documented below.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">instances</td>
-            <td class="align-top">
-                
-                <code>string[]</code>
-            </td>
-            <td class="align-top">{{% md %}} A list of instance ids to place in the ELB pool.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the ELB. By default generated by this provider.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">internal</td>
-            <td class="align-top">
-                
-                <code>boolean</code>
-            </td>
-            <td class="align-top">{{% md %}} If true, ELB will be an internal ELB.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">listeners</td>
-            <td class="align-top">
-                
-                <code><a href="#loadbalancerlistener">Load<wbr>Balancer<wbr>Listener[]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} A list of listener blocks. Listeners documented below.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">name</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The name of the ELB. By default generated by this provider.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">name<wbr>Prefix</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} Creates a unique name beginning with the specified
+    <dt class="property-"
+            title="">
+        <span>name<wbr>Prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Creates a unique name beginning with the specified
 prefix. Conflicts with `name`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">security<wbr>Groups</td>
-            <td class="align-top">
-                
-                <code>string[]</code>
-            </td>
-            <td class="align-top">{{% md %}} A list of security group IDs to assign to the ELB.
+    <dt class="property-"
+            title="">
+        <span>security<wbr>Groups</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of security group IDs to assign to the ELB.
 Only valid if creating an ELB within a VPC
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">source<wbr>Security<wbr>Group</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The name of the security group that you can use as
-part of your inbound rules for your load balancer&#39;s back-end application
+    <dt class="property-"
+            title="">
+        <span>source<wbr>Security<wbr>Group</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the security group that you can use as
+part of your inbound rules for your load balancer's back-end application
 instances. Use this for Classic or Default VPC only.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">source<wbr>Security<wbr>Group<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The ID of the security group that you can use as
-part of your inbound rules for your load balancer&#39;s back-end application
+    <dt class="property-"
+            title="">
+        <span>source<wbr>Security<wbr>Group<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the security group that you can use as
+part of your inbound rules for your load balancer's back-end application
 instances. Only available on ELBs launched in a VPC.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">subnets</td>
-            <td class="align-top">
-                
-                <code>string[]</code>
-            </td>
-            <td class="align-top">{{% md %}} A list of subnet IDs to attach to the ELB.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>subnets</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of subnet IDs to attach to the ELB.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">tags</td>
-            <td class="align-top">
-                
-                <code>{[key: string]: any}?</code>
-            </td>
-            <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}?</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">zone<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The canonical hosted zone ID of the ELB (to be used in a Route 53 Alias record)
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>zone<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The canonical hosted zone ID of the ELB (to be used in a Route 53 Alias record)
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
 
+    <dt class="property-"
+            title="">
+        <span>access_<wbr>logs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loadbalanceraccesslogs">Dict[Load<wbr>Balancer<wbr>Access<wbr>Logs]</a></span>
+    </dt>
+    <dd>{{% md %}}An Access Logs block. Access Logs documented below.
+{{% /md %}}</dd>
 
-{{% lang python %}}
+    <dt class="property-"
+            title="">
+        <span>arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the ELB
+{{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>availability_<wbr>zones</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}The AZ's to serve traffic in.
+{{% /md %}}</dd>
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">access_<wbr>logs</td>
-            <td class="align-top">
-                
-                <code><a href="#loadbalanceraccesslogs">Dict[Load<wbr>Balancer<wbr>Access<wbr>Logs]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} An Access Logs block. Access Logs documented below.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>connection_<wbr>draining</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean to enable connection draining. Default: `false`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">arn</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} The ARN of the ELB
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>connection_<wbr>draining_<wbr>timeout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The time in seconds to allow for connections to drain. Default: `300`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">availability_<wbr>zones</td>
-            <td class="align-top">
-                
-                <code>List[str]</code>
-            </td>
-            <td class="align-top">{{% md %}} The AZ&#39;s to serve traffic in.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>cross_<wbr>zone_<wbr>load_<wbr>balancing</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable cross-zone load balancing. Default: `true`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">connection_<wbr>draining</td>
-            <td class="align-top">
-                
-                <code>bool</code>
-            </td>
-            <td class="align-top">{{% md %}} Boolean to enable connection draining. Default: `false`
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>dns_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The DNS name of the ELB
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">connection_<wbr>draining_<wbr>timeout</td>
-            <td class="align-top">
-                
-                <code>float</code>
-            </td>
-            <td class="align-top">{{% md %}} The time in seconds to allow for connections to drain. Default: `300`
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>health_<wbr>check</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loadbalancerhealthcheck">Dict[Load<wbr>Balancer<wbr>Health<wbr>Check]</a></span>
+    </dt>
+    <dd>{{% md %}}A health_check block. Health Check documented below.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">cross_<wbr>zone_<wbr>load_<wbr>balancing</td>
-            <td class="align-top">
-                
-                <code>bool</code>
-            </td>
-            <td class="align-top">{{% md %}} Enable cross-zone load balancing. Default: `true`
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>idle_<wbr>timeout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The time in seconds that the connection is allowed to be idle. Default: `60`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">dns_<wbr>name</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} The DNS name of the ELB
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>instances</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of instance ids to place in the ELB pool.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">health_<wbr>check</td>
-            <td class="align-top">
-                
-                <code><a href="#loadbalancerhealthcheck">Dict[Load<wbr>Balancer<wbr>Health<wbr>Check]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} A health_check block. Health Check documented below.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>internal</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, ELB will be an internal ELB.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">idle_<wbr>timeout</td>
-            <td class="align-top">
-                
-                <code>float</code>
-            </td>
-            <td class="align-top">{{% md %}} The time in seconds that the connection is allowed to be idle. Default: `60`
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>listeners</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loadbalancerlistener">List[Load<wbr>Balancer<wbr>Listener]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of listener blocks. Listeners documented below.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">instances</td>
-            <td class="align-top">
-                
-                <code>List[str]</code>
-            </td>
-            <td class="align-top">{{% md %}} A list of instance ids to place in the ELB pool.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the ELB. By default generated by this provider.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">internal</td>
-            <td class="align-top">
-                
-                <code>bool</code>
-            </td>
-            <td class="align-top">{{% md %}} If true, ELB will be an internal ELB.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">listeners</td>
-            <td class="align-top">
-                
-                <code><a href="#loadbalancerlistener">List[Load<wbr>Balancer<wbr>Listener]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} A list of listener blocks. Listeners documented below.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">name</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} The name of the ELB. By default generated by this provider.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">name_<wbr>prefix</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} Creates a unique name beginning with the specified
+    <dt class="property-"
+            title="">
+        <span>name_<wbr>prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Creates a unique name beginning with the specified
 prefix. Conflicts with `name`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">security_<wbr>groups</td>
-            <td class="align-top">
-                
-                <code>List[str]</code>
-            </td>
-            <td class="align-top">{{% md %}} A list of security group IDs to assign to the ELB.
+    <dt class="property-"
+            title="">
+        <span>security_<wbr>groups</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of security group IDs to assign to the ELB.
 Only valid if creating an ELB within a VPC
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">source_<wbr>security_<wbr>group</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} The name of the security group that you can use as
-part of your inbound rules for your load balancer&#39;s back-end application
+    <dt class="property-"
+            title="">
+        <span>source_<wbr>security_<wbr>group</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the security group that you can use as
+part of your inbound rules for your load balancer's back-end application
 instances. Use this for Classic or Default VPC only.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">source_<wbr>security_<wbr>group_<wbr>id</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} The ID of the security group that you can use as
-part of your inbound rules for your load balancer&#39;s back-end application
+    <dt class="property-"
+            title="">
+        <span>source_<wbr>security_<wbr>group_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the security group that you can use as
+part of your inbound rules for your load balancer's back-end application
 instances. Only available on ELBs launched in a VPC.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">subnets</td>
-            <td class="align-top">
-                
-                <code>List[str]</code>
-            </td>
-            <td class="align-top">{{% md %}} A list of subnet IDs to attach to the ELB.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>subnets</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of subnet IDs to attach to the ELB.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">tags</td>
-            <td class="align-top">
-                
-                <code>Dict[str, Any]</code>
-            </td>
-            <td class="align-top">{{% md %}} A mapping of tags to assign to the resource.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">zone_<wbr>id</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} The canonical hosted zone ID of the ELB (to be used in a Route 53 Alias record)
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>zone_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The canonical hosted zone ID of the ELB (to be used in a Route 53 Alias record)
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
+</dl>
+{{% /choosable %}}
 
 
 
@@ -2353,1359 +1600,896 @@ instances. Only available on ELBs launched in a VPC.
 
 ## Look up an Existing LoadBalancer Resource
 
-{{< langchoose csharp nojavascript >}}
-
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">pulumi.Input&lt;pulumi.ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/elasticloadbalancing/#LoadBalancerState">LoadBalancerState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/elasticloadbalancing/#LoadBalancer">LoadBalancer</a></span></code></pre></div>
-
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>access_logs=None<span class="p">, </span>arn=None<span class="p">, </span>availability_zones=None<span class="p">, </span>connection_draining=None<span class="p">, </span>connection_draining_timeout=None<span class="p">, </span>cross_zone_load_balancing=None<span class="p">, </span>dns_name=None<span class="p">, </span>health_check=None<span class="p">, </span>idle_timeout=None<span class="p">, </span>instances=None<span class="p">, </span>internal=None<span class="p">, </span>listeners=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>security_groups=None<span class="p">, </span>source_security_group=None<span class="p">, </span>source_security_group_id=None<span class="p">, </span>subnets=None<span class="p">, </span>tags=None<span class="p">, </span>zone_id=None<span class="p">, __props__=None);</span></code></pre></div>
-
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetLoadBalancer<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">pulumi.IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/elasticloadbalancing?tab=doc#LoadBalancerState">LoadBalancerState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/elasticloadbalancing?tab=doc#LoadBalancer">LoadBalancer</a></span>, error)</span></code></pre></div>
-
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Elasticloadbalancing.LoadBalancer.html">LoadBalancer</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Pulumi.Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Elasticloadbalancing.LoadBalancerState.html">LoadBalancerState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
-
 Get an existing LoadBalancer resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 
-{{% lang nodejs %}}
+{{< chooser language "javascript,typescript,python,go,csharp  " / >}}
 
-<ul class="pl-10">
-    <li><strong>name</strong> &ndash; (Required) The unique name of the resulting resource.</li>
-    <li><strong>id</strong> &ndash; (Required) The _unique_ provider ID of the resource to lookup.</li>
-    <li><strong>state</strong> &ndash; (Optional) Any extra arguments used during the lookup.</li>
-    <li><strong>opts</strong> &ndash; (Optional) A bag of options that control this resource's behavior.</li>
-</ul>
+{{% choosable language nodejs %}}
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/elasticloadbalancing/#LoadBalancerState">LoadBalancerState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/elasticloadbalancing/#LoadBalancer">LoadBalancer</a></span></code></pre></div>
+{{% /choosable %}}
 
-{{% /lang %}}
+{{% choosable language python %}}
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>access_logs=None<span class="p">, </span>arn=None<span class="p">, </span>availability_zones=None<span class="p">, </span>connection_draining=None<span class="p">, </span>connection_draining_timeout=None<span class="p">, </span>cross_zone_load_balancing=None<span class="p">, </span>dns_name=None<span class="p">, </span>health_check=None<span class="p">, </span>idle_timeout=None<span class="p">, </span>instances=None<span class="p">, </span>internal=None<span class="p">, </span>listeners=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>security_groups=None<span class="p">, </span>source_security_group=None<span class="p">, </span>source_security_group_id=None<span class="p">, </span>subnets=None<span class="p">, </span>tags=None<span class="p">, </span>zone_id=None<span class="p">, __props__=None);</span></code></pre></div>
+{{% /choosable %}}
 
-{{% lang go %}}
+{{% choosable language go %}}
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetLoadBalancer<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/elasticloadbalancing?tab=doc#LoadBalancerState">LoadBalancerState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/elasticloadbalancing?tab=doc#LoadBalancer">LoadBalancer</a></span>, error)</span></code></pre></div>
+{{% /choosable %}}
 
-<ul class="pl-10">
-    <li><strong>name</strong> &ndash; (Required) The unique name of the resulting resource.</li>
-    <li><strong>id</strong> &ndash; (Required) The _unique_ provider ID of the resource to lookup.</li>
-    <li><strong>state</strong> &ndash; (Optional) Any extra arguments used during the lookup.</li>
-    <li><strong>opts</strong> &ndash; (Optional) A bag of options that control this resource's behavior.</li>
-</ul>
+{{% choosable language csharp %}}
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Elasticloadbalancing.LoadBalancer.html">LoadBalancer</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Elasticloadbalancing.LoadBalancerState.html">LoadBalancerState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+{{% /choosable %}}
 
-{{% /lang %}}
+{{% choosable language nodejs %}}
 
-{{% lang csharp %}}
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resulting resource.</dd>
+    <dt class="property-required" title="Required">
+        <span>id</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The <em>unique</em> provider ID of the resource to lookup.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>state</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>Any extra arguments used during the lookup.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 
-<ul class="pl-10">
-    <li><strong>name</strong> &ndash; (Required) The unique name of the resulting resource.</li>
-    <li><strong>id</strong> &ndash; (Required) The _unique_ provider ID of the resource to lookup.</li>
-    <li><strong>state</strong> &ndash; (Optional) Any extra arguments used during the lookup.</li>
-    <li><strong>opts</strong> &ndash; (Optional) A bag of options that control this resource's behavior.</li>
-</ul>
+{{% /choosable %}}
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>resource_name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resulting resource.</dd>
+    <dt class="property-required" title="Optional">
+        <span>id</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The <em>unique</em> provider ID of the resource to lookup.</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resulting resource.</dd>
+    <dt class="property-required" title="Required">
+        <span>id</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The <em>unique</em> provider ID of the resource to lookup.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>state</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>Any extra arguments used during the lookup.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resulting resource.</dd>
+    <dt class="property-required" title="Required">
+        <span>id</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The <em>unique</em> provider ID of the resource to lookup.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>state</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>Any extra arguments used during the lookup.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
+
+{{% /choosable %}}
 
 The following state arguments are supported:
 
 
-{{< langchoose csharp nojavascript >}}
 
+{{% choosable language csharp %}}
+<dl class="resources-properties">
 
-{{% lang csharp %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Access<wbr>Logs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loadbalanceraccesslogs">Load<wbr>Balancer<wbr>Access<wbr>Logs<wbr>Args?</a></span>
+    </dt>
+    <dd>{{% md %}}An Access Logs block. Access Logs documented below.
+{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the ELB
+{{% /md %}}</dd>
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Access<wbr>Logs</td>
-            <td class="align-top">
-                
-                <code><a href="#loadbalanceraccesslogs">Load<wbr>Balancer<wbr>Access<wbr>Logs<wbr>Args?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-An Access Logs block. Access Logs documented below.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Availability<wbr>Zones</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List<string>?</span>
+    </dt>
+    <dd>{{% md %}}The AZ's to serve traffic in.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Arn</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ARN of the ELB
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Connection<wbr>Draining</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool?</span>
+    </dt>
+    <dd>{{% md %}}Boolean to enable connection draining. Default: `false`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Availability<wbr>Zones</td>
-            <td class="align-top">
-                
-                <code>List<string>?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The AZ&#39;s to serve traffic in.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Connection<wbr>Draining<wbr>Timeout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int?</span>
+    </dt>
+    <dd>{{% md %}}The time in seconds to allow for connections to drain. Default: `300`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Connection<wbr>Draining</td>
-            <td class="align-top">
-                
-                <code>bool?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Boolean to enable connection draining. Default: `false`
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cross<wbr>Zone<wbr>Load<wbr>Balancing</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool?</span>
+    </dt>
+    <dd>{{% md %}}Enable cross-zone load balancing. Default: `true`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Connection<wbr>Draining<wbr>Timeout</td>
-            <td class="align-top">
-                
-                <code>int?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The time in seconds to allow for connections to drain. Default: `300`
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Dns<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The DNS name of the ELB
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Cross<wbr>Zone<wbr>Load<wbr>Balancing</td>
-            <td class="align-top">
-                
-                <code>bool?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Enable cross-zone load balancing. Default: `true`
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Health<wbr>Check</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loadbalancerhealthcheck">Load<wbr>Balancer<wbr>Health<wbr>Check<wbr>Args?</a></span>
+    </dt>
+    <dd>{{% md %}}A health_check block. Health Check documented below.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Dns<wbr>Name</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The DNS name of the ELB
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Idle<wbr>Timeout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int?</span>
+    </dt>
+    <dd>{{% md %}}The time in seconds that the connection is allowed to be idle. Default: `60`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Health<wbr>Check</td>
-            <td class="align-top">
-                
-                <code><a href="#loadbalancerhealthcheck">Load<wbr>Balancer<wbr>Health<wbr>Check<wbr>Args?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A health_check block. Health Check documented below.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Instances</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List<string>?</span>
+    </dt>
+    <dd>{{% md %}}A list of instance ids to place in the ELB pool.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Idle<wbr>Timeout</td>
-            <td class="align-top">
-                
-                <code>int?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The time in seconds that the connection is allowed to be idle. Default: `60`
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Internal</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool?</span>
+    </dt>
+    <dd>{{% md %}}If true, ELB will be an internal ELB.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Instances</td>
-            <td class="align-top">
-                
-                <code>List<string>?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A list of instance ids to place in the ELB pool.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Listeners</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loadbalancerlistener">List&lt;Load<wbr>Balancer<wbr>Listener<wbr>Args&gt;?</a></span>
+    </dt>
+    <dd>{{% md %}}A list of listener blocks. Listeners documented below.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Internal</td>
-            <td class="align-top">
-                
-                <code>bool?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-If true, ELB will be an internal ELB.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The name of the ELB. By default generated by this provider.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Listeners</td>
-            <td class="align-top">
-                
-                <code><a href="#loadbalancerlistener">List&lt;Load<wbr>Balancer<wbr>Listener<wbr>Args&gt;?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A list of listener blocks. Listeners documented below.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Name</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The name of the ELB. By default generated by this provider.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Name<wbr>Prefix</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Creates a unique name beginning with the specified
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name<wbr>Prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Creates a unique name beginning with the specified
 prefix. Conflicts with `name`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Security<wbr>Groups</td>
-            <td class="align-top">
-                
-                <code>List<string>?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A list of security group IDs to assign to the ELB.
+    <dt class="property-optional"
+            title="Optional">
+        <span>Security<wbr>Groups</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List<string>?</span>
+    </dt>
+    <dd>{{% md %}}A list of security group IDs to assign to the ELB.
 Only valid if creating an ELB within a VPC
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Source<wbr>Security<wbr>Group</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The name of the security group that you can use as
-part of your inbound rules for your load balancer&#39;s back-end application
+    <dt class="property-optional"
+            title="Optional">
+        <span>Source<wbr>Security<wbr>Group</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The name of the security group that you can use as
+part of your inbound rules for your load balancer's back-end application
 instances. Use this for Classic or Default VPC only.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Source<wbr>Security<wbr>Group<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ID of the security group that you can use as
-part of your inbound rules for your load balancer&#39;s back-end application
+    <dt class="property-optional"
+            title="Optional">
+        <span>Source<wbr>Security<wbr>Group<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The ID of the security group that you can use as
+part of your inbound rules for your load balancer's back-end application
 instances. Only available on ELBs launched in a VPC.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Subnets</td>
-            <td class="align-top">
-                
-                <code>List<string>?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A list of subnet IDs to attach to the ELB.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Subnets</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List<string>?</span>
+    </dt>
+    <dd>{{% md %}}A list of subnet IDs to attach to the ELB.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Tags</td>
-            <td class="align-top">
-                
-                <code>Dictionary<string, object>?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A mapping of tags to assign to the resource.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary<string, object>?</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Zone<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The canonical hosted zone ID of the ELB (to be used in a Route 53 Alias record)
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Zone<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The canonical hosted zone ID of the ELB (to be used in a Route 53 Alias record)
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language go %}}
+<dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Access<wbr>Logs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loadbalanceraccesslogs">*Load<wbr>Balancer<wbr>Access<wbr>Logs</a></span>
+    </dt>
+    <dd>{{% md %}}An Access Logs block. Access Logs documented below.
+{{% /md %}}</dd>
 
-{{% lang go %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the ELB
+{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Availability<wbr>Zones</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The AZ's to serve traffic in.
+{{% /md %}}</dd>
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Access<wbr>Logs</td>
-            <td class="align-top">
-                
-                <code><a href="#loadbalanceraccesslogs">*Load<wbr>Balancer<wbr>Access<wbr>Logs</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-An Access Logs block. Access Logs documented below.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Connection<wbr>Draining</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean to enable connection draining. Default: `false`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Arn</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ARN of the ELB
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Connection<wbr>Draining<wbr>Timeout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*int</span>
+    </dt>
+    <dd>{{% md %}}The time in seconds to allow for connections to drain. Default: `300`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Availability<wbr>Zones</td>
-            <td class="align-top">
-                
-                <code>[]string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The AZ&#39;s to serve traffic in.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cross<wbr>Zone<wbr>Load<wbr>Balancing</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*bool</span>
+    </dt>
+    <dd>{{% md %}}Enable cross-zone load balancing. Default: `true`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Connection<wbr>Draining</td>
-            <td class="align-top">
-                
-                <code>*bool</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Boolean to enable connection draining. Default: `false`
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Dns<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The DNS name of the ELB
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Connection<wbr>Draining<wbr>Timeout</td>
-            <td class="align-top">
-                
-                <code>*int</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The time in seconds to allow for connections to drain. Default: `300`
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Health<wbr>Check</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loadbalancerhealthcheck">*Load<wbr>Balancer<wbr>Health<wbr>Check</a></span>
+    </dt>
+    <dd>{{% md %}}A health_check block. Health Check documented below.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Cross<wbr>Zone<wbr>Load<wbr>Balancing</td>
-            <td class="align-top">
-                
-                <code>*bool</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Enable cross-zone load balancing. Default: `true`
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Idle<wbr>Timeout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*int</span>
+    </dt>
+    <dd>{{% md %}}The time in seconds that the connection is allowed to be idle. Default: `60`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Dns<wbr>Name</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The DNS name of the ELB
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Instances</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of instance ids to place in the ELB pool.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Health<wbr>Check</td>
-            <td class="align-top">
-                
-                <code><a href="#loadbalancerhealthcheck">*Load<wbr>Balancer<wbr>Health<wbr>Check</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A health_check block. Health Check documented below.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Internal</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*bool</span>
+    </dt>
+    <dd>{{% md %}}If true, ELB will be an internal ELB.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Idle<wbr>Timeout</td>
-            <td class="align-top">
-                
-                <code>*int</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The time in seconds that the connection is allowed to be idle. Default: `60`
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Listeners</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loadbalancerlistener">[]Load<wbr>Balancer<wbr>Listener</a></span>
+    </dt>
+    <dd>{{% md %}}A list of listener blocks. Listeners documented below.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Instances</td>
-            <td class="align-top">
-                
-                <code>[]string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A list of instance ids to place in the ELB pool.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The name of the ELB. By default generated by this provider.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Internal</td>
-            <td class="align-top">
-                
-                <code>*bool</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-If true, ELB will be an internal ELB.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Listeners</td>
-            <td class="align-top">
-                
-                <code><a href="#loadbalancerlistener">[]Load<wbr>Balancer<wbr>Listener</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A list of listener blocks. Listeners documented below.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Name</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The name of the ELB. By default generated by this provider.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Name<wbr>Prefix</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Creates a unique name beginning with the specified
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name<wbr>Prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}Creates a unique name beginning with the specified
 prefix. Conflicts with `name`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Security<wbr>Groups</td>
-            <td class="align-top">
-                
-                <code>[]string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A list of security group IDs to assign to the ELB.
+    <dt class="property-optional"
+            title="Optional">
+        <span>Security<wbr>Groups</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of security group IDs to assign to the ELB.
 Only valid if creating an ELB within a VPC
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Source<wbr>Security<wbr>Group</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The name of the security group that you can use as
-part of your inbound rules for your load balancer&#39;s back-end application
+    <dt class="property-optional"
+            title="Optional">
+        <span>Source<wbr>Security<wbr>Group</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The name of the security group that you can use as
+part of your inbound rules for your load balancer's back-end application
 instances. Use this for Classic or Default VPC only.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Source<wbr>Security<wbr>Group<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ID of the security group that you can use as
-part of your inbound rules for your load balancer&#39;s back-end application
+    <dt class="property-optional"
+            title="Optional">
+        <span>Source<wbr>Security<wbr>Group<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the security group that you can use as
+part of your inbound rules for your load balancer's back-end application
 instances. Only available on ELBs launched in a VPC.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Subnets</td>
-            <td class="align-top">
-                
-                <code>[]string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A list of subnet IDs to attach to the ELB.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Subnets</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of subnet IDs to attach to the ELB.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Tags</td>
-            <td class="align-top">
-                
-                <code>map[string]interface{}</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A mapping of tags to assign to the resource.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Zone<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The canonical hosted zone ID of the ELB (to be used in a Route 53 Alias record)
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Zone<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The canonical hosted zone ID of the ELB (to be used in a Route 53 Alias record)
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>access<wbr>Logs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loadbalanceraccesslogs">Load<wbr>Balancer<wbr>Access<wbr>Logs?</a></span>
+    </dt>
+    <dd>{{% md %}}An Access Logs block. Access Logs documented below.
+{{% /md %}}</dd>
 
-{{% lang nodejs %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the ELB
+{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>availability<wbr>Zones</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]?</span>
+    </dt>
+    <dd>{{% md %}}The AZ's to serve traffic in.
+{{% /md %}}</dd>
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">access<wbr>Logs</td>
-            <td class="align-top">
-                
-                <code><a href="#loadbalanceraccesslogs">Load<wbr>Balancer<wbr>Access<wbr>Logs?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-An Access Logs block. Access Logs documented below.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>connection<wbr>Draining</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean?</span>
+    </dt>
+    <dd>{{% md %}}Boolean to enable connection draining. Default: `false`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">arn</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ARN of the ELB
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>connection<wbr>Draining<wbr>Timeout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number?</span>
+    </dt>
+    <dd>{{% md %}}The time in seconds to allow for connections to drain. Default: `300`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">availability<wbr>Zones</td>
-            <td class="align-top">
-                
-                <code>string[]?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The AZ&#39;s to serve traffic in.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>cross<wbr>Zone<wbr>Load<wbr>Balancing</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean?</span>
+    </dt>
+    <dd>{{% md %}}Enable cross-zone load balancing. Default: `true`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">connection<wbr>Draining</td>
-            <td class="align-top">
-                
-                <code>boolean?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Boolean to enable connection draining. Default: `false`
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>dns<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The DNS name of the ELB
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">connection<wbr>Draining<wbr>Timeout</td>
-            <td class="align-top">
-                
-                <code>number?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The time in seconds to allow for connections to drain. Default: `300`
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>health<wbr>Check</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loadbalancerhealthcheck">Load<wbr>Balancer<wbr>Health<wbr>Check?</a></span>
+    </dt>
+    <dd>{{% md %}}A health_check block. Health Check documented below.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">cross<wbr>Zone<wbr>Load<wbr>Balancing</td>
-            <td class="align-top">
-                
-                <code>boolean?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Enable cross-zone load balancing. Default: `true`
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>idle<wbr>Timeout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number?</span>
+    </dt>
+    <dd>{{% md %}}The time in seconds that the connection is allowed to be idle. Default: `60`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">dns<wbr>Name</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The DNS name of the ELB
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>instances</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]?</span>
+    </dt>
+    <dd>{{% md %}}A list of instance ids to place in the ELB pool.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">health<wbr>Check</td>
-            <td class="align-top">
-                
-                <code><a href="#loadbalancerhealthcheck">Load<wbr>Balancer<wbr>Health<wbr>Check?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A health_check block. Health Check documented below.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>internal</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean?</span>
+    </dt>
+    <dd>{{% md %}}If true, ELB will be an internal ELB.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">idle<wbr>Timeout</td>
-            <td class="align-top">
-                
-                <code>number?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The time in seconds that the connection is allowed to be idle. Default: `60`
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>listeners</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loadbalancerlistener">Load<wbr>Balancer<wbr>Listener[]?</a></span>
+    </dt>
+    <dd>{{% md %}}A list of listener blocks. Listeners documented below.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">instances</td>
-            <td class="align-top">
-                
-                <code>string[]?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A list of instance ids to place in the ELB pool.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The name of the ELB. By default generated by this provider.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">internal</td>
-            <td class="align-top">
-                
-                <code>boolean?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-If true, ELB will be an internal ELB.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">listeners</td>
-            <td class="align-top">
-                
-                <code><a href="#loadbalancerlistener">Load<wbr>Balancer<wbr>Listener[]?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A list of listener blocks. Listeners documented below.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">name</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The name of the ELB. By default generated by this provider.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">name<wbr>Prefix</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Creates a unique name beginning with the specified
+    <dt class="property-optional"
+            title="Optional">
+        <span>name<wbr>Prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Creates a unique name beginning with the specified
 prefix. Conflicts with `name`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">security<wbr>Groups</td>
-            <td class="align-top">
-                
-                <code>string[]?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A list of security group IDs to assign to the ELB.
+    <dt class="property-optional"
+            title="Optional">
+        <span>security<wbr>Groups</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]?</span>
+    </dt>
+    <dd>{{% md %}}A list of security group IDs to assign to the ELB.
 Only valid if creating an ELB within a VPC
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">source<wbr>Security<wbr>Group</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The name of the security group that you can use as
-part of your inbound rules for your load balancer&#39;s back-end application
+    <dt class="property-optional"
+            title="Optional">
+        <span>source<wbr>Security<wbr>Group</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The name of the security group that you can use as
+part of your inbound rules for your load balancer's back-end application
 instances. Use this for Classic or Default VPC only.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">source<wbr>Security<wbr>Group<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ID of the security group that you can use as
-part of your inbound rules for your load balancer&#39;s back-end application
+    <dt class="property-optional"
+            title="Optional">
+        <span>source<wbr>Security<wbr>Group<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The ID of the security group that you can use as
+part of your inbound rules for your load balancer's back-end application
 instances. Only available on ELBs launched in a VPC.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">subnets</td>
-            <td class="align-top">
-                
-                <code>string[]?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A list of subnet IDs to attach to the ELB.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>subnets</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]?</span>
+    </dt>
+    <dd>{{% md %}}A list of subnet IDs to attach to the ELB.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">tags</td>
-            <td class="align-top">
-                
-                <code>{[key: string]: any}?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A mapping of tags to assign to the resource.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}?</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">zone<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The canonical hosted zone ID of the ELB (to be used in a Route 53 Alias record)
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>zone<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The canonical hosted zone ID of the ELB (to be used in a Route 53 Alias record)
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>access_<wbr>logs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loadbalanceraccesslogs">Dict[Load<wbr>Balancer<wbr>Access<wbr>Logs]</a></span>
+    </dt>
+    <dd>{{% md %}}An Access Logs block. Access Logs documented below.
+{{% /md %}}</dd>
 
-{{% lang python %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the ELB
+{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>availability_<wbr>zones</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}The AZ's to serve traffic in.
+{{% /md %}}</dd>
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">access_<wbr>logs</td>
-            <td class="align-top">
-                
-                <code><a href="#loadbalanceraccesslogs">Dict[Load<wbr>Balancer<wbr>Access<wbr>Logs]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-An Access Logs block. Access Logs documented below.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>connection_<wbr>draining</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean to enable connection draining. Default: `false`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">arn</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ARN of the ELB
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>connection_<wbr>draining_<wbr>timeout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The time in seconds to allow for connections to drain. Default: `300`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">availability_<wbr>zones</td>
-            <td class="align-top">
-                
-                <code>List[str]</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The AZ&#39;s to serve traffic in.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>cross_<wbr>zone_<wbr>load_<wbr>balancing</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable cross-zone load balancing. Default: `true`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">connection_<wbr>draining</td>
-            <td class="align-top">
-                
-                <code>bool</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Boolean to enable connection draining. Default: `false`
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>dns_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The DNS name of the ELB
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">connection_<wbr>draining_<wbr>timeout</td>
-            <td class="align-top">
-                
-                <code>float</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The time in seconds to allow for connections to drain. Default: `300`
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>health_<wbr>check</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loadbalancerhealthcheck">Dict[Load<wbr>Balancer<wbr>Health<wbr>Check]</a></span>
+    </dt>
+    <dd>{{% md %}}A health_check block. Health Check documented below.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">cross_<wbr>zone_<wbr>load_<wbr>balancing</td>
-            <td class="align-top">
-                
-                <code>bool</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Enable cross-zone load balancing. Default: `true`
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>idle_<wbr>timeout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The time in seconds that the connection is allowed to be idle. Default: `60`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">dns_<wbr>name</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The DNS name of the ELB
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>instances</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of instance ids to place in the ELB pool.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">health_<wbr>check</td>
-            <td class="align-top">
-                
-                <code><a href="#loadbalancerhealthcheck">Dict[Load<wbr>Balancer<wbr>Health<wbr>Check]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A health_check block. Health Check documented below.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>internal</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, ELB will be an internal ELB.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">idle_<wbr>timeout</td>
-            <td class="align-top">
-                
-                <code>float</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The time in seconds that the connection is allowed to be idle. Default: `60`
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>listeners</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loadbalancerlistener">List[Load<wbr>Balancer<wbr>Listener]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of listener blocks. Listeners documented below.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">instances</td>
-            <td class="align-top">
-                
-                <code>List[str]</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A list of instance ids to place in the ELB pool.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the ELB. By default generated by this provider.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">internal</td>
-            <td class="align-top">
-                
-                <code>bool</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-If true, ELB will be an internal ELB.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">listeners</td>
-            <td class="align-top">
-                
-                <code><a href="#loadbalancerlistener">List[Load<wbr>Balancer<wbr>Listener]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A list of listener blocks. Listeners documented below.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">name</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The name of the ELB. By default generated by this provider.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">name_<wbr>prefix</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Creates a unique name beginning with the specified
+    <dt class="property-optional"
+            title="Optional">
+        <span>name_<wbr>prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Creates a unique name beginning with the specified
 prefix. Conflicts with `name`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">security_<wbr>groups</td>
-            <td class="align-top">
-                
-                <code>List[str]</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A list of security group IDs to assign to the ELB.
+    <dt class="property-optional"
+            title="Optional">
+        <span>security_<wbr>groups</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of security group IDs to assign to the ELB.
 Only valid if creating an ELB within a VPC
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">source_<wbr>security_<wbr>group</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The name of the security group that you can use as
-part of your inbound rules for your load balancer&#39;s back-end application
+    <dt class="property-optional"
+            title="Optional">
+        <span>source_<wbr>security_<wbr>group</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the security group that you can use as
+part of your inbound rules for your load balancer's back-end application
 instances. Use this for Classic or Default VPC only.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">source_<wbr>security_<wbr>group_<wbr>id</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ID of the security group that you can use as
-part of your inbound rules for your load balancer&#39;s back-end application
+    <dt class="property-optional"
+            title="Optional">
+        <span>source_<wbr>security_<wbr>group_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the security group that you can use as
+part of your inbound rules for your load balancer's back-end application
 instances. Only available on ELBs launched in a VPC.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">subnets</td>
-            <td class="align-top">
-                
-                <code>List[str]</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A list of subnet IDs to attach to the ELB.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>subnets</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of subnet IDs to attach to the ELB.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">tags</td>
-            <td class="align-top">
-                
-                <code>Dict[str, Any]</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A mapping of tags to assign to the resource.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">zone_<wbr>id</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The canonical hosted zone ID of the ELB (to be used in a Route 53 Alias record)
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>zone_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The canonical hosted zone ID of the ELB (to be used in a Route 53 Alias record)
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
+</dl>
+{{% /choosable %}}
 
 
 
@@ -3718,1172 +2502,674 @@ The canonical hosted zone ID of the ELB (to be used in a Route 53 Alias record)
 
 ## Supporting Types
 
-#### LoadBalancerAccessLogs
-{{% lang nodejs %}}
+<h4>Load<wbr>Balancer<wbr>Access<wbr>Logs</h4>
+{{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LoadBalancerAccessLogs">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LoadBalancerAccessLogs">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
-{{% lang go %}}
+{{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/elasticloadbalancing?tab=doc#LoadBalancerAccessLogsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/elasticloadbalancing?tab=doc#LoadBalancerAccessLogsOutput">output</a> API doc for this type.
-{{% /lang %}}
-
-{{% lang csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Elasticloadbalancing.LoadBalancerAccessLogsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Elasticloadbalancing.LoadBalancerAccessLogs.html">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
 
 
-{{< langchoose csharp nojavascript >}}
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Bucket</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The S3 bucket name to store the logs in.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Bucket<wbr>Prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The S3 bucket prefix. Logs are stored in the root if not configured.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool?</span>
+    </dt>
+    <dd>{{% md %}}Boolean to enable / disable `access_logs`. Default is `true`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Interval</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int?</span>
+    </dt>
+    <dd>{{% md %}}The publishing interval in minutes. Default: 60 minutes.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% lang csharp %}}
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Bucket</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The S3 bucket name to store the logs in.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Bucket<wbr>Prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The S3 bucket prefix. Logs are stored in the root if not configured.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean to enable / disable `access_logs`. Default is `true`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Interval</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*int</span>
+    </dt>
+    <dd>{{% md %}}The publishing interval in minutes. Default: 60 minutes.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Bucket</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The S3 bucket name to store the logs in.
- {{% /md %}}
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Bucket<wbr>Prefix</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The S3 bucket prefix. Logs are stored in the root if not configured.
- {{% /md %}}
+    <dt class="property-required"
+            title="Required">
+        <span>bucket</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The S3 bucket name to store the logs in.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Enabled</td>
-            <td class="align-top">
-                
-                <code>bool?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Boolean to enable / disable `access_logs`. Default is `true`
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>bucket<wbr>Prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The S3 bucket prefix. Logs are stored in the root if not configured.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Interval</td>
-            <td class="align-top">
-                
-                <code>int?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The interval between checks.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean?</span>
+    </dt>
+    <dd>{{% md %}}Boolean to enable / disable `access_logs`. Default is `true`
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+    <dt class="property-optional"
+            title="Optional">
+        <span>interval</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number?</span>
+    </dt>
+    <dd>{{% md %}}The publishing interval in minutes. Default: 60 minutes.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>bucket</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The S3 bucket name to store the logs in.
+{{% /md %}}</dd>
 
-{{% lang go %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>bucket_<wbr>prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The S3 bucket prefix. Logs are stored in the root if not configured.
+{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean to enable / disable `access_logs`. Default is `true`
+{{% /md %}}</dd>
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Bucket</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The S3 bucket name to store the logs in.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>interval</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The publishing interval in minutes. Default: 60 minutes.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Bucket<wbr>Prefix</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The S3 bucket prefix. Logs are stored in the root if not configured.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Enabled</td>
-            <td class="align-top">
-                
-                <code>*bool</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Boolean to enable / disable `access_logs`. Default is `true`
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Interval</td>
-            <td class="align-top">
-                
-                <code>*int</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The interval between checks.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang nodejs %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">bucket</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The S3 bucket name to store the logs in.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">bucket<wbr>Prefix</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The S3 bucket prefix. Logs are stored in the root if not configured.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">enabled</td>
-            <td class="align-top">
-                
-                <code>boolean?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Boolean to enable / disable `access_logs`. Default is `true`
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">interval</td>
-            <td class="align-top">
-                
-                <code>number?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The interval between checks.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang python %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">bucket</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The S3 bucket name to store the logs in.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">bucket_<wbr>prefix</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The S3 bucket prefix. Logs are stored in the root if not configured.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">enabled</td>
-            <td class="align-top">
-                
-                <code>bool</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Boolean to enable / disable `access_logs`. Default is `true`
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">interval</td>
-            <td class="align-top">
-                
-                <code>float</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The interval between checks.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
+</dl>
+{{% /choosable %}}
 
 
 
 
 
-#### LoadBalancerHealthCheck
-{{% lang nodejs %}}
+<h4>Load<wbr>Balancer<wbr>Health<wbr>Check</h4>
+{{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LoadBalancerHealthCheck">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LoadBalancerHealthCheck">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
-{{% lang go %}}
+{{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/elasticloadbalancing?tab=doc#LoadBalancerHealthCheckArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/elasticloadbalancing?tab=doc#LoadBalancerHealthCheckOutput">output</a> API doc for this type.
-{{% /lang %}}
-
-{{% lang csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Elasticloadbalancing.LoadBalancerHealthCheckArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Elasticloadbalancing.LoadBalancerHealthCheck.html">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
 
 
-{{< langchoose csharp nojavascript >}}
 
+{{% choosable language csharp %}}
+<dl class="resources-properties">
 
-{{% lang csharp %}}
+    <dt class="property-required"
+            title="Required">
+        <span>Healthy<wbr>Threshold</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of checks before the instance is declared healthy.
+{{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>Interval</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The interval between checks.
+{{% /md %}}</dd>
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Healthy<wbr>Threshold</td>
-            <td class="align-top">
-                
-                <code>int</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The number of checks before the instance is declared healthy.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Interval</td>
-            <td class="align-top">
-                
-                <code>int</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The interval between checks.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Target</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The target of the check. Valid pattern is &#34;${PROTOCOL}:${PORT}${PATH}&#34;, where PROTOCOL
+    <dt class="property-required"
+            title="Required">
+        <span>Target</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The target of the check. Valid pattern is "${PROTOCOL}:${PORT}${PATH}", where PROTOCOL
 values are:
 * `HTTP`, `HTTPS` - PORT and PATH are required
 * `TCP`, `SSL` - PORT is required, PATH is not supported
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Timeout</td>
-            <td class="align-top">
-                
-                <code>int</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The length of time before the check times out.
- {{% /md %}}
+    <dt class="property-required"
+            title="Required">
+        <span>Timeout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The length of time before the check times out.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Unhealthy<wbr>Threshold</td>
-            <td class="align-top">
-                
-                <code>int</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The number of checks before the instance is declared unhealthy.
- {{% /md %}}
+    <dt class="property-required"
+            title="Required">
+        <span>Unhealthy<wbr>Threshold</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of checks before the instance is declared unhealthy.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language go %}}
+<dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Healthy<wbr>Threshold</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of checks before the instance is declared healthy.
+{{% /md %}}</dd>
 
-{{% lang go %}}
+    <dt class="property-required"
+            title="Required">
+        <span>Interval</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The interval between checks.
+{{% /md %}}</dd>
 
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Healthy<wbr>Threshold</td>
-            <td class="align-top">
-                
-                <code>int</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The number of checks before the instance is declared healthy.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Interval</td>
-            <td class="align-top">
-                
-                <code>int</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The interval between checks.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Target</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The target of the check. Valid pattern is &#34;${PROTOCOL}:${PORT}${PATH}&#34;, where PROTOCOL
+    <dt class="property-required"
+            title="Required">
+        <span>Target</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The target of the check. Valid pattern is "${PROTOCOL}:${PORT}${PATH}", where PROTOCOL
 values are:
 * `HTTP`, `HTTPS` - PORT and PATH are required
 * `TCP`, `SSL` - PORT is required, PATH is not supported
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Timeout</td>
-            <td class="align-top">
-                
-                <code>int</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The length of time before the check times out.
- {{% /md %}}
+    <dt class="property-required"
+            title="Required">
+        <span>Timeout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The length of time before the check times out.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Unhealthy<wbr>Threshold</td>
-            <td class="align-top">
-                
-                <code>int</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The number of checks before the instance is declared unhealthy.
- {{% /md %}}
+    <dt class="property-required"
+            title="Required">
+        <span>Unhealthy<wbr>Threshold</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of checks before the instance is declared unhealthy.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>healthy<wbr>Threshold</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The number of checks before the instance is declared healthy.
+{{% /md %}}</dd>
 
-{{% lang nodejs %}}
+    <dt class="property-required"
+            title="Required">
+        <span>interval</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The interval between checks.
+{{% /md %}}</dd>
 
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">healthy<wbr>Threshold</td>
-            <td class="align-top">
-                
-                <code>number</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The number of checks before the instance is declared healthy.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">interval</td>
-            <td class="align-top">
-                
-                <code>number</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The interval between checks.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">target</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The target of the check. Valid pattern is &#34;${PROTOCOL}:${PORT}${PATH}&#34;, where PROTOCOL
+    <dt class="property-required"
+            title="Required">
+        <span>target</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The target of the check. Valid pattern is "${PROTOCOL}:${PORT}${PATH}", where PROTOCOL
 values are:
 * `HTTP`, `HTTPS` - PORT and PATH are required
 * `TCP`, `SSL` - PORT is required, PATH is not supported
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">timeout</td>
-            <td class="align-top">
-                
-                <code>number</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The length of time before the check times out.
- {{% /md %}}
+    <dt class="property-required"
+            title="Required">
+        <span>timeout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The length of time before the check times out.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">unhealthy<wbr>Threshold</td>
-            <td class="align-top">
-                
-                <code>number</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The number of checks before the instance is declared unhealthy.
- {{% /md %}}
+    <dt class="property-required"
+            title="Required">
+        <span>unhealthy<wbr>Threshold</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The number of checks before the instance is declared unhealthy.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>healthy<wbr>Threshold</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The number of checks before the instance is declared healthy.
+{{% /md %}}</dd>
 
-{{% lang python %}}
+    <dt class="property-required"
+            title="Required">
+        <span>interval</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The interval between checks.
+{{% /md %}}</dd>
 
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">healthy<wbr>Threshold</td>
-            <td class="align-top">
-                
-                <code>float</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The number of checks before the instance is declared healthy.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">interval</td>
-            <td class="align-top">
-                
-                <code>float</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The interval between checks.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">target</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The target of the check. Valid pattern is &#34;${PROTOCOL}:${PORT}${PATH}&#34;, where PROTOCOL
+    <dt class="property-required"
+            title="Required">
+        <span>target</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The target of the check. Valid pattern is "${PROTOCOL}:${PORT}${PATH}", where PROTOCOL
 values are:
 * `HTTP`, `HTTPS` - PORT and PATH are required
 * `TCP`, `SSL` - PORT is required, PATH is not supported
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">timeout</td>
-            <td class="align-top">
-                
-                <code>float</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The length of time before the check times out.
- {{% /md %}}
+    <dt class="property-required"
+            title="Required">
+        <span>timeout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The length of time before the check times out.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">unhealthy<wbr>Threshold</td>
-            <td class="align-top">
-                
-                <code>float</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The number of checks before the instance is declared unhealthy.
- {{% /md %}}
+    <dt class="property-required"
+            title="Required">
+        <span>unhealthy<wbr>Threshold</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The number of checks before the instance is declared unhealthy.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
+</dl>
+{{% /choosable %}}
 
 
 
 
 
-#### LoadBalancerListener
-{{% lang nodejs %}}
+<h4>Load<wbr>Balancer<wbr>Listener</h4>
+{{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LoadBalancerListener">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LoadBalancerListener">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
-{{% lang go %}}
+{{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/elasticloadbalancing?tab=doc#LoadBalancerListenerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/elasticloadbalancing?tab=doc#LoadBalancerListenerOutput">output</a> API doc for this type.
-{{% /lang %}}
-
-{{% lang csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Elasticloadbalancing.LoadBalancerListenerArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Elasticloadbalancing.LoadBalancerListener.html">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
 
 
-{{< langchoose csharp nojavascript >}}
 
+{{% choosable language csharp %}}
+<dl class="resources-properties">
 
-{{% lang csharp %}}
+    <dt class="property-required"
+            title="Required">
+        <span>Instance<wbr>Port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The port on the instance to route to
+{{% /md %}}</dd>
 
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Instance<wbr>Port</td>
-            <td class="align-top">
-                
-                <code>int</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The port on the instance to route to
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Instance<wbr>Protocol</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The protocol to use to the instance. Valid
+    <dt class="property-required"
+            title="Required">
+        <span>Instance<wbr>Protocol</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The protocol to use to the instance. Valid
 values are `HTTP`, `HTTPS`, `TCP`, or `SSL`
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Lb<wbr>Port</td>
-            <td class="align-top">
-                
-                <code>int</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The port to listen on for the load balancer
- {{% /md %}}
+    <dt class="property-required"
+            title="Required">
+        <span>Lb<wbr>Port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The port to listen on for the load balancer
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Lb<wbr>Protocol</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The protocol to listen on. Valid values are `HTTP`,
+    <dt class="property-required"
+            title="Required">
+        <span>Lb<wbr>Protocol</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The protocol to listen on. Valid values are `HTTP`,
 `HTTPS`, `TCP`, or `SSL`
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Ssl<wbr>Certificate<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ARN of an SSL certificate you have
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ssl<wbr>Certificate<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The ARN of an SSL certificate you have
 uploaded to AWS IAM. **Note ECDSA-specific restrictions below.  Only valid when `lb_protocol` is either HTTPS or SSL**
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language go %}}
+<dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Instance<wbr>Port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The port on the instance to route to
+{{% /md %}}</dd>
 
-{{% lang go %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Instance<wbr>Port</td>
-            <td class="align-top">
-                
-                <code>int</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The port on the instance to route to
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Instance<wbr>Protocol</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The protocol to use to the instance. Valid
+    <dt class="property-required"
+            title="Required">
+        <span>Instance<wbr>Protocol</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The protocol to use to the instance. Valid
 values are `HTTP`, `HTTPS`, `TCP`, or `SSL`
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Lb<wbr>Port</td>
-            <td class="align-top">
-                
-                <code>int</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The port to listen on for the load balancer
- {{% /md %}}
+    <dt class="property-required"
+            title="Required">
+        <span>Lb<wbr>Port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The port to listen on for the load balancer
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Lb<wbr>Protocol</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The protocol to listen on. Valid values are `HTTP`,
+    <dt class="property-required"
+            title="Required">
+        <span>Lb<wbr>Protocol</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The protocol to listen on. Valid values are `HTTP`,
 `HTTPS`, `TCP`, or `SSL`
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Ssl<wbr>Certificate<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ARN of an SSL certificate you have
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ssl<wbr>Certificate<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of an SSL certificate you have
 uploaded to AWS IAM. **Note ECDSA-specific restrictions below.  Only valid when `lb_protocol` is either HTTPS or SSL**
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>instance<wbr>Port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The port on the instance to route to
+{{% /md %}}</dd>
 
-{{% lang nodejs %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">instance<wbr>Port</td>
-            <td class="align-top">
-                
-                <code>number</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The port on the instance to route to
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">instance<wbr>Protocol</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The protocol to use to the instance. Valid
+    <dt class="property-required"
+            title="Required">
+        <span>instance<wbr>Protocol</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The protocol to use to the instance. Valid
 values are `HTTP`, `HTTPS`, `TCP`, or `SSL`
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">lb<wbr>Port</td>
-            <td class="align-top">
-                
-                <code>number</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The port to listen on for the load balancer
- {{% /md %}}
+    <dt class="property-required"
+            title="Required">
+        <span>lb<wbr>Port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The port to listen on for the load balancer
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">lb<wbr>Protocol</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The protocol to listen on. Valid values are `HTTP`,
+    <dt class="property-required"
+            title="Required">
+        <span>lb<wbr>Protocol</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The protocol to listen on. Valid values are `HTTP`,
 `HTTPS`, `TCP`, or `SSL`
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">ssl<wbr>Certificate<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ARN of an SSL certificate you have
+    <dt class="property-optional"
+            title="Optional">
+        <span>ssl<wbr>Certificate<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The ARN of an SSL certificate you have
 uploaded to AWS IAM. **Note ECDSA-specific restrictions below.  Only valid when `lb_protocol` is either HTTPS or SSL**
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>instance_<wbr>port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The port on the instance to route to
+{{% /md %}}</dd>
 
-{{% lang python %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">instance_<wbr>port</td>
-            <td class="align-top">
-                
-                <code>float</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The port on the instance to route to
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">instance<wbr>Protocol</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The protocol to use to the instance. Valid
+    <dt class="property-required"
+            title="Required">
+        <span>instance<wbr>Protocol</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The protocol to use to the instance. Valid
 values are `HTTP`, `HTTPS`, `TCP`, or `SSL`
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">lb_<wbr>port</td>
-            <td class="align-top">
-                
-                <code>float</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The port to listen on for the load balancer
- {{% /md %}}
+    <dt class="property-required"
+            title="Required">
+        <span>lb_<wbr>port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The port to listen on for the load balancer
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">lb<wbr>Protocol</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The protocol to listen on. Valid values are `HTTP`,
+    <dt class="property-required"
+            title="Required">
+        <span>lb<wbr>Protocol</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The protocol to listen on. Valid values are `HTTP`,
 `HTTPS`, `TCP`, or `SSL`
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">ssl<wbr>Certificate<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ARN of an SSL certificate you have
+    <dt class="property-optional"
+            title="Optional">
+        <span>ssl<wbr>Certificate<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARN of an SSL certificate you have
 uploaded to AWS IAM. **Note ECDSA-specific restrictions below.  Only valid when `lb_protocol` is either HTTPS or SSL**
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
+</dl>
+{{% /choosable %}}
 
 
 
 
 
 
+
+
+
+<h3>Package Details</h3>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
 

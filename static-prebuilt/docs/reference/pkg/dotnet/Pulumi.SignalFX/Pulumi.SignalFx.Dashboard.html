@@ -1,0 +1,698 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Dashboard
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Dashboard
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.SignalFx.Dashboard">
+  
+  <h1 id="Pulumi_SignalFx_Dashboard" data-uid="Pulumi.SignalFx.Dashboard" class="text-break">Class Dashboard
+  </h1>
+  <div class="markdown level0 summary"><blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/dashboard.html.markdown">https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/dashboard.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Dashboard</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.SignalFx.html">Pulumi.SignalFx</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.SignalFx.dll</h6>
+  <h5 id="Pulumi_SignalFx_Dashboard_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Dashboard : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Dashboard.cs/#L126">View Source</a>
+  </span>
+  <a id="Pulumi_SignalFx_Dashboard__ctor_" data-uid="Pulumi.SignalFx.Dashboard.#ctor*"></a>
+  <h4 id="Pulumi_SignalFx_Dashboard__ctor_System_String_Pulumi_SignalFx_DashboardArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.SignalFx.Dashboard.#ctor(System.String,Pulumi.SignalFx.DashboardArgs,System.Nullable{CustomResourceOptions})">Dashboard(String, DashboardArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Create a Dashboard resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Dashboard(string name, DashboardArgs args, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.SignalFx.DashboardArgs.html">DashboardArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Dashboard.cs/#L19">View Source</a>
+  </span>
+  <a id="Pulumi_SignalFx_Dashboard_AuthorizedWriterTeams_" data-uid="Pulumi.SignalFx.Dashboard.AuthorizedWriterTeams*"></a>
+  <h4 id="Pulumi_SignalFx_Dashboard_AuthorizedWriterTeams" data-uid="Pulumi.SignalFx.Dashboard.AuthorizedWriterTeams">AuthorizedWriterTeams</h4>
+  <div class="markdown level1 summary"><p>Team IDs that have write access to this dashboard</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; AuthorizedWriterTeams { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Dashboard.cs/#L25">View Source</a>
+  </span>
+  <a id="Pulumi_SignalFx_Dashboard_AuthorizedWriterUsers_" data-uid="Pulumi.SignalFx.Dashboard.AuthorizedWriterUsers*"></a>
+  <h4 id="Pulumi_SignalFx_Dashboard_AuthorizedWriterUsers" data-uid="Pulumi.SignalFx.Dashboard.AuthorizedWriterUsers">AuthorizedWriterUsers</h4>
+  <div class="markdown level1 summary"><p>User IDs that have write access to this dashboard</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; AuthorizedWriterUsers { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Dashboard.cs/#L31">View Source</a>
+  </span>
+  <a id="Pulumi_SignalFx_Dashboard_Charts_" data-uid="Pulumi.SignalFx.Dashboard.Charts*"></a>
+  <h4 id="Pulumi_SignalFx_Dashboard_Charts" data-uid="Pulumi.SignalFx.Dashboard.Charts">Charts</h4>
+  <div class="markdown level1 summary"><p>Chart ID and layout information for the charts in the dashboard.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;DashboardCharts&gt;&gt; Charts { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.SignalFx.Outputs.DashboardCharts.html">DashboardCharts</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Dashboard.cs/#L37">View Source</a>
+  </span>
+  <a id="Pulumi_SignalFx_Dashboard_ChartsResolution_" data-uid="Pulumi.SignalFx.Dashboard.ChartsResolution*"></a>
+  <h4 id="Pulumi_SignalFx_Dashboard_ChartsResolution" data-uid="Pulumi.SignalFx.Dashboard.ChartsResolution">ChartsResolution</h4>
+  <div class="markdown level1 summary"><p>Specifies the chart data display resolution for charts in this dashboard. Value can be one of <code>&amp;quot;default&amp;quot;</code>,  <code>&amp;quot;low&amp;quot;</code>, <code>&amp;quot;high&amp;quot;</code>, or  <code>&amp;quot;highest&amp;quot;</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ChartsResolution { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Dashboard.cs/#L43">View Source</a>
+  </span>
+  <a id="Pulumi_SignalFx_Dashboard_Columns_" data-uid="Pulumi.SignalFx.Dashboard.Columns*"></a>
+  <h4 id="Pulumi_SignalFx_Dashboard_Columns" data-uid="Pulumi.SignalFx.Dashboard.Columns">Columns</h4>
+  <div class="markdown level1 summary"><p>Column number for the layout.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;DashboardColumns&gt;&gt; Columns { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.SignalFx.Outputs.DashboardColumns.html">DashboardColumns</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Dashboard.cs/#L49">View Source</a>
+  </span>
+  <a id="Pulumi_SignalFx_Dashboard_DashboardGroup_" data-uid="Pulumi.SignalFx.Dashboard.DashboardGroup*"></a>
+  <h4 id="Pulumi_SignalFx_Dashboard_DashboardGroup" data-uid="Pulumi.SignalFx.Dashboard.DashboardGroup">DashboardGroup</h4>
+  <div class="markdown level1 summary"><p>The ID of the dashboard group that contains the dashboard.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; DashboardGroup { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Dashboard.cs/#L55">View Source</a>
+  </span>
+  <a id="Pulumi_SignalFx_Dashboard_Description_" data-uid="Pulumi.SignalFx.Dashboard.Description*"></a>
+  <h4 id="Pulumi_SignalFx_Dashboard_Description" data-uid="Pulumi.SignalFx.Dashboard.Description">Description</h4>
+  <div class="markdown level1 summary"><p>Variable description.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Dashboard.cs/#L61">View Source</a>
+  </span>
+  <a id="Pulumi_SignalFx_Dashboard_EndTime_" data-uid="Pulumi.SignalFx.Dashboard.EndTime*"></a>
+  <h4 id="Pulumi_SignalFx_Dashboard_EndTime" data-uid="Pulumi.SignalFx.Dashboard.EndTime">EndTime</h4>
+  <div class="markdown level1 summary"><p>Seconds since epoch. Used for visualization. You must specify time_span_type = <code>&amp;quot;absolute&amp;quot;</code> too.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; EndTime { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Dashboard.cs/#L67">View Source</a>
+  </span>
+  <a id="Pulumi_SignalFx_Dashboard_EventOverlays_" data-uid="Pulumi.SignalFx.Dashboard.EventOverlays*"></a>
+  <h4 id="Pulumi_SignalFx_Dashboard_EventOverlays" data-uid="Pulumi.SignalFx.Dashboard.EventOverlays">EventOverlays</h4>
+  <div class="markdown level1 summary"><p>Specify a list of event overlays to include in the dashboard. Note: These overlays correspond to the <em>suggested</em> event overlays specified in the web UI, and they're not automatically applied as active overlays. To set default active event overlays, use the <code>selected_event_overlay</code> property instead.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;DashboardEventOverlays&gt;&gt; EventOverlays { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.SignalFx.Outputs.DashboardEventOverlays.html">DashboardEventOverlays</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Dashboard.cs/#L73">View Source</a>
+  </span>
+  <a id="Pulumi_SignalFx_Dashboard_Filters_" data-uid="Pulumi.SignalFx.Dashboard.Filters*"></a>
+  <h4 id="Pulumi_SignalFx_Dashboard_Filters" data-uid="Pulumi.SignalFx.Dashboard.Filters">Filters</h4>
+  <div class="markdown level1 summary"><p>Filter to apply to the charts when displaying the dashboard.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;DashboardFilters&gt;&gt; Filters { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.SignalFx.Outputs.DashboardFilters.html">DashboardFilters</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Dashboard.cs/#L79">View Source</a>
+  </span>
+  <a id="Pulumi_SignalFx_Dashboard_Grids_" data-uid="Pulumi.SignalFx.Dashboard.Grids*"></a>
+  <h4 id="Pulumi_SignalFx_Dashboard_Grids" data-uid="Pulumi.SignalFx.Dashboard.Grids">Grids</h4>
+  <div class="markdown level1 summary"><p>Grid dashboard layout. Charts listed will be placed in a grid by row with the same width and height. If a chart cannot fit in a row, it will be placed automatically in the next row.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;DashboardGrids&gt;&gt; Grids { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.SignalFx.Outputs.DashboardGrids.html">DashboardGrids</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Dashboard.cs/#L85">View Source</a>
+  </span>
+  <a id="Pulumi_SignalFx_Dashboard_Name_" data-uid="Pulumi.SignalFx.Dashboard.Name*"></a>
+  <h4 id="Pulumi_SignalFx_Dashboard_Name" data-uid="Pulumi.SignalFx.Dashboard.Name">Name</h4>
+  <div class="markdown level1 summary"><p>Name of the dashboard.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Dashboard.cs/#L91">View Source</a>
+  </span>
+  <a id="Pulumi_SignalFx_Dashboard_SelectedEventOverlays_" data-uid="Pulumi.SignalFx.Dashboard.SelectedEventOverlays*"></a>
+  <h4 id="Pulumi_SignalFx_Dashboard_SelectedEventOverlays" data-uid="Pulumi.SignalFx.Dashboard.SelectedEventOverlays">SelectedEventOverlays</h4>
+  <div class="markdown level1 summary"><p>Defines event overlays which are enabled by <strong>default</strong>. Any overlay specified here should have an accompanying entry in <code>event_overlay</code>, which are similar to the properties here.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;DashboardSelectedEventOverlays&gt;&gt; SelectedEventOverlays { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.SignalFx.Outputs.DashboardSelectedEventOverlays.html">DashboardSelectedEventOverlays</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Dashboard.cs/#L97">View Source</a>
+  </span>
+  <a id="Pulumi_SignalFx_Dashboard_StartTime_" data-uid="Pulumi.SignalFx.Dashboard.StartTime*"></a>
+  <h4 id="Pulumi_SignalFx_Dashboard_StartTime" data-uid="Pulumi.SignalFx.Dashboard.StartTime">StartTime</h4>
+  <div class="markdown level1 summary"><p>Seconds since epoch. Used for visualization. You must specify time_span_type = <code>&amp;quot;absolute&amp;quot;</code> too.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; StartTime { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Dashboard.cs/#L103">View Source</a>
+  </span>
+  <a id="Pulumi_SignalFx_Dashboard_TimeRange_" data-uid="Pulumi.SignalFx.Dashboard.TimeRange*"></a>
+  <h4 id="Pulumi_SignalFx_Dashboard_TimeRange" data-uid="Pulumi.SignalFx.Dashboard.TimeRange">TimeRange</h4>
+  <div class="markdown level1 summary"><p>The time range prior to now to visualize. SignalFx time syntax (e.g. <code>&amp;quot;-5m&amp;quot;</code>, <code>&amp;quot;-1h&amp;quot;</code>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; TimeRange { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Dashboard.cs/#L109">View Source</a>
+  </span>
+  <a id="Pulumi_SignalFx_Dashboard_Url_" data-uid="Pulumi.SignalFx.Dashboard.Url*"></a>
+  <h4 id="Pulumi_SignalFx_Dashboard_Url" data-uid="Pulumi.SignalFx.Dashboard.Url">Url</h4>
+  <div class="markdown level1 summary"><p>URL of the dashboard</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Url { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Dashboard.cs/#L115">View Source</a>
+  </span>
+  <a id="Pulumi_SignalFx_Dashboard_Variables_" data-uid="Pulumi.SignalFx.Dashboard.Variables*"></a>
+  <h4 id="Pulumi_SignalFx_Dashboard_Variables" data-uid="Pulumi.SignalFx.Dashboard.Variables">Variables</h4>
+  <div class="markdown level1 summary"><p>Dashboard variable to apply to each chart in the dashboard.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;DashboardVariables&gt;&gt; Variables { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.SignalFx.Outputs.DashboardVariables.html">DashboardVariables</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Dashboard.cs/#L156">View Source</a>
+  </span>
+  <a id="Pulumi_SignalFx_Dashboard_Get_" data-uid="Pulumi.SignalFx.Dashboard.Get*"></a>
+  <h4 id="Pulumi_SignalFx_Dashboard_Get_System_String_Input_System_String__Pulumi_SignalFx_DashboardState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.SignalFx.Dashboard.Get(System.String,Input{System.String},Pulumi.SignalFx.DashboardState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, DashboardState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Get an existing Dashboard resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Dashboard Get(string name, Input&lt;string&gt; id, DashboardState state = null, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.SignalFx.DashboardState.html">DashboardState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.SignalFx.Dashboard.html">Dashboard</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Dashboard.cs/#L14" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

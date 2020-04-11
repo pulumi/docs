@@ -57,7 +57,6 @@ brief downtime as the server reboots. See the AWS Docs on [RDS Maintenance][4]
 for more information.</p>
 <p><strong>Note:</strong> All arguments including the username and password will be stored in the raw state as plain-text.
 <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/rds_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/rds_cluster.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -510,9 +509,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.rds.</code><code class="sig-name descname">ClusterEndpoint</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cluster_endpoint_identifier=None</em>, <em class="sig-param">cluster_identifier=None</em>, <em class="sig-param">custom_endpoint_type=None</em>, <em class="sig-param">excluded_members=None</em>, <em class="sig-param">static_members=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.ClusterEndpoint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a RDS Aurora Cluster Endpoint.
 You can refer to the [User Guide][1].</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/rds_cluster_endpoint.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/rds_cluster_endpoint.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -640,16 +636,26 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_aws.rds.ClusterInstance">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.rds.</code><code class="sig-name descname">ClusterInstance</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">apply_immediately=None</em>, <em class="sig-param">auto_minor_version_upgrade=None</em>, <em class="sig-param">availability_zone=None</em>, <em class="sig-param">ca_cert_identifier=None</em>, <em class="sig-param">cluster_identifier=None</em>, <em class="sig-param">copy_tags_to_snapshot=None</em>, <em class="sig-param">db_parameter_group_name=None</em>, <em class="sig-param">db_subnet_group_name=None</em>, <em class="sig-param">engine=None</em>, <em class="sig-param">engine_version=None</em>, <em class="sig-param">identifier=None</em>, <em class="sig-param">identifier_prefix=None</em>, <em class="sig-param">instance_class=None</em>, <em class="sig-param">monitoring_interval=None</em>, <em class="sig-param">monitoring_role_arn=None</em>, <em class="sig-param">performance_insights_enabled=None</em>, <em class="sig-param">performance_insights_kms_key_id=None</em>, <em class="sig-param">preferred_backup_window=None</em>, <em class="sig-param">preferred_maintenance_window=None</em>, <em class="sig-param">promotion_tier=None</em>, <em class="sig-param">publicly_accessible=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.ClusterInstance" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a ClusterInstance resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[bool] apply_immediately: Specifies whether any database modifications</p>
+<dd><p>Provides an RDS Cluster Instance Resource. A Cluster Instance Resource defines
+attributes that are specific to a single instance in a [RDS Cluster][3],
+specifically running Amazon Aurora.</p>
+<p>Unlike other RDS resources that support replication, with Amazon Aurora you do
+not designate a primary and subsequent replicas. Instead, you simply add RDS
+Instances and Aurora manages the replication. You can use the [count][5]
+meta-parameter to make multiple instances and join them all to the same RDS
+Cluster, or you may specify different Cluster Instance resources with various
+<code class="docutils literal notranslate"><span class="pre">instance_class</span></code> sizes.</p>
+<p>For more information on Amazon Aurora, see [Aurora on Amazon RDS][2] in the Amazon RDS User Guide.</p>
 <blockquote>
-<div><p>are applied immediately, or during the next maintenance window. Default is<code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+<div><p><strong>NOTE:</strong> Deletion Protection from the RDS service can only be enabled at the cluster level, not for individual cluster instances. You can still add the <cite>``protect`</cite> CustomResourceOption &lt;<a class="reference external" href="https://www.pulumi.com/docs/intro/concepts/programming-model/#protect">https://www.pulumi.com/docs/intro/concepts/programming-model/#protect</a>&gt;`_ to this resource configuration if you desire protection from accidental deletion.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>apply_immediately</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether any database modifications
+are applied immediately, or during the next maintenance window. Default is<code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>auto_minor_version_upgrade</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates that minor engine upgrades will be applied automatically to the DB instance during the maintenance window. Default <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 <li><p><strong>availability_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The EC2 Availability Zone that the DB instance is created in. See <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBInstance.html">docs</a> about the details.</p></li>
 <li><p><strong>ca_cert_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The identifier of the CA certificate for the DB instance.</p></li>
@@ -976,9 +982,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/AuroraMySQL.Reference.html">Aurora MySQL Parameters</a></p></li>
 <li><p><a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/AuroraPostgreSQL.Reference.html">Aurora PostgreSQL Parameters</a></p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/rds_cluster_parameter_group.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/rds_cluster_parameter_group.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1123,9 +1126,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.rds.ClusterSnapshot">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.rds.</code><code class="sig-name descname">ClusterSnapshot</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">db_cluster_identifier=None</em>, <em class="sig-param">db_cluster_snapshot_identifier=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.ClusterSnapshot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a RDS database cluster snapshot for Aurora clusters. For managing RDS database instance snapshots, see the <cite>``rds.Snapshot`</cite> resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/db_snapshot.html">https://www.terraform.io/docs/providers/aws/r/db_snapshot.html</a>&gt;`_.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/db_cluster_snapshot.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/db_cluster_snapshot.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1299,9 +1299,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">arn</span></code> - The Amazon Resource Name of the RDS event notification subscription</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">customer_aws_id</span></code> - The AWS customer account associated with the RDS event notification subscription</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/db_event_subscription.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/db_event_subscription.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1901,9 +1898,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.rds.</code><code class="sig-name descname">GlobalCluster</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">database_name=None</em>, <em class="sig-param">deletion_protection=None</em>, <em class="sig-param">engine=None</em>, <em class="sig-param">engine_version=None</em>, <em class="sig-param">global_cluster_identifier=None</em>, <em class="sig-param">storage_encrypted=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.GlobalCluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a RDS Global Cluster, which is an Aurora global database spread across multiple regions. The global database contains a single primary cluster with read-write capability, and a read-only secondary cluster that receives data from the primary cluster through high-speed replication performed by the Aurora storage subsystem.</p>
 <p>More information about Aurora global databases can be found in the <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-global-database.html#aurora-global-database-creating">Aurora User Guide</a>.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/rds_global_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/rds_global_cluster.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2073,9 +2067,6 @@ state</a>.</p>
 <p>Amazon RDS supports three types of instance classes: Standard, Memory Optimized,
 and Burstable Performance. For more information please read the AWS RDS documentation
 about <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.DBInstanceClass.html">DB Instance Class Types</a></p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/db_instance.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/db_instance.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2874,9 +2865,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.MySQL.Options.html">MySQL Options</a></p></li>
 <li><p><a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.Oracle.Options.html">Oracle Options</a></p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/db_option_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/db_option_group.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3054,9 +3042,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ModifyInstance.Oracle.html#USER_ModifyInstance.Oracle.sqlnet">Oracle Parameters</a></p></li>
 <li><p><a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.PostgreSQL.CommonDBATasks.html#Appendix.PostgreSQL.CommonDBATasks.Parameters">PostgreSQL Parameters</a></p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/db_parameter_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/db_parameter_group.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3207,7 +3192,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 <blockquote>
 <div><p>To manage the RDS DB Instance IAM Role for <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.OS.html">Enhanced Monitoring</a>, see the <code class="docutils literal notranslate"><span class="pre">rds.Instance</span></code> resource <code class="docutils literal notranslate"><span class="pre">monitoring_role_arn</span></code> argument instead.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/db_instance_role_association.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/db_instance_role_association.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -3303,9 +3287,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 EC2-Classic Platform. For instances inside a VPC, use the
 <cite>``aws_db_instance.vpc_security_group_ids`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/db_instance.html#vpc_security_group_ids">https://www.terraform.io/docs/providers/aws/r/db_instance.html#vpc_security_group_ids</a>&gt;`_
 attribute instead.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/db_security_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/db_security_group.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3434,9 +3415,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.rds.Snapshot">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.rds.</code><code class="sig-name descname">Snapshot</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">db_instance_identifier=None</em>, <em class="sig-param">db_snapshot_identifier=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.Snapshot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a RDS database instance snapshot. For managing RDS database cluster snapshots, see the <cite>``rds.ClusterSnapshot`</cite> resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/db_cluster_snapshot.html">https://www.terraform.io/docs/providers/aws/r/db_cluster_snapshot.html</a>&gt;`_.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/db_snapshot.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/db_snapshot.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3632,9 +3610,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.rds.SubnetGroup">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.rds.</code><code class="sig-name descname">SubnetGroup</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">subnet_ids=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.SubnetGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an RDS DB subnet group resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/db_subnet_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/db_subnet_group.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3748,9 +3723,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.rds.get_cluster">
 <code class="sig-prename descclassname">pulumi_aws.rds.</code><code class="sig-name descname">get_cluster</code><span class="sig-paren">(</span><em class="sig-param">cluster_identifier=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.get_cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides information about a RDS cluster.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/rds_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/rds_cluster.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>cluster_identifier</strong> (<em>str</em>) – The cluster identifier of the RDS cluster.</p>
@@ -3765,7 +3737,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> This data source does not apply to snapshots created on DB Instances. 
 See the <cite>``rds.Snapshot`</cite> data source &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/d/db_snapshot.html">https://www.terraform.io/docs/providers/aws/d/db_snapshot.html</a>&gt;`_ for DB Instance snapshots.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/db_cluster_snapshot.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/db_cluster_snapshot.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -3781,6 +3752,7 @@ The default is <code class="docutils literal notranslate"><span class="pre">fals
 <li><p><strong>snapshot_type</strong> (<em>str</em>) – The type of snapshots to be returned. If you don’t specify a SnapshotType
 value, then both automated and manual DB cluster snapshots are returned. Shared and public DB Cluster Snapshots are not
 included in the returned results by default. Possible values are, <code class="docutils literal notranslate"><span class="pre">automated</span></code>, <code class="docutils literal notranslate"><span class="pre">manual</span></code>, <code class="docutils literal notranslate"><span class="pre">shared</span></code> and <code class="docutils literal notranslate"><span class="pre">public</span></code>.</p></li>
+<li><p><strong>tags</strong> (<em>dict</em>) – A mapping of tags for the resource.</p></li>
 </ul>
 </dd>
 </dl>
@@ -3789,8 +3761,7 @@ included in the returned results by default. Possible values are, <code class="d
 <dl class="function">
 <dt id="pulumi_aws.rds.get_event_categories">
 <code class="sig-prename descclassname">pulumi_aws.rds.</code><code class="sig-name descname">get_event_categories</code><span class="sig-paren">(</span><em class="sig-param">source_type=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.get_event_categories" title="Permalink to this definition">¶</a></dt>
-<dd><p>Use this data source to access information about an existing resource.</p>
-<dl class="field-list simple">
+<dd><dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>source_type</strong> (<em>str</em>) – The type of source that will be generating the events. Valid options are db-instance, db-security-group, db-parameter-group, db-snapshot, db-cluster or db-cluster-snapshot.</p>
 </dd>
@@ -3801,9 +3772,6 @@ included in the returned results by default. Possible values are, <code class="d
 <dt id="pulumi_aws.rds.get_instance">
 <code class="sig-prename descclassname">pulumi_aws.rds.</code><code class="sig-name descname">get_instance</code><span class="sig-paren">(</span><em class="sig-param">db_instance_identifier=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.rds.get_instance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information about an RDS instance</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/db_instance.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/db_instance.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>db_instance_identifier</strong> (<em>str</em>) – The name of the RDS instance</p>
@@ -3818,7 +3786,6 @@ included in the returned results by default. Possible values are, <code class="d
 <blockquote>
 <div><p><strong>NOTE:</strong> This data source does not apply to snapshots created on Aurora DB clusters.
 See the <cite>``rds.ClusterSnapshot`</cite> data source &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/d/db_cluster_snapshot.html">https://www.terraform.io/docs/providers/aws/d/db_cluster_snapshot.html</a>&gt;`_ for DB Cluster snapshots.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/db_snapshot.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/db_snapshot.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

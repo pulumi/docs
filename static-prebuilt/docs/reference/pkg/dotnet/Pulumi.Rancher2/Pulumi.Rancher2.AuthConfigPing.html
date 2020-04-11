@@ -1,0 +1,646 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class AuthConfigPing
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class AuthConfigPing
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Rancher2.AuthConfigPing">
+  
+  <h1 id="Pulumi_Rancher2_AuthConfigPing" data-uid="Pulumi.Rancher2.AuthConfigPing" class="text-break">Class AuthConfigPing
+  </h1>
+  <div class="markdown level0 summary"><p>Provides a Rancher v2 Auth Config Ping resource. This can be used to configure and enable Auth Config Ping for Rancher v2 RKE clusters and retrieve their information.</p>
+<p>In addition to the built-in local auth, only one external auth config provider can be enabled at a time.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/auth_config_ping.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/auth_config_ping.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">AuthConfigPing</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Rancher2.html">Pulumi.Rancher2</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.Rancher2.dll</h6>
+  <h5 id="Pulumi_Rancher2_AuthConfigPing_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class AuthConfigPing : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/AuthConfigPing.cs/#L118">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_AuthConfigPing__ctor_" data-uid="Pulumi.Rancher2.AuthConfigPing.#ctor*"></a>
+  <h4 id="Pulumi_Rancher2_AuthConfigPing__ctor_System_String_Pulumi_Rancher2_AuthConfigPingArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Rancher2.AuthConfigPing.#ctor(System.String,Pulumi.Rancher2.AuthConfigPingArgs,System.Nullable{CustomResourceOptions})">AuthConfigPing(String, AuthConfigPingArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Create a AuthConfigPing resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AuthConfigPing(string name, AuthConfigPingArgs args, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Rancher2.AuthConfigPingArgs.html">AuthConfigPingArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/AuthConfigPing.cs/#L23">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_AuthConfigPing_AccessMode_" data-uid="Pulumi.Rancher2.AuthConfigPing.AccessMode*"></a>
+  <h4 id="Pulumi_Rancher2_AuthConfigPing_AccessMode" data-uid="Pulumi.Rancher2.AuthConfigPing.AccessMode">AccessMode</h4>
+  <div class="markdown level1 summary"><p>Access mode for auth. <code>required</code>, <code>restricted</code>, <code>unrestricted</code> are supported. Default <code>unrestricted</code> (string)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; AccessMode { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/AuthConfigPing.cs/#L29">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_AuthConfigPing_AllowedPrincipalIds_" data-uid="Pulumi.Rancher2.AuthConfigPing.AllowedPrincipalIds*"></a>
+  <h4 id="Pulumi_Rancher2_AuthConfigPing_AllowedPrincipalIds" data-uid="Pulumi.Rancher2.AuthConfigPing.AllowedPrincipalIds">AllowedPrincipalIds</h4>
+  <div class="markdown level1 summary"><p>Allowed principal ids for auth. Required if <code>access_mode</code> is <code>required</code> or <code>restricted</code>. Ex: <code>ping_user://&amp;lt;USER_ID&gt;</code>  <code>ping_group://&amp;lt;GROUP_ID&gt;</code> (list)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; AllowedPrincipalIds { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/AuthConfigPing.cs/#L35">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_AuthConfigPing_Annotations_" data-uid="Pulumi.Rancher2.AuthConfigPing.Annotations*"></a>
+  <h4 id="Pulumi_Rancher2_AuthConfigPing_Annotations" data-uid="Pulumi.Rancher2.AuthConfigPing.Annotations">Annotations</h4>
+  <div class="markdown level1 summary"><p>Annotations of the resource (map)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Annotations { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/AuthConfigPing.cs/#L41">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_AuthConfigPing_DisplayNameField_" data-uid="Pulumi.Rancher2.AuthConfigPing.DisplayNameField*"></a>
+  <h4 id="Pulumi_Rancher2_AuthConfigPing_DisplayNameField" data-uid="Pulumi.Rancher2.AuthConfigPing.DisplayNameField">DisplayNameField</h4>
+  <div class="markdown level1 summary"><p>Ping display name field (string)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; DisplayNameField { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/AuthConfigPing.cs/#L47">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_AuthConfigPing_Enabled_" data-uid="Pulumi.Rancher2.AuthConfigPing.Enabled*"></a>
+  <h4 id="Pulumi_Rancher2_AuthConfigPing_Enabled" data-uid="Pulumi.Rancher2.AuthConfigPing.Enabled">Enabled</h4>
+  <div class="markdown level1 summary"><p>Enable auth config provider. Default <code>true</code> (bool)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; Enabled { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/AuthConfigPing.cs/#L53">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_AuthConfigPing_GroupsField_" data-uid="Pulumi.Rancher2.AuthConfigPing.GroupsField*"></a>
+  <h4 id="Pulumi_Rancher2_AuthConfigPing_GroupsField" data-uid="Pulumi.Rancher2.AuthConfigPing.GroupsField">GroupsField</h4>
+  <div class="markdown level1 summary"><p>Ping group field (string)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; GroupsField { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/AuthConfigPing.cs/#L59">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_AuthConfigPing_IdpMetadataContent_" data-uid="Pulumi.Rancher2.AuthConfigPing.IdpMetadataContent*"></a>
+  <h4 id="Pulumi_Rancher2_AuthConfigPing_IdpMetadataContent" data-uid="Pulumi.Rancher2.AuthConfigPing.IdpMetadataContent">IdpMetadataContent</h4>
+  <div class="markdown level1 summary"><p>Ping IDP metadata content (string)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; IdpMetadataContent { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/AuthConfigPing.cs/#L65">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_AuthConfigPing_Labels_" data-uid="Pulumi.Rancher2.AuthConfigPing.Labels*"></a>
+  <h4 id="Pulumi_Rancher2_AuthConfigPing_Labels" data-uid="Pulumi.Rancher2.AuthConfigPing.Labels">Labels</h4>
+  <div class="markdown level1 summary"><p>Labels of the resource (map)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Labels { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/AuthConfigPing.cs/#L71">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_AuthConfigPing_Name_" data-uid="Pulumi.Rancher2.AuthConfigPing.Name*"></a>
+  <h4 id="Pulumi_Rancher2_AuthConfigPing_Name" data-uid="Pulumi.Rancher2.AuthConfigPing.Name">Name</h4>
+  <div class="markdown level1 summary"><p>(Computed) The name of the resource (string)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/AuthConfigPing.cs/#L77">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_AuthConfigPing_RancherApiHost_" data-uid="Pulumi.Rancher2.AuthConfigPing.RancherApiHost*"></a>
+  <h4 id="Pulumi_Rancher2_AuthConfigPing_RancherApiHost" data-uid="Pulumi.Rancher2.AuthConfigPing.RancherApiHost">RancherApiHost</h4>
+  <div class="markdown level1 summary"><p>Rancher url. Schema needs to be specified, <code>https://&amp;lt;RANCHER_API_HOST&gt;</code> (string)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; RancherApiHost { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/AuthConfigPing.cs/#L83">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_AuthConfigPing_SpCert_" data-uid="Pulumi.Rancher2.AuthConfigPing.SpCert*"></a>
+  <h4 id="Pulumi_Rancher2_AuthConfigPing_SpCert" data-uid="Pulumi.Rancher2.AuthConfigPing.SpCert">SpCert</h4>
+  <div class="markdown level1 summary"><p>Ping SP cert (string)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SpCert { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/AuthConfigPing.cs/#L89">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_AuthConfigPing_SpKey_" data-uid="Pulumi.Rancher2.AuthConfigPing.SpKey*"></a>
+  <h4 id="Pulumi_Rancher2_AuthConfigPing_SpKey" data-uid="Pulumi.Rancher2.AuthConfigPing.SpKey">SpKey</h4>
+  <div class="markdown level1 summary"><p>Ping SP key (string)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SpKey { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/AuthConfigPing.cs/#L95">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_AuthConfigPing_Type_" data-uid="Pulumi.Rancher2.AuthConfigPing.Type*"></a>
+  <h4 id="Pulumi_Rancher2_AuthConfigPing_Type" data-uid="Pulumi.Rancher2.AuthConfigPing.Type">Type</h4>
+  <div class="markdown level1 summary"><p>(Computed) The type of the resource (string)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Type { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/AuthConfigPing.cs/#L101">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_AuthConfigPing_UidField_" data-uid="Pulumi.Rancher2.AuthConfigPing.UidField*"></a>
+  <h4 id="Pulumi_Rancher2_AuthConfigPing_UidField" data-uid="Pulumi.Rancher2.AuthConfigPing.UidField">UidField</h4>
+  <div class="markdown level1 summary"><p>Ping UID field (string)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; UidField { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/AuthConfigPing.cs/#L107">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_AuthConfigPing_UserNameField_" data-uid="Pulumi.Rancher2.AuthConfigPing.UserNameField*"></a>
+  <h4 id="Pulumi_Rancher2_AuthConfigPing_UserNameField" data-uid="Pulumi.Rancher2.AuthConfigPing.UserNameField">UserNameField</h4>
+  <div class="markdown level1 summary"><p>Ping user name field (string)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; UserNameField { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/AuthConfigPing.cs/#L148">View Source</a>
+  </span>
+  <a id="Pulumi_Rancher2_AuthConfigPing_Get_" data-uid="Pulumi.Rancher2.AuthConfigPing.Get*"></a>
+  <h4 id="Pulumi_Rancher2_AuthConfigPing_Get_System_String_Input_System_String__Pulumi_Rancher2_AuthConfigPingState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Rancher2.AuthConfigPing.Get(System.String,Input{System.String},Pulumi.Rancher2.AuthConfigPingState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, AuthConfigPingState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Get an existing AuthConfigPing resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AuthConfigPing Get(string name, Input&lt;string&gt; id, AuthConfigPingState state = null, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Rancher2.AuthConfigPingState.html">AuthConfigPingState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Rancher2.AuthConfigPing.html">AuthConfigPing</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-rancher2/blob/master/sdk/dotnet/AuthConfigPing.cs/#L18" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

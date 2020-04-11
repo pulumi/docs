@@ -972,8 +972,8 @@ type.</p>
 <dl class="method">
 <dt id="pulumi.Output.from_input">
 <em class="property">static </em><code class="sig-name descname">from_input</code><span class="sig-paren">(</span><em class="sig-param">val: Union[T, Awaitable[T], Output[T]]</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[~T][T]<a class="headerlink" href="#pulumi.Output.from_input" title="Permalink to this definition">¶</a></dt>
-<dd><p>Takes an Input value and produces an Output value from it, deeply unwrapping nested Input values as necessary
-given the type.</p>
+<dd><p>Takes an Input value and produces an Output value from it, deeply unwrapping nested Input values through nested
+lists and dicts.  Nested objects of other types (including Resources) are not deeply unwrapped.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>val</strong> (<em>Input</em><em>[</em><em>T</em><em>]</em>) – An Input to be converted to an Output.</p>
@@ -1057,7 +1057,7 @@ into one final string. This can be used like so:</p>
 sent directly to the Pulumi Engine and rendered with the rest of the CLI output.</p>
 <dl class="function">
 <dt id="pulumi.debug">
-<code class="sig-prename descclassname">pulumi.</code><code class="sig-name descname">debug</code><span class="sig-paren">(</span><em class="sig-param">msg: str</em>, <em class="sig-param">resource: Optional[Resource] = None</em>, <em class="sig-param">stream_id: Optional[int] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pulumi.debug" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi.</code><code class="sig-name descname">debug</code><span class="sig-paren">(</span><em class="sig-param">msg: str</em>, <em class="sig-param">resource: Optional[Resource] = None</em>, <em class="sig-param">stream_id: Optional[int] = None</em>, <em class="sig-param">ephemeral: Optional[bool] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pulumi.debug" title="Permalink to this definition">¶</a></dt>
 <dd><p>Logs a message to the Pulumi CLI’s debug channel, associating it with a resource
 and stream_id if provided.</p>
 <dl class="field-list simple">
@@ -1073,7 +1073,7 @@ and stream_id if provided.</p>
 
 <dl class="function">
 <dt id="pulumi.info">
-<code class="sig-prename descclassname">pulumi.</code><code class="sig-name descname">info</code><span class="sig-paren">(</span><em class="sig-param">msg: str</em>, <em class="sig-param">resource: Optional[Resource] = None</em>, <em class="sig-param">stream_id: Optional[int] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pulumi.info" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi.</code><code class="sig-name descname">info</code><span class="sig-paren">(</span><em class="sig-param">msg: str</em>, <em class="sig-param">resource: Optional[Resource] = None</em>, <em class="sig-param">stream_id: Optional[int] = None</em>, <em class="sig-param">ephemeral: Optional[bool] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pulumi.info" title="Permalink to this definition">¶</a></dt>
 <dd><p>Logs a message to the Pulumi CLI’s info channel, associating it with a resource
 and stream_id if provided.</p>
 <dl class="field-list simple">
@@ -1089,7 +1089,7 @@ and stream_id if provided.</p>
 
 <dl class="function">
 <dt id="pulumi.warn">
-<code class="sig-prename descclassname">pulumi.</code><code class="sig-name descname">warn</code><span class="sig-paren">(</span><em class="sig-param">msg: str</em>, <em class="sig-param">resource: Optional[Resource] = None</em>, <em class="sig-param">stream_id: Optional[int] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pulumi.warn" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi.</code><code class="sig-name descname">warn</code><span class="sig-paren">(</span><em class="sig-param">msg: str</em>, <em class="sig-param">resource: Optional[Resource] = None</em>, <em class="sig-param">stream_id: Optional[int] = None</em>, <em class="sig-param">ephemeral: Optional[bool] = None</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#pulumi.warn" title="Permalink to this definition">¶</a></dt>
 <dd><p>Logs a message to the Pulumi CLI’s warning channel, associating it with a resource
 and stream_id if provided.</p>
 <dl class="field-list simple">
@@ -1105,7 +1105,7 @@ and stream_id if provided.</p>
 
 <dl class="function">
 <dt id="pulumi.error">
-<code class="sig-prename descclassname">pulumi.</code><code class="sig-name descname">error</code><span class="sig-paren">(</span><em class="sig-param">msg: str</em>, <em class="sig-param">resource: Optional[Resource] = None</em>, <em class="sig-param">stream_id: Optional[int] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.error" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi.</code><code class="sig-name descname">error</code><span class="sig-paren">(</span><em class="sig-param">msg: str</em>, <em class="sig-param">resource: Optional[Resource] = None</em>, <em class="sig-param">stream_id: Optional[int] = None</em>, <em class="sig-param">ephemeral: Optional[bool] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi.error" title="Permalink to this definition">¶</a></dt>
 <dd><p>Logs a message to the Pulumi CLI’s error channel, associating it with a resource
 and stream_id if provided.</p>
 <dl class="field-list simple">

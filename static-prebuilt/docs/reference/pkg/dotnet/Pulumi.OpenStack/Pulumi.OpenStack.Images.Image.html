@@ -1,0 +1,923 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Image
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Image
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.OpenStack.Images.Image">
+  
+  <h1 id="Pulumi_OpenStack_Images_Image" data-uid="Pulumi.OpenStack.Images.Image" class="text-break">Class Image
+  </h1>
+  <div class="markdown level0 summary"><p>Manages a V2 Image resource within OpenStack Glance.</p>
+<h2 id="notes">Notes</h2>
+<h3 id="properties">Properties</h3>
+<p>This resource supports the ability to add properties to a resource during
+creation as well as add, update, and delete properties during an update of this
+resource.</p>
+<p>Newer versions of OpenStack are adding some read-only properties to each image.
+These properties start with the prefix <code>os_</code>. If these properties are detected,
+this resource will automatically reconcile these with the user-provided
+properties.</p>
+<p>In addition, the <code>direct_url</code> property is also automatically reconciled if the
+Image Service set it.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/images_image_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/images_image_v2.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Image</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.OpenStack.Images.html">Pulumi.OpenStack.Images</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.OpenStack.dll</h6>
+  <h5 id="Pulumi_OpenStack_Images_Image_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Image : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Images/Image.cs/#L208">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Images_Image__ctor_" data-uid="Pulumi.OpenStack.Images.Image.#ctor*"></a>
+  <h4 id="Pulumi_OpenStack_Images_Image__ctor_System_String_Pulumi_OpenStack_Images_ImageArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.OpenStack.Images.Image.#ctor(System.String,Pulumi.OpenStack.Images.ImageArgs,System.Nullable{CustomResourceOptions})">Image(String, ImageArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Create a Image resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Image(string name, ImageArgs args, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.OpenStack.Images.ImageArgs.html">ImageArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Images/Image.cs/#L37">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Images_Image_Checksum_" data-uid="Pulumi.OpenStack.Images.Image.Checksum*"></a>
+  <h4 id="Pulumi_OpenStack_Images_Image_Checksum" data-uid="Pulumi.OpenStack.Images.Image.Checksum">Checksum</h4>
+  <div class="markdown level1 summary"><p>The checksum of the data associated with the image.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Checksum { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Images/Image.cs/#L44">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Images_Image_ContainerFormat_" data-uid="Pulumi.OpenStack.Images.Image.ContainerFormat*"></a>
+  <h4 id="Pulumi_OpenStack_Images_Image_ContainerFormat" data-uid="Pulumi.OpenStack.Images.Image.ContainerFormat">ContainerFormat</h4>
+  <div class="markdown level1 summary"><p>The container format. Must be one of
+&quot;ami&quot;, &quot;ari&quot;, &quot;aki&quot;, &quot;bare&quot;, &quot;ovf&quot;.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ContainerFormat { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Images/Image.cs/#L50">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Images_Image_CreatedAt_" data-uid="Pulumi.OpenStack.Images.Image.CreatedAt*"></a>
+  <h4 id="Pulumi_OpenStack_Images_Image_CreatedAt" data-uid="Pulumi.OpenStack.Images.Image.CreatedAt">CreatedAt</h4>
+  <div class="markdown level1 summary"><p>The date the image was created.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; CreatedAt { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Images/Image.cs/#L57">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Images_Image_DiskFormat_" data-uid="Pulumi.OpenStack.Images.Image.DiskFormat*"></a>
+  <h4 id="Pulumi_OpenStack_Images_Image_DiskFormat" data-uid="Pulumi.OpenStack.Images.Image.DiskFormat">DiskFormat</h4>
+  <div class="markdown level1 summary"><p>The disk format. Must be one of
+&quot;ami&quot;, &quot;ari&quot;, &quot;aki&quot;, &quot;vhd&quot;, &quot;vmdk&quot;, &quot;raw&quot;, &quot;qcow2&quot;, &quot;vdi&quot;, &quot;iso&quot;.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; DiskFormat { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Images/Image.cs/#L65">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Images_Image_File_" data-uid="Pulumi.OpenStack.Images.Image.File*"></a>
+  <h4 id="Pulumi_OpenStack_Images_Image_File" data-uid="Pulumi.OpenStack.Images.Image.File">File</h4>
+  <div class="markdown level1 summary"><p>the trailing path after the glance
+endpoint that represent the location of the image
+or the path to retrieve it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; File { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Images/Image.cs/#L68">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Images_Image_ImageCachePath_" data-uid="Pulumi.OpenStack.Images.Image.ImageCachePath*"></a>
+  <h4 id="Pulumi_OpenStack_Images_Image_ImageCachePath" data-uid="Pulumi.OpenStack.Images.Image.ImageCachePath">ImageCachePath</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ImageCachePath { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Images/Image.cs/#L78">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Images_Image_ImageSourceUrl_" data-uid="Pulumi.OpenStack.Images.Image.ImageSourceUrl*"></a>
+  <h4 id="Pulumi_OpenStack_Images_Image_ImageSourceUrl" data-uid="Pulumi.OpenStack.Images.Image.ImageSourceUrl">ImageSourceUrl</h4>
+  <div class="markdown level1 summary"><p>This is the url of the raw image that will
+be downloaded in the <code>image_cache_path</code> before being uploaded to Glance.
+Glance is able to download image from internet but the <code>gophercloud</code> library
+does not yet provide a way to do so.
+Conflicts with <code>local_file_path</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ImageSourceUrl { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Images/Image.cs/#L85">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Images_Image_LocalFilePath_" data-uid="Pulumi.OpenStack.Images.Image.LocalFilePath*"></a>
+  <h4 id="Pulumi_OpenStack_Images_Image_LocalFilePath" data-uid="Pulumi.OpenStack.Images.Image.LocalFilePath">LocalFilePath</h4>
+  <div class="markdown level1 summary"><p>This is the filepath of the raw image file
+that will be uploaded to Glance. Conflicts with <code>image_source_url</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; LocalFilePath { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Images/Image.cs/#L93">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Images_Image_Metadata_" data-uid="Pulumi.OpenStack.Images.Image.Metadata*"></a>
+  <h4 id="Pulumi_OpenStack_Images_Image_Metadata" data-uid="Pulumi.OpenStack.Images.Image.Metadata">Metadata</h4>
+  <div class="markdown level1 summary"><p>The metadata associated with the image.
+Image metadata allow for meaningfully define the image properties
+and tags. See <a href="https://docs.openstack.org/glance/latest/user/metadefs-concepts.html">https://docs.openstack.org/glance/latest/user/metadefs-concepts.html</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Metadata { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Images/Image.cs/#L100">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Images_Image_MinDiskGb_" data-uid="Pulumi.OpenStack.Images.Image.MinDiskGb*"></a>
+  <h4 id="Pulumi_OpenStack_Images_Image_MinDiskGb" data-uid="Pulumi.OpenStack.Images.Image.MinDiskGb">MinDiskGb</h4>
+  <div class="markdown level1 summary"><p>Amount of disk space (in GB) required to boot image.
+Defaults to 0.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; MinDiskGb { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Images/Image.cs/#L107">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Images_Image_MinRamMb_" data-uid="Pulumi.OpenStack.Images.Image.MinRamMb*"></a>
+  <h4 id="Pulumi_OpenStack_Images_Image_MinRamMb" data-uid="Pulumi.OpenStack.Images.Image.MinRamMb">MinRamMb</h4>
+  <div class="markdown level1 summary"><p>Amount of ram (in MB) required to boot image.
+Defauts to 0.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; MinRamMb { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Images/Image.cs/#L113">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Images_Image_Name_" data-uid="Pulumi.OpenStack.Images.Image.Name*"></a>
+  <h4 id="Pulumi_OpenStack_Images_Image_Name" data-uid="Pulumi.OpenStack.Images.Image.Name">Name</h4>
+  <div class="markdown level1 summary"><p>The name of the image.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Images/Image.cs/#L119">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Images_Image_Owner_" data-uid="Pulumi.OpenStack.Images.Image.Owner*"></a>
+  <h4 id="Pulumi_OpenStack_Images_Image_Owner" data-uid="Pulumi.OpenStack.Images.Image.Owner">Owner</h4>
+  <div class="markdown level1 summary"><p>The id of the openstack user who owns the image.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Owner { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Images/Image.cs/#L127">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Images_Image_Properties_" data-uid="Pulumi.OpenStack.Images.Image.Properties*"></a>
+  <h4 id="Pulumi_OpenStack_Images_Image_Properties" data-uid="Pulumi.OpenStack.Images.Image.Properties">Properties</h4>
+  <div class="markdown level1 summary"><p>A map of key/value pairs to set freeform
+information about an image. See the &quot;Notes&quot; section for further
+information about properties.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;&gt; Properties { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Images/Image.cs/#L134">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Images_Image_Protected_" data-uid="Pulumi.OpenStack.Images.Image.Protected*"></a>
+  <h4 id="Pulumi_OpenStack_Images_Image_Protected" data-uid="Pulumi.OpenStack.Images.Image.Protected">Protected</h4>
+  <div class="markdown level1 summary"><p>If true, image will not be deletable.
+Defaults to false.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; Protected { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Images/Image.cs/#L143">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Images_Image_Region_" data-uid="Pulumi.OpenStack.Images.Image.Region*"></a>
+  <h4 id="Pulumi_OpenStack_Images_Image_Region" data-uid="Pulumi.OpenStack.Images.Image.Region">Region</h4>
+  <div class="markdown level1 summary"><p>The region in which to obtain the V2 Glance client.
+A Glance client is needed to create an Image that can be used with
+a compute instance. If omitted, the <code>region</code> argument of the provider
+is used. Changing this creates a new Image.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Region { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Images/Image.cs/#L150">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Images_Image_Schema_" data-uid="Pulumi.OpenStack.Images.Image.Schema*"></a>
+  <h4 id="Pulumi_OpenStack_Images_Image_Schema" data-uid="Pulumi.OpenStack.Images.Image.Schema">Schema</h4>
+  <div class="markdown level1 summary"><p>The path to the JSON-schema that represent
+the image or image</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Schema { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Images/Image.cs/#L156">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Images_Image_SizeBytes_" data-uid="Pulumi.OpenStack.Images.Image.SizeBytes*"></a>
+  <h4 id="Pulumi_OpenStack_Images_Image_SizeBytes" data-uid="Pulumi.OpenStack.Images.Image.SizeBytes">SizeBytes</h4>
+  <div class="markdown level1 summary"><p>The size in bytes of the data associated with the image.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int&gt; SizeBytes { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Images/Image.cs/#L163">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Images_Image_Status_" data-uid="Pulumi.OpenStack.Images.Image.Status*"></a>
+  <h4 id="Pulumi_OpenStack_Images_Image_Status" data-uid="Pulumi.OpenStack.Images.Image.Status">Status</h4>
+  <div class="markdown level1 summary"><p>The status of the image. It can be &quot;queued&quot;, &quot;active&quot;
+or &quot;saving&quot;.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Status { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Images/Image.cs/#L170">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Images_Image_Tags_" data-uid="Pulumi.OpenStack.Images.Image.Tags*"></a>
+  <h4 id="Pulumi_OpenStack_Images_Image_Tags" data-uid="Pulumi.OpenStack.Images.Image.Tags">Tags</h4>
+  <div class="markdown level1 summary"><p>The tags of the image. It must be a list of strings.
+At this time, it is not possible to delete all tags of an image.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; Tags { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Images/Image.cs/#L176">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Images_Image_UpdateAt_" data-uid="Pulumi.OpenStack.Images.Image.UpdateAt*"></a>
+  <h4 id="Pulumi_OpenStack_Images_Image_UpdateAt" data-uid="Pulumi.OpenStack.Images.Image.UpdateAt">UpdateAt</h4>
+  <div class="markdown level1 summary"><p>(<strong>Deprecated</strong> - use <code>updated_at</code> instead)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; UpdateAt { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Images/Image.cs/#L182">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Images_Image_UpdatedAt_" data-uid="Pulumi.OpenStack.Images.Image.UpdatedAt*"></a>
+  <h4 id="Pulumi_OpenStack_Images_Image_UpdatedAt" data-uid="Pulumi.OpenStack.Images.Image.UpdatedAt">UpdatedAt</h4>
+  <div class="markdown level1 summary"><p>The date the image was last updated.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; UpdatedAt { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Images/Image.cs/#L189">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Images_Image_VerifyChecksum_" data-uid="Pulumi.OpenStack.Images.Image.VerifyChecksum*"></a>
+  <h4 id="Pulumi_OpenStack_Images_Image_VerifyChecksum" data-uid="Pulumi.OpenStack.Images.Image.VerifyChecksum">VerifyChecksum</h4>
+  <div class="markdown level1 summary"><p>If false, the checksum will not be verified
+once the image is finished uploading. Defaults to true.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; VerifyChecksum { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Images/Image.cs/#L197">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Images_Image_Visibility_" data-uid="Pulumi.OpenStack.Images.Image.Visibility*"></a>
+  <h4 id="Pulumi_OpenStack_Images_Image_Visibility" data-uid="Pulumi.OpenStack.Images.Image.Visibility">Visibility</h4>
+  <div class="markdown level1 summary"><p>The visibility of the image. Must be one of
+&quot;public&quot;, &quot;private&quot;, &quot;community&quot;, or &quot;shared&quot;. The ability to set the
+visibility depends upon the configuration of the OpenStack cloud.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Visibility { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Images/Image.cs/#L238">View Source</a>
+  </span>
+  <a id="Pulumi_OpenStack_Images_Image_Get_" data-uid="Pulumi.OpenStack.Images.Image.Get*"></a>
+  <h4 id="Pulumi_OpenStack_Images_Image_Get_System_String_Input_System_String__Pulumi_OpenStack_Images_ImageState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.OpenStack.Images.Image.Get(System.String,Input{System.String},Pulumi.OpenStack.Images.ImageState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, ImageState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Get an existing Image resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Image Get(string name, Input&lt;string&gt; id, ImageState state = null, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.OpenStack.Images.ImageState.html">ImageState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.OpenStack.Images.Image.html">Image</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-openstack/blob/master/sdk/dotnet/Images/Image.cs/#L32" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -19,6 +19,9 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>Provides a Cloudflare Access Application resource. Access Applications
 are used to restrict access to a whole application using an
 authorisation gateway managed by Cloudflare.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/access_application.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/access_application.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -33,9 +36,6 @@ re-authorise. Must be one of <code class="docutils literal notranslate"><span cl
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/access_application.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/access_application.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_cloudflare.AccessApplication.aud">
 <code class="sig-name descname">aud</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.AccessApplication.aud" title="Permalink to this definition">¶</a></dt>
@@ -89,9 +89,6 @@ re-authorise. Must be one of <code class="docutils literal notranslate"><span cl
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/access_application.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/access_application.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -140,16 +137,84 @@ in conjunction with Access Policies to restrict access to a
 particular resource based on group membership.</p>
 <p><code class="docutils literal notranslate"><span class="pre">require</span></code>, <code class="docutils literal notranslate"><span class="pre">exclude</span></code> and <code class="docutils literal notranslate"><span class="pre">include</span></code> arguments share the available
 conditions which can be applied. The conditions are:</p>
-<ul class="simple">
+<ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">ip</span></code> - (Optional) A list of IP addresses or ranges. Example:
 <code class="docutils literal notranslate"><span class="pre">ip</span> <span class="pre">=</span> <span class="pre">[&quot;1.2.3.4&quot;,</span> <span class="pre">&quot;10.0.0.0/2&quot;]</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">email</span></code> - (Optional) A list of email addresses. Example:
 <code class="docutils literal notranslate"><span class="pre">email</span> <span class="pre">=</span> <span class="pre">[&quot;test&#64;example.com&quot;]</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">email_domain</span></code> - (Optional) A list of email domains. Example:
 <code class="docutils literal notranslate"><span class="pre">email_domain</span> <span class="pre">=</span> <span class="pre">[&quot;example.com&quot;]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">service_token</span></code> - (Optional) A list of service token ids. Example:
+<code class="docutils literal notranslate"><span class="pre">service_token</span> <span class="pre">=</span> <span class="pre">cloudflare_access_service_token.demo.id</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">any_valid_service_token</span></code> - (Optional) Boolean indicating if allow
+all tokens to be granted. Example: <code class="docutils literal notranslate"><span class="pre">any_valid_service_token</span> <span class="pre">=</span> <span class="pre">true</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">group</span></code> - (Optional) A list of access group ids. Example:
+<code class="docutils literal notranslate"><span class="pre">group</span> <span class="pre">=</span> <span class="pre">[cloudflare_access_group.demo.id]</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">everyone</span></code> - (Optional) Boolean indicating permitting access for all
 requests. Example: <code class="docutils literal notranslate"><span class="pre">everyone</span> <span class="pre">=</span> <span class="pre">true</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificate</span></code> - (Optional) Whether to use mTLS certificate authentication.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">common_name</span></code> - (Optional) Use a certificate common name to authenticate with.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gsuite</span></code> - (Optional) Use GSuite as the authentication mechanism. Example:</p>
+<div class="highlight-hcl notranslate"><div class="highlight"><pre><span></span># ... other configuration
+include {
+  gsuite {
+    email = &quot;admins@example.com&quot;
+    identity_provider_id = &quot;ca298b82-93b5-41bf-bc2d-10493f09b761&quot;
+  }
+}
+</pre></div>
+</div>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">github</span></code> - (Optional) Use a GitHub team as the <code class="docutils literal notranslate"><span class="pre">include</span></code> condition. Example:</p>
+<div class="highlight-hcl notranslate"><div class="highlight"><pre><span></span># ... other configuration
+include {
+  github {
+    name = &quot;my-github-team-name&quot;
+    identity_provider_id = &quot;ca298b82-93b5-41bf-bc2d-10493f09b761&quot;
+  }
+}
+</pre></div>
+</div>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">azure</span></code> - (Optional) Use Azure AD as the <code class="docutils literal notranslate"><span class="pre">include</span></code> condition. Example:</p>
+<div class="highlight-hcl notranslate"><div class="highlight"><pre><span></span># ... other configuration
+include {
+  azure {
+    id = &quot;86773093-5feb-48dd-814b-7ccd3676ff50e&quot;
+    identity_provider_id = &quot;ca298b82-93b5-41bf-bc2d-10493f09b761&quot;
+  }
+}
+</pre></div>
+</div>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">okta</span></code> - (Optional) Use Okta as the <code class="docutils literal notranslate"><span class="pre">include</span></code> condition. Example:</p>
+<div class="highlight-hcl notranslate"><div class="highlight"><pre><span></span># ... other configuration
+include {
+  okta {
+    name = &quot;admins&quot;
+    identity_provider_id = &quot;ca298b82-93b5-41bf-bc2d-10493f09b761&quot;
+  }
+}
+</pre></div>
+</div>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">saml</span></code> - (Optional) Use an external SAML setup as the <code class="docutils literal notranslate"><span class="pre">include</span></code> condition.
+Example:</p>
+<div class="highlight-hcl notranslate"><div class="highlight"><pre><span></span># ... other configuration
+include {
+  saml {
+    attribute_name = &quot;group&quot;
+    attribute_value = &quot;admins&quot;
+    identity_provider_id = &quot;ca298b82-93b5-41bf-bc2d-10493f09b761&quot;
+  }
+}
+</pre></div>
+</div>
+</li>
 </ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/access_group.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/access_group.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -169,31 +234,28 @@ full list.</p></li>
 </dl>
 <p>The <strong>excludes</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">emails</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">emailDomains</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">emails</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">everyone</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">groups</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ips</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 </ul>
 <p>The <strong>includes</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">emails</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">emailDomains</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">emails</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">everyone</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">groups</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ips</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 </ul>
 <p>The <strong>requires</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">emails</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">emailDomains</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">emails</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">everyone</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">groups</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ips</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/access_group.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/access_group.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_cloudflare.AccessGroup.account_id">
 <code class="sig-name descname">account_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.AccessGroup.account_id" title="Permalink to this definition">¶</a></dt>
@@ -207,8 +269,8 @@ associated with.</p>
 <dd><p>A series of access conditions, see below for
 full list.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">emails</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">emailDomains</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">emails</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">everyone</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">groups</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ips</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
@@ -221,8 +283,8 @@ full list.</p>
 <dd><p>A series of access conditions, see below for
 full list.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">emails</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">emailDomains</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">emails</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">everyone</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">groups</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ips</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
@@ -241,8 +303,8 @@ full list.</p>
 <dd><p>A series of access conditions, see below for
 full list.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">emails</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">emailDomains</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">emails</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">everyone</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">groups</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ips</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
@@ -274,31 +336,28 @@ full list.</p></li>
 </dl>
 <p>The <strong>excludes</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">emails</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">emailDomains</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">emails</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">everyone</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">groups</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ips</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 </ul>
 <p>The <strong>includes</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">emails</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">emailDomains</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">emails</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">everyone</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">groups</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ips</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 </ul>
 <p>The <strong>requires</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">emails</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">emailDomains</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">emails</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">everyone</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">groups</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ips</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/access_group.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/access_group.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -344,6 +403,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">AccessIdentityProvider</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">account_id=None</em>, <em class="sig-param">configs=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.AccessIdentityProvider" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Cloudflare Access Identity Provider resource. Identity Providers are
 used as an authentication or authorisation source within Access.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/access_identity_provider.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/access_identity_provider.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -379,9 +441,6 @@ used as an authentication or authorisation source within Access.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">supportGroups</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">tokenUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/access_identity_provider.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/access_identity_provider.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_cloudflare.AccessIdentityProvider.configs">
 <code class="sig-name descname">configs</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.AccessIdentityProvider.configs" title="Permalink to this definition">¶</a></dt>
@@ -464,9 +523,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">supportGroups</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">tokenUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/access_identity_provider.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/access_identity_provider.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -513,18 +569,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Provides a Cloudflare Access Policy resource. Access Policies are used
 in conjunction with Access Applications to restrict access to a
 particular resource.</p>
-<p><code class="docutils literal notranslate"><span class="pre">require</span></code>, <code class="docutils literal notranslate"><span class="pre">exclude</span></code> and <code class="docutils literal notranslate"><span class="pre">include</span></code> arguments share the available
-conditions which can be applied. The conditions are:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">ip</span></code> - (Optional) A list of IP addresses or ranges. Example:
-<code class="docutils literal notranslate"><span class="pre">ip</span> <span class="pre">=</span> <span class="pre">[&quot;1.2.3.4&quot;,</span> <span class="pre">&quot;10.0.0.0/2&quot;]</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">email</span></code> - (Optional) A list of email addresses. Example:
-<code class="docutils literal notranslate"><span class="pre">email</span> <span class="pre">=</span> <span class="pre">[&quot;test&#64;example.com&quot;]</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">email_domain</span></code> - (Optional) A list of email domains. Example:
-<code class="docutils literal notranslate"><span class="pre">email_domain</span> <span class="pre">=</span> <span class="pre">[&quot;example.com&quot;]</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">everyone</span></code> - (Optional) Boolean indicating permitting access for all
-requests. Example: <code class="docutils literal notranslate"><span class="pre">everyone</span> <span class="pre">=</span> <span class="pre">true</span></code></p></li>
-</ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/access_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/access_policy.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -533,15 +580,14 @@ requests. Example: <code class="docutils literal notranslate"><span class="pre">
 <li><p><strong>application_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the application the policy is
 associated with.</p></li>
 <li><p><strong>decision</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Defines the action Access will take if the policy matches the user.
-Allowed values: <code class="docutils literal notranslate"><span class="pre">allow</span></code>, <code class="docutils literal notranslate"><span class="pre">deny</span></code>, <code class="docutils literal notranslate"><span class="pre">bypass</span></code></p></li>
-<li><p><strong>excludes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A series of access conditions, see below for
-full list.</p></li>
-<li><p><strong>includes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A series of access conditions, see below for
-full list.</p></li>
+Allowed values: <code class="docutils literal notranslate"><span class="pre">allow</span></code>, <code class="docutils literal notranslate"><span class="pre">deny</span></code>, <code class="docutils literal notranslate"><span class="pre">non_identity</span></code>, <code class="docutils literal notranslate"><span class="pre">bypass</span></code></p></li>
+<li><p><strong>excludes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A series of access conditions, see <a class="reference external" href="https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions">Access Groups</a>.</p></li>
+<li><p><strong>includes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>A series of access conditions, see <a class="reference external" href="https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions">Access Groups</a>.</p>
+</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Friendly name of the Access Application.</p></li>
 <li><p><strong>precedence</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The unique precedence for policies on a single application. Integer.</p></li>
-<li><p><strong>requires</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A series of access conditions, see below for
-full list.</p></li>
+<li><p><strong>requires</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>A series of access conditions, see <a class="reference external" href="https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions">Access Groups</a>.</p>
+</p></li>
 <li><p><strong>zone_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DNS zone to which the access rule should be
 added.</p></li>
 </ul>
@@ -549,28 +595,133 @@ added.</p></li>
 </dl>
 <p>The <strong>excludes</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">emails</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">anyValidServiceToken</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">azures</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">identityProviderId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">commonName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">emailDomains</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">emails</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">everyone</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">githubs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">identityProviderId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Friendly name of the Access Application.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">groups</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gsuites</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">email</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">identityProviderId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ips</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">oktas</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">identityProviderId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Friendly name of the Access Application.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">samls</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">attributeName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">attributeValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">identityProviderId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serviceTokens</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 </ul>
 <p>The <strong>includes</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">emails</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">anyValidServiceToken</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">azures</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">identityProviderId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">commonName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">emailDomains</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">emails</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">everyone</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">githubs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">identityProviderId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Friendly name of the Access Application.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">groups</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gsuites</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">email</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">identityProviderId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ips</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">oktas</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">identityProviderId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Friendly name of the Access Application.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">samls</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">attributeName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">attributeValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">identityProviderId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serviceTokens</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 </ul>
 <p>The <strong>requires</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">emails</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">emailDomains</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">everyone</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ips</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">anyValidServiceToken</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">azures</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">identityProviderId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/access_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/access_policy.html.markdown</a>.</p>
-</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">commonName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">emailDomains</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">emails</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">everyone</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">githubs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">identityProviderId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Friendly name of the Access Application.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">groups</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gsuites</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">email</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">identityProviderId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ips</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">oktas</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">identityProviderId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Friendly name of the Access Application.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">samls</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">attributeName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">attributeValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">identityProviderId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serviceTokens</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+</ul>
 <dl class="attribute">
 <dt id="pulumi_cloudflare.AccessPolicy.application_id">
 <code class="sig-name descname">application_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.AccessPolicy.application_id" title="Permalink to this definition">¶</a></dt>
@@ -582,32 +733,102 @@ associated with.</p>
 <dt id="pulumi_cloudflare.AccessPolicy.decision">
 <code class="sig-name descname">decision</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.AccessPolicy.decision" title="Permalink to this definition">¶</a></dt>
 <dd><p>Defines the action Access will take if the policy matches the user.
-Allowed values: <code class="docutils literal notranslate"><span class="pre">allow</span></code>, <code class="docutils literal notranslate"><span class="pre">deny</span></code>, <code class="docutils literal notranslate"><span class="pre">bypass</span></code></p>
+Allowed values: <code class="docutils literal notranslate"><span class="pre">allow</span></code>, <code class="docutils literal notranslate"><span class="pre">deny</span></code>, <code class="docutils literal notranslate"><span class="pre">non_identity</span></code>, <code class="docutils literal notranslate"><span class="pre">bypass</span></code></p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_cloudflare.AccessPolicy.excludes">
 <code class="sig-name descname">excludes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.AccessPolicy.excludes" title="Permalink to this definition">¶</a></dt>
-<dd><p>A series of access conditions, see below for
-full list.</p>
+<dd><p>A series of access conditions, see <a class="reference external" href="https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions">Access Groups</a>.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">emails</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">anyValidServiceToken</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">azures</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">identityProviderId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificate</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">commonName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">emailDomains</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">emails</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">everyone</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">githubs</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">identityProviderId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Friendly name of the Access Application.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">groups</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gsuites</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">email</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">identityProviderId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ips</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">oktas</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">identityProviderId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Friendly name of the Access Application.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">samls</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">attributeName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">attributeValue</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">identityProviderId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serviceTokens</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
 </ul>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_cloudflare.AccessPolicy.includes">
 <code class="sig-name descname">includes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.AccessPolicy.includes" title="Permalink to this definition">¶</a></dt>
-<dd><p>A series of access conditions, see below for
-full list.</p>
+<dd><p>A series of access conditions, see <a class="reference external" href="https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions">Access Groups</a>.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">emails</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">anyValidServiceToken</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">azures</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">identityProviderId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificate</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">commonName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">emailDomains</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">emails</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">everyone</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">githubs</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">identityProviderId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Friendly name of the Access Application.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">groups</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gsuites</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">email</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">identityProviderId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ips</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">oktas</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">identityProviderId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Friendly name of the Access Application.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">samls</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">attributeName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">attributeValue</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">identityProviderId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serviceTokens</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
 </ul>
 </dd></dl>
 
@@ -626,13 +847,48 @@ full list.</p>
 <dl class="attribute">
 <dt id="pulumi_cloudflare.AccessPolicy.requires">
 <code class="sig-name descname">requires</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.AccessPolicy.requires" title="Permalink to this definition">¶</a></dt>
-<dd><p>A series of access conditions, see below for
-full list.</p>
+<dd><p>A series of access conditions, see <a class="reference external" href="https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions">Access Groups</a>.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">emails</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">anyValidServiceToken</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">azures</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">identityProviderId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificate</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">commonName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">emailDomains</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">emails</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">everyone</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">githubs</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">identityProviderId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Friendly name of the Access Application.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">groups</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gsuites</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">email</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">identityProviderId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ips</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">oktas</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">identityProviderId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Friendly name of the Access Application.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">samls</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">attributeName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">attributeValue</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">identityProviderId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serviceTokens</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
 </ul>
 </dd></dl>
 
@@ -657,15 +913,15 @@ properties used to qualify the lookup.</p>
 <li><p><strong>application_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the application the policy is
 associated with.</p></li>
 <li><p><strong>decision</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Defines the action Access will take if the policy matches the user.
-Allowed values: <code class="docutils literal notranslate"><span class="pre">allow</span></code>, <code class="docutils literal notranslate"><span class="pre">deny</span></code>, <code class="docutils literal notranslate"><span class="pre">bypass</span></code></p></li>
-<li><p><strong>excludes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A series of access conditions, see below for
-full list.</p></li>
-<li><p><strong>includes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A series of access conditions, see below for
-full list.</p></li>
+Allowed values: <code class="docutils literal notranslate"><span class="pre">allow</span></code>, <code class="docutils literal notranslate"><span class="pre">deny</span></code>, <code class="docutils literal notranslate"><span class="pre">non_identity</span></code>, <code class="docutils literal notranslate"><span class="pre">bypass</span></code></p></li>
+<li><p><strong>excludes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>A series of access conditions, see <a class="reference external" href="https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions">Access Groups</a>.</p>
+</p></li>
+<li><p><strong>includes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>A series of access conditions, see <a class="reference external" href="https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions">Access Groups</a>.</p>
+</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Friendly name of the Access Application.</p></li>
 <li><p><strong>precedence</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The unique precedence for policies on a single application. Integer.</p></li>
-<li><p><strong>requires</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A series of access conditions, see below for
-full list.</p></li>
+<li><p><strong>requires</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>A series of access conditions, see <a class="reference external" href="https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions">Access Groups</a>.</p>
+</p></li>
 <li><p><strong>zone_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DNS zone to which the access rule should be
 added.</p></li>
 </ul>
@@ -673,28 +929,133 @@ added.</p></li>
 </dl>
 <p>The <strong>excludes</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">emails</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">anyValidServiceToken</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">azures</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">identityProviderId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">commonName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">emailDomains</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">emails</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">everyone</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">githubs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">identityProviderId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Friendly name of the Access Application.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">groups</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gsuites</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">email</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">identityProviderId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ips</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">oktas</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">identityProviderId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Friendly name of the Access Application.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">samls</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">attributeName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">attributeValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">identityProviderId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serviceTokens</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 </ul>
 <p>The <strong>includes</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">emails</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">anyValidServiceToken</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">azures</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">identityProviderId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">commonName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">emailDomains</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">emails</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">everyone</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">githubs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">identityProviderId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Friendly name of the Access Application.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">groups</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gsuites</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">email</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">identityProviderId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ips</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">oktas</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">identityProviderId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Friendly name of the Access Application.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">samls</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">attributeName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">attributeValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">identityProviderId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serviceTokens</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
 </ul>
 <p>The <strong>requires</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">emails</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">emailDomains</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">everyone</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ips</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">anyValidServiceToken</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">azures</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">identityProviderId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/access_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/access_policy.html.markdown</a>.</p>
-</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">commonName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">emailDomains</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">emails</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">everyone</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">githubs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">identityProviderId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Friendly name of the Access Application.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">groups</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gsuites</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">email</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">identityProviderId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ips</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">oktas</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">identityProviderId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Friendly name of the Access Application.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">samls</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">attributeName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">attributeValue</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">identityProviderId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serviceTokens</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="method">
@@ -739,6 +1100,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_cloudflare.AccessRule">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">AccessRule</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">configuration=None</em>, <em class="sig-param">mode=None</em>, <em class="sig-param">notes=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.AccessRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Cloudflare IP Firewall Access Rule resource. Access control can be applied on basis of IP addresses, IP ranges, AS numbers or countries.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/access_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/access_rule.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -756,9 +1120,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">target</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The request property to target. Allowed values: “ip”, “ip6”, “ip_range”, “asn”, “country”</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value to target. Depends on target’s type.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/access_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/access_rule.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_cloudflare.AccessRule.configuration">
 <code class="sig-name descname">configuration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.AccessRule.configuration" title="Permalink to this definition">¶</a></dt>
@@ -810,9 +1171,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">target</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The request property to target. Allowed values: “ip”, “ip6”, “ip_range”, “asn”, “country”</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value to target. Depends on target’s type.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/access_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/access_rule.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -858,6 +1216,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">AccessServiceToken</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">account_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.AccessServiceToken" title="Permalink to this definition">¶</a></dt>
 <dd><p>Access Service Tokens are used for service-to-service communication
 when an application is behind Cloudflare Access.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/access_service_token.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/access_service_token.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -869,9 +1230,6 @@ Service is being created.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/access_service_token.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/access_service_token.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_cloudflare.AccessServiceToken.account_id">
 <code class="sig-name descname">account_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.AccessServiceToken.account_id" title="Permalink to this definition">¶</a></dt>
@@ -916,9 +1274,6 @@ Service is being created.</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/access_service_token.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/access_service_token.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -963,6 +1318,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_cloudflare.AccountMember">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">AccountMember</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">email_address=None</em>, <em class="sig-param">role_ids=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.AccountMember" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource which manages Cloudflare account members.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/account_member.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/account_member.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -973,9 +1331,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/account_member.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/account_member.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_cloudflare.AccountMember.email_address">
 <code class="sig-name descname">email_address</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.AccountMember.email_address" title="Permalink to this definition">¶</a></dt>
@@ -1004,9 +1359,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/account_member.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/account_member.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1051,6 +1403,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_cloudflare.Argo">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">Argo</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">smart_routing=None</em>, <em class="sig-param">tiered_caching=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.Argo" title="Permalink to this definition">¶</a></dt>
 <dd><p>Cloudflare Argo controls the routing to your origin and tiered caching options to speed up your website browsing experience.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/argo.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/argo.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1062,9 +1417,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/argo.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/argo.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_cloudflare.Argo.smart_routing">
 <code class="sig-name descname">smart_routing</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.Argo.smart_routing" title="Permalink to this definition">¶</a></dt>
@@ -1100,9 +1452,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/argo.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/argo.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1145,33 +1494,36 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_cloudflare.AwaitableGetIpRangesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">AwaitableGetIpRangesResult</code><span class="sig-paren">(</span><em class="sig-param">cidr_blocks=None</em>, <em class="sig-param">ipv4_cidr_blocks=None</em>, <em class="sig-param">ipv6_cidr_blocks=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.AwaitableGetIpRangesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">AwaitableGetIpRangesResult</code><span class="sig-paren">(</span><em class="sig-param">cidr_blocks=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ipv4_cidr_blocks=None</em>, <em class="sig-param">ipv6_cidr_blocks=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.AwaitableGetIpRangesResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_cloudflare.AwaitableGetWafGroupsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">AwaitableGetWafGroupsResult</code><span class="sig-paren">(</span><em class="sig-param">filter=None</em>, <em class="sig-param">groups=None</em>, <em class="sig-param">package_id=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.AwaitableGetWafGroupsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">AwaitableGetWafGroupsResult</code><span class="sig-paren">(</span><em class="sig-param">filter=None</em>, <em class="sig-param">groups=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">package_id=None</em>, <em class="sig-param">zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.AwaitableGetWafGroupsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_cloudflare.AwaitableGetWafPackagesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">AwaitableGetWafPackagesResult</code><span class="sig-paren">(</span><em class="sig-param">filter=None</em>, <em class="sig-param">packages=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.AwaitableGetWafPackagesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">AwaitableGetWafPackagesResult</code><span class="sig-paren">(</span><em class="sig-param">filter=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">packages=None</em>, <em class="sig-param">zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.AwaitableGetWafPackagesResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_cloudflare.AwaitableGetWafRulesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">AwaitableGetWafRulesResult</code><span class="sig-paren">(</span><em class="sig-param">filter=None</em>, <em class="sig-param">package_id=None</em>, <em class="sig-param">rules=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.AwaitableGetWafRulesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">AwaitableGetWafRulesResult</code><span class="sig-paren">(</span><em class="sig-param">filter=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">package_id=None</em>, <em class="sig-param">rules=None</em>, <em class="sig-param">zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.AwaitableGetWafRulesResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_cloudflare.AwaitableGetZonesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">AwaitableGetZonesResult</code><span class="sig-paren">(</span><em class="sig-param">filter=None</em>, <em class="sig-param">zones=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.AwaitableGetZonesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">AwaitableGetZonesResult</code><span class="sig-paren">(</span><em class="sig-param">filter=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">zones=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.AwaitableGetZonesResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_cloudflare.CustomPages">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">CustomPages</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">account_id=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">url=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.CustomPages" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource which manages Cloudflare custom error pages.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/custom_pages.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/custom_pages.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1190,9 +1542,6 @@ updated. Either <code class="docutils literal notranslate"><span class="pre">zon
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/custom_pages.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/custom_pages.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_cloudflare.CustomPages.account_id">
 <code class="sig-name descname">account_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.CustomPages.account_id" title="Permalink to this definition">¶</a></dt>
@@ -1247,9 +1596,6 @@ updated. Either <code class="docutils literal notranslate"><span class="pre">zon
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/custom_pages.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/custom_pages.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1294,6 +1640,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_cloudflare.CustomSsl">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">CustomSsl</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">custom_ssl_options=None</em>, <em class="sig-param">custom_ssl_priorities=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.CustomSsl" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Cloudflare custom ssl resource.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/custom_ssl.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/custom_ssl.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1317,9 +1666,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">priority</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/custom_ssl.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/custom_ssl.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_cloudflare.CustomSsl.custom_ssl_options">
 <code class="sig-name descname">custom_ssl_options</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.CustomSsl.custom_ssl_options" title="Permalink to this definition">¶</a></dt>
@@ -1368,9 +1714,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">priority</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/custom_ssl.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/custom_ssl.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1415,6 +1758,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_cloudflare.Filter">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">Filter</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">expression=None</em>, <em class="sig-param">paused=None</em>, <em class="sig-param">ref=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.Filter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Filter expressions that can be referenced across multiple features, e.g. Firewall Rule. The expression format is similar to <a class="reference external" href="https://www.wireshark.org/docs/man-pages/wireshark-filter.html">Wireshark Display Filter</a>.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/filter.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/filter.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1428,9 +1774,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/filter.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/filter.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_cloudflare.Filter.description">
 <code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.Filter.description" title="Permalink to this definition">¶</a></dt>
@@ -1480,9 +1823,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/filter.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/filter.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1529,6 +1869,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Define Firewall rules using filter expressions for more control over how traffic is matched to the rule.
 A filter expression permits selecting traffic by multiple criteria allowing greater freedom in rule creation.</p>
 <p>Filter expressions needs to be created first before using Firewall Rule. See Filter.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/firewall_rule.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/firewall_rule.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1543,9 +1886,6 @@ A filter expression permits selecting traffic by multiple criteria allowing grea
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/firewall_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/firewall_rule.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_cloudflare.FirewallRule.action">
 <code class="sig-name descname">action</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.FirewallRule.action" title="Permalink to this definition">¶</a></dt>
@@ -1602,9 +1942,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/firewall_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/firewall_rule.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1647,7 +1984,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_cloudflare.GetIpRangesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">GetIpRangesResult</code><span class="sig-paren">(</span><em class="sig-param">cidr_blocks=None</em>, <em class="sig-param">ipv4_cidr_blocks=None</em>, <em class="sig-param">ipv6_cidr_blocks=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.GetIpRangesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">GetIpRangesResult</code><span class="sig-paren">(</span><em class="sig-param">cidr_blocks=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ipv4_cidr_blocks=None</em>, <em class="sig-param">ipv6_cidr_blocks=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.GetIpRangesResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getIpRanges.</p>
 <dl class="attribute">
 <dt id="pulumi_cloudflare.GetIpRangesResult.id">
@@ -1659,7 +1996,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_cloudflare.GetWafGroupsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">GetWafGroupsResult</code><span class="sig-paren">(</span><em class="sig-param">filter=None</em>, <em class="sig-param">groups=None</em>, <em class="sig-param">package_id=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.GetWafGroupsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">GetWafGroupsResult</code><span class="sig-paren">(</span><em class="sig-param">filter=None</em>, <em class="sig-param">groups=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">package_id=None</em>, <em class="sig-param">zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.GetWafGroupsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getWafGroups.</p>
 <dl class="attribute">
 <dt id="pulumi_cloudflare.GetWafGroupsResult.id">
@@ -1671,7 +2008,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_cloudflare.GetWafPackagesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">GetWafPackagesResult</code><span class="sig-paren">(</span><em class="sig-param">filter=None</em>, <em class="sig-param">packages=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.GetWafPackagesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">GetWafPackagesResult</code><span class="sig-paren">(</span><em class="sig-param">filter=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">packages=None</em>, <em class="sig-param">zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.GetWafPackagesResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getWafPackages.</p>
 <dl class="attribute">
 <dt id="pulumi_cloudflare.GetWafPackagesResult.id">
@@ -1683,7 +2020,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_cloudflare.GetWafRulesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">GetWafRulesResult</code><span class="sig-paren">(</span><em class="sig-param">filter=None</em>, <em class="sig-param">package_id=None</em>, <em class="sig-param">rules=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.GetWafRulesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">GetWafRulesResult</code><span class="sig-paren">(</span><em class="sig-param">filter=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">package_id=None</em>, <em class="sig-param">rules=None</em>, <em class="sig-param">zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.GetWafRulesResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getWafRules.</p>
 <dl class="attribute">
 <dt id="pulumi_cloudflare.GetWafRulesResult.id">
@@ -1695,7 +2032,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_cloudflare.GetZonesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">GetZonesResult</code><span class="sig-paren">(</span><em class="sig-param">filter=None</em>, <em class="sig-param">zones=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.GetZonesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">GetZonesResult</code><span class="sig-paren">(</span><em class="sig-param">filter=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">zones=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.GetZonesResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getZones.</p>
 <dl class="attribute">
 <dt id="pulumi_cloudflare.GetZonesResult.id">
@@ -1708,7 +2045,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_cloudflare.LoadBalancer">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">LoadBalancer</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">default_pool_ids=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">fallback_pool_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">pop_pools=None</em>, <em class="sig-param">proxied=None</em>, <em class="sig-param">region_pools=None</em>, <em class="sig-param">session_affinity=None</em>, <em class="sig-param">steering_policy=None</em>, <em class="sig-param">ttl=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.LoadBalancer" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a Cloudflare Load Balancer resource. This sits in front of a number of defined pools of origins and provides various options for geographically-aware load balancing. Note that the load balancing feature must be enabled in your Clouflare account before you can use this resource.</p>
+<dd><p>Provides a Cloudflare Load Balancer resource. This sits in front of a number of defined pools of origins and provides various options for geographically-aware load balancing. Note that the load balancing feature must be enabled in your Cloudflare account before you can use this resource.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/load_balancer.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/load_balancer.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1739,9 +2079,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">poolIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of pool IDs in failover priority to use for traffic reaching the given PoP.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">region</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A region code which must be in the list defined <a class="reference external" href="https://support.cloudflare.com/hc/en-us/articles/115000540888-Load-Balancing-Geographic-Regions">here</a>. Multiple entries should not be specified with the same region.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/load_balancer.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/load_balancer.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_cloudflare.LoadBalancer.created_on">
 <code class="sig-name descname">created_on</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.LoadBalancer.created_on" title="Permalink to this definition">¶</a></dt>
@@ -1872,9 +2209,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">poolIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of pool IDs in failover priority to use for traffic reaching the given PoP.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">region</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A region code which must be in the list defined <a class="reference external" href="https://support.cloudflare.com/hc/en-us/articles/115000540888-Load-Balancing-Geographic-Regions">here</a>. Multiple entries should not be specified with the same region.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/load_balancer.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/load_balancer.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1919,6 +2253,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_cloudflare.LoadBalancerMonitor">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">LoadBalancerMonitor</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allow_insecure=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">expected_body=None</em>, <em class="sig-param">expected_codes=None</em>, <em class="sig-param">follow_redirects=None</em>, <em class="sig-param">headers=None</em>, <em class="sig-param">interval=None</em>, <em class="sig-param">method=None</em>, <em class="sig-param">path=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">retries=None</em>, <em class="sig-param">timeout=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.LoadBalancerMonitor" title="Permalink to this definition">¶</a></dt>
 <dd><p>If you’re using Cloudflare’s Load Balancing to load-balance across multiple origin servers or data centers, you configure one of these Monitors to actively check the availability of those servers over HTTP(S) or TCP.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/load_balancer_monitor.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/load_balancer_monitor.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1944,9 +2281,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">header</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The header name.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of string values for the header.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/load_balancer_monitor.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/load_balancer_monitor.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_cloudflare.LoadBalancerMonitor.allow_insecure">
 <code class="sig-name descname">allow_insecure</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.LoadBalancerMonitor.allow_insecure" title="Permalink to this definition">¶</a></dt>
@@ -2068,9 +2402,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">header</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The header name.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">values</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of string values for the header.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/load_balancer_monitor.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/load_balancer_monitor.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -2114,7 +2445,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_cloudflare.LoadBalancerPool">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">LoadBalancerPool</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">check_regions=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">minimum_origins=None</em>, <em class="sig-param">monitor=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">notification_email=None</em>, <em class="sig-param">origins=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.LoadBalancerPool" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a Cloudflare Load Balancer pool resource. This provides a pool of origins that can be used by a Cloudflare Load Balancer. Note that the load balancing feature must be enabled in your Clouflare account before you can use this resource.</p>
+<dd><p>Provides a Cloudflare Load Balancer pool resource. This provides a pool of origins that can be used by a Cloudflare Load Balancer. Note that the load balancing feature must be enabled in your Cloudflare account before you can use this resource.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/load_balancer_pool.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/load_balancer_pool.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2139,9 +2473,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A human-identifiable name for the origin.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The weight (0.01 - 1.00) of this origin, relative to other origins in the pool. Equal values mean equal weighting. A weight of 0 means traffic will not be sent to this origin, but health is still checked. Default: 1.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/load_balancer_pool.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/load_balancer_pool.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_cloudflare.LoadBalancerPool.check_regions">
 <code class="sig-name descname">check_regions</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.LoadBalancerPool.check_regions" title="Permalink to this definition">¶</a></dt>
@@ -2240,9 +2571,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A human-identifiable name for the origin.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The weight (0.01 - 1.00) of this origin, relative to other origins in the pool. Equal values mean equal weighting. A weight of 0 means traffic will not be sent to this origin, but health is still checked. Default: 1.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/load_balancer_pool.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/load_balancer_pool.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -2287,6 +2615,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_cloudflare.LogpushJob">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">LogpushJob</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">destination_conf=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">logpull_options=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">ownership_challenge=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.LogpushJob" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource which manages Cloudflare logpush jobs.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/logpush_job.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/logpush_job.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2300,9 +2631,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/logpush_job.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/logpush_job.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_cloudflare.LogpushJob.destination_conf">
 <code class="sig-name descname">destination_conf</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.LogpushJob.destination_conf" title="Permalink to this definition">¶</a></dt>
@@ -2355,9 +2683,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/logpush_job.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/logpush_job.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -2403,6 +2728,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">OriginCaCertificate</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">csr=None</em>, <em class="sig-param">hostnames=None</em>, <em class="sig-param">request_type=None</em>, <em class="sig-param">requested_validity=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.OriginCaCertificate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Cloudflare Origin CA certificate used to protect traffic to your origin without involving a third party Certificate Authority.</p>
 <p><strong>This resource requires you use your Origin CA Key as the ``api_user_service_key``.</strong></p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/origin_ca_certificate.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/origin_ca_certificate.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2415,9 +2743,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/origin_ca_certificate.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/origin_ca_certificate.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_cloudflare.OriginCaCertificate.certificate">
 <code class="sig-name descname">certificate</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.OriginCaCertificate.certificate" title="Permalink to this definition">¶</a></dt>
@@ -2474,9 +2799,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/origin_ca_certificate.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/origin_ca_certificate.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -2521,6 +2843,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_cloudflare.PageRule">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">PageRule</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">actions=None</em>, <em class="sig-param">priority=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">target=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.PageRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Cloudflare page rule resource.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/page_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/page_rule.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2583,9 +2908,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">trueClientIpHeader</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Whether this action is <code class="docutils literal notranslate"><span class="pre">&quot;on&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;off&quot;</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">waf</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Whether this action is <code class="docutils literal notranslate"><span class="pre">&quot;on&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;off&quot;</span></code>.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/page_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/page_rule.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_cloudflare.PageRule.actions">
 <code class="sig-name descname">actions</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.PageRule.actions" title="Permalink to this definition">¶</a></dt>
@@ -2733,9 +3055,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">trueClientIpHeader</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Whether this action is <code class="docutils literal notranslate"><span class="pre">&quot;on&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;off&quot;</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">waf</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Whether this action is <code class="docutils literal notranslate"><span class="pre">&quot;on&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;off&quot;</span></code>.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/page_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/page_rule.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -2783,36 +3102,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 settings, however an explicit <code class="docutils literal notranslate"><span class="pre">Provider</span></code> instance may be created and passed during resource
 construction to achieve fine-grained programmatic control over provider settings. See the
 <a class="reference external" href="https://www.pulumi.com/docs/reference/programming-model/#providers">documentation</a> for more information.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/index.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/index.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Configure API client to always use that account.</p></li>
+<li><p><strong>api_client_logging</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to print logs from the API client (using the default log library logger)</p></li>
+<li><p><strong>api_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The API key for operations.</p></li>
+<li><p><strong>api_token</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The API Token for operations.</p></li>
+<li><p><strong>api_user_service_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A special Cloudflare API key good for a restricted set of endpoints.</p></li>
+<li><p><strong>email</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A registered Cloudflare email address.</p></li>
+<li><p><strong>max_backoff</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Maximum backoff period in seconds after failed API calls</p></li>
+<li><p><strong>min_backoff</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Minimum backoff period in seconds after failed API calls</p></li>
+<li><p><strong>retries</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Maximum number of retries to perform when an API request fails</p></li>
+<li><p><strong>rps</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – RPS limit to apply when making calls to the API</p></li>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/index.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/index.html.markdown</a>.</p>
-</div></blockquote>
-<dl class="method">
-<dt id="pulumi_cloudflare.Provider.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.Provider.get" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get an existing Provider resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
-<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-</ul>
-</dd>
-</dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/index.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/index.html.markdown</a>.</p>
-</div></blockquote>
-</dd></dl>
-
 <dl class="method">
 <dt id="pulumi_cloudflare.Provider.translate_output_property">
 <code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.Provider.translate_output_property" title="Permalink to this definition">¶</a></dt>
@@ -2855,6 +3165,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_cloudflare.RateLimit">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">RateLimit</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">action=None</em>, <em class="sig-param">bypass_url_patterns=None</em>, <em class="sig-param">correlate=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">disabled=None</em>, <em class="sig-param">match=None</em>, <em class="sig-param">period=None</em>, <em class="sig-param">threshold=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.RateLimit" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Cloudflare rate limit resource for a given zone. This can be used to limit the traffic you receive zone-wide, or matching more specific types of requests/responses.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/rate_limit.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/rate_limit.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2893,7 +3206,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">methods</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - HTTP Methods, can be a subset [‘POST’,’PUT’] or all [‘_ALL_’]. Default: [‘_ALL_’].</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">schemes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - HTTP Schemes, can be one [‘HTTPS’], both [‘HTTP’,’HTTPS’] or all [‘_ALL_’].  Default: [‘_ALL_’].</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">urlPattern</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The URL pattern to match comprised of the host and path, i.e. example.org/path. Wildcard are expanded to match applicable traffic, query strings are not matched. Use * for all traffic to your zone. Default: ‘<a href="#id16"><span class="problematic" id="id17">*</span></a>’.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">urlPattern</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The URL pattern to match comprised of the host and path, i.e. example.org/path. Wildcard are expanded to match applicable traffic, query strings are not matched. Use * for all traffic to your zone. Default: ‘<a href="#id24"><span class="problematic" id="id25">*</span></a>’.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">response</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Custom content-type and body to return, this overrides the custom error for the zone. This field is not required. Omission will result in default HTML error page. Definition below.</p>
@@ -2903,9 +3216,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/rate_limit.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/rate_limit.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_cloudflare.RateLimit.action">
 <code class="sig-name descname">action</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.RateLimit.action" title="Permalink to this definition">¶</a></dt>
@@ -2958,7 +3268,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">methods</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - HTTP Methods, can be a subset [‘POST’,’PUT’] or all [‘_ALL_’]. Default: [‘_ALL_’].</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">schemes</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - HTTP Schemes, can be one [‘HTTPS’], both [‘HTTP’,’HTTPS’] or all [‘_ALL_’].  Default: [‘_ALL_’].</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">urlPattern</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The URL pattern to match comprised of the host and path, i.e. example.org/path. Wildcard are expanded to match applicable traffic, query strings are not matched. Use * for all traffic to your zone. Default: ‘<a href="#id18"><span class="problematic" id="id19">*</span></a>’.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">urlPattern</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The URL pattern to match comprised of the host and path, i.e. example.org/path. Wildcard are expanded to match applicable traffic, query strings are not matched. Use * for all traffic to your zone. Default: ‘<a href="#id26"><span class="problematic" id="id27">*</span></a>’.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">response</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Custom content-type and body to return, this overrides the custom error for the zone. This field is not required. Omission will result in default HTML error page. Definition below.</p>
@@ -3032,7 +3342,7 @@ properties used to qualify the lookup.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">methods</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - HTTP Methods, can be a subset [‘POST’,’PUT’] or all [‘_ALL_’]. Default: [‘_ALL_’].</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">schemes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - HTTP Schemes, can be one [‘HTTPS’], both [‘HTTP’,’HTTPS’] or all [‘_ALL_’].  Default: [‘_ALL_’].</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">urlPattern</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The URL pattern to match comprised of the host and path, i.e. example.org/path. Wildcard are expanded to match applicable traffic, query strings are not matched. Use * for all traffic to your zone. Default: ‘<a href="#id20"><span class="problematic" id="id21">*</span></a>’.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">urlPattern</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The URL pattern to match comprised of the host and path, i.e. example.org/path. Wildcard are expanded to match applicable traffic, query strings are not matched. Use * for all traffic to your zone. Default: ‘<a href="#id28"><span class="problematic" id="id29">*</span></a>’.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">response</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Custom content-type and body to return, this overrides the custom error for the zone. This field is not required. Omission will result in default HTML error page. Definition below.</p>
@@ -3042,9 +3352,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/rate_limit.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/rate_limit.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -3089,6 +3396,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_cloudflare.Record">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">Record</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">data=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">priority=None</em>, <em class="sig-param">proxied=None</em>, <em class="sig-param">ttl=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">value=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.Record" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Cloudflare record resource.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/record.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/record.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3145,9 +3455,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">usage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/record.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/record.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_cloudflare.Record.created_on">
 <code class="sig-name descname">created_on</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.Record.created_on" title="Permalink to this definition">¶</a></dt>
@@ -3333,9 +3640,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">usage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/record.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/record.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -3378,14 +3682,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_cloudflare.SpectrumApplication">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">SpectrumApplication</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">dns=None</em>, <em class="sig-param">ip_firewall=None</em>, <em class="sig-param">origin_directs=None</em>, <em class="sig-param">origin_dns=None</em>, <em class="sig-param">origin_port=None</em>, <em class="sig-param">protocol=None</em>, <em class="sig-param">proxy_protocol=None</em>, <em class="sig-param">tls=None</em>, <em class="sig-param">traffic_type=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.SpectrumApplication" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">SpectrumApplication</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">argo_smart_routing=None</em>, <em class="sig-param">dns=None</em>, <em class="sig-param">edge_ip_connectivity=None</em>, <em class="sig-param">edge_ips=None</em>, <em class="sig-param">ip_firewall=None</em>, <em class="sig-param">origin_directs=None</em>, <em class="sig-param">origin_dns=None</em>, <em class="sig-param">origin_port=None</em>, <em class="sig-param">protocol=None</em>, <em class="sig-param">proxy_protocol=None</em>, <em class="sig-param">tls=None</em>, <em class="sig-param">traffic_type=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.SpectrumApplication" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Cloudflare Spectrum Application. You can extend the power of Cloudflare’s DDoS, TLS, and IP Firewall to your other TCP-based services.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/spectrum_application.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/spectrum_application.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>argo_smart_routing</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – . Enables Argo Smart Routing. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>dns</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The name and type of DNS record for the Spectrum application. Fields documented below.</p></li>
+<li><p><strong>edge_ip_connectivity</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – . Choose which types of IP addresses will be provisioned for this subdomain. Valid values are: <code class="docutils literal notranslate"><span class="pre">all</span></code>, <code class="docutils literal notranslate"><span class="pre">ipv4</span></code>, <code class="docutils literal notranslate"><span class="pre">ipv6</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">all</span></code>.</p></li>
+<li><p><strong>edge_ips</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – . A list of edge IPs (IPv4 and/or IPv6) to configure Spectrum application to. Requires <a class="reference external" href="https://developers.cloudflare.com/spectrum/getting-started/byoip/">Bring Your Own IP</a> provisioned.</p></li>
 <li><p><strong>ip_firewall</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enables the IP Firewall for this application. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 <li><p><strong>origin_directs</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of destination addresses to the origin. e.g. <code class="docutils literal notranslate"><span class="pre">tcp://192.0.2.1:22</span></code>.</p></li>
 <li><p><strong>origin_dns</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A destination DNS addresses to the origin. Fields documented below.</p></li>
@@ -3393,7 +3703,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The port configuration at Cloudflare’s edge. e.g. <code class="docutils literal notranslate"><span class="pre">tcp/22</span></code>.</p></li>
 <li><p><strong>proxy_protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Enables a proxy protocol to the origin. Valid values are: <code class="docutils literal notranslate"><span class="pre">off</span></code>, <code class="docutils literal notranslate"><span class="pre">v1</span></code>, <code class="docutils literal notranslate"><span class="pre">v2</span></code>, and <code class="docutils literal notranslate"><span class="pre">simple</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">off</span></code>.</p></li>
 <li><p><strong>tls</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – TLS configuration option for Cloudflare to connect to your origin. Valid values are: <code class="docutils literal notranslate"><span class="pre">off</span></code>, <code class="docutils literal notranslate"><span class="pre">flexible</span></code>, <code class="docutils literal notranslate"><span class="pre">full</span></code> and <code class="docutils literal notranslate"><span class="pre">strict</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">off</span></code>.</p></li>
-<li><p><strong>traffic_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Set’s application type. Valid values are: <code class="docutils literal notranslate"><span class="pre">direct</span></code>, <code class="docutils literal notranslate"><span class="pre">http</span></code>, <code class="docutils literal notranslate"><span class="pre">https</span></code>.  Defaults to <code class="docutils literal notranslate"><span class="pre">direct</span></code>.</p></li>
+<li><p><strong>traffic_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Sets application type. Valid values are: <code class="docutils literal notranslate"><span class="pre">direct</span></code>, <code class="docutils literal notranslate"><span class="pre">http</span></code>, <code class="docutils literal notranslate"><span class="pre">https</span></code>.  Defaults to <code class="docutils literal notranslate"><span class="pre">direct</span></code>.</p></li>
 <li><p><strong>zone_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DNS zone ID to add the application to</p></li>
 </ul>
 </dd>
@@ -3407,9 +3717,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Fully qualified domain name of the origin e.g. origin-ssh.example.com.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/spectrum_application.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/spectrum_application.html.markdown</a>.</p>
-</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_cloudflare.SpectrumApplication.argo_smart_routing">
+<code class="sig-name descname">argo_smart_routing</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.SpectrumApplication.argo_smart_routing" title="Permalink to this definition">¶</a></dt>
+<dd><p>. Enables Argo Smart Routing. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_cloudflare.SpectrumApplication.dns">
 <code class="sig-name descname">dns</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.SpectrumApplication.dns" title="Permalink to this definition">¶</a></dt>
@@ -3418,6 +3731,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Fully qualified domain name of the origin e.g. origin-ssh.example.com.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The type of DNS record associated with the application. Valid values: <code class="docutils literal notranslate"><span class="pre">CNAME</span></code>.</p></li>
 </ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_cloudflare.SpectrumApplication.edge_ip_connectivity">
+<code class="sig-name descname">edge_ip_connectivity</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.SpectrumApplication.edge_ip_connectivity" title="Permalink to this definition">¶</a></dt>
+<dd><p>. Choose which types of IP addresses will be provisioned for this subdomain. Valid values are: <code class="docutils literal notranslate"><span class="pre">all</span></code>, <code class="docutils literal notranslate"><span class="pre">ipv4</span></code>, <code class="docutils literal notranslate"><span class="pre">ipv6</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">all</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_cloudflare.SpectrumApplication.edge_ips">
+<code class="sig-name descname">edge_ips</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.SpectrumApplication.edge_ips" title="Permalink to this definition">¶</a></dt>
+<dd><p>. A list of edge IPs (IPv4 and/or IPv6) to configure Spectrum application to. Requires <a class="reference external" href="https://developers.cloudflare.com/spectrum/getting-started/byoip/">Bring Your Own IP</a> provisioned.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -3468,7 +3793,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_cloudflare.SpectrumApplication.traffic_type">
 <code class="sig-name descname">traffic_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.SpectrumApplication.traffic_type" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set’s application type. Valid values are: <code class="docutils literal notranslate"><span class="pre">direct</span></code>, <code class="docutils literal notranslate"><span class="pre">http</span></code>, <code class="docutils literal notranslate"><span class="pre">https</span></code>.  Defaults to <code class="docutils literal notranslate"><span class="pre">direct</span></code>.</p>
+<dd><p>Sets application type. Valid values are: <code class="docutils literal notranslate"><span class="pre">direct</span></code>, <code class="docutils literal notranslate"><span class="pre">http</span></code>, <code class="docutils literal notranslate"><span class="pre">https</span></code>.  Defaults to <code class="docutils literal notranslate"><span class="pre">direct</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -3479,7 +3804,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="method">
 <dt id="pulumi_cloudflare.SpectrumApplication.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">dns=None</em>, <em class="sig-param">ip_firewall=None</em>, <em class="sig-param">origin_directs=None</em>, <em class="sig-param">origin_dns=None</em>, <em class="sig-param">origin_port=None</em>, <em class="sig-param">protocol=None</em>, <em class="sig-param">proxy_protocol=None</em>, <em class="sig-param">tls=None</em>, <em class="sig-param">traffic_type=None</em>, <em class="sig-param">zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.SpectrumApplication.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">argo_smart_routing=None</em>, <em class="sig-param">dns=None</em>, <em class="sig-param">edge_ip_connectivity=None</em>, <em class="sig-param">edge_ips=None</em>, <em class="sig-param">ip_firewall=None</em>, <em class="sig-param">origin_directs=None</em>, <em class="sig-param">origin_dns=None</em>, <em class="sig-param">origin_port=None</em>, <em class="sig-param">protocol=None</em>, <em class="sig-param">proxy_protocol=None</em>, <em class="sig-param">tls=None</em>, <em class="sig-param">traffic_type=None</em>, <em class="sig-param">zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.SpectrumApplication.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing SpectrumApplication resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -3488,7 +3813,11 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>argo_smart_routing</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – . Enables Argo Smart Routing. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>dns</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The name and type of DNS record for the Spectrum application. Fields documented below.</p></li>
+<li><p><strong>edge_ip_connectivity</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – . Choose which types of IP addresses will be provisioned for this subdomain. Valid values are: <code class="docutils literal notranslate"><span class="pre">all</span></code>, <code class="docutils literal notranslate"><span class="pre">ipv4</span></code>, <code class="docutils literal notranslate"><span class="pre">ipv6</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">all</span></code>.</p></li>
+<li><p><strong>edge_ips</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>. A list of edge IPs (IPv4 and/or IPv6) to configure Spectrum application to. Requires <a class="reference external" href="https://developers.cloudflare.com/spectrum/getting-started/byoip/">Bring Your Own IP</a> provisioned.</p>
+</p></li>
 <li><p><strong>ip_firewall</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enables the IP Firewall for this application. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 <li><p><strong>origin_directs</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of destination addresses to the origin. e.g. <code class="docutils literal notranslate"><span class="pre">tcp://192.0.2.1:22</span></code>.</p></li>
 <li><p><strong>origin_dns</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A destination DNS addresses to the origin. Fields documented below.</p></li>
@@ -3496,7 +3825,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The port configuration at Cloudflare’s edge. e.g. <code class="docutils literal notranslate"><span class="pre">tcp/22</span></code>.</p></li>
 <li><p><strong>proxy_protocol</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Enables a proxy protocol to the origin. Valid values are: <code class="docutils literal notranslate"><span class="pre">off</span></code>, <code class="docutils literal notranslate"><span class="pre">v1</span></code>, <code class="docutils literal notranslate"><span class="pre">v2</span></code>, and <code class="docutils literal notranslate"><span class="pre">simple</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">off</span></code>.</p></li>
 <li><p><strong>tls</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – TLS configuration option for Cloudflare to connect to your origin. Valid values are: <code class="docutils literal notranslate"><span class="pre">off</span></code>, <code class="docutils literal notranslate"><span class="pre">flexible</span></code>, <code class="docutils literal notranslate"><span class="pre">full</span></code> and <code class="docutils literal notranslate"><span class="pre">strict</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">off</span></code>.</p></li>
-<li><p><strong>traffic_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Set’s application type. Valid values are: <code class="docutils literal notranslate"><span class="pre">direct</span></code>, <code class="docutils literal notranslate"><span class="pre">http</span></code>, <code class="docutils literal notranslate"><span class="pre">https</span></code>.  Defaults to <code class="docutils literal notranslate"><span class="pre">direct</span></code>.</p></li>
+<li><p><strong>traffic_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Sets application type. Valid values are: <code class="docutils literal notranslate"><span class="pre">direct</span></code>, <code class="docutils literal notranslate"><span class="pre">http</span></code>, <code class="docutils literal notranslate"><span class="pre">https</span></code>.  Defaults to <code class="docutils literal notranslate"><span class="pre">direct</span></code>.</p></li>
 <li><p><strong>zone_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DNS zone ID to add the application to</p></li>
 </ul>
 </dd>
@@ -3510,9 +3839,6 @@ properties used to qualify the lookup.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Fully qualified domain name of the origin e.g. origin-ssh.example.com.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/spectrum_application.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/spectrum_application.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -3557,6 +3883,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_cloudflare.WafGroup">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">WafGroup</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">group_id=None</em>, <em class="sig-param">mode=None</em>, <em class="sig-param">package_id=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.WafGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Cloudflare WAF rule group resource for a particular zone. This can be used to configure firewall behaviour for pre-defined firewall groups.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/waf_group.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/waf_group.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3569,9 +3898,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/waf_group.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/waf_group.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_cloudflare.WafGroup.group_id">
 <code class="sig-name descname">group_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.WafGroup.group_id" title="Permalink to this definition">¶</a></dt>
@@ -3614,9 +3940,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/waf_group.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/waf_group.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -3661,6 +3984,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_cloudflare.WafPackage">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">WafPackage</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">action_mode=None</em>, <em class="sig-param">package_id=None</em>, <em class="sig-param">sensitivity=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.WafPackage" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Cloudflare WAF rule package resource for a particular zone. This can be used to configure firewall behaviour for pre-defined firewall packages.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/waf_package.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/waf_package.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3673,9 +3999,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/waf_package.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/waf_package.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_cloudflare.WafPackage.action_mode">
 <code class="sig-name descname">action_mode</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.WafPackage.action_mode" title="Permalink to this definition">¶</a></dt>
@@ -3718,9 +4041,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/waf_package.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/waf_package.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -3765,6 +4085,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_cloudflare.WafRule">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">WafRule</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">mode=None</em>, <em class="sig-param">package_id=None</em>, <em class="sig-param">rule_id=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.WafRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Cloudflare WAF rule resource for a particular zone. This can be used to configure firewall behaviour for pre-defined firewall rules.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/waf_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/waf_rule.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3777,9 +4100,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/waf_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/waf_rule.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_cloudflare.WafRule.group_id">
 <code class="sig-name descname">group_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.WafRule.group_id" title="Permalink to this definition">¶</a></dt>
@@ -3829,9 +4149,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/waf_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/waf_rule.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -3876,6 +4193,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_cloudflare.WorkerRoute">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">WorkerRoute</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">pattern=None</em>, <em class="sig-param">script_name=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.WorkerRoute" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Cloudflare worker route resource. A route will also require a <code class="docutils literal notranslate"><span class="pre">.WorkerScript</span></code>.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/worker_route.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/worker_route.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3893,9 +4213,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><p><strong>zone_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The zone ID to add the route to.</p>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/worker_route.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/worker_route.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_cloudflare.WorkerRoute.pattern">
 <code class="sig-name descname">pattern</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.WorkerRoute.pattern" title="Permalink to this definition">¶</a></dt>
@@ -3935,9 +4252,6 @@ properties used to qualify the lookup.</p>
 <dd class="field-odd"><p><strong>zone_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The zone ID to add the route to.</p>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/worker_route.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/worker_route.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -3982,6 +4296,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_cloudflare.WorkerScript">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">WorkerScript</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">content=None</em>, <em class="sig-param">kv_namespace_bindings=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.WorkerScript" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Cloudflare worker script resource. In order for a script to be active, you’ll also need to setup a <code class="docutils literal notranslate"><span class="pre">.WorkerRoute</span></code>.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/worker_script.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/worker_script.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3997,9 +4314,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name for the binding.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">namespace_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - ID of KV namespace.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/worker_script.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/worker_script.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_cloudflare.WorkerScript.content">
 <code class="sig-name descname">content</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.WorkerScript.content" title="Permalink to this definition">¶</a></dt>
@@ -4033,9 +4347,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name for the binding.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">namespace_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - ID of KV namespace.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/worker_script.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/worker_script.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -4080,6 +4391,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_cloudflare.WorkersKv">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">WorkersKv</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">key=None</em>, <em class="sig-param">namespace_id=None</em>, <em class="sig-param">value=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.WorkersKv" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Workers KV Pair.  <em>NOTE:</em>  This resource uses the Cloudflare account APIs.  This requires setting the <code class="docutils literal notranslate"><span class="pre">CLOUDFLARE_ACCOUNT_ID</span></code> environment variable or <code class="docutils literal notranslate"><span class="pre">account_id</span></code> provider argument.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/workers_kv.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/workers_kv.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4091,9 +4405,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/workers_kv.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/workers_kv.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_cloudflare.WorkersKv.key">
 <code class="sig-name descname">key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.WorkersKv.key" title="Permalink to this definition">¶</a></dt>
@@ -4129,9 +4440,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/workers_kv.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/workers_kv.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -4176,6 +4484,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_cloudflare.WorkersKvNamespace">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">WorkersKvNamespace</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">title=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.WorkersKvNamespace" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Workers KV Namespace</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/workers_kv_namespace.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/workers_kv_namespace.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4185,9 +4496,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/workers_kv_namespace.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/workers_kv_namespace.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_cloudflare.WorkersKvNamespace.title">
 <code class="sig-name descname">title</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.WorkersKvNamespace.title" title="Permalink to this definition">¶</a></dt>
@@ -4209,9 +4517,6 @@ properties used to qualify the lookup.</p>
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/workers_kv_namespace.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/workers_kv_namespace.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -4256,6 +4561,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_cloudflare.Zone">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">Zone</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">jump_start=None</em>, <em class="sig-param">paused=None</em>, <em class="sig-param">plan=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">zone=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.Zone" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Cloudflare Zone resource. Zone is the basic resource for working with Cloudflare and is roughly equivalent to a domain name that the user purchases.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/zone.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/zone.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4269,9 +4577,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/zone.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/zone.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_cloudflare.Zone.jump_start">
 <code class="sig-name descname">jump_start</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.Zone.jump_start" title="Permalink to this definition">¶</a></dt>
@@ -4368,9 +4673,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">phishing_detected</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">wildcard_proxiable</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/zone.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/zone.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -4415,6 +4717,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_cloudflare.ZoneLockdown">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">ZoneLockdown</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">configurations=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">paused=None</em>, <em class="sig-param">priority=None</em>, <em class="sig-param">urls=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.ZoneLockdown" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Cloudflare Zone Lockdown resource. Zone Lockdown allows you to define one or more URLs (with wildcard matching on the domain or path) that will only permit access if the request originates from an IP address that matches a safelist of one or more IP addresses and/or IP ranges.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/zone_lockdown.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/zone_lockdown.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4433,9 +4738,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">target</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The request property to target. Allowed values: “ip”, “ip_range”</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value to target. Depends on target’s type. IP addresses should just be standard IPv4/IPv6 notation i.e. <code class="docutils literal notranslate"><span class="pre">198.51.100.4</span></code> or <code class="docutils literal notranslate"><span class="pre">2001:db8::/32</span></code> and IP ranges in CIDR format i.e. <code class="docutils literal notranslate"><span class="pre">198.51.0.0/16</span></code>.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/zone_lockdown.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/zone_lockdown.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_cloudflare.ZoneLockdown.configurations">
 <code class="sig-name descname">configurations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.ZoneLockdown.configurations" title="Permalink to this definition">¶</a></dt>
@@ -4494,9 +4796,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">target</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The request property to target. Allowed values: “ip”, “ip_range”</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value to target. Depends on target’s type. IP addresses should just be standard IPv4/IPv6 notation i.e. <code class="docutils literal notranslate"><span class="pre">198.51.100.4</span></code> or <code class="docutils literal notranslate"><span class="pre">2001:db8::/32</span></code> and IP ranges in CIDR format i.e. <code class="docutils literal notranslate"><span class="pre">198.51.0.0/16</span></code>.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/zone_lockdown.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/zone_lockdown.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -4541,6 +4840,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_cloudflare.ZoneSettingsOverride">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">ZoneSettingsOverride</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">settings=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.ZoneSettingsOverride" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource which customizes Cloudflare zone settings. Note that after destroying this resource Zone Settings will be reset to their initial values.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/zone_settings_override.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/zone_settings_override.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4624,9 +4926,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">websockets</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">zeroRtt</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/zone_settings_override.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/zone_settings_override.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_cloudflare.ZoneSettingsOverride.initial_settings">
 <code class="sig-name descname">initial_settings</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.ZoneSettingsOverride.initial_settings" title="Permalink to this definition">¶</a></dt>
@@ -4973,9 +5272,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">websockets</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">zeroRtt</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/zone_settings_override.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/zone_settings_override.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -5021,7 +5317,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">get_ip_ranges</code><span class="sig-paren">(</span><em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.get_ip_ranges" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the [IP ranges][1] of Cloudflare edge nodes.</p>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/d/ip_ranges.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/d/ip_ranges.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/d/ip_ranges.html.md">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/d/ip_ranges.html.md</a>.</p>
 </div></blockquote>
 </dd></dl>
 
@@ -5029,20 +5325,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_cloudflare.get_waf_groups">
 <code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">get_waf_groups</code><span class="sig-paren">(</span><em class="sig-param">filter=None</em>, <em class="sig-param">package_id=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.get_waf_groups" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to look up [WAF Rule Groups][1].</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/d/waf_groups.html.md">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/d/waf_groups.html.md</a>.</p>
+</div></blockquote>
 <p>The <strong>filter</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">mode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/d/waf_groups.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/d/waf_groups.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_cloudflare.get_waf_packages">
 <code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">get_waf_packages</code><span class="sig-paren">(</span><em class="sig-param">filter=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.get_waf_packages" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to look up [WAF Rule Packages][1].</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/d/waf_packages.html.md">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/d/waf_packages.html.md</a>.</p>
+</div></blockquote>
 <p>The <strong>filter</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">action_mode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
@@ -5050,39 +5349,36 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sensitivity</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/d/waf_packages.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/d/waf_packages.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_cloudflare.get_waf_rules">
 <code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">get_waf_rules</code><span class="sig-paren">(</span><em class="sig-param">filter=None</em>, <em class="sig-param">package_id=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.get_waf_rules" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to look up [WAF Rules][1].</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/d/waf_rules.html.md">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/d/waf_rules.html.md</a>.</p>
+</div></blockquote>
 <p>The <strong>filter</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">group_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">mode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/d/waf_rules.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/d/waf_rules.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_cloudflare.get_zones">
 <code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">get_zones</code><span class="sig-paren">(</span><em class="sig-param">filter=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.get_zones" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to look up [Zone][1] records.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/d/zones.html.md">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/d/zones.html.md</a>.</p>
+</div></blockquote>
 <p>The <strong>filter</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">paused</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">status</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/d/zones.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/d/zones.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>

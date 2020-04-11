@@ -19,6 +19,11 @@ ensure:
 	yarn install
 	yarn --cwd components install
 
+.PHONY: ensure_tools
+ensure_tools:
+	echo "Restoring resourcedocsgen deps..."
+	cd tools/resourcedocsgen && go mod tidy && go mod download
+
 .PHONY: lint_markdown
 lint_markdown:
 	yarn lint-markdown
@@ -28,7 +33,8 @@ serve:
 	@echo -e "\033[0;32mSERVE:\033[0m"
 	yarn lint-markdown --no-error
 	yarn --cwd components run build
-	hugo server --buildDrafts --buildFuture
+	$(MAKE) copy_static_prebuilt
+	hugo server --buildDrafts --buildFuture --renderToDisk
 
 .PHONY: serve-components
 serve-components:
@@ -47,11 +53,16 @@ generate:
 resource_docs::
 	./scripts/gen_resource_docs.sh
 
+.PHONY: copy_static_prebuilt
+copy_static_prebuilt:
+	mkdir -p public && cp -R static-prebuilt/* public/
+
 .PHONY: build
 build:
 	@echo -e "\033[0;32mBUILD ($(HUGO_ENVIRONMENT)):\033[0m"
 	yarn lint-markdown
 	NODE_ENV=production yarn --cwd components run build
+	$(MAKE) copy_static_prebuilt
 	./scripts/run-hugo-build.sh
 	node ./scripts/build-search-index.js < ./public/docs/search-data/index.json > ./public/docs/search-index.json
 	rm -rf ./public/docs/search-data
@@ -60,30 +71,22 @@ build:
 test:
 	./scripts/check-links.sh
 
-.PHONY: travis_push
-travis_push::
+.PHONY: ci_push
+ci_push::
 	$(MAKE) banner
 	$(MAKE) ensure
-ifeq ($(TRAVIS_BRANCH),master)
 	$(MAKE) build
 	./scripts/run-pulumi.sh update production
-else
-	$(MAKE) build
-endif
 
-.PHONY: travis_pull_request
-travis_pull_request::
+.PHONY: ci_pull_request
+ci_pull_request::
 	$(MAKE) banner
 	$(MAKE) ensure
-ifeq ($(TRAVIS_BRANCH),master)
 	$(MAKE) build
 	./scripts/run-pulumi.sh preview production
-else
-	$(MAKE) build
-endif
 
-.PHONY: travis_cron
-travis_cron::
+.PHONY: ci_cron
+ci_cron::
 	$(MAKE) banner
 	$(MAKE) ensure
 	$(MAKE) build

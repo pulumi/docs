@@ -3,16 +3,17 @@
 title: "AnalyticsApplication"
 block_external_search_index: true
 ---
-<style>
-table td p { margin-top: 0; margin-bottom: 0; }
-</style>
+
+
 
 Provides a Kinesis Analytics Application resource. Kinesis Analytics is a managed service that
 allows processing and analyzing streaming data using standard SQL.
 
 For more details, see the [Amazon Kinesis Analytics Documentation][1].
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -50,626 +51,439 @@ const testApplication = new aws.kinesis.AnalyticsApplication("test_application",
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kinesis_analytics_application.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
 ## Create a AnalyticsApplication Resource
 
-{{< langchoose csharp nojavascript >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/kinesis/#AnalyticsApplication">AnalyticsApplication</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/kinesis/#AnalyticsApplicationArgs">AnalyticsApplicationArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+{{% choosable language nodejs %}}
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/kinesis/#AnalyticsApplication">AnalyticsApplication</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/kinesis/#AnalyticsApplicationArgs">AnalyticsApplicationArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+{{% /choosable %}}
 
+{{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">AnalyticsApplication</span><span class="p">(resource_name, opts=None, </span>cloudwatch_logging_options=None<span class="p">, </span>code=None<span class="p">, </span>description=None<span class="p">, </span>inputs=None<span class="p">, </span>name=None<span class="p">, </span>outputs=None<span class="p">, </span>reference_data_sources=None<span class="p">, </span>tags=None<span class="p">, __props__=None);</span></code></pre></div>
+{{% /choosable %}}
 
+{{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewAnalyticsApplication<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/kinesis?tab=doc#AnalyticsApplicationArgs">AnalyticsApplicationArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/kinesis?tab=doc#AnalyticsApplication">AnalyticsApplication</a></span>, error)</span></code></pre></div>
+{{% /choosable %}}
 
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.AnalyticsApplication.html">AnalyticsApplication</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.AnalyticsApplicationArgs.html">AnalyticsApplicationArgs</a></span>? <span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+{{% choosable language csharp %}}
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.AnalyticsApplication.html">AnalyticsApplication</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.AnalyticsApplicationArgs.html">AnalyticsApplicationArgs</a></span>? <span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+{{% /choosable %}}
 
-Creates a AnalyticsApplication resource with the given unique name, arguments, and options.
+{{% choosable language nodejs %}}
 
-{{% lang nodejs %}}
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The arguments to use to populate this resource's properties.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 
-<ul class="pl-10">
-    <li><strong>name</strong> &ndash; (Required) The unique name of the resulting resource.</li>
-    <li><strong>args</strong> &ndash;  (Optional)  The arguments to use to populate this resource's properties.</li>
-    <li><strong>opts</strong> &ndash; (Optional) A bag of options that control this resource's behavior.</li>
-</ul>
+{{% /choosable %}}
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
+{{% /choosable %}}
 
-{{% lang go %}}
+{{% choosable language go %}}
 
-<ul class="pl-10">
-    <li><strong>name</strong> &ndash; (Required) The unique name of the resulting resource.</li>
-    <li><strong>args</strong> &ndash;  (Optional)  The arguments to use to populate this resource's properties.</li>
-    <li><strong>opts</strong> &ndash; (Optional) A bag of options that control this resource's behavior.</li>
-</ul>
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The arguments to use to populate this resource's properties.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 
-{{% /lang %}}
+{{% /choosable %}}
 
-{{% lang csharp %}}
+{{% choosable language csharp %}}
 
-<ul class="pl-10">
-    <li><strong>name</strong> &ndash; (Required) The unique name of the resulting resource.</li>
-    <li><strong>args</strong> &ndash;  (Optional)  The arguments to use to populate this resource's properties.</li>
-    <li><strong>opts</strong> &ndash; (Optional) A bag of options that control this resource's behavior.</li>
-</ul>
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The arguments to use to populate this resource's properties.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 
-{{% /lang %}}
+{{% /choosable %}}
 
-The following arguments are supported:
-
-
-{{< langchoose csharp nojavascript >}}
+#### Resource Arguments
 
 
-{{% lang csharp %}}
 
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Cloudwatch<wbr>Logging<wbr>Options</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationcloudwatchloggingoptions">Analytics<wbr>Application<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The CloudWatch log stream options to monitor application errors.
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cloudwatch<wbr>Logging<wbr>Options</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationcloudwatchloggingoptions">Analytics<wbr>Application<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args?</a></span>
+    </dt>
+    <dd>{{% md %}}The CloudWatch log stream options to monitor application errors.
 See CloudWatch Logging Options below for more details.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Code</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-SQL Code to transform input data, and generate output.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Code</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}SQL Code to transform input data, and generate output.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Description</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Description of the application.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Description of the application.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Inputs</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationinputs">Analytics<wbr>Application<wbr>Inputs<wbr>Args?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Input configuration of the application. See Inputs below for more details.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Inputs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationinputs">Analytics<wbr>Application<wbr>Inputs<wbr>Args?</a></span>
+    </dt>
+    <dd>{{% md %}}Input configuration of the application. See Inputs below for more details.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Name</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Name of the Kinesis Analytics Application.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Name of the Kinesis Analytics Application.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Outputs</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationoutput">List&lt;Analytics<wbr>Application<wbr>Output<wbr>Args&gt;?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Output destination configuration of the application. See Outputs below for more details.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Outputs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationoutput">List&lt;Analytics<wbr>Application<wbr>Output<wbr>Args&gt;?</a></span>
+    </dt>
+    <dd>{{% md %}}Output destination configuration of the application. See Outputs below for more details.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Reference<wbr>Data<wbr>Sources</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationreferencedatasources">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Args?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-An S3 Reference Data Source for the application.
+    <dt class="property-optional"
+            title="Optional">
+        <span>Reference<wbr>Data<wbr>Sources</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasources">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Args?</a></span>
+    </dt>
+    <dd>{{% md %}}An S3 Reference Data Source for the application.
 See Reference Data Sources below for more details.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Tags</td>
-            <td class="align-top">
-                
-                <code>Dictionary<string, object>?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Key-value mapping of tags for the Kinesis Analytics Application.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary<string, object>?</span>
+    </dt>
+    <dd>{{% md %}}Key-value mapping of tags for the Kinesis Analytics Application.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language go %}}
+<dl class="resources-properties">
 
-
-{{% lang go %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Cloudwatch<wbr>Logging<wbr>Options</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationcloudwatchloggingoptions">*Analytics<wbr>Application<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The CloudWatch log stream options to monitor application errors.
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cloudwatch<wbr>Logging<wbr>Options</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationcloudwatchloggingoptions">*Analytics<wbr>Application<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}The CloudWatch log stream options to monitor application errors.
 See CloudWatch Logging Options below for more details.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Code</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-SQL Code to transform input data, and generate output.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Code</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}SQL Code to transform input data, and generate output.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Description</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Description of the application.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}Description of the application.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Inputs</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationinputs">*Analytics<wbr>Application<wbr>Inputs</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Input configuration of the application. See Inputs below for more details.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Inputs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationinputs">*Analytics<wbr>Application<wbr>Inputs</a></span>
+    </dt>
+    <dd>{{% md %}}Input configuration of the application. See Inputs below for more details.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Name</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Name of the Kinesis Analytics Application.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}Name of the Kinesis Analytics Application.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Outputs</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationoutput">[]Analytics<wbr>Application<wbr>Output</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Output destination configuration of the application. See Outputs below for more details.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Outputs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationoutput">[]Analytics<wbr>Application<wbr>Output</a></span>
+    </dt>
+    <dd>{{% md %}}Output destination configuration of the application. See Outputs below for more details.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Reference<wbr>Data<wbr>Sources</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationreferencedatasources">*Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-An S3 Reference Data Source for the application.
+    <dt class="property-optional"
+            title="Optional">
+        <span>Reference<wbr>Data<wbr>Sources</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasources">*Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources</a></span>
+    </dt>
+    <dd>{{% md %}}An S3 Reference Data Source for the application.
 See Reference Data Sources below for more details.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Tags</td>
-            <td class="align-top">
-                
-                <code>map[string]interface{}</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Key-value mapping of tags for the Kinesis Analytics Application.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}Key-value mapping of tags for the Kinesis Analytics Application.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
-
-{{% lang nodejs %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">cloudwatch<wbr>Logging<wbr>Options</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationcloudwatchloggingoptions">Analytics<wbr>Application<wbr>Cloudwatch<wbr>Logging<wbr>Options?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The CloudWatch log stream options to monitor application errors.
+    <dt class="property-optional"
+            title="Optional">
+        <span>cloudwatch<wbr>Logging<wbr>Options</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationcloudwatchloggingoptions">Analytics<wbr>Application<wbr>Cloudwatch<wbr>Logging<wbr>Options?</a></span>
+    </dt>
+    <dd>{{% md %}}The CloudWatch log stream options to monitor application errors.
 See CloudWatch Logging Options below for more details.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">code</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-SQL Code to transform input data, and generate output.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>code</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}SQL Code to transform input data, and generate output.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">description</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Description of the application.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Description of the application.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">inputs</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationinputs">Analytics<wbr>Application<wbr>Inputs?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Input configuration of the application. See Inputs below for more details.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>inputs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationinputs">Analytics<wbr>Application<wbr>Inputs?</a></span>
+    </dt>
+    <dd>{{% md %}}Input configuration of the application. See Inputs below for more details.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">name</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Name of the Kinesis Analytics Application.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Name of the Kinesis Analytics Application.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">outputs</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationoutput">Analytics<wbr>Application<wbr>Output[]?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Output destination configuration of the application. See Outputs below for more details.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>outputs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationoutput">Analytics<wbr>Application<wbr>Output[]?</a></span>
+    </dt>
+    <dd>{{% md %}}Output destination configuration of the application. See Outputs below for more details.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">reference<wbr>Data<wbr>Sources</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationreferencedatasources">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-An S3 Reference Data Source for the application.
+    <dt class="property-optional"
+            title="Optional">
+        <span>reference<wbr>Data<wbr>Sources</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasources">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources?</a></span>
+    </dt>
+    <dd>{{% md %}}An S3 Reference Data Source for the application.
 See Reference Data Sources below for more details.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">tags</td>
-            <td class="align-top">
-                
-                <code>{[key: string]: any}?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Key-value mapping of tags for the Kinesis Analytics Application.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}?</span>
+    </dt>
+    <dd>{{% md %}}Key-value mapping of tags for the Kinesis Analytics Application.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
 
-
-{{% lang python %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">cloudwatch_<wbr>logging_<wbr>options</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationcloudwatchloggingoptions">Dict[Analytics<wbr>Application<wbr>Cloudwatch<wbr>Logging<wbr>Options]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The CloudWatch log stream options to monitor application errors.
+    <dt class="property-optional"
+            title="Optional">
+        <span>cloudwatch_<wbr>logging_<wbr>options</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationcloudwatchloggingoptions">Dict[Analytics<wbr>Application<wbr>Cloudwatch<wbr>Logging<wbr>Options]</a></span>
+    </dt>
+    <dd>{{% md %}}The CloudWatch log stream options to monitor application errors.
 See CloudWatch Logging Options below for more details.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">code</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-SQL Code to transform input data, and generate output.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>code</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}SQL Code to transform input data, and generate output.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">description</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Description of the application.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Description of the application.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">inputs</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationinputs">Dict[Analytics<wbr>Application<wbr>Inputs]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Input configuration of the application. See Inputs below for more details.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>inputs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationinputs">Dict[Analytics<wbr>Application<wbr>Inputs]</a></span>
+    </dt>
+    <dd>{{% md %}}Input configuration of the application. See Inputs below for more details.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">name</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Name of the Kinesis Analytics Application.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of the Kinesis Analytics Application.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">outputs</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationoutput">List[Analytics<wbr>Application<wbr>Output]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Output destination configuration of the application. See Outputs below for more details.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>outputs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationoutput">List[Analytics<wbr>Application<wbr>Output]</a></span>
+    </dt>
+    <dd>{{% md %}}Output destination configuration of the application. See Outputs below for more details.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">reference_<wbr>data_<wbr>sources</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationreferencedatasources">Dict[Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-An S3 Reference Data Source for the application.
+    <dt class="property-optional"
+            title="Optional">
+        <span>reference_<wbr>data_<wbr>sources</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasources">Dict[Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources]</a></span>
+    </dt>
+    <dd>{{% md %}}An S3 Reference Data Source for the application.
 See Reference Data Sources below for more details.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">tags</td>
-            <td class="align-top">
-                
-                <code>Dict[str, Any]</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Key-value mapping of tags for the Kinesis Analytics Application.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}Key-value mapping of tags for the Kinesis Analytics Application.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
+</dl>
+{{% /choosable %}}
 
 
 
@@ -683,771 +497,509 @@ The following output properties are available:
 
 
 
-{{< langchoose csharp nojavascript >}}
 
+{{% choosable language csharp %}}
+<dl class="resources-properties">
 
-{{% lang csharp %}}
+    <dt class="property-"
+            title="">
+        <span>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Kinesis Analytics Appliation.
+{{% /md %}}</dd>
 
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Arn</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The ARN of the Kinesis Analytics Appliation.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Cloudwatch<wbr>Logging<wbr>Options</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationcloudwatchloggingoptions">Analytics<wbr>Application<wbr>Cloudwatch<wbr>Logging<wbr>Options?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} The CloudWatch log stream options to monitor application errors.
+    <dt class="property-"
+            title="">
+        <span>Cloudwatch<wbr>Logging<wbr>Options</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationcloudwatchloggingoptions">Analytics<wbr>Application<wbr>Cloudwatch<wbr>Logging<wbr>Options?</a></span>
+    </dt>
+    <dd>{{% md %}}The CloudWatch log stream options to monitor application errors.
 See CloudWatch Logging Options below for more details.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Code</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} SQL Code to transform input data, and generate output.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Code</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}SQL Code to transform input data, and generate output.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Create<wbr>Timestamp</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The Timestamp when the application version was created.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Create<wbr>Timestamp</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Timestamp when the application version was created.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Description</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} Description of the application.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Description of the application.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Inputs</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationinputs">Analytics<wbr>Application<wbr>Inputs?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} Input configuration of the application. See Inputs below for more details.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Inputs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationinputs">Analytics<wbr>Application<wbr>Inputs?</a></span>
+    </dt>
+    <dd>{{% md %}}Input configuration of the application. See Inputs below for more details.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Last<wbr>Update<wbr>Timestamp</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The Timestamp when the application was last updated.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Last<wbr>Update<wbr>Timestamp</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Timestamp when the application was last updated.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Name</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} Name of the Kinesis Analytics Application.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the Kinesis Analytics Application.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Outputs</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationoutput">List&lt;Analytics<wbr>Application<wbr>Output&gt;?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} Output destination configuration of the application. See Outputs below for more details.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Outputs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationoutput">List&lt;Analytics<wbr>Application<wbr>Output&gt;?</a></span>
+    </dt>
+    <dd>{{% md %}}Output destination configuration of the application. See Outputs below for more details.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Reference<wbr>Data<wbr>Sources</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationreferencedatasources">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} An S3 Reference Data Source for the application.
+    <dt class="property-"
+            title="">
+        <span>Reference<wbr>Data<wbr>Sources</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasources">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources?</a></span>
+    </dt>
+    <dd>{{% md %}}An S3 Reference Data Source for the application.
 See Reference Data Sources below for more details.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Status</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The Status of the application.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Status</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Status of the application.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Tags</td>
-            <td class="align-top">
-                
-                <code>Dictionary<string, object>?</code>
-            </td>
-            <td class="align-top">{{% md %}} Key-value mapping of tags for the Kinesis Analytics Application.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary<string, object>?</span>
+    </dt>
+    <dd>{{% md %}}Key-value mapping of tags for the Kinesis Analytics Application.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Version</td>
-            <td class="align-top">
-                
-                <code>int</code>
-            </td>
-            <td class="align-top">{{% md %}} The Version of the application.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The Version of the application.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language go %}}
+<dl class="resources-properties">
 
+    <dt class="property-"
+            title="">
+        <span>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Kinesis Analytics Appliation.
+{{% /md %}}</dd>
 
-{{% lang go %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Arn</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The ARN of the Kinesis Analytics Appliation.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Cloudwatch<wbr>Logging<wbr>Options</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationcloudwatchloggingoptions">*Analytics<wbr>Application<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></code>
-            </td>
-            <td class="align-top">{{% md %}} The CloudWatch log stream options to monitor application errors.
+    <dt class="property-"
+            title="">
+        <span>Cloudwatch<wbr>Logging<wbr>Options</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationcloudwatchloggingoptions">*Analytics<wbr>Application<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}The CloudWatch log stream options to monitor application errors.
 See CloudWatch Logging Options below for more details.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Code</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} SQL Code to transform input data, and generate output.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Code</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}SQL Code to transform input data, and generate output.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Create<wbr>Timestamp</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The Timestamp when the application version was created.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Create<wbr>Timestamp</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Timestamp when the application version was created.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Description</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} Description of the application.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}Description of the application.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Inputs</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationinputs">*Analytics<wbr>Application<wbr>Inputs</a></code>
-            </td>
-            <td class="align-top">{{% md %}} Input configuration of the application. See Inputs below for more details.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Inputs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationinputs">*Analytics<wbr>Application<wbr>Inputs</a></span>
+    </dt>
+    <dd>{{% md %}}Input configuration of the application. See Inputs below for more details.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Last<wbr>Update<wbr>Timestamp</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The Timestamp when the application was last updated.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Last<wbr>Update<wbr>Timestamp</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Timestamp when the application was last updated.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Name</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} Name of the Kinesis Analytics Application.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the Kinesis Analytics Application.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Outputs</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationoutput">[]Analytics<wbr>Application<wbr>Output</a></code>
-            </td>
-            <td class="align-top">{{% md %}} Output destination configuration of the application. See Outputs below for more details.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Outputs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationoutput">[]Analytics<wbr>Application<wbr>Output</a></span>
+    </dt>
+    <dd>{{% md %}}Output destination configuration of the application. See Outputs below for more details.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Reference<wbr>Data<wbr>Sources</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationreferencedatasources">*Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources</a></code>
-            </td>
-            <td class="align-top">{{% md %}} An S3 Reference Data Source for the application.
+    <dt class="property-"
+            title="">
+        <span>Reference<wbr>Data<wbr>Sources</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasources">*Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources</a></span>
+    </dt>
+    <dd>{{% md %}}An S3 Reference Data Source for the application.
 See Reference Data Sources below for more details.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Status</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The Status of the application.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Status</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Status of the application.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Tags</td>
-            <td class="align-top">
-                
-                <code>map[string]interface{}</code>
-            </td>
-            <td class="align-top">{{% md %}} Key-value mapping of tags for the Kinesis Analytics Application.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}Key-value mapping of tags for the Kinesis Analytics Application.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Version</td>
-            <td class="align-top">
-                
-                <code>int</code>
-            </td>
-            <td class="align-top">{{% md %}} The Version of the application.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The Version of the application.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
+    <dt class="property-"
+            title="">
+        <span>arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">ARN</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Kinesis Analytics Appliation.
+{{% /md %}}</dd>
 
-{{% lang nodejs %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">arn</td>
-            <td class="align-top">
-                
-                <code>ARN</code>
-            </td>
-            <td class="align-top">{{% md %}} The ARN of the Kinesis Analytics Appliation.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">cloudwatch<wbr>Logging<wbr>Options</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationcloudwatchloggingoptions">Analytics<wbr>Application<wbr>Cloudwatch<wbr>Logging<wbr>Options?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} The CloudWatch log stream options to monitor application errors.
+    <dt class="property-"
+            title="">
+        <span>cloudwatch<wbr>Logging<wbr>Options</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationcloudwatchloggingoptions">Analytics<wbr>Application<wbr>Cloudwatch<wbr>Logging<wbr>Options?</a></span>
+    </dt>
+    <dd>{{% md %}}The CloudWatch log stream options to monitor application errors.
 See CloudWatch Logging Options below for more details.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">code</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} SQL Code to transform input data, and generate output.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>code</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}SQL Code to transform input data, and generate output.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">create<wbr>Timestamp</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The Timestamp when the application version was created.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>create<wbr>Timestamp</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Timestamp when the application version was created.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">description</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} Description of the application.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Description of the application.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">inputs</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationinputs">Analytics<wbr>Application<wbr>Inputs?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} Input configuration of the application. See Inputs below for more details.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>inputs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationinputs">Analytics<wbr>Application<wbr>Inputs?</a></span>
+    </dt>
+    <dd>{{% md %}}Input configuration of the application. See Inputs below for more details.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">last<wbr>Update<wbr>Timestamp</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The Timestamp when the application was last updated.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>last<wbr>Update<wbr>Timestamp</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Timestamp when the application was last updated.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">name</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} Name of the Kinesis Analytics Application.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the Kinesis Analytics Application.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">outputs</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationoutput">Analytics<wbr>Application<wbr>Output[]?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} Output destination configuration of the application. See Outputs below for more details.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>outputs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationoutput">Analytics<wbr>Application<wbr>Output[]?</a></span>
+    </dt>
+    <dd>{{% md %}}Output destination configuration of the application. See Outputs below for more details.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">reference<wbr>Data<wbr>Sources</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationreferencedatasources">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} An S3 Reference Data Source for the application.
+    <dt class="property-"
+            title="">
+        <span>reference<wbr>Data<wbr>Sources</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasources">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources?</a></span>
+    </dt>
+    <dd>{{% md %}}An S3 Reference Data Source for the application.
 See Reference Data Sources below for more details.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">status</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The Status of the application.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>status</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Status of the application.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">tags</td>
-            <td class="align-top">
-                
-                <code>{[key: string]: any}?</code>
-            </td>
-            <td class="align-top">{{% md %}} Key-value mapping of tags for the Kinesis Analytics Application.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}?</span>
+    </dt>
+    <dd>{{% md %}}Key-value mapping of tags for the Kinesis Analytics Application.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">version</td>
-            <td class="align-top">
-                
-                <code>number</code>
-            </td>
-            <td class="align-top">{{% md %}} The Version of the application.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The Version of the application.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
 
+    <dt class="property-"
+            title="">
+        <span>arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Kinesis Analytics Appliation.
+{{% /md %}}</dd>
 
-{{% lang python %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">arn</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} The ARN of the Kinesis Analytics Appliation.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">cloudwatch_<wbr>logging_<wbr>options</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationcloudwatchloggingoptions">Dict[Analytics<wbr>Application<wbr>Cloudwatch<wbr>Logging<wbr>Options]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} The CloudWatch log stream options to monitor application errors.
+    <dt class="property-"
+            title="">
+        <span>cloudwatch_<wbr>logging_<wbr>options</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationcloudwatchloggingoptions">Dict[Analytics<wbr>Application<wbr>Cloudwatch<wbr>Logging<wbr>Options]</a></span>
+    </dt>
+    <dd>{{% md %}}The CloudWatch log stream options to monitor application errors.
 See CloudWatch Logging Options below for more details.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">code</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} SQL Code to transform input data, and generate output.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>code</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}SQL Code to transform input data, and generate output.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">create_<wbr>timestamp</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} The Timestamp when the application version was created.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>create_<wbr>timestamp</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Timestamp when the application version was created.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">description</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} Description of the application.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Description of the application.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">inputs</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationinputs">Dict[Analytics<wbr>Application<wbr>Inputs]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} Input configuration of the application. See Inputs below for more details.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>inputs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationinputs">Dict[Analytics<wbr>Application<wbr>Inputs]</a></span>
+    </dt>
+    <dd>{{% md %}}Input configuration of the application. See Inputs below for more details.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">last_<wbr>update_<wbr>timestamp</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} The Timestamp when the application was last updated.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>last_<wbr>update_<wbr>timestamp</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Timestamp when the application was last updated.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">name</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} Name of the Kinesis Analytics Application.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of the Kinesis Analytics Application.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">outputs</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationoutput">List[Analytics<wbr>Application<wbr>Output]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} Output destination configuration of the application. See Outputs below for more details.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>outputs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationoutput">List[Analytics<wbr>Application<wbr>Output]</a></span>
+    </dt>
+    <dd>{{% md %}}Output destination configuration of the application. See Outputs below for more details.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">reference_<wbr>data_<wbr>sources</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationreferencedatasources">Dict[Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} An S3 Reference Data Source for the application.
+    <dt class="property-"
+            title="">
+        <span>reference_<wbr>data_<wbr>sources</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasources">Dict[Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources]</a></span>
+    </dt>
+    <dd>{{% md %}}An S3 Reference Data Source for the application.
 See Reference Data Sources below for more details.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">status</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} The Status of the application.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>status</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Status of the application.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">tags</td>
-            <td class="align-top">
-                
-                <code>Dict[str, Any]</code>
-            </td>
-            <td class="align-top">{{% md %}} Key-value mapping of tags for the Kinesis Analytics Application.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}Key-value mapping of tags for the Kinesis Analytics Application.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">version</td>
-            <td class="align-top">
-                
-                <code>float</code>
-            </td>
-            <td class="align-top">{{% md %}} The Version of the application.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The Version of the application.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
+</dl>
+{{% /choosable %}}
 
 
 
@@ -1458,923 +1010,628 @@ See Reference Data Sources below for more details.
 
 ## Look up an Existing AnalyticsApplication Resource
 
-{{< langchoose csharp nojavascript >}}
-
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">pulumi.Input&lt;pulumi.ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/kinesis/#AnalyticsApplicationState">AnalyticsApplicationState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/kinesis/#AnalyticsApplication">AnalyticsApplication</a></span></code></pre></div>
-
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>cloudwatch_logging_options=None<span class="p">, </span>code=None<span class="p">, </span>create_timestamp=None<span class="p">, </span>description=None<span class="p">, </span>inputs=None<span class="p">, </span>last_update_timestamp=None<span class="p">, </span>name=None<span class="p">, </span>outputs=None<span class="p">, </span>reference_data_sources=None<span class="p">, </span>status=None<span class="p">, </span>tags=None<span class="p">, </span>version=None<span class="p">, __props__=None);</span></code></pre></div>
-
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAnalyticsApplication<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">pulumi.IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/kinesis?tab=doc#AnalyticsApplicationState">AnalyticsApplicationState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/kinesis?tab=doc#AnalyticsApplication">AnalyticsApplication</a></span>, error)</span></code></pre></div>
-
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.AnalyticsApplication.html">AnalyticsApplication</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Pulumi.Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.AnalyticsApplicationState.html">AnalyticsApplicationState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
-
 Get an existing AnalyticsApplication resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 
-{{% lang nodejs %}}
+{{< chooser language "javascript,typescript,python,go,csharp  " / >}}
 
-<ul class="pl-10">
-    <li><strong>name</strong> &ndash; (Required) The unique name of the resulting resource.</li>
-    <li><strong>id</strong> &ndash; (Required) The _unique_ provider ID of the resource to lookup.</li>
-    <li><strong>state</strong> &ndash; (Optional) Any extra arguments used during the lookup.</li>
-    <li><strong>opts</strong> &ndash; (Optional) A bag of options that control this resource's behavior.</li>
-</ul>
+{{% choosable language nodejs %}}
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/kinesis/#AnalyticsApplicationState">AnalyticsApplicationState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/kinesis/#AnalyticsApplication">AnalyticsApplication</a></span></code></pre></div>
+{{% /choosable %}}
 
-{{% /lang %}}
+{{% choosable language python %}}
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>cloudwatch_logging_options=None<span class="p">, </span>code=None<span class="p">, </span>create_timestamp=None<span class="p">, </span>description=None<span class="p">, </span>inputs=None<span class="p">, </span>last_update_timestamp=None<span class="p">, </span>name=None<span class="p">, </span>outputs=None<span class="p">, </span>reference_data_sources=None<span class="p">, </span>status=None<span class="p">, </span>tags=None<span class="p">, </span>version=None<span class="p">, __props__=None);</span></code></pre></div>
+{{% /choosable %}}
 
-{{% lang go %}}
+{{% choosable language go %}}
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAnalyticsApplication<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/kinesis?tab=doc#AnalyticsApplicationState">AnalyticsApplicationState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/kinesis?tab=doc#AnalyticsApplication">AnalyticsApplication</a></span>, error)</span></code></pre></div>
+{{% /choosable %}}
 
-<ul class="pl-10">
-    <li><strong>name</strong> &ndash; (Required) The unique name of the resulting resource.</li>
-    <li><strong>id</strong> &ndash; (Required) The _unique_ provider ID of the resource to lookup.</li>
-    <li><strong>state</strong> &ndash; (Optional) Any extra arguments used during the lookup.</li>
-    <li><strong>opts</strong> &ndash; (Optional) A bag of options that control this resource's behavior.</li>
-</ul>
+{{% choosable language csharp %}}
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.AnalyticsApplication.html">AnalyticsApplication</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.AnalyticsApplicationState.html">AnalyticsApplicationState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+{{% /choosable %}}
 
-{{% /lang %}}
+{{% choosable language nodejs %}}
 
-{{% lang csharp %}}
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resulting resource.</dd>
+    <dt class="property-required" title="Required">
+        <span>id</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The <em>unique</em> provider ID of the resource to lookup.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>state</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>Any extra arguments used during the lookup.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 
-<ul class="pl-10">
-    <li><strong>name</strong> &ndash; (Required) The unique name of the resulting resource.</li>
-    <li><strong>id</strong> &ndash; (Required) The _unique_ provider ID of the resource to lookup.</li>
-    <li><strong>state</strong> &ndash; (Optional) Any extra arguments used during the lookup.</li>
-    <li><strong>opts</strong> &ndash; (Optional) A bag of options that control this resource's behavior.</li>
-</ul>
+{{% /choosable %}}
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>resource_name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resulting resource.</dd>
+    <dt class="property-required" title="Optional">
+        <span>id</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The <em>unique</em> provider ID of the resource to lookup.</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resulting resource.</dd>
+    <dt class="property-required" title="Required">
+        <span>id</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The <em>unique</em> provider ID of the resource to lookup.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>state</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>Any extra arguments used during the lookup.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resulting resource.</dd>
+    <dt class="property-required" title="Required">
+        <span>id</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The <em>unique</em> provider ID of the resource to lookup.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>state</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>Any extra arguments used during the lookup.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
+
+{{% /choosable %}}
 
 The following state arguments are supported:
 
 
-{{< langchoose csharp nojavascript >}}
 
+{{% choosable language csharp %}}
+<dl class="resources-properties">
 
-{{% lang csharp %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Kinesis Analytics Appliation.
+{{% /md %}}</dd>
 
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Arn</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ARN of the Kinesis Analytics Appliation.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Cloudwatch<wbr>Logging<wbr>Options</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationcloudwatchloggingoptions">Analytics<wbr>Application<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The CloudWatch log stream options to monitor application errors.
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cloudwatch<wbr>Logging<wbr>Options</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationcloudwatchloggingoptions">Analytics<wbr>Application<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args?</a></span>
+    </dt>
+    <dd>{{% md %}}The CloudWatch log stream options to monitor application errors.
 See CloudWatch Logging Options below for more details.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Code</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-SQL Code to transform input data, and generate output.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Code</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}SQL Code to transform input data, and generate output.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Create<wbr>Timestamp</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The Timestamp when the application version was created.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Create<wbr>Timestamp</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The Timestamp when the application version was created.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Description</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Description of the application.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Description of the application.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Inputs</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationinputs">Analytics<wbr>Application<wbr>Inputs<wbr>Args?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Input configuration of the application. See Inputs below for more details.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Inputs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationinputs">Analytics<wbr>Application<wbr>Inputs<wbr>Args?</a></span>
+    </dt>
+    <dd>{{% md %}}Input configuration of the application. See Inputs below for more details.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Last<wbr>Update<wbr>Timestamp</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The Timestamp when the application was last updated.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Last<wbr>Update<wbr>Timestamp</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The Timestamp when the application was last updated.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Name</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Name of the Kinesis Analytics Application.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Name of the Kinesis Analytics Application.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Outputs</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationoutput">List&lt;Analytics<wbr>Application<wbr>Output<wbr>Args&gt;?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Output destination configuration of the application. See Outputs below for more details.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Outputs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationoutput">List&lt;Analytics<wbr>Application<wbr>Output<wbr>Args&gt;?</a></span>
+    </dt>
+    <dd>{{% md %}}Output destination configuration of the application. See Outputs below for more details.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Reference<wbr>Data<wbr>Sources</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationreferencedatasources">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Args?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-An S3 Reference Data Source for the application.
+    <dt class="property-optional"
+            title="Optional">
+        <span>Reference<wbr>Data<wbr>Sources</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasources">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Args?</a></span>
+    </dt>
+    <dd>{{% md %}}An S3 Reference Data Source for the application.
 See Reference Data Sources below for more details.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Status</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The Status of the application.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Status</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The Status of the application.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Tags</td>
-            <td class="align-top">
-                
-                <code>Dictionary<string, object>?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Key-value mapping of tags for the Kinesis Analytics Application.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary<string, object>?</span>
+    </dt>
+    <dd>{{% md %}}Key-value mapping of tags for the Kinesis Analytics Application.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Version</td>
-            <td class="align-top">
-                
-                <code>int?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The Version of the application.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int?</span>
+    </dt>
+    <dd>{{% md %}}The Version of the application.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language go %}}
+<dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Kinesis Analytics Appliation.
+{{% /md %}}</dd>
 
-{{% lang go %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Arn</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ARN of the Kinesis Analytics Appliation.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Cloudwatch<wbr>Logging<wbr>Options</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationcloudwatchloggingoptions">*Analytics<wbr>Application<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The CloudWatch log stream options to monitor application errors.
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cloudwatch<wbr>Logging<wbr>Options</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationcloudwatchloggingoptions">*Analytics<wbr>Application<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}The CloudWatch log stream options to monitor application errors.
 See CloudWatch Logging Options below for more details.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Code</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-SQL Code to transform input data, and generate output.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Code</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}SQL Code to transform input data, and generate output.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Create<wbr>Timestamp</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The Timestamp when the application version was created.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Create<wbr>Timestamp</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The Timestamp when the application version was created.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Description</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Description of the application.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}Description of the application.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Inputs</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationinputs">*Analytics<wbr>Application<wbr>Inputs</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Input configuration of the application. See Inputs below for more details.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Inputs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationinputs">*Analytics<wbr>Application<wbr>Inputs</a></span>
+    </dt>
+    <dd>{{% md %}}Input configuration of the application. See Inputs below for more details.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Last<wbr>Update<wbr>Timestamp</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The Timestamp when the application was last updated.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Last<wbr>Update<wbr>Timestamp</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The Timestamp when the application was last updated.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Name</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Name of the Kinesis Analytics Application.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}Name of the Kinesis Analytics Application.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Outputs</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationoutput">[]Analytics<wbr>Application<wbr>Output</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Output destination configuration of the application. See Outputs below for more details.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Outputs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationoutput">[]Analytics<wbr>Application<wbr>Output</a></span>
+    </dt>
+    <dd>{{% md %}}Output destination configuration of the application. See Outputs below for more details.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Reference<wbr>Data<wbr>Sources</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationreferencedatasources">*Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-An S3 Reference Data Source for the application.
+    <dt class="property-optional"
+            title="Optional">
+        <span>Reference<wbr>Data<wbr>Sources</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasources">*Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources</a></span>
+    </dt>
+    <dd>{{% md %}}An S3 Reference Data Source for the application.
 See Reference Data Sources below for more details.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Status</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The Status of the application.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Status</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The Status of the application.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Tags</td>
-            <td class="align-top">
-                
-                <code>map[string]interface{}</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Key-value mapping of tags for the Kinesis Analytics Application.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}Key-value mapping of tags for the Kinesis Analytics Application.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Version</td>
-            <td class="align-top">
-                
-                <code>*int</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The Version of the application.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*int</span>
+    </dt>
+    <dd>{{% md %}}The Version of the application.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">ARN?</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Kinesis Analytics Appliation.
+{{% /md %}}</dd>
 
-{{% lang nodejs %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">arn</td>
-            <td class="align-top">
-                
-                <code>ARN?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ARN of the Kinesis Analytics Appliation.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">cloudwatch<wbr>Logging<wbr>Options</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationcloudwatchloggingoptions">Analytics<wbr>Application<wbr>Cloudwatch<wbr>Logging<wbr>Options?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The CloudWatch log stream options to monitor application errors.
+    <dt class="property-optional"
+            title="Optional">
+        <span>cloudwatch<wbr>Logging<wbr>Options</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationcloudwatchloggingoptions">Analytics<wbr>Application<wbr>Cloudwatch<wbr>Logging<wbr>Options?</a></span>
+    </dt>
+    <dd>{{% md %}}The CloudWatch log stream options to monitor application errors.
 See CloudWatch Logging Options below for more details.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">code</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-SQL Code to transform input data, and generate output.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>code</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}SQL Code to transform input data, and generate output.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">create<wbr>Timestamp</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The Timestamp when the application version was created.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>create<wbr>Timestamp</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The Timestamp when the application version was created.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">description</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Description of the application.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Description of the application.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">inputs</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationinputs">Analytics<wbr>Application<wbr>Inputs?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Input configuration of the application. See Inputs below for more details.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>inputs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationinputs">Analytics<wbr>Application<wbr>Inputs?</a></span>
+    </dt>
+    <dd>{{% md %}}Input configuration of the application. See Inputs below for more details.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">last<wbr>Update<wbr>Timestamp</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The Timestamp when the application was last updated.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>last<wbr>Update<wbr>Timestamp</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The Timestamp when the application was last updated.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">name</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Name of the Kinesis Analytics Application.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Name of the Kinesis Analytics Application.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">outputs</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationoutput">Analytics<wbr>Application<wbr>Output[]?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Output destination configuration of the application. See Outputs below for more details.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>outputs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationoutput">Analytics<wbr>Application<wbr>Output[]?</a></span>
+    </dt>
+    <dd>{{% md %}}Output destination configuration of the application. See Outputs below for more details.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">reference<wbr>Data<wbr>Sources</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationreferencedatasources">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-An S3 Reference Data Source for the application.
+    <dt class="property-optional"
+            title="Optional">
+        <span>reference<wbr>Data<wbr>Sources</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasources">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources?</a></span>
+    </dt>
+    <dd>{{% md %}}An S3 Reference Data Source for the application.
 See Reference Data Sources below for more details.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">status</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The Status of the application.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>status</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The Status of the application.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">tags</td>
-            <td class="align-top">
-                
-                <code>{[key: string]: any}?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Key-value mapping of tags for the Kinesis Analytics Application.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}?</span>
+    </dt>
+    <dd>{{% md %}}Key-value mapping of tags for the Kinesis Analytics Application.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">version</td>
-            <td class="align-top">
-                
-                <code>number?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The Version of the application.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number?</span>
+    </dt>
+    <dd>{{% md %}}The Version of the application.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Kinesis Analytics Appliation.
+{{% /md %}}</dd>
 
-{{% lang python %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">arn</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ARN of the Kinesis Analytics Appliation.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">cloudwatch_<wbr>logging_<wbr>options</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationcloudwatchloggingoptions">Dict[Analytics<wbr>Application<wbr>Cloudwatch<wbr>Logging<wbr>Options]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The CloudWatch log stream options to monitor application errors.
+    <dt class="property-optional"
+            title="Optional">
+        <span>cloudwatch_<wbr>logging_<wbr>options</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationcloudwatchloggingoptions">Dict[Analytics<wbr>Application<wbr>Cloudwatch<wbr>Logging<wbr>Options]</a></span>
+    </dt>
+    <dd>{{% md %}}The CloudWatch log stream options to monitor application errors.
 See CloudWatch Logging Options below for more details.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">code</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-SQL Code to transform input data, and generate output.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>code</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}SQL Code to transform input data, and generate output.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">create_<wbr>timestamp</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The Timestamp when the application version was created.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>create_<wbr>timestamp</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Timestamp when the application version was created.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">description</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Description of the application.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Description of the application.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">inputs</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationinputs">Dict[Analytics<wbr>Application<wbr>Inputs]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Input configuration of the application. See Inputs below for more details.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>inputs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationinputs">Dict[Analytics<wbr>Application<wbr>Inputs]</a></span>
+    </dt>
+    <dd>{{% md %}}Input configuration of the application. See Inputs below for more details.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">last_<wbr>update_<wbr>timestamp</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The Timestamp when the application was last updated.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>last_<wbr>update_<wbr>timestamp</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Timestamp when the application was last updated.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">name</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Name of the Kinesis Analytics Application.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of the Kinesis Analytics Application.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">outputs</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationoutput">List[Analytics<wbr>Application<wbr>Output]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Output destination configuration of the application. See Outputs below for more details.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>outputs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationoutput">List[Analytics<wbr>Application<wbr>Output]</a></span>
+    </dt>
+    <dd>{{% md %}}Output destination configuration of the application. See Outputs below for more details.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">reference_<wbr>data_<wbr>sources</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationreferencedatasources">Dict[Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-An S3 Reference Data Source for the application.
+    <dt class="property-optional"
+            title="Optional">
+        <span>reference_<wbr>data_<wbr>sources</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasources">Dict[Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources]</a></span>
+    </dt>
+    <dd>{{% md %}}An S3 Reference Data Source for the application.
 See Reference Data Sources below for more details.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">status</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The Status of the application.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>status</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Status of the application.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">tags</td>
-            <td class="align-top">
-                
-                <code>Dict[str, Any]</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Key-value mapping of tags for the Kinesis Analytics Application.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}Key-value mapping of tags for the Kinesis Analytics Application.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">version</td>
-            <td class="align-top">
-                
-                <code>float</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The Version of the application.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The Version of the application.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
+</dl>
+{{% /choosable %}}
 
 
 
@@ -2387,6512 +1644,3642 @@ The Version of the application.
 
 ## Supporting Types
 
-#### AnalyticsApplicationCloudwatchLoggingOptions
-{{% lang nodejs %}}
+<h4>Analytics<wbr>Application<wbr>Cloudwatch<wbr>Logging<wbr>Options</h4>
+{{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AnalyticsApplicationCloudwatchLoggingOptions">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AnalyticsApplicationCloudwatchLoggingOptions">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
-{{% lang go %}}
+{{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/kinesis?tab=doc#AnalyticsApplicationCloudwatchLoggingOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/kinesis?tab=doc#AnalyticsApplicationCloudwatchLoggingOptionsOutput">output</a> API doc for this type.
-{{% /lang %}}
-
-{{% lang csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.AnalyticsApplicationCloudwatchLoggingOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.AnalyticsApplicationCloudwatchLoggingOptions.html">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
 
 
-{{< langchoose csharp nojavascript >}}
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Kinesis Analytics Application.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Log<wbr>Stream<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the CloudWatch Log Stream.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Role<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM Role used to send application messages.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% lang csharp %}}
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Kinesis Analytics Application.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Log<wbr>Stream<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the CloudWatch Log Stream.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Role<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM Role used to send application messages.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Id</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ARN of the Kinesis Analytics Application.
- {{% /md %}}
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Log<wbr>Stream<wbr>Arn</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Kinesis Analytics Application.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Role<wbr>Arn</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
+    <dt class="property-required"
+            title="Required">
+        <span>log<wbr>Stream<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the CloudWatch Log Stream.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+    <dt class="property-required"
+            title="Required">
+        <span>role<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM Role used to send application messages.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Kinesis Analytics Application.
+{{% /md %}}</dd>
 
-{{% lang go %}}
+    <dt class="property-required"
+            title="Required">
+        <span>log<wbr>Stream<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the CloudWatch Log Stream.
+{{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>role_<wbr>arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM Role used to send application messages.
+{{% /md %}}</dd>
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Id</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ARN of the Kinesis Analytics Application.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Log<wbr>Stream<wbr>Arn</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Role<wbr>Arn</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang nodejs %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">id</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ARN of the Kinesis Analytics Application.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">log<wbr>Stream<wbr>Arn</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">role<wbr>Arn</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang python %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">id</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ARN of the Kinesis Analytics Application.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">log<wbr>Stream<wbr>Arn</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">role_<wbr>arn</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
+</dl>
+{{% /choosable %}}
 
 
 
 
 
-#### AnalyticsApplicationInputs
-{{% lang nodejs %}}
+<h4>Analytics<wbr>Application<wbr>Inputs</h4>
+{{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AnalyticsApplicationInputs">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AnalyticsApplicationInputs">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
-{{% lang go %}}
+{{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/kinesis?tab=doc#AnalyticsApplicationInputsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/kinesis?tab=doc#AnalyticsApplicationInputsOutput">output</a> API doc for this type.
-{{% /lang %}}
-
-{{% lang csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.AnalyticsApplicationInputsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.AnalyticsApplicationInputs.html">output</a> API doc for this type.
-{{% /lang %}}
-
-
-
-{{< langchoose csharp nojavascript >}}
-
-
-{{% lang csharp %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Id</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ARN of the Kinesis Analytics Application.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Kinesis<wbr>Firehose</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationinputskinesisfirehose">Analytics<wbr>Application<wbr>Inputs<wbr>Kinesis<wbr>Firehose<wbr>Args?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Kinesis<wbr>Stream</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationinputskinesisstream">Analytics<wbr>Application<wbr>Inputs<wbr>Kinesis<wbr>Stream<wbr>Args?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Name<wbr>Prefix</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Parallelism</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationinputsparallelism">Analytics<wbr>Application<wbr>Inputs<wbr>Parallelism<wbr>Args?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Processing<wbr>Configuration</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationinputsprocessingconfiguration">Analytics<wbr>Application<wbr>Inputs<wbr>Processing<wbr>Configuration<wbr>Args?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Schema</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationinputsschema">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Args</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Starting<wbr>Position<wbr>Configurations</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationinputsstartingpositionconfiguration">List&lt;Analytics<wbr>Application<wbr>Inputs<wbr>Starting<wbr>Position<wbr>Configuration<wbr>Args&gt;?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Stream<wbr>Names</td>
-            <td class="align-top">
-                
-                <code>List<string>?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang go %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Id</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ARN of the Kinesis Analytics Application.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Kinesis<wbr>Firehose</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationinputskinesisfirehose">*Analytics<wbr>Application<wbr>Inputs<wbr>Kinesis<wbr>Firehose</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Kinesis<wbr>Stream</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationinputskinesisstream">*Analytics<wbr>Application<wbr>Inputs<wbr>Kinesis<wbr>Stream</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Name<wbr>Prefix</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Parallelism</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationinputsparallelism">*Analytics<wbr>Application<wbr>Inputs<wbr>Parallelism</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Processing<wbr>Configuration</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationinputsprocessingconfiguration">*Analytics<wbr>Application<wbr>Inputs<wbr>Processing<wbr>Configuration</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Schema</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationinputsschema">Analytics<wbr>Application<wbr>Inputs<wbr>Schema</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Starting<wbr>Position<wbr>Configurations</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationinputsstartingpositionconfiguration">[]Analytics<wbr>Application<wbr>Inputs<wbr>Starting<wbr>Position<wbr>Configuration</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Stream<wbr>Names</td>
-            <td class="align-top">
-                
-                <code>[]string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang nodejs %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">id</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ARN of the Kinesis Analytics Application.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">kinesis<wbr>Firehose</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationinputskinesisfirehose">Analytics<wbr>Application<wbr>Inputs<wbr>Kinesis<wbr>Firehose?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">kinesis<wbr>Stream</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationinputskinesisstream">Analytics<wbr>Application<wbr>Inputs<wbr>Kinesis<wbr>Stream?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">name<wbr>Prefix</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">parallelism</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationinputsparallelism">Analytics<wbr>Application<wbr>Inputs<wbr>Parallelism?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">processing<wbr>Configuration</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationinputsprocessingconfiguration">Analytics<wbr>Application<wbr>Inputs<wbr>Processing<wbr>Configuration?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">schema</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationinputsschema">Analytics<wbr>Application<wbr>Inputs<wbr>Schema</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">starting<wbr>Position<wbr>Configurations</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationinputsstartingpositionconfiguration">Analytics<wbr>Application<wbr>Inputs<wbr>Starting<wbr>Position<wbr>Configuration[]?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">stream<wbr>Names</td>
-            <td class="align-top">
-                
-                <code>string[]?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang python %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">id</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ARN of the Kinesis Analytics Application.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">kinesis<wbr>Firehose</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationinputskinesisfirehose">Dict[Analytics<wbr>Application<wbr>Inputs<wbr>Kinesis<wbr>Firehose]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">kinesis<wbr>Stream</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationinputskinesisstream">Dict[Analytics<wbr>Application<wbr>Inputs<wbr>Kinesis<wbr>Stream]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">name_<wbr>prefix</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">parallelism</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationinputsparallelism">Dict[Analytics<wbr>Application<wbr>Inputs<wbr>Parallelism]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">processing<wbr>Configuration</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationinputsprocessingconfiguration">Dict[Analytics<wbr>Application<wbr>Inputs<wbr>Processing<wbr>Configuration]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">schema</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationinputsschema">Dict[Analytics<wbr>Application<wbr>Inputs<wbr>Schema]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">starting<wbr>Position<wbr>Configurations</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationinputsstartingpositionconfiguration">List[Analytics<wbr>Application<wbr>Inputs<wbr>Starting<wbr>Position<wbr>Configuration]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">stream<wbr>Names</td>
-            <td class="align-top">
-                
-                <code>List[str]</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-
-
-
-#### AnalyticsApplicationInputsKinesisFirehose
-{{% lang nodejs %}}
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Kinesis Analytics Application.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Kinesis<wbr>Firehose</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationinputskinesisfirehose">Analytics<wbr>Application<wbr>Inputs<wbr>Kinesis<wbr>Firehose<wbr>Args?</a></span>
+    </dt>
+    <dd>{{% md %}}The Kinesis Firehose configuration for the streaming source. Conflicts with `kinesis_stream`.
+See Kinesis Firehose below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Kinesis<wbr>Stream</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationinputskinesisstream">Analytics<wbr>Application<wbr>Inputs<wbr>Kinesis<wbr>Stream<wbr>Args?</a></span>
+    </dt>
+    <dd>{{% md %}}The Kinesis Stream configuration for the streaming source. Conflicts with `kinesis_firehose`.
+See Kinesis Stream below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Name<wbr>Prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Name Prefix to use when creating an in-application stream.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Parallelism</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsparallelism">Analytics<wbr>Application<wbr>Inputs<wbr>Parallelism<wbr>Args?</a></span>
+    </dt>
+    <dd>{{% md %}}The number of Parallel in-application streams to create.
+See Parallelism below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Processing<wbr>Configuration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsprocessingconfiguration">Analytics<wbr>Application<wbr>Inputs<wbr>Processing<wbr>Configuration<wbr>Args?</a></span>
+    </dt>
+    <dd>{{% md %}}The Processing Configuration to transform records as they are received from the stream.
+See Processing Configuration below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Schema</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsschema">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The Schema format of the data in the streaming source. See Source Schema below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Starting<wbr>Position<wbr>Configurations</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsstartingpositionconfiguration">List&lt;Analytics<wbr>Application<wbr>Inputs<wbr>Starting<wbr>Position<wbr>Configuration<wbr>Args&gt;?</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Stream<wbr>Names</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List<string>?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Kinesis Analytics Application.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Kinesis<wbr>Firehose</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationinputskinesisfirehose">*Analytics<wbr>Application<wbr>Inputs<wbr>Kinesis<wbr>Firehose</a></span>
+    </dt>
+    <dd>{{% md %}}The Kinesis Firehose configuration for the streaming source. Conflicts with `kinesis_stream`.
+See Kinesis Firehose below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Kinesis<wbr>Stream</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationinputskinesisstream">*Analytics<wbr>Application<wbr>Inputs<wbr>Kinesis<wbr>Stream</a></span>
+    </dt>
+    <dd>{{% md %}}The Kinesis Stream configuration for the streaming source. Conflicts with `kinesis_firehose`.
+See Kinesis Stream below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Name<wbr>Prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Name Prefix to use when creating an in-application stream.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Parallelism</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsparallelism">*Analytics<wbr>Application<wbr>Inputs<wbr>Parallelism</a></span>
+    </dt>
+    <dd>{{% md %}}The number of Parallel in-application streams to create.
+See Parallelism below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Processing<wbr>Configuration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsprocessingconfiguration">*Analytics<wbr>Application<wbr>Inputs<wbr>Processing<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}The Processing Configuration to transform records as they are received from the stream.
+See Processing Configuration below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Schema</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsschema">Analytics<wbr>Application<wbr>Inputs<wbr>Schema</a></span>
+    </dt>
+    <dd>{{% md %}}The Schema format of the data in the streaming source. See Source Schema below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Starting<wbr>Position<wbr>Configurations</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsstartingpositionconfiguration">[]Analytics<wbr>Application<wbr>Inputs<wbr>Starting<wbr>Position<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Stream<wbr>Names</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Kinesis Analytics Application.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>kinesis<wbr>Firehose</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationinputskinesisfirehose">Analytics<wbr>Application<wbr>Inputs<wbr>Kinesis<wbr>Firehose?</a></span>
+    </dt>
+    <dd>{{% md %}}The Kinesis Firehose configuration for the streaming source. Conflicts with `kinesis_stream`.
+See Kinesis Firehose below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>kinesis<wbr>Stream</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationinputskinesisstream">Analytics<wbr>Application<wbr>Inputs<wbr>Kinesis<wbr>Stream?</a></span>
+    </dt>
+    <dd>{{% md %}}The Kinesis Stream configuration for the streaming source. Conflicts with `kinesis_firehose`.
+See Kinesis Stream below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>name<wbr>Prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Name Prefix to use when creating an in-application stream.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>parallelism</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsparallelism">Analytics<wbr>Application<wbr>Inputs<wbr>Parallelism?</a></span>
+    </dt>
+    <dd>{{% md %}}The number of Parallel in-application streams to create.
+See Parallelism below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>processing<wbr>Configuration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsprocessingconfiguration">Analytics<wbr>Application<wbr>Inputs<wbr>Processing<wbr>Configuration?</a></span>
+    </dt>
+    <dd>{{% md %}}The Processing Configuration to transform records as they are received from the stream.
+See Processing Configuration below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>schema</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsschema">Analytics<wbr>Application<wbr>Inputs<wbr>Schema</a></span>
+    </dt>
+    <dd>{{% md %}}The Schema format of the data in the streaming source. See Source Schema below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>starting<wbr>Position<wbr>Configurations</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsstartingpositionconfiguration">Analytics<wbr>Application<wbr>Inputs<wbr>Starting<wbr>Position<wbr>Configuration[]?</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>stream<wbr>Names</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Kinesis Analytics Application.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>kinesis<wbr>Firehose</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationinputskinesisfirehose">Dict[Analytics<wbr>Application<wbr>Inputs<wbr>Kinesis<wbr>Firehose]</a></span>
+    </dt>
+    <dd>{{% md %}}The Kinesis Firehose configuration for the streaming source. Conflicts with `kinesis_stream`.
+See Kinesis Firehose below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>kinesis<wbr>Stream</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationinputskinesisstream">Dict[Analytics<wbr>Application<wbr>Inputs<wbr>Kinesis<wbr>Stream]</a></span>
+    </dt>
+    <dd>{{% md %}}The Kinesis Stream configuration for the streaming source. Conflicts with `kinesis_firehose`.
+See Kinesis Stream below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>name_<wbr>prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Name Prefix to use when creating an in-application stream.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>parallelism</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsparallelism">Dict[Analytics<wbr>Application<wbr>Inputs<wbr>Parallelism]</a></span>
+    </dt>
+    <dd>{{% md %}}The number of Parallel in-application streams to create.
+See Parallelism below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>processing<wbr>Configuration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsprocessingconfiguration">Dict[Analytics<wbr>Application<wbr>Inputs<wbr>Processing<wbr>Configuration]</a></span>
+    </dt>
+    <dd>{{% md %}}The Processing Configuration to transform records as they are received from the stream.
+See Processing Configuration below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>schema</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsschema">Dict[Analytics<wbr>Application<wbr>Inputs<wbr>Schema]</a></span>
+    </dt>
+    <dd>{{% md %}}The Schema format of the data in the streaming source. See Source Schema below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>starting<wbr>Position<wbr>Configurations</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsstartingpositionconfiguration">List[Analytics<wbr>Application<wbr>Inputs<wbr>Starting<wbr>Position<wbr>Configuration]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>stream<wbr>Names</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4>Analytics<wbr>Application<wbr>Inputs<wbr>Kinesis<wbr>Firehose</h4>
+{{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AnalyticsApplicationInputsKinesisFirehose">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AnalyticsApplicationInputsKinesisFirehose">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
-{{% lang go %}}
+{{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/kinesis?tab=doc#AnalyticsApplicationInputsKinesisFirehoseArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/kinesis?tab=doc#AnalyticsApplicationInputsKinesisFirehoseOutput">output</a> API doc for this type.
-{{% /lang %}}
-
-{{% lang csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.AnalyticsApplicationInputsKinesisFirehoseArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.AnalyticsApplicationInputsKinesisFirehose.html">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
 
 
-{{< langchoose csharp nojavascript >}}
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Resource<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Kinesis Firehose delivery stream.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Role<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM Role used to access the stream.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% lang csharp %}}
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Resource<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Kinesis Firehose delivery stream.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Role<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM Role used to access the stream.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Resource<wbr>Arn</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Role<wbr>Arn</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
+    <dt class="property-required"
+            title="Required">
+        <span>resource<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Kinesis Firehose delivery stream.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+    <dt class="property-required"
+            title="Required">
+        <span>role<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM Role used to access the stream.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>resource_<wbr>arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Kinesis Firehose delivery stream.
+{{% /md %}}</dd>
 
-{{% lang go %}}
+    <dt class="property-required"
+            title="Required">
+        <span>role_<wbr>arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM Role used to access the stream.
+{{% /md %}}</dd>
 
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Resource<wbr>Arn</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Role<wbr>Arn</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang nodejs %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">resource<wbr>Arn</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">role<wbr>Arn</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang python %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">resource_<wbr>arn</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">role_<wbr>arn</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
+</dl>
+{{% /choosable %}}
 
 
 
 
 
-#### AnalyticsApplicationInputsKinesisStream
-{{% lang nodejs %}}
+<h4>Analytics<wbr>Application<wbr>Inputs<wbr>Kinesis<wbr>Stream</h4>
+{{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AnalyticsApplicationInputsKinesisStream">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AnalyticsApplicationInputsKinesisStream">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
-{{% lang go %}}
+{{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/kinesis?tab=doc#AnalyticsApplicationInputsKinesisStreamArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/kinesis?tab=doc#AnalyticsApplicationInputsKinesisStreamOutput">output</a> API doc for this type.
-{{% /lang %}}
-
-{{% lang csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.AnalyticsApplicationInputsKinesisStreamArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.AnalyticsApplicationInputsKinesisStream.html">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
 
 
-{{< langchoose csharp nojavascript >}}
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Resource<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Kinesis Stream.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Role<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM Role used to access the stream.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% lang csharp %}}
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Resource<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Kinesis Stream.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Role<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM Role used to access the stream.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Resource<wbr>Arn</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Role<wbr>Arn</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
+    <dt class="property-required"
+            title="Required">
+        <span>resource<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Kinesis Stream.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+    <dt class="property-required"
+            title="Required">
+        <span>role<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM Role used to access the stream.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>resource_<wbr>arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Kinesis Stream.
+{{% /md %}}</dd>
 
-{{% lang go %}}
+    <dt class="property-required"
+            title="Required">
+        <span>role_<wbr>arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM Role used to access the stream.
+{{% /md %}}</dd>
 
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Resource<wbr>Arn</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Role<wbr>Arn</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang nodejs %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">resource<wbr>Arn</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">role<wbr>Arn</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang python %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">resource_<wbr>arn</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">role_<wbr>arn</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
+</dl>
+{{% /choosable %}}
 
 
 
 
 
-#### AnalyticsApplicationInputsParallelism
-{{% lang nodejs %}}
+<h4>Analytics<wbr>Application<wbr>Inputs<wbr>Parallelism</h4>
+{{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AnalyticsApplicationInputsParallelism">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AnalyticsApplicationInputsParallelism">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
-{{% lang go %}}
+{{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/kinesis?tab=doc#AnalyticsApplicationInputsParallelismArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/kinesis?tab=doc#AnalyticsApplicationInputsParallelismOutput">output</a> API doc for this type.
-{{% /lang %}}
-
-{{% lang csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.AnalyticsApplicationInputsParallelismArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.AnalyticsApplicationInputsParallelism.html">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
 
 
-{{< langchoose csharp nojavascript >}}
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Count</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The Count of streams.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% lang csharp %}}
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Count</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The Count of streams.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Count</td>
-            <td class="align-top">
-                
-                <code>int</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+    <dt class="property-required"
+            title="Required">
+        <span>count</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The Count of streams.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>count</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The Count of streams.
+{{% /md %}}</dd>
 
-{{% lang go %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Count</td>
-            <td class="align-top">
-                
-                <code>int</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang nodejs %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">count</td>
-            <td class="align-top">
-                
-                <code>number</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang python %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">count</td>
-            <td class="align-top">
-                
-                <code>float</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
+</dl>
+{{% /choosable %}}
 
 
 
 
 
-#### AnalyticsApplicationInputsProcessingConfiguration
-{{% lang nodejs %}}
+<h4>Analytics<wbr>Application<wbr>Inputs<wbr>Processing<wbr>Configuration</h4>
+{{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AnalyticsApplicationInputsProcessingConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AnalyticsApplicationInputsProcessingConfiguration">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
-{{% lang go %}}
+{{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/kinesis?tab=doc#AnalyticsApplicationInputsProcessingConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/kinesis?tab=doc#AnalyticsApplicationInputsProcessingConfigurationOutput">output</a> API doc for this type.
-{{% /lang %}}
-
-{{% lang csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.AnalyticsApplicationInputsProcessingConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.AnalyticsApplicationInputsProcessingConfiguration.html">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
 
 
-{{< langchoose csharp nojavascript >}}
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Lambda</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsprocessingconfigurationlambda">Analytics<wbr>Application<wbr>Inputs<wbr>Processing<wbr>Configuration<wbr>Lambda<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The Lambda function configuration. See Lambda below for more details.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% lang csharp %}}
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Lambda</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsprocessingconfigurationlambda">Analytics<wbr>Application<wbr>Inputs<wbr>Processing<wbr>Configuration<wbr>Lambda</a></span>
+    </dt>
+    <dd>{{% md %}}The Lambda function configuration. See Lambda below for more details.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Lambda</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationinputsprocessingconfigurationlambda">Analytics<wbr>Application<wbr>Inputs<wbr>Processing<wbr>Configuration<wbr>Lambda<wbr>Args</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+    <dt class="property-required"
+            title="Required">
+        <span>lambda</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsprocessingconfigurationlambda">Analytics<wbr>Application<wbr>Inputs<wbr>Processing<wbr>Configuration<wbr>Lambda</a></span>
+    </dt>
+    <dd>{{% md %}}The Lambda function configuration. See Lambda below for more details.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>lambda_</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsprocessingconfigurationlambda">Dict[Analytics<wbr>Application<wbr>Inputs<wbr>Processing<wbr>Configuration<wbr>Lambda]</a></span>
+    </dt>
+    <dd>{{% md %}}The Lambda function configuration. See Lambda below for more details.
+{{% /md %}}</dd>
 
-{{% lang go %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Lambda</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationinputsprocessingconfigurationlambda">Analytics<wbr>Application<wbr>Inputs<wbr>Processing<wbr>Configuration<wbr>Lambda</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang nodejs %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">lambda</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationinputsprocessingconfigurationlambda">Analytics<wbr>Application<wbr>Inputs<wbr>Processing<wbr>Configuration<wbr>Lambda</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang python %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">lambda_</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationinputsprocessingconfigurationlambda">Dict[Analytics<wbr>Application<wbr>Inputs<wbr>Processing<wbr>Configuration<wbr>Lambda]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
+</dl>
+{{% /choosable %}}
 
 
 
 
 
-#### AnalyticsApplicationInputsProcessingConfigurationLambda
-{{% lang nodejs %}}
+<h4>Analytics<wbr>Application<wbr>Inputs<wbr>Processing<wbr>Configuration<wbr>Lambda</h4>
+{{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AnalyticsApplicationInputsProcessingConfigurationLambda">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AnalyticsApplicationInputsProcessingConfigurationLambda">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
-{{% lang go %}}
+{{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/kinesis?tab=doc#AnalyticsApplicationInputsProcessingConfigurationLambdaArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/kinesis?tab=doc#AnalyticsApplicationInputsProcessingConfigurationLambdaOutput">output</a> API doc for this type.
-{{% /lang %}}
-
-{{% lang csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.AnalyticsApplicationInputsProcessingConfigurationLambdaArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.AnalyticsApplicationInputsProcessingConfigurationLambda.html">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
 
 
-{{< langchoose csharp nojavascript >}}
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Resource<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Lambda function.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Role<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM Role used to access the Lambda function.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% lang csharp %}}
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Resource<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Lambda function.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Role<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM Role used to access the Lambda function.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Resource<wbr>Arn</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Role<wbr>Arn</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
+    <dt class="property-required"
+            title="Required">
+        <span>resource<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Lambda function.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+    <dt class="property-required"
+            title="Required">
+        <span>role<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM Role used to access the Lambda function.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>resource_<wbr>arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Lambda function.
+{{% /md %}}</dd>
 
-{{% lang go %}}
+    <dt class="property-required"
+            title="Required">
+        <span>role_<wbr>arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM Role used to access the Lambda function.
+{{% /md %}}</dd>
 
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Resource<wbr>Arn</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Role<wbr>Arn</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang nodejs %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">resource<wbr>Arn</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">role<wbr>Arn</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang python %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">resource_<wbr>arn</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">role_<wbr>arn</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
+</dl>
+{{% /choosable %}}
 
 
 
 
 
-#### AnalyticsApplicationInputsSchema
-{{% lang nodejs %}}
+<h4>Analytics<wbr>Application<wbr>Inputs<wbr>Schema</h4>
+{{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AnalyticsApplicationInputsSchema">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AnalyticsApplicationInputsSchema">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
-{{% lang go %}}
+{{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/kinesis?tab=doc#AnalyticsApplicationInputsSchemaArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/kinesis?tab=doc#AnalyticsApplicationInputsSchemaOutput">output</a> API doc for this type.
-{{% /lang %}}
-
-{{% lang csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.AnalyticsApplicationInputsSchemaArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.AnalyticsApplicationInputsSchema.html">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
 
 
-{{< langchoose csharp nojavascript >}}
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Record<wbr>Columns</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsschemarecordcolumn">List&lt;Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Column<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The Record Column mapping for the streaming source data element.
+See Record Columns below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Record<wbr>Encoding</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The Encoding of the record in the streaming source.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Record<wbr>Format</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsschemarecordformat">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The Record Format and mapping information to schematize a record.
+See Record Format below for more details.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% lang csharp %}}
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Record<wbr>Columns</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsschemarecordcolumn">[]Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Column</a></span>
+    </dt>
+    <dd>{{% md %}}The Record Column mapping for the streaming source data element.
+See Record Columns below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Record<wbr>Encoding</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The Encoding of the record in the streaming source.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Record<wbr>Format</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsschemarecordformat">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format</a></span>
+    </dt>
+    <dd>{{% md %}}The Record Format and mapping information to schematize a record.
+See Record Format below for more details.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Record<wbr>Columns</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationinputsschemarecordcolumn">List&lt;Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Column<wbr>Args&gt;</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Record<wbr>Encoding</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
+    <dt class="property-required"
+            title="Required">
+        <span>record<wbr>Columns</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsschemarecordcolumn">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Column[]</a></span>
+    </dt>
+    <dd>{{% md %}}The Record Column mapping for the streaming source data element.
+See Record Columns below for more details.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Record<wbr>Format</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationinputsschemarecordformat">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Args</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>record<wbr>Encoding</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The Encoding of the record in the streaming source.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+    <dt class="property-required"
+            title="Required">
+        <span>record<wbr>Format</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsschemarecordformat">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format</a></span>
+    </dt>
+    <dd>{{% md %}}The Record Format and mapping information to schematize a record.
+See Record Format below for more details.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>record<wbr>Columns</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsschemarecordcolumn">List[Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Column]</a></span>
+    </dt>
+    <dd>{{% md %}}The Record Column mapping for the streaming source data element.
+See Record Columns below for more details.
+{{% /md %}}</dd>
 
-{{% lang go %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>record<wbr>Encoding</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Encoding of the record in the streaming source.
+{{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>record<wbr>Format</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsschemarecordformat">Dict[Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format]</a></span>
+    </dt>
+    <dd>{{% md %}}The Record Format and mapping information to schematize a record.
+See Record Format below for more details.
+{{% /md %}}</dd>
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Record<wbr>Columns</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationinputsschemarecordcolumn">[]Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Column</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Record<wbr>Encoding</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Record<wbr>Format</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationinputsschemarecordformat">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang nodejs %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">record<wbr>Columns</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationinputsschemarecordcolumn">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Column[]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">record<wbr>Encoding</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">record<wbr>Format</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationinputsschemarecordformat">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang python %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">record<wbr>Columns</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationinputsschemarecordcolumn">List[Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Column]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">record<wbr>Encoding</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">record<wbr>Format</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationinputsschemarecordformat">Dict[Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
+</dl>
+{{% /choosable %}}
 
 
 
 
 
-#### AnalyticsApplicationInputsSchemaRecordColumn
-{{% lang nodejs %}}
+<h4>Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Column</h4>
+{{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AnalyticsApplicationInputsSchemaRecordColumn">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AnalyticsApplicationInputsSchemaRecordColumn">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
-{{% lang go %}}
+{{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/kinesis?tab=doc#AnalyticsApplicationInputsSchemaRecordColumnArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/kinesis?tab=doc#AnalyticsApplicationInputsSchemaRecordColumnOutput">output</a> API doc for this type.
-{{% /lang %}}
-
-{{% lang csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.AnalyticsApplicationInputsSchemaRecordColumnArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.AnalyticsApplicationInputsSchemaRecordColumn.html">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
 
 
-{{< langchoose csharp nojavascript >}}
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Mapping</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The Mapping reference to the data element.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the column.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Sql<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The SQL Type of the column.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% lang csharp %}}
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Mapping</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The Mapping reference to the data element.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the column.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Sql<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The SQL Type of the column.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Mapping</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Name</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-Name of the Kinesis Analytics Application.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>mapping</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The Mapping reference to the data element.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Sql<wbr>Type</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
+    <dt class="property-required"
+            title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the column.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+    <dt class="property-required"
+            title="Required">
+        <span>sql<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The SQL Type of the column.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>mapping</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Mapping reference to the data element.
+{{% /md %}}</dd>
 
-{{% lang go %}}
+    <dt class="property-required"
+            title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of the column.
+{{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>sql<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The SQL Type of the column.
+{{% /md %}}</dd>
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Mapping</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Name</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-Name of the Kinesis Analytics Application.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Sql<wbr>Type</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang nodejs %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">mapping</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">name</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-Name of the Kinesis Analytics Application.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">sql<wbr>Type</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang python %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">mapping</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">name</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-Name of the Kinesis Analytics Application.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">sql<wbr>Type</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
+</dl>
+{{% /choosable %}}
 
 
 
 
 
-#### AnalyticsApplicationInputsSchemaRecordFormat
-{{% lang nodejs %}}
+<h4>Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format</h4>
+{{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AnalyticsApplicationInputsSchemaRecordFormat">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AnalyticsApplicationInputsSchemaRecordFormat">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
-{{% lang go %}}
+{{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/kinesis?tab=doc#AnalyticsApplicationInputsSchemaRecordFormatArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/kinesis?tab=doc#AnalyticsApplicationInputsSchemaRecordFormatOutput">output</a> API doc for this type.
-{{% /lang %}}
-
-{{% lang csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.AnalyticsApplicationInputsSchemaRecordFormatArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.AnalyticsApplicationInputsSchemaRecordFormat.html">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
 
 
-{{< langchoose csharp nojavascript >}}
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Mapping<wbr>Parameters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsschemarecordformatmappingparameters">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Args?</a></span>
+    </dt>
+    <dd>{{% md %}}The Mapping Information for the record format.
+See Mapping Parameters below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Record<wbr>Format<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The type of Record Format. Can be `CSV` or `JSON`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% lang csharp %}}
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Mapping<wbr>Parameters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsschemarecordformatmappingparameters">*Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters</a></span>
+    </dt>
+    <dd>{{% md %}}The Mapping Information for the record format.
+See Mapping Parameters below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Record<wbr>Format<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The type of Record Format. Can be `CSV` or `JSON`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Mapping<wbr>Parameters</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationinputsschemarecordformatmappingparameters">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Args?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Record<wbr>Format<wbr>Type</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>mapping<wbr>Parameters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsschemarecordformatmappingparameters">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters?</a></span>
+    </dt>
+    <dd>{{% md %}}The Mapping Information for the record format.
+See Mapping Parameters below for more details.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+    <dt class="property-optional"
+            title="Optional">
+        <span>record<wbr>Format<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The type of Record Format. Can be `CSV` or `JSON`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>mapping<wbr>Parameters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsschemarecordformatmappingparameters">Dict[Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters]</a></span>
+    </dt>
+    <dd>{{% md %}}The Mapping Information for the record format.
+See Mapping Parameters below for more details.
+{{% /md %}}</dd>
 
-{{% lang go %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>record<wbr>Format<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of Record Format. Can be `CSV` or `JSON`.
+{{% /md %}}</dd>
 
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Mapping<wbr>Parameters</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationinputsschemarecordformatmappingparameters">*Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Record<wbr>Format<wbr>Type</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang nodejs %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">mapping<wbr>Parameters</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationinputsschemarecordformatmappingparameters">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">record<wbr>Format<wbr>Type</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang python %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">mapping<wbr>Parameters</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationinputsschemarecordformatmappingparameters">Dict[Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">record<wbr>Format<wbr>Type</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
+</dl>
+{{% /choosable %}}
 
 
 
 
 
-#### AnalyticsApplicationInputsSchemaRecordFormatMappingParameters
-{{% lang nodejs %}}
+<h4>Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters</h4>
+{{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AnalyticsApplicationInputsSchemaRecordFormatMappingParameters">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AnalyticsApplicationInputsSchemaRecordFormatMappingParameters">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
-{{% lang go %}}
+{{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/kinesis?tab=doc#AnalyticsApplicationInputsSchemaRecordFormatMappingParametersArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/kinesis?tab=doc#AnalyticsApplicationInputsSchemaRecordFormatMappingParametersOutput">output</a> API doc for this type.
-{{% /lang %}}
-
-{{% lang csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.AnalyticsApplicationInputsSchemaRecordFormatMappingParametersArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.AnalyticsApplicationInputsSchemaRecordFormatMappingParameters.html">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
 
 
-{{< langchoose csharp nojavascript >}}
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Csv</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsschemarecordformatmappingparameterscsv">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv<wbr>Args?</a></span>
+    </dt>
+    <dd>{{% md %}}Mapping information when the record format uses delimiters.
+See CSV Mapping Parameters below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Json</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsschemarecordformatmappingparametersjson">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json<wbr>Args?</a></span>
+    </dt>
+    <dd>{{% md %}}Mapping information when JSON is the record format on the streaming source.
+See JSON Mapping Parameters below for more details.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% lang csharp %}}
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Csv</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsschemarecordformatmappingparameterscsv">*Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv</a></span>
+    </dt>
+    <dd>{{% md %}}Mapping information when the record format uses delimiters.
+See CSV Mapping Parameters below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Json</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsschemarecordformatmappingparametersjson">*Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json</a></span>
+    </dt>
+    <dd>{{% md %}}Mapping information when JSON is the record format on the streaming source.
+See JSON Mapping Parameters below for more details.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Csv</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationinputsschemarecordformatmappingparameterscsv">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv<wbr>Args?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Json</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationinputsschemarecordformatmappingparametersjson">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json<wbr>Args?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>csv</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsschemarecordformatmappingparameterscsv">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv?</a></span>
+    </dt>
+    <dd>{{% md %}}Mapping information when the record format uses delimiters.
+See CSV Mapping Parameters below for more details.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+    <dt class="property-optional"
+            title="Optional">
+        <span>json</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsschemarecordformatmappingparametersjson">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json?</a></span>
+    </dt>
+    <dd>{{% md %}}Mapping information when JSON is the record format on the streaming source.
+See JSON Mapping Parameters below for more details.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>csv</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsschemarecordformatmappingparameterscsv">Dict[Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv]</a></span>
+    </dt>
+    <dd>{{% md %}}Mapping information when the record format uses delimiters.
+See CSV Mapping Parameters below for more details.
+{{% /md %}}</dd>
 
-{{% lang go %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>json</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationinputsschemarecordformatmappingparametersjson">Dict[Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json]</a></span>
+    </dt>
+    <dd>{{% md %}}Mapping information when JSON is the record format on the streaming source.
+See JSON Mapping Parameters below for more details.
+{{% /md %}}</dd>
 
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Csv</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationinputsschemarecordformatmappingparameterscsv">*Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Json</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationinputsschemarecordformatmappingparametersjson">*Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang nodejs %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">csv</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationinputsschemarecordformatmappingparameterscsv">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">json</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationinputsschemarecordformatmappingparametersjson">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang python %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">csv</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationinputsschemarecordformatmappingparameterscsv">Dict[Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">json</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationinputsschemarecordformatmappingparametersjson">Dict[Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
+</dl>
+{{% /choosable %}}
 
 
 
 
 
-#### AnalyticsApplicationInputsSchemaRecordFormatMappingParametersCsv
-{{% lang nodejs %}}
+<h4>Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv</h4>
+{{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AnalyticsApplicationInputsSchemaRecordFormatMappingParametersCsv">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AnalyticsApplicationInputsSchemaRecordFormatMappingParametersCsv">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
-{{% lang go %}}
+{{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/kinesis?tab=doc#AnalyticsApplicationInputsSchemaRecordFormatMappingParametersCsvArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/kinesis?tab=doc#AnalyticsApplicationInputsSchemaRecordFormatMappingParametersCsvOutput">output</a> API doc for this type.
-{{% /lang %}}
-
-{{% lang csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.AnalyticsApplicationInputsSchemaRecordFormatMappingParametersCsvArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.AnalyticsApplicationInputsSchemaRecordFormatMappingParametersCsv.html">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
 
 
-{{< langchoose csharp nojavascript >}}
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Record<wbr>Column<wbr>Delimiter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Column Delimiter.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Record<wbr>Row<wbr>Delimiter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Row Delimiter.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% lang csharp %}}
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Record<wbr>Column<wbr>Delimiter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Column Delimiter.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Record<wbr>Row<wbr>Delimiter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Row Delimiter.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Record<wbr>Column<wbr>Delimiter</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Record<wbr>Row<wbr>Delimiter</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
+    <dt class="property-required"
+            title="Required">
+        <span>record<wbr>Column<wbr>Delimiter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Column Delimiter.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+    <dt class="property-required"
+            title="Required">
+        <span>record<wbr>Row<wbr>Delimiter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Row Delimiter.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>record<wbr>Column<wbr>Delimiter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Column Delimiter.
+{{% /md %}}</dd>
 
-{{% lang go %}}
+    <dt class="property-required"
+            title="Required">
+        <span>record<wbr>Row<wbr>Delimiter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Row Delimiter.
+{{% /md %}}</dd>
 
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Record<wbr>Column<wbr>Delimiter</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Record<wbr>Row<wbr>Delimiter</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang nodejs %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">record<wbr>Column<wbr>Delimiter</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">record<wbr>Row<wbr>Delimiter</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang python %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">record<wbr>Column<wbr>Delimiter</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">record<wbr>Row<wbr>Delimiter</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
+</dl>
+{{% /choosable %}}
 
 
 
 
 
-#### AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJson
-{{% lang nodejs %}}
+<h4>Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json</h4>
+{{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJson">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJson">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
-{{% lang go %}}
+{{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/kinesis?tab=doc#AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJsonArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/kinesis?tab=doc#AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJsonOutput">output</a> API doc for this type.
-{{% /lang %}}
-
-{{% lang csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJsonArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJson.html">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
 
 
-{{< langchoose csharp nojavascript >}}
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Record<wbr>Row<wbr>Path</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Path to the top-level parent that contains the records.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% lang csharp %}}
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Record<wbr>Row<wbr>Path</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Path to the top-level parent that contains the records.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Record<wbr>Row<wbr>Path</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+    <dt class="property-required"
+            title="Required">
+        <span>record<wbr>Row<wbr>Path</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Path to the top-level parent that contains the records.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>record<wbr>Row<wbr>Path</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Path to the top-level parent that contains the records.
+{{% /md %}}</dd>
 
-{{% lang go %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Record<wbr>Row<wbr>Path</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang nodejs %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">record<wbr>Row<wbr>Path</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang python %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">record<wbr>Row<wbr>Path</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
+</dl>
+{{% /choosable %}}
 
 
 
 
 
-#### AnalyticsApplicationInputsStartingPositionConfiguration
-{{% lang nodejs %}}
+<h4>Analytics<wbr>Application<wbr>Inputs<wbr>Starting<wbr>Position<wbr>Configuration</h4>
+{{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AnalyticsApplicationInputsStartingPositionConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AnalyticsApplicationInputsStartingPositionConfiguration">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
-{{% lang go %}}
+{{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/kinesis?tab=doc#AnalyticsApplicationInputsStartingPositionConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/kinesis?tab=doc#AnalyticsApplicationInputsStartingPositionConfigurationOutput">output</a> API doc for this type.
-{{% /lang %}}
-
-{{% lang csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.AnalyticsApplicationInputsStartingPositionConfigurationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.AnalyticsApplicationInputsStartingPositionConfiguration.html">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
 
 
-{{< langchoose csharp nojavascript >}}
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Starting<wbr>Position</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% lang csharp %}}
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Starting<wbr>Position</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Starting<wbr>Position</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+    <dt class="property-optional"
+            title="Optional">
+        <span>starting<wbr>Position</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>starting_<wbr>position</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
-{{% lang go %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Starting<wbr>Position</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang nodejs %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">starting<wbr>Position</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang python %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">starting_<wbr>position</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
+</dl>
+{{% /choosable %}}
 
 
 
 
 
-#### AnalyticsApplicationOutput
-{{% lang nodejs %}}
+<h4>Analytics<wbr>Application<wbr>Output</h4>
+{{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AnalyticsApplicationOutput">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AnalyticsApplicationOutput">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
-{{% lang go %}}
+{{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/kinesis?tab=doc#AnalyticsApplicationOutputArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/kinesis?tab=doc#AnalyticsApplicationOutputOutput">output</a> API doc for this type.
-{{% /lang %}}
-
-{{% lang csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.AnalyticsApplicationOutputArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.AnalyticsApplicationOutput.html">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
 
 
-{{< langchoose csharp nojavascript >}}
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Kinesis Analytics Application.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Kinesis<wbr>Firehose</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationoutputkinesisfirehose">Analytics<wbr>Application<wbr>Output<wbr>Kinesis<wbr>Firehose<wbr>Args?</a></span>
+    </dt>
+    <dd>{{% md %}}The Kinesis Firehose configuration for the destination stream. Conflicts with `kinesis_stream`.
+See Kinesis Firehose below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Kinesis<wbr>Stream</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationoutputkinesisstream">Analytics<wbr>Application<wbr>Output<wbr>Kinesis<wbr>Stream<wbr>Args?</a></span>
+    </dt>
+    <dd>{{% md %}}The Kinesis Stream configuration for the destination stream. Conflicts with `kinesis_firehose`.
+See Kinesis Stream below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Lambda</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationoutputlambda">Analytics<wbr>Application<wbr>Output<wbr>Lambda<wbr>Args?</a></span>
+    </dt>
+    <dd>{{% md %}}The Lambda function destination. See Lambda below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Name of the in-application stream.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Schema</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationoutputschema">Analytics<wbr>Application<wbr>Output<wbr>Schema<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The Schema format of the data written to the destination. See Destination Schema below for more details.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% lang csharp %}}
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Kinesis Analytics Application.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Kinesis<wbr>Firehose</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationoutputkinesisfirehose">*Analytics<wbr>Application<wbr>Output<wbr>Kinesis<wbr>Firehose</a></span>
+    </dt>
+    <dd>{{% md %}}The Kinesis Firehose configuration for the destination stream. Conflicts with `kinesis_stream`.
+See Kinesis Firehose below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Kinesis<wbr>Stream</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationoutputkinesisstream">*Analytics<wbr>Application<wbr>Output<wbr>Kinesis<wbr>Stream</a></span>
+    </dt>
+    <dd>{{% md %}}The Kinesis Stream configuration for the destination stream. Conflicts with `kinesis_firehose`.
+See Kinesis Stream below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Lambda</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationoutputlambda">*Analytics<wbr>Application<wbr>Output<wbr>Lambda</a></span>
+    </dt>
+    <dd>{{% md %}}The Lambda function destination. See Lambda below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Name of the in-application stream.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Schema</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationoutputschema">Analytics<wbr>Application<wbr>Output<wbr>Schema</a></span>
+    </dt>
+    <dd>{{% md %}}The Schema format of the data written to the destination. See Destination Schema below for more details.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Id</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ARN of the Kinesis Analytics Application.
- {{% /md %}}
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Kinesis<wbr>Firehose</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationoutputkinesisfirehose">Analytics<wbr>Application<wbr>Output<wbr>Kinesis<wbr>Firehose<wbr>Args?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Kinesis Analytics Application.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Kinesis<wbr>Stream</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationoutputkinesisstream">Analytics<wbr>Application<wbr>Output<wbr>Kinesis<wbr>Stream<wbr>Args?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>kinesis<wbr>Firehose</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationoutputkinesisfirehose">Analytics<wbr>Application<wbr>Output<wbr>Kinesis<wbr>Firehose?</a></span>
+    </dt>
+    <dd>{{% md %}}The Kinesis Firehose configuration for the destination stream. Conflicts with `kinesis_stream`.
+See Kinesis Firehose below for more details.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Lambda</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationoutputlambda">Analytics<wbr>Application<wbr>Output<wbr>Lambda<wbr>Args?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>kinesis<wbr>Stream</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationoutputkinesisstream">Analytics<wbr>Application<wbr>Output<wbr>Kinesis<wbr>Stream?</a></span>
+    </dt>
+    <dd>{{% md %}}The Kinesis Stream configuration for the destination stream. Conflicts with `kinesis_firehose`.
+See Kinesis Stream below for more details.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Name</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-Name of the Kinesis Analytics Application.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>lambda</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationoutputlambda">Analytics<wbr>Application<wbr>Output<wbr>Lambda?</a></span>
+    </dt>
+    <dd>{{% md %}}The Lambda function destination. See Lambda below for more details.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Schema</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationoutputschema">Analytics<wbr>Application<wbr>Output<wbr>Schema<wbr>Args</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
+    <dt class="property-required"
+            title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Name of the in-application stream.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+    <dt class="property-required"
+            title="Required">
+        <span>schema</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationoutputschema">Analytics<wbr>Application<wbr>Output<wbr>Schema</a></span>
+    </dt>
+    <dd>{{% md %}}The Schema format of the data written to the destination. See Destination Schema below for more details.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Kinesis Analytics Application.
+{{% /md %}}</dd>
 
-{{% lang go %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>kinesis<wbr>Firehose</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationoutputkinesisfirehose">Dict[Analytics<wbr>Application<wbr>Output<wbr>Kinesis<wbr>Firehose]</a></span>
+    </dt>
+    <dd>{{% md %}}The Kinesis Firehose configuration for the destination stream. Conflicts with `kinesis_stream`.
+See Kinesis Firehose below for more details.
+{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>kinesis<wbr>Stream</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationoutputkinesisstream">Dict[Analytics<wbr>Application<wbr>Output<wbr>Kinesis<wbr>Stream]</a></span>
+    </dt>
+    <dd>{{% md %}}The Kinesis Stream configuration for the destination stream. Conflicts with `kinesis_firehose`.
+See Kinesis Stream below for more details.
+{{% /md %}}</dd>
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Id</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ARN of the Kinesis Analytics Application.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>lambda_</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationoutputlambda">Dict[Analytics<wbr>Application<wbr>Output<wbr>Lambda]</a></span>
+    </dt>
+    <dd>{{% md %}}The Lambda function destination. See Lambda below for more details.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Kinesis<wbr>Firehose</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationoutputkinesisfirehose">*Analytics<wbr>Application<wbr>Output<wbr>Kinesis<wbr>Firehose</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
+    <dt class="property-required"
+            title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Name of the in-application stream.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Kinesis<wbr>Stream</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationoutputkinesisstream">*Analytics<wbr>Application<wbr>Output<wbr>Kinesis<wbr>Stream</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
+    <dt class="property-required"
+            title="Required">
+        <span>schema</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationoutputschema">Dict[Analytics<wbr>Application<wbr>Output<wbr>Schema]</a></span>
+    </dt>
+    <dd>{{% md %}}The Schema format of the data written to the destination. See Destination Schema below for more details.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Lambda</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationoutputlambda">*Analytics<wbr>Application<wbr>Output<wbr>Lambda</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Name</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-Name of the Kinesis Analytics Application.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Schema</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationoutputschema">Analytics<wbr>Application<wbr>Output<wbr>Schema</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang nodejs %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">id</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ARN of the Kinesis Analytics Application.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">kinesis<wbr>Firehose</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationoutputkinesisfirehose">Analytics<wbr>Application<wbr>Output<wbr>Kinesis<wbr>Firehose?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">kinesis<wbr>Stream</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationoutputkinesisstream">Analytics<wbr>Application<wbr>Output<wbr>Kinesis<wbr>Stream?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">lambda</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationoutputlambda">Analytics<wbr>Application<wbr>Output<wbr>Lambda?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">name</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-Name of the Kinesis Analytics Application.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">schema</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationoutputschema">Analytics<wbr>Application<wbr>Output<wbr>Schema</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang python %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">id</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ARN of the Kinesis Analytics Application.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">kinesis<wbr>Firehose</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationoutputkinesisfirehose">Dict[Analytics<wbr>Application<wbr>Output<wbr>Kinesis<wbr>Firehose]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">kinesis<wbr>Stream</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationoutputkinesisstream">Dict[Analytics<wbr>Application<wbr>Output<wbr>Kinesis<wbr>Stream]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">lambda_</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationoutputlambda">Dict[Analytics<wbr>Application<wbr>Output<wbr>Lambda]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">name</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-Name of the Kinesis Analytics Application.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">schema</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationoutputschema">Dict[Analytics<wbr>Application<wbr>Output<wbr>Schema]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
+</dl>
+{{% /choosable %}}
 
 
 
 
 
-#### AnalyticsApplicationOutputKinesisFirehose
-{{% lang nodejs %}}
+<h4>Analytics<wbr>Application<wbr>Output<wbr>Kinesis<wbr>Firehose</h4>
+{{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AnalyticsApplicationOutputKinesisFirehose">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AnalyticsApplicationOutputKinesisFirehose">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
-{{% lang go %}}
+{{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/kinesis?tab=doc#AnalyticsApplicationOutputKinesisFirehoseArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/kinesis?tab=doc#AnalyticsApplicationOutputKinesisFirehoseOutput">output</a> API doc for this type.
-{{% /lang %}}
-
-{{% lang csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.AnalyticsApplicationOutputKinesisFirehoseArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.AnalyticsApplicationOutputKinesisFirehose.html">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
 
 
-{{< langchoose csharp nojavascript >}}
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Resource<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Kinesis Firehose delivery stream.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Role<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM Role used to access the stream.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% lang csharp %}}
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Resource<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Kinesis Firehose delivery stream.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Role<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM Role used to access the stream.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Resource<wbr>Arn</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Role<wbr>Arn</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
+    <dt class="property-required"
+            title="Required">
+        <span>resource<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Kinesis Firehose delivery stream.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+    <dt class="property-required"
+            title="Required">
+        <span>role<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM Role used to access the stream.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>resource_<wbr>arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Kinesis Firehose delivery stream.
+{{% /md %}}</dd>
 
-{{% lang go %}}
+    <dt class="property-required"
+            title="Required">
+        <span>role_<wbr>arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM Role used to access the stream.
+{{% /md %}}</dd>
 
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Resource<wbr>Arn</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Role<wbr>Arn</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang nodejs %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">resource<wbr>Arn</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">role<wbr>Arn</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang python %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">resource_<wbr>arn</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">role_<wbr>arn</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
+</dl>
+{{% /choosable %}}
 
 
 
 
 
-#### AnalyticsApplicationOutputKinesisStream
-{{% lang nodejs %}}
+<h4>Analytics<wbr>Application<wbr>Output<wbr>Kinesis<wbr>Stream</h4>
+{{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AnalyticsApplicationOutputKinesisStream">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AnalyticsApplicationOutputKinesisStream">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
-{{% lang go %}}
+{{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/kinesis?tab=doc#AnalyticsApplicationOutputKinesisStreamArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/kinesis?tab=doc#AnalyticsApplicationOutputKinesisStreamOutput">output</a> API doc for this type.
-{{% /lang %}}
-
-{{% lang csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.AnalyticsApplicationOutputKinesisStreamArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.AnalyticsApplicationOutputKinesisStream.html">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
 
 
-{{< langchoose csharp nojavascript >}}
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Resource<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Kinesis Stream.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Role<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM Role used to access the stream.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% lang csharp %}}
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Resource<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Kinesis Stream.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Role<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM Role used to access the stream.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Resource<wbr>Arn</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Role<wbr>Arn</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
+    <dt class="property-required"
+            title="Required">
+        <span>resource<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Kinesis Stream.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+    <dt class="property-required"
+            title="Required">
+        <span>role<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM Role used to access the stream.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>resource_<wbr>arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Kinesis Stream.
+{{% /md %}}</dd>
 
-{{% lang go %}}
+    <dt class="property-required"
+            title="Required">
+        <span>role_<wbr>arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM Role used to access the stream.
+{{% /md %}}</dd>
 
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Resource<wbr>Arn</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Role<wbr>Arn</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang nodejs %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">resource<wbr>Arn</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">role<wbr>Arn</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang python %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">resource_<wbr>arn</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">role_<wbr>arn</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
+</dl>
+{{% /choosable %}}
 
 
 
 
 
-#### AnalyticsApplicationOutputLambda
-{{% lang nodejs %}}
+<h4>Analytics<wbr>Application<wbr>Output<wbr>Lambda</h4>
+{{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AnalyticsApplicationOutputLambda">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AnalyticsApplicationOutputLambda">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
-{{% lang go %}}
+{{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/kinesis?tab=doc#AnalyticsApplicationOutputLambdaArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/kinesis?tab=doc#AnalyticsApplicationOutputLambdaOutput">output</a> API doc for this type.
-{{% /lang %}}
-
-{{% lang csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.AnalyticsApplicationOutputLambdaArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.AnalyticsApplicationOutputLambda.html">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
 
 
-{{< langchoose csharp nojavascript >}}
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Resource<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Lambda function.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Role<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM Role used to access the Lambda function.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% lang csharp %}}
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Resource<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Lambda function.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Role<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM Role used to access the Lambda function.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Resource<wbr>Arn</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Role<wbr>Arn</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
+    <dt class="property-required"
+            title="Required">
+        <span>resource<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Lambda function.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+    <dt class="property-required"
+            title="Required">
+        <span>role<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM Role used to access the Lambda function.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>resource_<wbr>arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Lambda function.
+{{% /md %}}</dd>
 
-{{% lang go %}}
+    <dt class="property-required"
+            title="Required">
+        <span>role_<wbr>arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM Role used to access the Lambda function.
+{{% /md %}}</dd>
 
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Resource<wbr>Arn</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Role<wbr>Arn</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang nodejs %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">resource<wbr>Arn</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">role<wbr>Arn</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang python %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">resource_<wbr>arn</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">role_<wbr>arn</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
+</dl>
+{{% /choosable %}}
 
 
 
 
 
-#### AnalyticsApplicationOutputSchema
-{{% lang nodejs %}}
+<h4>Analytics<wbr>Application<wbr>Output<wbr>Schema</h4>
+{{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AnalyticsApplicationOutputSchema">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AnalyticsApplicationOutputSchema">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
-{{% lang go %}}
+{{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/kinesis?tab=doc#AnalyticsApplicationOutputSchemaArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/kinesis?tab=doc#AnalyticsApplicationOutputSchemaOutput">output</a> API doc for this type.
-{{% /lang %}}
-
-{{% lang csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.AnalyticsApplicationOutputSchemaArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.AnalyticsApplicationOutputSchema.html">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
 
 
-{{< langchoose csharp nojavascript >}}
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Record<wbr>Format<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The Format Type of the records on the output stream. Can be `CSV` or `JSON`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% lang csharp %}}
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Record<wbr>Format<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The Format Type of the records on the output stream. Can be `CSV` or `JSON`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Record<wbr>Format<wbr>Type</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+    <dt class="property-optional"
+            title="Optional">
+        <span>record<wbr>Format<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The Format Type of the records on the output stream. Can be `CSV` or `JSON`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>record<wbr>Format<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Format Type of the records on the output stream. Can be `CSV` or `JSON`.
+{{% /md %}}</dd>
 
-{{% lang go %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Record<wbr>Format<wbr>Type</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang nodejs %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">record<wbr>Format<wbr>Type</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang python %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">record<wbr>Format<wbr>Type</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
+</dl>
+{{% /choosable %}}
 
 
 
 
 
-#### AnalyticsApplicationReferenceDataSources
-{{% lang nodejs %}}
+<h4>Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources</h4>
+{{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AnalyticsApplicationReferenceDataSources">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AnalyticsApplicationReferenceDataSources">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
-{{% lang go %}}
+{{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/kinesis?tab=doc#AnalyticsApplicationReferenceDataSourcesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/kinesis?tab=doc#AnalyticsApplicationReferenceDataSourcesOutput">output</a> API doc for this type.
-{{% /lang %}}
-
-{{% lang csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.AnalyticsApplicationReferenceDataSourcesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.AnalyticsApplicationReferenceDataSources.html">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
 
 
-{{< langchoose csharp nojavascript >}}
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Kinesis Analytics Application.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>S3</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcess3">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>S3Args</a></span>
+    </dt>
+    <dd>{{% md %}}The S3 configuration for the reference data source. See S3 Reference below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Schema</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschema">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The Schema format of the data in the streaming source. See Source Schema below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Table<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The in-application Table Name.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% lang csharp %}}
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Kinesis Analytics Application.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>S3</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcess3">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>S3</a></span>
+    </dt>
+    <dd>{{% md %}}The S3 configuration for the reference data source. See S3 Reference below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Schema</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschema">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema</a></span>
+    </dt>
+    <dd>{{% md %}}The Schema format of the data in the streaming source. See Source Schema below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Table<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The in-application Table Name.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Id</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ARN of the Kinesis Analytics Application.
- {{% /md %}}
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">S3</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationreferencedatasourcess3">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>S3Args</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Kinesis Analytics Application.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Schema</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationreferencedatasourcesschema">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Args</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
+    <dt class="property-required"
+            title="Required">
+        <span>s3</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcess3">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>S3</a></span>
+    </dt>
+    <dd>{{% md %}}The S3 configuration for the reference data source. See S3 Reference below for more details.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Table<wbr>Name</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
+    <dt class="property-required"
+            title="Required">
+        <span>schema</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschema">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema</a></span>
+    </dt>
+    <dd>{{% md %}}The Schema format of the data in the streaming source. See Source Schema below for more details.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+    <dt class="property-required"
+            title="Required">
+        <span>table<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The in-application Table Name.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Kinesis Analytics Application.
+{{% /md %}}</dd>
 
-{{% lang go %}}
+    <dt class="property-required"
+            title="Required">
+        <span>s3</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcess3">Dict[Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>S3]</a></span>
+    </dt>
+    <dd>{{% md %}}The S3 configuration for the reference data source. See S3 Reference below for more details.
+{{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>schema</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschema">Dict[Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema]</a></span>
+    </dt>
+    <dd>{{% md %}}The Schema format of the data in the streaming source. See Source Schema below for more details.
+{{% /md %}}</dd>
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Id</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ARN of the Kinesis Analytics Application.
- {{% /md %}}
+    <dt class="property-required"
+            title="Required">
+        <span>table_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The in-application Table Name.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">S3</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationreferencedatasourcess3">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>S3</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Schema</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationreferencedatasourcesschema">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Table<wbr>Name</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang nodejs %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">id</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ARN of the Kinesis Analytics Application.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">s3</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationreferencedatasourcess3">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>S3</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">schema</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationreferencedatasourcesschema">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">table<wbr>Name</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang python %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">id</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ARN of the Kinesis Analytics Application.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">s3</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationreferencedatasourcess3">Dict[Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>S3]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">schema</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationreferencedatasourcesschema">Dict[Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">table_<wbr>name</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
+</dl>
+{{% /choosable %}}
 
 
 
 
 
-#### AnalyticsApplicationReferenceDataSourcesS3
-{{% lang nodejs %}}
+<h4>Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>S3</h4>
+{{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AnalyticsApplicationReferenceDataSourcesS3">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AnalyticsApplicationReferenceDataSourcesS3">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
-{{% lang go %}}
+{{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/kinesis?tab=doc#AnalyticsApplicationReferenceDataSourcesS3Args">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/kinesis?tab=doc#AnalyticsApplicationReferenceDataSourcesS3Output">output</a> API doc for this type.
-{{% /lang %}}
-
-{{% lang csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.AnalyticsApplicationReferenceDataSourcesS3Args.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.AnalyticsApplicationReferenceDataSourcesS3.html">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
 
 
-{{< langchoose csharp nojavascript >}}
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Bucket<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The S3 Bucket ARN.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>File<wbr>Key</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The File Key name containing reference data.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Role<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM Role used to send application messages.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% lang csharp %}}
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Bucket<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The S3 Bucket ARN.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>File<wbr>Key</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The File Key name containing reference data.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Role<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM Role used to send application messages.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Bucket<wbr>Arn</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">File<wbr>Key</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
+    <dt class="property-required"
+            title="Required">
+        <span>bucket<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The S3 Bucket ARN.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Role<wbr>Arn</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
+    <dt class="property-required"
+            title="Required">
+        <span>file<wbr>Key</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The File Key name containing reference data.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+    <dt class="property-required"
+            title="Required">
+        <span>role<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM Role used to send application messages.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>bucket<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The S3 Bucket ARN.
+{{% /md %}}</dd>
 
-{{% lang go %}}
+    <dt class="property-required"
+            title="Required">
+        <span>file<wbr>Key</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The File Key name containing reference data.
+{{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>role_<wbr>arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM Role used to send application messages.
+{{% /md %}}</dd>
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Bucket<wbr>Arn</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">File<wbr>Key</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Role<wbr>Arn</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang nodejs %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">bucket<wbr>Arn</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">file<wbr>Key</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">role<wbr>Arn</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang python %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">bucket<wbr>Arn</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">file<wbr>Key</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">role_<wbr>arn</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
+</dl>
+{{% /choosable %}}
 
 
 
 
 
-#### AnalyticsApplicationReferenceDataSourcesSchema
-{{% lang nodejs %}}
+<h4>Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema</h4>
+{{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AnalyticsApplicationReferenceDataSourcesSchema">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AnalyticsApplicationReferenceDataSourcesSchema">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
-{{% lang go %}}
+{{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/kinesis?tab=doc#AnalyticsApplicationReferenceDataSourcesSchemaArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/kinesis?tab=doc#AnalyticsApplicationReferenceDataSourcesSchemaOutput">output</a> API doc for this type.
-{{% /lang %}}
-
-{{% lang csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.AnalyticsApplicationReferenceDataSourcesSchemaArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.AnalyticsApplicationReferenceDataSourcesSchema.html">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
 
 
-{{< langchoose csharp nojavascript >}}
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Record<wbr>Columns</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschemarecordcolumn">List&lt;Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Column<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The Record Column mapping for the streaming source data element.
+See Record Columns below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Record<wbr>Encoding</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The Encoding of the record in the streaming source.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Record<wbr>Format</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschemarecordformat">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The Record Format and mapping information to schematize a record.
+See Record Format below for more details.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% lang csharp %}}
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Record<wbr>Columns</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschemarecordcolumn">[]Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Column</a></span>
+    </dt>
+    <dd>{{% md %}}The Record Column mapping for the streaming source data element.
+See Record Columns below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Record<wbr>Encoding</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The Encoding of the record in the streaming source.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Record<wbr>Format</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschemarecordformat">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format</a></span>
+    </dt>
+    <dd>{{% md %}}The Record Format and mapping information to schematize a record.
+See Record Format below for more details.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Record<wbr>Columns</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationreferencedatasourcesschemarecordcolumn">List&lt;Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Column<wbr>Args&gt;</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Record<wbr>Encoding</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
+    <dt class="property-required"
+            title="Required">
+        <span>record<wbr>Columns</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschemarecordcolumn">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Column[]</a></span>
+    </dt>
+    <dd>{{% md %}}The Record Column mapping for the streaming source data element.
+See Record Columns below for more details.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Record<wbr>Format</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationreferencedatasourcesschemarecordformat">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Args</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>record<wbr>Encoding</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The Encoding of the record in the streaming source.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+    <dt class="property-required"
+            title="Required">
+        <span>record<wbr>Format</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschemarecordformat">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format</a></span>
+    </dt>
+    <dd>{{% md %}}The Record Format and mapping information to schematize a record.
+See Record Format below for more details.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>record<wbr>Columns</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschemarecordcolumn">List[Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Column]</a></span>
+    </dt>
+    <dd>{{% md %}}The Record Column mapping for the streaming source data element.
+See Record Columns below for more details.
+{{% /md %}}</dd>
 
-{{% lang go %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>record<wbr>Encoding</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Encoding of the record in the streaming source.
+{{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>record<wbr>Format</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschemarecordformat">Dict[Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format]</a></span>
+    </dt>
+    <dd>{{% md %}}The Record Format and mapping information to schematize a record.
+See Record Format below for more details.
+{{% /md %}}</dd>
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Record<wbr>Columns</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationreferencedatasourcesschemarecordcolumn">[]Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Column</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Record<wbr>Encoding</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Record<wbr>Format</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationreferencedatasourcesschemarecordformat">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang nodejs %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">record<wbr>Columns</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationreferencedatasourcesschemarecordcolumn">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Column[]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">record<wbr>Encoding</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">record<wbr>Format</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationreferencedatasourcesschemarecordformat">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang python %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">record<wbr>Columns</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationreferencedatasourcesschemarecordcolumn">List[Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Column]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">record<wbr>Encoding</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">record<wbr>Format</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationreferencedatasourcesschemarecordformat">Dict[Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
+</dl>
+{{% /choosable %}}
 
 
 
 
 
-#### AnalyticsApplicationReferenceDataSourcesSchemaRecordColumn
-{{% lang nodejs %}}
+<h4>Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Column</h4>
+{{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AnalyticsApplicationReferenceDataSourcesSchemaRecordColumn">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AnalyticsApplicationReferenceDataSourcesSchemaRecordColumn">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
-{{% lang go %}}
+{{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/kinesis?tab=doc#AnalyticsApplicationReferenceDataSourcesSchemaRecordColumnArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/kinesis?tab=doc#AnalyticsApplicationReferenceDataSourcesSchemaRecordColumnOutput">output</a> API doc for this type.
-{{% /lang %}}
-
-{{% lang csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.AnalyticsApplicationReferenceDataSourcesSchemaRecordColumnArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.AnalyticsApplicationReferenceDataSourcesSchemaRecordColumn.html">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
 
 
-{{< langchoose csharp nojavascript >}}
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Mapping</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The Mapping reference to the data element.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the column.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Sql<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The SQL Type of the column.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% lang csharp %}}
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Mapping</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The Mapping reference to the data element.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the column.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Sql<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The SQL Type of the column.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Mapping</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Name</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-Name of the Kinesis Analytics Application.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>mapping</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The Mapping reference to the data element.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Sql<wbr>Type</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
+    <dt class="property-required"
+            title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the column.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+    <dt class="property-required"
+            title="Required">
+        <span>sql<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The SQL Type of the column.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>mapping</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Mapping reference to the data element.
+{{% /md %}}</dd>
 
-{{% lang go %}}
+    <dt class="property-required"
+            title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of the column.
+{{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>sql<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The SQL Type of the column.
+{{% /md %}}</dd>
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Mapping</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Name</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-Name of the Kinesis Analytics Application.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Sql<wbr>Type</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang nodejs %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">mapping</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">name</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-Name of the Kinesis Analytics Application.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">sql<wbr>Type</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang python %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">mapping</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">name</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-Name of the Kinesis Analytics Application.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">sql<wbr>Type</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
+</dl>
+{{% /choosable %}}
 
 
 
 
 
-#### AnalyticsApplicationReferenceDataSourcesSchemaRecordFormat
-{{% lang nodejs %}}
+<h4>Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format</h4>
+{{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AnalyticsApplicationReferenceDataSourcesSchemaRecordFormat">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AnalyticsApplicationReferenceDataSourcesSchemaRecordFormat">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
-{{% lang go %}}
+{{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/kinesis?tab=doc#AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/kinesis?tab=doc#AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatOutput">output</a> API doc for this type.
-{{% /lang %}}
-
-{{% lang csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.AnalyticsApplicationReferenceDataSourcesSchemaRecordFormat.html">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
 
 
-{{< langchoose csharp nojavascript >}}
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Mapping<wbr>Parameters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparameters">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Args?</a></span>
+    </dt>
+    <dd>{{% md %}}The Mapping Information for the record format.
+See Mapping Parameters below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Record<wbr>Format<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The type of Record Format. Can be `CSV` or `JSON`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% lang csharp %}}
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Mapping<wbr>Parameters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparameters">*Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters</a></span>
+    </dt>
+    <dd>{{% md %}}The Mapping Information for the record format.
+See Mapping Parameters below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Record<wbr>Format<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The type of Record Format. Can be `CSV` or `JSON`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Mapping<wbr>Parameters</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparameters">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Args?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Record<wbr>Format<wbr>Type</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>mapping<wbr>Parameters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparameters">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters?</a></span>
+    </dt>
+    <dd>{{% md %}}The Mapping Information for the record format.
+See Mapping Parameters below for more details.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+    <dt class="property-optional"
+            title="Optional">
+        <span>record<wbr>Format<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The type of Record Format. Can be `CSV` or `JSON`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>mapping<wbr>Parameters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparameters">Dict[Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters]</a></span>
+    </dt>
+    <dd>{{% md %}}The Mapping Information for the record format.
+See Mapping Parameters below for more details.
+{{% /md %}}</dd>
 
-{{% lang go %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>record<wbr>Format<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of Record Format. Can be `CSV` or `JSON`.
+{{% /md %}}</dd>
 
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Mapping<wbr>Parameters</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparameters">*Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Record<wbr>Format<wbr>Type</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang nodejs %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">mapping<wbr>Parameters</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparameters">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">record<wbr>Format<wbr>Type</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang python %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">mapping<wbr>Parameters</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparameters">Dict[Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">record<wbr>Format<wbr>Type</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
+</dl>
+{{% /choosable %}}
 
 
 
 
 
-#### AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParameters
-{{% lang nodejs %}}
+<h4>Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters</h4>
+{{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParameters">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParameters">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
-{{% lang go %}}
+{{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/kinesis?tab=doc#AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/kinesis?tab=doc#AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersOutput">output</a> API doc for this type.
-{{% /lang %}}
-
-{{% lang csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParameters.html">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
 
 
-{{< langchoose csharp nojavascript >}}
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Csv</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparameterscsv">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv<wbr>Args?</a></span>
+    </dt>
+    <dd>{{% md %}}Mapping information when the record format uses delimiters.
+See CSV Mapping Parameters below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Json</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparametersjson">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json<wbr>Args?</a></span>
+    </dt>
+    <dd>{{% md %}}Mapping information when JSON is the record format on the streaming source.
+See JSON Mapping Parameters below for more details.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% lang csharp %}}
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Csv</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparameterscsv">*Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv</a></span>
+    </dt>
+    <dd>{{% md %}}Mapping information when the record format uses delimiters.
+See CSV Mapping Parameters below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Json</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparametersjson">*Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json</a></span>
+    </dt>
+    <dd>{{% md %}}Mapping information when JSON is the record format on the streaming source.
+See JSON Mapping Parameters below for more details.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Csv</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparameterscsv">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv<wbr>Args?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Json</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparametersjson">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json<wbr>Args?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>csv</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparameterscsv">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv?</a></span>
+    </dt>
+    <dd>{{% md %}}Mapping information when the record format uses delimiters.
+See CSV Mapping Parameters below for more details.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+    <dt class="property-optional"
+            title="Optional">
+        <span>json</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparametersjson">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json?</a></span>
+    </dt>
+    <dd>{{% md %}}Mapping information when JSON is the record format on the streaming source.
+See JSON Mapping Parameters below for more details.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>csv</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparameterscsv">Dict[Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv]</a></span>
+    </dt>
+    <dd>{{% md %}}Mapping information when the record format uses delimiters.
+See CSV Mapping Parameters below for more details.
+{{% /md %}}</dd>
 
-{{% lang go %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>json</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparametersjson">Dict[Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json]</a></span>
+    </dt>
+    <dd>{{% md %}}Mapping information when JSON is the record format on the streaming source.
+See JSON Mapping Parameters below for more details.
+{{% /md %}}</dd>
 
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Csv</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparameterscsv">*Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Json</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparametersjson">*Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang nodejs %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">csv</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparameterscsv">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">json</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparametersjson">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang python %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">csv</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparameterscsv">Dict[Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">json</td>
-            <td class="align-top">
-                
-                <code><a href="#analyticsapplicationreferencedatasourcesschemarecordformatmappingparametersjson">Dict[Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
+</dl>
+{{% /choosable %}}
 
 
 
 
 
-#### AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersCsv
-{{% lang nodejs %}}
+<h4>Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv</h4>
+{{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersCsv">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersCsv">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
-{{% lang go %}}
+{{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/kinesis?tab=doc#AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersCsvArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/kinesis?tab=doc#AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersCsvOutput">output</a> API doc for this type.
-{{% /lang %}}
-
-{{% lang csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersCsvArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersCsv.html">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
 
 
-{{< langchoose csharp nojavascript >}}
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Record<wbr>Column<wbr>Delimiter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Column Delimiter.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Record<wbr>Row<wbr>Delimiter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Row Delimiter.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% lang csharp %}}
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Record<wbr>Column<wbr>Delimiter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Column Delimiter.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Record<wbr>Row<wbr>Delimiter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Row Delimiter.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Record<wbr>Column<wbr>Delimiter</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Record<wbr>Row<wbr>Delimiter</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
+    <dt class="property-required"
+            title="Required">
+        <span>record<wbr>Column<wbr>Delimiter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Column Delimiter.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+    <dt class="property-required"
+            title="Required">
+        <span>record<wbr>Row<wbr>Delimiter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Row Delimiter.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>record<wbr>Column<wbr>Delimiter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Column Delimiter.
+{{% /md %}}</dd>
 
-{{% lang go %}}
+    <dt class="property-required"
+            title="Required">
+        <span>record<wbr>Row<wbr>Delimiter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Row Delimiter.
+{{% /md %}}</dd>
 
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Record<wbr>Column<wbr>Delimiter</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Record<wbr>Row<wbr>Delimiter</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang nodejs %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">record<wbr>Column<wbr>Delimiter</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">record<wbr>Row<wbr>Delimiter</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang python %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">record<wbr>Column<wbr>Delimiter</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">record<wbr>Row<wbr>Delimiter</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
+</dl>
+{{% /choosable %}}
 
 
 
 
 
-#### AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersJson
-{{% lang nodejs %}}
+<h4>Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json</h4>
+{{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersJson">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersJson">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
-{{% lang go %}}
+{{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/kinesis?tab=doc#AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersJsonArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/kinesis?tab=doc#AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersJsonOutput">output</a> API doc for this type.
-{{% /lang %}}
-
-{{% lang csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersJsonArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Kinesis.AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersJson.html">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
 
 
-{{< langchoose csharp nojavascript >}}
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Record<wbr>Row<wbr>Path</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Path to the top-level parent that contains the records.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% lang csharp %}}
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Record<wbr>Row<wbr>Path</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Path to the top-level parent that contains the records.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Record<wbr>Row<wbr>Path</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+    <dt class="property-required"
+            title="Required">
+        <span>record<wbr>Row<wbr>Path</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Path to the top-level parent that contains the records.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>record<wbr>Row<wbr>Path</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Path to the top-level parent that contains the records.
+{{% /md %}}</dd>
 
-{{% lang go %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Record<wbr>Row<wbr>Path</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang nodejs %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">record<wbr>Row<wbr>Path</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang python %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">record<wbr>Row<wbr>Path</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
+</dl>
+{{% /choosable %}}
 
 
 
 
 
 
+
+
+
+<h3>Package Details</h3>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
 

@@ -3,19 +3,20 @@
 title: "LaunchConfiguration"
 block_external_search_index: true
 ---
-<style>
-table td p { margin-top: 0; margin-bottom: 0; }
-</style>
+
+
 
 Provides a resource to create a new launch configuration, used for autoscaling groups.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const ubuntu = aws.getAmi({
+const ubuntu = pulumi.output(aws.getAmi({
     filters: [
         {
             name: "name",
@@ -28,13 +29,15 @@ const ubuntu = aws.getAmi({
     ],
     mostRecent: true,
     owners: ["099720109477"], // Canonical
-});
+}, { async: true }));
 const asConf = new aws.ec2.LaunchConfiguration("as_conf", {
     imageId: ubuntu.id,
     instanceType: "t2.micro",
 });
 ```
 
+{{% /example %}}
+{{% /examples %}}
 ## Using with AutoScaling Groups
 
 Launch Configurations cannot be updated after creation with the Amazon
@@ -49,7 +52,7 @@ with `name_prefix`.  Example:
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const ubuntu = aws.getAmi({
+const ubuntu = pulumi.output(aws.getAmi({
     filters: [
         {
             name: "name",
@@ -62,7 +65,7 @@ const ubuntu = aws.getAmi({
     ],
     mostRecent: true,
     owners: ["099720109477"], // Canonical
-});
+}, { async: true }));
 const asConf = new aws.ec2.LaunchConfiguration("as_conf", {
     imageId: ubuntu.id,
     instanceType: "t2.micro",
@@ -92,7 +95,7 @@ for more information or how to launch [Spot Instances][3] with this provider.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const ubuntu = aws.getAmi({
+const ubuntu = pulumi.output(aws.getAmi({
     filters: [
         {
             name: "name",
@@ -105,7 +108,7 @@ const ubuntu = aws.getAmi({
     ],
     mostRecent: true,
     owners: ["099720109477"], // Canonical
-});
+}, { async: true }));
 const asConf = new aws.ec2.LaunchConfiguration("as_conf", {
     imageId: ubuntu.id,
     instanceType: "m4.large",
@@ -170,1312 +173,858 @@ identified by the `virtual_name` in the format `"ephemeral{0..N}"`.
 > **NOTE:** Changes to `*_block_device` configuration of _existing_ resources
 cannot currently be detected by this provider. After updating to block device
 configuration, resource recreation can be manually triggered by using the
-[`taint` command](https://www.terraform.io/docs/commands/taint.html).
-
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/launch_configuration.html.markdown.
+[`up` command with the --replace argument](https://www.pulumi.com/docs/reference/cli/pulumi_up/).
 
 
 
 ## Create a LaunchConfiguration Resource
 
-{{< langchoose csharp nojavascript >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#LaunchConfiguration">LaunchConfiguration</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#LaunchConfigurationArgs">LaunchConfigurationArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+{{% choosable language nodejs %}}
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#LaunchConfiguration">LaunchConfiguration</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#LaunchConfigurationArgs">LaunchConfigurationArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+{{% /choosable %}}
 
+{{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">LaunchConfiguration</span><span class="p">(resource_name, opts=None, </span>associate_public_ip_address=None<span class="p">, </span>ebs_block_devices=None<span class="p">, </span>ebs_optimized=None<span class="p">, </span>enable_monitoring=None<span class="p">, </span>ephemeral_block_devices=None<span class="p">, </span>iam_instance_profile=None<span class="p">, </span>image_id=None<span class="p">, </span>instance_type=None<span class="p">, </span>key_name=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>placement_tenancy=None<span class="p">, </span>root_block_device=None<span class="p">, </span>security_groups=None<span class="p">, </span>spot_price=None<span class="p">, </span>user_data=None<span class="p">, </span>user_data_base64=None<span class="p">, </span>vpc_classic_link_id=None<span class="p">, </span>vpc_classic_link_security_groups=None<span class="p">, __props__=None);</span></code></pre></div>
+{{% /choosable %}}
 
+{{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewLaunchConfiguration<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#LaunchConfigurationArgs">LaunchConfigurationArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#LaunchConfiguration">LaunchConfiguration</a></span>, error)</span></code></pre></div>
+{{% /choosable %}}
 
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.LaunchConfiguration.html">LaunchConfiguration</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.LaunchConfigurationArgs.html">LaunchConfigurationArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+{{% choosable language csharp %}}
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.LaunchConfiguration.html">LaunchConfiguration</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.LaunchConfigurationArgs.html">LaunchConfigurationArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+{{% /choosable %}}
 
-Creates a LaunchConfiguration resource with the given unique name, arguments, and options.
+{{% choosable language nodejs %}}
 
-{{% lang nodejs %}}
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The arguments to use to populate this resource's properties.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 
-<ul class="pl-10">
-    <li><strong>name</strong> &ndash; (Required) The unique name of the resulting resource.</li>
-    <li><strong>args</strong> &ndash;  (Optional)  The arguments to use to populate this resource's properties.</li>
-    <li><strong>opts</strong> &ndash; (Optional) A bag of options that control this resource's behavior.</li>
-</ul>
+{{% /choosable %}}
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
+{{% /choosable %}}
 
-{{% lang go %}}
+{{% choosable language go %}}
 
-<ul class="pl-10">
-    <li><strong>name</strong> &ndash; (Required) The unique name of the resulting resource.</li>
-    <li><strong>args</strong> &ndash;  (Optional)  The arguments to use to populate this resource's properties.</li>
-    <li><strong>opts</strong> &ndash; (Optional) A bag of options that control this resource's behavior.</li>
-</ul>
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The arguments to use to populate this resource's properties.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 
-{{% /lang %}}
+{{% /choosable %}}
 
-{{% lang csharp %}}
+{{% choosable language csharp %}}
 
-<ul class="pl-10">
-    <li><strong>name</strong> &ndash; (Required) The unique name of the resulting resource.</li>
-    <li><strong>args</strong> &ndash;  (Optional)  The arguments to use to populate this resource's properties.</li>
-    <li><strong>opts</strong> &ndash; (Optional) A bag of options that control this resource's behavior.</li>
-</ul>
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The arguments to use to populate this resource's properties.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 
-{{% /lang %}}
+{{% /choosable %}}
 
-The following arguments are supported:
-
-
-{{< langchoose csharp nojavascript >}}
+#### Resource Arguments
 
 
-{{% lang csharp %}}
 
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Associate<wbr>Public<wbr>Ip<wbr>Address</td>
-            <td class="align-top">
-                
-                <code>bool?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Associate a public ip address with an instance in a VPC.
- {{% /md %}}
+{{% choosable language csharp %}}
+<dl class="resources-properties">
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Ebs<wbr>Block<wbr>Devices</td>
-            <td class="align-top">
-                
-                <code><a href="#launchconfigurationebsblockdevice">List&lt;Launch<wbr>Configuration<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args&gt;?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Additional EBS block devices to attach to the
+    <dt class="property-optional"
+            title="Optional">
+        <span>Associate<wbr>Public<wbr>Ip<wbr>Address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool?</span>
+    </dt>
+    <dd>{{% md %}}Associate a public ip address with an instance in a VPC.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ebs<wbr>Block<wbr>Devices</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#launchconfigurationebsblockdevice">List&lt;Launch<wbr>Configuration<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args&gt;?</a></span>
+    </dt>
+    <dd>{{% md %}}Additional EBS block devices to attach to the
 instance.  See Block Devices below for details.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Ebs<wbr>Optimized</td>
-            <td class="align-top">
-                
-                <code>bool?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-If true, the launched EC2 instance will be EBS-optimized.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ebs<wbr>Optimized</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool?</span>
+    </dt>
+    <dd>{{% md %}}If true, the launched EC2 instance will be EBS-optimized.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Enable<wbr>Monitoring</td>
-            <td class="align-top">
-                
-                <code>bool?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Enables/disables detailed monitoring. This is enabled by default.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Enable<wbr>Monitoring</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool?</span>
+    </dt>
+    <dd>{{% md %}}Enables/disables detailed monitoring. This is enabled by default.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Ephemeral<wbr>Block<wbr>Devices</td>
-            <td class="align-top">
-                
-                <code><a href="#launchconfigurationephemeralblockdevice">List&lt;Launch<wbr>Configuration<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args&gt;?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Customize Ephemeral (also known as
-&#34;Instance Store&#34;) volumes on the instance. See Block Devices below for details.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ephemeral<wbr>Block<wbr>Devices</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#launchconfigurationephemeralblockdevice">List&lt;Launch<wbr>Configuration<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args&gt;?</a></span>
+    </dt>
+    <dd>{{% md %}}Customize Ephemeral (also known as
+"Instance Store") volumes on the instance. See Block Devices below for details.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Iam<wbr>Instance<wbr>Profile</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The name attribute of the IAM instance profile to associate
+    <dt class="property-optional"
+            title="Optional">
+        <span>Iam<wbr>Instance<wbr>Profile</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The name attribute of the IAM instance profile to associate
 with launched instances.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Image<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The EC2 image ID to launch.
- {{% /md %}}
+    <dt class="property-required"
+            title="Required">
+        <span>Image<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The EC2 image ID to launch.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Instance<wbr>Type</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The size of instance to launch.
- {{% /md %}}
+    <dt class="property-required"
+            title="Required">
+        <span>Instance<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The size of instance to launch.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Key<wbr>Name</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The key name that should be used for the instance.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Key<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The key name that should be used for the instance.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Name</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The name of the launch configuration. If you leave
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The name of the launch configuration. If you leave
 this blank, this provider will auto-generate a unique name.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Name<wbr>Prefix</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Creates a unique name beginning with the specified
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name<wbr>Prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Creates a unique name beginning with the specified
 prefix. Conflicts with `name`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Placement<wbr>Tenancy</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The tenancy of the instance. Valid values are
-`&#34;default&#34;` or `&#34;dedicated&#34;`, see [AWS&#39;s Create Launch Configuration](http://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_CreateLaunchConfiguration.html)
+    <dt class="property-optional"
+            title="Optional">
+        <span>Placement<wbr>Tenancy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The tenancy of the instance. Valid values are
+`"default"` or `"dedicated"`, see [AWS's Create Launch Configuration](http://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_CreateLaunchConfiguration.html)
 for more details
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Root<wbr>Block<wbr>Device</td>
-            <td class="align-top">
-                
-                <code><a href="#launchconfigurationrootblockdevice">Launch<wbr>Configuration<wbr>Root<wbr>Block<wbr>Device<wbr>Args?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Customize details about the root block
+    <dt class="property-optional"
+            title="Optional">
+        <span>Root<wbr>Block<wbr>Device</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#launchconfigurationrootblockdevice">Launch<wbr>Configuration<wbr>Root<wbr>Block<wbr>Device<wbr>Args?</a></span>
+    </dt>
+    <dd>{{% md %}}Customize details about the root block
 device of the instance. See Block Devices below for details.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Security<wbr>Groups</td>
-            <td class="align-top">
-                
-                <code>List<string>?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A list of associated security group IDS.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Security<wbr>Groups</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List<string>?</span>
+    </dt>
+    <dd>{{% md %}}A list of associated security group IDS.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Spot<wbr>Price</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The maximum price to use for reserving spot instances.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Spot<wbr>Price</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The maximum price to use for reserving spot instances.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">User<wbr>Data</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>User<wbr>Data</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">User<wbr>Data<wbr>Base64</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>User<wbr>Data<wbr>Base64</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Vpc<wbr>Classic<wbr>Link<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ID of a ClassicLink-enabled VPC. Only applies to EC2-Classic instances. (eg. `vpc-2730681a`)
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Vpc<wbr>Classic<wbr>Link<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The ID of a ClassicLink-enabled VPC. Only applies to EC2-Classic instances. (eg. `vpc-2730681a`)
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Vpc<wbr>Classic<wbr>Link<wbr>Security<wbr>Groups</td>
-            <td class="align-top">
-                
-                <code>List<string>?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The IDs of one or more security groups for the specified ClassicLink-enabled VPC (eg. `sg-46ae3d11`).
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Vpc<wbr>Classic<wbr>Link<wbr>Security<wbr>Groups</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List<string>?</span>
+    </dt>
+    <dd>{{% md %}}The IDs of one or more security groups for the specified ClassicLink-enabled VPC (eg. `sg-46ae3d11`).
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language go %}}
+<dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Associate<wbr>Public<wbr>Ip<wbr>Address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*bool</span>
+    </dt>
+    <dd>{{% md %}}Associate a public ip address with an instance in a VPC.
+{{% /md %}}</dd>
 
-{{% lang go %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Associate<wbr>Public<wbr>Ip<wbr>Address</td>
-            <td class="align-top">
-                
-                <code>*bool</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Associate a public ip address with an instance in a VPC.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Ebs<wbr>Block<wbr>Devices</td>
-            <td class="align-top">
-                
-                <code><a href="#launchconfigurationebsblockdevice">[]Launch<wbr>Configuration<wbr>Ebs<wbr>Block<wbr>Device</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Additional EBS block devices to attach to the
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ebs<wbr>Block<wbr>Devices</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#launchconfigurationebsblockdevice">[]Launch<wbr>Configuration<wbr>Ebs<wbr>Block<wbr>Device</a></span>
+    </dt>
+    <dd>{{% md %}}Additional EBS block devices to attach to the
 instance.  See Block Devices below for details.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Ebs<wbr>Optimized</td>
-            <td class="align-top">
-                
-                <code>*bool</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-If true, the launched EC2 instance will be EBS-optimized.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ebs<wbr>Optimized</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*bool</span>
+    </dt>
+    <dd>{{% md %}}If true, the launched EC2 instance will be EBS-optimized.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Enable<wbr>Monitoring</td>
-            <td class="align-top">
-                
-                <code>*bool</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Enables/disables detailed monitoring. This is enabled by default.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Enable<wbr>Monitoring</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*bool</span>
+    </dt>
+    <dd>{{% md %}}Enables/disables detailed monitoring. This is enabled by default.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Ephemeral<wbr>Block<wbr>Devices</td>
-            <td class="align-top">
-                
-                <code><a href="#launchconfigurationephemeralblockdevice">[]Launch<wbr>Configuration<wbr>Ephemeral<wbr>Block<wbr>Device</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Customize Ephemeral (also known as
-&#34;Instance Store&#34;) volumes on the instance. See Block Devices below for details.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ephemeral<wbr>Block<wbr>Devices</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#launchconfigurationephemeralblockdevice">[]Launch<wbr>Configuration<wbr>Ephemeral<wbr>Block<wbr>Device</a></span>
+    </dt>
+    <dd>{{% md %}}Customize Ephemeral (also known as
+"Instance Store") volumes on the instance. See Block Devices below for details.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Iam<wbr>Instance<wbr>Profile</td>
-            <td class="align-top">
-                
-                <code>interface{}</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The name attribute of the IAM instance profile to associate
+    <dt class="property-optional"
+            title="Optional">
+        <span>Iam<wbr>Instance<wbr>Profile</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}The name attribute of the IAM instance profile to associate
 with launched instances.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Image<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The EC2 image ID to launch.
- {{% /md %}}
+    <dt class="property-required"
+            title="Required">
+        <span>Image<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The EC2 image ID to launch.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Instance<wbr>Type</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The size of instance to launch.
- {{% /md %}}
+    <dt class="property-required"
+            title="Required">
+        <span>Instance<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The size of instance to launch.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Key<wbr>Name</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The key name that should be used for the instance.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Key<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The key name that should be used for the instance.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Name</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The name of the launch configuration. If you leave
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The name of the launch configuration. If you leave
 this blank, this provider will auto-generate a unique name.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Name<wbr>Prefix</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Creates a unique name beginning with the specified
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name<wbr>Prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}Creates a unique name beginning with the specified
 prefix. Conflicts with `name`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Placement<wbr>Tenancy</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The tenancy of the instance. Valid values are
-`&#34;default&#34;` or `&#34;dedicated&#34;`, see [AWS&#39;s Create Launch Configuration](http://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_CreateLaunchConfiguration.html)
+    <dt class="property-optional"
+            title="Optional">
+        <span>Placement<wbr>Tenancy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The tenancy of the instance. Valid values are
+`"default"` or `"dedicated"`, see [AWS's Create Launch Configuration](http://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_CreateLaunchConfiguration.html)
 for more details
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Root<wbr>Block<wbr>Device</td>
-            <td class="align-top">
-                
-                <code><a href="#launchconfigurationrootblockdevice">*Launch<wbr>Configuration<wbr>Root<wbr>Block<wbr>Device</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Customize details about the root block
+    <dt class="property-optional"
+            title="Optional">
+        <span>Root<wbr>Block<wbr>Device</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#launchconfigurationrootblockdevice">*Launch<wbr>Configuration<wbr>Root<wbr>Block<wbr>Device</a></span>
+    </dt>
+    <dd>{{% md %}}Customize details about the root block
 device of the instance. See Block Devices below for details.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Security<wbr>Groups</td>
-            <td class="align-top">
-                
-                <code>[]string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A list of associated security group IDS.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Security<wbr>Groups</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of associated security group IDS.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Spot<wbr>Price</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The maximum price to use for reserving spot instances.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Spot<wbr>Price</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The maximum price to use for reserving spot instances.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">User<wbr>Data</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>User<wbr>Data</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">User<wbr>Data<wbr>Base64</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>User<wbr>Data<wbr>Base64</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Vpc<wbr>Classic<wbr>Link<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ID of a ClassicLink-enabled VPC. Only applies to EC2-Classic instances. (eg. `vpc-2730681a`)
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Vpc<wbr>Classic<wbr>Link<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The ID of a ClassicLink-enabled VPC. Only applies to EC2-Classic instances. (eg. `vpc-2730681a`)
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Vpc<wbr>Classic<wbr>Link<wbr>Security<wbr>Groups</td>
-            <td class="align-top">
-                
-                <code>[]string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The IDs of one or more security groups for the specified ClassicLink-enabled VPC (eg. `sg-46ae3d11`).
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Vpc<wbr>Classic<wbr>Link<wbr>Security<wbr>Groups</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The IDs of one or more security groups for the specified ClassicLink-enabled VPC (eg. `sg-46ae3d11`).
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>associate<wbr>Public<wbr>Ip<wbr>Address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean?</span>
+    </dt>
+    <dd>{{% md %}}Associate a public ip address with an instance in a VPC.
+{{% /md %}}</dd>
 
-{{% lang nodejs %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">associate<wbr>Public<wbr>Ip<wbr>Address</td>
-            <td class="align-top">
-                
-                <code>boolean?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Associate a public ip address with an instance in a VPC.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">ebs<wbr>Block<wbr>Devices</td>
-            <td class="align-top">
-                
-                <code><a href="#launchconfigurationebsblockdevice">Launch<wbr>Configuration<wbr>Ebs<wbr>Block<wbr>Device[]?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Additional EBS block devices to attach to the
+    <dt class="property-optional"
+            title="Optional">
+        <span>ebs<wbr>Block<wbr>Devices</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#launchconfigurationebsblockdevice">Launch<wbr>Configuration<wbr>Ebs<wbr>Block<wbr>Device[]?</a></span>
+    </dt>
+    <dd>{{% md %}}Additional EBS block devices to attach to the
 instance.  See Block Devices below for details.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">ebs<wbr>Optimized</td>
-            <td class="align-top">
-                
-                <code>boolean?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-If true, the launched EC2 instance will be EBS-optimized.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>ebs<wbr>Optimized</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean?</span>
+    </dt>
+    <dd>{{% md %}}If true, the launched EC2 instance will be EBS-optimized.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">enable<wbr>Monitoring</td>
-            <td class="align-top">
-                
-                <code>boolean?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Enables/disables detailed monitoring. This is enabled by default.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>enable<wbr>Monitoring</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean?</span>
+    </dt>
+    <dd>{{% md %}}Enables/disables detailed monitoring. This is enabled by default.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">ephemeral<wbr>Block<wbr>Devices</td>
-            <td class="align-top">
-                
-                <code><a href="#launchconfigurationephemeralblockdevice">Launch<wbr>Configuration<wbr>Ephemeral<wbr>Block<wbr>Device[]?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Customize Ephemeral (also known as
-&#34;Instance Store&#34;) volumes on the instance. See Block Devices below for details.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>ephemeral<wbr>Block<wbr>Devices</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#launchconfigurationephemeralblockdevice">Launch<wbr>Configuration<wbr>Ephemeral<wbr>Block<wbr>Device[]?</a></span>
+    </dt>
+    <dd>{{% md %}}Customize Ephemeral (also known as
+"Instance Store") volumes on the instance. See Block Devices below for details.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">iam<wbr>Instance<wbr>Profile</td>
-            <td class="align-top">
-                
-                <code>string | InstanceProfile</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The name attribute of the IAM instance profile to associate
+    <dt class="property-optional"
+            title="Optional">
+        <span>iam<wbr>Instance<wbr>Profile</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | InstanceProfile</span>
+    </dt>
+    <dd>{{% md %}}The name attribute of the IAM instance profile to associate
 with launched instances.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">image<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The EC2 image ID to launch.
- {{% /md %}}
+    <dt class="property-required"
+            title="Required">
+        <span>image<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The EC2 image ID to launch.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">instance<wbr>Type</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The size of instance to launch.
- {{% /md %}}
+    <dt class="property-required"
+            title="Required">
+        <span>instance<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The size of instance to launch.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">key<wbr>Name</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The key name that should be used for the instance.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>key<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The key name that should be used for the instance.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">name</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The name of the launch configuration. If you leave
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The name of the launch configuration. If you leave
 this blank, this provider will auto-generate a unique name.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">name<wbr>Prefix</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Creates a unique name beginning with the specified
+    <dt class="property-optional"
+            title="Optional">
+        <span>name<wbr>Prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Creates a unique name beginning with the specified
 prefix. Conflicts with `name`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">placement<wbr>Tenancy</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The tenancy of the instance. Valid values are
-`&#34;default&#34;` or `&#34;dedicated&#34;`, see [AWS&#39;s Create Launch Configuration](http://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_CreateLaunchConfiguration.html)
+    <dt class="property-optional"
+            title="Optional">
+        <span>placement<wbr>Tenancy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The tenancy of the instance. Valid values are
+`"default"` or `"dedicated"`, see [AWS's Create Launch Configuration](http://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_CreateLaunchConfiguration.html)
 for more details
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">root<wbr>Block<wbr>Device</td>
-            <td class="align-top">
-                
-                <code><a href="#launchconfigurationrootblockdevice">Launch<wbr>Configuration<wbr>Root<wbr>Block<wbr>Device?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Customize details about the root block
+    <dt class="property-optional"
+            title="Optional">
+        <span>root<wbr>Block<wbr>Device</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#launchconfigurationrootblockdevice">Launch<wbr>Configuration<wbr>Root<wbr>Block<wbr>Device?</a></span>
+    </dt>
+    <dd>{{% md %}}Customize details about the root block
 device of the instance. See Block Devices below for details.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">security<wbr>Groups</td>
-            <td class="align-top">
-                
-                <code>string[]?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A list of associated security group IDS.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>security<wbr>Groups</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]?</span>
+    </dt>
+    <dd>{{% md %}}A list of associated security group IDS.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">spot<wbr>Price</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The maximum price to use for reserving spot instances.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>spot<wbr>Price</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The maximum price to use for reserving spot instances.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">user<wbr>Data</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>user<wbr>Data</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">user<wbr>Data<wbr>Base64</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>user<wbr>Data<wbr>Base64</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">vpc<wbr>Classic<wbr>Link<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ID of a ClassicLink-enabled VPC. Only applies to EC2-Classic instances. (eg. `vpc-2730681a`)
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>vpc<wbr>Classic<wbr>Link<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The ID of a ClassicLink-enabled VPC. Only applies to EC2-Classic instances. (eg. `vpc-2730681a`)
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">vpc<wbr>Classic<wbr>Link<wbr>Security<wbr>Groups</td>
-            <td class="align-top">
-                
-                <code>string[]?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The IDs of one or more security groups for the specified ClassicLink-enabled VPC (eg. `sg-46ae3d11`).
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>vpc<wbr>Classic<wbr>Link<wbr>Security<wbr>Groups</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]?</span>
+    </dt>
+    <dd>{{% md %}}The IDs of one or more security groups for the specified ClassicLink-enabled VPC (eg. `sg-46ae3d11`).
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>associate_<wbr>public_<wbr>ip_<wbr>address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Associate a public ip address with an instance in a VPC.
+{{% /md %}}</dd>
 
-{{% lang python %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">associate_<wbr>public_<wbr>ip_<wbr>address</td>
-            <td class="align-top">
-                
-                <code>bool</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Associate a public ip address with an instance in a VPC.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">ebs_<wbr>block_<wbr>devices</td>
-            <td class="align-top">
-                
-                <code><a href="#launchconfigurationebsblockdevice">List[Launch<wbr>Configuration<wbr>Ebs<wbr>Block<wbr>Device]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Additional EBS block devices to attach to the
+    <dt class="property-optional"
+            title="Optional">
+        <span>ebs_<wbr>block_<wbr>devices</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#launchconfigurationebsblockdevice">List[Launch<wbr>Configuration<wbr>Ebs<wbr>Block<wbr>Device]</a></span>
+    </dt>
+    <dd>{{% md %}}Additional EBS block devices to attach to the
 instance.  See Block Devices below for details.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">ebs_<wbr>optimized</td>
-            <td class="align-top">
-                
-                <code>bool</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-If true, the launched EC2 instance will be EBS-optimized.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>ebs_<wbr>optimized</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, the launched EC2 instance will be EBS-optimized.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">enable_<wbr>monitoring</td>
-            <td class="align-top">
-                
-                <code>bool</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Enables/disables detailed monitoring. This is enabled by default.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>enable_<wbr>monitoring</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enables/disables detailed monitoring. This is enabled by default.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">ephemeral_<wbr>block_<wbr>devices</td>
-            <td class="align-top">
-                
-                <code><a href="#launchconfigurationephemeralblockdevice">List[Launch<wbr>Configuration<wbr>Ephemeral<wbr>Block<wbr>Device]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Customize Ephemeral (also known as
-&#34;Instance Store&#34;) volumes on the instance. See Block Devices below for details.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>ephemeral_<wbr>block_<wbr>devices</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#launchconfigurationephemeralblockdevice">List[Launch<wbr>Configuration<wbr>Ephemeral<wbr>Block<wbr>Device]</a></span>
+    </dt>
+    <dd>{{% md %}}Customize Ephemeral (also known as
+"Instance Store") volumes on the instance. See Block Devices below for details.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">iam_<wbr>instance_<wbr>profile</td>
-            <td class="align-top">
-                
-                <code>Dict[str, Any]</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The name attribute of the IAM instance profile to associate
+    <dt class="property-optional"
+            title="Optional">
+        <span>iam_<wbr>instance_<wbr>profile</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}The name attribute of the IAM instance profile to associate
 with launched instances.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">image_<wbr>id</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The EC2 image ID to launch.
- {{% /md %}}
+    <dt class="property-required"
+            title="Required">
+        <span>image_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The EC2 image ID to launch.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">instance_<wbr>type</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The size of instance to launch.
- {{% /md %}}
+    <dt class="property-required"
+            title="Required">
+        <span>instance_<wbr>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The size of instance to launch.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">key_<wbr>name</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The key name that should be used for the instance.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>key_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The key name that should be used for the instance.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">name</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The name of the launch configuration. If you leave
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the launch configuration. If you leave
 this blank, this provider will auto-generate a unique name.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">name_<wbr>prefix</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Creates a unique name beginning with the specified
+    <dt class="property-optional"
+            title="Optional">
+        <span>name_<wbr>prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Creates a unique name beginning with the specified
 prefix. Conflicts with `name`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">placement_<wbr>tenancy</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The tenancy of the instance. Valid values are
-`&#34;default&#34;` or `&#34;dedicated&#34;`, see [AWS&#39;s Create Launch Configuration](http://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_CreateLaunchConfiguration.html)
+    <dt class="property-optional"
+            title="Optional">
+        <span>placement_<wbr>tenancy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The tenancy of the instance. Valid values are
+`"default"` or `"dedicated"`, see [AWS's Create Launch Configuration](http://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_CreateLaunchConfiguration.html)
 for more details
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">root_<wbr>block_<wbr>device</td>
-            <td class="align-top">
-                
-                <code><a href="#launchconfigurationrootblockdevice">Dict[Launch<wbr>Configuration<wbr>Root<wbr>Block<wbr>Device]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Customize details about the root block
+    <dt class="property-optional"
+            title="Optional">
+        <span>root_<wbr>block_<wbr>device</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#launchconfigurationrootblockdevice">Dict[Launch<wbr>Configuration<wbr>Root<wbr>Block<wbr>Device]</a></span>
+    </dt>
+    <dd>{{% md %}}Customize details about the root block
 device of the instance. See Block Devices below for details.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">security_<wbr>groups</td>
-            <td class="align-top">
-                
-                <code>List[str]</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A list of associated security group IDS.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>security_<wbr>groups</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of associated security group IDS.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">spot_<wbr>price</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The maximum price to use for reserving spot instances.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>spot_<wbr>price</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The maximum price to use for reserving spot instances.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">user_<wbr>data</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>user_<wbr>data</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">user_<wbr>data_<wbr>base64</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>user_<wbr>data_<wbr>base64</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">vpc_<wbr>classic_<wbr>link_<wbr>id</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ID of a ClassicLink-enabled VPC. Only applies to EC2-Classic instances. (eg. `vpc-2730681a`)
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>vpc_<wbr>classic_<wbr>link_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of a ClassicLink-enabled VPC. Only applies to EC2-Classic instances. (eg. `vpc-2730681a`)
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">vpc_<wbr>classic_<wbr>link_<wbr>security_<wbr>groups</td>
-            <td class="align-top">
-                
-                <code>List[str]</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The IDs of one or more security groups for the specified ClassicLink-enabled VPC (eg. `sg-46ae3d11`).
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>vpc_<wbr>classic_<wbr>link_<wbr>security_<wbr>groups</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}The IDs of one or more security groups for the specified ClassicLink-enabled VPC (eg. `sg-46ae3d11`).
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
+</dl>
+{{% /choosable %}}
 
 
 
@@ -1489,1159 +1038,785 @@ The following output properties are available:
 
 
 
-{{< langchoose csharp nojavascript >}}
 
+{{% choosable language csharp %}}
+<dl class="resources-properties">
 
-{{% lang csharp %}}
+    <dt class="property-"
+            title="">
+        <span>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name of the launch configuration.
+{{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>Associate<wbr>Public<wbr>Ip<wbr>Address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool?</span>
+    </dt>
+    <dd>{{% md %}}Associate a public ip address with an instance in a VPC.
+{{% /md %}}</dd>
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Arn</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The Amazon Resource Name of the launch configuration.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Associate<wbr>Public<wbr>Ip<wbr>Address</td>
-            <td class="align-top">
-                
-                <code>bool?</code>
-            </td>
-            <td class="align-top">{{% md %}} Associate a public ip address with an instance in a VPC.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Ebs<wbr>Block<wbr>Devices</td>
-            <td class="align-top">
-                
-                <code><a href="#launchconfigurationebsblockdevice">List&lt;Launch<wbr>Configuration<wbr>Ebs<wbr>Block<wbr>Device&gt;</a></code>
-            </td>
-            <td class="align-top">{{% md %}} Additional EBS block devices to attach to the
+    <dt class="property-"
+            title="">
+        <span>Ebs<wbr>Block<wbr>Devices</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#launchconfigurationebsblockdevice">List&lt;Launch<wbr>Configuration<wbr>Ebs<wbr>Block<wbr>Device&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Additional EBS block devices to attach to the
 instance.  See Block Devices below for details.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Ebs<wbr>Optimized</td>
-            <td class="align-top">
-                
-                <code>bool</code>
-            </td>
-            <td class="align-top">{{% md %}} If true, the launched EC2 instance will be EBS-optimized.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Ebs<wbr>Optimized</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, the launched EC2 instance will be EBS-optimized.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Enable<wbr>Monitoring</td>
-            <td class="align-top">
-                
-                <code>bool?</code>
-            </td>
-            <td class="align-top">{{% md %}} Enables/disables detailed monitoring. This is enabled by default.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Enable<wbr>Monitoring</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool?</span>
+    </dt>
+    <dd>{{% md %}}Enables/disables detailed monitoring. This is enabled by default.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Ephemeral<wbr>Block<wbr>Devices</td>
-            <td class="align-top">
-                
-                <code><a href="#launchconfigurationephemeralblockdevice">List&lt;Launch<wbr>Configuration<wbr>Ephemeral<wbr>Block<wbr>Device&gt;?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} Customize Ephemeral (also known as
-&#34;Instance Store&#34;) volumes on the instance. See Block Devices below for details.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Ephemeral<wbr>Block<wbr>Devices</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#launchconfigurationephemeralblockdevice">List&lt;Launch<wbr>Configuration<wbr>Ephemeral<wbr>Block<wbr>Device&gt;?</a></span>
+    </dt>
+    <dd>{{% md %}}Customize Ephemeral (also known as
+"Instance Store") volumes on the instance. See Block Devices below for details.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Iam<wbr>Instance<wbr>Profile</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} The name attribute of the IAM instance profile to associate
+    <dt class="property-"
+            title="">
+        <span>Iam<wbr>Instance<wbr>Profile</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The name attribute of the IAM instance profile to associate
 with launched instances.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Image<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The EC2 image ID to launch.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Image<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The EC2 image ID to launch.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Instance<wbr>Type</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The size of instance to launch.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Instance<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The size of instance to launch.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Key<wbr>Name</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The key name that should be used for the instance.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Key<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The key name that should be used for the instance.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Name</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The name of the launch configuration. If you leave
+    <dt class="property-"
+            title="">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the launch configuration. If you leave
 this blank, this provider will auto-generate a unique name.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Name<wbr>Prefix</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} Creates a unique name beginning with the specified
+    <dt class="property-"
+            title="">
+        <span>Name<wbr>Prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Creates a unique name beginning with the specified
 prefix. Conflicts with `name`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Placement<wbr>Tenancy</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} The tenancy of the instance. Valid values are
-`&#34;default&#34;` or `&#34;dedicated&#34;`, see [AWS&#39;s Create Launch Configuration](http://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_CreateLaunchConfiguration.html)
+    <dt class="property-"
+            title="">
+        <span>Placement<wbr>Tenancy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The tenancy of the instance. Valid values are
+`"default"` or `"dedicated"`, see [AWS's Create Launch Configuration](http://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_CreateLaunchConfiguration.html)
 for more details
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Root<wbr>Block<wbr>Device</td>
-            <td class="align-top">
-                
-                <code><a href="#launchconfigurationrootblockdevice">Launch<wbr>Configuration<wbr>Root<wbr>Block<wbr>Device</a></code>
-            </td>
-            <td class="align-top">{{% md %}} Customize details about the root block
+    <dt class="property-"
+            title="">
+        <span>Root<wbr>Block<wbr>Device</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#launchconfigurationrootblockdevice">Launch<wbr>Configuration<wbr>Root<wbr>Block<wbr>Device</a></span>
+    </dt>
+    <dd>{{% md %}}Customize details about the root block
 device of the instance. See Block Devices below for details.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Security<wbr>Groups</td>
-            <td class="align-top">
-                
-                <code>List<string>?</code>
-            </td>
-            <td class="align-top">{{% md %}} A list of associated security group IDS.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Security<wbr>Groups</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List<string>?</span>
+    </dt>
+    <dd>{{% md %}}A list of associated security group IDS.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Spot<wbr>Price</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} The maximum price to use for reserving spot instances.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Spot<wbr>Price</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The maximum price to use for reserving spot instances.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">User<wbr>Data</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>User<wbr>Data</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">User<wbr>Data<wbr>Base64</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>User<wbr>Data<wbr>Base64</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Vpc<wbr>Classic<wbr>Link<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} The ID of a ClassicLink-enabled VPC. Only applies to EC2-Classic instances. (eg. `vpc-2730681a`)
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Vpc<wbr>Classic<wbr>Link<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The ID of a ClassicLink-enabled VPC. Only applies to EC2-Classic instances. (eg. `vpc-2730681a`)
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Vpc<wbr>Classic<wbr>Link<wbr>Security<wbr>Groups</td>
-            <td class="align-top">
-                
-                <code>List<string>?</code>
-            </td>
-            <td class="align-top">{{% md %}} The IDs of one or more security groups for the specified ClassicLink-enabled VPC (eg. `sg-46ae3d11`).
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Vpc<wbr>Classic<wbr>Link<wbr>Security<wbr>Groups</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List<string>?</span>
+    </dt>
+    <dd>{{% md %}}The IDs of one or more security groups for the specified ClassicLink-enabled VPC (eg. `sg-46ae3d11`).
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language go %}}
+<dl class="resources-properties">
 
+    <dt class="property-"
+            title="">
+        <span>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name of the launch configuration.
+{{% /md %}}</dd>
 
-{{% lang go %}}
+    <dt class="property-"
+            title="">
+        <span>Associate<wbr>Public<wbr>Ip<wbr>Address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*bool</span>
+    </dt>
+    <dd>{{% md %}}Associate a public ip address with an instance in a VPC.
+{{% /md %}}</dd>
 
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Arn</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The Amazon Resource Name of the launch configuration.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Associate<wbr>Public<wbr>Ip<wbr>Address</td>
-            <td class="align-top">
-                
-                <code>*bool</code>
-            </td>
-            <td class="align-top">{{% md %}} Associate a public ip address with an instance in a VPC.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Ebs<wbr>Block<wbr>Devices</td>
-            <td class="align-top">
-                
-                <code><a href="#launchconfigurationebsblockdevice">[]Launch<wbr>Configuration<wbr>Ebs<wbr>Block<wbr>Device</a></code>
-            </td>
-            <td class="align-top">{{% md %}} Additional EBS block devices to attach to the
+    <dt class="property-"
+            title="">
+        <span>Ebs<wbr>Block<wbr>Devices</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#launchconfigurationebsblockdevice">[]Launch<wbr>Configuration<wbr>Ebs<wbr>Block<wbr>Device</a></span>
+    </dt>
+    <dd>{{% md %}}Additional EBS block devices to attach to the
 instance.  See Block Devices below for details.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Ebs<wbr>Optimized</td>
-            <td class="align-top">
-                
-                <code>bool</code>
-            </td>
-            <td class="align-top">{{% md %}} If true, the launched EC2 instance will be EBS-optimized.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Ebs<wbr>Optimized</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, the launched EC2 instance will be EBS-optimized.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Enable<wbr>Monitoring</td>
-            <td class="align-top">
-                
-                <code>*bool</code>
-            </td>
-            <td class="align-top">{{% md %}} Enables/disables detailed monitoring. This is enabled by default.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Enable<wbr>Monitoring</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*bool</span>
+    </dt>
+    <dd>{{% md %}}Enables/disables detailed monitoring. This is enabled by default.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Ephemeral<wbr>Block<wbr>Devices</td>
-            <td class="align-top">
-                
-                <code><a href="#launchconfigurationephemeralblockdevice">[]Launch<wbr>Configuration<wbr>Ephemeral<wbr>Block<wbr>Device</a></code>
-            </td>
-            <td class="align-top">{{% md %}} Customize Ephemeral (also known as
-&#34;Instance Store&#34;) volumes on the instance. See Block Devices below for details.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Ephemeral<wbr>Block<wbr>Devices</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#launchconfigurationephemeralblockdevice">[]Launch<wbr>Configuration<wbr>Ephemeral<wbr>Block<wbr>Device</a></span>
+    </dt>
+    <dd>{{% md %}}Customize Ephemeral (also known as
+"Instance Store") volumes on the instance. See Block Devices below for details.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Iam<wbr>Instance<wbr>Profile</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} The name attribute of the IAM instance profile to associate
+    <dt class="property-"
+            title="">
+        <span>Iam<wbr>Instance<wbr>Profile</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The name attribute of the IAM instance profile to associate
 with launched instances.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Image<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The EC2 image ID to launch.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Image<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The EC2 image ID to launch.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Instance<wbr>Type</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The size of instance to launch.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Instance<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The size of instance to launch.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Key<wbr>Name</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The key name that should be used for the instance.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Key<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The key name that should be used for the instance.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Name</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The name of the launch configuration. If you leave
+    <dt class="property-"
+            title="">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the launch configuration. If you leave
 this blank, this provider will auto-generate a unique name.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Name<wbr>Prefix</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} Creates a unique name beginning with the specified
+    <dt class="property-"
+            title="">
+        <span>Name<wbr>Prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}Creates a unique name beginning with the specified
 prefix. Conflicts with `name`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Placement<wbr>Tenancy</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} The tenancy of the instance. Valid values are
-`&#34;default&#34;` or `&#34;dedicated&#34;`, see [AWS&#39;s Create Launch Configuration](http://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_CreateLaunchConfiguration.html)
+    <dt class="property-"
+            title="">
+        <span>Placement<wbr>Tenancy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The tenancy of the instance. Valid values are
+`"default"` or `"dedicated"`, see [AWS's Create Launch Configuration](http://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_CreateLaunchConfiguration.html)
 for more details
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Root<wbr>Block<wbr>Device</td>
-            <td class="align-top">
-                
-                <code><a href="#launchconfigurationrootblockdevice">Launch<wbr>Configuration<wbr>Root<wbr>Block<wbr>Device</a></code>
-            </td>
-            <td class="align-top">{{% md %}} Customize details about the root block
+    <dt class="property-"
+            title="">
+        <span>Root<wbr>Block<wbr>Device</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#launchconfigurationrootblockdevice">Launch<wbr>Configuration<wbr>Root<wbr>Block<wbr>Device</a></span>
+    </dt>
+    <dd>{{% md %}}Customize details about the root block
 device of the instance. See Block Devices below for details.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Security<wbr>Groups</td>
-            <td class="align-top">
-                
-                <code>[]string</code>
-            </td>
-            <td class="align-top">{{% md %}} A list of associated security group IDS.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Security<wbr>Groups</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of associated security group IDS.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Spot<wbr>Price</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} The maximum price to use for reserving spot instances.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Spot<wbr>Price</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The maximum price to use for reserving spot instances.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">User<wbr>Data</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>User<wbr>Data</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">User<wbr>Data<wbr>Base64</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>User<wbr>Data<wbr>Base64</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Vpc<wbr>Classic<wbr>Link<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} The ID of a ClassicLink-enabled VPC. Only applies to EC2-Classic instances. (eg. `vpc-2730681a`)
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Vpc<wbr>Classic<wbr>Link<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The ID of a ClassicLink-enabled VPC. Only applies to EC2-Classic instances. (eg. `vpc-2730681a`)
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Vpc<wbr>Classic<wbr>Link<wbr>Security<wbr>Groups</td>
-            <td class="align-top">
-                
-                <code>[]string</code>
-            </td>
-            <td class="align-top">{{% md %}} The IDs of one or more security groups for the specified ClassicLink-enabled VPC (eg. `sg-46ae3d11`).
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>Vpc<wbr>Classic<wbr>Link<wbr>Security<wbr>Groups</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The IDs of one or more security groups for the specified ClassicLink-enabled VPC (eg. `sg-46ae3d11`).
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
+    <dt class="property-"
+            title="">
+        <span>arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name of the launch configuration.
+{{% /md %}}</dd>
 
-{{% lang nodejs %}}
+    <dt class="property-"
+            title="">
+        <span>associate<wbr>Public<wbr>Ip<wbr>Address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean?</span>
+    </dt>
+    <dd>{{% md %}}Associate a public ip address with an instance in a VPC.
+{{% /md %}}</dd>
 
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">arn</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The Amazon Resource Name of the launch configuration.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">associate<wbr>Public<wbr>Ip<wbr>Address</td>
-            <td class="align-top">
-                
-                <code>boolean?</code>
-            </td>
-            <td class="align-top">{{% md %}} Associate a public ip address with an instance in a VPC.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">ebs<wbr>Block<wbr>Devices</td>
-            <td class="align-top">
-                
-                <code><a href="#launchconfigurationebsblockdevice">Launch<wbr>Configuration<wbr>Ebs<wbr>Block<wbr>Device[]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} Additional EBS block devices to attach to the
+    <dt class="property-"
+            title="">
+        <span>ebs<wbr>Block<wbr>Devices</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#launchconfigurationebsblockdevice">Launch<wbr>Configuration<wbr>Ebs<wbr>Block<wbr>Device[]</a></span>
+    </dt>
+    <dd>{{% md %}}Additional EBS block devices to attach to the
 instance.  See Block Devices below for details.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">ebs<wbr>Optimized</td>
-            <td class="align-top">
-                
-                <code>boolean</code>
-            </td>
-            <td class="align-top">{{% md %}} If true, the launched EC2 instance will be EBS-optimized.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>ebs<wbr>Optimized</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If true, the launched EC2 instance will be EBS-optimized.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">enable<wbr>Monitoring</td>
-            <td class="align-top">
-                
-                <code>boolean?</code>
-            </td>
-            <td class="align-top">{{% md %}} Enables/disables detailed monitoring. This is enabled by default.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>enable<wbr>Monitoring</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean?</span>
+    </dt>
+    <dd>{{% md %}}Enables/disables detailed monitoring. This is enabled by default.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">ephemeral<wbr>Block<wbr>Devices</td>
-            <td class="align-top">
-                
-                <code><a href="#launchconfigurationephemeralblockdevice">Launch<wbr>Configuration<wbr>Ephemeral<wbr>Block<wbr>Device[]?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} Customize Ephemeral (also known as
-&#34;Instance Store&#34;) volumes on the instance. See Block Devices below for details.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>ephemeral<wbr>Block<wbr>Devices</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#launchconfigurationephemeralblockdevice">Launch<wbr>Configuration<wbr>Ephemeral<wbr>Block<wbr>Device[]?</a></span>
+    </dt>
+    <dd>{{% md %}}Customize Ephemeral (also known as
+"Instance Store") volumes on the instance. See Block Devices below for details.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">iam<wbr>Instance<wbr>Profile</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} The name attribute of the IAM instance profile to associate
+    <dt class="property-"
+            title="">
+        <span>iam<wbr>Instance<wbr>Profile</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The name attribute of the IAM instance profile to associate
 with launched instances.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">image<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The EC2 image ID to launch.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>image<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The EC2 image ID to launch.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">instance<wbr>Type</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The size of instance to launch.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>instance<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The size of instance to launch.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">key<wbr>Name</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The key name that should be used for the instance.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>key<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The key name that should be used for the instance.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">name</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The name of the launch configuration. If you leave
+    <dt class="property-"
+            title="">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the launch configuration. If you leave
 this blank, this provider will auto-generate a unique name.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">name<wbr>Prefix</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} Creates a unique name beginning with the specified
+    <dt class="property-"
+            title="">
+        <span>name<wbr>Prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Creates a unique name beginning with the specified
 prefix. Conflicts with `name`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">placement<wbr>Tenancy</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} The tenancy of the instance. Valid values are
-`&#34;default&#34;` or `&#34;dedicated&#34;`, see [AWS&#39;s Create Launch Configuration](http://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_CreateLaunchConfiguration.html)
+    <dt class="property-"
+            title="">
+        <span>placement<wbr>Tenancy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The tenancy of the instance. Valid values are
+`"default"` or `"dedicated"`, see [AWS's Create Launch Configuration](http://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_CreateLaunchConfiguration.html)
 for more details
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">root<wbr>Block<wbr>Device</td>
-            <td class="align-top">
-                
-                <code><a href="#launchconfigurationrootblockdevice">Launch<wbr>Configuration<wbr>Root<wbr>Block<wbr>Device</a></code>
-            </td>
-            <td class="align-top">{{% md %}} Customize details about the root block
+    <dt class="property-"
+            title="">
+        <span>root<wbr>Block<wbr>Device</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#launchconfigurationrootblockdevice">Launch<wbr>Configuration<wbr>Root<wbr>Block<wbr>Device</a></span>
+    </dt>
+    <dd>{{% md %}}Customize details about the root block
 device of the instance. See Block Devices below for details.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">security<wbr>Groups</td>
-            <td class="align-top">
-                
-                <code>string[]?</code>
-            </td>
-            <td class="align-top">{{% md %}} A list of associated security group IDS.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>security<wbr>Groups</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]?</span>
+    </dt>
+    <dd>{{% md %}}A list of associated security group IDS.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">spot<wbr>Price</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} The maximum price to use for reserving spot instances.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>spot<wbr>Price</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The maximum price to use for reserving spot instances.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">user<wbr>Data</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>user<wbr>Data</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">user<wbr>Data<wbr>Base64</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>user<wbr>Data<wbr>Base64</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">vpc<wbr>Classic<wbr>Link<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} The ID of a ClassicLink-enabled VPC. Only applies to EC2-Classic instances. (eg. `vpc-2730681a`)
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>vpc<wbr>Classic<wbr>Link<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The ID of a ClassicLink-enabled VPC. Only applies to EC2-Classic instances. (eg. `vpc-2730681a`)
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">vpc<wbr>Classic<wbr>Link<wbr>Security<wbr>Groups</td>
-            <td class="align-top">
-                
-                <code>string[]?</code>
-            </td>
-            <td class="align-top">{{% md %}} The IDs of one or more security groups for the specified ClassicLink-enabled VPC (eg. `sg-46ae3d11`).
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>vpc<wbr>Classic<wbr>Link<wbr>Security<wbr>Groups</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]?</span>
+    </dt>
+    <dd>{{% md %}}The IDs of one or more security groups for the specified ClassicLink-enabled VPC (eg. `sg-46ae3d11`).
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
 
+    <dt class="property-"
+            title="">
+        <span>arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name of the launch configuration.
+{{% /md %}}</dd>
 
-{{% lang python %}}
+    <dt class="property-"
+            title="">
+        <span>associate_<wbr>public_<wbr>ip_<wbr>address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Associate a public ip address with an instance in a VPC.
+{{% /md %}}</dd>
 
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">arn</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} The Amazon Resource Name of the launch configuration.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">associate_<wbr>public_<wbr>ip_<wbr>address</td>
-            <td class="align-top">
-                
-                <code>bool</code>
-            </td>
-            <td class="align-top">{{% md %}} Associate a public ip address with an instance in a VPC.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">ebs_<wbr>block_<wbr>devices</td>
-            <td class="align-top">
-                
-                <code><a href="#launchconfigurationebsblockdevice">List[Launch<wbr>Configuration<wbr>Ebs<wbr>Block<wbr>Device]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} Additional EBS block devices to attach to the
+    <dt class="property-"
+            title="">
+        <span>ebs_<wbr>block_<wbr>devices</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#launchconfigurationebsblockdevice">List[Launch<wbr>Configuration<wbr>Ebs<wbr>Block<wbr>Device]</a></span>
+    </dt>
+    <dd>{{% md %}}Additional EBS block devices to attach to the
 instance.  See Block Devices below for details.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">ebs_<wbr>optimized</td>
-            <td class="align-top">
-                
-                <code>bool</code>
-            </td>
-            <td class="align-top">{{% md %}} If true, the launched EC2 instance will be EBS-optimized.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>ebs_<wbr>optimized</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, the launched EC2 instance will be EBS-optimized.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">enable_<wbr>monitoring</td>
-            <td class="align-top">
-                
-                <code>bool</code>
-            </td>
-            <td class="align-top">{{% md %}} Enables/disables detailed monitoring. This is enabled by default.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>enable_<wbr>monitoring</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enables/disables detailed monitoring. This is enabled by default.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">ephemeral_<wbr>block_<wbr>devices</td>
-            <td class="align-top">
-                
-                <code><a href="#launchconfigurationephemeralblockdevice">List[Launch<wbr>Configuration<wbr>Ephemeral<wbr>Block<wbr>Device]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} Customize Ephemeral (also known as
-&#34;Instance Store&#34;) volumes on the instance. See Block Devices below for details.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>ephemeral_<wbr>block_<wbr>devices</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#launchconfigurationephemeralblockdevice">List[Launch<wbr>Configuration<wbr>Ephemeral<wbr>Block<wbr>Device]</a></span>
+    </dt>
+    <dd>{{% md %}}Customize Ephemeral (also known as
+"Instance Store") volumes on the instance. See Block Devices below for details.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">iam_<wbr>instance_<wbr>profile</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} The name attribute of the IAM instance profile to associate
+    <dt class="property-"
+            title="">
+        <span>iam_<wbr>instance_<wbr>profile</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name attribute of the IAM instance profile to associate
 with launched instances.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">image_<wbr>id</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} The EC2 image ID to launch.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>image_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The EC2 image ID to launch.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">instance_<wbr>type</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} The size of instance to launch.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>instance_<wbr>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The size of instance to launch.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">key_<wbr>name</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} The key name that should be used for the instance.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>key_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The key name that should be used for the instance.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">name</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} The name of the launch configuration. If you leave
+    <dt class="property-"
+            title="">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the launch configuration. If you leave
 this blank, this provider will auto-generate a unique name.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">name_<wbr>prefix</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} Creates a unique name beginning with the specified
+    <dt class="property-"
+            title="">
+        <span>name_<wbr>prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Creates a unique name beginning with the specified
 prefix. Conflicts with `name`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">placement_<wbr>tenancy</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} The tenancy of the instance. Valid values are
-`&#34;default&#34;` or `&#34;dedicated&#34;`, see [AWS&#39;s Create Launch Configuration](http://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_CreateLaunchConfiguration.html)
+    <dt class="property-"
+            title="">
+        <span>placement_<wbr>tenancy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The tenancy of the instance. Valid values are
+`"default"` or `"dedicated"`, see [AWS's Create Launch Configuration](http://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_CreateLaunchConfiguration.html)
 for more details
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">root_<wbr>block_<wbr>device</td>
-            <td class="align-top">
-                
-                <code><a href="#launchconfigurationrootblockdevice">Dict[Launch<wbr>Configuration<wbr>Root<wbr>Block<wbr>Device]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} Customize details about the root block
+    <dt class="property-"
+            title="">
+        <span>root_<wbr>block_<wbr>device</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#launchconfigurationrootblockdevice">Dict[Launch<wbr>Configuration<wbr>Root<wbr>Block<wbr>Device]</a></span>
+    </dt>
+    <dd>{{% md %}}Customize details about the root block
 device of the instance. See Block Devices below for details.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">security_<wbr>groups</td>
-            <td class="align-top">
-                
-                <code>List[str]</code>
-            </td>
-            <td class="align-top">{{% md %}} A list of associated security group IDS.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>security_<wbr>groups</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of associated security group IDS.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">spot_<wbr>price</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} The maximum price to use for reserving spot instances.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>spot_<wbr>price</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The maximum price to use for reserving spot instances.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">user_<wbr>data</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>user_<wbr>data</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">user_<wbr>data_<wbr>base64</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>user_<wbr>data_<wbr>base64</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">vpc_<wbr>classic_<wbr>link_<wbr>id</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} The ID of a ClassicLink-enabled VPC. Only applies to EC2-Classic instances. (eg. `vpc-2730681a`)
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>vpc_<wbr>classic_<wbr>link_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of a ClassicLink-enabled VPC. Only applies to EC2-Classic instances. (eg. `vpc-2730681a`)
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">vpc_<wbr>classic_<wbr>link_<wbr>security_<wbr>groups</td>
-            <td class="align-top">
-                
-                <code>List[str]</code>
-            </td>
-            <td class="align-top">{{% md %}} The IDs of one or more security groups for the specified ClassicLink-enabled VPC (eg. `sg-46ae3d11`).
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>vpc_<wbr>classic_<wbr>link_<wbr>security_<wbr>groups</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}The IDs of one or more security groups for the specified ClassicLink-enabled VPC (eg. `sg-46ae3d11`).
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
+</dl>
+{{% /choosable %}}
 
 
 
@@ -2652,1367 +1827,904 @@ device of the instance. See Block Devices below for details.
 
 ## Look up an Existing LaunchConfiguration Resource
 
-{{< langchoose csharp nojavascript >}}
-
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">pulumi.Input&lt;pulumi.ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#LaunchConfigurationState">LaunchConfigurationState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#LaunchConfiguration">LaunchConfiguration</a></span></code></pre></div>
-
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>associate_public_ip_address=None<span class="p">, </span>ebs_block_devices=None<span class="p">, </span>ebs_optimized=None<span class="p">, </span>enable_monitoring=None<span class="p">, </span>ephemeral_block_devices=None<span class="p">, </span>iam_instance_profile=None<span class="p">, </span>image_id=None<span class="p">, </span>instance_type=None<span class="p">, </span>key_name=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>placement_tenancy=None<span class="p">, </span>root_block_device=None<span class="p">, </span>security_groups=None<span class="p">, </span>spot_price=None<span class="p">, </span>user_data=None<span class="p">, </span>user_data_base64=None<span class="p">, </span>vpc_classic_link_id=None<span class="p">, </span>vpc_classic_link_security_groups=None<span class="p">, __props__=None);</span></code></pre></div>
-
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetLaunchConfiguration<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">pulumi.IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#LaunchConfigurationState">LaunchConfigurationState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#LaunchConfiguration">LaunchConfiguration</a></span>, error)</span></code></pre></div>
-
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.LaunchConfiguration.html">LaunchConfiguration</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Pulumi.Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.LaunchConfigurationState.html">LaunchConfigurationState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
-
 Get an existing LaunchConfiguration resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 
-{{% lang nodejs %}}
+{{< chooser language "javascript,typescript,python,go,csharp  " / >}}
 
-<ul class="pl-10">
-    <li><strong>name</strong> &ndash; (Required) The unique name of the resulting resource.</li>
-    <li><strong>id</strong> &ndash; (Required) The _unique_ provider ID of the resource to lookup.</li>
-    <li><strong>state</strong> &ndash; (Optional) Any extra arguments used during the lookup.</li>
-    <li><strong>opts</strong> &ndash; (Optional) A bag of options that control this resource's behavior.</li>
-</ul>
+{{% choosable language nodejs %}}
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#LaunchConfigurationState">LaunchConfigurationState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#LaunchConfiguration">LaunchConfiguration</a></span></code></pre></div>
+{{% /choosable %}}
 
-{{% /lang %}}
+{{% choosable language python %}}
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>associate_public_ip_address=None<span class="p">, </span>ebs_block_devices=None<span class="p">, </span>ebs_optimized=None<span class="p">, </span>enable_monitoring=None<span class="p">, </span>ephemeral_block_devices=None<span class="p">, </span>iam_instance_profile=None<span class="p">, </span>image_id=None<span class="p">, </span>instance_type=None<span class="p">, </span>key_name=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>placement_tenancy=None<span class="p">, </span>root_block_device=None<span class="p">, </span>security_groups=None<span class="p">, </span>spot_price=None<span class="p">, </span>user_data=None<span class="p">, </span>user_data_base64=None<span class="p">, </span>vpc_classic_link_id=None<span class="p">, </span>vpc_classic_link_security_groups=None<span class="p">, __props__=None);</span></code></pre></div>
+{{% /choosable %}}
 
-{{% lang go %}}
+{{% choosable language go %}}
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetLaunchConfiguration<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#LaunchConfigurationState">LaunchConfigurationState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#LaunchConfiguration">LaunchConfiguration</a></span>, error)</span></code></pre></div>
+{{% /choosable %}}
 
-<ul class="pl-10">
-    <li><strong>name</strong> &ndash; (Required) The unique name of the resulting resource.</li>
-    <li><strong>id</strong> &ndash; (Required) The _unique_ provider ID of the resource to lookup.</li>
-    <li><strong>state</strong> &ndash; (Optional) Any extra arguments used during the lookup.</li>
-    <li><strong>opts</strong> &ndash; (Optional) A bag of options that control this resource's behavior.</li>
-</ul>
+{{% choosable language csharp %}}
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.LaunchConfiguration.html">LaunchConfiguration</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.LaunchConfigurationState.html">LaunchConfigurationState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+{{% /choosable %}}
 
-{{% /lang %}}
+{{% choosable language nodejs %}}
 
-{{% lang csharp %}}
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resulting resource.</dd>
+    <dt class="property-required" title="Required">
+        <span>id</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The <em>unique</em> provider ID of the resource to lookup.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>state</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>Any extra arguments used during the lookup.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 
-<ul class="pl-10">
-    <li><strong>name</strong> &ndash; (Required) The unique name of the resulting resource.</li>
-    <li><strong>id</strong> &ndash; (Required) The _unique_ provider ID of the resource to lookup.</li>
-    <li><strong>state</strong> &ndash; (Optional) Any extra arguments used during the lookup.</li>
-    <li><strong>opts</strong> &ndash; (Optional) A bag of options that control this resource's behavior.</li>
-</ul>
+{{% /choosable %}}
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>resource_name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resulting resource.</dd>
+    <dt class="property-required" title="Optional">
+        <span>id</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The <em>unique</em> provider ID of the resource to lookup.</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resulting resource.</dd>
+    <dt class="property-required" title="Required">
+        <span>id</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The <em>unique</em> provider ID of the resource to lookup.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>state</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>Any extra arguments used during the lookup.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resulting resource.</dd>
+    <dt class="property-required" title="Required">
+        <span>id</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The <em>unique</em> provider ID of the resource to lookup.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>state</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>Any extra arguments used during the lookup.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
+
+{{% /choosable %}}
 
 The following state arguments are supported:
 
 
-{{< langchoose csharp nojavascript >}}
 
+{{% choosable language csharp %}}
+<dl class="resources-properties">
 
-{{% lang csharp %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name of the launch configuration.
+{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Associate<wbr>Public<wbr>Ip<wbr>Address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool?</span>
+    </dt>
+    <dd>{{% md %}}Associate a public ip address with an instance in a VPC.
+{{% /md %}}</dd>
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Arn</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The Amazon Resource Name of the launch configuration.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Associate<wbr>Public<wbr>Ip<wbr>Address</td>
-            <td class="align-top">
-                
-                <code>bool?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Associate a public ip address with an instance in a VPC.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Ebs<wbr>Block<wbr>Devices</td>
-            <td class="align-top">
-                
-                <code><a href="#launchconfigurationebsblockdevice">List&lt;Launch<wbr>Configuration<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args&gt;?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Additional EBS block devices to attach to the
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ebs<wbr>Block<wbr>Devices</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#launchconfigurationebsblockdevice">List&lt;Launch<wbr>Configuration<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args&gt;?</a></span>
+    </dt>
+    <dd>{{% md %}}Additional EBS block devices to attach to the
 instance.  See Block Devices below for details.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Ebs<wbr>Optimized</td>
-            <td class="align-top">
-                
-                <code>bool?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-If true, the launched EC2 instance will be EBS-optimized.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ebs<wbr>Optimized</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool?</span>
+    </dt>
+    <dd>{{% md %}}If true, the launched EC2 instance will be EBS-optimized.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Enable<wbr>Monitoring</td>
-            <td class="align-top">
-                
-                <code>bool?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Enables/disables detailed monitoring. This is enabled by default.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Enable<wbr>Monitoring</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool?</span>
+    </dt>
+    <dd>{{% md %}}Enables/disables detailed monitoring. This is enabled by default.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Ephemeral<wbr>Block<wbr>Devices</td>
-            <td class="align-top">
-                
-                <code><a href="#launchconfigurationephemeralblockdevice">List&lt;Launch<wbr>Configuration<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args&gt;?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Customize Ephemeral (also known as
-&#34;Instance Store&#34;) volumes on the instance. See Block Devices below for details.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ephemeral<wbr>Block<wbr>Devices</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#launchconfigurationephemeralblockdevice">List&lt;Launch<wbr>Configuration<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args&gt;?</a></span>
+    </dt>
+    <dd>{{% md %}}Customize Ephemeral (also known as
+"Instance Store") volumes on the instance. See Block Devices below for details.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Iam<wbr>Instance<wbr>Profile</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The name attribute of the IAM instance profile to associate
+    <dt class="property-optional"
+            title="Optional">
+        <span>Iam<wbr>Instance<wbr>Profile</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The name attribute of the IAM instance profile to associate
 with launched instances.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Image<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The EC2 image ID to launch.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Image<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The EC2 image ID to launch.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Instance<wbr>Type</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The size of instance to launch.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Instance<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The size of instance to launch.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Key<wbr>Name</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The key name that should be used for the instance.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Key<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The key name that should be used for the instance.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Name</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The name of the launch configuration. If you leave
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The name of the launch configuration. If you leave
 this blank, this provider will auto-generate a unique name.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Name<wbr>Prefix</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Creates a unique name beginning with the specified
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name<wbr>Prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Creates a unique name beginning with the specified
 prefix. Conflicts with `name`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Placement<wbr>Tenancy</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The tenancy of the instance. Valid values are
-`&#34;default&#34;` or `&#34;dedicated&#34;`, see [AWS&#39;s Create Launch Configuration](http://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_CreateLaunchConfiguration.html)
+    <dt class="property-optional"
+            title="Optional">
+        <span>Placement<wbr>Tenancy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The tenancy of the instance. Valid values are
+`"default"` or `"dedicated"`, see [AWS's Create Launch Configuration](http://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_CreateLaunchConfiguration.html)
 for more details
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Root<wbr>Block<wbr>Device</td>
-            <td class="align-top">
-                
-                <code><a href="#launchconfigurationrootblockdevice">Launch<wbr>Configuration<wbr>Root<wbr>Block<wbr>Device<wbr>Args?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Customize details about the root block
+    <dt class="property-optional"
+            title="Optional">
+        <span>Root<wbr>Block<wbr>Device</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#launchconfigurationrootblockdevice">Launch<wbr>Configuration<wbr>Root<wbr>Block<wbr>Device<wbr>Args?</a></span>
+    </dt>
+    <dd>{{% md %}}Customize details about the root block
 device of the instance. See Block Devices below for details.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Security<wbr>Groups</td>
-            <td class="align-top">
-                
-                <code>List<string>?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A list of associated security group IDS.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Security<wbr>Groups</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List<string>?</span>
+    </dt>
+    <dd>{{% md %}}A list of associated security group IDS.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Spot<wbr>Price</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The maximum price to use for reserving spot instances.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Spot<wbr>Price</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The maximum price to use for reserving spot instances.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">User<wbr>Data</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>User<wbr>Data</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">User<wbr>Data<wbr>Base64</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>User<wbr>Data<wbr>Base64</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Vpc<wbr>Classic<wbr>Link<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ID of a ClassicLink-enabled VPC. Only applies to EC2-Classic instances. (eg. `vpc-2730681a`)
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Vpc<wbr>Classic<wbr>Link<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The ID of a ClassicLink-enabled VPC. Only applies to EC2-Classic instances. (eg. `vpc-2730681a`)
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Vpc<wbr>Classic<wbr>Link<wbr>Security<wbr>Groups</td>
-            <td class="align-top">
-                
-                <code>List<string>?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The IDs of one or more security groups for the specified ClassicLink-enabled VPC (eg. `sg-46ae3d11`).
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Vpc<wbr>Classic<wbr>Link<wbr>Security<wbr>Groups</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List<string>?</span>
+    </dt>
+    <dd>{{% md %}}The IDs of one or more security groups for the specified ClassicLink-enabled VPC (eg. `sg-46ae3d11`).
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language go %}}
+<dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name of the launch configuration.
+{{% /md %}}</dd>
 
-{{% lang go %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Associate<wbr>Public<wbr>Ip<wbr>Address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*bool</span>
+    </dt>
+    <dd>{{% md %}}Associate a public ip address with an instance in a VPC.
+{{% /md %}}</dd>
 
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Arn</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The Amazon Resource Name of the launch configuration.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Associate<wbr>Public<wbr>Ip<wbr>Address</td>
-            <td class="align-top">
-                
-                <code>*bool</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Associate a public ip address with an instance in a VPC.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Ebs<wbr>Block<wbr>Devices</td>
-            <td class="align-top">
-                
-                <code><a href="#launchconfigurationebsblockdevice">[]Launch<wbr>Configuration<wbr>Ebs<wbr>Block<wbr>Device</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Additional EBS block devices to attach to the
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ebs<wbr>Block<wbr>Devices</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#launchconfigurationebsblockdevice">[]Launch<wbr>Configuration<wbr>Ebs<wbr>Block<wbr>Device</a></span>
+    </dt>
+    <dd>{{% md %}}Additional EBS block devices to attach to the
 instance.  See Block Devices below for details.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Ebs<wbr>Optimized</td>
-            <td class="align-top">
-                
-                <code>*bool</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-If true, the launched EC2 instance will be EBS-optimized.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ebs<wbr>Optimized</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*bool</span>
+    </dt>
+    <dd>{{% md %}}If true, the launched EC2 instance will be EBS-optimized.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Enable<wbr>Monitoring</td>
-            <td class="align-top">
-                
-                <code>*bool</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Enables/disables detailed monitoring. This is enabled by default.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Enable<wbr>Monitoring</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*bool</span>
+    </dt>
+    <dd>{{% md %}}Enables/disables detailed monitoring. This is enabled by default.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Ephemeral<wbr>Block<wbr>Devices</td>
-            <td class="align-top">
-                
-                <code><a href="#launchconfigurationephemeralblockdevice">[]Launch<wbr>Configuration<wbr>Ephemeral<wbr>Block<wbr>Device</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Customize Ephemeral (also known as
-&#34;Instance Store&#34;) volumes on the instance. See Block Devices below for details.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ephemeral<wbr>Block<wbr>Devices</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#launchconfigurationephemeralblockdevice">[]Launch<wbr>Configuration<wbr>Ephemeral<wbr>Block<wbr>Device</a></span>
+    </dt>
+    <dd>{{% md %}}Customize Ephemeral (also known as
+"Instance Store") volumes on the instance. See Block Devices below for details.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Iam<wbr>Instance<wbr>Profile</td>
-            <td class="align-top">
-                
-                <code>interface{}</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The name attribute of the IAM instance profile to associate
+    <dt class="property-optional"
+            title="Optional">
+        <span>Iam<wbr>Instance<wbr>Profile</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}The name attribute of the IAM instance profile to associate
 with launched instances.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Image<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The EC2 image ID to launch.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Image<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The EC2 image ID to launch.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Instance<wbr>Type</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The size of instance to launch.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Instance<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The size of instance to launch.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Key<wbr>Name</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The key name that should be used for the instance.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Key<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The key name that should be used for the instance.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Name</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The name of the launch configuration. If you leave
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The name of the launch configuration. If you leave
 this blank, this provider will auto-generate a unique name.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Name<wbr>Prefix</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Creates a unique name beginning with the specified
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name<wbr>Prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}Creates a unique name beginning with the specified
 prefix. Conflicts with `name`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Placement<wbr>Tenancy</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The tenancy of the instance. Valid values are
-`&#34;default&#34;` or `&#34;dedicated&#34;`, see [AWS&#39;s Create Launch Configuration](http://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_CreateLaunchConfiguration.html)
+    <dt class="property-optional"
+            title="Optional">
+        <span>Placement<wbr>Tenancy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The tenancy of the instance. Valid values are
+`"default"` or `"dedicated"`, see [AWS's Create Launch Configuration](http://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_CreateLaunchConfiguration.html)
 for more details
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Root<wbr>Block<wbr>Device</td>
-            <td class="align-top">
-                
-                <code><a href="#launchconfigurationrootblockdevice">*Launch<wbr>Configuration<wbr>Root<wbr>Block<wbr>Device</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Customize details about the root block
+    <dt class="property-optional"
+            title="Optional">
+        <span>Root<wbr>Block<wbr>Device</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#launchconfigurationrootblockdevice">*Launch<wbr>Configuration<wbr>Root<wbr>Block<wbr>Device</a></span>
+    </dt>
+    <dd>{{% md %}}Customize details about the root block
 device of the instance. See Block Devices below for details.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Security<wbr>Groups</td>
-            <td class="align-top">
-                
-                <code>[]string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A list of associated security group IDS.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Security<wbr>Groups</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of associated security group IDS.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Spot<wbr>Price</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The maximum price to use for reserving spot instances.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Spot<wbr>Price</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The maximum price to use for reserving spot instances.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">User<wbr>Data</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>User<wbr>Data</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">User<wbr>Data<wbr>Base64</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>User<wbr>Data<wbr>Base64</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Vpc<wbr>Classic<wbr>Link<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ID of a ClassicLink-enabled VPC. Only applies to EC2-Classic instances. (eg. `vpc-2730681a`)
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Vpc<wbr>Classic<wbr>Link<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The ID of a ClassicLink-enabled VPC. Only applies to EC2-Classic instances. (eg. `vpc-2730681a`)
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Vpc<wbr>Classic<wbr>Link<wbr>Security<wbr>Groups</td>
-            <td class="align-top">
-                
-                <code>[]string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The IDs of one or more security groups for the specified ClassicLink-enabled VPC (eg. `sg-46ae3d11`).
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Vpc<wbr>Classic<wbr>Link<wbr>Security<wbr>Groups</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The IDs of one or more security groups for the specified ClassicLink-enabled VPC (eg. `sg-46ae3d11`).
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name of the launch configuration.
+{{% /md %}}</dd>
 
-{{% lang nodejs %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>associate<wbr>Public<wbr>Ip<wbr>Address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean?</span>
+    </dt>
+    <dd>{{% md %}}Associate a public ip address with an instance in a VPC.
+{{% /md %}}</dd>
 
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">arn</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The Amazon Resource Name of the launch configuration.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">associate<wbr>Public<wbr>Ip<wbr>Address</td>
-            <td class="align-top">
-                
-                <code>boolean?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Associate a public ip address with an instance in a VPC.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">ebs<wbr>Block<wbr>Devices</td>
-            <td class="align-top">
-                
-                <code><a href="#launchconfigurationebsblockdevice">Launch<wbr>Configuration<wbr>Ebs<wbr>Block<wbr>Device[]?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Additional EBS block devices to attach to the
+    <dt class="property-optional"
+            title="Optional">
+        <span>ebs<wbr>Block<wbr>Devices</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#launchconfigurationebsblockdevice">Launch<wbr>Configuration<wbr>Ebs<wbr>Block<wbr>Device[]?</a></span>
+    </dt>
+    <dd>{{% md %}}Additional EBS block devices to attach to the
 instance.  See Block Devices below for details.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">ebs<wbr>Optimized</td>
-            <td class="align-top">
-                
-                <code>boolean?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-If true, the launched EC2 instance will be EBS-optimized.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>ebs<wbr>Optimized</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean?</span>
+    </dt>
+    <dd>{{% md %}}If true, the launched EC2 instance will be EBS-optimized.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">enable<wbr>Monitoring</td>
-            <td class="align-top">
-                
-                <code>boolean?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Enables/disables detailed monitoring. This is enabled by default.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>enable<wbr>Monitoring</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean?</span>
+    </dt>
+    <dd>{{% md %}}Enables/disables detailed monitoring. This is enabled by default.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">ephemeral<wbr>Block<wbr>Devices</td>
-            <td class="align-top">
-                
-                <code><a href="#launchconfigurationephemeralblockdevice">Launch<wbr>Configuration<wbr>Ephemeral<wbr>Block<wbr>Device[]?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Customize Ephemeral (also known as
-&#34;Instance Store&#34;) volumes on the instance. See Block Devices below for details.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>ephemeral<wbr>Block<wbr>Devices</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#launchconfigurationephemeralblockdevice">Launch<wbr>Configuration<wbr>Ephemeral<wbr>Block<wbr>Device[]?</a></span>
+    </dt>
+    <dd>{{% md %}}Customize Ephemeral (also known as
+"Instance Store") volumes on the instance. See Block Devices below for details.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">iam<wbr>Instance<wbr>Profile</td>
-            <td class="align-top">
-                
-                <code>string | InstanceProfile</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The name attribute of the IAM instance profile to associate
+    <dt class="property-optional"
+            title="Optional">
+        <span>iam<wbr>Instance<wbr>Profile</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | InstanceProfile</span>
+    </dt>
+    <dd>{{% md %}}The name attribute of the IAM instance profile to associate
 with launched instances.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">image<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The EC2 image ID to launch.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>image<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The EC2 image ID to launch.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">instance<wbr>Type</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The size of instance to launch.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>instance<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The size of instance to launch.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">key<wbr>Name</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The key name that should be used for the instance.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>key<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The key name that should be used for the instance.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">name</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The name of the launch configuration. If you leave
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The name of the launch configuration. If you leave
 this blank, this provider will auto-generate a unique name.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">name<wbr>Prefix</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Creates a unique name beginning with the specified
+    <dt class="property-optional"
+            title="Optional">
+        <span>name<wbr>Prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Creates a unique name beginning with the specified
 prefix. Conflicts with `name`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">placement<wbr>Tenancy</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The tenancy of the instance. Valid values are
-`&#34;default&#34;` or `&#34;dedicated&#34;`, see [AWS&#39;s Create Launch Configuration](http://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_CreateLaunchConfiguration.html)
+    <dt class="property-optional"
+            title="Optional">
+        <span>placement<wbr>Tenancy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The tenancy of the instance. Valid values are
+`"default"` or `"dedicated"`, see [AWS's Create Launch Configuration](http://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_CreateLaunchConfiguration.html)
 for more details
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">root<wbr>Block<wbr>Device</td>
-            <td class="align-top">
-                
-                <code><a href="#launchconfigurationrootblockdevice">Launch<wbr>Configuration<wbr>Root<wbr>Block<wbr>Device?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Customize details about the root block
+    <dt class="property-optional"
+            title="Optional">
+        <span>root<wbr>Block<wbr>Device</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#launchconfigurationrootblockdevice">Launch<wbr>Configuration<wbr>Root<wbr>Block<wbr>Device?</a></span>
+    </dt>
+    <dd>{{% md %}}Customize details about the root block
 device of the instance. See Block Devices below for details.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">security<wbr>Groups</td>
-            <td class="align-top">
-                
-                <code>string[]?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A list of associated security group IDS.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>security<wbr>Groups</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]?</span>
+    </dt>
+    <dd>{{% md %}}A list of associated security group IDS.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">spot<wbr>Price</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The maximum price to use for reserving spot instances.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>spot<wbr>Price</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The maximum price to use for reserving spot instances.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">user<wbr>Data</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>user<wbr>Data</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">user<wbr>Data<wbr>Base64</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>user<wbr>Data<wbr>Base64</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">vpc<wbr>Classic<wbr>Link<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ID of a ClassicLink-enabled VPC. Only applies to EC2-Classic instances. (eg. `vpc-2730681a`)
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>vpc<wbr>Classic<wbr>Link<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The ID of a ClassicLink-enabled VPC. Only applies to EC2-Classic instances. (eg. `vpc-2730681a`)
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">vpc<wbr>Classic<wbr>Link<wbr>Security<wbr>Groups</td>
-            <td class="align-top">
-                
-                <code>string[]?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The IDs of one or more security groups for the specified ClassicLink-enabled VPC (eg. `sg-46ae3d11`).
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>vpc<wbr>Classic<wbr>Link<wbr>Security<wbr>Groups</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]?</span>
+    </dt>
+    <dd>{{% md %}}The IDs of one or more security groups for the specified ClassicLink-enabled VPC (eg. `sg-46ae3d11`).
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name of the launch configuration.
+{{% /md %}}</dd>
 
-{{% lang python %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>associate_<wbr>public_<wbr>ip_<wbr>address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Associate a public ip address with an instance in a VPC.
+{{% /md %}}</dd>
 
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">arn</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The Amazon Resource Name of the launch configuration.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">associate_<wbr>public_<wbr>ip_<wbr>address</td>
-            <td class="align-top">
-                
-                <code>bool</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Associate a public ip address with an instance in a VPC.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">ebs_<wbr>block_<wbr>devices</td>
-            <td class="align-top">
-                
-                <code><a href="#launchconfigurationebsblockdevice">List[Launch<wbr>Configuration<wbr>Ebs<wbr>Block<wbr>Device]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Additional EBS block devices to attach to the
+    <dt class="property-optional"
+            title="Optional">
+        <span>ebs_<wbr>block_<wbr>devices</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#launchconfigurationebsblockdevice">List[Launch<wbr>Configuration<wbr>Ebs<wbr>Block<wbr>Device]</a></span>
+    </dt>
+    <dd>{{% md %}}Additional EBS block devices to attach to the
 instance.  See Block Devices below for details.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">ebs_<wbr>optimized</td>
-            <td class="align-top">
-                
-                <code>bool</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-If true, the launched EC2 instance will be EBS-optimized.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>ebs_<wbr>optimized</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, the launched EC2 instance will be EBS-optimized.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">enable_<wbr>monitoring</td>
-            <td class="align-top">
-                
-                <code>bool</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Enables/disables detailed monitoring. This is enabled by default.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>enable_<wbr>monitoring</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enables/disables detailed monitoring. This is enabled by default.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">ephemeral_<wbr>block_<wbr>devices</td>
-            <td class="align-top">
-                
-                <code><a href="#launchconfigurationephemeralblockdevice">List[Launch<wbr>Configuration<wbr>Ephemeral<wbr>Block<wbr>Device]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Customize Ephemeral (also known as
-&#34;Instance Store&#34;) volumes on the instance. See Block Devices below for details.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>ephemeral_<wbr>block_<wbr>devices</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#launchconfigurationephemeralblockdevice">List[Launch<wbr>Configuration<wbr>Ephemeral<wbr>Block<wbr>Device]</a></span>
+    </dt>
+    <dd>{{% md %}}Customize Ephemeral (also known as
+"Instance Store") volumes on the instance. See Block Devices below for details.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">iam_<wbr>instance_<wbr>profile</td>
-            <td class="align-top">
-                
-                <code>Dict[str, Any]</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The name attribute of the IAM instance profile to associate
+    <dt class="property-optional"
+            title="Optional">
+        <span>iam_<wbr>instance_<wbr>profile</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}The name attribute of the IAM instance profile to associate
 with launched instances.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">image_<wbr>id</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The EC2 image ID to launch.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>image_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The EC2 image ID to launch.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">instance_<wbr>type</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The size of instance to launch.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>instance_<wbr>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The size of instance to launch.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">key_<wbr>name</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The key name that should be used for the instance.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>key_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The key name that should be used for the instance.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">name</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The name of the launch configuration. If you leave
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the launch configuration. If you leave
 this blank, this provider will auto-generate a unique name.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">name_<wbr>prefix</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Creates a unique name beginning with the specified
+    <dt class="property-optional"
+            title="Optional">
+        <span>name_<wbr>prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Creates a unique name beginning with the specified
 prefix. Conflicts with `name`.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">placement_<wbr>tenancy</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The tenancy of the instance. Valid values are
-`&#34;default&#34;` or `&#34;dedicated&#34;`, see [AWS&#39;s Create Launch Configuration](http://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_CreateLaunchConfiguration.html)
+    <dt class="property-optional"
+            title="Optional">
+        <span>placement_<wbr>tenancy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The tenancy of the instance. Valid values are
+`"default"` or `"dedicated"`, see [AWS's Create Launch Configuration](http://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_CreateLaunchConfiguration.html)
 for more details
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">root_<wbr>block_<wbr>device</td>
-            <td class="align-top">
-                
-                <code><a href="#launchconfigurationrootblockdevice">Dict[Launch<wbr>Configuration<wbr>Root<wbr>Block<wbr>Device]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Customize details about the root block
+    <dt class="property-optional"
+            title="Optional">
+        <span>root_<wbr>block_<wbr>device</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#launchconfigurationrootblockdevice">Dict[Launch<wbr>Configuration<wbr>Root<wbr>Block<wbr>Device]</a></span>
+    </dt>
+    <dd>{{% md %}}Customize details about the root block
 device of the instance. See Block Devices below for details.
- {{% /md %}}
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">security_<wbr>groups</td>
-            <td class="align-top">
-                
-                <code>List[str]</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A list of associated security group IDS.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>security_<wbr>groups</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of associated security group IDS.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">spot_<wbr>price</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The maximum price to use for reserving spot instances.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>spot_<wbr>price</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The maximum price to use for reserving spot instances.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">user_<wbr>data</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>user_<wbr>data</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">user_<wbr>data_<wbr>base64</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>user_<wbr>data_<wbr>base64</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">vpc_<wbr>classic_<wbr>link_<wbr>id</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The ID of a ClassicLink-enabled VPC. Only applies to EC2-Classic instances. (eg. `vpc-2730681a`)
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>vpc_<wbr>classic_<wbr>link_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of a ClassicLink-enabled VPC. Only applies to EC2-Classic instances. (eg. `vpc-2730681a`)
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">vpc_<wbr>classic_<wbr>link_<wbr>security_<wbr>groups</td>
-            <td class="align-top">
-                
-                <code>List[str]</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The IDs of one or more security groups for the specified ClassicLink-enabled VPC (eg. `sg-46ae3d11`).
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>vpc_<wbr>classic_<wbr>link_<wbr>security_<wbr>groups</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}The IDs of one or more security groups for the specified ClassicLink-enabled VPC (eg. `sg-46ae3d11`).
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
+</dl>
+{{% /choosable %}}
 
 
 
@@ -4025,1148 +2737,626 @@ The IDs of one or more security groups for the specified ClassicLink-enabled VPC
 
 ## Supporting Types
 
-#### LaunchConfigurationEbsBlockDevice
-{{% lang nodejs %}}
+<h4>Launch<wbr>Configuration<wbr>Ebs<wbr>Block<wbr>Device</h4>
+{{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchConfigurationEbsBlockDevice">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LaunchConfigurationEbsBlockDevice">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
-{{% lang go %}}
+{{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#LaunchConfigurationEbsBlockDeviceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#LaunchConfigurationEbsBlockDeviceOutput">output</a> API doc for this type.
-{{% /lang %}}
-
-{{% lang csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.LaunchConfigurationEbsBlockDeviceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.LaunchConfigurationEbsBlockDevice.html">output</a> API doc for this type.
-{{% /lang %}}
-
-
-
-{{< langchoose csharp nojavascript >}}
-
-
-{{% lang csharp %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Delete<wbr>On<wbr>Termination</td>
-            <td class="align-top">
-                
-                <code>bool?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Device<wbr>Name</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Encrypted</td>
-            <td class="align-top">
-                
-                <code>bool?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Iops</td>
-            <td class="align-top">
-                
-                <code>int?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">No<wbr>Device</td>
-            <td class="align-top">
-                
-                <code>bool?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Snapshot<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Volume<wbr>Size</td>
-            <td class="align-top">
-                
-                <code>int?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Volume<wbr>Type</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang go %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Delete<wbr>On<wbr>Termination</td>
-            <td class="align-top">
-                
-                <code>*bool</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Device<wbr>Name</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Encrypted</td>
-            <td class="align-top">
-                
-                <code>*bool</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Iops</td>
-            <td class="align-top">
-                
-                <code>*int</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">No<wbr>Device</td>
-            <td class="align-top">
-                
-                <code>*bool</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Snapshot<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Volume<wbr>Size</td>
-            <td class="align-top">
-                
-                <code>*int</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Volume<wbr>Type</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang nodejs %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">delete<wbr>On<wbr>Termination</td>
-            <td class="align-top">
-                
-                <code>boolean?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">device<wbr>Name</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">encrypted</td>
-            <td class="align-top">
-                
-                <code>boolean?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">iops</td>
-            <td class="align-top">
-                
-                <code>number?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">no<wbr>Device</td>
-            <td class="align-top">
-                
-                <code>boolean?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">snapshot<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">volume<wbr>Size</td>
-            <td class="align-top">
-                
-                <code>number?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">volume<wbr>Type</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang python %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">delete<wbr>On<wbr>Termination</td>
-            <td class="align-top">
-                
-                <code>bool</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">device_<wbr>name</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">encrypted</td>
-            <td class="align-top">
-                
-                <code>bool</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">iops</td>
-            <td class="align-top">
-                
-                <code>float</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">no<wbr>Device</td>
-            <td class="align-top">
-                
-                <code>bool</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">snapshot_<wbr>id</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">volume_<wbr>size</td>
-            <td class="align-top">
-                
-                <code>float</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">volume<wbr>Type</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-
-
-
-#### LaunchConfigurationEphemeralBlockDevice
-{{% lang nodejs %}}
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Delete<wbr>On<wbr>Termination</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Device<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Encrypted</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Iops</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>No<wbr>Device</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Snapshot<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Volume<wbr>Size</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Volume<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Delete<wbr>On<wbr>Termination</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Device<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Encrypted</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Iops</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>No<wbr>Device</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Snapshot<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Volume<wbr>Size</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Volume<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>delete<wbr>On<wbr>Termination</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>device<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>encrypted</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>iops</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>no<wbr>Device</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>snapshot<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>volume<wbr>Size</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>volume<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>delete<wbr>On<wbr>Termination</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>device_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>encrypted</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>iops</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>no<wbr>Device</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>snapshot_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>volume_<wbr>size</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>volume<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4>Launch<wbr>Configuration<wbr>Ephemeral<wbr>Block<wbr>Device</h4>
+{{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchConfigurationEphemeralBlockDevice">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LaunchConfigurationEphemeralBlockDevice">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
-{{% lang go %}}
+{{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#LaunchConfigurationEphemeralBlockDeviceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#LaunchConfigurationEphemeralBlockDeviceOutput">output</a> API doc for this type.
-{{% /lang %}}
-
-{{% lang csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.LaunchConfigurationEphemeralBlockDeviceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.LaunchConfigurationEphemeralBlockDevice.html">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
 
 
-{{< langchoose csharp nojavascript >}}
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Device<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Virtual<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% lang csharp %}}
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Device<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Virtual<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Device<wbr>Name</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Virtual<wbr>Name</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
+    <dt class="property-required"
+            title="Required">
+        <span>device<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+    <dt class="property-required"
+            title="Required">
+        <span>virtual<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>device_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
-{{% lang go %}}
+    <dt class="property-required"
+            title="Required">
+        <span>virtual<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Device<wbr>Name</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Virtual<wbr>Name</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang nodejs %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">device<wbr>Name</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">virtual<wbr>Name</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang python %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">device_<wbr>name</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">virtual<wbr>Name</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
+</dl>
+{{% /choosable %}}
 
 
 
 
 
-#### LaunchConfigurationRootBlockDevice
-{{% lang nodejs %}}
+<h4>Launch<wbr>Configuration<wbr>Root<wbr>Block<wbr>Device</h4>
+{{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchConfigurationRootBlockDevice">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LaunchConfigurationRootBlockDevice">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
-{{% lang go %}}
+{{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#LaunchConfigurationRootBlockDeviceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#LaunchConfigurationRootBlockDeviceOutput">output</a> API doc for this type.
-{{% /lang %}}
-
-{{% lang csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.LaunchConfigurationRootBlockDeviceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.LaunchConfigurationRootBlockDevice.html">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
 
 
-{{< langchoose csharp nojavascript >}}
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Delete<wbr>On<wbr>Termination</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Encrypted</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Iops</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Volume<wbr>Size</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Volume<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% lang csharp %}}
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Delete<wbr>On<wbr>Termination</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Encrypted</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Iops</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Volume<wbr>Size</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Volume<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Delete<wbr>On<wbr>Termination</td>
-            <td class="align-top">
-                
-                <code>bool?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Encrypted</td>
-            <td class="align-top">
-                
-                <code>bool?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>delete<wbr>On<wbr>Termination</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Iops</td>
-            <td class="align-top">
-                
-                <code>int?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>encrypted</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Volume<wbr>Size</td>
-            <td class="align-top">
-                
-                <code>int?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>iops</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Volume<wbr>Type</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>volume<wbr>Size</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+    <dt class="property-optional"
+            title="Optional">
+        <span>volume<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>delete<wbr>On<wbr>Termination</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
-{{% lang go %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>encrypted</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>iops</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Delete<wbr>On<wbr>Termination</td>
-            <td class="align-top">
-                
-                <code>*bool</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>volume_<wbr>size</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Encrypted</td>
-            <td class="align-top">
-                
-                <code>*bool</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>volume<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Iops</td>
-            <td class="align-top">
-                
-                <code>*int</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Volume<wbr>Size</td>
-            <td class="align-top">
-                
-                <code>*int</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Volume<wbr>Type</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang nodejs %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">delete<wbr>On<wbr>Termination</td>
-            <td class="align-top">
-                
-                <code>boolean?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">encrypted</td>
-            <td class="align-top">
-                
-                <code>boolean?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">iops</td>
-            <td class="align-top">
-                
-                <code>number?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">volume<wbr>Size</td>
-            <td class="align-top">
-                
-                <code>number?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">volume<wbr>Type</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang python %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">delete<wbr>On<wbr>Termination</td>
-            <td class="align-top">
-                
-                <code>bool</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">encrypted</td>
-            <td class="align-top">
-                
-                <code>bool</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">iops</td>
-            <td class="align-top">
-                
-                <code>float</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">volume_<wbr>size</td>
-            <td class="align-top">
-                
-                <code>float</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">volume<wbr>Type</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
+</dl>
+{{% /choosable %}}
 
 
 
 
 
 
+
+
+
+<h3>Package Details</h3>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
 

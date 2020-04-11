@@ -1,0 +1,17 @@
+.tiles {
+    @apply items-center;
+
+    @screen md {
+        @apply flex;
+    }
+
+    .tile {
+        @include transition;
+        @apply block rounded shadow border border-gray-300 cursor-pointer;
+
+        &:hover {
+            @apply shadow-md;
+            transform: scale(1.03);
+        }
+    }
+}

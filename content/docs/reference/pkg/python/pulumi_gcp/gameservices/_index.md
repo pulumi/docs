@@ -16,15 +16,33 @@ anything, please consult the source <a class="reference external" href="https://
 <span class="target" id="module-pulumi_gcp.gameservices"></span><dl class="class">
 <dt id="pulumi_gcp.gameservices.GameServerCluster">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.gameservices.</code><code class="sig-name descname">GameServerCluster</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">connection_info=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">realm_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.gameservices.GameServerCluster" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a GameServerCluster resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] cluster_id: Required. The resource name of the game server cluster
-:param pulumi.Input[dict] connection_info: Game server cluster connection information. This information is used to manage game server clusters.
-:param pulumi.Input[str] description: Human readable description of the cluster.
-:param pulumi.Input[dict] labels: The labels associated with this game server cluster. Each label is a key-value pair.
-:param pulumi.Input[str] location: Location of the Cluster.
-:param pulumi.Input[str] realm_id: The realm id of the game server realm.</p>
+<dd><p>A game server cluster resource.</p>
+<p>To get more information about GameServerCluster, see:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://cloud.google.com/game-servers/docs/reference/rest/v1beta/projects.locations.realms.gameServerClusters">API documentation</a></p></li>
+<li><p>How-to Guides</p>
+<ul>
+<li><p><a class="reference external" href="https://cloud.google.com/game-servers/docs">Official Documentation</a></p></li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/game_services_game_server_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/game_services_game_server_cluster.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Required. The resource name of the game server cluster</p></li>
+<li><p><strong>connection_info</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Game server cluster connection information. This information is used to manage game server clusters.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human readable description of the cluster.</p></li>
+<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The labels associated with this game server cluster. Each label is a key-value pair.</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Location of the Cluster.</p></li>
+<li><p><strong>realm_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The realm id of the game server realm.</p></li>
+</ul>
+</dd>
+</dl>
 <p>The <strong>connection_info</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">gkeClusterReference</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
@@ -161,16 +179,34 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.gameservices.GameServerConfig">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.gameservices.</code><code class="sig-name descname">GameServerConfig</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">config_id=None</em>, <em class="sig-param">deployment_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">fleet_configs=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">scaling_configs=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.gameservices.GameServerConfig" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a GameServerConfig resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] config_id: A unique id for the deployment config.
-:param pulumi.Input[str] deployment_id: A unique id for the deployment.
-:param pulumi.Input[str] description: The description of the game server config.
-:param pulumi.Input[list] fleet_configs: The fleet config contains list of fleet specs. In the Single Cloud, there will be only one.
-:param pulumi.Input[dict] labels: The labels associated with this game server config. Each label is a key-value pair.
-:param pulumi.Input[str] location: Location of the Deployment.
-:param pulumi.Input[list] scaling_configs: Optional. This contains the autoscaling settings.</p>
+<dd><p>A game server config resource. Configs are global and immutable.</p>
+<p>To get more information about GameServerConfig, see:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://cloud.google.com/game-servers/docs/reference/rest/v1beta/projects.locations.gameServerDeployments.configs">API documentation</a></p></li>
+<li><p>How-to Guides</p>
+<ul>
+<li><p><a class="reference external" href="https://cloud.google.com/game-servers/docs">Official Documentation</a></p></li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/game_services_game_server_config.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/game_services_game_server_config.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>config_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique id for the deployment config.</p></li>
+<li><p><strong>deployment_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique id for the deployment.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the game server config.</p></li>
+<li><p><strong>fleet_configs</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The fleet config contains list of fleet specs. In the Single Cloud, there will be only one.</p></li>
+<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The labels associated with this game server config. Each label is a key-value pair.</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Location of the Deployment.</p></li>
+<li><p><strong>scaling_configs</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Optional. This contains the autoscaling settings.</p></li>
+</ul>
+</dd>
+</dl>
 <p>The <strong>fleet_configs</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">fleetSpec</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
@@ -353,17 +389,33 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.gameservices.GameServerDeployment">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.gameservices.</code><code class="sig-name descname">GameServerDeployment</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">deployment_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.gameservices.GameServerDeployment" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a GameServerDeployment resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] deployment_id: A unique id for the deployment.
-:param pulumi.Input[str] description: Human readable description of the game server deployment.
-:param pulumi.Input[dict] labels: The labels associated with this game server deployment. Each label is a key-value pair.
-:param pulumi.Input[str] location: Location of the Deployment.
-:param pulumi.Input[str] project: The ID of the project in which the resource belongs.</p>
+<dd><p>A game server deployment resource.</p>
+<p>To get more information about GameServerDeployment, see:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://cloud.google.com/game-servers/docs/reference/rest/v1beta/projects.locations.gameServerDeployments">API documentation</a></p></li>
+<li><p>How-to Guides</p>
+<ul>
+<li><p><a class="reference external" href="https://cloud.google.com/game-servers/docs">Official Documentation</a></p></li>
+</ul>
+</li>
+</ul>
 <blockquote>
-<div><p>If it is not provided, the provider project is used.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/game_services_game_server_deployment.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/game_services_game_server_deployment.html.markdown</a>.</p>
 </div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>deployment_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique id for the deployment.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human readable description of the game server deployment.</p></li>
+<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The labels associated with this game server deployment. Each label is a key-value pair.</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Location of the Deployment.</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p></li>
+</ul>
+</dd>
+</dl>
 <dl class="attribute">
 <dt id="pulumi_gcp.gameservices.GameServerDeployment.deployment_id">
 <code class="sig-name descname">deployment_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.gameservices.GameServerDeployment.deployment_id" title="Permalink to this definition">¶</a></dt>
@@ -469,16 +521,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.gameservices.GameServerDeploymentRollout">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.gameservices.</code><code class="sig-name descname">GameServerDeploymentRollout</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">default_game_server_config=None</em>, <em class="sig-param">deployment_id=None</em>, <em class="sig-param">game_server_config_overrides=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.gameservices.GameServerDeploymentRollout" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a GameServerDeploymentRollout resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] default_game_server_config: This field points to the game server config that is applied by default to all realms and clusters. For example,</p>
+<dd><p>This represents the rollout state. This is part of the game server
+deployment.</p>
+<p>To get more information about GameServerDeploymentRollout, see:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://cloud.google.com/game-servers/docs/reference/rest/v1beta/GameServerDeploymentRollout">API documentation</a></p></li>
+<li><p>How-to Guides</p>
+<ul>
+<li><p><a class="reference external" href="https://cloud.google.com/game-servers/docs">Official Documentation</a></p></li>
+</ul>
+</li>
+</ul>
 <blockquote>
-<div><p>‘projects/my-project/locations/global/gameServerDeployments/my-game/configs/my-config’.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/game_services_game_server_deployment_rollout.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/game_services_game_server_deployment_rollout.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>default_game_server_config</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – This field points to the game server config that is applied by default to all realms and clusters. For example,
+‘projects/my-project/locations/global/gameServerDeployments/my-game/configs/my-config’.</p></li>
 <li><p><strong>deployment_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The deployment to rollout the new config to. Only 1 rollout must be associated with each deployment.</p></li>
 <li><p><strong>game_server_config_overrides</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The game_server_config_overrides contains the per game server config overrides. The overrides are processed in the order
 they are listed. As soon as a match is found for a cluster, the rest of the list is not processed.</p></li>
@@ -613,19 +676,29 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.gameservices.Realm">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.gameservices.</code><code class="sig-name descname">Realm</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">realm_id=None</em>, <em class="sig-param">time_zone=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.gameservices.Realm" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Realm resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] description: Human readable description of the realm.
-:param pulumi.Input[dict] labels: The labels associated with this realm. Each label is a key-value pair.
-:param pulumi.Input[str] location: Location of the Realm.
-:param pulumi.Input[str] project: The ID of the project in which the resource belongs.</p>
+<dd><p>A Realm resource.</p>
+<p>To get more information about Realm, see:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://cloud.google.com/game-servers/docs/reference/rest/v1beta/projects.locations.realms">API documentation</a></p></li>
+<li><p>How-to Guides</p>
+<ul>
+<li><p><a class="reference external" href="https://cloud.google.com/game-servers/docs">Official Documentation</a></p></li>
+</ul>
+</li>
+</ul>
 <blockquote>
-<div><p>If it is not provided, the provider project is used.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/game_services_realm.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/game_services_realm.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human readable description of the realm.</p></li>
+<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The labels associated with this realm. Each label is a key-value pair.</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Location of the Realm.</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p></li>
 <li><p><strong>realm_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – GCP region of the Realm.</p></li>
 <li><p><strong>time_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Required. Time zone where all realm-specific policies are evaluated. The value of this field must be from the IANA time
 zone database: <a class="reference external" href="https://www.iana.org/time-zones">https://www.iana.org/time-zones</a>.</p></li>

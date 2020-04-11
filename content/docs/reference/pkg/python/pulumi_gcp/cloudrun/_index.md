@@ -16,13 +16,31 @@ anything, please consult the source <a class="reference external" href="https://
 <span class="target" id="module-pulumi_gcp.cloudrun"></span><dl class="class">
 <dt id="pulumi_gcp.cloudrun.DomainMapping">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.cloudrun.</code><code class="sig-name descname">DomainMapping</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">spec=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.cloudrun.DomainMapping" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a DomainMapping resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] location: The location of the cloud run instance. eg us-central1
-:param pulumi.Input[dict] metadata: Metadata associated with this DomainMapping.
-:param pulumi.Input[str] name: Name should be a verified domain
-:param pulumi.Input[dict] spec: The spec for this DomainMapping.</p>
+<dd><p>Resource to hold the state and status of a user’s domain mapping.</p>
+<p>To get more information about DomainMapping, see:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://cloud.google.com/run/docs/reference/rest/v1alpha1/projects.locations.domainmappings">API documentation</a></p></li>
+<li><p>How-to Guides</p>
+<ul>
+<li><p><a class="reference external" href="https://cloud.google.com/run/docs/mapping-custom-domains">Official Documentation</a></p></li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloud_run_domain_mapping.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloud_run_domain_mapping.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The location of the cloud run instance. eg us-central1</p></li>
+<li><p><strong>metadata</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Metadata associated with this DomainMapping.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name should be a verified domain</p></li>
+<li><p><strong>spec</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The spec for this DomainMapping.</p></li>
+</ul>
+</dd>
+</dl>
 <p>The <strong>metadata</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">annotations</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
@@ -200,17 +218,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.cloudrun.IamBinding">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.cloudrun.</code><code class="sig-name descname">IamBinding</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">condition=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">members=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">service=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.cloudrun.IamBinding" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a IamBinding resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] location: The location of the cloud run instance. eg us-central1 Used to find the parent resource to bind the IAM policy to
-:param pulumi.Input[str] project: The ID of the project in which the resource belongs.</p>
+<dd><p>Three different resources help you manage your IAM policy for Cloud Run Service. Each of these resources serves a different use case:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cloudrun.IamPolicy</span></code>: Authoritative. Sets the IAM policy for the service and replaces any existing policy already attached.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cloudrun.IamBinding</span></code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the service are preserved.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cloudrun.IamMember</span></code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the service are preserved.</p></li>
+</ul>
 <blockquote>
-<div><p>If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p>
+<div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">cloudrun.IamPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">cloudrun.IamBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">cloudrun.IamMember</span></code> or they will fight over what your policy should be.</p>
+<p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">cloudrun.IamBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">cloudrun.IamMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloud_run_service_iam.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloud_run_service_iam.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The location of the cloud run instance. eg us-central1 Used to find the parent resource to bind the IAM policy to</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p></li>
 <li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
 <code class="docutils literal notranslate"><span class="pre">cloudrun.IamBinding</span></code> can be used per role. Note that custom roles must be of the format
 <code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</p></li>
@@ -328,17 +354,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.cloudrun.IamMember">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.cloudrun.</code><code class="sig-name descname">IamMember</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">condition=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">member=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">service=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.cloudrun.IamMember" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a IamMember resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] location: The location of the cloud run instance. eg us-central1 Used to find the parent resource to bind the IAM policy to
-:param pulumi.Input[str] project: The ID of the project in which the resource belongs.</p>
+<dd><p>Three different resources help you manage your IAM policy for Cloud Run Service. Each of these resources serves a different use case:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cloudrun.IamPolicy</span></code>: Authoritative. Sets the IAM policy for the service and replaces any existing policy already attached.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cloudrun.IamBinding</span></code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the service are preserved.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cloudrun.IamMember</span></code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the service are preserved.</p></li>
+</ul>
 <blockquote>
-<div><p>If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p>
+<div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">cloudrun.IamPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">cloudrun.IamBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">cloudrun.IamMember</span></code> or they will fight over what your policy should be.</p>
+<p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">cloudrun.IamBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">cloudrun.IamMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloud_run_service_iam.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloud_run_service_iam.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The location of the cloud run instance. eg us-central1 Used to find the parent resource to bind the IAM policy to</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p></li>
 <li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role that should be applied. Only one
 <code class="docutils literal notranslate"><span class="pre">cloudrun.IamBinding</span></code> can be used per role. Note that custom roles must be of the format
 <code class="docutils literal notranslate"><span class="pre">[projects|organizations]/{parent-name}/roles/{role-name}</span></code>.</p></li>
@@ -456,17 +490,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.cloudrun.IamPolicy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.cloudrun.</code><code class="sig-name descname">IamPolicy</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">policy_data=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">service=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.cloudrun.IamPolicy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a IamPolicy resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] location: The location of the cloud run instance. eg us-central1 Used to find the parent resource to bind the IAM policy to
-:param pulumi.Input[str] policy_data: The policy data generated by</p>
+<dd><p>Three different resources help you manage your IAM policy for Cloud Run Service. Each of these resources serves a different use case:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cloudrun.IamPolicy</span></code>: Authoritative. Sets the IAM policy for the service and replaces any existing policy already attached.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cloudrun.IamBinding</span></code>: Authoritative for a given role. Updates the IAM policy to grant a role to a list of members. Other roles within the IAM policy for the service are preserved.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cloudrun.IamMember</span></code>: Non-authoritative. Updates the IAM policy to grant a role to a new member. Other members for the role for the service are preserved.</p></li>
+</ul>
 <blockquote>
-<div><p>a <code class="docutils literal notranslate"><span class="pre">organizations.getIAMPolicy</span></code> data source.</p>
+<div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">cloudrun.IamPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">cloudrun.IamBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">cloudrun.IamMember</span></code> or they will fight over what your policy should be.</p>
+<p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">cloudrun.IamBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">cloudrun.IamMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
+<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloud_run_service_iam.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloud_run_service_iam.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The location of the cloud run instance. eg us-central1 Used to find the parent resource to bind the IAM policy to</p></li>
+<li><p><strong>policy_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The policy data generated by
+a <code class="docutils literal notranslate"><span class="pre">organizations.getIAMPolicy</span></code> data source.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.</p></li>
 <li><p><strong>service</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Used to find the parent resource to bind the IAM policy to</p></li>
@@ -569,19 +611,39 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.cloudrun.Service">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.cloudrun.</code><code class="sig-name descname">Service</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">template=None</em>, <em class="sig-param">traffics=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.cloudrun.Service" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Service resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] location: The location of the cloud run instance. eg us-central1
-:param pulumi.Input[dict] metadata: Metadata associated with this Service, including name, namespace, labels, and annotations.
-:param pulumi.Input[str] name: Name must be unique within a namespace, within a Cloud Run region. Is required when creating resources. Name is</p>
+<dd><p>Service acts as a top-level container that manages a set of Routes and
+Configurations which implement a network service. Service exists to provide a
+singular abstraction which can be access controlled, reasoned about, and
+which encapsulates software lifecycle decisions such as rollout policy and
+team resource ownership. Service acts only as an orchestrator of the
+underlying Routes and Configurations (much as a kubernetes Deployment
+orchestrates ReplicaSets).</p>
+<p>The Service’s controller will track the statuses of its owned Configuration
+and Route, reflecting their statuses and conditions as its own.</p>
+<p>See also:
+<a class="reference external" href="https://github.com/knative/serving/blob/master/docs/spec/overview.md#service">https://github.com/knative/serving/blob/master/docs/spec/overview.md#service</a></p>
+<p>To get more information about Service, see:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://cloud.google.com/run/docs/reference/rest/v1/projects.locations.services">API documentation</a></p></li>
+<li><p>How-to Guides</p>
+<ul>
+<li><p><a class="reference external" href="https://cloud.google.com/run/docs/">Official Documentation</a></p></li>
+</ul>
+</li>
+</ul>
 <blockquote>
-<div><p>primarily intended for creation idempotence and configuration definition. Cannot be updated. More info:
-<a class="reference external" href="http://kubernetes.io/docs/user-guide/identifiers#names">http://kubernetes.io/docs/user-guide/identifiers#names</a></p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloud_run_service.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloud_run_service.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The location of the cloud run instance. eg us-central1</p></li>
+<li><p><strong>metadata</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Metadata associated with this Service, including name, namespace, labels, and annotations.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name must be unique within a namespace, within a Cloud Run region. Is required when creating resources. Name is
+primarily intended for creation idempotence and configuration definition. Cannot be updated. More info:
+<a class="reference external" href="http://kubernetes.io/docs/user-guide/identifiers#names">http://kubernetes.io/docs/user-guide/identifiers#names</a></p></li>
 <li><p><strong>template</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – template holds the latest specification for the Revision to be stamped out. The template references the container image,
 and may also include labels and annotations that should be attached to the Revision. To correlate a Revision, and/or to
 force a Revision to be created when the spec doesn’t otherwise change, a nonce label may be provided in the template

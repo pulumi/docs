@@ -51,22 +51,29 @@ anything, please consult the source <a class="reference external" href="https://
 <dl class="class">
 <dt id="pulumi_aws.sqs.Queue">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.sqs.</code><code class="sig-name descname">Queue</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">content_based_deduplication=None</em>, <em class="sig-param">delay_seconds=None</em>, <em class="sig-param">fifo_queue=None</em>, <em class="sig-param">kms_data_key_reuse_period_seconds=None</em>, <em class="sig-param">kms_master_key_id=None</em>, <em class="sig-param">max_message_size=None</em>, <em class="sig-param">message_retention_seconds=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">policy=None</em>, <em class="sig-param">receive_wait_time_seconds=None</em>, <em class="sig-param">redrive_policy=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">visibility_timeout_seconds=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.sqs.Queue" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Queue resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[bool] content_based_deduplication: Enables content-based deduplication for FIFO queues. For more information, see the <a class="reference external" href="http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/FIFO-queues.html#FIFO-queues-exactly-once-processing">related documentation</a>
-:param pulumi.Input[float] delay_seconds: The time in seconds that the delivery of all messages in the queue will be delayed. An integer from 0 to 900 (15 minutes). The default for this attribute is 0 seconds.
-:param pulumi.Input[bool] fifo_queue: Boolean designating a FIFO queue. If not set, it defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code> making it standard.
-:param pulumi.Input[float] kms_data_key_reuse_period_seconds: The length of time, in seconds, for which Amazon SQS can reuse a data key to encrypt or decrypt messages before calling AWS KMS again. An integer representing seconds, between 60 seconds (1 minute) and 86,400 seconds (24 hours). The default is 300 (5 minutes).
-:param pulumi.Input[str] kms_master_key_id: The ID of an AWS-managed customer master key (CMK) for Amazon SQS or a custom CMK. For more information, see <a class="reference external" href="http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-server-side-encryption.html#sqs-sse-key-terms">Key Terms</a>.
-:param pulumi.Input[float] max_message_size: The limit of how many bytes a message can contain before Amazon SQS rejects it. An integer from 1024 bytes (1 KiB) up to 262144 bytes (256 KiB). The default for this attribute is 262144 (256 KiB).
-:param pulumi.Input[float] message_retention_seconds: The number of seconds Amazon SQS retains a message. Integer representing seconds, from 60 (1 minute) to 1209600 (14 days). The default for this attribute is 345600 (4 days).
-:param pulumi.Input[str] name: This is the human-readable name of the queue. If omitted, this provider will assign a random name.
-:param pulumi.Input[str] name_prefix: Creates a unique name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.
-:param pulumi.Input[float] receive_wait_time_seconds: The time for which a ReceiveMessage call will wait for a message to arrive (long polling) before returning. An integer from 0 to 20 (seconds). The default for this attribute is 0, meaning that the call will return immediately.
-:param pulumi.Input[str] redrive_policy: The JSON policy to set up the Dead Letter Queue, see <a class="reference external" href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/SQSDeadLetterQueue.html">AWS docs</a>. <strong>Note:</strong> when specifying <code class="docutils literal notranslate"><span class="pre">maxReceiveCount</span></code>, you must specify it as an integer (<code class="docutils literal notranslate"><span class="pre">5</span></code>), and not a string (<code class="docutils literal notranslate"><span class="pre">&quot;5&quot;</span></code>).
-:param pulumi.Input[dict] tags: A mapping of tags to assign to the queue.
-:param pulumi.Input[float] visibility_timeout_seconds: The visibility timeout for the queue. An integer from 0 to 43200 (12 hours). The default for this attribute is 30. For more information about visibility timeout, see <a class="reference external" href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/AboutVT.html">AWS docs</a>.</p>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>content_based_deduplication</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enables content-based deduplication for FIFO queues. For more information, see the <a class="reference external" href="http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/FIFO-queues.html#FIFO-queues-exactly-once-processing">related documentation</a></p></li>
+<li><p><strong>delay_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The time in seconds that the delivery of all messages in the queue will be delayed. An integer from 0 to 900 (15 minutes). The default for this attribute is 0 seconds.</p></li>
+<li><p><strong>fifo_queue</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean designating a FIFO queue. If not set, it defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code> making it standard.</p></li>
+<li><p><strong>kms_data_key_reuse_period_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The length of time, in seconds, for which Amazon SQS can reuse a data key to encrypt or decrypt messages before calling AWS KMS again. An integer representing seconds, between 60 seconds (1 minute) and 86,400 seconds (24 hours). The default is 300 (5 minutes).</p></li>
+<li><p><strong>kms_master_key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of an AWS-managed customer master key (CMK) for Amazon SQS or a custom CMK. For more information, see <a class="reference external" href="http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-server-side-encryption.html#sqs-sse-key-terms">Key Terms</a>.</p></li>
+<li><p><strong>max_message_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The limit of how many bytes a message can contain before Amazon SQS rejects it. An integer from 1024 bytes (1 KiB) up to 262144 bytes (256 KiB). The default for this attribute is 262144 (256 KiB).</p></li>
+<li><p><strong>message_retention_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of seconds Amazon SQS retains a message. Integer representing seconds, from 60 (1 minute) to 1209600 (14 days). The default for this attribute is 345600 (4 days).</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – This is the human-readable name of the queue. If omitted, this provider will assign a random name.</p></li>
+<li><p><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p></li>
+<li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The JSON policy for the SQS queue.</p></li>
+<li><p><strong>receive_wait_time_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The time for which a ReceiveMessage call will wait for a message to arrive (long polling) before returning. An integer from 0 to 20 (seconds). The default for this attribute is 0, meaning that the call will return immediately.</p></li>
+<li><p><strong>redrive_policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The JSON policy to set up the Dead Letter Queue, see <a class="reference external" href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/SQSDeadLetterQueue.html">AWS docs</a>. <strong>Note:</strong> when specifying <code class="docutils literal notranslate"><span class="pre">maxReceiveCount</span></code>, you must specify it as an integer (<code class="docutils literal notranslate"><span class="pre">5</span></code>), and not a string (<code class="docutils literal notranslate"><span class="pre">&quot;5&quot;</span></code>).</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the queue.</p></li>
+<li><p><strong>visibility_timeout_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – <p>The visibility timeout for the queue. An integer from 0 to 43200 (12 hours). The default for this attribute is 30. For more information about visibility timeout, see <a class="reference external" href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/AboutVT.html">AWS docs</a>.</p>
+</p></li>
+</ul>
+</dd>
+</dl>
 <dl class="attribute">
 <dt id="pulumi_aws.sqs.Queue.arn">
 <code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.sqs.Queue.arn" title="Permalink to this definition">¶</a></dt>
@@ -128,6 +135,12 @@ anything, please consult the source <a class="reference external" href="https://
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.sqs.Queue.policy">
+<code class="sig-name descname">policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.sqs.Queue.policy" title="Permalink to this definition">¶</a></dt>
+<dd><p>The JSON policy for the SQS queue.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.sqs.Queue.receive_wait_time_seconds">
 <code class="sig-name descname">receive_wait_time_seconds</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.sqs.Queue.receive_wait_time_seconds" title="Permalink to this definition">¶</a></dt>
 <dd><p>The time for which a ReceiveMessage call will wait for a message to arrive (long polling) before returning. An integer from 0 to 20 (seconds). The default for this attribute is 0, meaning that the call will return immediately.</p>
@@ -174,6 +187,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>message_retention_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of seconds Amazon SQS retains a message. Integer representing seconds, from 60 (1 minute) to 1209600 (14 days). The default for this attribute is 345600 (4 days).</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – This is the human-readable name of the queue. If omitted, this provider will assign a random name.</p></li>
 <li><p><strong>name_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique name beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p></li>
+<li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The JSON policy for the SQS queue.</p></li>
 <li><p><strong>receive_wait_time_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The time for which a ReceiveMessage call will wait for a message to arrive (long polling) before returning. An integer from 0 to 20 (seconds). The default for this attribute is 0, meaning that the call will return immediately.</p></li>
 <li><p><strong>redrive_policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The JSON policy to set up the Dead Letter Queue, see <a class="reference external" href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/SQSDeadLetterQueue.html">AWS docs</a>. <strong>Note:</strong> when specifying <code class="docutils literal notranslate"><span class="pre">maxReceiveCount</span></code>, you must specify it as an integer (<code class="docutils literal notranslate"><span class="pre">5</span></code>), and not a string (<code class="docutils literal notranslate"><span class="pre">&quot;5&quot;</span></code>).</p>
 </p></li>
@@ -228,18 +242,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.sqs.</code><code class="sig-name descname">QueuePolicy</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">policy=None</em>, <em class="sig-param">queue_url=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.sqs.QueuePolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows you to set a policy of an SQS Queue
 while referencing ARN of the queue within the policy.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sqs_queue_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sqs_queue_policy.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The JSON policy for the SQS queue.</p></li>
 <li><p><strong>queue_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URL of the SQS Queue to which to attach the policy</p></li>
 </ul>
 </dd>
 </dl>
+<dl class="attribute">
+<dt id="pulumi_aws.sqs.QueuePolicy.policy">
+<code class="sig-name descname">policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.sqs.QueuePolicy.policy" title="Permalink to this definition">¶</a></dt>
+<dd><p>The JSON policy for the SQS queue.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_aws.sqs.QueuePolicy.queue_url">
 <code class="sig-name descname">queue_url</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.sqs.QueuePolicy.queue_url" title="Permalink to this definition">¶</a></dt>
@@ -257,6 +275,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The JSON policy for the SQS queue.</p></li>
 <li><p><strong>queue_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URL of the SQS Queue to which to attach the policy</p></li>
 </ul>
 </dd>
@@ -307,12 +326,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Use this data source to get the ARN and URL of queue in AWS Simple Queue Service (SQS).
 By using this data source, you can reference SQS queues without having to hardcode
 the ARNs as input.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/sqs_queue.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/sqs_queue.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the queue to match.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – The name of the queue to match.</p></li>
+<li><p><strong>tags</strong> (<em>dict</em>) – A mapping of tags for the resource.</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>

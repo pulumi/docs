@@ -3,14 +3,15 @@
 title: "DeploymentConfig"
 block_external_search_index: true
 ---
-<style>
-table td p { margin-top: 0; margin-bottom: 0; }
-</style>
+
+
 
 Provides a CodeDeploy deployment config for an application
 
+{{% examples %}}
 ## Example Usage
 
+{{% example %}}
 ### Server Usage
 
 ```typescript
@@ -50,6 +51,8 @@ const fooDeploymentGroup = new aws.codedeploy.DeploymentGroup("foo", {
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Lambda Usage
 
 ```typescript
@@ -83,378 +86,287 @@ const fooDeploymentGroup = new aws.codedeploy.DeploymentGroup("foo", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/codedeploy_deployment_config.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
 ## Create a DeploymentConfig Resource
 
-{{< langchoose csharp nojavascript >}}
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/codedeploy/#DeploymentConfig">DeploymentConfig</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/codedeploy/#DeploymentConfigArgs">DeploymentConfigArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+{{% choosable language nodejs %}}
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/codedeploy/#DeploymentConfig">DeploymentConfig</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/codedeploy/#DeploymentConfigArgs">DeploymentConfigArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+{{% /choosable %}}
 
+{{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">DeploymentConfig</span><span class="p">(resource_name, opts=None, </span>compute_platform=None<span class="p">, </span>deployment_config_name=None<span class="p">, </span>minimum_healthy_hosts=None<span class="p">, </span>traffic_routing_config=None<span class="p">, __props__=None);</span></code></pre></div>
+{{% /choosable %}}
 
+{{% choosable language go %}}
 <div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewDeploymentConfig<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codedeploy?tab=doc#DeploymentConfigArgs">DeploymentConfigArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codedeploy?tab=doc#DeploymentConfig">DeploymentConfig</a></span>, error)</span></code></pre></div>
+{{% /choosable %}}
 
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Codedeploy.DeploymentConfig.html">DeploymentConfig</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Codedeploy.DeploymentConfigArgs.html">DeploymentConfigArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+{{% choosable language csharp %}}
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Codedeploy.DeploymentConfig.html">DeploymentConfig</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.CodeDeploy.DeploymentConfigArgs.html">DeploymentConfigArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+{{% /choosable %}}
 
-Creates a DeploymentConfig resource with the given unique name, arguments, and options.
+{{% choosable language nodejs %}}
 
-{{% lang nodejs %}}
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The arguments to use to populate this resource's properties.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 
-<ul class="pl-10">
-    <li><strong>name</strong> &ndash; (Required) The unique name of the resulting resource.</li>
-    <li><strong>args</strong> &ndash;  (Optional)  The arguments to use to populate this resource's properties.</li>
-    <li><strong>opts</strong> &ndash; (Optional) A bag of options that control this resource's behavior.</li>
-</ul>
+{{% /choosable %}}
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
+{{% /choosable %}}
 
-{{% lang go %}}
+{{% choosable language go %}}
 
-<ul class="pl-10">
-    <li><strong>name</strong> &ndash; (Required) The unique name of the resulting resource.</li>
-    <li><strong>args</strong> &ndash;  (Optional)  The arguments to use to populate this resource's properties.</li>
-    <li><strong>opts</strong> &ndash; (Optional) A bag of options that control this resource's behavior.</li>
-</ul>
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The arguments to use to populate this resource's properties.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 
-{{% /lang %}}
+{{% /choosable %}}
 
-{{% lang csharp %}}
+{{% choosable language csharp %}}
 
-<ul class="pl-10">
-    <li><strong>name</strong> &ndash; (Required) The unique name of the resulting resource.</li>
-    <li><strong>args</strong> &ndash;  (Optional)  The arguments to use to populate this resource's properties.</li>
-    <li><strong>opts</strong> &ndash; (Optional) A bag of options that control this resource's behavior.</li>
-</ul>
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The arguments to use to populate this resource's properties.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 
-{{% /lang %}}
+{{% /choosable %}}
 
-The following arguments are supported:
-
-
-{{< langchoose csharp nojavascript >}}
-
-
-{{% lang csharp %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Compute<wbr>Platform</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The compute platform can be `Server`, `Lambda`, or `ECS`. Default is `Server`.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Deployment<wbr>Config<wbr>Name</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The name of the deployment config.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Minimum<wbr>Healthy<wbr>Hosts</td>
-            <td class="align-top">
-                
-                <code><a href="#deploymentconfigminimumhealthyhosts">Deployment<wbr>Config<wbr>Minimum<wbr>Healthy<wbr>Hosts<wbr>Args?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A minimum_healthy_hosts block. Required for `Server` compute platform. Minimum Healthy Hosts are documented below.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Traffic<wbr>Routing<wbr>Config</td>
-            <td class="align-top">
-                
-                <code><a href="#deploymentconfigtrafficroutingconfig">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Args?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A traffic_routing_config block. Traffic Routing Config is documented below.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+#### Resource Arguments
 
 
-{{% /lang %}}
 
 
-{{% lang go %}}
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Compute<wbr>Platform</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The compute platform can be `Server`, `Lambda`, or `ECS`. Default is `Server`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Deployment<wbr>Config<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the deployment config.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Minimum<wbr>Healthy<wbr>Hosts</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#deploymentconfigminimumhealthyhosts">Deployment<wbr>Config<wbr>Minimum<wbr>Healthy<wbr>Hosts<wbr>Args?</a></span>
+    </dt>
+    <dd>{{% md %}}A minimum_healthy_hosts block. Required for `Server` compute platform. Minimum Healthy Hosts are documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Traffic<wbr>Routing<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#deploymentconfigtrafficroutingconfig">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Args?</a></span>
+    </dt>
+    <dd>{{% md %}}A traffic_routing_config block. Traffic Routing Config is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Compute<wbr>Platform</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The compute platform can be `Server`, `Lambda`, or `ECS`. Default is `Server`.
- {{% /md %}}
+{{% choosable language go %}}
+<dl class="resources-properties">
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Deployment<wbr>Config<wbr>Name</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The name of the deployment config.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Compute<wbr>Platform</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The compute platform can be `Server`, `Lambda`, or `ECS`. Default is `Server`.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Minimum<wbr>Healthy<wbr>Hosts</td>
-            <td class="align-top">
-                
-                <code><a href="#deploymentconfigminimumhealthyhosts">*Deployment<wbr>Config<wbr>Minimum<wbr>Healthy<wbr>Hosts</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A minimum_healthy_hosts block. Required for `Server` compute platform. Minimum Healthy Hosts are documented below.
- {{% /md %}}
+    <dt class="property-required"
+            title="Required">
+        <span>Deployment<wbr>Config<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the deployment config.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Traffic<wbr>Routing<wbr>Config</td>
-            <td class="align-top">
-                
-                <code><a href="#deploymentconfigtrafficroutingconfig">*Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A traffic_routing_config block. Traffic Routing Config is documented below.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>Minimum<wbr>Healthy<wbr>Hosts</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#deploymentconfigminimumhealthyhosts">*Deployment<wbr>Config<wbr>Minimum<wbr>Healthy<wbr>Hosts</a></span>
+    </dt>
+    <dd>{{% md %}}A minimum_healthy_hosts block. Required for `Server` compute platform. Minimum Healthy Hosts are documented below.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+    <dt class="property-optional"
+            title="Optional">
+        <span>Traffic<wbr>Routing<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#deploymentconfigtrafficroutingconfig">*Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}A traffic_routing_config block. Traffic Routing Config is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>compute<wbr>Platform</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The compute platform can be `Server`, `Lambda`, or `ECS`. Default is `Server`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>deployment<wbr>Config<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the deployment config.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>minimum<wbr>Healthy<wbr>Hosts</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#deploymentconfigminimumhealthyhosts">Deployment<wbr>Config<wbr>Minimum<wbr>Healthy<wbr>Hosts?</a></span>
+    </dt>
+    <dd>{{% md %}}A minimum_healthy_hosts block. Required for `Server` compute platform. Minimum Healthy Hosts are documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>traffic<wbr>Routing<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#deploymentconfigtrafficroutingconfig">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config?</a></span>
+    </dt>
+    <dd>{{% md %}}A traffic_routing_config block. Traffic Routing Config is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% lang nodejs %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>compute_<wbr>platform</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The compute platform can be `Server`, `Lambda`, or `ECS`. Default is `Server`.
+{{% /md %}}</dd>
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">compute<wbr>Platform</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The compute platform can be `Server`, `Lambda`, or `ECS`. Default is `Server`.
- {{% /md %}}
+    <dt class="property-required"
+            title="Required">
+        <span>deployment_<wbr>config_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the deployment config.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">deployment<wbr>Config<wbr>Name</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The name of the deployment config.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>minimum_<wbr>healthy_<wbr>hosts</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#deploymentconfigminimumhealthyhosts">Dict[Deployment<wbr>Config<wbr>Minimum<wbr>Healthy<wbr>Hosts]</a></span>
+    </dt>
+    <dd>{{% md %}}A minimum_healthy_hosts block. Required for `Server` compute platform. Minimum Healthy Hosts are documented below.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">minimum<wbr>Healthy<wbr>Hosts</td>
-            <td class="align-top">
-                
-                <code><a href="#deploymentconfigminimumhealthyhosts">Deployment<wbr>Config<wbr>Minimum<wbr>Healthy<wbr>Hosts?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A minimum_healthy_hosts block. Required for `Server` compute platform. Minimum Healthy Hosts are documented below.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>traffic_<wbr>routing_<wbr>config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#deploymentconfigtrafficroutingconfig">Dict[Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config]</a></span>
+    </dt>
+    <dd>{{% md %}}A traffic_routing_config block. Traffic Routing Config is documented below.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">traffic<wbr>Routing<wbr>Config</td>
-            <td class="align-top">
-                
-                <code><a href="#deploymentconfigtrafficroutingconfig">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A traffic_routing_config block. Traffic Routing Config is documented below.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang python %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">compute_<wbr>platform</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The compute platform can be `Server`, `Lambda`, or `ECS`. Default is `Server`.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">deployment_<wbr>config_<wbr>name</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Required)
-The name of the deployment config.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">minimum_<wbr>healthy_<wbr>hosts</td>
-            <td class="align-top">
-                
-                <code><a href="#deploymentconfigminimumhealthyhosts">Dict[Deployment<wbr>Config<wbr>Minimum<wbr>Healthy<wbr>Hosts]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A minimum_healthy_hosts block. Required for `Server` compute platform. Minimum Healthy Hosts are documented below.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">traffic_<wbr>routing_<wbr>config</td>
-            <td class="align-top">
-                
-                <code><a href="#deploymentconfigtrafficroutingconfig">Dict[Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A traffic_routing_config block. Traffic Routing Config is documented below.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
+</dl>
+{{% /choosable %}}
 
 
 
@@ -468,347 +380,213 @@ The following output properties are available:
 
 
 
-{{< langchoose csharp nojavascript >}}
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Compute<wbr>Platform</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The compute platform can be `Server`, `Lambda`, or `ECS`. Default is `Server`.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Deployment<wbr>Config<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The AWS Assigned deployment config id
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Deployment<wbr>Config<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the deployment config.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Minimum<wbr>Healthy<wbr>Hosts</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#deploymentconfigminimumhealthyhosts">Deployment<wbr>Config<wbr>Minimum<wbr>Healthy<wbr>Hosts?</a></span>
+    </dt>
+    <dd>{{% md %}}A minimum_healthy_hosts block. Required for `Server` compute platform. Minimum Healthy Hosts are documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Traffic<wbr>Routing<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#deploymentconfigtrafficroutingconfig">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config?</a></span>
+    </dt>
+    <dd>{{% md %}}A traffic_routing_config block. Traffic Routing Config is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% lang csharp %}}
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Compute<wbr>Platform</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The compute platform can be `Server`, `Lambda`, or `ECS`. Default is `Server`.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Deployment<wbr>Config<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The AWS Assigned deployment config id
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Deployment<wbr>Config<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the deployment config.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Minimum<wbr>Healthy<wbr>Hosts</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#deploymentconfigminimumhealthyhosts">*Deployment<wbr>Config<wbr>Minimum<wbr>Healthy<wbr>Hosts</a></span>
+    </dt>
+    <dd>{{% md %}}A minimum_healthy_hosts block. Required for `Server` compute platform. Minimum Healthy Hosts are documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Traffic<wbr>Routing<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#deploymentconfigtrafficroutingconfig">*Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}A traffic_routing_config block. Traffic Routing Config is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Compute<wbr>Platform</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} The compute platform can be `Server`, `Lambda`, or `ECS`. Default is `Server`.
- {{% /md %}}
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Deployment<wbr>Config<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The AWS Assigned deployment config id
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>compute<wbr>Platform</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The compute platform can be `Server`, `Lambda`, or `ECS`. Default is `Server`.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Deployment<wbr>Config<wbr>Name</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The name of the deployment config.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>deployment<wbr>Config<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The AWS Assigned deployment config id
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Minimum<wbr>Healthy<wbr>Hosts</td>
-            <td class="align-top">
-                
-                <code><a href="#deploymentconfigminimumhealthyhosts">Deployment<wbr>Config<wbr>Minimum<wbr>Healthy<wbr>Hosts?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} A minimum_healthy_hosts block. Required for `Server` compute platform. Minimum Healthy Hosts are documented below.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>deployment<wbr>Config<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the deployment config.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Traffic<wbr>Routing<wbr>Config</td>
-            <td class="align-top">
-                
-                <code><a href="#deploymentconfigtrafficroutingconfig">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} A traffic_routing_config block. Traffic Routing Config is documented below.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>minimum<wbr>Healthy<wbr>Hosts</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#deploymentconfigminimumhealthyhosts">Deployment<wbr>Config<wbr>Minimum<wbr>Healthy<wbr>Hosts?</a></span>
+    </dt>
+    <dd>{{% md %}}A minimum_healthy_hosts block. Required for `Server` compute platform. Minimum Healthy Hosts are documented below.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+    <dt class="property-"
+            title="">
+        <span>traffic<wbr>Routing<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#deploymentconfigtrafficroutingconfig">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config?</a></span>
+    </dt>
+    <dd>{{% md %}}A traffic_routing_config block. Traffic Routing Config is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
 
+    <dt class="property-"
+            title="">
+        <span>compute_<wbr>platform</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The compute platform can be `Server`, `Lambda`, or `ECS`. Default is `Server`.
+{{% /md %}}</dd>
 
-{{% lang go %}}
+    <dt class="property-"
+            title="">
+        <span>deployment_<wbr>config_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The AWS Assigned deployment config id
+{{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>deployment_<wbr>config_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the deployment config.
+{{% /md %}}</dd>
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Compute<wbr>Platform</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} The compute platform can be `Server`, `Lambda`, or `ECS`. Default is `Server`.
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>minimum_<wbr>healthy_<wbr>hosts</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#deploymentconfigminimumhealthyhosts">Dict[Deployment<wbr>Config<wbr>Minimum<wbr>Healthy<wbr>Hosts]</a></span>
+    </dt>
+    <dd>{{% md %}}A minimum_healthy_hosts block. Required for `Server` compute platform. Minimum Healthy Hosts are documented below.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Deployment<wbr>Config<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The AWS Assigned deployment config id
- {{% /md %}}
+    <dt class="property-"
+            title="">
+        <span>traffic_<wbr>routing_<wbr>config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#deploymentconfigtrafficroutingconfig">Dict[Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config]</a></span>
+    </dt>
+    <dd>{{% md %}}A traffic_routing_config block. Traffic Routing Config is documented below.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Deployment<wbr>Config<wbr>Name</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The name of the deployment config.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Minimum<wbr>Healthy<wbr>Hosts</td>
-            <td class="align-top">
-                
-                <code><a href="#deploymentconfigminimumhealthyhosts">*Deployment<wbr>Config<wbr>Minimum<wbr>Healthy<wbr>Hosts</a></code>
-            </td>
-            <td class="align-top">{{% md %}} A minimum_healthy_hosts block. Required for `Server` compute platform. Minimum Healthy Hosts are documented below.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Traffic<wbr>Routing<wbr>Config</td>
-            <td class="align-top">
-                
-                <code><a href="#deploymentconfigtrafficroutingconfig">*Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config</a></code>
-            </td>
-            <td class="align-top">{{% md %}} A traffic_routing_config block. Traffic Routing Config is documented below.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang nodejs %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">compute<wbr>Platform</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} The compute platform can be `Server`, `Lambda`, or `ECS`. Default is `Server`.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">deployment<wbr>Config<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The AWS Assigned deployment config id
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">deployment<wbr>Config<wbr>Name</td>
-            <td class="align-top">
-                
-                <code>string</code>
-            </td>
-            <td class="align-top">{{% md %}} The name of the deployment config.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">minimum<wbr>Healthy<wbr>Hosts</td>
-            <td class="align-top">
-                
-                <code><a href="#deploymentconfigminimumhealthyhosts">Deployment<wbr>Config<wbr>Minimum<wbr>Healthy<wbr>Hosts?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} A minimum_healthy_hosts block. Required for `Server` compute platform. Minimum Healthy Hosts are documented below.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">traffic<wbr>Routing<wbr>Config</td>
-            <td class="align-top">
-                
-                <code><a href="#deploymentconfigtrafficroutingconfig">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} A traffic_routing_config block. Traffic Routing Config is documented below.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang python %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">compute_<wbr>platform</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} The compute platform can be `Server`, `Lambda`, or `ECS`. Default is `Server`.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">deployment_<wbr>config_<wbr>id</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} The AWS Assigned deployment config id
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">deployment_<wbr>config_<wbr>name</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} The name of the deployment config.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">minimum_<wbr>healthy_<wbr>hosts</td>
-            <td class="align-top">
-                
-                <code><a href="#deploymentconfigminimumhealthyhosts">Dict[Deployment<wbr>Config<wbr>Minimum<wbr>Healthy<wbr>Hosts]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} A minimum_healthy_hosts block. Required for `Server` compute platform. Minimum Healthy Hosts are documented below.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">traffic_<wbr>routing_<wbr>config</td>
-            <td class="align-top">
-                
-                <code><a href="#deploymentconfigtrafficroutingconfig">Dict[Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} A traffic_routing_config block. Traffic Routing Config is documented below.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
+</dl>
+{{% /choosable %}}
 
 
 
@@ -819,435 +597,332 @@ The following output properties are available:
 
 ## Look up an Existing DeploymentConfig Resource
 
-{{< langchoose csharp nojavascript >}}
-
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">pulumi.Input&lt;pulumi.ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/codedeploy/#DeploymentConfigState">DeploymentConfigState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/codedeploy/#DeploymentConfig">DeploymentConfig</a></span></code></pre></div>
-
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>compute_platform=None<span class="p">, </span>deployment_config_id=None<span class="p">, </span>deployment_config_name=None<span class="p">, </span>minimum_healthy_hosts=None<span class="p">, </span>traffic_routing_config=None<span class="p">, __props__=None);</span></code></pre></div>
-
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDeploymentConfig<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">pulumi.IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codedeploy?tab=doc#DeploymentConfigState">DeploymentConfigState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codedeploy?tab=doc#DeploymentConfig">DeploymentConfig</a></span>, error)</span></code></pre></div>
-
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Codedeploy.DeploymentConfig.html">DeploymentConfig</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Pulumi.Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Codedeploy.DeploymentConfigState.html">DeploymentConfigState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">Pulumi.CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
-
 Get an existing DeploymentConfig resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 
-{{% lang nodejs %}}
+{{< chooser language "javascript,typescript,python,go,csharp  " / >}}
 
-<ul class="pl-10">
-    <li><strong>name</strong> &ndash; (Required) The unique name of the resulting resource.</li>
-    <li><strong>id</strong> &ndash; (Required) The _unique_ provider ID of the resource to lookup.</li>
-    <li><strong>state</strong> &ndash; (Optional) Any extra arguments used during the lookup.</li>
-    <li><strong>opts</strong> &ndash; (Optional) A bag of options that control this resource's behavior.</li>
-</ul>
+{{% choosable language nodejs %}}
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/codedeploy/#DeploymentConfigState">DeploymentConfigState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/codedeploy/#DeploymentConfig">DeploymentConfig</a></span></code></pre></div>
+{{% /choosable %}}
 
-{{% /lang %}}
+{{% choosable language python %}}
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>compute_platform=None<span class="p">, </span>deployment_config_id=None<span class="p">, </span>deployment_config_name=None<span class="p">, </span>minimum_healthy_hosts=None<span class="p">, </span>traffic_routing_config=None<span class="p">, __props__=None);</span></code></pre></div>
+{{% /choosable %}}
 
-{{% lang go %}}
+{{% choosable language go %}}
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDeploymentConfig<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codedeploy?tab=doc#DeploymentConfigState">DeploymentConfigState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codedeploy?tab=doc#DeploymentConfig">DeploymentConfig</a></span>, error)</span></code></pre></div>
+{{% /choosable %}}
 
-<ul class="pl-10">
-    <li><strong>name</strong> &ndash; (Required) The unique name of the resulting resource.</li>
-    <li><strong>id</strong> &ndash; (Required) The _unique_ provider ID of the resource to lookup.</li>
-    <li><strong>state</strong> &ndash; (Optional) Any extra arguments used during the lookup.</li>
-    <li><strong>opts</strong> &ndash; (Optional) A bag of options that control this resource's behavior.</li>
-</ul>
+{{% choosable language csharp %}}
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Codedeploy.DeploymentConfig.html">DeploymentConfig</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Codedeploy.DeploymentConfigState.html">DeploymentConfigState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+{{% /choosable %}}
 
-{{% /lang %}}
+{{% choosable language nodejs %}}
 
-{{% lang csharp %}}
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resulting resource.</dd>
+    <dt class="property-required" title="Required">
+        <span>id</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The <em>unique</em> provider ID of the resource to lookup.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>state</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>Any extra arguments used during the lookup.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
 
-<ul class="pl-10">
-    <li><strong>name</strong> &ndash; (Required) The unique name of the resulting resource.</li>
-    <li><strong>id</strong> &ndash; (Required) The _unique_ provider ID of the resource to lookup.</li>
-    <li><strong>state</strong> &ndash; (Optional) Any extra arguments used during the lookup.</li>
-    <li><strong>opts</strong> &ndash; (Optional) A bag of options that control this resource's behavior.</li>
-</ul>
+{{% /choosable %}}
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>resource_name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resulting resource.</dd>
+    <dt class="property-required" title="Optional">
+        <span>id</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The <em>unique</em> provider ID of the resource to lookup.</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resulting resource.</dd>
+    <dt class="property-required" title="Required">
+        <span>id</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The <em>unique</em> provider ID of the resource to lookup.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>state</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>Any extra arguments used during the lookup.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resulting resource.</dd>
+    <dt class="property-required" title="Required">
+        <span>id</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The <em>unique</em> provider ID of the resource to lookup.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>state</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>Any extra arguments used during the lookup.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
+
+{{% /choosable %}}
 
 The following state arguments are supported:
 
 
-{{< langchoose csharp nojavascript >}}
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Compute<wbr>Platform</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The compute platform can be `Server`, `Lambda`, or `ECS`. Default is `Server`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Deployment<wbr>Config<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The AWS Assigned deployment config id
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Deployment<wbr>Config<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The name of the deployment config.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Minimum<wbr>Healthy<wbr>Hosts</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#deploymentconfigminimumhealthyhosts">Deployment<wbr>Config<wbr>Minimum<wbr>Healthy<wbr>Hosts<wbr>Args?</a></span>
+    </dt>
+    <dd>{{% md %}}A minimum_healthy_hosts block. Required for `Server` compute platform. Minimum Healthy Hosts are documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Traffic<wbr>Routing<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#deploymentconfigtrafficroutingconfig">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Args?</a></span>
+    </dt>
+    <dd>{{% md %}}A traffic_routing_config block. Traffic Routing Config is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% lang csharp %}}
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Compute<wbr>Platform</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The compute platform can be `Server`, `Lambda`, or `ECS`. Default is `Server`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Deployment<wbr>Config<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The AWS Assigned deployment config id
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Deployment<wbr>Config<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The name of the deployment config.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Minimum<wbr>Healthy<wbr>Hosts</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#deploymentconfigminimumhealthyhosts">*Deployment<wbr>Config<wbr>Minimum<wbr>Healthy<wbr>Hosts</a></span>
+    </dt>
+    <dd>{{% md %}}A minimum_healthy_hosts block. Required for `Server` compute platform. Minimum Healthy Hosts are documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Traffic<wbr>Routing<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#deploymentconfigtrafficroutingconfig">*Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}A traffic_routing_config block. Traffic Routing Config is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Compute<wbr>Platform</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The compute platform can be `Server`, `Lambda`, or `ECS`. Default is `Server`.
- {{% /md %}}
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Deployment<wbr>Config<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The AWS Assigned deployment config id
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>compute<wbr>Platform</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The compute platform can be `Server`, `Lambda`, or `ECS`. Default is `Server`.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Deployment<wbr>Config<wbr>Name</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The name of the deployment config.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>deployment<wbr>Config<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The AWS Assigned deployment config id
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Minimum<wbr>Healthy<wbr>Hosts</td>
-            <td class="align-top">
-                
-                <code><a href="#deploymentconfigminimumhealthyhosts">Deployment<wbr>Config<wbr>Minimum<wbr>Healthy<wbr>Hosts<wbr>Args?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A minimum_healthy_hosts block. Required for `Server` compute platform. Minimum Healthy Hosts are documented below.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>deployment<wbr>Config<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The name of the deployment config.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Traffic<wbr>Routing<wbr>Config</td>
-            <td class="align-top">
-                
-                <code><a href="#deploymentconfigtrafficroutingconfig">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Args?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A traffic_routing_config block. Traffic Routing Config is documented below.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>minimum<wbr>Healthy<wbr>Hosts</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#deploymentconfigminimumhealthyhosts">Deployment<wbr>Config<wbr>Minimum<wbr>Healthy<wbr>Hosts?</a></span>
+    </dt>
+    <dd>{{% md %}}A minimum_healthy_hosts block. Required for `Server` compute platform. Minimum Healthy Hosts are documented below.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+    <dt class="property-optional"
+            title="Optional">
+        <span>traffic<wbr>Routing<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#deploymentconfigtrafficroutingconfig">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config?</a></span>
+    </dt>
+    <dd>{{% md %}}A traffic_routing_config block. Traffic Routing Config is documented below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>compute_<wbr>platform</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The compute platform can be `Server`, `Lambda`, or `ECS`. Default is `Server`.
+{{% /md %}}</dd>
 
-{{% lang go %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>deployment_<wbr>config_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The AWS Assigned deployment config id
+{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>deployment_<wbr>config_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the deployment config.
+{{% /md %}}</dd>
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Compute<wbr>Platform</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The compute platform can be `Server`, `Lambda`, or `ECS`. Default is `Server`.
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>minimum_<wbr>healthy_<wbr>hosts</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#deploymentconfigminimumhealthyhosts">Dict[Deployment<wbr>Config<wbr>Minimum<wbr>Healthy<wbr>Hosts]</a></span>
+    </dt>
+    <dd>{{% md %}}A minimum_healthy_hosts block. Required for `Server` compute platform. Minimum Healthy Hosts are documented below.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Deployment<wbr>Config<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The AWS Assigned deployment config id
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>traffic_<wbr>routing_<wbr>config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#deploymentconfigtrafficroutingconfig">Dict[Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config]</a></span>
+    </dt>
+    <dd>{{% md %}}A traffic_routing_config block. Traffic Routing Config is documented below.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Deployment<wbr>Config<wbr>Name</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The name of the deployment config.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Minimum<wbr>Healthy<wbr>Hosts</td>
-            <td class="align-top">
-                
-                <code><a href="#deploymentconfigminimumhealthyhosts">*Deployment<wbr>Config<wbr>Minimum<wbr>Healthy<wbr>Hosts</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A minimum_healthy_hosts block. Required for `Server` compute platform. Minimum Healthy Hosts are documented below.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Traffic<wbr>Routing<wbr>Config</td>
-            <td class="align-top">
-                
-                <code><a href="#deploymentconfigtrafficroutingconfig">*Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A traffic_routing_config block. Traffic Routing Config is documented below.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang nodejs %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">compute<wbr>Platform</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The compute platform can be `Server`, `Lambda`, or `ECS`. Default is `Server`.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">deployment<wbr>Config<wbr>Id</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The AWS Assigned deployment config id
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">deployment<wbr>Config<wbr>Name</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The name of the deployment config.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">minimum<wbr>Healthy<wbr>Hosts</td>
-            <td class="align-top">
-                
-                <code><a href="#deploymentconfigminimumhealthyhosts">Deployment<wbr>Config<wbr>Minimum<wbr>Healthy<wbr>Hosts?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A minimum_healthy_hosts block. Required for `Server` compute platform. Minimum Healthy Hosts are documented below.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">traffic<wbr>Routing<wbr>Config</td>
-            <td class="align-top">
-                
-                <code><a href="#deploymentconfigtrafficroutingconfig">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A traffic_routing_config block. Traffic Routing Config is documented below.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang python %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">compute_<wbr>platform</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The compute platform can be `Server`, `Lambda`, or `ECS`. Default is `Server`.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">deployment_<wbr>config_<wbr>id</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The AWS Assigned deployment config id
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">deployment_<wbr>config_<wbr>name</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-The name of the deployment config.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">minimum_<wbr>healthy_<wbr>hosts</td>
-            <td class="align-top">
-                
-                <code><a href="#deploymentconfigminimumhealthyhosts">Dict[Deployment<wbr>Config<wbr>Minimum<wbr>Healthy<wbr>Hosts]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A minimum_healthy_hosts block. Required for `Server` compute platform. Minimum Healthy Hosts are documented below.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">traffic_<wbr>routing_<wbr>config</td>
-            <td class="align-top">
-                
-                <code><a href="#deploymentconfigtrafficroutingconfig">Dict[Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
-A traffic_routing_config block. Traffic Routing Config is documented below.
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
+</dl>
+{{% /choosable %}}
 
 
 
@@ -1260,913 +935,525 @@ A traffic_routing_config block. Traffic Routing Config is documented below.
 
 ## Supporting Types
 
-#### DeploymentConfigMinimumHealthyHosts
-{{% lang nodejs %}}
+<h4>Deployment<wbr>Config<wbr>Minimum<wbr>Healthy<wbr>Hosts</h4>
+{{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DeploymentConfigMinimumHealthyHosts">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DeploymentConfigMinimumHealthyHosts">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
-{{% lang go %}}
+{{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codedeploy?tab=doc#DeploymentConfigMinimumHealthyHostsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codedeploy?tab=doc#DeploymentConfigMinimumHealthyHostsOutput">output</a> API doc for this type.
-{{% /lang %}}
-
-{{% lang csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Codedeploy.DeploymentConfigMinimumHealthyHostsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Codedeploy.DeploymentConfigMinimumHealthyHosts.html">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
 
 
-{{< langchoose csharp nojavascript >}}
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The type can either be `FLEET_PERCENT` or `HOST_COUNT`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int?</span>
+    </dt>
+    <dd>{{% md %}}The value when the type is `FLEET_PERCENT` represents the minimum number of healthy instances as
+a percentage of the total number of instances in the deployment. If you specify FLEET_PERCENT, at the start of the
+deployment, AWS CodeDeploy converts the percentage to the equivalent number of instance and rounds up fractional instances.
+When the type is `HOST_COUNT`, the value represents the minimum number of healthy instances as an absolute value.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% lang csharp %}}
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The type can either be `FLEET_PERCENT` or `HOST_COUNT`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*int</span>
+    </dt>
+    <dd>{{% md %}}The value when the type is `FLEET_PERCENT` represents the minimum number of healthy instances as
+a percentage of the total number of instances in the deployment. If you specify FLEET_PERCENT, at the start of the
+deployment, AWS CodeDeploy converts the percentage to the equivalent number of instance and rounds up fractional instances.
+When the type is `HOST_COUNT`, the value represents the minimum number of healthy instances as an absolute value.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Type</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Value</td>
-            <td class="align-top">
-                
-                <code>int?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The type can either be `FLEET_PERCENT` or `HOST_COUNT`.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+    <dt class="property-optional"
+            title="Optional">
+        <span>value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number?</span>
+    </dt>
+    <dd>{{% md %}}The value when the type is `FLEET_PERCENT` represents the minimum number of healthy instances as
+a percentage of the total number of instances in the deployment. If you specify FLEET_PERCENT, at the start of the
+deployment, AWS CodeDeploy converts the percentage to the equivalent number of instance and rounds up fractional instances.
+When the type is `HOST_COUNT`, the value represents the minimum number of healthy instances as an absolute value.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type can either be `FLEET_PERCENT` or `HOST_COUNT`.
+{{% /md %}}</dd>
 
-{{% lang go %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The value when the type is `FLEET_PERCENT` represents the minimum number of healthy instances as
+a percentage of the total number of instances in the deployment. If you specify FLEET_PERCENT, at the start of the
+deployment, AWS CodeDeploy converts the percentage to the equivalent number of instance and rounds up fractional instances.
+When the type is `HOST_COUNT`, the value represents the minimum number of healthy instances as an absolute value.
+{{% /md %}}</dd>
 
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Type</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Value</td>
-            <td class="align-top">
-                
-                <code>*int</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang nodejs %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">type</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">value</td>
-            <td class="align-top">
-                
-                <code>number?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang python %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">type</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">value</td>
-            <td class="align-top">
-                
-                <code>float</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
+</dl>
+{{% /choosable %}}
 
 
 
 
 
-#### DeploymentConfigTrafficRoutingConfig
-{{% lang nodejs %}}
+<h4>Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config</h4>
+{{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DeploymentConfigTrafficRoutingConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DeploymentConfigTrafficRoutingConfig">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
-{{% lang go %}}
+{{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codedeploy?tab=doc#DeploymentConfigTrafficRoutingConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codedeploy?tab=doc#DeploymentConfigTrafficRoutingConfigOutput">output</a> API doc for this type.
-{{% /lang %}}
-
-{{% lang csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Codedeploy.DeploymentConfigTrafficRoutingConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Codedeploy.DeploymentConfigTrafficRoutingConfig.html">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
 
 
-{{< langchoose csharp nojavascript >}}
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Time<wbr>Based<wbr>Canary</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#deploymentconfigtrafficroutingconfigtimebasedcanary">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Time<wbr>Based<wbr>Canary<wbr>Args?</a></span>
+    </dt>
+    <dd>{{% md %}}The time based canary configuration information. If `type` is `TimeBasedLinear`, use `time_based_linear` instead.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Time<wbr>Based<wbr>Linear</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#deploymentconfigtrafficroutingconfigtimebasedlinear">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Time<wbr>Based<wbr>Linear<wbr>Args?</a></span>
+    </dt>
+    <dd>{{% md %}}The time based linear configuration information. If `type` is `TimeBasedCanary`, use `time_based_canary` instead.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Type of traffic routing config. One of `TimeBasedCanary`, `TimeBasedLinear`, `AllAtOnce`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% lang csharp %}}
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Time<wbr>Based<wbr>Canary</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#deploymentconfigtrafficroutingconfigtimebasedcanary">*Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Time<wbr>Based<wbr>Canary</a></span>
+    </dt>
+    <dd>{{% md %}}The time based canary configuration information. If `type` is `TimeBasedLinear`, use `time_based_linear` instead.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Time<wbr>Based<wbr>Linear</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#deploymentconfigtrafficroutingconfigtimebasedlinear">*Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Time<wbr>Based<wbr>Linear</a></span>
+    </dt>
+    <dd>{{% md %}}The time based linear configuration information. If `type` is `TimeBasedCanary`, use `time_based_canary` instead.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}Type of traffic routing config. One of `TimeBasedCanary`, `TimeBasedLinear`, `AllAtOnce`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Time<wbr>Based<wbr>Canary</td>
-            <td class="align-top">
-                
-                <code><a href="#deploymentconfigtrafficroutingconfigtimebasedcanary">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Time<wbr>Based<wbr>Canary<wbr>Args?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Time<wbr>Based<wbr>Linear</td>
-            <td class="align-top">
-                
-                <code><a href="#deploymentconfigtrafficroutingconfigtimebasedlinear">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Time<wbr>Based<wbr>Linear<wbr>Args?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>time<wbr>Based<wbr>Canary</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#deploymentconfigtrafficroutingconfigtimebasedcanary">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Time<wbr>Based<wbr>Canary?</a></span>
+    </dt>
+    <dd>{{% md %}}The time based canary configuration information. If `type` is `TimeBasedLinear`, use `time_based_linear` instead.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Type</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>time<wbr>Based<wbr>Linear</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#deploymentconfigtrafficroutingconfigtimebasedlinear">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Time<wbr>Based<wbr>Linear?</a></span>
+    </dt>
+    <dd>{{% md %}}The time based linear configuration information. If `type` is `TimeBasedCanary`, use `time_based_canary` instead.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+    <dt class="property-optional"
+            title="Optional">
+        <span>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Type of traffic routing config. One of `TimeBasedCanary`, `TimeBasedLinear`, `AllAtOnce`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>time<wbr>Based<wbr>Canary</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#deploymentconfigtrafficroutingconfigtimebasedcanary">Dict[Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Time<wbr>Based<wbr>Canary]</a></span>
+    </dt>
+    <dd>{{% md %}}The time based canary configuration information. If `type` is `TimeBasedLinear`, use `time_based_linear` instead.
+{{% /md %}}</dd>
 
-{{% lang go %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>time<wbr>Based<wbr>Linear</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#deploymentconfigtrafficroutingconfigtimebasedlinear">Dict[Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Time<wbr>Based<wbr>Linear]</a></span>
+    </dt>
+    <dd>{{% md %}}The time based linear configuration information. If `type` is `TimeBasedCanary`, use `time_based_canary` instead.
+{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Type of traffic routing config. One of `TimeBasedCanary`, `TimeBasedLinear`, `AllAtOnce`.
+{{% /md %}}</dd>
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Time<wbr>Based<wbr>Canary</td>
-            <td class="align-top">
-                
-                <code><a href="#deploymentconfigtrafficroutingconfigtimebasedcanary">*Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Time<wbr>Based<wbr>Canary</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Time<wbr>Based<wbr>Linear</td>
-            <td class="align-top">
-                
-                <code><a href="#deploymentconfigtrafficroutingconfigtimebasedlinear">*Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Time<wbr>Based<wbr>Linear</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Type</td>
-            <td class="align-top">
-                
-                <code>*string</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang nodejs %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">time<wbr>Based<wbr>Canary</td>
-            <td class="align-top">
-                
-                <code><a href="#deploymentconfigtrafficroutingconfigtimebasedcanary">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Time<wbr>Based<wbr>Canary?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">time<wbr>Based<wbr>Linear</td>
-            <td class="align-top">
-                
-                <code><a href="#deploymentconfigtrafficroutingconfigtimebasedlinear">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Time<wbr>Based<wbr>Linear?</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">type</td>
-            <td class="align-top">
-                
-                <code>string?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang python %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">time<wbr>Based<wbr>Canary</td>
-            <td class="align-top">
-                
-                <code><a href="#deploymentconfigtrafficroutingconfigtimebasedcanary">Dict[Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Time<wbr>Based<wbr>Canary]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">time<wbr>Based<wbr>Linear</td>
-            <td class="align-top">
-                
-                <code><a href="#deploymentconfigtrafficroutingconfigtimebasedlinear">Dict[Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Time<wbr>Based<wbr>Linear]</a></code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">type</td>
-            <td class="align-top">
-                
-                <code>str</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
+</dl>
+{{% /choosable %}}
 
 
 
 
 
-#### DeploymentConfigTrafficRoutingConfigTimeBasedCanary
-{{% lang nodejs %}}
+<h4>Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Time<wbr>Based<wbr>Canary</h4>
+{{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DeploymentConfigTrafficRoutingConfigTimeBasedCanary">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DeploymentConfigTrafficRoutingConfigTimeBasedCanary">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
-{{% lang go %}}
+{{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codedeploy?tab=doc#DeploymentConfigTrafficRoutingConfigTimeBasedCanaryArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codedeploy?tab=doc#DeploymentConfigTrafficRoutingConfigTimeBasedCanaryOutput">output</a> API doc for this type.
-{{% /lang %}}
-
-{{% lang csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Codedeploy.DeploymentConfigTrafficRoutingConfigTimeBasedCanaryArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Codedeploy.DeploymentConfigTrafficRoutingConfigTimeBasedCanary.html">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
 
 
-{{< langchoose csharp nojavascript >}}
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Interval</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int?</span>
+    </dt>
+    <dd>{{% md %}}The number of minutes between the first and second traffic shifts of a `TimeBasedCanary` deployment.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Percentage</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int?</span>
+    </dt>
+    <dd>{{% md %}}The percentage of traffic to shift in the first increment of a `TimeBasedCanary` deployment.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% lang csharp %}}
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Interval</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*int</span>
+    </dt>
+    <dd>{{% md %}}The number of minutes between the first and second traffic shifts of a `TimeBasedCanary` deployment.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Percentage</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*int</span>
+    </dt>
+    <dd>{{% md %}}The percentage of traffic to shift in the first increment of a `TimeBasedCanary` deployment.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Interval</td>
-            <td class="align-top">
-                
-                <code>int?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Percentage</td>
-            <td class="align-top">
-                
-                <code>int?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>interval</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number?</span>
+    </dt>
+    <dd>{{% md %}}The number of minutes between the first and second traffic shifts of a `TimeBasedCanary` deployment.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+    <dt class="property-optional"
+            title="Optional">
+        <span>percentage</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number?</span>
+    </dt>
+    <dd>{{% md %}}The percentage of traffic to shift in the first increment of a `TimeBasedCanary` deployment.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>interval</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The number of minutes between the first and second traffic shifts of a `TimeBasedCanary` deployment.
+{{% /md %}}</dd>
 
-{{% lang go %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>percentage</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The percentage of traffic to shift in the first increment of a `TimeBasedCanary` deployment.
+{{% /md %}}</dd>
 
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Interval</td>
-            <td class="align-top">
-                
-                <code>*int</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Percentage</td>
-            <td class="align-top">
-                
-                <code>*int</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang nodejs %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">interval</td>
-            <td class="align-top">
-                
-                <code>number?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">percentage</td>
-            <td class="align-top">
-                
-                <code>number?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang python %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">interval</td>
-            <td class="align-top">
-                
-                <code>float</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">percentage</td>
-            <td class="align-top">
-                
-                <code>float</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
+</dl>
+{{% /choosable %}}
 
 
 
 
 
-#### DeploymentConfigTrafficRoutingConfigTimeBasedLinear
-{{% lang nodejs %}}
+<h4>Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Time<wbr>Based<wbr>Linear</h4>
+{{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DeploymentConfigTrafficRoutingConfigTimeBasedLinear">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DeploymentConfigTrafficRoutingConfigTimeBasedLinear">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
-{{% lang go %}}
+{{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codedeploy?tab=doc#DeploymentConfigTrafficRoutingConfigTimeBasedLinearArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/codedeploy?tab=doc#DeploymentConfigTrafficRoutingConfigTimeBasedLinearOutput">output</a> API doc for this type.
-{{% /lang %}}
-
-{{% lang csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Codedeploy.DeploymentConfigTrafficRoutingConfigTimeBasedLinearArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Codedeploy.DeploymentConfigTrafficRoutingConfigTimeBasedLinear.html">output</a> API doc for this type.
-{{% /lang %}}
+{{% /choosable %}}
 
 
 
-{{< langchoose csharp nojavascript >}}
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Interval</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int?</span>
+    </dt>
+    <dd>{{% md %}}The number of minutes between each incremental traffic shift of a `TimeBasedLinear` deployment.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Percentage</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int?</span>
+    </dt>
+    <dd>{{% md %}}The percentage of traffic that is shifted at the start of each increment of a `TimeBasedLinear` deployment.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% lang csharp %}}
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Interval</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*int</span>
+    </dt>
+    <dd>{{% md %}}The number of minutes between each incremental traffic shift of a `TimeBasedLinear` deployment.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Percentage</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*int</span>
+    </dt>
+    <dd>{{% md %}}The percentage of traffic that is shifted at the start of each increment of a `TimeBasedLinear` deployment.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Interval</td>
-            <td class="align-top">
-                
-                <code>int?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Percentage</td>
-            <td class="align-top">
-                
-                <code>int?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>interval</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number?</span>
+    </dt>
+    <dd>{{% md %}}The number of minutes between each incremental traffic shift of a `TimeBasedLinear` deployment.
+{{% /md %}}</dd>
 
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
+    <dt class="property-optional"
+            title="Optional">
+        <span>percentage</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number?</span>
+    </dt>
+    <dd>{{% md %}}The percentage of traffic that is shifted at the start of each increment of a `TimeBasedLinear` deployment.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
-{{% /lang %}}
+{{% choosable language python %}}
+<dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>interval</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The number of minutes between each incremental traffic shift of a `TimeBasedLinear` deployment.
+{{% /md %}}</dd>
 
-{{% lang go %}}
+    <dt class="property-optional"
+            title="Optional">
+        <span>percentage</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The percentage of traffic that is shifted at the start of each increment of a `TimeBasedLinear` deployment.
+{{% /md %}}</dd>
 
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">Interval</td>
-            <td class="align-top">
-                
-                <code>*int</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">Percentage</td>
-            <td class="align-top">
-                
-                <code>*int</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang nodejs %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">interval</td>
-            <td class="align-top">
-                
-                <code>number?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">percentage</td>
-            <td class="align-top">
-                
-                <code>number?</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
-
-
-{{% lang python %}}
-
-
-<table class="ml-6">
-    <thead>
-        <tr>
-            <th>Argument</th>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-    
-        <tr>
-            <td class="align-top">interval</td>
-            <td class="align-top">
-                
-                <code>float</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-        <tr>
-            <td class="align-top">percentage</td>
-            <td class="align-top">
-                
-                <code>float</code>
-            </td>
-            <td class="align-top">{{% md %}} 
- (Optional)
- {{% /md %}}
-
-            
-            </td>
-        </tr>
-    
-    </tbody>
-</table>
-
-
-{{% /lang %}}
+</dl>
+{{% /choosable %}}
 
 
 
 
 
 
+
+
+
+<h3>Package Details</h3>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
 

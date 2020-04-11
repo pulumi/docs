@@ -319,7 +319,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_kubernetes.core.v1.ConfigMap">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_kubernetes.core.v1.</code><code class="sig-name descname">ConfigMap</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">binary_data=None</em>, <em class="sig-param">data=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.core.v1.ConfigMap" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_kubernetes.core.v1.</code><code class="sig-name descname">ConfigMap</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">binary_data=None</em>, <em class="sig-param">data=None</em>, <em class="sig-param">immutable=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.core.v1.ConfigMap" title="Permalink to this definition">¶</a></dt>
 <dd><p>ConfigMap holds configuration data for pods to consume.</p>
 <p>Create a ConfigMap resource with the given unique name, arguments, and options.</p>
 <dl class="field-list simple">
@@ -337,6 +337,10 @@ Data field, this is enforced during validation process. Using this field will re
 characters, ‘-‘, ‘_’ or ‘.’. Values with non-UTF-8 byte sequences must use the
 BinaryData field. The keys stored in Data must not overlap with the keys in the
 BinaryData field, this is enforced during validation process.</p></li>
+<li><p><strong>immutable</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Immutable, if set to true, ensures that data stored in the ConfigMap cannot be
+updated (only object metadata can be modified). If not set to true, the field can be
+modified at any time. Defaulted to nil. This is an alpha field enabled by
+ImmutableEphemeralVolumes feature gate.</p></li>
 <li><p><strong>metadata</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Standard object’s metadata. More info:
 <a class="reference external" href="https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata">https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata</a></p></li>
 </ul>
@@ -374,6 +378,14 @@ validation process. Using this field will require 1.10+ apiserver and kubelet.</
 or ‘.’. Values with non-UTF-8 byte sequences must use the BinaryData field. The keys stored in
 Data must not overlap with the keys in the BinaryData field, this is enforced during validation
 process.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_kubernetes.core.v1.ConfigMap.immutable">
+<code class="sig-name descname">immutable</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_kubernetes.core.v1.ConfigMap.immutable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Immutable, if set to true, ensures that data stored in the ConfigMap cannot be updated (only
+object metadata can be modified). If not set to true, the field can be modified at any time.
+Defaulted to nil. This is an alpha field enabled by ImmutableEphemeralVolumes feature gate.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -3045,7 +3057,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_kubernetes.core.v1.Secret">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_kubernetes.core.v1.</code><code class="sig-name descname">Secret</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">data=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">string_data=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.core.v1.Secret" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_kubernetes.core.v1.</code><code class="sig-name descname">Secret</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">data=None</em>, <em class="sig-param">immutable=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">string_data=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.core.v1.Secret" title="Permalink to this definition">¶</a></dt>
 <dd><p>Secret holds secret data of a certain type. The total bytes of the values in the Data field must
 be less than MaxSecretSize bytes.</p>
 <p>Note: While Pulumi automatically encrypts the ‘data’ and ‘stringData’
@@ -3066,6 +3078,10 @@ tools like ‘kubectl’.</p>
 ‘_’ or ‘.’. The serialized form of the secret data is a base64 encoded string,
 representing the arbitrary (possibly non-string) data value here. Described in
 <a class="reference external" href="https://tools.ietf.org/html/rfc4648#section-4">https://tools.ietf.org/html/rfc4648#section-4</a></p></li>
+<li><p><strong>immutable</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Immutable, if set to true, ensures that data stored in the Secret cannot be updated
+(only object metadata can be modified). If not set to true, the field can be modified
+at any time. Defaulted to nil. This is an alpha field enabled by
+ImmutableEphemeralVolumes feature gate.</p></li>
 <li><p><strong>metadata</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Standard object’s metadata. More info:
 <a class="reference external" href="https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata">https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata</a></p></li>
 <li><p><strong>string_data</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – stringData allows specifying non-binary secret data in string form. It is provided as
@@ -3099,6 +3115,14 @@ info: <a class="reference external" href="https://git.k8s.io/community/contribut
 ‘.’. The serialized form of the secret data is a base64 encoded string, representing the
 arbitrary (possibly non-string) data value here. Described in
 <a class="reference external" href="https://tools.ietf.org/html/rfc4648#section-4">https://tools.ietf.org/html/rfc4648#section-4</a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_kubernetes.core.v1.Secret.immutable">
+<code class="sig-name descname">immutable</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_kubernetes.core.v1.Secret.immutable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Immutable, if set to true, ensures that data stored in the Secret cannot be updated (only object
+metadata can be modified). If not set to true, the field can be modified at any time. Defaulted
+to nil. This is an alpha field enabled by ImmutableEphemeralVolumes feature gate.</p>
 </dd></dl>
 
 <dl class="attribute">

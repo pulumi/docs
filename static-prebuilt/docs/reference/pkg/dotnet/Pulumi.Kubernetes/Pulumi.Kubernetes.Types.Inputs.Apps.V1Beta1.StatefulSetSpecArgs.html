@@ -1,0 +1,395 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class StatefulSetSpecArgs
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class StatefulSetSpecArgs
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Kubernetes.Types.Inputs.Apps.V1Beta1.StatefulSetSpecArgs">
+  
+  <h1 id="Pulumi_Kubernetes_Types_Inputs_Apps_V1Beta1_StatefulSetSpecArgs" data-uid="Pulumi.Kubernetes.Types.Inputs.Apps.V1Beta1.StatefulSetSpecArgs" class="text-break">Class StatefulSetSpecArgs
+  </h1>
+  <div class="markdown level0 summary"><p>A StatefulSetSpec is the specification of a StatefulSet.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.InputArgs.html">InputArgs</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html">ResourceArgs</a></div>
+    <div class="level3"><span class="xref">StatefulSetSpecArgs</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.ResourceArgs.html#Pulumi_ResourceArgs_Empty">ResourceArgs.Empty</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Kubernetes.Types.Inputs.Apps.V1Beta1.html">Pulumi.Kubernetes.Types.Inputs.Apps.V1Beta1</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.Kubernetes.dll</h6>
+  <h5 id="Pulumi_Kubernetes_Types_Inputs_Apps_V1Beta1_StatefulSetSpecArgs_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class StatefulSetSpecArgs : ResourceArgs</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Input.cs/#L5745">View Source</a>
+  </span>
+  <a id="Pulumi_Kubernetes_Types_Inputs_Apps_V1Beta1_StatefulSetSpecArgs_PodManagementPolicy_" data-uid="Pulumi.Kubernetes.Types.Inputs.Apps.V1Beta1.StatefulSetSpecArgs.PodManagementPolicy*"></a>
+  <h4 id="Pulumi_Kubernetes_Types_Inputs_Apps_V1Beta1_StatefulSetSpecArgs_PodManagementPolicy" data-uid="Pulumi.Kubernetes.Types.Inputs.Apps.V1Beta1.StatefulSetSpecArgs.PodManagementPolicy">PodManagementPolicy</h4>
+  <div class="markdown level1 summary"><p>podManagementPolicy controls how pods are created during initial scale up, when
+replacing pods on nodes, or when scaling down. The default policy is <code>OrderedReady</code>,
+where pods are created in increasing order (pod-0, then pod-1, etc) and the controller
+will wait until each pod is ready before continuing. When scaling down, the pods are
+removed in the opposite order. The alternative policy is <code>Parallel</code> which will create
+pods in parallel to match the desired scale without waiting, and on scale down will
+delete all pods at once.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; PodManagementPolicy { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Input.cs/#L5753">View Source</a>
+  </span>
+  <a id="Pulumi_Kubernetes_Types_Inputs_Apps_V1Beta1_StatefulSetSpecArgs_Replicas_" data-uid="Pulumi.Kubernetes.Types.Inputs.Apps.V1Beta1.StatefulSetSpecArgs.Replicas*"></a>
+  <h4 id="Pulumi_Kubernetes_Types_Inputs_Apps_V1Beta1_StatefulSetSpecArgs_Replicas" data-uid="Pulumi.Kubernetes.Types.Inputs.Apps.V1Beta1.StatefulSetSpecArgs.Replicas">Replicas</h4>
+  <div class="markdown level1 summary"><p>replicas is the desired number of replicas of the given Template. These are replicas in
+the sense that they are instantiations of the same Template, but individual replicas
+also have a consistent identity. If unspecified, defaults to 1.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; Replicas { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Input.cs/#L5761">View Source</a>
+  </span>
+  <a id="Pulumi_Kubernetes_Types_Inputs_Apps_V1Beta1_StatefulSetSpecArgs_RevisionHistoryLimit_" data-uid="Pulumi.Kubernetes.Types.Inputs.Apps.V1Beta1.StatefulSetSpecArgs.RevisionHistoryLimit*"></a>
+  <h4 id="Pulumi_Kubernetes_Types_Inputs_Apps_V1Beta1_StatefulSetSpecArgs_RevisionHistoryLimit" data-uid="Pulumi.Kubernetes.Types.Inputs.Apps.V1Beta1.StatefulSetSpecArgs.RevisionHistoryLimit">RevisionHistoryLimit</h4>
+  <div class="markdown level1 summary"><p>revisionHistoryLimit is the maximum number of revisions that will be maintained in the
+StatefulSet's revision history. The revision history consists of all revisions not
+represented by a currently applied StatefulSetSpec version. The default value is 10.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt; RevisionHistoryLimit { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Input.cs/#L5769">View Source</a>
+  </span>
+  <a id="Pulumi_Kubernetes_Types_Inputs_Apps_V1Beta1_StatefulSetSpecArgs_Selector_" data-uid="Pulumi.Kubernetes.Types.Inputs.Apps.V1Beta1.StatefulSetSpecArgs.Selector*"></a>
+  <h4 id="Pulumi_Kubernetes_Types_Inputs_Apps_V1Beta1_StatefulSetSpecArgs_Selector" data-uid="Pulumi.Kubernetes.Types.Inputs.Apps.V1Beta1.StatefulSetSpecArgs.Selector">Selector</h4>
+  <div class="markdown level1 summary"><p>selector is a label query over pods that should match the replica count. If empty,
+defaulted to labels on the pod template. More info:
+<a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#label-selectors">https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#label-selectors</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;LabelSelectorArgs&gt; Selector { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Inputs.Meta.V1.LabelSelectorArgs.html">LabelSelectorArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Input.cs/#L5725">View Source</a>
+  </span>
+  <a id="Pulumi_Kubernetes_Types_Inputs_Apps_V1Beta1_StatefulSetSpecArgs_ServiceName_" data-uid="Pulumi.Kubernetes.Types.Inputs.Apps.V1Beta1.StatefulSetSpecArgs.ServiceName*"></a>
+  <h4 id="Pulumi_Kubernetes_Types_Inputs_Apps_V1Beta1_StatefulSetSpecArgs_ServiceName" data-uid="Pulumi.Kubernetes.Types.Inputs.Apps.V1Beta1.StatefulSetSpecArgs.ServiceName">ServiceName</h4>
+  <div class="markdown level1 summary"><p>serviceName is the name of the service that governs this StatefulSet. This service must
+exist before the StatefulSet, and is responsible for the network identity of the set.
+Pods get DNS/hostnames that follow the pattern:
+pod-specific-string.serviceName.default.svc.cluster.local where &quot;pod-specific-string&quot; is
+managed by the StatefulSet controller.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; ServiceName { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Input.cs/#L5733">View Source</a>
+  </span>
+  <a id="Pulumi_Kubernetes_Types_Inputs_Apps_V1Beta1_StatefulSetSpecArgs_Template_" data-uid="Pulumi.Kubernetes.Types.Inputs.Apps.V1Beta1.StatefulSetSpecArgs.Template*"></a>
+  <h4 id="Pulumi_Kubernetes_Types_Inputs_Apps_V1Beta1_StatefulSetSpecArgs_Template" data-uid="Pulumi.Kubernetes.Types.Inputs.Apps.V1Beta1.StatefulSetSpecArgs.Template">Template</h4>
+  <div class="markdown level1 summary"><p>template is the object that describes the pod that will be created if insufficient
+replicas are detected. Each pod stamped out by the StatefulSet will fulfill this
+Template, but have a unique identity from the rest of the StatefulSet.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;PodTemplateSpecArgs&gt; Template { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Inputs.Core.V1.PodTemplateSpecArgs.html">PodTemplateSpecArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Input.cs/#L5776">View Source</a>
+  </span>
+  <a id="Pulumi_Kubernetes_Types_Inputs_Apps_V1Beta1_StatefulSetSpecArgs_UpdateStrategy_" data-uid="Pulumi.Kubernetes.Types.Inputs.Apps.V1Beta1.StatefulSetSpecArgs.UpdateStrategy*"></a>
+  <h4 id="Pulumi_Kubernetes_Types_Inputs_Apps_V1Beta1_StatefulSetSpecArgs_UpdateStrategy" data-uid="Pulumi.Kubernetes.Types.Inputs.Apps.V1Beta1.StatefulSetSpecArgs.UpdateStrategy">UpdateStrategy</h4>
+  <div class="markdown level1 summary"><p>updateStrategy indicates the StatefulSetUpdateStrategy that will be employed to update
+Pods in the StatefulSet when a revision is made to Template.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;StatefulSetUpdateStrategyArgs&gt; UpdateStrategy { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Inputs.Apps.V1Beta1.StatefulSetUpdateStrategyArgs.html">StatefulSetUpdateStrategyArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Input.cs/#L5789">View Source</a>
+  </span>
+  <a id="Pulumi_Kubernetes_Types_Inputs_Apps_V1Beta1_StatefulSetSpecArgs_VolumeClaimTemplates_" data-uid="Pulumi.Kubernetes.Types.Inputs.Apps.V1Beta1.StatefulSetSpecArgs.VolumeClaimTemplates*"></a>
+  <h4 id="Pulumi_Kubernetes_Types_Inputs_Apps_V1Beta1_StatefulSetSpecArgs_VolumeClaimTemplates" data-uid="Pulumi.Kubernetes.Types.Inputs.Apps.V1Beta1.StatefulSetSpecArgs.VolumeClaimTemplates">VolumeClaimTemplates</h4>
+  <div class="markdown level1 summary"><p>volumeClaimTemplates is a list of claims that pods are allowed to reference. The
+StatefulSet controller is responsible for mapping network identities to claims in a way
+that maintains the identity of a pod. Every claim in this list must have at least one
+matching (by name) volumeMount in one container in the template. A claim in this list
+takes precedence over any volumes in the template, with the same name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputList&lt;PersistentVolumeClaimArgs&gt; VolumeClaimTemplates { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.InputList-1.html">InputList</a>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Inputs.Core.V1.PersistentVolumeClaimArgs.html">PersistentVolumeClaimArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Input.cs/#L5716" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

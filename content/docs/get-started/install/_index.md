@@ -19,7 +19,7 @@ This page contains detailed instructions for [installing Pulumi](#install-pulumi
 
 {{< get-started-note >}}
 
-## Install Pulumi
+## Installing Pulumi
 
 {{< chooser os "macos,windows,linux" >}}
 
@@ -141,7 +141,7 @@ Alternatively, you can install Pulumi manually.
 
 {{< /chooser >}}
 
-## Verify your Installation
+## Verifying your Installation
 
 After installing Pulumi, verify everything is in working order by running the `pulumi` CLI:
 
@@ -167,7 +167,11 @@ or visit https://pulumi.com/docs/install/ for manual instructions and release no
 
 {{< skip-version-check >}}
 
-## Uninstall Pulumi
+## Upgrading Pulumi
+
+If you are upgrading to Pulumi 2.0, please see our [migration guide]({{< relref "migrating-2.0" >}}).
+
+## Uninstalling Pulumi
 
 To uninstall Pulumi, remove the `.pulumi` folder from your home directory. If you installed Pulumi manually, you should
 also remove the `pulumi` folder that was created.

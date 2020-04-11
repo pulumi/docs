@@ -25,18 +25,25 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><code class="docutils literal notranslate"><span class="pre">threshold</span></code> - (Required) Must be 0 or greater.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">time_function</span></code> - (Required) <code class="docutils literal notranslate"><span class="pre">all</span></code> or <code class="docutils literal notranslate"><span class="pre">any</span></code>.</p></li>
 </ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/plugins_alert_condition.html.markdown">https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/plugins_alert_condition.html.markdown</a>.</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>metric</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The metric field accepts parameters based on the <code class="docutils literal notranslate"><span class="pre">type</span></code> set.</p></li>
+<li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether or not this condition is enabled.</p></li>
+<li><p><strong>entities</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The plugin component IDs to target.</p></li>
+<li><p><strong>metric</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The plugin metric to evaluate.</p></li>
+<li><p><strong>metric_description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The metric description.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The title of the condition. Must be between 1 and 64 characters, inclusive.</p></li>
 <li><p><strong>plugin_guid</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The GUID of the plugin which produces the metric.</p></li>
 <li><p><strong>plugin_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the installed plugin instance which produces the metric.</p></li>
 <li><p><strong>policy_id</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The ID of the policy where this condition should be used.</p></li>
 <li><p><strong>runbook_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Runbook URL to display in notifications.</p></li>
 <li><p><strong>terms</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of terms for this condition. See Terms below for details.</p></li>
+<li><p><strong>value_function</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The value function to apply to the metric data.  One of <code class="docutils literal notranslate"><span class="pre">min</span></code>, <code class="docutils literal notranslate"><span class="pre">max</span></code>, <code class="docutils literal notranslate"><span class="pre">average</span></code>, <code class="docutils literal notranslate"><span class="pre">sample_size</span></code>, <code class="docutils literal notranslate"><span class="pre">total</span></code>, or <code class="docutils literal notranslate"><span class="pre">percent</span></code>.</p></li>
 </ul>
 </dd>
 </dl>
@@ -48,13 +55,28 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><code class="docutils literal notranslate"><span class="pre">threshold</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">timeFunction</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/plugins_alert_condition.html.markdown">https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/plugins_alert_condition.html.markdown</a>.</p>
-</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_newrelic.plugins.AlertCondition.enabled">
+<code class="sig-name descname">enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_newrelic.plugins.AlertCondition.enabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether or not this condition is enabled.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_newrelic.plugins.AlertCondition.entities">
+<code class="sig-name descname">entities</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_newrelic.plugins.AlertCondition.entities" title="Permalink to this definition">¶</a></dt>
+<dd><p>The plugin component IDs to target.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_newrelic.plugins.AlertCondition.metric">
 <code class="sig-name descname">metric</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_newrelic.plugins.AlertCondition.metric" title="Permalink to this definition">¶</a></dt>
-<dd><p>The metric field accepts parameters based on the <code class="docutils literal notranslate"><span class="pre">type</span></code> set.</p>
+<dd><p>The plugin metric to evaluate.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_newrelic.plugins.AlertCondition.metric_description">
+<code class="sig-name descname">metric_description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_newrelic.plugins.AlertCondition.metric_description" title="Permalink to this definition">¶</a></dt>
+<dd><p>The metric description.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -100,6 +122,12 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pulumi_newrelic.plugins.AlertCondition.value_function">
+<code class="sig-name descname">value_function</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_newrelic.plugins.AlertCondition.value_function" title="Permalink to this definition">¶</a></dt>
+<dd><p>The value function to apply to the metric data.  One of <code class="docutils literal notranslate"><span class="pre">min</span></code>, <code class="docutils literal notranslate"><span class="pre">max</span></code>, <code class="docutils literal notranslate"><span class="pre">average</span></code>, <code class="docutils literal notranslate"><span class="pre">sample_size</span></code>, <code class="docutils literal notranslate"><span class="pre">total</span></code>, or <code class="docutils literal notranslate"><span class="pre">percent</span></code>.</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_newrelic.plugins.AlertCondition.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">entities=None</em>, <em class="sig-param">metric=None</em>, <em class="sig-param">metric_description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">plugin_guid=None</em>, <em class="sig-param">plugin_id=None</em>, <em class="sig-param">policy_id=None</em>, <em class="sig-param">runbook_url=None</em>, <em class="sig-param">terms=None</em>, <em class="sig-param">value_function=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.plugins.AlertCondition.get" title="Permalink to this definition">¶</a></dt>
@@ -111,13 +139,17 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>metric</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The metric field accepts parameters based on the <code class="docutils literal notranslate"><span class="pre">type</span></code> set.</p></li>
+<li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether or not this condition is enabled.</p></li>
+<li><p><strong>entities</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The plugin component IDs to target.</p></li>
+<li><p><strong>metric</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The plugin metric to evaluate.</p></li>
+<li><p><strong>metric_description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The metric description.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The title of the condition. Must be between 1 and 64 characters, inclusive.</p></li>
 <li><p><strong>plugin_guid</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The GUID of the plugin which produces the metric.</p></li>
 <li><p><strong>plugin_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the installed plugin instance which produces the metric.</p></li>
 <li><p><strong>policy_id</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The ID of the policy where this condition should be used.</p></li>
 <li><p><strong>runbook_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Runbook URL to display in notifications.</p></li>
 <li><p><strong>terms</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of terms for this condition. See Terms below for details.</p></li>
+<li><p><strong>value_function</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The value function to apply to the metric data.  One of <code class="docutils literal notranslate"><span class="pre">min</span></code>, <code class="docutils literal notranslate"><span class="pre">max</span></code>, <code class="docutils literal notranslate"><span class="pre">average</span></code>, <code class="docutils literal notranslate"><span class="pre">sample_size</span></code>, <code class="docutils literal notranslate"><span class="pre">total</span></code>, or <code class="docutils literal notranslate"><span class="pre">percent</span></code>.</p></li>
 </ul>
 </dd>
 </dl>
@@ -129,9 +161,6 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">threshold</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">timeFunction</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/plugins_alert_condition.html.markdown">https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/r/plugins_alert_condition.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -221,9 +250,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><p><strong>guid</strong> (<em>str</em>) – The GUID of the plugin in New Relic.</p>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/d/plugin.html.markdown">https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/d/plugin.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -238,9 +264,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/d/plugin_component.html.markdown">https://github.com/terraform-providers/terraform-provider-newrelic/blob/master/website/docs/d/plugin_component.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>

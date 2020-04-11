@@ -1,0 +1,826 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Namespace Pulumi.VSphere
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Namespace Pulumi.VSphere
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.VSphere">
+  
+  <h1 id="Pulumi_VSphere" data-uid="Pulumi.VSphere" class="text-break">Namespace Pulumi.VSphere
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+    <h3 id="classes">Classes
+  </h3>
+      <h4><a class="xref" href="Pulumi.VSphere.ComputeCluster.html">ComputeCluster</a></h4>
+      <section><blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.VSphere.ComputeClusterArgs.html">ComputeClusterArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.ComputeClusterHostGroup.html">ComputeClusterHostGroup</a></h4>
+      <section><p>The <code>vsphere..ComputeClusterHostGroup</code> resource can be used to manage groups
+of hosts in a cluster, either created by the
+<a href="/docs/providers/vsphere/r/compute_cluster.html"><code>vsphere..ComputeCluster</code></a> resource or looked up
+by the <a href="/docs/providers/vsphere/d/compute_cluster.html"><code>vsphere..ComputeCluster</code></a> data source.</p>
+<p>This resource mainly serves as an input to the
+<a href="/docs/providers/vsphere/r/compute_cluster_vm_host_rule.html"><code>vsphere..ComputeClusterVmHostRule</code></a>
+resource - see the documentation for that resource for further details on how
+to use host groups.</p>
+<blockquote>
+<p><strong>NOTE:</strong> This resource requires vCenter and is not available on direct ESXi
+connections.</p>
+</blockquote>
+<blockquote>
+<p><strong>NOTE:</strong> vSphere DRS requires a vSphere Enterprise Plus license.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster_host_group.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster_host_group.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.VSphere.ComputeClusterHostGroupArgs.html">ComputeClusterHostGroupArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.ComputeClusterHostGroupState.html">ComputeClusterHostGroupState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.ComputeClusterState.html">ComputeClusterState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.ComputeClusterVmAffinityRule.html">ComputeClusterVmAffinityRule</a></h4>
+      <section><p>The <code>vsphere..ComputeClusterVmAffinityRule</code> resource can be used to manage
+VM affinity rules in a cluster, either created by the
+<a href="/docs/providers/vsphere/r/compute_cluster.html"><code>vsphere..ComputeCluster</code></a> resource or looked up
+by the <a href="/docs/providers/vsphere/d/compute_cluster.html"><code>vsphere..ComputeCluster</code></a> data source.</p>
+<p>This rule can be used to tell a set to virtual machines to run together on a
+single host within a cluster. When configured, DRS will make a best effort to
+ensure that the virtual machines run on the same host, or prevent any operation
+that would keep that from happening, depending on the value of the
+<code>mandatory</code> flag.</p>
+<blockquote>
+<p>Keep in mind that this rule can only be used to tell VMs to run together on
+a <em>non-specific</em> host - it can't be used to pin VMs to a host. For that, see
+the
+<a href="/docs/providers/vsphere/r/compute_cluster_vm_host_rule.html"><code>vsphere..ComputeClusterVmHostRule</code></a>
+resource.</p>
+</blockquote>
+<blockquote>
+<p><strong>NOTE:</strong> This resource requires vCenter and is not available on direct ESXi
+connections.</p>
+</blockquote>
+<blockquote>
+<p><strong>NOTE:</strong> vSphere DRS requires a vSphere Enterprise Plus license.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster_vm_affinity_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster_vm_affinity_rule.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.VSphere.ComputeClusterVmAffinityRuleArgs.html">ComputeClusterVmAffinityRuleArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.ComputeClusterVmAffinityRuleState.html">ComputeClusterVmAffinityRuleState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.ComputeClusterVmAntiAffinityRule.html">ComputeClusterVmAntiAffinityRule</a></h4>
+      <section><p>The <code>vsphere..ComputeClusterVmAntiAffinityRule</code> resource can be used to
+manage VM anti-affinity rules in a cluster, either created by the
+<a href="/docs/providers/vsphere/r/compute_cluster.html"><code>vsphere..ComputeCluster</code></a> resource or looked up
+by the <a href="/docs/providers/vsphere/d/compute_cluster.html"><code>vsphere..ComputeCluster</code></a> data source.</p>
+<p>This rule can be used to tell a set to virtual machines to run on different
+hosts within a cluster, useful for preventing single points of failure in
+application cluster scenarios. When configured, DRS will make a best effort to
+ensure that the virtual machines run on different hosts, or prevent any
+operation that would keep that from happening, depending on the value of the
+<code>mandatory</code> flag.</p>
+<blockquote>
+<p>Keep in mind that this rule can only be used to tell VMs to run separately
+on <em>non-specific</em> hosts - specific hosts cannot be specified with this rule.
+For that, see the
+<a href="/docs/providers/vsphere/r/compute_cluster_vm_host_rule.html"><code>vsphere..ComputeClusterVmHostRule</code></a>
+resource.</p>
+</blockquote>
+<blockquote>
+<p><strong>NOTE:</strong> This resource requires vCenter and is not available on direct ESXi
+connections.</p>
+</blockquote>
+<blockquote>
+<p><strong>NOTE:</strong> vSphere DRS requires a vSphere Enterprise Plus license.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster_vm_anti_affinity_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster_vm_anti_affinity_rule.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.VSphere.ComputeClusterVmAntiAffinityRuleArgs.html">ComputeClusterVmAntiAffinityRuleArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.ComputeClusterVmAntiAffinityRuleState.html">ComputeClusterVmAntiAffinityRuleState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.ComputeClusterVmDependencyRule.html">ComputeClusterVmDependencyRule</a></h4>
+      <section><p>The <code>vsphere..ComputeClusterVmDependencyRule</code> resource can be used to manage
+VM dependency rules in a cluster, either created by the
+<a href="/docs/providers/vsphere/r/compute_cluster.html"><code>vsphere..ComputeCluster</code></a> resource or looked up
+by the <a href="/docs/providers/vsphere/d/compute_cluster.html"><code>vsphere..ComputeCluster</code></a> data source.</p>
+<p>A virtual machine dependency rule applies to vSphere HA, and allows
+user-defined startup orders for virtual machines in the case of host failure.
+Virtual machines are supplied via groups, which can be managed via the
+<a href="/docs/providers/vsphere/r/compute_cluster_vm_group.html"><code>vsphere..ComputeClusterVmGroup</code></a>
+resource.</p>
+<blockquote>
+<p><strong>NOTE:</strong> This resource requires vCenter and is not available on direct ESXi
+connections.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster_vm_dependency_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster_vm_dependency_rule.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.VSphere.ComputeClusterVmDependencyRuleArgs.html">ComputeClusterVmDependencyRuleArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.ComputeClusterVmDependencyRuleState.html">ComputeClusterVmDependencyRuleState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.ComputeClusterVmGroup.html">ComputeClusterVmGroup</a></h4>
+      <section><p>The <code>vsphere..ComputeClusterVmGroup</code> resource can be used to manage groups of
+virtual machines in a cluster, either created by the
+<a href="/docs/providers/vsphere/r/compute_cluster.html"><code>vsphere..ComputeCluster</code></a> resource or looked up
+by the <a href="/docs/providers/vsphere/d/compute_cluster.html"><code>vsphere..ComputeCluster</code></a> data source.</p>
+<p>This resource mainly serves as an input to the
+<a href="/docs/providers/vsphere/r/compute_cluster_vm_dependency_rule.html"><code>vsphere..ComputeClusterVmDependencyRule</code></a>
+and
+<a href="/docs/providers/vsphere/r/compute_cluster_vm_host_rule.html"><code>vsphere..ComputeClusterVmHostRule</code></a>
+resources. See the individual resource documentation pages for more information.</p>
+<blockquote>
+<p><strong>NOTE:</strong> This resource requires vCenter and is not available on direct ESXi
+connections.</p>
+</blockquote>
+<blockquote>
+<p><strong>NOTE:</strong> vSphere DRS requires a vSphere Enterprise Plus license.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster_vm_group.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster_vm_group.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.VSphere.ComputeClusterVmGroupArgs.html">ComputeClusterVmGroupArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.ComputeClusterVmGroupState.html">ComputeClusterVmGroupState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.ComputeClusterVmHostRule.html">ComputeClusterVmHostRule</a></h4>
+      <section><p>The <code>vsphere..ComputeClusterVmHostRule</code> resource can be used to manage
+VM-to-host rules in a cluster, either created by the
+<a href="/docs/providers/vsphere/r/compute_cluster.html"><code>vsphere..ComputeCluster</code></a> resource or looked up
+by the <a href="/docs/providers/vsphere/d/compute_cluster.html"><code>vsphere..ComputeCluster</code></a> data source.</p>
+<p>This resource can create both <em>affinity rules</em>, where virtual machines run on
+specified hosts, or <em>anti-affinity</em> rules, where virtual machines run on hosts
+outside of the ones specified in the rule. Virtual machines and hosts are
+supplied via groups, which can be managed via the
+<a href="/docs/providers/vsphere/r/compute_cluster_vm_group.html"><code>vsphere..ComputeClusterVmGroup</code></a> and
+<a href="/docs/providers/vsphere/r/compute_cluster_host_group.html"><code>vsphere..ComputeClusterHostGroup</code></a>
+resources.</p>
+<blockquote>
+<p><strong>NOTE:</strong> This resource requires vCenter and is not available on direct ESXi
+connections.</p>
+</blockquote>
+<blockquote>
+<p><strong>NOTE:</strong> vSphere DRS requires a vSphere Enterprise Plus license.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster_vm_host_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/compute_cluster_vm_host_rule.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.VSphere.ComputeClusterVmHostRuleArgs.html">ComputeClusterVmHostRuleArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.ComputeClusterVmHostRuleState.html">ComputeClusterVmHostRuleState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.Config.html">Config</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.CustomAttribute.html">CustomAttribute</a></h4>
+      <section><p>The <code>vsphere..CustomAttribute</code> resource can be used to create and manage custom
+attributes, which allow users to associate user-specific meta-information with
+vSphere managed objects. Custom attribute values must be strings and are stored
+on the vCenter Server and not the managed object.</p>
+<p>For more information about custom attributes, click <a href="https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.vcenterhost.doc/GUID-73606C4C-763C-4E27-A1DA-032E4C46219D.html">here</a>.</p>
+<blockquote>
+<p><strong>NOTE:</strong> Custom attributes are unsupported on direct ESXi connections
+and require vCenter.</p>
+</blockquote>
+<h2 id="managed-object-types">Managed Object Types</h2>
+<p>The following table will help you determine what value you need to enter for
+the managed object type you want the attribute to apply to.</p>
+<p>Note that if you want a attribute to apply to all objects, leave the type
+unspecified.</p>
+<p>&lt;table&gt;
+&lt;tr&gt;&lt;th&gt;Type&lt;/th&gt;&lt;th&gt;Value&lt;/th&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Folders&lt;/td&gt;&lt;td&gt;<code>Folder</code>&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Clusters&lt;/td&gt;&lt;td&gt;<code>ClusterComputeResource</code>&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Datacenters&lt;/td&gt;&lt;td&gt;<code>Datacenter</code>&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Datastores&lt;/td&gt;&lt;td&gt;<code>Datastore</code>&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Datastore Clusters&lt;/td&gt;&lt;td&gt;<code>StoragePod</code>&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;DVS Portgroups&lt;/td&gt;&lt;td&gt;<code>DistributedVirtualPortgroup</code>&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Distributed vSwitches&lt;/td&gt;&lt;td&gt;<code>DistributedVirtualSwitch</code>&lt;br&gt;<code>VmwareDistributedVirtualSwitch</code>&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Hosts&lt;/td&gt;&lt;td&gt;<code>HostSystem</code>&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Content Libraries&lt;/td&gt;&lt;td&gt;<code>com.vmware.content.Library</code>&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Content Library Items&lt;/td&gt;&lt;td&gt;<code>com.vmware.content.library.Item</code>&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Networks&lt;/td&gt;&lt;td&gt;<code>HostNetwork</code>&lt;br&gt;<code>Network</code>&lt;br&gt;<code>OpaqueNetwork</code>&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Resource Pools&lt;/td&gt;&lt;td&gt;<code>ResourcePool</code>&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;vApps&lt;/td&gt;&lt;td&gt;<code>VirtualApp</code>&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Virtual Machines&lt;/td&gt;&lt;td&gt;<code>VirtualMachine</code>&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/custom_attribute.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/custom_attribute.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.VSphere.CustomAttributeArgs.html">CustomAttributeArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.CustomAttributeState.html">CustomAttributeState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.Datacenter.html">Datacenter</a></h4>
+      <section><p>Provides a VMware vSphere datacenter resource. This can be used as the primary
+container of inventory objects such as hosts and virtual machines.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/datacenter.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/datacenter.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.VSphere.DatacenterArgs.html">DatacenterArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.DatacenterState.html">DatacenterState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.DatastoreCluster.html">DatastoreCluster</a></h4>
+      <section><p>The <code>vsphere..DatastoreCluster</code> resource can be used to create and manage
+datastore clusters. This can be used to create groups of datastores with a
+shared management interface, allowing for resource control and load balancing
+through Storage DRS.</p>
+<p>For more information on vSphere datastore clusters and Storage DRS, see <a href="https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.resmgmt.doc/GUID-598DF695-107E-406B-9C95-0AF961FC227A.html">this
+page</a>.</p>
+<blockquote>
+<p><strong>NOTE:</strong> This resource requires vCenter and is not available on direct ESXi
+connections.</p>
+</blockquote>
+<blockquote>
+<p><strong>NOTE:</strong> Storage DRS requires a vSphere Enterprise Plus license.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/datastore_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/datastore_cluster.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.VSphere.DatastoreClusterArgs.html">DatastoreClusterArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.DatastoreClusterState.html">DatastoreClusterState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.DatastoreClusterVmAntiAffinityRule.html">DatastoreClusterVmAntiAffinityRule</a></h4>
+      <section><p>The <code>vsphere..DatastoreClusterVmAntiAffinityRule</code> resource can be used to
+manage VM anti-affinity rules in a datastore cluster, either created by the
+<a href="/docs/providers/vsphere/r/datastore_cluster.html"><code>vsphere..DatastoreCluster</code></a> resource or looked up
+by the <a href="/docs/providers/vsphere/d/datastore_cluster.html"><code>vsphere..DatastoreCluster</code></a> data source.</p>
+<p>This rule can be used to tell a set to virtual machines to run on different
+datastores within a cluster, useful for preventing single points of failure in
+application cluster scenarios. When configured, Storage DRS will make a best effort to
+ensure that the virtual machines run on different datastores, or prevent any
+operation that would keep that from happening, depending on the value of the
+<code>mandatory</code> flag.</p>
+<blockquote>
+<p><strong>NOTE:</strong> This resource requires vCenter and is not available on direct ESXi
+connections.</p>
+</blockquote>
+<blockquote>
+<p><strong>NOTE:</strong> Storage DRS requires a vSphere Enterprise Plus license.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/datastore_cluster_vm_anti_affinity_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/datastore_cluster_vm_anti_affinity_rule.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.VSphere.DatastoreClusterVmAntiAffinityRuleArgs.html">DatastoreClusterVmAntiAffinityRuleArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.DatastoreClusterVmAntiAffinityRuleState.html">DatastoreClusterVmAntiAffinityRuleState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.DistributedPortGroup.html">DistributedPortGroup</a></h4>
+      <section><p>The <code>vsphere..DistributedPortGroup</code> resource can be used to manage vSphere
+distributed virtual port groups. These port groups are connected to distributed
+virtual switches, which can be managed by the
+<a href="/docs/providers/vsphere/r/distributed_virtual_switch.html"><code>vsphere..DistributedVirtualSwitch</code></a> resource.</p>
+<p>Distributed port groups can be used as networks for virtual machines, allowing
+VMs to use the networking supplied by a distributed virtual switch (DVS), with
+a set of policies that apply to that individual newtork, if desired.</p>
+<p>For an overview on vSphere networking concepts, see <a href="https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.networking.doc/GUID-2B11DBB8-CB3C-4AFF-8885-EFEA0FC562F4.html">this
+page</a>. For more information on vSphere DVS
+portgroups, see <a href="https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.networking.doc/GUID-69933F6E-2442-46CF-AA17-1196CB9A0A09.html">this page</a>.</p>
+<blockquote>
+<p><strong>NOTE:</strong> This resource requires vCenter and is not available on direct ESXi
+connections.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/distributed_port_group.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/distributed_port_group.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.VSphere.DistributedPortGroupArgs.html">DistributedPortGroupArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.DistributedPortGroupState.html">DistributedPortGroupState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.DistributedVirtualSwitch.html">DistributedVirtualSwitch</a></h4>
+      <section><p>The <code>vsphere..DistributedVirtualSwitch</code> resource can be used to manage VMware
+Distributed Virtual Switches.</p>
+<p>An essential component of a distributed, scalable VMware datacenter, the
+vSphere Distributed Virtual Switch (DVS) provides centralized management and
+monitoring of the networking configuration of all the hosts that are associated
+with the switch. In addition to adding port groups (see the
+<a href="/docs/providers/vsphere/r/distributed_port_group.html"><code>vsphere..DistributedPortGroup</code></a> resource) that can
+be used as networks for virtual machines, a DVS can be configured to perform
+advanced high availability, traffic shaping, network monitoring, and more.</p>
+<p>For an overview on vSphere networking concepts, see <a href="https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.networking.doc/GUID-2B11DBB8-CB3C-4AFF-8885-EFEA0FC562F4.html">this
+page</a>. For more information on vSphere DVS, see <a href="https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.networking.doc/GUID-375B45C7-684C-4C51-BA3C-70E48DFABF04.html">this
+page</a>.</p>
+<blockquote>
+<p><strong>NOTE:</strong> This resource requires vCenter and is not available on direct ESXi
+connections.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/distributed_virtual_switch.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/distributed_virtual_switch.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.VSphere.DistributedVirtualSwitchArgs.html">DistributedVirtualSwitchArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.DistributedVirtualSwitchState.html">DistributedVirtualSwitchState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.DpmHostOverride.html">DpmHostOverride</a></h4>
+      <section><p>The <code>vsphere..DpmHostOverride</code> resource can be used to add a DPM override to a
+cluster for a particular host. This allows you to control the power management
+settings for individual hosts in the cluster while leaving any unspecified ones
+at the default power management settings.</p>
+<p>For more information on DPM within vSphere clusters, see <a href="https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.resmgmt.doc/GUID-5E5E349A-4644-4C9C-B434-1C0243EBDC80.html">this
+page</a>.</p>
+<blockquote>
+<p><strong>NOTE:</strong> This resource requires vCenter and is not available on direct ESXi
+connections.</p>
+</blockquote>
+<blockquote>
+<p><strong>NOTE:</strong> vSphere DRS requires a vSphere Enterprise Plus license.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/dpm_host_override.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/dpm_host_override.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.VSphere.DpmHostOverrideArgs.html">DpmHostOverrideArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.DpmHostOverrideState.html">DpmHostOverrideState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.DrsVmOverride.html">DrsVmOverride</a></h4>
+      <section><p>The <code>vsphere..DrsVmOverride</code> resource can be used to add a DRS override to a
+cluster for a specific virtual machine. With this resource, one can enable or
+disable DRS and control the automation level for a single virtual machine
+without affecting the rest of the cluster.</p>
+<p>For more information on vSphere clusters and DRS, see <a href="https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.resmgmt.doc/GUID-8ACF3502-5314-469F-8CC9-4A9BD5925BC2.html">this
+page</a>.</p>
+<blockquote>
+<p><strong>NOTE:</strong> This resource requires vCenter and is not available on direct ESXi
+connections.</p>
+</blockquote>
+<blockquote>
+<p><strong>NOTE:</strong> vSphere DRS requires a vSphere Enterprise Plus license.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/drs_vm_override.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/drs_vm_override.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.VSphere.DrsVmOverrideArgs.html">DrsVmOverrideArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.DrsVmOverrideState.html">DrsVmOverrideState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.File.html">File</a></h4>
+      <section><blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/file.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/file.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.VSphere.FileArgs.html">FileArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.FileState.html">FileState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.Folder.html">Folder</a></h4>
+      <section><p>The <code>vsphere..Folder</code> resource can be used to manage vSphere inventory folders.
+The resource supports creating folders of the 5 major types - datacenter
+folders, host and cluster folders, virtual machine folders, datastore folders,
+and network folders.</p>
+<p>Paths are always relative to the specific type of folder you are creating.
+Subfolders are discovered by parsing the relative path specified in <code>path</code>, so
+<code>foo/bar</code> will create a folder named <code>bar</code> in the parent folder <code>foo</code>, as long
+as that folder exists.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/folder.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/folder.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.VSphere.FolderArgs.html">FolderArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.FolderState.html">FolderState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.GetComputeClusterArgs.html">GetComputeClusterArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.GetComputeClusterResult.html">GetComputeClusterResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.GetCustomAttributeArgs.html">GetCustomAttributeArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.GetCustomAttributeResult.html">GetCustomAttributeResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.GetDatacenterArgs.html">GetDatacenterArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.GetDatacenterResult.html">GetDatacenterResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.GetDatastoreArgs.html">GetDatastoreArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.GetDatastoreClusterArgs.html">GetDatastoreClusterArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.GetDatastoreClusterResult.html">GetDatastoreClusterResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.GetDatastoreResult.html">GetDatastoreResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.GetDistributedVirtualSwitchArgs.html">GetDistributedVirtualSwitchArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.GetDistributedVirtualSwitchResult.html">GetDistributedVirtualSwitchResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.GetFolderArgs.html">GetFolderArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.GetFolderResult.html">GetFolderResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.GetHostArgs.html">GetHostArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.GetHostResult.html">GetHostResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.GetNetworkArgs.html">GetNetworkArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.GetNetworkResult.html">GetNetworkResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.GetPolicyArgs.html">GetPolicyArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.GetPolicyResult.html">GetPolicyResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.GetResourcePoolArgs.html">GetResourcePoolArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.GetResourcePoolResult.html">GetResourcePoolResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.GetTagArgs.html">GetTagArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.GetTagCategoryArgs.html">GetTagCategoryArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.GetTagCategoryResult.html">GetTagCategoryResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.GetTagResult.html">GetTagResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.GetVappContainerArgs.html">GetVappContainerArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.GetVappContainerResult.html">GetVappContainerResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.GetVirtualMachineArgs.html">GetVirtualMachineArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.GetVirtualMachineResult.html">GetVirtualMachineResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.GetVmfsDisksArgs.html">GetVmfsDisksArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.GetVmfsDisksResult.html">GetVmfsDisksResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.HaVmOverride.html">HaVmOverride</a></h4>
+      <section><p>The <code>vsphere..HaVmOverride</code> resource can be used to add an override for
+vSphere HA settings on a cluster for a specific virtual machine. With this
+resource, one can control specific HA settings so that they are different than
+the cluster default, accommodating the needs of that specific virtual machine,
+while not affecting the rest of the cluster.</p>
+<p>For more information on vSphere HA, see <a href="https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.avail.doc/GUID-5432CA24-14F1-44E3-87FB-61D937831CF6.html">this page</a>.</p>
+<blockquote>
+<p><strong>NOTE:</strong> This resource requires vCenter and is not available on direct ESXi
+connections.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/ha_vm_override.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/ha_vm_override.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.VSphere.HaVmOverrideArgs.html">HaVmOverrideArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.HaVmOverrideState.html">HaVmOverrideState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.Host.html">Host</a></h4>
+      <section><p>Provides a VMware vSphere host resource. This represents an ESXi host that
+can be used either as part of a Compute Cluster or Standalone.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/host.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/host.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.VSphere.HostArgs.html">HostArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.HostPortGroup.html">HostPortGroup</a></h4>
+      <section><p>The <code>vsphere..HostPortGroup</code> resource can be used to manage vSphere standard
+port groups on an ESXi host. These port groups are connected to standard
+virtual switches, which can be managed by the
+<a href="/docs/providers/vsphere/r/host_virtual_switch.html"><code>vsphere..HostVirtualSwitch</code></a> resource.</p>
+<p>For an overview on vSphere networking concepts, see <a href="https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.networking.doc/GUID-2B11DBB8-CB3C-4AFF-8885-EFEA0FC562F4.html">this page</a>.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/host_port_group.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/host_port_group.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.VSphere.HostPortGroupArgs.html">HostPortGroupArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.HostPortGroupState.html">HostPortGroupState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.HostState.html">HostState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.HostVirtualSwitch.html">HostVirtualSwitch</a></h4>
+      <section><p>The <code>vsphere..HostVirtualSwitch</code> resource can be used to manage vSphere
+standard switches on an ESXi host. These switches can be used as a backing for
+standard port groups, which can be managed by the
+<a href="/docs/providers/vsphere/r/host_port_group.html"><code>vsphere..HostPortGroup</code></a> resource.</p>
+<p>For an overview on vSphere networking concepts, see <a href="https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.networking.doc/GUID-2B11DBB8-CB3C-4AFF-8885-EFEA0FC562F4.html">this
+page</a>.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/host_virtual_switch.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/host_virtual_switch.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.VSphere.HostVirtualSwitchArgs.html">HostVirtualSwitchArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.HostVirtualSwitchState.html">HostVirtualSwitchState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.Invokes.html">Invokes</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.License.html">License</a></h4>
+      <section><p>Provides a VMware vSphere license resource. This can be used to add and remove license keys.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/license.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/license.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.VSphere.LicenseArgs.html">LicenseArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.LicenseState.html">LicenseState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.NasDatastore.html">NasDatastore</a></h4>
+      <section><p>The <code>vsphere..NasDatastore</code> resource can be used to create and manage NAS
+datastores on an ESXi host or a set of hosts. The resource supports mounting
+NFS v3 and v4.1 shares to be used as datastores.</p>
+<blockquote>
+<p><strong>NOTE:</strong> Unlike <a href="/docs/providers/vsphere/r/vmfs_datastore.html"><code>vsphere..VmfsDatastore</code></a>, a NAS
+datastore is only mounted on the hosts you choose to mount it on. To mount on
+multiple hosts, you must specify each host that you want to add in the
+<code>host_system_ids</code> argument.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/nas_datastore.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/nas_datastore.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.VSphere.NasDatastoreArgs.html">NasDatastoreArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.NasDatastoreState.html">NasDatastoreState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.Provider.html">Provider</a></h4>
+      <section><p>The provider type for the vsphere package. By default, resources use package-wide configuration
+settings, however an explicit <code>Provider</code> instance may be created and passed during resource
+construction to achieve fine-grained programmatic control over provider settings. See the
+<a href="https://www.pulumi.com/docs/reference/programming-model/#providers">documentation</a> for more information.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/index.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/index.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.VSphere.ProviderArgs.html">ProviderArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.ResourcePool.html">ResourcePool</a></h4>
+      <section><p>The <code>vsphere..ResourcePool</code> resource can be used to create and manage
+resource pools in standalone hosts or on compute clusters.</p>
+<p>For more information on vSphere resource pools, see <a href="https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.resmgmt.doc/GUID-60077B40-66FF-4625-934A-641703ED7601.html">this
+page</a>.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/resource_pool.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/resource_pool.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.VSphere.ResourcePoolArgs.html">ResourcePoolArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.ResourcePoolState.html">ResourcePoolState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.StorageDrsVmOverride.html">StorageDrsVmOverride</a></h4>
+      <section><p>The <code>vsphere..StorageDrsVmOverride</code> resource can be used to add a Storage DRS
+override to a datastore cluster for a specific virtual machine. With this
+resource, one can enable or disable Storage DRS, and control the automation
+level and disk affinity for a single virtual machine without affecting the rest
+of the datastore cluster.</p>
+<p>For more information on vSphere datastore clusters and Storage DRS, see <a href="https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.resmgmt.doc/GUID-598DF695-107E-406B-9C95-0AF961FC227A.html">this
+page</a>.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/storage_drs_vm_override.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/storage_drs_vm_override.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.VSphere.StorageDrsVmOverrideArgs.html">StorageDrsVmOverrideArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.StorageDrsVmOverrideState.html">StorageDrsVmOverrideState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.Tag.html">Tag</a></h4>
+      <section><p>The <code>vsphere..Tag</code> resource can be used to create and manage tags, which allow
+you to attach metadata to objects in the vSphere inventory to make these
+objects more sortable and searchable.</p>
+<p>For more information about tags, click <a href="https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.vcenterhost.doc/GUID-E8E854DD-AA97-4E0C-8419-CE84F93C4058.html">here</a>.</p>
+<blockquote>
+<p><strong>NOTE:</strong> Tagging support is unsupported on direct ESXi connections and
+requires vCenter 6.0 or higher.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/tag.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/tag.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.VSphere.TagArgs.html">TagArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.TagCategory.html">TagCategory</a></h4>
+      <section><p>The <code>vsphere..TagCategory</code> resource can be used to create and manage tag
+categories, which determine how tags are grouped together and applied to
+specific objects.</p>
+<p>For more information about tags, click <a href="https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.vcenterhost.doc/GUID-E8E854DD-AA97-4E0C-8419-CE84F93C4058.html">here</a>. For more
+information about tag categories specifically, click
+<a href="https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.vcenterhost.doc/GUID-BA3D1794-28F2-43F3-BCE9-3964CB207FB6.html">here</a>.</p>
+<blockquote>
+<p><strong>NOTE:</strong> Tagging support is unsupported on direct ESXi connections and
+requires vCenter 6.0 or higher.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/tag_category.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/tag_category.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.VSphere.TagCategoryArgs.html">TagCategoryArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.TagCategoryState.html">TagCategoryState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.TagState.html">TagState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.VappContainer.html">VappContainer</a></h4>
+      <section><p>The <code>vsphere..VappContainer</code> resource can be used to create and manage
+vApps.</p>
+<p>For more information on vSphere vApps, see <a href="https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.vm_admin.doc/GUID-2A95EBB8-1779-40FA-B4FB-4D0845750879.html">this
+page</a>.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/vapp_container.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/vapp_container.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.VSphere.VappContainerArgs.html">VappContainerArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.VappContainerState.html">VappContainerState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.VappEntity.html">VappEntity</a></h4>
+      <section><p>The <code>vsphere..VappEntity</code> resource can be used to describe the behavior of an
+entity (virtual machine or sub-vApp container) in a vApp container.</p>
+<p>For more information on vSphere vApps, see <a href="https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.vm_admin.doc/GUID-2A95EBB8-1779-40FA-B4FB-4D0845750879.html">this
+page</a>.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/vapp_entity.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/vapp_entity.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.VSphere.VappEntityArgs.html">VappEntityArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.VappEntityState.html">VappEntityState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.VirtualDisk.html">VirtualDisk</a></h4>
+      <section><p>The <code>vsphere..VirtualDisk</code> resource can be used to create virtual disks outside
+of any given <a href="/docs/providers/vsphere/r/virtual_machine.html"><code>vsphere..VirtualMachine</code></a>
+resource. These disks can be attached to a virtual machine by creating a disk
+block with the <a href="/docs/providers/vsphere/r/virtual_machine.html#attach"><code>attach</code></a> parameter.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/virtual_disk.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/virtual_disk.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.VSphere.VirtualDiskArgs.html">VirtualDiskArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.VirtualDiskState.html">VirtualDiskState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.VirtualMachine.html">VirtualMachine</a></h4>
+      <section><blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/virtual_machine.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/virtual_machine.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.VSphere.VirtualMachineArgs.html">VirtualMachineArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.VirtualMachineSnapshot.html">VirtualMachineSnapshot</a></h4>
+      <section><p>The <code>vsphere..VirtualMachineSnapshot</code> resource can be used to manage snapshots
+for a virtual machine.</p>
+<p>For more information on managing snapshots and how they work in VMware, see
+<a href="https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.vm_admin.doc/GUID-CA948C69-7F58-4519-AEB1-739545EA94E5.html">here</a>.</p>
+<blockquote>
+<p><strong>NOTE:</strong> A snapshot in VMware differs from traditional disk snapshots, and
+can contain the actual running state of the virtual machine, data for all disks
+that have not been set to be independent from the snapshot (including ones that
+have been attached via the <a href="/docs/providers/vsphere/r/virtual_machine.html#attach">attach</a>
+parameter to the <code>vsphere..VirtualMachine</code> <code>disk</code> block), and even the
+configuration of the virtual machine at the time of the snapshot. Virtual
+machine, disk activity, and configuration changes post-snapshot are not
+included in the original state. Use this resource with care! Neither VMware nor
+HashiCorp recommends retaining snapshots for a extended period of time and does
+NOT recommend using them as as backup feature. For more information on the
+limitation of virtual machine snapshots, see <a href="https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.vm_admin.doc/GUID-53F65726-A23B-4CF0-A7D5-48E584B88613.html">here</a>.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/virtual_machine_snapshot.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/virtual_machine_snapshot.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.VSphere.VirtualMachineSnapshotArgs.html">VirtualMachineSnapshotArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.VirtualMachineSnapshotState.html">VirtualMachineSnapshotState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.VirtualMachineState.html">VirtualMachineState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.VmfsDatastore.html">VmfsDatastore</a></h4>
+      <section><blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/vmfs_datastore.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/vmfs_datastore.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.VSphere.VmfsDatastoreArgs.html">VmfsDatastoreArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.VmfsDatastoreState.html">VmfsDatastoreState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.Vnic.html">Vnic</a></h4>
+      <section><p>Provides a VMware vSphere vnic resource.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/vnic.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/vnic.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.VSphere.VnicArgs.html">VnicArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.VSphere.VnicState.html">VnicState</a></h4>
+      <section></section>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

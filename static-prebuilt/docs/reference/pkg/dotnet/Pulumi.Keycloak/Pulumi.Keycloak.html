@@ -1,0 +1,391 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Namespace Pulumi.Keycloak
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Namespace Pulumi.Keycloak
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Keycloak">
+  
+  <h1 id="Pulumi_Keycloak" data-uid="Pulumi.Keycloak" class="text-break">Namespace Pulumi.Keycloak
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+    <h3 id="classes">Classes
+  </h3>
+      <h4><a class="xref" href="Pulumi.Keycloak.AttributeImporterIdentityProviderMapper.html">AttributeImporterIdentityProviderMapper</a></h4>
+      <section><h2 id="-keycloakattributeimporteridentityprovidermapper"># keycloak..AttributeImporterIdentityProviderMapper</h2>
+<p>Allows to create and manage identity provider mappers within Keycloak.</p>
+<h3 id="argument-reference">Argument Reference</h3>
+<p>The following arguments are supported:</p>
+<ul>
+<li><code>realm</code> - (Required) The name of the realm.</li>
+<li><code>name</code> - (Required) The name of the mapper.</li>
+<li><code>identity_provider_alias</code> - (Required) The alias of the associated identity provider.</li>
+<li><code>user_attribute</code> - (Required) The user attribute name to store SAML attribute.</li>
+<li><code>attribute_name</code> - (Optional) The Name of attribute to search for in assertion. You can leave this blank and specify a friendly name instead.</li>
+<li><code>attribute_friendly_name</code> - (Optional) The friendly name of attribute to search for in assertion.  You can leave this blank and specify an attribute name instead.</li>
+<li><code>claim_name</code> - (Optional) The claim name.</li>
+</ul>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/attribute_importer_identity_provider_mapper.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/attribute_importer_identity_provider_mapper.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Keycloak.AttributeImporterIdentityProviderMapperArgs.html">AttributeImporterIdentityProviderMapperArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Keycloak.AttributeImporterIdentityProviderMapperState.html">AttributeImporterIdentityProviderMapperState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Keycloak.AttributeToRoleIdentityMapper.html">AttributeToRoleIdentityMapper</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Keycloak.AttributeToRoleIdentityMapperArgs.html">AttributeToRoleIdentityMapperArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Keycloak.AttributeToRoleIdentityMapperState.html">AttributeToRoleIdentityMapperState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Keycloak.Config.html">Config</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Keycloak.CustomUserFederation.html">CustomUserFederation</a></h4>
+      <section><blockquote>
+<p>This content is derived from <a href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/custom_user_federation.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/custom_user_federation.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Keycloak.CustomUserFederationArgs.html">CustomUserFederationArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Keycloak.CustomUserFederationState.html">CustomUserFederationState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Keycloak.DefaultGroups.html">DefaultGroups</a></h4>
+      <section><h2 id="-keycloakdefaultgroups"># keycloak..DefaultGroups</h2>
+<p>Allows for managing a realm's default groups.</p>
+<p>Note that you should not use <code>keycloak..DefaultGroups</code> with a group with memberships managed
+by <code>keycloak..GroupMemberships</code>.</p>
+<h3 id="argument-reference">Argument Reference</h3>
+<p>The following arguments are supported:</p>
+<ul>
+<li><code>realm_id</code> - (Required) The realm this group exists in.</li>
+<li><code>group_ids</code> - (Required) A set of group ids that should be default groups on the realm referenced by <code>realm_id</code>.</li>
+</ul>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/default_groups.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/default_groups.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Keycloak.DefaultGroupsArgs.html">DefaultGroupsArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Keycloak.DefaultGroupsState.html">DefaultGroupsState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Keycloak.GenericClientProtocolMapper.html">GenericClientProtocolMapper</a></h4>
+      <section><h2 id="-keycloakgenericclientprotocolmapper"># keycloak..GenericClientProtocolMapper</h2>
+<p>Allows for creating and managing protocol mapper for both types of clients (openid-connect and saml) within Keycloak.</p>
+<p>There are two uses cases for using this resource:</p>
+<ul>
+<li>If you implemented a custom protocol mapper, this resource can be used to configure it</li>
+<li>If the provider doesn't support a particular protocol mapper, this resource can be used instead.</li>
+</ul>
+<p>Due to the generic nature of this mapper, it is less user-friendly and more prone to configuration errors.
+Therefore, if possible, a specific mapper should be used.</p>
+<h3 id="argument-reference">Argument Reference</h3>
+<p>The following arguments are supported:</p>
+<ul>
+<li><code>realm_id</code> - (Required) The realm this protocol mapper exists within.</li>
+<li><code>client_id</code> - (Required) The client this protocol mapper is attached to.</li>
+<li><code>name</code> - (Required) The display name of this protocol mapper in the GUI.</li>
+<li><code>protocol</code> - (Required) The type of client (either <code>openid-connect</code> or <code>saml</code>). The type must match the type of the client.</li>
+<li><code>protocol_mapper</code> - (Required) The name of the protocol mapper. The protocol mapper must be
+compatible with the specified client.</li>
+<li><code>config</code> - (Required) A map with key / value pairs for configuring the protocol mapper. The supported keys depends on the protocol mapper.</li>
+</ul>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/generic_client_protocol_mapper.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/generic_client_protocol_mapper.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Keycloak.GenericClientProtocolMapperArgs.html">GenericClientProtocolMapperArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Keycloak.GenericClientProtocolMapperState.html">GenericClientProtocolMapperState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Keycloak.GenericClientRoleMapper.html">GenericClientRoleMapper</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Keycloak.GenericClientRoleMapperArgs.html">GenericClientRoleMapperArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Keycloak.GenericClientRoleMapperState.html">GenericClientRoleMapperState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Keycloak.GetGroupArgs.html">GetGroupArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Keycloak.GetGroupResult.html">GetGroupResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Keycloak.GetRealmArgs.html">GetRealmArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Keycloak.GetRealmKeysArgs.html">GetRealmKeysArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Keycloak.GetRealmKeysResult.html">GetRealmKeysResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Keycloak.GetRealmResult.html">GetRealmResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Keycloak.GetRoleArgs.html">GetRoleArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Keycloak.GetRoleResult.html">GetRoleResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Keycloak.Group.html">Group</a></h4>
+      <section><h2 id="-keycloakgroup"># keycloak..Group</h2>
+<p>Allows for creating and managing Groups within Keycloak.</p>
+<p>Groups provide a logical wrapping for users within Keycloak. Users within a
+group can share attributes and roles, and group membership can be mapped
+to a claim.</p>
+<p>Attributes can also be defined on Groups.</p>
+<p>Groups can also be federated from external data sources, such as LDAP or Active Directory.
+This resource <strong>should not</strong> be used to manage groups that were created this way.</p>
+<h3 id="argument-reference">Argument Reference</h3>
+<p>The following arguments are supported:</p>
+<ul>
+<li><code>realm_id</code> - (Required) The realm this group exists in.</li>
+<li><code>parent_id</code> - (Optional) The ID of this group's parent. If omitted, this group will be defined at the root level.</li>
+<li><code>name</code> - (Required) The name of the group.</li>
+<li><code>attributes</code> - (Optional) A dict of key/value pairs to set as custom attributes for the group.</li>
+</ul>
+<h3 id="attributes-reference">Attributes Reference</h3>
+<p>In addition to the arguments listed above, the following computed attributes are exported:</p>
+<ul>
+<li><code>path</code> - The complete path of the group. For example, the child group's path in the example configuration would be <code>/parent-group/child-group</code>.</li>
+</ul>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/group.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/group.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Keycloak.GroupArgs.html">GroupArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Keycloak.GroupMemberships.html">GroupMemberships</a></h4>
+      <section><blockquote>
+<p>This content is derived from <a href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/group_memberships.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/group_memberships.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Keycloak.GroupMembershipsArgs.html">GroupMembershipsArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Keycloak.GroupMembershipsState.html">GroupMembershipsState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Keycloak.GroupRoles.html">GroupRoles</a></h4>
+      <section><blockquote>
+<p>This content is derived from <a href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/group_roles.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/group_roles.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Keycloak.GroupRolesArgs.html">GroupRolesArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Keycloak.GroupRolesState.html">GroupRolesState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Keycloak.GroupState.html">GroupState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Keycloak.HardcodedAttributeIdentityProviderMapper.html">HardcodedAttributeIdentityProviderMapper</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Keycloak.HardcodedAttributeIdentityProviderMapperArgs.html">HardcodedAttributeIdentityProviderMapperArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Keycloak.HardcodedAttributeIdentityProviderMapperState.html">HardcodedAttributeIdentityProviderMapperState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Keycloak.HardcodedRoleIdentityMapper.html">HardcodedRoleIdentityMapper</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Keycloak.HardcodedRoleIdentityMapperArgs.html">HardcodedRoleIdentityMapperArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Keycloak.HardcodedRoleIdentityMapperState.html">HardcodedRoleIdentityMapperState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Keycloak.Invokes.html">Invokes</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Keycloak.Provider.html">Provider</a></h4>
+      <section><p>The provider type for the keycloak package. By default, resources use package-wide configuration
+settings, however an explicit <code>Provider</code> instance may be created and passed during resource
+construction to achieve fine-grained programmatic control over provider settings. See the
+<a href="https://www.pulumi.com/docs/reference/programming-model/#providers">documentation</a> for more information.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/index.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/index.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Keycloak.ProviderArgs.html">ProviderArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Keycloak.Realm.html">Realm</a></h4>
+      <section><blockquote>
+<p>This content is derived from <a href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/realm.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/realm.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Keycloak.RealmArgs.html">RealmArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Keycloak.RealmEvents.html">RealmEvents</a></h4>
+      <section><h2 id="-keycloakrealmevents"># keycloak..RealmEvents</h2>
+<p>Allows for managing Realm Events settings within Keycloak.</p>
+<h3 id="argument-reference">Argument Reference</h3>
+<p>The following arguments are supported:</p>
+<ul>
+<li><code>realm_id</code> - (Required) The name of the realm the event settings apply to.</li>
+<li><code>admin_events_enabled</code> - (Optional) When true, admin events are saved to the database, making them available through the admin console. Defaults to <code>false</code>.</li>
+<li><code>admin_events_details_enabled</code> - (Optional) When true, saved admin events will included detailed information for create/update requests. Defaults to <code>false</code>.</li>
+<li><code>events_enabled</code> - (Optional) When true, events from <code>enabled_event_types</code> are saved to the database, making them available through the admin console. Defaults to <code>false</code>.</li>
+<li><code>events_expiration</code> - (Optional) The amount of time in seconds events will be saved in the database. Defaults to <code>0</code> or never.</li>
+<li><code>enabled_event_types</code> - (Optional) The event types that will be saved to the database. Omitting this field enables all event types. Defaults to <code>[]</code> or all event types.</li>
+<li><code>events_listeners</code> - (Optional) The event listeners that events should be sent to. Defaults to <code>[]</code> or none. Note that new realms enable the <code>jboss-logging</code> listener by default, and this resource will remove that unless it is specified.</li>
+</ul>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/realm_events.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/realm_events.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Keycloak.RealmEventsArgs.html">RealmEventsArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Keycloak.RealmEventsState.html">RealmEventsState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Keycloak.RealmState.html">RealmState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Keycloak.RequiredAction.html">RequiredAction</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Keycloak.RequiredActionArgs.html">RequiredActionArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Keycloak.RequiredActionState.html">RequiredActionState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Keycloak.Role.html">Role</a></h4>
+      <section><h2 id="-keycloakrole"># keycloak..Role</h2>
+<p>Allows for creating and managing roles within Keycloak.</p>
+<p>Roles allow you define privileges within Keycloak and map them to users
+and groups.</p>
+<h3 id="argument-reference">Argument Reference</h3>
+<p>The following arguments are supported:</p>
+<ul>
+<li><code>realm_id</code> - (Required) The realm this role exists within.</li>
+<li><code>client_id</code> - (Optional) When specified, this role will be created as
+a client role attached to the client with the provided ID</li>
+<li><code>name</code> - (Required) The name of the role</li>
+<li><code>description</code> - (Optional) The description of the role</li>
+<li><code>composite_roles</code> - (Optional) When specified, this role will be a
+composite role, composed of all roles that have an ID present within
+this list.</li>
+</ul>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/role.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/role.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Keycloak.RoleArgs.html">RoleArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Keycloak.RoleState.html">RoleState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Keycloak.User.html">User</a></h4>
+      <section><h2 id="-keycloakuser"># keycloak..User</h2>
+<p>Allows for creating and managing Users within Keycloak.</p>
+<p>This resource was created primarily to enable the acceptance tests for the <code>keycloak..Group</code> resource.
+Creating users within Keycloak is not recommended. Instead, users should be federated from external sources
+by configuring user federation providers or identity providers.</p>
+<h3 id="argument-reference">Argument Reference</h3>
+<p>The following arguments are supported:</p>
+<ul>
+<li><code>realm_id</code> - (Required) The realm this user belongs to.</li>
+<li><code>username</code> - (Required) The unique username of this user.</li>
+<li><code>initial_password</code> (Optional) When given, the user's initial password will be set.
+This attribute is only respected during initial user creation.</li>
+<li><code>value</code> (Required) The initial password.</li>
+<li><code>temporary</code> (Optional) If set to <code>true</code>, the initial password is set up for renewal on first use. Default to <code>false</code>.</li>
+<li><code>enabled</code> - (Optional) When false, this user cannot log in. Defaults to <code>true</code>.</li>
+<li><code>email</code> - (Optional) The user's email.</li>
+<li><code>first_name</code> - (Optional) The user's first name.</li>
+<li><code>last_name</code> - (Optional) The user's last name.</li>
+</ul>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/user.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/user.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.Keycloak.UserArgs.html">UserArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Keycloak.UserState.html">UserState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Keycloak.UserTemplateImporterIdentityProviderMapper.html">UserTemplateImporterIdentityProviderMapper</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Keycloak.UserTemplateImporterIdentityProviderMapperArgs.html">UserTemplateImporterIdentityProviderMapperArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.Keycloak.UserTemplateImporterIdentityProviderMapperState.html">UserTemplateImporterIdentityProviderMapperState</a></h4>
+      <section></section>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

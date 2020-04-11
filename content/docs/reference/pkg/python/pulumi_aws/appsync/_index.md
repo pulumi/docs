@@ -17,9 +17,6 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.appsync.ApiKey">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.appsync.</code><code class="sig-name descname">ApiKey</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">api_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">expires=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.appsync.ApiKey" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an AppSync API Key.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appsync_api_key.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appsync_api_key.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -117,9 +114,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.appsync.DataSource">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.appsync.</code><code class="sig-name descname">DataSource</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">api_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">dynamodb_config=None</em>, <em class="sig-param">elasticsearch_config=None</em>, <em class="sig-param">http_config=None</em>, <em class="sig-param">lambda_config=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">service_role_arn=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.appsync.DataSource" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an AppSync DataSource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appsync_datasource.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appsync_datasource.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -318,9 +312,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.appsync.Function">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.appsync.</code><code class="sig-name descname">Function</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">api_id=None</em>, <em class="sig-param">data_source=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">function_version=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">request_mapping_template=None</em>, <em class="sig-param">response_mapping_template=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.appsync.Function" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an AppSync Function.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appsync_function.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appsync_function.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -455,11 +446,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.appsync.GraphQLApi">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.appsync.</code><code class="sig-name descname">GraphQLApi</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">additional_authentication_providers=None</em>, <em class="sig-param">authentication_type=None</em>, <em class="sig-param">log_config=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">openid_connect_config=None</em>, <em class="sig-param">schema=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">user_pool_config=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.appsync.GraphQLApi" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.appsync.</code><code class="sig-name descname">GraphQLApi</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">additional_authentication_providers=None</em>, <em class="sig-param">authentication_type=None</em>, <em class="sig-param">log_config=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">openid_connect_config=None</em>, <em class="sig-param">schema=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">user_pool_config=None</em>, <em class="sig-param">xray_enabled=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.appsync.GraphQLApi" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an AppSync GraphQL API.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appsync_graphql_api.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appsync_graphql_api.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -473,6 +461,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>schema</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The schema definition, in GraphQL schema language format. This provider cannot perform drift detection of this configuration.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 <li><p><strong>user_pool_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The Amazon Cognito User Pool configuration. Defined below.</p></li>
+<li><p><strong>xray_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether tracing with X-ray is enabled. Defaults to false.</p></li>
 </ul>
 </dd>
 </dl>
@@ -608,9 +597,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pulumi_aws.appsync.GraphQLApi.xray_enabled">
+<code class="sig-name descname">xray_enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.appsync.GraphQLApi.xray_enabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether tracing with X-ray is enabled. Defaults to false.</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_aws.appsync.GraphQLApi.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">additional_authentication_providers=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">authentication_type=None</em>, <em class="sig-param">log_config=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">openid_connect_config=None</em>, <em class="sig-param">schema=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">uris=None</em>, <em class="sig-param">user_pool_config=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.appsync.GraphQLApi.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">additional_authentication_providers=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">authentication_type=None</em>, <em class="sig-param">log_config=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">openid_connect_config=None</em>, <em class="sig-param">schema=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">uris=None</em>, <em class="sig-param">user_pool_config=None</em>, <em class="sig-param">xray_enabled=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.appsync.GraphQLApi.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing GraphQLApi resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -629,6 +624,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 <li><p><strong>uris</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Map of URIs associated with the API. e.g. <code class="docutils literal notranslate"><span class="pre">uris[&quot;GRAPHQL&quot;]</span> <span class="pre">=</span> <span class="pre">https://ID.appsync-api.REGION.amazonaws.com/graphql</span></code></p></li>
 <li><p><strong>user_pool_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The Amazon Cognito User Pool configuration. Defined below.</p></li>
+<li><p><strong>xray_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether tracing with X-ray is enabled. Defaults to false.</p></li>
 </ul>
 </dd>
 </dl>
@@ -714,9 +710,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.appsync.Resolver">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.appsync.</code><code class="sig-name descname">Resolver</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">api_id=None</em>, <em class="sig-param">data_source=None</em>, <em class="sig-param">field=None</em>, <em class="sig-param">kind=None</em>, <em class="sig-param">pipeline_config=None</em>, <em class="sig-param">request_template=None</em>, <em class="sig-param">response_template=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.appsync.Resolver" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an AppSync Resolver.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appsync_resolver.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appsync_resolver.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -735,7 +728,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <p>The <strong>pipeline_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">functions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">functions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The list of Function ID.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_aws.appsync.Resolver.api_id">
@@ -772,7 +765,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">pipeline_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.appsync.Resolver.pipeline_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>The PipelineConfig. A <code class="docutils literal notranslate"><span class="pre">pipeline_config</span></code> block is documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">functions</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">functions</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The list of Function ID.</p></li>
 </ul>
 </dd></dl>
 
@@ -819,7 +812,7 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>pipeline_config</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">functions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">functions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The list of Function ID.</p></li>
 </ul>
 </dd></dl>
 

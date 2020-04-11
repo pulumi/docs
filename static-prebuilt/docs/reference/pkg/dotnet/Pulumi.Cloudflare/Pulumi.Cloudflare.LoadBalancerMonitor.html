@@ -1,0 +1,644 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class LoadBalancerMonitor
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class LoadBalancerMonitor
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Cloudflare.LoadBalancerMonitor">
+  
+  <h1 id="Pulumi_Cloudflare_LoadBalancerMonitor" data-uid="Pulumi.Cloudflare.LoadBalancerMonitor" class="text-break">Class LoadBalancerMonitor
+  </h1>
+  <div class="markdown level0 summary"><p>If you're using Cloudflare's Load Balancing to load-balance across multiple origin servers or data centers, you configure one of these Monitors to actively check the availability of those servers over HTTP(S) or TCP.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/load_balancer_monitor.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/load_balancer_monitor.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">LoadBalancerMonitor</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Cloudflare.html">Pulumi.Cloudflare</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.Cloudflare.dll</h6>
+  <h5 id="Pulumi_Cloudflare_LoadBalancerMonitor_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class LoadBalancerMonitor : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/LoadBalancerMonitor.cs/#L113">View Source</a>
+  </span>
+  <a id="Pulumi_Cloudflare_LoadBalancerMonitor__ctor_" data-uid="Pulumi.Cloudflare.LoadBalancerMonitor.#ctor*"></a>
+  <h4 id="Pulumi_Cloudflare_LoadBalancerMonitor__ctor_System_String_Pulumi_Cloudflare_LoadBalancerMonitorArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Cloudflare.LoadBalancerMonitor.#ctor(System.String,Pulumi.Cloudflare.LoadBalancerMonitorArgs,System.Nullable{CustomResourceOptions})">LoadBalancerMonitor(String, LoadBalancerMonitorArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Create a LoadBalancerMonitor resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LoadBalancerMonitor(string name, LoadBalancerMonitorArgs args = null, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Cloudflare.LoadBalancerMonitorArgs.html">LoadBalancerMonitorArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/LoadBalancerMonitor.cs/#L21">View Source</a>
+  </span>
+  <a id="Pulumi_Cloudflare_LoadBalancerMonitor_AllowInsecure_" data-uid="Pulumi.Cloudflare.LoadBalancerMonitor.AllowInsecure*"></a>
+  <h4 id="Pulumi_Cloudflare_LoadBalancerMonitor_AllowInsecure" data-uid="Pulumi.Cloudflare.LoadBalancerMonitor.AllowInsecure">AllowInsecure</h4>
+  <div class="markdown level1 summary"><p>Do not validate the certificate when monitor use HTTPS. Only valid if <code>type</code> is &quot;http&quot; or &quot;https&quot;.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; AllowInsecure { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/LoadBalancerMonitor.cs/#L27">View Source</a>
+  </span>
+  <a id="Pulumi_Cloudflare_LoadBalancerMonitor_CreatedOn_" data-uid="Pulumi.Cloudflare.LoadBalancerMonitor.CreatedOn*"></a>
+  <h4 id="Pulumi_Cloudflare_LoadBalancerMonitor_CreatedOn" data-uid="Pulumi.Cloudflare.LoadBalancerMonitor.CreatedOn">CreatedOn</h4>
+  <div class="markdown level1 summary"><p>The RFC3339 timestamp of when the load balancer monitor was created.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; CreatedOn { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/LoadBalancerMonitor.cs/#L33">View Source</a>
+  </span>
+  <a id="Pulumi_Cloudflare_LoadBalancerMonitor_Description_" data-uid="Pulumi.Cloudflare.LoadBalancerMonitor.Description*"></a>
+  <h4 id="Pulumi_Cloudflare_LoadBalancerMonitor_Description" data-uid="Pulumi.Cloudflare.LoadBalancerMonitor.Description">Description</h4>
+  <div class="markdown level1 summary"><p>Free text description.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Description { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/LoadBalancerMonitor.cs/#L39">View Source</a>
+  </span>
+  <a id="Pulumi_Cloudflare_LoadBalancerMonitor_ExpectedBody_" data-uid="Pulumi.Cloudflare.LoadBalancerMonitor.ExpectedBody*"></a>
+  <h4 id="Pulumi_Cloudflare_LoadBalancerMonitor_ExpectedBody" data-uid="Pulumi.Cloudflare.LoadBalancerMonitor.ExpectedBody">ExpectedBody</h4>
+  <div class="markdown level1 summary"><p>A case-insensitive sub-string to look for in the response body. If this string is not found, the origin will be marked as unhealthy. Only valid if <code>type</code> is &quot;http&quot; or &quot;https&quot;. Default: &quot;&quot;.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ExpectedBody { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/LoadBalancerMonitor.cs/#L45">View Source</a>
+  </span>
+  <a id="Pulumi_Cloudflare_LoadBalancerMonitor_ExpectedCodes_" data-uid="Pulumi.Cloudflare.LoadBalancerMonitor.ExpectedCodes*"></a>
+  <h4 id="Pulumi_Cloudflare_LoadBalancerMonitor_ExpectedCodes" data-uid="Pulumi.Cloudflare.LoadBalancerMonitor.ExpectedCodes">ExpectedCodes</h4>
+  <div class="markdown level1 summary"><p>The expected HTTP response code or code range of the health check. Eg <code>2xx</code>. Only valid and required if <code>type</code> is &quot;http&quot; or &quot;https&quot;.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ExpectedCodes { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/LoadBalancerMonitor.cs/#L51">View Source</a>
+  </span>
+  <a id="Pulumi_Cloudflare_LoadBalancerMonitor_FollowRedirects_" data-uid="Pulumi.Cloudflare.LoadBalancerMonitor.FollowRedirects*"></a>
+  <h4 id="Pulumi_Cloudflare_LoadBalancerMonitor_FollowRedirects" data-uid="Pulumi.Cloudflare.LoadBalancerMonitor.FollowRedirects">FollowRedirects</h4>
+  <div class="markdown level1 summary"><p>Follow redirects if returned by the origin. Only valid if <code>type</code> is &quot;http&quot; or &quot;https&quot;.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; FollowRedirects { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/LoadBalancerMonitor.cs/#L57">View Source</a>
+  </span>
+  <a id="Pulumi_Cloudflare_LoadBalancerMonitor_Headers_" data-uid="Pulumi.Cloudflare.LoadBalancerMonitor.Headers*"></a>
+  <h4 id="Pulumi_Cloudflare_LoadBalancerMonitor_Headers" data-uid="Pulumi.Cloudflare.LoadBalancerMonitor.Headers">Headers</h4>
+  <div class="markdown level1 summary"><p>The header name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;LoadBalancerMonitorHeaders&gt;&gt; Headers { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Cloudflare.Outputs.LoadBalancerMonitorHeaders.html">LoadBalancerMonitorHeaders</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/LoadBalancerMonitor.cs/#L63">View Source</a>
+  </span>
+  <a id="Pulumi_Cloudflare_LoadBalancerMonitor_Interval_" data-uid="Pulumi.Cloudflare.LoadBalancerMonitor.Interval*"></a>
+  <h4 id="Pulumi_Cloudflare_LoadBalancerMonitor_Interval" data-uid="Pulumi.Cloudflare.LoadBalancerMonitor.Interval">Interval</h4>
+  <div class="markdown level1 summary"><p>The interval between each health check. Shorter intervals may improve failover time, but will increase load on the origins as we check from multiple locations. Default: 60.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; Interval { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/LoadBalancerMonitor.cs/#L69">View Source</a>
+  </span>
+  <a id="Pulumi_Cloudflare_LoadBalancerMonitor_Method_" data-uid="Pulumi.Cloudflare.LoadBalancerMonitor.Method*"></a>
+  <h4 id="Pulumi_Cloudflare_LoadBalancerMonitor_Method" data-uid="Pulumi.Cloudflare.LoadBalancerMonitor.Method">Method</h4>
+  <div class="markdown level1 summary"><p>The method to use for the health check. Valid values are any valid HTTP verb if <code>type</code> is &quot;http&quot; or &quot;https&quot;, or <code>connection_established</code> if <code>type</code> is &quot;tcp&quot;. Default: &quot;GET&quot; if <code>type</code> is &quot;http&quot; or &quot;https&quot;, or &quot;connection_established&quot; if <code>type</code> is &quot;tcp&quot; .</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Method { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/LoadBalancerMonitor.cs/#L75">View Source</a>
+  </span>
+  <a id="Pulumi_Cloudflare_LoadBalancerMonitor_ModifiedOn_" data-uid="Pulumi.Cloudflare.LoadBalancerMonitor.ModifiedOn*"></a>
+  <h4 id="Pulumi_Cloudflare_LoadBalancerMonitor_ModifiedOn" data-uid="Pulumi.Cloudflare.LoadBalancerMonitor.ModifiedOn">ModifiedOn</h4>
+  <div class="markdown level1 summary"><p>The RFC3339 timestamp of when the load balancer monitor was last modified.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ModifiedOn { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/LoadBalancerMonitor.cs/#L81">View Source</a>
+  </span>
+  <a id="Pulumi_Cloudflare_LoadBalancerMonitor_Path_" data-uid="Pulumi.Cloudflare.LoadBalancerMonitor.Path*"></a>
+  <h4 id="Pulumi_Cloudflare_LoadBalancerMonitor_Path" data-uid="Pulumi.Cloudflare.LoadBalancerMonitor.Path">Path</h4>
+  <div class="markdown level1 summary"><p>The endpoint path to health check against. Default: &quot;/&quot;. Only valid if <code>type</code> is &quot;http&quot; or &quot;https&quot;.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Path { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/LoadBalancerMonitor.cs/#L84">View Source</a>
+  </span>
+  <a id="Pulumi_Cloudflare_LoadBalancerMonitor_Port_" data-uid="Pulumi.Cloudflare.LoadBalancerMonitor.Port*"></a>
+  <h4 id="Pulumi_Cloudflare_LoadBalancerMonitor_Port" data-uid="Pulumi.Cloudflare.LoadBalancerMonitor.Port">Port</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; Port { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/LoadBalancerMonitor.cs/#L90">View Source</a>
+  </span>
+  <a id="Pulumi_Cloudflare_LoadBalancerMonitor_Retries_" data-uid="Pulumi.Cloudflare.LoadBalancerMonitor.Retries*"></a>
+  <h4 id="Pulumi_Cloudflare_LoadBalancerMonitor_Retries" data-uid="Pulumi.Cloudflare.LoadBalancerMonitor.Retries">Retries</h4>
+  <div class="markdown level1 summary"><p>The number of retries to attempt in case of a timeout before marking the origin as unhealthy. Retries are attempted immediately. Default: 2.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; Retries { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/LoadBalancerMonitor.cs/#L96">View Source</a>
+  </span>
+  <a id="Pulumi_Cloudflare_LoadBalancerMonitor_Timeout_" data-uid="Pulumi.Cloudflare.LoadBalancerMonitor.Timeout*"></a>
+  <h4 id="Pulumi_Cloudflare_LoadBalancerMonitor_Timeout" data-uid="Pulumi.Cloudflare.LoadBalancerMonitor.Timeout">Timeout</h4>
+  <div class="markdown level1 summary"><p>The timeout (in seconds) before marking the health check as failed. Default: 5.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; Timeout { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/LoadBalancerMonitor.cs/#L102">View Source</a>
+  </span>
+  <a id="Pulumi_Cloudflare_LoadBalancerMonitor_Type_" data-uid="Pulumi.Cloudflare.LoadBalancerMonitor.Type*"></a>
+  <h4 id="Pulumi_Cloudflare_LoadBalancerMonitor_Type" data-uid="Pulumi.Cloudflare.LoadBalancerMonitor.Type">Type</h4>
+  <div class="markdown level1 summary"><p>The protocol to use for the healthcheck. Currently supported protocols are 'HTTP', 'HTTPS' and 'TCP'. Default: &quot;http&quot;.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Type { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/LoadBalancerMonitor.cs/#L143">View Source</a>
+  </span>
+  <a id="Pulumi_Cloudflare_LoadBalancerMonitor_Get_" data-uid="Pulumi.Cloudflare.LoadBalancerMonitor.Get*"></a>
+  <h4 id="Pulumi_Cloudflare_LoadBalancerMonitor_Get_System_String_Input_System_String__Pulumi_Cloudflare_LoadBalancerMonitorState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Cloudflare.LoadBalancerMonitor.Get(System.String,Input{System.String},Pulumi.Cloudflare.LoadBalancerMonitorState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, LoadBalancerMonitorState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Get an existing LoadBalancerMonitor resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static LoadBalancerMonitor Get(string name, Input&lt;string&gt; id, LoadBalancerMonitorState state = null, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Cloudflare.LoadBalancerMonitorState.html">LoadBalancerMonitorState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Cloudflare.LoadBalancerMonitor.html">LoadBalancerMonitor</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/LoadBalancerMonitor.cs/#L16" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

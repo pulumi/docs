@@ -3,6 +3,9 @@
 title: "Introduction to Crosswalk for AWS"
 meta_desc: "Meet the team behind Pulumi Crosswalk for AWS, see some of what it can do across AWS ECS, EKS, Lambda, and other AWS workloads."
 
+# A featured webinar will display first in the list.
+featured: false
+
 # If the video is pre-recorded or live.
 pre_recorded: true
 
@@ -44,7 +47,9 @@ main:
     # URL for embedding a URL for ungated webinars.
     youtube_url: "https://www.youtube.com/embed/PQNfLqUHu64"
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2019-06-14 10:00:00 -07:00
+    sortable_date: 2019-06-14T10:00:00.000-07:00
+    # Duration of the webinar.
+    duration: "52 minutes"
     # Datetime of the webinar.
     datetime: ""
     # Description of the webinar.

@@ -1,0 +1,536 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class TopicSubscription
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class TopicSubscription
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Aws.Sns.TopicSubscription">
+  
+  <h1 id="Pulumi_Aws_Sns_TopicSubscription" data-uid="Pulumi.Aws.Sns.TopicSubscription" class="text-break">Class TopicSubscription
+  </h1>
+  <div class="markdown level0 summary"><p>Provides a resource for subscribing to SNS topics. Requires that an SNS topic exist for the subscription to attach to.
+This resource allows you to automatically place messages sent to SNS topics in SQS queues, send them as HTTP(S) POST requests
+to a given endpoint, send SMS messages, or notify devices / applications. The most likely use case will
+probably be SQS queues.</p>
+<blockquote>
+<p><strong>NOTE:</strong> If the SNS topic and SQS queue are in different AWS regions, it is important for the &quot;aws.sns.TopicSubscription&quot; to use an AWS provider that is in the same region of the SNS topic. If the &quot;aws.sns.TopicSubscription&quot; is using a provider with a different region than the SNS topic, the subscription will fail to create.</p>
+</blockquote>
+<blockquote>
+<p><strong>NOTE:</strong> Setup of cross-account subscriptions from SNS topics to SQS queues requires the provider to have access to BOTH accounts.</p>
+</blockquote>
+<blockquote>
+<p><strong>NOTE:</strong> If SNS topic and SQS queue are in different AWS accounts but the same region it is important for the &quot;aws.sns.TopicSubscription&quot; to use the AWS provider of the account with the SQS queue. If &quot;aws.sns.TopicSubscription&quot; is using a Provider with a different account than the SQS queue, the provider creates the subscriptions but does not keep state and tries to re-create the subscription at every apply.</p>
+</blockquote>
+<blockquote>
+<p><strong>NOTE:</strong> If SNS topic and SQS queue are in different AWS accounts and different AWS regions it is important to recognize that the subscription needs to be initiated from the account with the SQS queue but in the region of the SNS topic.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sns_topic_subscription.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/sns_topic_subscription.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">TopicSubscription</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Sns.html">Pulumi.Aws.Sns</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
+  <h5 id="Pulumi_Aws_Sns_TopicSubscription_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class TopicSubscription : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Sns/TopicSubscription.cs/#L92">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Sns_TopicSubscription__ctor_" data-uid="Pulumi.Aws.Sns.TopicSubscription.#ctor*"></a>
+  <h4 id="Pulumi_Aws_Sns_TopicSubscription__ctor_System_String_Pulumi_Aws_Sns_TopicSubscriptionArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Sns.TopicSubscription.#ctor(System.String,Pulumi.Aws.Sns.TopicSubscriptionArgs,Pulumi.CustomResourceOptions)">TopicSubscription(String, TopicSubscriptionArgs, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Create a TopicSubscription resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TopicSubscription(string name, TopicSubscriptionArgs args, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Aws.Sns.TopicSubscriptionArgs.html">TopicSubscriptionArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Sns/TopicSubscription.cs/#L33">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Sns_TopicSubscription_Arn_" data-uid="Pulumi.Aws.Sns.TopicSubscription.Arn*"></a>
+  <h4 id="Pulumi_Aws_Sns_TopicSubscription_Arn" data-uid="Pulumi.Aws.Sns.TopicSubscription.Arn">Arn</h4>
+  <div class="markdown level1 summary"><p>The ARN of the subscription stored as a more user-friendly property</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Arn { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Sns/TopicSubscription.cs/#L39">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Sns_TopicSubscription_ConfirmationTimeoutInMinutes_" data-uid="Pulumi.Aws.Sns.TopicSubscription.ConfirmationTimeoutInMinutes*"></a>
+  <h4 id="Pulumi_Aws_Sns_TopicSubscription_ConfirmationTimeoutInMinutes" data-uid="Pulumi.Aws.Sns.TopicSubscription.ConfirmationTimeoutInMinutes">ConfirmationTimeoutInMinutes</h4>
+  <div class="markdown level1 summary"><p>Integer indicating number of minutes to wait in retying mode for fetching subscription arn before marking it as failure. Only applicable for http and https protocols (default is 1 minute).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; ConfirmationTimeoutInMinutes { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Sns/TopicSubscription.cs/#L45">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Sns_TopicSubscription_DeliveryPolicy_" data-uid="Pulumi.Aws.Sns.TopicSubscription.DeliveryPolicy*"></a>
+  <h4 id="Pulumi_Aws_Sns_TopicSubscription_DeliveryPolicy" data-uid="Pulumi.Aws.Sns.TopicSubscription.DeliveryPolicy">DeliveryPolicy</h4>
+  <div class="markdown level1 summary"><p>JSON String with the delivery policy (retries, backoff, etc.) that will be used in the subscription - this only applies to HTTP/S subscriptions. Refer to the <a href="https://docs.aws.amazon.com/sns/latest/dg/DeliveryPolicies.html">SNS docs</a> for more details.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; DeliveryPolicy { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Sns/TopicSubscription.cs/#L51">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Sns_TopicSubscription_Endpoint_" data-uid="Pulumi.Aws.Sns.TopicSubscription.Endpoint*"></a>
+  <h4 id="Pulumi_Aws_Sns_TopicSubscription_Endpoint" data-uid="Pulumi.Aws.Sns.TopicSubscription.Endpoint">Endpoint</h4>
+  <div class="markdown level1 summary"><p>The endpoint to send data to, the contents will vary with the protocol. (see below for more information)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Endpoint { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Sns/TopicSubscription.cs/#L57">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Sns_TopicSubscription_EndpointAutoConfirms_" data-uid="Pulumi.Aws.Sns.TopicSubscription.EndpointAutoConfirms*"></a>
+  <h4 id="Pulumi_Aws_Sns_TopicSubscription_EndpointAutoConfirms" data-uid="Pulumi.Aws.Sns.TopicSubscription.EndpointAutoConfirms">EndpointAutoConfirms</h4>
+  <div class="markdown level1 summary"><p>Boolean indicating whether the end point is capable of <a href="http://docs.aws.amazon.com/sns/latest/dg/SendMessageToHttp.html#SendMessageToHttp.prepare">auto confirming subscription</a> e.g., PagerDuty (default is false)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; EndpointAutoConfirms { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Sns/TopicSubscription.cs/#L63">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Sns_TopicSubscription_FilterPolicy_" data-uid="Pulumi.Aws.Sns.TopicSubscription.FilterPolicy*"></a>
+  <h4 id="Pulumi_Aws_Sns_TopicSubscription_FilterPolicy" data-uid="Pulumi.Aws.Sns.TopicSubscription.FilterPolicy">FilterPolicy</h4>
+  <div class="markdown level1 summary"><p>JSON String with the filter policy that will be used in the subscription to filter messages seen by the target resource. Refer to the <a href="https://docs.aws.amazon.com/sns/latest/dg/message-filtering.html">SNS docs</a> for more details.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; FilterPolicy { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Sns/TopicSubscription.cs/#L69">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Sns_TopicSubscription_Protocol_" data-uid="Pulumi.Aws.Sns.TopicSubscription.Protocol*"></a>
+  <h4 id="Pulumi_Aws_Sns_TopicSubscription_Protocol" data-uid="Pulumi.Aws.Sns.TopicSubscription.Protocol">Protocol</h4>
+  <div class="markdown level1 summary"><p>The protocol to use. The possible values for this are: <code>sqs</code>, <code>sms</code>, <code>lambda</code>, <code>application</code>. (<code>http</code> or <code>https</code> are partially supported, see below) (<code>email</code> is an option but is unsupported, see below).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Protocol { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Sns/TopicSubscription.cs/#L75">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Sns_TopicSubscription_RawMessageDelivery_" data-uid="Pulumi.Aws.Sns.TopicSubscription.RawMessageDelivery*"></a>
+  <h4 id="Pulumi_Aws_Sns_TopicSubscription_RawMessageDelivery" data-uid="Pulumi.Aws.Sns.TopicSubscription.RawMessageDelivery">RawMessageDelivery</h4>
+  <div class="markdown level1 summary"><p>Boolean indicating whether or not to enable raw message delivery (the original message is directly passed, not wrapped in JSON with the original message in the message property) (default is false).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; RawMessageDelivery { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Sns/TopicSubscription.cs/#L81">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Sns_TopicSubscription_Topic_" data-uid="Pulumi.Aws.Sns.TopicSubscription.Topic*"></a>
+  <h4 id="Pulumi_Aws_Sns_TopicSubscription_Topic" data-uid="Pulumi.Aws.Sns.TopicSubscription.Topic">Topic</h4>
+  <div class="markdown level1 summary"><p>The ARN of the SNS topic to subscribe to</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Topic { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Sns/TopicSubscription.cs/#L122">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Sns_TopicSubscription_Get_" data-uid="Pulumi.Aws.Sns.TopicSubscription.Get*"></a>
+  <h4 id="Pulumi_Aws_Sns_TopicSubscription_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_Sns_TopicSubscriptionState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Sns.TopicSubscription.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.Sns.TopicSubscriptionState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, TopicSubscriptionState, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Get an existing TopicSubscription resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TopicSubscription Get(string name, Input&lt;string&gt; id, TopicSubscriptionState state = null, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Aws.Sns.TopicSubscriptionState.html">TopicSubscriptionState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Aws.Sns.TopicSubscription.html">TopicSubscription</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Sns/TopicSubscription.cs/#L28" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,447 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class NodeStatus
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class NodeStatus
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.NodeStatus">
+  
+  <h1 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_NodeStatus" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.NodeStatus" class="text-break">Class NodeStatus
+  </h1>
+  <div class="markdown level0 summary"><p>NodeStatus is information about the current status of a node.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">NodeStatus</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.html">Pulumi.Kubernetes.Types.Outputs.Core.V1</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.Kubernetes.dll</h6>
+  <h5 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_NodeStatus_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class NodeStatus</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L17859">View Source</a>
+  </span>
+  <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_NodeStatus_Addresses" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.NodeStatus.Addresses">Addresses</h4>
+  <div class="markdown level1 summary"><p>List of addresses reachable to the node. Queried from cloud provider, if available. More
+info: <a href="https://kubernetes.io/docs/concepts/nodes/node/#addresses">https://kubernetes.io/docs/concepts/nodes/node/#addresses</a> Note: This field is
+declared as mergeable, but the merge key is not sufficiently unique, which can cause
+data corruption when it is merged. Callers should instead use a full-replacement patch.
+See <a href="http://pr.k8s.io/79391">http://pr.k8s.io/79391</a> for an example.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;NodeAddress&gt; Addresses</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.NodeAddress.html">NodeAddress</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L17865">View Source</a>
+  </span>
+  <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_NodeStatus_Allocatable" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.NodeStatus.Allocatable">Allocatable</h4>
+  <div class="markdown level1 summary"><p>Allocatable represents the resources of a node that are available for scheduling.
+Defaults to Capacity.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly ImmutableDictionary&lt;string, string&gt; Allocatable</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L17871">View Source</a>
+  </span>
+  <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_NodeStatus_Capacity" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.NodeStatus.Capacity">Capacity</h4>
+  <div class="markdown level1 summary"><p>Capacity represents the total resources of a node. More info:
+<a href="https://kubernetes.io/docs/concepts/storage/persistent-volumes#capacity">https://kubernetes.io/docs/concepts/storage/persistent-volumes#capacity</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly ImmutableDictionary&lt;string, string&gt; Capacity</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Immutable.ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L17877">View Source</a>
+  </span>
+  <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_NodeStatus_Conditions" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.NodeStatus.Conditions">Conditions</h4>
+  <div class="markdown level1 summary"><p>Conditions is an array of current observed node conditions. More info:
+<a href="https://kubernetes.io/docs/concepts/nodes/node/#condition">https://kubernetes.io/docs/concepts/nodes/node/#condition</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;NodeCondition&gt; Conditions</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.NodeCondition.html">NodeCondition</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L17882">View Source</a>
+  </span>
+  <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_NodeStatus_Config" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.NodeStatus.Config">Config</h4>
+  <div class="markdown level1 summary"><p>Status of the config assigned to the node via the dynamic Kubelet config feature.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly NodeConfigStatus Config</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.NodeConfigStatus.html">NodeConfigStatus</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L17887">View Source</a>
+  </span>
+  <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_NodeStatus_DaemonEndpoints" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.NodeStatus.DaemonEndpoints">DaemonEndpoints</h4>
+  <div class="markdown level1 summary"><p>Endpoints of daemons running on the Node.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly NodeDaemonEndpoints DaemonEndpoints</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.NodeDaemonEndpoints.html">NodeDaemonEndpoints</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L17892">View Source</a>
+  </span>
+  <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_NodeStatus_Images" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.NodeStatus.Images">Images</h4>
+  <div class="markdown level1 summary"><p>List of container images on this node</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;ContainerImage&gt; Images</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.ContainerImage.html">ContainerImage</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L17898">View Source</a>
+  </span>
+  <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_NodeStatus_NodeInfo" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.NodeStatus.NodeInfo">NodeInfo</h4>
+  <div class="markdown level1 summary"><p>Set of ids/uuids to uniquely identify the node. More info:
+<a href="https://kubernetes.io/docs/concepts/nodes/node/#info">https://kubernetes.io/docs/concepts/nodes/node/#info</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly NodeSystemInfo NodeInfo</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.NodeSystemInfo.html">NodeSystemInfo</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L17905">View Source</a>
+  </span>
+  <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_NodeStatus_Phase" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.NodeStatus.Phase">Phase</h4>
+  <div class="markdown level1 summary"><p>NodePhase is the recently observed lifecycle phase of the node. More info:
+<a href="https://kubernetes.io/docs/concepts/nodes/node/#phase">https://kubernetes.io/docs/concepts/nodes/node/#phase</a> The field is never populated, and
+now is deprecated.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly string Phase</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L17910">View Source</a>
+  </span>
+  <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_NodeStatus_VolumesAttached" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.NodeStatus.VolumesAttached">VolumesAttached</h4>
+  <div class="markdown level1 summary"><p>List of volumes that are attached to the node.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;AttachedVolume&gt; VolumesAttached</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.AttachedVolume.html">AttachedVolume</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L17915">View Source</a>
+  </span>
+  <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_NodeStatus_VolumesInUse" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.NodeStatus.VolumesInUse">VolumesInUse</h4>
+  <div class="markdown level1 summary"><p>List of attachable volumes in use (mounted) by the node.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly ImmutableArray&lt;string&gt; VolumesInUse</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L17849" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

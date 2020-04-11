@@ -19,9 +19,6 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>Provides an alias for a KMS customer master key. AWS Console enforces 1-to-1 mapping between aliases &amp; keys,
 but API (hence this provider too) allows you to create as many aliases as
 the <a class="reference external" href="http://docs.aws.amazon.com/kms/latest/developerguide/limits.html">account limits</a> allow you.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kms_alias.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kms_alias.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -160,7 +157,6 @@ the <cite>``kms.Ciphertext`</cite> data source &lt;<a class="reference external"
 <blockquote>
 <div><p><strong>Note:</strong> All arguments including the plaintext be stored in the raw state as plain-text.
 <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kms_ciphertext.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kms_ciphertext.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -261,7 +257,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Manages a KMS Customer Master Key that uses external key material. To instead manage a KMS Customer Master Key where AWS automatically generates and potentially rotates key material, see the <cite>``kms.Key`</cite> resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/kms_key.html">https://www.terraform.io/docs/providers/aws/r/kms_key.html</a>&gt;`_.</p>
 <blockquote>
 <div><p><strong>Note:</strong> All arguments including the key material will be stored in the raw state as plain-text. <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kms_external_key.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kms_external_key.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -504,9 +499,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.kms.Grant">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.kms.</code><code class="sig-name descname">Grant</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">constraints=None</em>, <em class="sig-param">grant_creation_tokens=None</em>, <em class="sig-param">grantee_principal=None</em>, <em class="sig-param">key_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">operations=None</em>, <em class="sig-param">retire_on_delete=None</em>, <em class="sig-param">retiring_principal=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.Grant" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource-based access control mechanism for a KMS customer master key.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kms_grant.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kms_grant.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -534,16 +526,16 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
 </dl>
 <p>The <strong>constraints</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">encryptionContextEquals</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">encryptionContextSubset</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">encryptionContextEquals</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A list of key-value pairs that must match the encryption context in subsequent cryptographic operation requests. The grant allows the operation only when the encryption context in the request is the same as the encryption context specified in this constraint. Conflicts with <code class="docutils literal notranslate"><span class="pre">encryption_context_subset</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">encryptionContextSubset</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A list of key-value pairs that must be included in the encryption context of subsequent cryptographic operation requests. The grant allows the cryptographic operation only when the encryption context in the request includes the key-value pairs specified in this constraint, although it can include additional key-value pairs. Conflicts with <code class="docutils literal notranslate"><span class="pre">encryption_context_equals</span></code>.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_aws.kms.Grant.constraints">
 <code class="sig-name descname">constraints</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kms.Grant.constraints" title="Permalink to this definition">¶</a></dt>
 <dd><p>A structure that you can use to allow certain operations in the grant only when the desired encryption context is present. For more information about encryption context, see <a class="reference external" href="http://docs.aws.amazon.com/kms/latest/developerguide/encryption-context.html">Encryption Context</a>.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">encryptionContextEquals</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">encryptionContextSubset</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">encryptionContextEquals</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A list of key-value pairs that must match the encryption context in subsequent cryptographic operation requests. The grant allows the operation only when the encryption context in the request is the same as the encryption context specified in this constraint. Conflicts with <code class="docutils literal notranslate"><span class="pre">encryption_context_subset</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">encryptionContextSubset</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A list of key-value pairs that must be included in the encryption context of subsequent cryptographic operation requests. The grant allows the cryptographic operation only when the encryption context in the request includes the key-value pairs specified in this constraint, although it can include additional key-value pairs. Conflicts with <code class="docutils literal notranslate"><span class="pre">encryption_context_equals</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -637,8 +629,8 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
 </dl>
 <p>The <strong>constraints</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">encryptionContextEquals</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">encryptionContextSubset</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">encryptionContextEquals</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A list of key-value pairs that must match the encryption context in subsequent cryptographic operation requests. The grant allows the operation only when the encryption context in the request is the same as the encryption context specified in this constraint. Conflicts with <code class="docutils literal notranslate"><span class="pre">encryption_context_subset</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">encryptionContextSubset</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A list of key-value pairs that must be included in the encryption context of subsequent cryptographic operation requests. The grant allows the cryptographic operation only when the encryption context in the request includes the key-value pairs specified in this constraint, although it can include additional key-value pairs. Conflicts with <code class="docutils literal notranslate"><span class="pre">encryption_context_equals</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -684,9 +676,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.kms.Key">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.kms.</code><code class="sig-name descname">Key</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">customer_master_key_spec=None</em>, <em class="sig-param">deletion_window_in_days=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">enable_key_rotation=None</em>, <em class="sig-param">is_enabled=None</em>, <em class="sig-param">key_usage=None</em>, <em class="sig-param">policy=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.Key" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a KMS customer master key.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kms_key.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/kms_key.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -702,6 +691,7 @@ is enabled. Defaults to false.</p></li>
 <li><p><strong>is_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether the key is enabled. Defaults to true.</p></li>
 <li><p><strong>key_usage</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the intended use of the key. Valid values: <code class="docutils literal notranslate"><span class="pre">ENCRYPT_DECRYPT</span></code> or <code class="docutils literal notranslate"><span class="pre">SIGN_VERIFY</span></code>.
 Defaults to <code class="docutils literal notranslate"><span class="pre">ENCRYPT_DECRYPT</span></code>.</p></li>
+<li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A valid policy JSON document.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the object.</p></li>
 </ul>
 </dd>
@@ -759,6 +749,12 @@ Defaults to <code class="docutils literal notranslate"><span class="pre">ENCRYPT
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.kms.Key.policy">
+<code class="sig-name descname">policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kms.Key.policy" title="Permalink to this definition">¶</a></dt>
+<dd><p>A valid policy JSON document.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.kms.Key.tags">
 <code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kms.Key.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>A mapping of tags to assign to the object.</p>
@@ -789,6 +785,7 @@ is enabled. Defaults to false.</p>
 <li><p><strong>key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The globally unique identifier for the key.</p></li>
 <li><p><strong>key_usage</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the intended use of the key. Valid values: <code class="docutils literal notranslate"><span class="pre">ENCRYPT_DECRYPT</span></code> or <code class="docutils literal notranslate"><span class="pre">SIGN_VERIFY</span></code>.
 Defaults to <code class="docutils literal notranslate"><span class="pre">ENCRYPT_DECRYPT</span></code>.</p></li>
+<li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A valid policy JSON document.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the object.</p></li>
 </ul>
 </dd>
@@ -839,9 +836,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Use this data source to get the ARN of a KMS key alias.
 By using this data source, you can reference key alias
 without having to hard code the ARN as input.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/kms_alias.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/kms_alias.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The display name of the alias. The name must start with the word “alias” followed by a forward slash (alias/)</p>
@@ -856,11 +850,6 @@ without having to hard code the ARN as input.</p>
 by using an AWS KMS customer master key. The value returned by this data source
 changes every apply. For a stable ciphertext value, see the <cite>``kms.Ciphertext`</cite>
 resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/kms_ciphertext.html">https://www.terraform.io/docs/providers/aws/r/kms_ciphertext.html</a>&gt;`_.</p>
-<blockquote>
-<div><p><strong>Note:</strong> All arguments including the plaintext be stored in the raw state as plain-text.
-<a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/kms_ciphertext.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/kms_ciphertext.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -879,9 +868,6 @@ resource &lt;<a class="reference external" href="https://www.terraform.io/docs/p
 the specified KMS Key with flexible key id input.
 This can be useful to reference key alias
 without having to hard code the ARN as input.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/kms_key.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/kms_key.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -902,9 +888,6 @@ without having to hard code the ARN as input.</p>
 <dt id="pulumi_aws.kms.get_secret">
 <code class="sig-prename descclassname">pulumi_aws.kms.</code><code class="sig-name descname">get_secret</code><span class="sig-paren">(</span><em class="sig-param">secrets=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.get_secret" title="Permalink to this definition">¶</a></dt>
 <dd><p>!&gt; <strong>WARNING:</strong> This data source was removed in version 2.0.0 of the AWS Provider. You can migrate existing configurations to the <cite>``kms.getSecrets`</cite> data source &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/d/kms_secrets.html">https://www.terraform.io/docs/providers/aws/d/kms_secrets.html</a>&gt;`_ following instructions available in the <a class="reference external" href="https://www.terraform.io/docs/providers/aws/guides/version-2-upgrade.html#data-source-aws_kms_secret">Version 2 Upgrade Guide</a>.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/kms_secret.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/kms_secret.html.markdown</a>.</p>
-</div></blockquote>
 <p>The <strong>secrets</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">context</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p></li>
@@ -918,9 +901,6 @@ without having to hard code the ARN as input.</p>
 <dt id="pulumi_aws.kms.get_secrets">
 <code class="sig-prename descclassname">pulumi_aws.kms.</code><code class="sig-name descname">get_secrets</code><span class="sig-paren">(</span><em class="sig-param">secrets=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.get_secrets" title="Permalink to this definition">¶</a></dt>
 <dd><p>Decrypt multiple secrets from data encrypted with the AWS KMS service.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/kms_secrets.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/kms_secrets.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>secrets</strong> (<em>list</em>) – One or more encrypted payload definitions from the KMS service. See the Secret Definitions below.</p>

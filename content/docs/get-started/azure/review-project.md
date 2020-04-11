@@ -16,6 +16,13 @@ Let's review some of the generated project files:
 
 - `Pulumi.yaml` defines the [project]({{< relref "/docs/intro/concepts/project" >}}).
 - `Pulumi.dev.yaml` contains [configuration]({{< relref "/docs/intro/concepts/config" >}}) values for the [stack]({{< relref "/docs/intro/concepts/stack" >}}) we initialized.
+
+{{% choosable language csharp %}}
+
+- `Program.cs` with a simple entry point.
+
+{{% /choosable %}}
+
 - {{< langfile >}} is the Pulumi program that defines our stack resources. Let's examine it.
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -89,8 +96,8 @@ pulumi.export('connection_string', account.primary_connection_string)
 package main
 
 import (
-	"github.com/pulumi/pulumi-azure/sdk/go/azure/core"
-	"github.com/pulumi/pulumi-azure/sdk/go/azure/storage"
+	"github.com/pulumi/pulumi-azure/sdk/v2/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v2/go/azure/storage"
 	"github.com/pulumi/pulumi/sdk/go/pulumi"
 )
 
@@ -125,33 +132,31 @@ func main() {
 {{% choosable language csharp %}}
 
 ```csharp
-using System.Collections.Generic;
-using System.Threading.Tasks;
 using Pulumi;
-using Pulumi.Azure;
+using Pulumi.Azure.Core;
+using Pulumi.Azure.Storage;
 
-class Program
+class MyStack : Stack
 {
-    static Task Main()
+    public MyStack()
     {
-        return Deployment.RunAsync(() => {
-            // Create an Azure Resource Group
-            var resourceGroup = new Azure.Core.ResourceGroup("resourceGroup");
+        // Create an Azure Resource Group
+        var resourceGroup = new ResourceGroup("resourceGroup");
 
-            // Create an Azure resource (Storage Account)
-            var account = new Azure.Storage.Account("storage", new Azure.Storage.AccountArgs
-            {
-                ResourceGroupName = resourceGroup.Name,
-                AccountTier = "Standard",
-                AccountReplicationType = "LRS",
-            });
-
-            // Export the connection string for the storage account
-            return new Dictionary<string, object> {
-                { "connectionString", account.PrimaryConnectionString },
-            };
+        // Create an Azure Storage Account
+        var storageAccount = new Account("storage", new AccountArgs
+        {
+            ResourceGroupName = resourceGroup.Name,
+            AccountReplicationType = "LRS",
+            AccountTier = "Standard"
         });
+
+        // Export the connection string for the storage account
+        this.ConnectionString = storageAccount.PrimaryConnectionString;
     }
+
+    [Output]
+    public Output<string> ConnectionString { get; set; }
 }
 ```
 
@@ -164,15 +169,6 @@ This Pulumi program creates an Azure resource group and storage account and expo
 {{% choosable language python %}}
 
 {{< python-venv >}}
-
-{{% /choosable %}}
-
-{{% choosable language go %}}
-For Go, before we can deploy the stack, you will need to initialize your project's dependencies. Pulumi templates currently use `dep`:
-
-```bash
-$ dep ensure
-```
 
 {{% /choosable %}}
 

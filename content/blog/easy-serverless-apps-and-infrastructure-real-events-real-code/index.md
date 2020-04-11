@@ -12,14 +12,14 @@ With Pulumi, you can create, deploy, and manage any cloud resource using
 your favorite language. This includes application **and** infrastructure
 related resources, often in the same program.
 
-One area this gets really fun is serverless. Because we're using
+One area this gets really fun is serverless computing. Because we're using
 general purpose languages, we can create resources, and then wire up
 event handlers, just like normal event-driven programming. This is the
-way serverless should be!
+way serverless architecture should be!
 
 In this article, we'll see how. There's a broad range of options
 depending on what you want to do, and how your team likes to operate.
-We'll be using AWS and TypeScript, but other clouds and languages are
+We'll be using Amazon Web Services (AWS) and TypeScript, but other clouds and languages are
 available.
 <!--more-->
 
@@ -185,7 +185,7 @@ see some alternative coding styles.
 
 ### Approach 2: Manual Function Resources
 
-We just saw that we can write our application logic inside of our Pulumi
+We just saw that we can write our serverless application logic inside of our Pulumi
 program, alongside our infrastructure resource definitions. This can
 feel magical and super productive. But not everybody wants to mix these
 together. Sometimes you want to stick to the classic way of doing this:
@@ -231,7 +231,7 @@ const zipFunc = new aws.lambda.Function("zipTpsReportsFunc", {
    code: new pulumi.asset.AssetArchive({
       ".": new pulumi.asset.FileArchive("./app"),
    }),
-   runtime: "nodejs8.10",
+   runtime: "nodejs12.x",
    role: zipFuncRole.arn,
 });
 
@@ -470,7 +470,7 @@ outlined above.
 ## In Conclusion
 
 In this post, we saw many different options for serverless programming
-with Pulumi, from magic functions that make serverless feel like true
+with Pulumi, from magic functions that make serverless apps feel like true
 event-driven programming, to provisioning and managing infrastructure as
 code.
 

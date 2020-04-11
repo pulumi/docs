@@ -16,20 +16,26 @@ anything, please consult the source <a class="reference external" href="https://
 <span class="target" id="module-pulumi_gcp.identityplatform"></span><dl class="class">
 <dt id="pulumi_gcp.identityplatform.DefaultSupportedIdpConfig">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.identityplatform.</code><code class="sig-name descname">DefaultSupportedIdpConfig</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">client_id=None</em>, <em class="sig-param">client_secret=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">idp_id=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.identityplatform.DefaultSupportedIdpConfig" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a DefaultSupportedIdpConfig resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] client_id: OAuth client ID
-:param pulumi.Input[str] client_secret: OAuth client secret
-:param pulumi.Input[bool] enabled: If this IDP allows the user to sign in
-:param pulumi.Input[str] idp_id: ID of the IDP. Possible values include: * ‘apple.com’ * ‘facebook.com’ * ‘gc.apple.com’ * ‘github.com’ * ‘google.com’ *</p>
+<dd><p>Configurations options for authenticating with a the standard set of Identity Toolkit-trusted IDPs.</p>
+<p>You must enable the
+<a class="reference external" href="https://console.cloud.google.com/marketplace/details/google-cloud-platform/customer-identity">Google Identity Platform</a> in
+the marketplace prior to using this resource.</p>
 <blockquote>
-<div><p>‘linkedin.com’ * ‘microsoft.com’ * ‘playgames.google.com’ * ‘twitter.com’ * ‘yahoo.com’</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/identity_platform_default_supported_idp_config.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/identity_platform_default_supported_idp_config.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>client_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – OAuth client ID</p></li>
+<li><p><strong>client_secret</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – OAuth client secret</p></li>
+<li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If this IDP allows the user to sign in</p></li>
+<li><p><strong>idp_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the IDP. Possible values include: * ‘apple.com’ * ‘facebook.com’ * ‘gc.apple.com’ * ‘github.com’ * ‘google.com’ *
+‘linkedin.com’ * ‘microsoft.com’ * ‘playgames.google.com’ * ‘twitter.com’ * ‘yahoo.com’</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p></li>
+</ul>
 </dd>
 </dl>
 <dl class="attribute">
@@ -135,21 +141,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.identityplatform.InboundSamlConfig">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.identityplatform.</code><code class="sig-name descname">InboundSamlConfig</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">idp_config=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">sp_config=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.identityplatform.InboundSamlConfig" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a InboundSamlConfig resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] display_name: Human friendly display name.
-:param pulumi.Input[bool] enabled: If this config allows users to sign in with the provider.
-:param pulumi.Input[dict] idp_config: SAML IdP configuration when the project acts as the relying party
-:param pulumi.Input[str] name: The name of the InboundSamlConfig resource. Must start with ‘saml.’ and can only have alphanumeric characters, hyphens,</p>
+<dd><p>Inbound SAML configuration for a Identity Toolkit project.</p>
+<p>You must enable the
+<a class="reference external" href="https://console.cloud.google.com/marketplace/details/google-cloud-platform/customer-identity">Google Identity Platform</a> in
+the marketplace prior to using this resource.</p>
 <blockquote>
-<div><p>underscores or periods. The part after ‘saml.’ must also start with a lowercase letter, end with an alphanumeric
-character, and have at least 2 characters.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/identity_platform_inbound_saml_config.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/identity_platform_inbound_saml_config.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>sp_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – SAML SP (Service Provider) configuration when the project acts as the relying party to receive and accept an
-authentication assertion issued by a SAML identity provider.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human friendly display name.</p></li>
+<li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If this config allows users to sign in with the provider.</p></li>
+<li><p><strong>idp_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – SAML IdP configuration when the project acts as the relying party</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the InboundSamlConfig resource. Must start with ‘saml.’ and can only have alphanumeric characters, hyphens,
+underscores or periods. The part after ‘saml.’ must also start with a lowercase letter, end with an alphanumeric
+character, and have at least 2 characters.</p></li>
+<li><p><strong>sp_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – SAML SP (Service Provider) configuration when the project acts as the relying party to receive and accept an
+authentication assertion issued by a SAML identity provider.</p></li>
+</ul>
 </dd>
 </dl>
 <p>The <strong>idp_config</strong> object supports the following:</p>
@@ -311,19 +323,29 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.identityplatform.OauthIdpConfig">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.identityplatform.</code><code class="sig-name descname">OauthIdpConfig</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">client_id=None</em>, <em class="sig-param">client_secret=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">issuer=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.identityplatform.OauthIdpConfig" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a OauthIdpConfig resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] client_id: The client id of an OAuth client.
-:param pulumi.Input[str] client_secret: The client secret of the OAuth client, to enable OIDC code flow.
-:param pulumi.Input[str] display_name: Human friendly display name.
-:param pulumi.Input[bool] enabled: If this config allows users to sign in with the provider.
-:param pulumi.Input[str] issuer: For OIDC Idps, the issuer identifier.
-:param pulumi.Input[str] name: The name of the OauthIdpConfig. Must start with ‘oidc.’.
-:param pulumi.Input[str] project: The ID of the project in which the resource belongs.</p>
+<dd><p>OIDC IdP configuration for a Identity Toolkit project.</p>
+<p>You must enable the
+<a class="reference external" href="https://console.cloud.google.com/marketplace/details/google-cloud-platform/customer-identity">Google Identity Platform</a> in
+the marketplace prior to using this resource.</p>
 <blockquote>
-<div><p>If it is not provided, the provider project is used.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/identity_platform_oauth_idp_config.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/identity_platform_oauth_idp_config.html.markdown</a>.</p>
 </div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>client_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The client id of an OAuth client.</p></li>
+<li><p><strong>client_secret</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The client secret of the OAuth client, to enable OIDC code flow.</p></li>
+<li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human friendly display name.</p></li>
+<li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If this config allows users to sign in with the provider.</p></li>
+<li><p><strong>issuer</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – For OIDC Idps, the issuer identifier.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the OauthIdpConfig. Must start with ‘oidc.’.</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p></li>
+</ul>
+</dd>
+</dl>
 <dl class="attribute">
 <dt id="pulumi_gcp.identityplatform.OauthIdpConfig.client_id">
 <code class="sig-name descname">client_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.identityplatform.OauthIdpConfig.client_id" title="Permalink to this definition">¶</a></dt>
@@ -432,17 +454,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.identityplatform.Tenant">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.identityplatform.</code><code class="sig-name descname">Tenant</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allow_password_signup=None</em>, <em class="sig-param">disable_auth=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">enable_email_link_signin=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.identityplatform.Tenant" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Tenant resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[bool] allow_password_signup: Whether to allow email/password user authentication.
-:param pulumi.Input[bool] disable_auth: Whether authentication is disabled for the tenant. If true, the users under the disabled tenant are not allowed to</p>
+<dd><p>Tenant configuration in a multi-tenant project.</p>
+<p>You must enable the
+<a class="reference external" href="https://console.cloud.google.com/marketplace/details/google-cloud-platform/customer-identity">Google Identity Platform</a> in
+the marketplace prior to using this resource.</p>
+<p>You must <a class="reference external" href="https://cloud.google.com/identity-platform/docs/multi-tenancy-quickstart">enable multi-tenancy</a> via
+the Cloud Console prior to creating tenants.</p>
 <blockquote>
-<div><p>sign-in. Admins of the disabled tenant are not able to manage its users.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/identity_platform_tenant.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/identity_platform_tenant.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>allow_password_signup</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to allow email/password user authentication.</p></li>
+<li><p><strong>disable_auth</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether authentication is disabled for the tenant. If true, the users under the disabled tenant are not allowed to
+sign-in. Admins of the disabled tenant are not able to manage its users.</p></li>
 <li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human friendly display name of the tenant.</p></li>
 <li><p><strong>enable_email_link_signin</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to enable email link user authentication.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
@@ -553,19 +581,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.identityplatform.TenantDefaultSupportedIdpConfig">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.identityplatform.</code><code class="sig-name descname">TenantDefaultSupportedIdpConfig</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">client_id=None</em>, <em class="sig-param">client_secret=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">idp_id=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">tenant=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.identityplatform.TenantDefaultSupportedIdpConfig" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a TenantDefaultSupportedIdpConfig resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] client_id: OAuth client ID
-:param pulumi.Input[str] client_secret: OAuth client secret
-:param pulumi.Input[bool] enabled: If this IDP allows the user to sign in
-:param pulumi.Input[str] idp_id: ID of the IDP. Possible values include: * ‘apple.com’ * ‘facebook.com’ * ‘gc.apple.com’ * ‘github.com’ * ‘google.com’ *</p>
+<dd><p>Configurations options for the tenant for authenticating with a the standard set of Identity Toolkit-trusted IDPs.</p>
+<p>You must enable the
+<a class="reference external" href="https://console.cloud.google.com/marketplace/details/google-cloud-platform/customer-identity">Google Identity Platform</a> in
+the marketplace prior to using this resource.</p>
 <blockquote>
-<div><p>‘linkedin.com’ * ‘microsoft.com’ * ‘playgames.google.com’ * ‘twitter.com’ * ‘yahoo.com’</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/identity_platform_tenant_default_supported_idp_config.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/identity_platform_tenant_default_supported_idp_config.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>client_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – OAuth client ID</p></li>
+<li><p><strong>client_secret</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – OAuth client secret</p></li>
+<li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If this IDP allows the user to sign in</p></li>
+<li><p><strong>idp_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the IDP. Possible values include: * ‘apple.com’ * ‘facebook.com’ * ‘gc.apple.com’ * ‘github.com’ * ‘google.com’ *
+‘linkedin.com’ * ‘microsoft.com’ * ‘playgames.google.com’ * ‘twitter.com’ * ‘yahoo.com’</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.</p></li>
 <li><p><strong>tenant</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the tenant where this DefaultSupportedIdpConfig resource exists</p></li>
@@ -682,20 +714,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.identityplatform.TenantInboundSamlConfig">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.identityplatform.</code><code class="sig-name descname">TenantInboundSamlConfig</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">idp_config=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">sp_config=None</em>, <em class="sig-param">tenant=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.identityplatform.TenantInboundSamlConfig" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a TenantInboundSamlConfig resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] display_name: Human friendly display name.
-:param pulumi.Input[bool] enabled: If this config allows users to sign in with the provider.
-:param pulumi.Input[dict] idp_config: SAML IdP configuration when the project acts as the relying party
-:param pulumi.Input[str] name: The name of the InboundSamlConfig resource. Must start with ‘saml.’ and can only have alphanumeric characters, hyphens,</p>
+<dd><p>Inbound SAML configuration for a Identity Toolkit tenant.</p>
+<p>You must enable the
+<a class="reference external" href="https://console.cloud.google.com/marketplace/details/google-cloud-platform/customer-identity">Google Identity Platform</a> in
+the marketplace prior to using this resource.</p>
 <blockquote>
-<div><p>underscores or periods. The part after ‘saml.’ must also start with a lowercase letter, end with an alphanumeric
-character, and have at least 2 characters.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/identity_platform_tenant_inbound_saml_config.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/identity_platform_tenant_inbound_saml_config.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human friendly display name.</p></li>
+<li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If this config allows users to sign in with the provider.</p></li>
+<li><p><strong>idp_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – SAML IdP configuration when the project acts as the relying party</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the InboundSamlConfig resource. Must start with ‘saml.’ and can only have alphanumeric characters, hyphens,
+underscores or periods. The part after ‘saml.’ must also start with a lowercase letter, end with an alphanumeric
+character, and have at least 2 characters.</p></li>
 <li><p><strong>sp_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – SAML SP (Service Provider) configuration when the project acts as the relying party to receive and accept an
 authentication assertion issued by a SAML identity provider.</p></li>
 <li><p><strong>tenant</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the tenant where this inbound SAML config resource exists</p></li>
@@ -868,22 +904,28 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_gcp.identityplatform.TenantOauthIdpConfig">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.identityplatform.</code><code class="sig-name descname">TenantOauthIdpConfig</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">client_id=None</em>, <em class="sig-param">client_secret=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">issuer=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">tenant=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.identityplatform.TenantOauthIdpConfig" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a TenantOauthIdpConfig resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] client_id: The client id of an OAuth client.
-:param pulumi.Input[str] client_secret: The client secret of the OAuth client, to enable OIDC code flow.
-:param pulumi.Input[str] display_name: Human friendly display name.
-:param pulumi.Input[bool] enabled: If this config allows users to sign in with the provider.
-:param pulumi.Input[str] issuer: For OIDC Idps, the issuer identifier.
-:param pulumi.Input[str] name: The name of the OauthIdpConfig. Must start with ‘oidc.’.
-:param pulumi.Input[str] project: The ID of the project in which the resource belongs.</p>
+<dd><p>OIDC IdP configuration for a Identity Toolkit project within a tenant.</p>
+<p>You must enable the
+<a class="reference external" href="https://console.cloud.google.com/marketplace/details/google-cloud-platform/customer-identity">Google Identity Platform</a> in
+the marketplace prior to using this resource.</p>
 <blockquote>
-<div><p>If it is not provided, the provider project is used.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/identity_platform_tenant_oauth_idp_config.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/identity_platform_tenant_oauth_idp_config.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>tenant</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the tenant where this OIDC IDP configuration resource exists</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>client_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The client id of an OAuth client.</p></li>
+<li><p><strong>client_secret</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The client secret of the OAuth client, to enable OIDC code flow.</p></li>
+<li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human friendly display name.</p></li>
+<li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If this config allows users to sign in with the provider.</p></li>
+<li><p><strong>issuer</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – For OIDC Idps, the issuer identifier.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the OauthIdpConfig. Must start with ‘oidc.’.</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p></li>
+<li><p><strong>tenant</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the tenant where this OIDC IDP configuration resource exists</p></li>
+</ul>
 </dd>
 </dl>
 <dl class="attribute">

@@ -34,6 +34,8 @@ export namespace Components {
     'selection': ChooserKey;
     'type': ChooserType;
   }
+  interface PulumiExample {}
+  interface PulumiExamples {}
   interface PulumiRoot {}
 }
 
@@ -52,6 +54,18 @@ declare global {
     new (): HTMLPulumiChooserElement;
   };
 
+  interface HTMLPulumiExampleElement extends Components.PulumiExample, HTMLStencilElement {}
+  var HTMLPulumiExampleElement: {
+    prototype: HTMLPulumiExampleElement;
+    new (): HTMLPulumiExampleElement;
+  };
+
+  interface HTMLPulumiExamplesElement extends Components.PulumiExamples, HTMLStencilElement {}
+  var HTMLPulumiExamplesElement: {
+    prototype: HTMLPulumiExamplesElement;
+    new (): HTMLPulumiExamplesElement;
+  };
+
   interface HTMLPulumiRootElement extends Components.PulumiRoot, HTMLStencilElement {}
   var HTMLPulumiRootElement: {
     prototype: HTMLPulumiRootElement;
@@ -60,6 +74,8 @@ declare global {
   interface HTMLElementTagNameMap {
     'pulumi-choosable': HTMLPulumiChoosableElement;
     'pulumi-chooser': HTMLPulumiChooserElement;
+    'pulumi-example': HTMLPulumiExampleElement;
+    'pulumi-examples': HTMLPulumiExamplesElement;
     'pulumi-root': HTMLPulumiRootElement;
   }
 }
@@ -79,6 +95,8 @@ declare namespace LocalJSX {
     'selection'?: ChooserKey;
     'type'?: ChooserType;
   }
+  interface PulumiExample {}
+  interface PulumiExamples {}
   interface PulumiRoot {
     'onRendered'?: (event: CustomEvent<any>) => void;
   }
@@ -86,6 +104,8 @@ declare namespace LocalJSX {
   interface IntrinsicElements {
     'pulumi-choosable': PulumiChoosable;
     'pulumi-chooser': PulumiChooser;
+    'pulumi-example': PulumiExample;
+    'pulumi-examples': PulumiExamples;
     'pulumi-root': PulumiRoot;
   }
 }
@@ -98,6 +118,8 @@ declare module "@stencil/core" {
     interface IntrinsicElements {
       'pulumi-choosable': LocalJSX.PulumiChoosable & JSXBase.HTMLAttributes<HTMLPulumiChoosableElement>;
       'pulumi-chooser': LocalJSX.PulumiChooser & JSXBase.HTMLAttributes<HTMLPulumiChooserElement>;
+      'pulumi-example': LocalJSX.PulumiExample & JSXBase.HTMLAttributes<HTMLPulumiExampleElement>;
+      'pulumi-examples': LocalJSX.PulumiExamples & JSXBase.HTMLAttributes<HTMLPulumiExamplesElement>;
       'pulumi-root': LocalJSX.PulumiRoot & JSXBase.HTMLAttributes<HTMLPulumiRootElement>;
     }
   }

@@ -1,0 +1,283 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class NodeConfigStatus
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class NodeConfigStatus
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.NodeConfigStatus">
+  
+  <h1 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_NodeConfigStatus" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.NodeConfigStatus" class="text-break">Class NodeConfigStatus
+  </h1>
+  <div class="markdown level0 summary"><p>NodeConfigStatus describes the status of the config assigned by Node.Spec.ConfigSource.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">NodeConfigStatus</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.html">Pulumi.Kubernetes.Types.Outputs.Core.V1</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.Kubernetes.dll</h6>
+  <h5 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_NodeConfigStatus_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class NodeConfigStatus</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L17570">View Source</a>
+  </span>
+  <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_NodeConfigStatus_Active" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.NodeConfigStatus.Active">Active</h4>
+  <div class="markdown level1 summary"><p>Active reports the checkpointed config the node is actively using. Active will represent
+either the current version of the Assigned config, or the current LastKnownGood config,
+depending on whether attempting to use the Assigned config results in an error.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly NodeConfigSource Active</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.NodeConfigSource.html">NodeConfigSource</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L17581">View Source</a>
+  </span>
+  <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_NodeConfigStatus_Assigned" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.NodeConfigStatus.Assigned">Assigned</h4>
+  <div class="markdown level1 summary"><p>Assigned reports the checkpointed config the node will try to use. When
+Node.Spec.ConfigSource is updated, the node checkpoints the associated config payload to
+local disk, along with a record indicating intended config. The node refers to this
+record to choose its config checkpoint, and reports this record in Assigned. Assigned
+only updates in the status after the record has been checkpointed to disk. When the
+Kubelet is restarted, it tries to make the Assigned config the Active config by loading
+and validating the checkpointed payload identified by Assigned.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly NodeConfigSource Assigned</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.NodeConfigSource.html">NodeConfigSource</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L17597">View Source</a>
+  </span>
+  <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_NodeConfigStatus_Error" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.NodeConfigStatus.Error">Error</h4>
+  <div class="markdown level1 summary"><p>Error describes any problems reconciling the Spec.ConfigSource to the Active config.
+Errors may occur, for example, attempting to checkpoint Spec.ConfigSource to the local
+Assigned record, attempting to checkpoint the payload associated with Spec.ConfigSource,
+attempting to load or validate the Assigned config, etc. Errors may occur at different
+points while syncing config. Earlier errors (e.g. download or checkpointing errors) will
+not result in a rollback to LastKnownGood, and may resolve across Kubelet retries. Later
+errors (e.g. loading or validating a checkpointed config) will result in a rollback to
+LastKnownGood. In the latter case, it is usually possible to resolve the error by fixing
+the config assigned in Spec.ConfigSource. You can find additional information for
+debugging by searching the error message in the Kubelet log. Error is a human-readable
+description of the error state; machines can check whether or not Error is empty, but
+should not rely on the stability of the Error text across Kubelet versions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly string Error</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L17611">View Source</a>
+  </span>
+  <h4 id="Pulumi_Kubernetes_Types_Outputs_Core_V1_NodeConfigStatus_LastKnownGood" data-uid="Pulumi.Kubernetes.Types.Outputs.Core.V1.NodeConfigStatus.LastKnownGood">LastKnownGood</h4>
+  <div class="markdown level1 summary"><p>LastKnownGood reports the checkpointed config the node will fall back to when it
+encounters an error attempting to use the Assigned config. The Assigned config becomes
+the LastKnownGood config when the node determines that the Assigned config is stable and
+correct. This is currently implemented as a 10-minute soak period starting when the
+local record of Assigned config is updated. If the Assigned config is Active at the end
+of this period, it becomes the LastKnownGood. Note that if Spec.ConfigSource is reset to
+nil (use local defaults), the LastKnownGood is also immediately reset to nil, because
+the local default config is always assumed good. You should not make assumptions about
+the node's method of determining config stability and correctness, as this may change or
+become configurable in the future.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly NodeConfigSource LastKnownGood</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Kubernetes.Types.Outputs.Core.V1.NodeConfigSource.html">NodeConfigSource</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/master/sdk/dotnet/Types/Output.cs/#L17562" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

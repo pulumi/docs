@@ -1,0 +1,1315 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Realm
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Realm
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Keycloak.Realm">
+  
+  <h1 id="Pulumi_Keycloak_Realm" data-uid="Pulumi.Keycloak.Realm" class="text-break">Class Realm
+  </h1>
+  <div class="markdown level0 summary"><blockquote>
+<p>This content is derived from <a href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/realm.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/realm.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Realm</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Keycloak.html">Pulumi.Keycloak</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.Keycloak.dll</h6>
+  <h5 id="Pulumi_Keycloak_Realm_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Realm : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Realm.cs/#L173">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Realm__ctor_" data-uid="Pulumi.Keycloak.Realm.#ctor*"></a>
+  <h4 id="Pulumi_Keycloak_Realm__ctor_System_String_Pulumi_Keycloak_RealmArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Keycloak.Realm.#ctor(System.String,Pulumi.Keycloak.RealmArgs,System.Nullable{CustomResourceOptions})">Realm(String, RealmArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Create a Realm resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Realm(string name, RealmArgs args, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Keycloak.RealmArgs.html">RealmArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Realm.cs/#L16">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Realm_AccessCodeLifespan_" data-uid="Pulumi.Keycloak.Realm.AccessCodeLifespan*"></a>
+  <h4 id="Pulumi_Keycloak_Realm_AccessCodeLifespan" data-uid="Pulumi.Keycloak.Realm.AccessCodeLifespan">AccessCodeLifespan</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; AccessCodeLifespan { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Realm.cs/#L19">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Realm_AccessCodeLifespanLogin_" data-uid="Pulumi.Keycloak.Realm.AccessCodeLifespanLogin*"></a>
+  <h4 id="Pulumi_Keycloak_Realm_AccessCodeLifespanLogin" data-uid="Pulumi.Keycloak.Realm.AccessCodeLifespanLogin">AccessCodeLifespanLogin</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; AccessCodeLifespanLogin { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Realm.cs/#L22">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Realm_AccessCodeLifespanUserAction_" data-uid="Pulumi.Keycloak.Realm.AccessCodeLifespanUserAction*"></a>
+  <h4 id="Pulumi_Keycloak_Realm_AccessCodeLifespanUserAction" data-uid="Pulumi.Keycloak.Realm.AccessCodeLifespanUserAction">AccessCodeLifespanUserAction</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; AccessCodeLifespanUserAction { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Realm.cs/#L25">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Realm_AccessTokenLifespan_" data-uid="Pulumi.Keycloak.Realm.AccessTokenLifespan*"></a>
+  <h4 id="Pulumi_Keycloak_Realm_AccessTokenLifespan" data-uid="Pulumi.Keycloak.Realm.AccessTokenLifespan">AccessTokenLifespan</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; AccessTokenLifespan { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Realm.cs/#L28">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Realm_AccessTokenLifespanForImplicitFlow_" data-uid="Pulumi.Keycloak.Realm.AccessTokenLifespanForImplicitFlow*"></a>
+  <h4 id="Pulumi_Keycloak_Realm_AccessTokenLifespanForImplicitFlow" data-uid="Pulumi.Keycloak.Realm.AccessTokenLifespanForImplicitFlow">AccessTokenLifespanForImplicitFlow</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; AccessTokenLifespanForImplicitFlow { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Realm.cs/#L31">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Realm_AccountTheme_" data-uid="Pulumi.Keycloak.Realm.AccountTheme*"></a>
+  <h4 id="Pulumi_Keycloak_Realm_AccountTheme" data-uid="Pulumi.Keycloak.Realm.AccountTheme">AccountTheme</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; AccountTheme { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Realm.cs/#L34">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Realm_ActionTokenGeneratedByAdminLifespan_" data-uid="Pulumi.Keycloak.Realm.ActionTokenGeneratedByAdminLifespan*"></a>
+  <h4 id="Pulumi_Keycloak_Realm_ActionTokenGeneratedByAdminLifespan" data-uid="Pulumi.Keycloak.Realm.ActionTokenGeneratedByAdminLifespan">ActionTokenGeneratedByAdminLifespan</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ActionTokenGeneratedByAdminLifespan { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Realm.cs/#L37">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Realm_ActionTokenGeneratedByUserLifespan_" data-uid="Pulumi.Keycloak.Realm.ActionTokenGeneratedByUserLifespan*"></a>
+  <h4 id="Pulumi_Keycloak_Realm_ActionTokenGeneratedByUserLifespan" data-uid="Pulumi.Keycloak.Realm.ActionTokenGeneratedByUserLifespan">ActionTokenGeneratedByUserLifespan</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ActionTokenGeneratedByUserLifespan { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Realm.cs/#L40">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Realm_AdminTheme_" data-uid="Pulumi.Keycloak.Realm.AdminTheme*"></a>
+  <h4 id="Pulumi_Keycloak_Realm_AdminTheme" data-uid="Pulumi.Keycloak.Realm.AdminTheme">AdminTheme</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; AdminTheme { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Realm.cs/#L43">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Realm_Attributes_" data-uid="Pulumi.Keycloak.Realm.Attributes*"></a>
+  <h4 id="Pulumi_Keycloak_Realm_Attributes" data-uid="Pulumi.Keycloak.Realm.Attributes">Attributes</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableDictionary&lt;string, object&gt;?&gt; Attributes { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">ImmutableDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Realm.cs/#L49">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Realm_BrowserFlow_" data-uid="Pulumi.Keycloak.Realm.BrowserFlow*"></a>
+  <h4 id="Pulumi_Keycloak_Realm_BrowserFlow" data-uid="Pulumi.Keycloak.Realm.BrowserFlow">BrowserFlow</h4>
+  <div class="markdown level1 summary"><p>Which flow should be used for BrowserFlow</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; BrowserFlow { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Realm.cs/#L55">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Realm_ClientAuthenticationFlow_" data-uid="Pulumi.Keycloak.Realm.ClientAuthenticationFlow*"></a>
+  <h4 id="Pulumi_Keycloak_Realm_ClientAuthenticationFlow" data-uid="Pulumi.Keycloak.Realm.ClientAuthenticationFlow">ClientAuthenticationFlow</h4>
+  <div class="markdown level1 summary"><p>Which flow should be used for ClientAuthenticationFlow</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ClientAuthenticationFlow { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Realm.cs/#L61">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Realm_DirectGrantFlow_" data-uid="Pulumi.Keycloak.Realm.DirectGrantFlow*"></a>
+  <h4 id="Pulumi_Keycloak_Realm_DirectGrantFlow" data-uid="Pulumi.Keycloak.Realm.DirectGrantFlow">DirectGrantFlow</h4>
+  <div class="markdown level1 summary"><p>Which flow should be used for DirectGrantFlow</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; DirectGrantFlow { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Realm.cs/#L64">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Realm_DisplayName_" data-uid="Pulumi.Keycloak.Realm.DisplayName*"></a>
+  <h4 id="Pulumi_Keycloak_Realm_DisplayName" data-uid="Pulumi.Keycloak.Realm.DisplayName">DisplayName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; DisplayName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Realm.cs/#L67">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Realm_DisplayNameHtml_" data-uid="Pulumi.Keycloak.Realm.DisplayNameHtml*"></a>
+  <h4 id="Pulumi_Keycloak_Realm_DisplayNameHtml" data-uid="Pulumi.Keycloak.Realm.DisplayNameHtml">DisplayNameHtml</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; DisplayNameHtml { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Realm.cs/#L73">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Realm_DockerAuthenticationFlow_" data-uid="Pulumi.Keycloak.Realm.DockerAuthenticationFlow*"></a>
+  <h4 id="Pulumi_Keycloak_Realm_DockerAuthenticationFlow" data-uid="Pulumi.Keycloak.Realm.DockerAuthenticationFlow">DockerAuthenticationFlow</h4>
+  <div class="markdown level1 summary"><p>Which flow should be used for DockerAuthenticationFlow</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; DockerAuthenticationFlow { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Realm.cs/#L76">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Realm_DuplicateEmailsAllowed_" data-uid="Pulumi.Keycloak.Realm.DuplicateEmailsAllowed*"></a>
+  <h4 id="Pulumi_Keycloak_Realm_DuplicateEmailsAllowed" data-uid="Pulumi.Keycloak.Realm.DuplicateEmailsAllowed">DuplicateEmailsAllowed</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool&gt; DuplicateEmailsAllowed { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Realm.cs/#L79">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Realm_EditUsernameAllowed_" data-uid="Pulumi.Keycloak.Realm.EditUsernameAllowed*"></a>
+  <h4 id="Pulumi_Keycloak_Realm_EditUsernameAllowed" data-uid="Pulumi.Keycloak.Realm.EditUsernameAllowed">EditUsernameAllowed</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool&gt; EditUsernameAllowed { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Realm.cs/#L82">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Realm_EmailTheme_" data-uid="Pulumi.Keycloak.Realm.EmailTheme*"></a>
+  <h4 id="Pulumi_Keycloak_Realm_EmailTheme" data-uid="Pulumi.Keycloak.Realm.EmailTheme">EmailTheme</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; EmailTheme { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Realm.cs/#L85">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Realm_Enabled_" data-uid="Pulumi.Keycloak.Realm.Enabled*"></a>
+  <h4 id="Pulumi_Keycloak_Realm_Enabled" data-uid="Pulumi.Keycloak.Realm.Enabled">Enabled</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; Enabled { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Realm.cs/#L88">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Realm_Internationalization_" data-uid="Pulumi.Keycloak.Realm.Internationalization*"></a>
+  <h4 id="Pulumi_Keycloak_Realm_Internationalization" data-uid="Pulumi.Keycloak.Realm.Internationalization">Internationalization</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;RealmInternationalization&gt; Internationalization { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Keycloak.Outputs.RealmInternationalization.html">RealmInternationalization</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Realm.cs/#L91">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Realm_LoginTheme_" data-uid="Pulumi.Keycloak.Realm.LoginTheme*"></a>
+  <h4 id="Pulumi_Keycloak_Realm_LoginTheme" data-uid="Pulumi.Keycloak.Realm.LoginTheme">LoginTheme</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; LoginTheme { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Realm.cs/#L94">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Realm_LoginWithEmailAllowed_" data-uid="Pulumi.Keycloak.Realm.LoginWithEmailAllowed*"></a>
+  <h4 id="Pulumi_Keycloak_Realm_LoginWithEmailAllowed" data-uid="Pulumi.Keycloak.Realm.LoginWithEmailAllowed">LoginWithEmailAllowed</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool&gt; LoginWithEmailAllowed { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Realm.cs/#L97">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Realm_OfflineSessionIdleTimeout_" data-uid="Pulumi.Keycloak.Realm.OfflineSessionIdleTimeout*"></a>
+  <h4 id="Pulumi_Keycloak_Realm_OfflineSessionIdleTimeout" data-uid="Pulumi.Keycloak.Realm.OfflineSessionIdleTimeout">OfflineSessionIdleTimeout</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; OfflineSessionIdleTimeout { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Realm.cs/#L100">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Realm_OfflineSessionMaxLifespan_" data-uid="Pulumi.Keycloak.Realm.OfflineSessionMaxLifespan*"></a>
+  <h4 id="Pulumi_Keycloak_Realm_OfflineSessionMaxLifespan" data-uid="Pulumi.Keycloak.Realm.OfflineSessionMaxLifespan">OfflineSessionMaxLifespan</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; OfflineSessionMaxLifespan { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Realm.cs/#L108">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Realm_PasswordPolicy_" data-uid="Pulumi.Keycloak.Realm.PasswordPolicy*"></a>
+  <h4 id="Pulumi_Keycloak_Realm_PasswordPolicy" data-uid="Pulumi.Keycloak.Realm.PasswordPolicy">PasswordPolicy</h4>
+  <div class="markdown level1 summary"><p>String that represents the passwordPolicies that are in place. Each policy is separated with &quot; and &quot;.
+Supported policies can be found in the server-info providers page. example: &quot;upperCase(1) and length(8) and
+forceExpiredPasswordChange(365) and notUsername(undefined)&quot;</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; PasswordPolicy { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Realm.cs/#L111">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Realm_RealmName_" data-uid="Pulumi.Keycloak.Realm.RealmName*"></a>
+  <h4 id="Pulumi_Keycloak_Realm_RealmName" data-uid="Pulumi.Keycloak.Realm.RealmName">RealmName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; RealmName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Realm.cs/#L114">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Realm_RefreshTokenMaxReuse_" data-uid="Pulumi.Keycloak.Realm.RefreshTokenMaxReuse*"></a>
+  <h4 id="Pulumi_Keycloak_Realm_RefreshTokenMaxReuse" data-uid="Pulumi.Keycloak.Realm.RefreshTokenMaxReuse">RefreshTokenMaxReuse</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; RefreshTokenMaxReuse { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Realm.cs/#L117">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Realm_RegistrationAllowed_" data-uid="Pulumi.Keycloak.Realm.RegistrationAllowed*"></a>
+  <h4 id="Pulumi_Keycloak_Realm_RegistrationAllowed" data-uid="Pulumi.Keycloak.Realm.RegistrationAllowed">RegistrationAllowed</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool&gt; RegistrationAllowed { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Realm.cs/#L120">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Realm_RegistrationEmailAsUsername_" data-uid="Pulumi.Keycloak.Realm.RegistrationEmailAsUsername*"></a>
+  <h4 id="Pulumi_Keycloak_Realm_RegistrationEmailAsUsername" data-uid="Pulumi.Keycloak.Realm.RegistrationEmailAsUsername">RegistrationEmailAsUsername</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool&gt; RegistrationEmailAsUsername { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Realm.cs/#L126">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Realm_RegistrationFlow_" data-uid="Pulumi.Keycloak.Realm.RegistrationFlow*"></a>
+  <h4 id="Pulumi_Keycloak_Realm_RegistrationFlow" data-uid="Pulumi.Keycloak.Realm.RegistrationFlow">RegistrationFlow</h4>
+  <div class="markdown level1 summary"><p>Which flow should be used for RegistrationFlow</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; RegistrationFlow { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Realm.cs/#L129">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Realm_RememberMe_" data-uid="Pulumi.Keycloak.Realm.RememberMe*"></a>
+  <h4 id="Pulumi_Keycloak_Realm_RememberMe" data-uid="Pulumi.Keycloak.Realm.RememberMe">RememberMe</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool&gt; RememberMe { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Realm.cs/#L135">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Realm_ResetCredentialsFlow_" data-uid="Pulumi.Keycloak.Realm.ResetCredentialsFlow*"></a>
+  <h4 id="Pulumi_Keycloak_Realm_ResetCredentialsFlow" data-uid="Pulumi.Keycloak.Realm.ResetCredentialsFlow">ResetCredentialsFlow</h4>
+  <div class="markdown level1 summary"><p>Which flow should be used for ResetCredentialsFlow</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ResetCredentialsFlow { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Realm.cs/#L138">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Realm_ResetPasswordAllowed_" data-uid="Pulumi.Keycloak.Realm.ResetPasswordAllowed*"></a>
+  <h4 id="Pulumi_Keycloak_Realm_ResetPasswordAllowed" data-uid="Pulumi.Keycloak.Realm.ResetPasswordAllowed">ResetPasswordAllowed</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool&gt; ResetPasswordAllowed { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Realm.cs/#L141">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Realm_RevokeRefreshToken_" data-uid="Pulumi.Keycloak.Realm.RevokeRefreshToken*"></a>
+  <h4 id="Pulumi_Keycloak_Realm_RevokeRefreshToken" data-uid="Pulumi.Keycloak.Realm.RevokeRefreshToken">RevokeRefreshToken</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; RevokeRefreshToken { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Realm.cs/#L144">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Realm_SecurityDefenses_" data-uid="Pulumi.Keycloak.Realm.SecurityDefenses*"></a>
+  <h4 id="Pulumi_Keycloak_Realm_SecurityDefenses" data-uid="Pulumi.Keycloak.Realm.SecurityDefenses">SecurityDefenses</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;RealmSecurityDefenses&gt; SecurityDefenses { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Keycloak.Outputs.RealmSecurityDefenses.html">RealmSecurityDefenses</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Realm.cs/#L147">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Realm_SmtpServer_" data-uid="Pulumi.Keycloak.Realm.SmtpServer*"></a>
+  <h4 id="Pulumi_Keycloak_Realm_SmtpServer" data-uid="Pulumi.Keycloak.Realm.SmtpServer">SmtpServer</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;RealmSmtpServer&gt; SmtpServer { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<a class="xref" href="Pulumi.Keycloak.Outputs.RealmSmtpServer.html">RealmSmtpServer</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Realm.cs/#L153">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Realm_SslRequired_" data-uid="Pulumi.Keycloak.Realm.SslRequired*"></a>
+  <h4 id="Pulumi_Keycloak_Realm_SslRequired" data-uid="Pulumi.Keycloak.Realm.SslRequired">SslRequired</h4>
+  <div class="markdown level1 summary"><p>SSL Required: Values can be 'none', 'external' or 'all'.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SslRequired { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Realm.cs/#L156">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Realm_SsoSessionIdleTimeout_" data-uid="Pulumi.Keycloak.Realm.SsoSessionIdleTimeout*"></a>
+  <h4 id="Pulumi_Keycloak_Realm_SsoSessionIdleTimeout" data-uid="Pulumi.Keycloak.Realm.SsoSessionIdleTimeout">SsoSessionIdleTimeout</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SsoSessionIdleTimeout { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Realm.cs/#L159">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Realm_SsoSessionMaxLifespan_" data-uid="Pulumi.Keycloak.Realm.SsoSessionMaxLifespan*"></a>
+  <h4 id="Pulumi_Keycloak_Realm_SsoSessionMaxLifespan" data-uid="Pulumi.Keycloak.Realm.SsoSessionMaxLifespan">SsoSessionMaxLifespan</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SsoSessionMaxLifespan { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Realm.cs/#L162">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Realm_VerifyEmail_" data-uid="Pulumi.Keycloak.Realm.VerifyEmail*"></a>
+  <h4 id="Pulumi_Keycloak_Realm_VerifyEmail" data-uid="Pulumi.Keycloak.Realm.VerifyEmail">VerifyEmail</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool&gt; VerifyEmail { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Realm.cs/#L203">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Realm_Get_" data-uid="Pulumi.Keycloak.Realm.Get*"></a>
+  <h4 id="Pulumi_Keycloak_Realm_Get_System_String_Input_System_String__Pulumi_Keycloak_RealmState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Keycloak.Realm.Get(System.String,Input{System.String},Pulumi.Keycloak.RealmState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, RealmState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Get an existing Realm resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Realm Get(string name, Input&lt;string&gt; id, RealmState state = null, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Keycloak.RealmState.html">RealmState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Keycloak.Realm.html">Realm</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Realm.cs/#L14" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

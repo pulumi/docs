@@ -31,6 +31,7 @@ PACKAGES=(
   "pulumi_okta"
   "pulumi_openstack"
   "pulumi_packet"
+  "pulumi_policy"
   "pulumi_postgresql"
   "pulumi_rabbitmq"
   "pulumi_rancher2"

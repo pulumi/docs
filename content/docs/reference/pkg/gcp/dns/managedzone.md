@@ -1,0 +1,2532 @@
+
+---
+title: "ManagedZone"
+block_external_search_index: true
+---
+
+
+
+A zone is a subtree of the DNS namespace under one administrative
+responsibility. A ManagedZone is a resource that represents a DNS zone
+hosted by the Cloud DNS service.
+
+
+To get more information about ManagedZone, see:
+
+* [API documentation](https://cloud.google.com/dns/api/v1/managedZones)
+* How-to Guides
+    * [Managing Zones](https://cloud.google.com/dns/zones/)
+
+> This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/dns_managed_zone.html.markdown.
+
+
+
+## Create a ManagedZone Resource
+
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+
+{{% choosable language nodejs %}}
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dns/#ManagedZone">ManagedZone</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dns/#ManagedZoneArgs">ManagedZoneArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">ManagedZone</span><span class="p">(resource_name, opts=None, </span>description=None<span class="p">, </span>dns_name=None<span class="p">, </span>dnssec_config=None<span class="p">, </span>forwarding_config=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>peering_config=None<span class="p">, </span>private_visibility_config=None<span class="p">, </span>project=None<span class="p">, </span>reverse_lookup=None<span class="p">, </span>visibility=None<span class="p">, __props__=None);</span></code></pre></div>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewManagedZone<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/dns?tab=doc#ManagedZoneArgs">ManagedZoneArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/dns?tab=doc#ManagedZone">ManagedZone</a></span>, error)</span></code></pre></div>
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dns.ManagedZone.html">ManagedZone</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dns.ManagedZoneArgs.html">ManagedZoneArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The arguments to use to populate this resource's properties.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The arguments to use to populate this resource's properties.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resource.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The arguments to use to populate this resource's properties.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
+
+{{% /choosable %}}
+
+#### Resource Arguments
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}A textual description field. Defaults to 'Managed by Terraform'.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Dns<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The DNS name of this managed zone, for instance "example.com.".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Dnssec<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzonednssecconfig">Managed<wbr>Zone<wbr>Dnssec<wbr>Config<wbr>Args?</a></span>
+    </dt>
+    <dd>{{% md %}}DNSSEC configuration
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Forwarding<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzoneforwardingconfig">Managed<wbr>Zone<wbr>Forwarding<wbr>Config<wbr>Args?</a></span>
+    </dt>
+    <dd>{{% md %}}The presence for this field indicates that outbound forwarding is enabled for this zone. The value of this field
+contains the set of destinations to forward to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Labels</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary<string, string>?</span>
+    </dt>
+    <dd>{{% md %}}A set of key/value label pairs to assign to this ManagedZone.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}User assigned name for this resource. Must be unique within the project.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Peering<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzonepeeringconfig">Managed<wbr>Zone<wbr>Peering<wbr>Config<wbr>Args?</a></span>
+    </dt>
+    <dd>{{% md %}}The presence of this field indicates that DNS Peering is enabled for this zone. The value of this field contains the
+network to peer with.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Private<wbr>Visibility<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzoneprivatevisibilityconfig">Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config<wbr>Args?</a></span>
+    </dt>
+    <dd>{{% md %}}For privately visible zones, the set of Virtual Private Cloud resources that the zone is visible from.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Project</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Reverse<wbr>Lookup</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool?</span>
+    </dt>
+    <dd>{{% md %}}Specifies if this is a managed reverse lookup zone. If true, Cloud DNS will resolve reverse lookup queries using
+automatically configured records for VPC resources. This only applies to networks listed under
+'private_visibility_config'.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Visibility</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The zone's visibility: public zones are exposed to the Internet, while private zones are visible only to Virtual Private
+Cloud resources. Must be one of: 'public', 'private'.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}A textual description field. Defaults to 'Managed by Terraform'.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Dns<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The DNS name of this managed zone, for instance "example.com.".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Dnssec<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzonednssecconfig">*Managed<wbr>Zone<wbr>Dnssec<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}DNSSEC configuration
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Forwarding<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzoneforwardingconfig">*Managed<wbr>Zone<wbr>Forwarding<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The presence for this field indicates that outbound forwarding is enabled for this zone. The value of this field
+contains the set of destinations to forward to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Labels</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}A set of key/value label pairs to assign to this ManagedZone.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}User assigned name for this resource. Must be unique within the project.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Peering<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzonepeeringconfig">*Managed<wbr>Zone<wbr>Peering<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The presence of this field indicates that DNS Peering is enabled for this zone. The value of this field contains the
+network to peer with.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Private<wbr>Visibility<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzoneprivatevisibilityconfig">*Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}For privately visible zones, the set of Virtual Private Cloud resources that the zone is visible from.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Project</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Reverse<wbr>Lookup</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies if this is a managed reverse lookup zone. If true, Cloud DNS will resolve reverse lookup queries using
+automatically configured records for VPC resources. This only applies to networks listed under
+'private_visibility_config'.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Visibility</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The zone's visibility: public zones are exposed to the Internet, while private zones are visible only to Virtual Private
+Cloud resources. Must be one of: 'public', 'private'.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}A textual description field. Defaults to 'Managed by Terraform'.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>dns<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The DNS name of this managed zone, for instance "example.com.".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>dnssec<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzonednssecconfig">Managed<wbr>Zone<wbr>Dnssec<wbr>Config?</a></span>
+    </dt>
+    <dd>{{% md %}}DNSSEC configuration
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>forwarding<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzoneforwardingconfig">Managed<wbr>Zone<wbr>Forwarding<wbr>Config?</a></span>
+    </dt>
+    <dd>{{% md %}}The presence for this field indicates that outbound forwarding is enabled for this zone. The value of this field
+contains the set of destinations to forward to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>labels</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}?</span>
+    </dt>
+    <dd>{{% md %}}A set of key/value label pairs to assign to this ManagedZone.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}User assigned name for this resource. Must be unique within the project.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>peering<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzonepeeringconfig">Managed<wbr>Zone<wbr>Peering<wbr>Config?</a></span>
+    </dt>
+    <dd>{{% md %}}The presence of this field indicates that DNS Peering is enabled for this zone. The value of this field contains the
+network to peer with.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>private<wbr>Visibility<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzoneprivatevisibilityconfig">Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config?</a></span>
+    </dt>
+    <dd>{{% md %}}For privately visible zones, the set of Virtual Private Cloud resources that the zone is visible from.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>project</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>reverse<wbr>Lookup</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean?</span>
+    </dt>
+    <dd>{{% md %}}Specifies if this is a managed reverse lookup zone. If true, Cloud DNS will resolve reverse lookup queries using
+automatically configured records for VPC resources. This only applies to networks listed under
+'private_visibility_config'.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>visibility</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The zone's visibility: public zones are exposed to the Internet, while private zones are visible only to Virtual Private
+Cloud resources. Must be one of: 'public', 'private'.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A textual description field. Defaults to 'Managed by Terraform'.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>dns_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The DNS name of this managed zone, for instance "example.com.".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>dnssec_<wbr>config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzonednssecconfig">Dict[Managed<wbr>Zone<wbr>Dnssec<wbr>Config]</a></span>
+    </dt>
+    <dd>{{% md %}}DNSSEC configuration
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>forwarding_<wbr>config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzoneforwardingconfig">Dict[Managed<wbr>Zone<wbr>Forwarding<wbr>Config]</a></span>
+    </dt>
+    <dd>{{% md %}}The presence for this field indicates that outbound forwarding is enabled for this zone. The value of this field
+contains the set of destinations to forward to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>labels</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, str]</span>
+    </dt>
+    <dd>{{% md %}}A set of key/value label pairs to assign to this ManagedZone.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}User assigned name for this resource. Must be unique within the project.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>peering_<wbr>config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzonepeeringconfig">Dict[Managed<wbr>Zone<wbr>Peering<wbr>Config]</a></span>
+    </dt>
+    <dd>{{% md %}}The presence of this field indicates that DNS Peering is enabled for this zone. The value of this field contains the
+network to peer with.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>private_<wbr>visibility_<wbr>config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzoneprivatevisibilityconfig">Dict[Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config]</a></span>
+    </dt>
+    <dd>{{% md %}}For privately visible zones, the set of Virtual Private Cloud resources that the zone is visible from.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>project</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>reverse_<wbr>lookup</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies if this is a managed reverse lookup zone. If true, Cloud DNS will resolve reverse lookup queries using
+automatically configured records for VPC resources. This only applies to networks listed under
+'private_visibility_config'.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>visibility</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The zone's visibility: public zones are exposed to the Internet, while private zones are visible only to Virtual Private
+Cloud resources. Must be one of: 'public', 'private'.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+## ManagedZone Output Properties
+
+The following output properties are available:
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A textual description field. Defaults to 'Managed by Terraform'.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Dns<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The DNS name of this managed zone, for instance "example.com.".
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Dnssec<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzonednssecconfig">Managed<wbr>Zone<wbr>Dnssec<wbr>Config?</a></span>
+    </dt>
+    <dd>{{% md %}}DNSSEC configuration
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Forwarding<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzoneforwardingconfig">Managed<wbr>Zone<wbr>Forwarding<wbr>Config?</a></span>
+    </dt>
+    <dd>{{% md %}}The presence for this field indicates that outbound forwarding is enabled for this zone. The value of this field
+contains the set of destinations to forward to.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Labels</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary<string, string>?</span>
+    </dt>
+    <dd>{{% md %}}A set of key/value label pairs to assign to this ManagedZone.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}User assigned name for this resource. Must be unique within the project.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Name<wbr>Servers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List<string></span>
+    </dt>
+    <dd>{{% md %}}Delegate your managed_zone to these virtual name servers; defined by the server
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Peering<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzonepeeringconfig">Managed<wbr>Zone<wbr>Peering<wbr>Config?</a></span>
+    </dt>
+    <dd>{{% md %}}The presence of this field indicates that DNS Peering is enabled for this zone. The value of this field contains the
+network to peer with.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Private<wbr>Visibility<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzoneprivatevisibilityconfig">Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config?</a></span>
+    </dt>
+    <dd>{{% md %}}For privately visible zones, the set of Virtual Private Cloud resources that the zone is visible from.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Project</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Reverse<wbr>Lookup</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool?</span>
+    </dt>
+    <dd>{{% md %}}Specifies if this is a managed reverse lookup zone. If true, Cloud DNS will resolve reverse lookup queries using
+automatically configured records for VPC resources. This only applies to networks listed under
+'private_visibility_config'.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Visibility</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The zone's visibility: public zones are exposed to the Internet, while private zones are visible only to Virtual Private
+Cloud resources. Must be one of: 'public', 'private'.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A textual description field. Defaults to 'Managed by Terraform'.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Dns<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The DNS name of this managed zone, for instance "example.com.".
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Dnssec<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzonednssecconfig">*Managed<wbr>Zone<wbr>Dnssec<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}DNSSEC configuration
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Forwarding<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzoneforwardingconfig">*Managed<wbr>Zone<wbr>Forwarding<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The presence for this field indicates that outbound forwarding is enabled for this zone. The value of this field
+contains the set of destinations to forward to.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Labels</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}A set of key/value label pairs to assign to this ManagedZone.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}User assigned name for this resource. Must be unique within the project.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Name<wbr>Servers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Delegate your managed_zone to these virtual name servers; defined by the server
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Peering<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzonepeeringconfig">*Managed<wbr>Zone<wbr>Peering<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The presence of this field indicates that DNS Peering is enabled for this zone. The value of this field contains the
+network to peer with.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Private<wbr>Visibility<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzoneprivatevisibilityconfig">*Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}For privately visible zones, the set of Virtual Private Cloud resources that the zone is visible from.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Project</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Reverse<wbr>Lookup</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies if this is a managed reverse lookup zone. If true, Cloud DNS will resolve reverse lookup queries using
+automatically configured records for VPC resources. This only applies to networks listed under
+'private_visibility_config'.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Visibility</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The zone's visibility: public zones are exposed to the Internet, while private zones are visible only to Virtual Private
+Cloud resources. Must be one of: 'public', 'private'.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A textual description field. Defaults to 'Managed by Terraform'.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>dns<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The DNS name of this managed zone, for instance "example.com.".
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>dnssec<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzonednssecconfig">Managed<wbr>Zone<wbr>Dnssec<wbr>Config?</a></span>
+    </dt>
+    <dd>{{% md %}}DNSSEC configuration
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>forwarding<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzoneforwardingconfig">Managed<wbr>Zone<wbr>Forwarding<wbr>Config?</a></span>
+    </dt>
+    <dd>{{% md %}}The presence for this field indicates that outbound forwarding is enabled for this zone. The value of this field
+contains the set of destinations to forward to.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>labels</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}?</span>
+    </dt>
+    <dd>{{% md %}}A set of key/value label pairs to assign to this ManagedZone.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}User assigned name for this resource. Must be unique within the project.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>name<wbr>Servers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Delegate your managed_zone to these virtual name servers; defined by the server
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>peering<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzonepeeringconfig">Managed<wbr>Zone<wbr>Peering<wbr>Config?</a></span>
+    </dt>
+    <dd>{{% md %}}The presence of this field indicates that DNS Peering is enabled for this zone. The value of this field contains the
+network to peer with.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>private<wbr>Visibility<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzoneprivatevisibilityconfig">Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config?</a></span>
+    </dt>
+    <dd>{{% md %}}For privately visible zones, the set of Virtual Private Cloud resources that the zone is visible from.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>project</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>reverse<wbr>Lookup</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean?</span>
+    </dt>
+    <dd>{{% md %}}Specifies if this is a managed reverse lookup zone. If true, Cloud DNS will resolve reverse lookup queries using
+automatically configured records for VPC resources. This only applies to networks listed under
+'private_visibility_config'.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>visibility</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The zone's visibility: public zones are exposed to the Internet, while private zones are visible only to Virtual Private
+Cloud resources. Must be one of: 'public', 'private'.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A textual description field. Defaults to 'Managed by Terraform'.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>dns_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The DNS name of this managed zone, for instance "example.com.".
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>dnssec_<wbr>config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzonednssecconfig">Dict[Managed<wbr>Zone<wbr>Dnssec<wbr>Config]</a></span>
+    </dt>
+    <dd>{{% md %}}DNSSEC configuration
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>forwarding_<wbr>config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzoneforwardingconfig">Dict[Managed<wbr>Zone<wbr>Forwarding<wbr>Config]</a></span>
+    </dt>
+    <dd>{{% md %}}The presence for this field indicates that outbound forwarding is enabled for this zone. The value of this field
+contains the set of destinations to forward to.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>labels</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, str]</span>
+    </dt>
+    <dd>{{% md %}}A set of key/value label pairs to assign to this ManagedZone.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}User assigned name for this resource. Must be unique within the project.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>name_<wbr>servers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}Delegate your managed_zone to these virtual name servers; defined by the server
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>peering_<wbr>config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzonepeeringconfig">Dict[Managed<wbr>Zone<wbr>Peering<wbr>Config]</a></span>
+    </dt>
+    <dd>{{% md %}}The presence of this field indicates that DNS Peering is enabled for this zone. The value of this field contains the
+network to peer with.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>private_<wbr>visibility_<wbr>config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzoneprivatevisibilityconfig">Dict[Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config]</a></span>
+    </dt>
+    <dd>{{% md %}}For privately visible zones, the set of Virtual Private Cloud resources that the zone is visible from.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>project</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>reverse_<wbr>lookup</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies if this is a managed reverse lookup zone. If true, Cloud DNS will resolve reverse lookup queries using
+automatically configured records for VPC resources. This only applies to networks listed under
+'private_visibility_config'.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>visibility</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The zone's visibility: public zones are exposed to the Internet, while private zones are visible only to Virtual Private
+Cloud resources. Must be one of: 'public', 'private'.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+
+## Look up an Existing ManagedZone Resource
+
+Get an existing ManagedZone resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
+
+{{< chooser language "javascript,typescript,python,go,csharp  " / >}}
+
+{{% choosable language nodejs %}}
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dns/#ManagedZoneState">ManagedZoneState</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dns/#ManagedZone">ManagedZone</a></span></code></pre></div>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>description=None<span class="p">, </span>dns_name=None<span class="p">, </span>dnssec_config=None<span class="p">, </span>forwarding_config=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>name_servers=None<span class="p">, </span>peering_config=None<span class="p">, </span>private_visibility_config=None<span class="p">, </span>project=None<span class="p">, </span>reverse_lookup=None<span class="p">, </span>visibility=None<span class="p">, __props__=None);</span></code></pre></div>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetManagedZone<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/dns?tab=doc#ManagedZoneState">ManagedZoneState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/dns?tab=doc#ManagedZone">ManagedZone</a></span>, error)</span></code></pre></div>
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dns.ManagedZone.html">ManagedZone</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Dns.ManagedZoneState.html">ManagedZoneState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resulting resource.</dd>
+    <dt class="property-required" title="Required">
+        <span>id</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The <em>unique</em> provider ID of the resource to lookup.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>state</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>Any extra arguments used during the lookup.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
+
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>resource_name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resulting resource.</dd>
+    <dt class="property-required" title="Optional">
+        <span>id</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The <em>unique</em> provider ID of the resource to lookup.</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resulting resource.</dd>
+    <dt class="property-required" title="Required">
+        <span>id</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The <em>unique</em> provider ID of the resource to lookup.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>state</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>Any extra arguments used during the lookup.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+<dl class="resources-properties">
+    <dt class="property-required" title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The unique name of the resulting resource.</dd>
+    <dt class="property-required" title="Required">
+        <span>id</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>The <em>unique</em> provider ID of the resource to lookup.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>state</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>Any extra arguments used during the lookup.</dd>
+    <dt class="property-optional" title="Optional">
+        <span>opts</span>
+        <span class="property-indicator"></span>
+    </dt>
+    <dd>A bag of options that control this resource's behavior.</dd>
+</dl>
+
+{{% /choosable %}}
+
+The following state arguments are supported:
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}A textual description field. Defaults to 'Managed by Terraform'.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Dns<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The DNS name of this managed zone, for instance "example.com.".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Dnssec<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzonednssecconfig">Managed<wbr>Zone<wbr>Dnssec<wbr>Config<wbr>Args?</a></span>
+    </dt>
+    <dd>{{% md %}}DNSSEC configuration
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Forwarding<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzoneforwardingconfig">Managed<wbr>Zone<wbr>Forwarding<wbr>Config<wbr>Args?</a></span>
+    </dt>
+    <dd>{{% md %}}The presence for this field indicates that outbound forwarding is enabled for this zone. The value of this field
+contains the set of destinations to forward to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Labels</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary<string, string>?</span>
+    </dt>
+    <dd>{{% md %}}A set of key/value label pairs to assign to this ManagedZone.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}User assigned name for this resource. Must be unique within the project.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name<wbr>Servers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List<string>?</span>
+    </dt>
+    <dd>{{% md %}}Delegate your managed_zone to these virtual name servers; defined by the server
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Peering<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzonepeeringconfig">Managed<wbr>Zone<wbr>Peering<wbr>Config<wbr>Args?</a></span>
+    </dt>
+    <dd>{{% md %}}The presence of this field indicates that DNS Peering is enabled for this zone. The value of this field contains the
+network to peer with.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Private<wbr>Visibility<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzoneprivatevisibilityconfig">Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config<wbr>Args?</a></span>
+    </dt>
+    <dd>{{% md %}}For privately visible zones, the set of Virtual Private Cloud resources that the zone is visible from.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Project</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Reverse<wbr>Lookup</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool?</span>
+    </dt>
+    <dd>{{% md %}}Specifies if this is a managed reverse lookup zone. If true, Cloud DNS will resolve reverse lookup queries using
+automatically configured records for VPC resources. This only applies to networks listed under
+'private_visibility_config'.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Visibility</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The zone's visibility: public zones are exposed to the Internet, while private zones are visible only to Virtual Private
+Cloud resources. Must be one of: 'public', 'private'.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}A textual description field. Defaults to 'Managed by Terraform'.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Dns<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The DNS name of this managed zone, for instance "example.com.".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Dnssec<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzonednssecconfig">*Managed<wbr>Zone<wbr>Dnssec<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}DNSSEC configuration
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Forwarding<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzoneforwardingconfig">*Managed<wbr>Zone<wbr>Forwarding<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The presence for this field indicates that outbound forwarding is enabled for this zone. The value of this field
+contains the set of destinations to forward to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Labels</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}A set of key/value label pairs to assign to this ManagedZone.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}User assigned name for this resource. Must be unique within the project.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name<wbr>Servers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Delegate your managed_zone to these virtual name servers; defined by the server
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Peering<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzonepeeringconfig">*Managed<wbr>Zone<wbr>Peering<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The presence of this field indicates that DNS Peering is enabled for this zone. The value of this field contains the
+network to peer with.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Private<wbr>Visibility<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzoneprivatevisibilityconfig">*Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}For privately visible zones, the set of Virtual Private Cloud resources that the zone is visible from.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Project</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Reverse<wbr>Lookup</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies if this is a managed reverse lookup zone. If true, Cloud DNS will resolve reverse lookup queries using
+automatically configured records for VPC resources. This only applies to networks listed under
+'private_visibility_config'.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Visibility</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The zone's visibility: public zones are exposed to the Internet, while private zones are visible only to Virtual Private
+Cloud resources. Must be one of: 'public', 'private'.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}A textual description field. Defaults to 'Managed by Terraform'.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>dns<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The DNS name of this managed zone, for instance "example.com.".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>dnssec<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzonednssecconfig">Managed<wbr>Zone<wbr>Dnssec<wbr>Config?</a></span>
+    </dt>
+    <dd>{{% md %}}DNSSEC configuration
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>forwarding<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzoneforwardingconfig">Managed<wbr>Zone<wbr>Forwarding<wbr>Config?</a></span>
+    </dt>
+    <dd>{{% md %}}The presence for this field indicates that outbound forwarding is enabled for this zone. The value of this field
+contains the set of destinations to forward to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>labels</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}?</span>
+    </dt>
+    <dd>{{% md %}}A set of key/value label pairs to assign to this ManagedZone.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}User assigned name for this resource. Must be unique within the project.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name<wbr>Servers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]?</span>
+    </dt>
+    <dd>{{% md %}}Delegate your managed_zone to these virtual name servers; defined by the server
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>peering<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzonepeeringconfig">Managed<wbr>Zone<wbr>Peering<wbr>Config?</a></span>
+    </dt>
+    <dd>{{% md %}}The presence of this field indicates that DNS Peering is enabled for this zone. The value of this field contains the
+network to peer with.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>private<wbr>Visibility<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzoneprivatevisibilityconfig">Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config?</a></span>
+    </dt>
+    <dd>{{% md %}}For privately visible zones, the set of Virtual Private Cloud resources that the zone is visible from.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>project</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>reverse<wbr>Lookup</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean?</span>
+    </dt>
+    <dd>{{% md %}}Specifies if this is a managed reverse lookup zone. If true, Cloud DNS will resolve reverse lookup queries using
+automatically configured records for VPC resources. This only applies to networks listed under
+'private_visibility_config'.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>visibility</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The zone's visibility: public zones are exposed to the Internet, while private zones are visible only to Virtual Private
+Cloud resources. Must be one of: 'public', 'private'.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A textual description field. Defaults to 'Managed by Terraform'.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>dns_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The DNS name of this managed zone, for instance "example.com.".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>dnssec_<wbr>config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzonednssecconfig">Dict[Managed<wbr>Zone<wbr>Dnssec<wbr>Config]</a></span>
+    </dt>
+    <dd>{{% md %}}DNSSEC configuration
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>forwarding_<wbr>config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzoneforwardingconfig">Dict[Managed<wbr>Zone<wbr>Forwarding<wbr>Config]</a></span>
+    </dt>
+    <dd>{{% md %}}The presence for this field indicates that outbound forwarding is enabled for this zone. The value of this field
+contains the set of destinations to forward to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>labels</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, str]</span>
+    </dt>
+    <dd>{{% md %}}A set of key/value label pairs to assign to this ManagedZone.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}User assigned name for this resource. Must be unique within the project.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name_<wbr>servers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}Delegate your managed_zone to these virtual name servers; defined by the server
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>peering_<wbr>config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzonepeeringconfig">Dict[Managed<wbr>Zone<wbr>Peering<wbr>Config]</a></span>
+    </dt>
+    <dd>{{% md %}}The presence of this field indicates that DNS Peering is enabled for this zone. The value of this field contains the
+network to peer with.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>private_<wbr>visibility_<wbr>config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzoneprivatevisibilityconfig">Dict[Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config]</a></span>
+    </dt>
+    <dd>{{% md %}}For privately visible zones, the set of Virtual Private Cloud resources that the zone is visible from.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>project</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>reverse_<wbr>lookup</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies if this is a managed reverse lookup zone. If true, Cloud DNS will resolve reverse lookup queries using
+automatically configured records for VPC resources. This only applies to networks listed under
+'private_visibility_config'.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>visibility</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The zone's visibility: public zones are exposed to the Internet, while private zones are visible only to Virtual Private
+Cloud resources. Must be one of: 'public', 'private'.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+
+
+
+## Supporting Types
+
+<h4>Managed<wbr>Zone<wbr>Dnssec<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ManagedZoneDnssecConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ManagedZoneDnssecConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/dns?tab=doc#ManagedZoneDnssecConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/dns?tab=doc#ManagedZoneDnssecConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Default<wbr>Key<wbr>Specs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzonednssecconfigdefaultkeyspec">List&lt;Managed<wbr>Zone<wbr>Dnssec<wbr>Config<wbr>Default<wbr>Key<wbr>Spec<wbr>Args&gt;?</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Kind</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Non<wbr>Existence</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>State</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Default<wbr>Key<wbr>Specs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzonednssecconfigdefaultkeyspec">[]Managed<wbr>Zone<wbr>Dnssec<wbr>Config<wbr>Default<wbr>Key<wbr>Spec</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Kind</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Non<wbr>Existence</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>State</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>default<wbr>Key<wbr>Specs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzonednssecconfigdefaultkeyspec">Managed<wbr>Zone<wbr>Dnssec<wbr>Config<wbr>Default<wbr>Key<wbr>Spec[]?</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>kind</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>non<wbr>Existence</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>state</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>default<wbr>Key<wbr>Specs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzonednssecconfigdefaultkeyspec">List[Managed<wbr>Zone<wbr>Dnssec<wbr>Config<wbr>Default<wbr>Key<wbr>Spec]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>kind</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>non<wbr>Existence</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>state</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4>Managed<wbr>Zone<wbr>Dnssec<wbr>Config<wbr>Default<wbr>Key<wbr>Spec</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ManagedZoneDnssecConfigDefaultKeySpec">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ManagedZoneDnssecConfigDefaultKeySpec">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/dns?tab=doc#ManagedZoneDnssecConfigDefaultKeySpecArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/dns?tab=doc#ManagedZoneDnssecConfigDefaultKeySpecOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Algorithm</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Key<wbr>Length</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Key<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Kind</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Algorithm</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Key<wbr>Length</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Key<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Kind</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>algorithm</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>key<wbr>Length</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>key<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>kind</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>algorithm</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>key<wbr>Length</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>key<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>kind</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4>Managed<wbr>Zone<wbr>Forwarding<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ManagedZoneForwardingConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ManagedZoneForwardingConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/dns?tab=doc#ManagedZoneForwardingConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/dns?tab=doc#ManagedZoneForwardingConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Target<wbr>Name<wbr>Servers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzoneforwardingconfigtargetnameserver">List&lt;Managed<wbr>Zone<wbr>Forwarding<wbr>Config<wbr>Target<wbr>Name<wbr>Server<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Target<wbr>Name<wbr>Servers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzoneforwardingconfigtargetnameserver">[]Managed<wbr>Zone<wbr>Forwarding<wbr>Config<wbr>Target<wbr>Name<wbr>Server</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>target<wbr>Name<wbr>Servers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzoneforwardingconfigtargetnameserver">Managed<wbr>Zone<wbr>Forwarding<wbr>Config<wbr>Target<wbr>Name<wbr>Server[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>target<wbr>Name<wbr>Servers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzoneforwardingconfigtargetnameserver">List[Managed<wbr>Zone<wbr>Forwarding<wbr>Config<wbr>Target<wbr>Name<wbr>Server]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4>Managed<wbr>Zone<wbr>Forwarding<wbr>Config<wbr>Target<wbr>Name<wbr>Server</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ManagedZoneForwardingConfigTargetNameServer">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ManagedZoneForwardingConfigTargetNameServer">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/dns?tab=doc#ManagedZoneForwardingConfigTargetNameServerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/dns?tab=doc#ManagedZoneForwardingConfigTargetNameServerOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Forwarding<wbr>Path</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Ipv4Address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Forwarding<wbr>Path</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Ipv4Address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>forwarding<wbr>Path</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>ipv4Address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>forwarding<wbr>Path</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>ipv4Address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4>Managed<wbr>Zone<wbr>Peering<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ManagedZonePeeringConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ManagedZonePeeringConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/dns?tab=doc#ManagedZonePeeringConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/dns?tab=doc#ManagedZonePeeringConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Target<wbr>Network</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzonepeeringconfigtargetnetwork">Managed<wbr>Zone<wbr>Peering<wbr>Config<wbr>Target<wbr>Network<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Target<wbr>Network</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzonepeeringconfigtargetnetwork">Managed<wbr>Zone<wbr>Peering<wbr>Config<wbr>Target<wbr>Network</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>target<wbr>Network</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzonepeeringconfigtargetnetwork">Managed<wbr>Zone<wbr>Peering<wbr>Config<wbr>Target<wbr>Network</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>target<wbr>Network</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzonepeeringconfigtargetnetwork">Dict[Managed<wbr>Zone<wbr>Peering<wbr>Config<wbr>Target<wbr>Network]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4>Managed<wbr>Zone<wbr>Peering<wbr>Config<wbr>Target<wbr>Network</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ManagedZonePeeringConfigTargetNetwork">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ManagedZonePeeringConfigTargetNetwork">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/dns?tab=doc#ManagedZonePeeringConfigTargetNetworkArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/dns?tab=doc#ManagedZonePeeringConfigTargetNetworkOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Network<wbr>Url</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Network<wbr>Url</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>network<wbr>Url</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>network<wbr>Url</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4>Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ManagedZonePrivateVisibilityConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ManagedZonePrivateVisibilityConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/dns?tab=doc#ManagedZonePrivateVisibilityConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/dns?tab=doc#ManagedZonePrivateVisibilityConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Networks</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzoneprivatevisibilityconfignetwork">List&lt;Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config<wbr>Network<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Networks</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzoneprivatevisibilityconfignetwork">[]Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config<wbr>Network</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>networks</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzoneprivatevisibilityconfignetwork">Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config<wbr>Network[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>networks</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedzoneprivatevisibilityconfignetwork">List[Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config<wbr>Network]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4>Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config<wbr>Network</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ManagedZonePrivateVisibilityConfigNetwork">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ManagedZonePrivateVisibilityConfigNetwork">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/dns?tab=doc#ManagedZonePrivateVisibilityConfigNetworkArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/dns?tab=doc#ManagedZonePrivateVisibilityConfigNetworkOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Network<wbr>Url</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Network<wbr>Url</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>network<wbr>Url</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>network<wbr>Url</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+
+
+<h3>Package Details</h3>
+<dl class="package-details">
+	<dt>Repository</dt>
+	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
+	<dt>License</dt>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

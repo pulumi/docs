@@ -1,0 +1,520 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class GremlinGraph
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class GremlinGraph
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Azure.CosmosDB.GremlinGraph">
+  
+  <h1 id="Pulumi_Azure_CosmosDB_GremlinGraph" data-uid="Pulumi.Azure.CosmosDB.GremlinGraph" class="text-break">Class GremlinGraph
+  </h1>
+  <div class="markdown level0 summary"><p>Manages a Gremlin Graph within a Cosmos DB Account.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/cosmosdb_gremlin_graph.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/cosmosdb_gremlin_graph.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">GremlinGraph</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.CosmosDB.html">Pulumi.Azure.CosmosDB</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
+  <h5 id="Pulumi_Azure_CosmosDB_GremlinGraph_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class GremlinGraph : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Cosmosdb/GremlinGraph.cs/#L78">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_CosmosDB_GremlinGraph__ctor_" data-uid="Pulumi.Azure.CosmosDB.GremlinGraph.#ctor*"></a>
+  <h4 id="Pulumi_Azure_CosmosDB_GremlinGraph__ctor_System_String_Pulumi_Azure_CosmosDB_GremlinGraphArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.CosmosDB.GremlinGraph.#ctor(System.String,Pulumi.Azure.CosmosDB.GremlinGraphArgs,Pulumi.CustomResourceOptions)">GremlinGraph(String, GremlinGraphArgs, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Create a GremlinGraph resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GremlinGraph(string name, GremlinGraphArgs args, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Azure.CosmosDB.GremlinGraphArgs.html">GremlinGraphArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Cosmosdb/GremlinGraph.cs/#L22">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_CosmosDB_GremlinGraph_AccountName_" data-uid="Pulumi.Azure.CosmosDB.GremlinGraph.AccountName*"></a>
+  <h4 id="Pulumi_Azure_CosmosDB_GremlinGraph_AccountName" data-uid="Pulumi.Azure.CosmosDB.GremlinGraph.AccountName">AccountName</h4>
+  <div class="markdown level1 summary"><p>The name of the CosmosDB Account to create the Gremlin Graph within. Changing this forces a new resource to be created.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; AccountName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Cosmosdb/GremlinGraph.cs/#L28">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_CosmosDB_GremlinGraph_ConflictResolutionPolicies_" data-uid="Pulumi.Azure.CosmosDB.GremlinGraph.ConflictResolutionPolicies*"></a>
+  <h4 id="Pulumi_Azure_CosmosDB_GremlinGraph_ConflictResolutionPolicies" data-uid="Pulumi.Azure.CosmosDB.GremlinGraph.ConflictResolutionPolicies">ConflictResolutionPolicies</h4>
+  <div class="markdown level1 summary"><p>The conflict resolution policy for the graph. One or more <code>conflict_resolution_policy</code> blocks as defined below. Changing this forces a new resource to be created.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;GremlinGraphConflictResolutionPolicies&gt;&gt; ConflictResolutionPolicies { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.CosmosDB.Outputs.GremlinGraphConflictResolutionPolicies.html">GremlinGraphConflictResolutionPolicies</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Cosmosdb/GremlinGraph.cs/#L34">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_CosmosDB_GremlinGraph_DatabaseName_" data-uid="Pulumi.Azure.CosmosDB.GremlinGraph.DatabaseName*"></a>
+  <h4 id="Pulumi_Azure_CosmosDB_GremlinGraph_DatabaseName" data-uid="Pulumi.Azure.CosmosDB.GremlinGraph.DatabaseName">DatabaseName</h4>
+  <div class="markdown level1 summary"><p>The name of the Cosmos DB Graph Database in which the Cosmos DB Gremlin Graph is created. Changing this forces a new resource to be created.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; DatabaseName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Cosmosdb/GremlinGraph.cs/#L40">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_CosmosDB_GremlinGraph_IndexPolicies_" data-uid="Pulumi.Azure.CosmosDB.GremlinGraph.IndexPolicies*"></a>
+  <h4 id="Pulumi_Azure_CosmosDB_GremlinGraph_IndexPolicies" data-uid="Pulumi.Azure.CosmosDB.GremlinGraph.IndexPolicies">IndexPolicies</h4>
+  <div class="markdown level1 summary"><p>The configuration of the indexing policy. One or more <code>index_policy</code> blocks as defined below. Changing this forces a new resource to be created.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;GremlinGraphIndexPolicies&gt;&gt; IndexPolicies { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.CosmosDB.Outputs.GremlinGraphIndexPolicies.html">GremlinGraphIndexPolicies</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Cosmosdb/GremlinGraph.cs/#L46">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_CosmosDB_GremlinGraph_Name_" data-uid="Pulumi.Azure.CosmosDB.GremlinGraph.Name*"></a>
+  <h4 id="Pulumi_Azure_CosmosDB_GremlinGraph_Name" data-uid="Pulumi.Azure.CosmosDB.GremlinGraph.Name">Name</h4>
+  <div class="markdown level1 summary"><p>Specifies the name of the Cosmos DB Gremlin Graph. Changing this forces a new resource to be created.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Cosmosdb/GremlinGraph.cs/#L52">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_CosmosDB_GremlinGraph_PartitionKeyPath_" data-uid="Pulumi.Azure.CosmosDB.GremlinGraph.PartitionKeyPath*"></a>
+  <h4 id="Pulumi_Azure_CosmosDB_GremlinGraph_PartitionKeyPath" data-uid="Pulumi.Azure.CosmosDB.GremlinGraph.PartitionKeyPath">PartitionKeyPath</h4>
+  <div class="markdown level1 summary"><p>Define a partition key. Changing this forces a new resource to be created.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; PartitionKeyPath { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Cosmosdb/GremlinGraph.cs/#L58">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_CosmosDB_GremlinGraph_ResourceGroupName_" data-uid="Pulumi.Azure.CosmosDB.GremlinGraph.ResourceGroupName*"></a>
+  <h4 id="Pulumi_Azure_CosmosDB_GremlinGraph_ResourceGroupName" data-uid="Pulumi.Azure.CosmosDB.GremlinGraph.ResourceGroupName">ResourceGroupName</h4>
+  <div class="markdown level1 summary"><p>The name of the resource group in which the Cosmos DB Gremlin Graph is created. Changing this forces a new resource to be created.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ResourceGroupName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Cosmosdb/GremlinGraph.cs/#L61">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_CosmosDB_GremlinGraph_Throughput_" data-uid="Pulumi.Azure.CosmosDB.GremlinGraph.Throughput*"></a>
+  <h4 id="Pulumi_Azure_CosmosDB_GremlinGraph_Throughput" data-uid="Pulumi.Azure.CosmosDB.GremlinGraph.Throughput">Throughput</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int&gt; Throughput { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Cosmosdb/GremlinGraph.cs/#L67">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_CosmosDB_GremlinGraph_UniqueKeys_" data-uid="Pulumi.Azure.CosmosDB.GremlinGraph.UniqueKeys*"></a>
+  <h4 id="Pulumi_Azure_CosmosDB_GremlinGraph_UniqueKeys" data-uid="Pulumi.Azure.CosmosDB.GremlinGraph.UniqueKeys">UniqueKeys</h4>
+  <div class="markdown level1 summary"><p>One or more <code>unique_key</code> blocks as defined below. Changing this forces a new resource to be created.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;GremlinGraphUniqueKeys&gt;&gt; UniqueKeys { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Collections.Immutable.ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Azure.CosmosDB.Outputs.GremlinGraphUniqueKeys.html">GremlinGraphUniqueKeys</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Cosmosdb/GremlinGraph.cs/#L108">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_CosmosDB_GremlinGraph_Get_" data-uid="Pulumi.Azure.CosmosDB.GremlinGraph.Get*"></a>
+  <h4 id="Pulumi_Azure_CosmosDB_GremlinGraph_Get_System_String_Pulumi_Input_System_String__Pulumi_Azure_CosmosDB_GremlinGraphState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.CosmosDB.GremlinGraph.Get(System.String,Pulumi.Input{System.String},Pulumi.Azure.CosmosDB.GremlinGraphState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, GremlinGraphState, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Get an existing GremlinGraph resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static GremlinGraph Get(string name, Input&lt;string&gt; id, GremlinGraphState state = null, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Azure.CosmosDB.GremlinGraphState.html">GremlinGraphState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Azure.CosmosDB.GremlinGraph.html">GremlinGraph</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Cosmosdb/GremlinGraph.cs/#L17" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,696 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class GoogleIdentityProviderArgs
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class GoogleIdentityProviderArgs
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Keycloak.Oidc.GoogleIdentityProviderArgs">
+  
+  <h1 id="Pulumi_Keycloak_Oidc_GoogleIdentityProviderArgs" data-uid="Pulumi.Keycloak.Oidc.GoogleIdentityProviderArgs" class="text-break">Class GoogleIdentityProviderArgs
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">GoogleIdentityProviderArgs</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Keycloak.Oidc.html">Pulumi.Keycloak.Oidc</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.Keycloak.dll</h6>
+  <h5 id="Pulumi_Keycloak_Oidc_GoogleIdentityProviderArgs_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class GoogleIdentityProviderArgs : ResourceArgs</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Oidc/GoogleIdentityProvider.cs/#L353">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Oidc_GoogleIdentityProviderArgs__ctor_" data-uid="Pulumi.Keycloak.Oidc.GoogleIdentityProviderArgs.#ctor*"></a>
+  <h4 id="Pulumi_Keycloak_Oidc_GoogleIdentityProviderArgs__ctor" data-uid="Pulumi.Keycloak.Oidc.GoogleIdentityProviderArgs.#ctor">GoogleIdentityProviderArgs()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GoogleIdentityProviderArgs()</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Oidc/GoogleIdentityProvider.cs/#L219">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Oidc_GoogleIdentityProviderArgs_AcceptsPromptNoneForwardFromClient_" data-uid="Pulumi.Keycloak.Oidc.GoogleIdentityProviderArgs.AcceptsPromptNoneForwardFromClient*"></a>
+  <h4 id="Pulumi_Keycloak_Oidc_GoogleIdentityProviderArgs_AcceptsPromptNoneForwardFromClient" data-uid="Pulumi.Keycloak.Oidc.GoogleIdentityProviderArgs.AcceptsPromptNoneForwardFromClient">AcceptsPromptNoneForwardFromClient</h4>
+  <div class="markdown level1 summary"><p>This is just used together with Identity Provider Authenticator or when kc_idp_hint points to this identity
+provider. In case that client sends a request with prompt=none and user is not yet authenticated, the error
+will not be directly returned to client, but the request with prompt=none will be forwarded to this identity
+provider.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? AcceptsPromptNoneForwardFromClient { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Oidc/GoogleIdentityProvider.cs/#L225">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Oidc_GoogleIdentityProviderArgs_AddReadTokenRoleOnCreate_" data-uid="Pulumi.Keycloak.Oidc.GoogleIdentityProviderArgs.AddReadTokenRoleOnCreate*"></a>
+  <h4 id="Pulumi_Keycloak_Oidc_GoogleIdentityProviderArgs_AddReadTokenRoleOnCreate" data-uid="Pulumi.Keycloak.Oidc.GoogleIdentityProviderArgs.AddReadTokenRoleOnCreate">AddReadTokenRoleOnCreate</h4>
+  <div class="markdown level1 summary"><p>Enable/disable if new users can read any stored tokens. This assigns the broker.read-token role.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? AddReadTokenRoleOnCreate { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Oidc/GoogleIdentityProvider.cs/#L231">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Oidc_GoogleIdentityProviderArgs_AuthenticateByDefault_" data-uid="Pulumi.Keycloak.Oidc.GoogleIdentityProviderArgs.AuthenticateByDefault*"></a>
+  <h4 id="Pulumi_Keycloak_Oidc_GoogleIdentityProviderArgs_AuthenticateByDefault" data-uid="Pulumi.Keycloak.Oidc.GoogleIdentityProviderArgs.AuthenticateByDefault">AuthenticateByDefault</h4>
+  <div class="markdown level1 summary"><p>Enable/disable authenticate users by default.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? AuthenticateByDefault { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Oidc/GoogleIdentityProvider.cs/#L237">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Oidc_GoogleIdentityProviderArgs_ClientId_" data-uid="Pulumi.Keycloak.Oidc.GoogleIdentityProviderArgs.ClientId*"></a>
+  <h4 id="Pulumi_Keycloak_Oidc_GoogleIdentityProviderArgs_ClientId" data-uid="Pulumi.Keycloak.Oidc.GoogleIdentityProviderArgs.ClientId">ClientId</h4>
+  <div class="markdown level1 summary"><p>Client ID.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; ClientId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Oidc/GoogleIdentityProvider.cs/#L243">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Oidc_GoogleIdentityProviderArgs_ClientSecret_" data-uid="Pulumi.Keycloak.Oidc.GoogleIdentityProviderArgs.ClientSecret*"></a>
+  <h4 id="Pulumi_Keycloak_Oidc_GoogleIdentityProviderArgs_ClientSecret" data-uid="Pulumi.Keycloak.Oidc.GoogleIdentityProviderArgs.ClientSecret">ClientSecret</h4>
+  <div class="markdown level1 summary"><p>Client Secret.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; ClientSecret { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Oidc/GoogleIdentityProvider.cs/#L250">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Oidc_GoogleIdentityProviderArgs_DefaultScopes_" data-uid="Pulumi.Keycloak.Oidc.GoogleIdentityProviderArgs.DefaultScopes*"></a>
+  <h4 id="Pulumi_Keycloak_Oidc_GoogleIdentityProviderArgs_DefaultScopes" data-uid="Pulumi.Keycloak.Oidc.GoogleIdentityProviderArgs.DefaultScopes">DefaultScopes</h4>
+  <div class="markdown level1 summary"><p>The scopes to be sent when asking for authorization. See the documentation for possible values, separator
+and default value'. Default: 'openid profile email'</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? DefaultScopes { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Oidc/GoogleIdentityProvider.cs/#L257">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Oidc_GoogleIdentityProviderArgs_DisableUserInfo_" data-uid="Pulumi.Keycloak.Oidc.GoogleIdentityProviderArgs.DisableUserInfo*"></a>
+  <h4 id="Pulumi_Keycloak_Oidc_GoogleIdentityProviderArgs_DisableUserInfo" data-uid="Pulumi.Keycloak.Oidc.GoogleIdentityProviderArgs.DisableUserInfo">DisableUserInfo</h4>
+  <div class="markdown level1 summary"><p>Disable usage of User Info service to obtain additional user information? Default is to use this OIDC
+service.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? DisableUserInfo { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Oidc/GoogleIdentityProvider.cs/#L263">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Oidc_GoogleIdentityProviderArgs_Enabled_" data-uid="Pulumi.Keycloak.Oidc.GoogleIdentityProviderArgs.Enabled*"></a>
+  <h4 id="Pulumi_Keycloak_Oidc_GoogleIdentityProviderArgs_Enabled" data-uid="Pulumi.Keycloak.Oidc.GoogleIdentityProviderArgs.Enabled">Enabled</h4>
+  <div class="markdown level1 summary"><p>Enable/disable this identity provider.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? Enabled { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Oidc/GoogleIdentityProvider.cs/#L268">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Oidc_GoogleIdentityProviderArgs_ExtraConfig_" data-uid="Pulumi.Keycloak.Oidc.GoogleIdentityProviderArgs.ExtraConfig*"></a>
+  <h4 id="Pulumi_Keycloak_Oidc_GoogleIdentityProviderArgs_ExtraConfig" data-uid="Pulumi.Keycloak.Oidc.GoogleIdentityProviderArgs.ExtraConfig">ExtraConfig</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputMap&lt;object&gt; ExtraConfig { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">InputMap</span>&lt;<span class="xref">System.Object</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Oidc/GoogleIdentityProvider.cs/#L279">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Oidc_GoogleIdentityProviderArgs_FirstBrokerLoginFlowAlias_" data-uid="Pulumi.Keycloak.Oidc.GoogleIdentityProviderArgs.FirstBrokerLoginFlowAlias*"></a>
+  <h4 id="Pulumi_Keycloak_Oidc_GoogleIdentityProviderArgs_FirstBrokerLoginFlowAlias" data-uid="Pulumi.Keycloak.Oidc.GoogleIdentityProviderArgs.FirstBrokerLoginFlowAlias">FirstBrokerLoginFlowAlias</h4>
+  <div class="markdown level1 summary"><p>Alias of authentication flow, which is triggered after first login with this identity provider. Term 'First
+Login' means that there is not yet existing Keycloak account linked with the authenticated identity provider
+account.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? FirstBrokerLoginFlowAlias { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Oidc/GoogleIdentityProvider.cs/#L285">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Oidc_GoogleIdentityProviderArgs_HideOnLoginPage_" data-uid="Pulumi.Keycloak.Oidc.GoogleIdentityProviderArgs.HideOnLoginPage*"></a>
+  <h4 id="Pulumi_Keycloak_Oidc_GoogleIdentityProviderArgs_HideOnLoginPage" data-uid="Pulumi.Keycloak.Oidc.GoogleIdentityProviderArgs.HideOnLoginPage">HideOnLoginPage</h4>
+  <div class="markdown level1 summary"><p>Hide On Login Page.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? HideOnLoginPage { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Oidc/GoogleIdentityProvider.cs/#L293">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Oidc_GoogleIdentityProviderArgs_HostedDomain_" data-uid="Pulumi.Keycloak.Oidc.GoogleIdentityProviderArgs.HostedDomain*"></a>
+  <h4 id="Pulumi_Keycloak_Oidc_GoogleIdentityProviderArgs_HostedDomain" data-uid="Pulumi.Keycloak.Oidc.GoogleIdentityProviderArgs.HostedDomain">HostedDomain</h4>
+  <div class="markdown level1 summary"><p>Set 'hd' query parameter when logging in with Google. Google will list accounts only for this domain.
+Keycloak validates that the returned identity token has a claim for this domain. When '*' is entered, any
+hosted account can be used.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? HostedDomain { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Oidc/GoogleIdentityProvider.cs/#L300">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Oidc_GoogleIdentityProviderArgs_LinkOnly_" data-uid="Pulumi.Keycloak.Oidc.GoogleIdentityProviderArgs.LinkOnly*"></a>
+  <h4 id="Pulumi_Keycloak_Oidc_GoogleIdentityProviderArgs_LinkOnly" data-uid="Pulumi.Keycloak.Oidc.GoogleIdentityProviderArgs.LinkOnly">LinkOnly</h4>
+  <div class="markdown level1 summary"><p>If true, users cannot log in through this provider. They can only link to this provider. This is useful if
+you don't want to allow login from the provider, but want to integrate with a provider</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? LinkOnly { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Oidc/GoogleIdentityProvider.cs/#L310">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Oidc_GoogleIdentityProviderArgs_PostBrokerLoginFlowAlias_" data-uid="Pulumi.Keycloak.Oidc.GoogleIdentityProviderArgs.PostBrokerLoginFlowAlias*"></a>
+  <h4 id="Pulumi_Keycloak_Oidc_GoogleIdentityProviderArgs_PostBrokerLoginFlowAlias" data-uid="Pulumi.Keycloak.Oidc.GoogleIdentityProviderArgs.PostBrokerLoginFlowAlias">PostBrokerLoginFlowAlias</h4>
+  <div class="markdown level1 summary"><p>Alias of authentication flow, which is triggered after each login with this identity provider. Useful if you
+want additional verification of each user authenticated with this identity provider (for example OTP). Leave
+this empty if you don't want any additional authenticators to be triggered after login with this identity
+provider. Also note, that authenticator implementations must assume that user is already set in
+ClientSession as identity provider already set it.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? PostBrokerLoginFlowAlias { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Oidc/GoogleIdentityProvider.cs/#L316">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Oidc_GoogleIdentityProviderArgs_ProviderId_" data-uid="Pulumi.Keycloak.Oidc.GoogleIdentityProviderArgs.ProviderId*"></a>
+  <h4 id="Pulumi_Keycloak_Oidc_GoogleIdentityProviderArgs_ProviderId" data-uid="Pulumi.Keycloak.Oidc.GoogleIdentityProviderArgs.ProviderId">ProviderId</h4>
+  <div class="markdown level1 summary"><p>provider id, is always google, unless you have a extended custom implementation</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ProviderId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Oidc/GoogleIdentityProvider.cs/#L322">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Oidc_GoogleIdentityProviderArgs_Realm_" data-uid="Pulumi.Keycloak.Oidc.GoogleIdentityProviderArgs.Realm*"></a>
+  <h4 id="Pulumi_Keycloak_Oidc_GoogleIdentityProviderArgs_Realm" data-uid="Pulumi.Keycloak.Oidc.GoogleIdentityProviderArgs.Realm">Realm</h4>
+  <div class="markdown level1 summary"><p>Realm Name</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt; Realm { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Oidc/GoogleIdentityProvider.cs/#L330">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Oidc_GoogleIdentityProviderArgs_RequestRefreshToken_" data-uid="Pulumi.Keycloak.Oidc.GoogleIdentityProviderArgs.RequestRefreshToken*"></a>
+  <h4 id="Pulumi_Keycloak_Oidc_GoogleIdentityProviderArgs_RequestRefreshToken" data-uid="Pulumi.Keycloak.Oidc.GoogleIdentityProviderArgs.RequestRefreshToken">RequestRefreshToken</h4>
+  <div class="markdown level1 summary"><p>Set 'access_type' query parameter to 'offline' when redirecting to google authorization endpoint, to get a
+refresh token back. Useful if planning to use Token Exchange to retrieve Google token to access Google APIs
+when the user is not at the browser.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? RequestRefreshToken { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Oidc/GoogleIdentityProvider.cs/#L336">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Oidc_GoogleIdentityProviderArgs_StoreToken_" data-uid="Pulumi.Keycloak.Oidc.GoogleIdentityProviderArgs.StoreToken*"></a>
+  <h4 id="Pulumi_Keycloak_Oidc_GoogleIdentityProviderArgs_StoreToken" data-uid="Pulumi.Keycloak.Oidc.GoogleIdentityProviderArgs.StoreToken">StoreToken</h4>
+  <div class="markdown level1 summary"><p>Enable/disable if tokens must be stored after authenticating users.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? StoreToken { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Oidc/GoogleIdentityProvider.cs/#L343">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Oidc_GoogleIdentityProviderArgs_TrustEmail_" data-uid="Pulumi.Keycloak.Oidc.GoogleIdentityProviderArgs.TrustEmail*"></a>
+  <h4 id="Pulumi_Keycloak_Oidc_GoogleIdentityProviderArgs_TrustEmail" data-uid="Pulumi.Keycloak.Oidc.GoogleIdentityProviderArgs.TrustEmail">TrustEmail</h4>
+  <div class="markdown level1 summary"><p>If enabled then email provided by this provider is not verified even if verification is enabled for the
+realm.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? TrustEmail { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Oidc/GoogleIdentityProvider.cs/#L350">View Source</a>
+  </span>
+  <a id="Pulumi_Keycloak_Oidc_GoogleIdentityProviderArgs_UseUserIpParam_" data-uid="Pulumi.Keycloak.Oidc.GoogleIdentityProviderArgs.UseUserIpParam*"></a>
+  <h4 id="Pulumi_Keycloak_Oidc_GoogleIdentityProviderArgs_UseUserIpParam" data-uid="Pulumi.Keycloak.Oidc.GoogleIdentityProviderArgs.UseUserIpParam">UseUserIpParam</h4>
+  <div class="markdown level1 summary"><p>Set 'userIp' query parameter when invoking on Google's User Info service. This will use the user's ip
+address. Useful if Google is throttling access to the User Info service.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? UseUserIpParam { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-keycloak/blob/master/sdk/dotnet/Oidc/GoogleIdentityProvider.cs/#L211" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,768 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class EventSourceMapping
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class EventSourceMapping
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Aws.Lambda.EventSourceMapping">
+  
+  <h1 id="Pulumi_Aws_Lambda_EventSourceMapping" data-uid="Pulumi.Aws.Lambda.EventSourceMapping" class="text-break">Class EventSourceMapping
+  </h1>
+  <div class="markdown level0 summary"><p>Provides a Lambda event source mapping. This allows Lambda functions to get events from Kinesis, DynamoDB and SQS.</p>
+<p>For information about Lambda and how to use it, see [What is AWS Lambda?][1].
+For information about event source mappings, see [CreateEventSourceMapping][2] in the API docs.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lambda_event_source_mapping.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lambda_event_source_mapping.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">EventSourceMapping</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Aws.Lambda.html">Pulumi.Aws.Lambda</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.Aws.dll</h6>
+  <h5 id="Pulumi_Aws_Lambda_EventSourceMapping_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class EventSourceMapping : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Lambda/EventSourceMapping.cs/#L128">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Lambda_EventSourceMapping__ctor_" data-uid="Pulumi.Aws.Lambda.EventSourceMapping.#ctor*"></a>
+  <h4 id="Pulumi_Aws_Lambda_EventSourceMapping__ctor_System_String_Pulumi_Aws_Lambda_EventSourceMappingArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Lambda.EventSourceMapping.#ctor(System.String,Pulumi.Aws.Lambda.EventSourceMappingArgs,Pulumi.CustomResourceOptions)">EventSourceMapping(String, EventSourceMappingArgs, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Create a EventSourceMapping resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EventSourceMapping(string name, EventSourceMappingArgs args, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Aws.Lambda.EventSourceMappingArgs.html">EventSourceMappingArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Lambda/EventSourceMapping.cs/#L25">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Lambda_EventSourceMapping_BatchSize_" data-uid="Pulumi.Aws.Lambda.EventSourceMapping.BatchSize*"></a>
+  <h4 id="Pulumi_Aws_Lambda_EventSourceMapping_BatchSize" data-uid="Pulumi.Aws.Lambda.EventSourceMapping.BatchSize">BatchSize</h4>
+  <div class="markdown level1 summary"><p>The largest number of records that Lambda will retrieve from your event source at the time of invocation. Defaults to <code>100</code> for DynamoDB and Kinesis, <code>10</code> for SQS.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; BatchSize { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Lambda/EventSourceMapping.cs/#L28">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Lambda_EventSourceMapping_BisectBatchOnFunctionError_" data-uid="Pulumi.Aws.Lambda.EventSourceMapping.BisectBatchOnFunctionError*"></a>
+  <h4 id="Pulumi_Aws_Lambda_EventSourceMapping_BisectBatchOnFunctionError" data-uid="Pulumi.Aws.Lambda.EventSourceMapping.BisectBatchOnFunctionError">BisectBatchOnFunctionError</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; BisectBatchOnFunctionError { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Lambda/EventSourceMapping.cs/#L31">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Lambda_EventSourceMapping_DestinationConfig_" data-uid="Pulumi.Aws.Lambda.EventSourceMapping.DestinationConfig*"></a>
+  <h4 id="Pulumi_Aws_Lambda_EventSourceMapping_DestinationConfig" data-uid="Pulumi.Aws.Lambda.EventSourceMapping.DestinationConfig">DestinationConfig</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;EventSourceMappingDestinationConfig&gt; DestinationConfig { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<a class="xref" href="Pulumi.Aws.Lambda.Outputs.EventSourceMappingDestinationConfig.html">EventSourceMappingDestinationConfig</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Lambda/EventSourceMapping.cs/#L37">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Lambda_EventSourceMapping_Enabled_" data-uid="Pulumi.Aws.Lambda.EventSourceMapping.Enabled*"></a>
+  <h4 id="Pulumi_Aws_Lambda_EventSourceMapping_Enabled" data-uid="Pulumi.Aws.Lambda.EventSourceMapping.Enabled">Enabled</h4>
+  <div class="markdown level1 summary"><p>Determines if the mapping will be enabled on creation. Defaults to <code>true</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; Enabled { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Lambda/EventSourceMapping.cs/#L43">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Lambda_EventSourceMapping_EventSourceArn_" data-uid="Pulumi.Aws.Lambda.EventSourceMapping.EventSourceArn*"></a>
+  <h4 id="Pulumi_Aws_Lambda_EventSourceMapping_EventSourceArn" data-uid="Pulumi.Aws.Lambda.EventSourceMapping.EventSourceArn">EventSourceArn</h4>
+  <div class="markdown level1 summary"><p>The event source ARN - can be a Kinesis stream, DynamoDB stream, or SQS queue.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; EventSourceArn { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Lambda/EventSourceMapping.cs/#L49">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Lambda_EventSourceMapping_FunctionArn_" data-uid="Pulumi.Aws.Lambda.EventSourceMapping.FunctionArn*"></a>
+  <h4 id="Pulumi_Aws_Lambda_EventSourceMapping_FunctionArn" data-uid="Pulumi.Aws.Lambda.EventSourceMapping.FunctionArn">FunctionArn</h4>
+  <div class="markdown level1 summary"><p>The the ARN of the Lambda function the event source mapping is sending events to. (Note: this is a computed value that differs from <code>function_name</code> above.)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; FunctionArn { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Lambda/EventSourceMapping.cs/#L55">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Lambda_EventSourceMapping_FunctionName_" data-uid="Pulumi.Aws.Lambda.EventSourceMapping.FunctionName*"></a>
+  <h4 id="Pulumi_Aws_Lambda_EventSourceMapping_FunctionName" data-uid="Pulumi.Aws.Lambda.EventSourceMapping.FunctionName">FunctionName</h4>
+  <div class="markdown level1 summary"><p>The name or the ARN of the Lambda function that will be subscribing to events.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; FunctionName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Lambda/EventSourceMapping.cs/#L61">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Lambda_EventSourceMapping_LastModified_" data-uid="Pulumi.Aws.Lambda.EventSourceMapping.LastModified*"></a>
+  <h4 id="Pulumi_Aws_Lambda_EventSourceMapping_LastModified" data-uid="Pulumi.Aws.Lambda.EventSourceMapping.LastModified">LastModified</h4>
+  <div class="markdown level1 summary"><p>The date this resource was last modified.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; LastModified { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Lambda/EventSourceMapping.cs/#L67">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Lambda_EventSourceMapping_LastProcessingResult_" data-uid="Pulumi.Aws.Lambda.EventSourceMapping.LastProcessingResult*"></a>
+  <h4 id="Pulumi_Aws_Lambda_EventSourceMapping_LastProcessingResult" data-uid="Pulumi.Aws.Lambda.EventSourceMapping.LastProcessingResult">LastProcessingResult</h4>
+  <div class="markdown level1 summary"><p>The result of the last AWS Lambda invocation of your Lambda function.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; LastProcessingResult { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Lambda/EventSourceMapping.cs/#L73">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Lambda_EventSourceMapping_MaximumBatchingWindowInSeconds_" data-uid="Pulumi.Aws.Lambda.EventSourceMapping.MaximumBatchingWindowInSeconds*"></a>
+  <h4 id="Pulumi_Aws_Lambda_EventSourceMapping_MaximumBatchingWindowInSeconds" data-uid="Pulumi.Aws.Lambda.EventSourceMapping.MaximumBatchingWindowInSeconds">MaximumBatchingWindowInSeconds</h4>
+  <div class="markdown level1 summary"><p>The maximum amount of time to gather records before invoking the function, in seconds.  Records will continue to buffer until either <code>maximum_batching_window_in_seconds</code> expires or <code>batch_size</code> has been met. Defaults to as soon as records are available in the stream. If the batch it reads from the stream only has one record in it, Lambda only sends one record to the function.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; MaximumBatchingWindowInSeconds { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Lambda/EventSourceMapping.cs/#L76">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Lambda_EventSourceMapping_MaximumRecordAgeInSeconds_" data-uid="Pulumi.Aws.Lambda.EventSourceMapping.MaximumRecordAgeInSeconds*"></a>
+  <h4 id="Pulumi_Aws_Lambda_EventSourceMapping_MaximumRecordAgeInSeconds" data-uid="Pulumi.Aws.Lambda.EventSourceMapping.MaximumRecordAgeInSeconds">MaximumRecordAgeInSeconds</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int&gt; MaximumRecordAgeInSeconds { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Lambda/EventSourceMapping.cs/#L79">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Lambda_EventSourceMapping_MaximumRetryAttempts_" data-uid="Pulumi.Aws.Lambda.EventSourceMapping.MaximumRetryAttempts*"></a>
+  <h4 id="Pulumi_Aws_Lambda_EventSourceMapping_MaximumRetryAttempts" data-uid="Pulumi.Aws.Lambda.EventSourceMapping.MaximumRetryAttempts">MaximumRetryAttempts</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int&gt; MaximumRetryAttempts { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Lambda/EventSourceMapping.cs/#L82">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Lambda_EventSourceMapping_ParallelizationFactor_" data-uid="Pulumi.Aws.Lambda.EventSourceMapping.ParallelizationFactor*"></a>
+  <h4 id="Pulumi_Aws_Lambda_EventSourceMapping_ParallelizationFactor" data-uid="Pulumi.Aws.Lambda.EventSourceMapping.ParallelizationFactor">ParallelizationFactor</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int&gt; ParallelizationFactor { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Lambda/EventSourceMapping.cs/#L88">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Lambda_EventSourceMapping_StartingPosition_" data-uid="Pulumi.Aws.Lambda.EventSourceMapping.StartingPosition*"></a>
+  <h4 id="Pulumi_Aws_Lambda_EventSourceMapping_StartingPosition" data-uid="Pulumi.Aws.Lambda.EventSourceMapping.StartingPosition">StartingPosition</h4>
+  <div class="markdown level1 summary"><p>The position in the stream where AWS Lambda should start reading. Must be one of <code>AT_TIMESTAMP</code> (Kinesis only), <code>LATEST</code> or <code>TRIM_HORIZON</code> if getting events from Kinesis or DynamoDB. Must not be provided if getting events from SQS. More information about these positions can be found in the <a href="https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_streams_GetShardIterator.html">AWS DynamoDB Streams API Reference</a> and <a href="https://docs.aws.amazon.com/kinesis/latest/APIReference/API_GetShardIterator.html#Kinesis-GetShardIterator-request-ShardIteratorType">AWS Kinesis API Reference</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; StartingPosition { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Lambda/EventSourceMapping.cs/#L99">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Lambda_EventSourceMapping_StartingPositionTimestamp_" data-uid="Pulumi.Aws.Lambda.EventSourceMapping.StartingPositionTimestamp*"></a>
+  <h4 id="Pulumi_Aws_Lambda_EventSourceMapping_StartingPositionTimestamp" data-uid="Pulumi.Aws.Lambda.EventSourceMapping.StartingPositionTimestamp">StartingPositionTimestamp</h4>
+  <div class="markdown level1 summary"><p>A timestamp in <a href="https://tools.ietf.org/html/rfc3339#section-5.8">RFC3339 format</a> of the data record which to start reading when using <code>starting_position</code> set to <code>AT_TIMESTAMP</code>. If a record with this exact timestamp does not exist, the next later record is chosen. If the timestamp is older than the current trim horizon, the oldest available record is chosen.</p>
+<ul>
+<li><code>parallelization_factor</code>: - (Optional) The number of batches to process from each shard concurrently. Only available for stream sources (DynamoDB and Kinesis). Minimum and default of 1, maximum of 10.</li>
+<li><code>maximum_retry_attempts</code>: - (Optional) The maximum number of times to retry when the function returns an error. Only available for stream sources (DynamoDB and Kinesis). Minimum of 0, maximum and default of 10000.</li>
+<li><code>maximum_record_age_in_seconds</code>: - (Optional) The maximum age of a record that Lambda sends to a function for processing. Only available for stream sources (DynamoDB and Kinesis). Minimum of 60, maximum and default of 604800.</li>
+<li><code>bisect_batch_on_function_error</code>: - (Optional) If the function returns an error, split the batch in two and retry. Only available for stream sources (DynamoDB and Kinesis). Defaults to <code>false</code>.</li>
+<li><code>destination_config</code>: - (Optional) An Amazon SQS queue or Amazon SNS topic destination for failed records. Only available for stream sources (DynamoDB and Kinesis). Detailed below.</li>
+</ul>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; StartingPositionTimestamp { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Lambda/EventSourceMapping.cs/#L105">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Lambda_EventSourceMapping_State_" data-uid="Pulumi.Aws.Lambda.EventSourceMapping.State*"></a>
+  <h4 id="Pulumi_Aws_Lambda_EventSourceMapping_State" data-uid="Pulumi.Aws.Lambda.EventSourceMapping.State">State</h4>
+  <div class="markdown level1 summary"><p>The state of the event source mapping.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; State { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Lambda/EventSourceMapping.cs/#L111">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Lambda_EventSourceMapping_StateTransitionReason_" data-uid="Pulumi.Aws.Lambda.EventSourceMapping.StateTransitionReason*"></a>
+  <h4 id="Pulumi_Aws_Lambda_EventSourceMapping_StateTransitionReason" data-uid="Pulumi.Aws.Lambda.EventSourceMapping.StateTransitionReason">StateTransitionReason</h4>
+  <div class="markdown level1 summary"><p>The reason the event source mapping is in its current state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; StateTransitionReason { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Lambda/EventSourceMapping.cs/#L117">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Lambda_EventSourceMapping_Uuid_" data-uid="Pulumi.Aws.Lambda.EventSourceMapping.Uuid*"></a>
+  <h4 id="Pulumi_Aws_Lambda_EventSourceMapping_Uuid" data-uid="Pulumi.Aws.Lambda.EventSourceMapping.Uuid">Uuid</h4>
+  <div class="markdown level1 summary"><p>The UUID of the created event source mapping.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Uuid { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Lambda/EventSourceMapping.cs/#L158">View Source</a>
+  </span>
+  <a id="Pulumi_Aws_Lambda_EventSourceMapping_Get_" data-uid="Pulumi.Aws.Lambda.EventSourceMapping.Get*"></a>
+  <h4 id="Pulumi_Aws_Lambda_EventSourceMapping_Get_System_String_Pulumi_Input_System_String__Pulumi_Aws_Lambda_EventSourceMappingState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Aws.Lambda.EventSourceMapping.Get(System.String,Pulumi.Input{System.String},Pulumi.Aws.Lambda.EventSourceMappingState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, EventSourceMappingState, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Get an existing EventSourceMapping resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static EventSourceMapping Get(string name, Input&lt;string&gt; id, EventSourceMappingState state = null, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Aws.Lambda.EventSourceMappingState.html">EventSourceMappingState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Aws.Lambda.EventSourceMapping.html">EventSourceMapping</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-aws/blob/master/sdk/dotnet/Lambda/EventSourceMapping.cs/#L20" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

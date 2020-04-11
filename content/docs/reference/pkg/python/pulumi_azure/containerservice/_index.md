@@ -280,159 +280,159 @@ anything, please consult the source <a class="reference external" href="https://
 </dl>
 <p>The <strong>containers</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">commands</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">cpu</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">environmentVariables</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">gpu</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">commands</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of commands which should be run on the container. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cpu</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The required number of CPU cores of the containers. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">environmentVariables</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A list of environment variables to be set on the container. Specified as a map of name/value pairs. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gpu</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">gpu</span></code> block as defined below. Changing this forces a new resource to be created.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">count</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sku</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">count</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of GPUs which should be assigned to this container. Allowed values are <code class="docutils literal notranslate"><span class="pre">1</span></code>, <code class="docutils literal notranslate"><span class="pre">2</span></code>, or <code class="docutils literal notranslate"><span class="pre">4</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sku</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Sku which should be used for the GPU. Possible values are <code class="docutils literal notranslate"><span class="pre">K80</span></code>, <code class="docutils literal notranslate"><span class="pre">P100</span></code>, or <code class="docutils literal notranslate"><span class="pre">V100</span></code>. Changing this forces a new resource to be created.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">image</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">livenessProbe</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">image</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The container image name. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">livenessProbe</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The definition of a readiness probe for this container as documented in the <code class="docutils literal notranslate"><span class="pre">liveness_probe</span></code> block below. Changing this forces a new resource to be created.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">execs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">failureThreshold</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">httpGets</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">execs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Commands to be run to validate container readiness. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">failureThreshold</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - How many times to try the probe before restarting the container (liveness probe) or marking the container as unhealthy (readiness probe). The default value is <code class="docutils literal notranslate"><span class="pre">3</span></code> and the minimum value is <code class="docutils literal notranslate"><span class="pre">1</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpGets</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The definition of the httpget for this container as documented in the <code class="docutils literal notranslate"><span class="pre">httpget</span></code> block below. Changing this forces a new resource to be created.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">scheme</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Path to access on the HTTP server. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The port number the container will expose. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scheme</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Scheme to use for connecting to the host. Possible values are <code class="docutils literal notranslate"><span class="pre">Http</span></code> and <code class="docutils literal notranslate"><span class="pre">Https</span></code>. Changing this forces a new resource to be created.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">initialDelaySeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">periodSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">successThreshold</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">timeoutSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">initialDelaySeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Number of seconds after the container has started before liveness or readiness probes are initiated. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">periodSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - How often (in seconds) to perform the probe. The default value is <code class="docutils literal notranslate"><span class="pre">10</span></code> and the minimum value is <code class="docutils literal notranslate"><span class="pre">1</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">successThreshold</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Minimum consecutive successes for the probe to be considered successful after having failed. The default value is <code class="docutils literal notranslate"><span class="pre">1</span></code> and the minimum value is <code class="docutils literal notranslate"><span class="pre">1</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeoutSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Number of seconds after which the probe times out. The default value is <code class="docutils literal notranslate"><span class="pre">1</span></code> and the minimum value is <code class="docutils literal notranslate"><span class="pre">1</span></code>. Changing this forces a new resource to be created.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">memory</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">memory</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The required memory of the containers in GB. Changing this forces a new resource to be created.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the Container Group. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ports</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">ports</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A set of public ports for the container. Changing this forces a new resource to be created. Set as documented in the <code class="docutils literal notranslate"><span class="pre">ports</span></code> block below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The port number the container will expose. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The network protocol associated with port. Possible values are <code class="docutils literal notranslate"><span class="pre">TCP</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">UDP</span></code>. Changing this forces a new resource to be created.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">readinessProbe</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">readinessProbe</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The definition of a readiness probe for this container as documented in the <code class="docutils literal notranslate"><span class="pre">readiness_probe</span></code> block below. Changing this forces a new resource to be created.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">execs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">failureThreshold</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">httpGets</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">execs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Commands to be run to validate container readiness. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">failureThreshold</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - How many times to try the probe before restarting the container (liveness probe) or marking the container as unhealthy (readiness probe). The default value is <code class="docutils literal notranslate"><span class="pre">3</span></code> and the minimum value is <code class="docutils literal notranslate"><span class="pre">1</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpGets</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The definition of the httpget for this container as documented in the <code class="docutils literal notranslate"><span class="pre">httpget</span></code> block below. Changing this forces a new resource to be created.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">scheme</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Path to access on the HTTP server. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The port number the container will expose. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scheme</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Scheme to use for connecting to the host. Possible values are <code class="docutils literal notranslate"><span class="pre">Http</span></code> and <code class="docutils literal notranslate"><span class="pre">Https</span></code>. Changing this forces a new resource to be created.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">initialDelaySeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">periodSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">successThreshold</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">timeoutSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">initialDelaySeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Number of seconds after the container has started before liveness or readiness probes are initiated. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">periodSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - How often (in seconds) to perform the probe. The default value is <code class="docutils literal notranslate"><span class="pre">10</span></code> and the minimum value is <code class="docutils literal notranslate"><span class="pre">1</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">successThreshold</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Minimum consecutive successes for the probe to be considered successful after having failed. The default value is <code class="docutils literal notranslate"><span class="pre">1</span></code> and the minimum value is <code class="docutils literal notranslate"><span class="pre">1</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeoutSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Number of seconds after which the probe times out. The default value is <code class="docutils literal notranslate"><span class="pre">1</span></code> and the minimum value is <code class="docutils literal notranslate"><span class="pre">1</span></code>. Changing this forces a new resource to be created.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">secureEnvironmentVariables</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">volumes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">secureEnvironmentVariables</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A list of sensitive environment variables to be set on the container. Specified as a map of name/value pairs. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volumes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The definition of a volume mount for this container as documented in the <code class="docutils literal notranslate"><span class="pre">volume</span></code> block below. Changing this forces a new resource to be created.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">mountPath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mountPath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path on which this volume is to be mounted. Changing this forces a new resource to be created.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the Container Group. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">readOnly</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">share_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">readOnly</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specify if the volume is to be mounted as read only or not. The default value is <code class="docutils literal notranslate"><span class="pre">false</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">share_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Azure storage share that is to be mounted as a volume. This must be created on the storage account specified as above. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The access key for the Azure Storage account specified as above. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Azure storage account from which the volume is to be mounted. Changing this forces a new resource to be created.</p></li>
 </ul>
 </li>
 </ul>
 <p>The <strong>diagnostics</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">logAnalytics</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">logAnalytics</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">log_analytics</span></code> block as defined below. Changing this forces a new resource to be created.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">logType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">metadata</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">workspace_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">workspaceKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The log type which should be used. Possible values are <code class="docutils literal notranslate"><span class="pre">ContainerInsights</span></code> and <code class="docutils literal notranslate"><span class="pre">ContainerInstanceLogs</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">metadata</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Any metadata required for Log Analytics. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">workspace_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Workspace ID of the Log Analytics Workspace. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">workspaceKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Workspace Key of the Log Analytics Workspace. Changing this forces a new resource to be created.</p></li>
 </ul>
 </li>
 </ul>
 <p>The <strong>identity</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">identityIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">identityIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies a list of user managed identity ids to be assigned. Required if <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">UserAssigned</span></code>. Changing this forces a new resource to be created.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">principal_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Managed Service Identity Type of this container group. Possible values are <code class="docutils literal notranslate"><span class="pre">SystemAssigned</span></code> (where Azure will generate a Service Principal for you), <code class="docutils literal notranslate"><span class="pre">UserAssigned</span></code> where you can specify the Service Principal IDs in the <code class="docutils literal notranslate"><span class="pre">identity_ids</span></code> field, and <code class="docutils literal notranslate"><span class="pre">SystemAssigned,</span> <span class="pre">UserAssigned</span></code> which assigns both a system managed identity as well as the specified user assigned identities. Changing this forces a new resource to be created.</p></li>
 </ul>
 <p>The <strong>image_registry_credentials</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">server</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The password with which to connect to the registry. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">server</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The address to use to connect to the registry without protocol (“https”/”http”). For example: “myacr.acr.io”. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The username with which to connect to the registry. Changing this forces a new resource to be created.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_azure.containerservice.Group.containers">
 <code class="sig-name descname">containers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.Group.containers" title="Permalink to this definition">¶</a></dt>
 <dd><p>The definition of a container that is part of the group as documented in the <code class="docutils literal notranslate"><span class="pre">container</span></code> block below. Changing this forces a new resource to be created.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">commands</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">cpu</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">environmentVariables</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">gpu</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">commands</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of commands which should be run on the container. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cpu</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The required number of CPU cores of the containers. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">environmentVariables</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A list of environment variables to be set on the container. Specified as a map of name/value pairs. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gpu</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A <code class="docutils literal notranslate"><span class="pre">gpu</span></code> block as defined below. Changing this forces a new resource to be created.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">count</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sku</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">count</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of GPUs which should be assigned to this container. Allowed values are <code class="docutils literal notranslate"><span class="pre">1</span></code>, <code class="docutils literal notranslate"><span class="pre">2</span></code>, or <code class="docutils literal notranslate"><span class="pre">4</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sku</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Sku which should be used for the GPU. Possible values are <code class="docutils literal notranslate"><span class="pre">K80</span></code>, <code class="docutils literal notranslate"><span class="pre">P100</span></code>, or <code class="docutils literal notranslate"><span class="pre">V100</span></code>. Changing this forces a new resource to be created.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">image</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">livenessProbe</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">image</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The container image name. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">livenessProbe</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The definition of a readiness probe for this container as documented in the <code class="docutils literal notranslate"><span class="pre">liveness_probe</span></code> block below. Changing this forces a new resource to be created.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">execs</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">failureThreshold</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">httpGets</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">execs</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Commands to be run to validate container readiness. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">failureThreshold</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - How many times to try the probe before restarting the container (liveness probe) or marking the container as unhealthy (readiness probe). The default value is <code class="docutils literal notranslate"><span class="pre">3</span></code> and the minimum value is <code class="docutils literal notranslate"><span class="pre">1</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpGets</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The definition of the httpget for this container as documented in the <code class="docutils literal notranslate"><span class="pre">httpget</span></code> block below. Changing this forces a new resource to be created.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">scheme</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Path to access on the HTTP server. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The port number the container will expose. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scheme</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Scheme to use for connecting to the host. Possible values are <code class="docutils literal notranslate"><span class="pre">Http</span></code> and <code class="docutils literal notranslate"><span class="pre">Https</span></code>. Changing this forces a new resource to be created.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">initialDelaySeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">periodSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">successThreshold</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">timeoutSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">initialDelaySeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Number of seconds after the container has started before liveness or readiness probes are initiated. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">periodSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - How often (in seconds) to perform the probe. The default value is <code class="docutils literal notranslate"><span class="pre">10</span></code> and the minimum value is <code class="docutils literal notranslate"><span class="pre">1</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">successThreshold</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Minimum consecutive successes for the probe to be considered successful after having failed. The default value is <code class="docutils literal notranslate"><span class="pre">1</span></code> and the minimum value is <code class="docutils literal notranslate"><span class="pre">1</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeoutSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Number of seconds after which the probe times out. The default value is <code class="docutils literal notranslate"><span class="pre">1</span></code> and the minimum value is <code class="docutils literal notranslate"><span class="pre">1</span></code>. Changing this forces a new resource to be created.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">memory</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">memory</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The required memory of the containers in GB. Changing this forces a new resource to be created.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the name of the Container Group. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ports</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">ports</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A set of public ports for the container. Changing this forces a new resource to be created. Set as documented in the <code class="docutils literal notranslate"><span class="pre">ports</span></code> block below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The port number the container will expose. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The network protocol associated with port. Possible values are <code class="docutils literal notranslate"><span class="pre">TCP</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">UDP</span></code>. Changing this forces a new resource to be created.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">readinessProbe</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">readinessProbe</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The definition of a readiness probe for this container as documented in the <code class="docutils literal notranslate"><span class="pre">readiness_probe</span></code> block below. Changing this forces a new resource to be created.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">execs</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">failureThreshold</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">httpGets</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">execs</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Commands to be run to validate container readiness. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">failureThreshold</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - How many times to try the probe before restarting the container (liveness probe) or marking the container as unhealthy (readiness probe). The default value is <code class="docutils literal notranslate"><span class="pre">3</span></code> and the minimum value is <code class="docutils literal notranslate"><span class="pre">1</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpGets</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The definition of the httpget for this container as documented in the <code class="docutils literal notranslate"><span class="pre">httpget</span></code> block below. Changing this forces a new resource to be created.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">scheme</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Path to access on the HTTP server. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The port number the container will expose. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scheme</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Scheme to use for connecting to the host. Possible values are <code class="docutils literal notranslate"><span class="pre">Http</span></code> and <code class="docutils literal notranslate"><span class="pre">Https</span></code>. Changing this forces a new resource to be created.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">initialDelaySeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">periodSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">successThreshold</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">timeoutSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">initialDelaySeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Number of seconds after the container has started before liveness or readiness probes are initiated. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">periodSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - How often (in seconds) to perform the probe. The default value is <code class="docutils literal notranslate"><span class="pre">10</span></code> and the minimum value is <code class="docutils literal notranslate"><span class="pre">1</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">successThreshold</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Minimum consecutive successes for the probe to be considered successful after having failed. The default value is <code class="docutils literal notranslate"><span class="pre">1</span></code> and the minimum value is <code class="docutils literal notranslate"><span class="pre">1</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeoutSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Number of seconds after which the probe times out. The default value is <code class="docutils literal notranslate"><span class="pre">1</span></code> and the minimum value is <code class="docutils literal notranslate"><span class="pre">1</span></code>. Changing this forces a new resource to be created.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">secureEnvironmentVariables</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">volumes</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">secureEnvironmentVariables</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A list of sensitive environment variables to be set on the container. Specified as a map of name/value pairs. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volumes</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The definition of a volume mount for this container as documented in the <code class="docutils literal notranslate"><span class="pre">volume</span></code> block below. Changing this forces a new resource to be created.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">mountPath</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mountPath</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The path on which this volume is to be mounted. Changing this forces a new resource to be created.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the name of the Container Group. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">readOnly</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">share_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">readOnly</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Specify if the volume is to be mounted as read only or not. The default value is <code class="docutils literal notranslate"><span class="pre">false</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">share_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Azure storage share that is to be mounted as a volume. This must be created on the storage account specified as above. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The access key for the Azure Storage account specified as above. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Azure storage account from which the volume is to be mounted. Changing this forces a new resource to be created.</p></li>
 </ul>
 </li>
 </ul>
@@ -443,12 +443,12 @@ anything, please consult the source <a class="reference external" href="https://
 <code class="sig-name descname">diagnostics</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.Group.diagnostics" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">diagnostics</span></code> block as documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">logAnalytics</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">logAnalytics</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A <code class="docutils literal notranslate"><span class="pre">log_analytics</span></code> block as defined below. Changing this forces a new resource to be created.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">logType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">metadata</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">workspace_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">workspaceKey</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The log type which should be used. Possible values are <code class="docutils literal notranslate"><span class="pre">ContainerInsights</span></code> and <code class="docutils literal notranslate"><span class="pre">ContainerInstanceLogs</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">metadata</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Any metadata required for Log Analytics. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">workspace_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Workspace ID of the Log Analytics Workspace. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">workspaceKey</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Workspace Key of the Log Analytics Workspace. Changing this forces a new resource to be created.</p></li>
 </ul>
 </li>
 </ul>
@@ -471,9 +471,9 @@ anything, please consult the source <a class="reference external" href="https://
 <code class="sig-name descname">identity</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.Group.identity" title="Permalink to this definition">¶</a></dt>
 <dd><p>An <code class="docutils literal notranslate"><span class="pre">identity</span></code> block as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">identityIds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">identityIds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Specifies a list of user managed identity ids to be assigned. Required if <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">UserAssigned</span></code>. Changing this forces a new resource to be created.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">principal_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Managed Service Identity Type of this container group. Possible values are <code class="docutils literal notranslate"><span class="pre">SystemAssigned</span></code> (where Azure will generate a Service Principal for you), <code class="docutils literal notranslate"><span class="pre">UserAssigned</span></code> where you can specify the Service Principal IDs in the <code class="docutils literal notranslate"><span class="pre">identity_ids</span></code> field, and <code class="docutils literal notranslate"><span class="pre">SystemAssigned,</span> <span class="pre">UserAssigned</span></code> which assigns both a system managed identity as well as the specified user assigned identities. Changing this forces a new resource to be created.</p></li>
 </ul>
 </dd></dl>
 
@@ -482,9 +482,9 @@ anything, please consult the source <a class="reference external" href="https://
 <code class="sig-name descname">image_registry_credentials</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.Group.image_registry_credentials" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">image_registry_credential</span></code> block as documented below. Changing this forces a new resource to be created.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">server</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The password with which to connect to the registry. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">server</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The address to use to connect to the registry without protocol (“https”/”http”). For example: “myacr.acr.io”. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The username with which to connect to the registry. Changing this forces a new resource to be created.</p></li>
 </ul>
 </dd></dl>
 
@@ -573,92 +573,92 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>containers</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">commands</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">cpu</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">environmentVariables</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">gpu</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">commands</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of commands which should be run on the container. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cpu</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The required number of CPU cores of the containers. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">environmentVariables</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A list of environment variables to be set on the container. Specified as a map of name/value pairs. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gpu</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">gpu</span></code> block as defined below. Changing this forces a new resource to be created.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">count</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sku</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">count</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of GPUs which should be assigned to this container. Allowed values are <code class="docutils literal notranslate"><span class="pre">1</span></code>, <code class="docutils literal notranslate"><span class="pre">2</span></code>, or <code class="docutils literal notranslate"><span class="pre">4</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sku</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Sku which should be used for the GPU. Possible values are <code class="docutils literal notranslate"><span class="pre">K80</span></code>, <code class="docutils literal notranslate"><span class="pre">P100</span></code>, or <code class="docutils literal notranslate"><span class="pre">V100</span></code>. Changing this forces a new resource to be created.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">image</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">livenessProbe</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">image</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The container image name. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">livenessProbe</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The definition of a readiness probe for this container as documented in the <code class="docutils literal notranslate"><span class="pre">liveness_probe</span></code> block below. Changing this forces a new resource to be created.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">execs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">failureThreshold</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">httpGets</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">execs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Commands to be run to validate container readiness. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">failureThreshold</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - How many times to try the probe before restarting the container (liveness probe) or marking the container as unhealthy (readiness probe). The default value is <code class="docutils literal notranslate"><span class="pre">3</span></code> and the minimum value is <code class="docutils literal notranslate"><span class="pre">1</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpGets</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The definition of the httpget for this container as documented in the <code class="docutils literal notranslate"><span class="pre">httpget</span></code> block below. Changing this forces a new resource to be created.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">scheme</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Path to access on the HTTP server. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The port number the container will expose. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scheme</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Scheme to use for connecting to the host. Possible values are <code class="docutils literal notranslate"><span class="pre">Http</span></code> and <code class="docutils literal notranslate"><span class="pre">Https</span></code>. Changing this forces a new resource to be created.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">initialDelaySeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">periodSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">successThreshold</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">timeoutSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">initialDelaySeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Number of seconds after the container has started before liveness or readiness probes are initiated. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">periodSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - How often (in seconds) to perform the probe. The default value is <code class="docutils literal notranslate"><span class="pre">10</span></code> and the minimum value is <code class="docutils literal notranslate"><span class="pre">1</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">successThreshold</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Minimum consecutive successes for the probe to be considered successful after having failed. The default value is <code class="docutils literal notranslate"><span class="pre">1</span></code> and the minimum value is <code class="docutils literal notranslate"><span class="pre">1</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeoutSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Number of seconds after which the probe times out. The default value is <code class="docutils literal notranslate"><span class="pre">1</span></code> and the minimum value is <code class="docutils literal notranslate"><span class="pre">1</span></code>. Changing this forces a new resource to be created.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">memory</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">memory</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The required memory of the containers in GB. Changing this forces a new resource to be created.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the Container Group. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ports</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">ports</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A set of public ports for the container. Changing this forces a new resource to be created. Set as documented in the <code class="docutils literal notranslate"><span class="pre">ports</span></code> block below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The port number the container will expose. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The network protocol associated with port. Possible values are <code class="docutils literal notranslate"><span class="pre">TCP</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">UDP</span></code>. Changing this forces a new resource to be created.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">readinessProbe</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">readinessProbe</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The definition of a readiness probe for this container as documented in the <code class="docutils literal notranslate"><span class="pre">readiness_probe</span></code> block below. Changing this forces a new resource to be created.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">execs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">failureThreshold</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">httpGets</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">execs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Commands to be run to validate container readiness. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">failureThreshold</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - How many times to try the probe before restarting the container (liveness probe) or marking the container as unhealthy (readiness probe). The default value is <code class="docutils literal notranslate"><span class="pre">3</span></code> and the minimum value is <code class="docutils literal notranslate"><span class="pre">1</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">httpGets</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The definition of the httpget for this container as documented in the <code class="docutils literal notranslate"><span class="pre">httpget</span></code> block below. Changing this forces a new resource to be created.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">scheme</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Path to access on the HTTP server. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The port number the container will expose. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">scheme</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Scheme to use for connecting to the host. Possible values are <code class="docutils literal notranslate"><span class="pre">Http</span></code> and <code class="docutils literal notranslate"><span class="pre">Https</span></code>. Changing this forces a new resource to be created.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">initialDelaySeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">periodSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">successThreshold</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">timeoutSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">initialDelaySeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Number of seconds after the container has started before liveness or readiness probes are initiated. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">periodSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - How often (in seconds) to perform the probe. The default value is <code class="docutils literal notranslate"><span class="pre">10</span></code> and the minimum value is <code class="docutils literal notranslate"><span class="pre">1</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">successThreshold</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Minimum consecutive successes for the probe to be considered successful after having failed. The default value is <code class="docutils literal notranslate"><span class="pre">1</span></code> and the minimum value is <code class="docutils literal notranslate"><span class="pre">1</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeoutSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Number of seconds after which the probe times out. The default value is <code class="docutils literal notranslate"><span class="pre">1</span></code> and the minimum value is <code class="docutils literal notranslate"><span class="pre">1</span></code>. Changing this forces a new resource to be created.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">secureEnvironmentVariables</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">volumes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">secureEnvironmentVariables</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A list of sensitive environment variables to be set on the container. Specified as a map of name/value pairs. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">volumes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The definition of a volume mount for this container as documented in the <code class="docutils literal notranslate"><span class="pre">volume</span></code> block below. Changing this forces a new resource to be created.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">mountPath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mountPath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path on which this volume is to be mounted. Changing this forces a new resource to be created.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the Container Group. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">readOnly</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">share_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">readOnly</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specify if the volume is to be mounted as read only or not. The default value is <code class="docutils literal notranslate"><span class="pre">false</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">share_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Azure storage share that is to be mounted as a volume. This must be created on the storage account specified as above. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The access key for the Azure Storage account specified as above. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Azure storage account from which the volume is to be mounted. Changing this forces a new resource to be created.</p></li>
 </ul>
 </li>
 </ul>
 <p>The <strong>diagnostics</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">logAnalytics</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">logAnalytics</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">log_analytics</span></code> block as defined below. Changing this forces a new resource to be created.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">logType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">metadata</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">workspace_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">workspaceKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The log type which should be used. Possible values are <code class="docutils literal notranslate"><span class="pre">ContainerInsights</span></code> and <code class="docutils literal notranslate"><span class="pre">ContainerInstanceLogs</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">metadata</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Any metadata required for Log Analytics. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">workspace_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Workspace ID of the Log Analytics Workspace. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">workspaceKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Workspace Key of the Log Analytics Workspace. Changing this forces a new resource to be created.</p></li>
 </ul>
 </li>
 </ul>
 <p>The <strong>identity</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">identityIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">identityIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies a list of user managed identity ids to be assigned. Required if <code class="docutils literal notranslate"><span class="pre">type</span></code> is <code class="docutils literal notranslate"><span class="pre">UserAssigned</span></code>. Changing this forces a new resource to be created.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">principal_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Managed Service Identity Type of this container group. Possible values are <code class="docutils literal notranslate"><span class="pre">SystemAssigned</span></code> (where Azure will generate a Service Principal for you), <code class="docutils literal notranslate"><span class="pre">UserAssigned</span></code> where you can specify the Service Principal IDs in the <code class="docutils literal notranslate"><span class="pre">identity_ids</span></code> field, and <code class="docutils literal notranslate"><span class="pre">SystemAssigned,</span> <span class="pre">UserAssigned</span></code> which assigns both a system managed identity as well as the specified user assigned identities. Changing this forces a new resource to be created.</p></li>
 </ul>
 <p>The <strong>image_registry_credentials</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">server</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The password with which to connect to the registry. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">server</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The address to use to connect to the registry without protocol (“https”/”http”). For example: “myacr.acr.io”. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The username with which to connect to the registry. Changing this forces a new resource to be created.</p></li>
 </ul>
 </dd></dl>
 
@@ -705,8 +705,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.containerservice.</code><code class="sig-name descname">KubernetesCluster</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">addon_profile=None</em>, <em class="sig-param">api_server_authorized_ip_ranges=None</em>, <em class="sig-param">default_node_pool=None</em>, <em class="sig-param">dns_prefix=None</em>, <em class="sig-param">enable_pod_security_policy=None</em>, <em class="sig-param">identity=None</em>, <em class="sig-param">kubernetes_version=None</em>, <em class="sig-param">linux_profile=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_profile=None</em>, <em class="sig-param">node_resource_group=None</em>, <em class="sig-param">private_link_enabled=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">role_based_access_control=None</em>, <em class="sig-param">service_principal=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">windows_profile=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Managed Kubernetes Cluster (also known as AKS / Azure Kubernetes Service)</p>
 <blockquote>
-<div><p><strong>Note:</strong> All arguments including the client secret will be stored in the raw state as plain-text. <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/kubernetes_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/kubernetes_cluster.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/kubernetes_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/kubernetes_cluster.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -735,139 +734,139 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <p>The <strong>addon_profile</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">aciConnectorLinux</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">aciConnectorLinux</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">aci_connector_linux</span></code> block. For more details, please visit <a class="reference external" href="https://docs.microsoft.com/en-us/azure/aks/virtual-nodes-portal">Create and configure an AKS cluster to use virtual nodes</a>.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnetName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is the virtual node addon enabled?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnetName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The subnet name for the virtual nodes to run. This is required when <code class="docutils literal notranslate"><span class="pre">aci_connector_linux</span></code> <code class="docutils literal notranslate"><span class="pre">enabled</span></code> argument is set to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">azurePolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">azurePolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">azure_policy</span></code> block as defined below. For more details please visit <a class="reference external" href="https://docs.microsoft.com/en-ie/azure/governance/policy/concepts/rego-for-aks">Understand Azure Policy for Azure Kubernetes Service</a></p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is the Azure Policy for Kubernetes Add On enabled?</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">httpApplicationRouting</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">http_application_routing</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is HTTP Application Routing Enabled? Changing this forces a new resource to be created.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">httpApplicationRoutingZoneName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Zone Name of the HTTP Application Routing.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">kubeDashboard</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">kubeDashboard</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">kube_dashboard</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is the Kubernetes Dashboard enabled?</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">omsAgent</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">omsAgent</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">oms_agent</span></code> block as defined below. For more details, please visit <a class="reference external" href="https://docs.microsoft.com/en-us/azure/monitoring/monitoring-container-insights-onboard">How to onboard Azure Monitor for containers</a>.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">log_analytics_workspace_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is the OMS Agent Enabled?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">log_analytics_workspace_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Log Analytics Workspace which the OMS Agent should send data to. Must be present if <code class="docutils literal notranslate"><span class="pre">enabled</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 </ul>
 </li>
 </ul>
 <p>The <strong>default_node_pool</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">availability_zones</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enable_auto_scaling</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enable_node_public_ip</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">max_count</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">max_pods</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">min_count</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Managed Kubernetes Cluster to create. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">node_count</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">node_labels</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">node_taints</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">os_disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">availability_zones</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of Availability Zones across which the Node Pool should be spread.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enable_auto_scaling</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should <a class="reference external" href="https://docs.microsoft.com/en-us/azure/aks/cluster-autoscaler">the Kubernetes Auto Scaler</a> be enabled for this Node Pool? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enable_node_public_ip</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should nodes in this Node Pool have a Public IP Address? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">max_count</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum number of nodes which should exist in this Node Pool. If specified this must be between <code class="docutils literal notranslate"><span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">100</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">max_pods</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum number of pods that can run on each agent. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">min_count</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The minimum number of nodes which should exist in this Node Pool. If specified this must be between <code class="docutils literal notranslate"><span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">100</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name which should be used for the default Kubernetes Node Pool. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">node_count</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The initial number of nodes which should exist in this Node Pool. If specified this must be between <code class="docutils literal notranslate"><span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">100</span></code> and between <code class="docutils literal notranslate"><span class="pre">min_count</span></code> and <code class="docutils literal notranslate"><span class="pre">max_count</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">node_labels</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A map of Kubernetes labels which should be applied to nodes in the Default Node Pool.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">node_taints</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of Kubernetes taints which should be applied to nodes in the agent pool (e.g <code class="docutils literal notranslate"><span class="pre">key=value:NoSchedule</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">os_disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size of the OS Disk which should be used for each agent in the Node Pool. Changing this forces a new resource to be created.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A mapping of tags to assign to the resource.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">vm_size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">vnet_subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of Node Pool which should be created. Possible values are <code class="docutils literal notranslate"><span class="pre">AvailabilitySet</span></code> and <code class="docutils literal notranslate"><span class="pre">VirtualMachineScaleSets</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">VirtualMachineScaleSets</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vm_size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The size of the Virtual Machine, such as <code class="docutils literal notranslate"><span class="pre">Standard_DS2_v2</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vnet_subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of a Subnet where the Kubernetes Node Pool should exist. Changing this forces a new resource to be created.</p></li>
 </ul>
 <p>The <strong>identity</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">principal_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The principal id of the system assigned identity which is used by master components.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tenant_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The tenant id of the system assigned identity which is used by master components.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tenant_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Tenant ID used for Azure Active Directory Application. If this isn’t specified the Tenant ID of the current Subscription is used.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of identity used for the managed cluster. At this time the only supported value is <code class="docutils literal notranslate"><span class="pre">SystemAssigned</span></code>.</p></li>
 </ul>
 <p>The <strong>linux_profile</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">admin_username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ssh_key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">admin_username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Admin Username for the Cluster. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ssh_key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - An <code class="docutils literal notranslate"><span class="pre">ssh_key</span></code> block. Only one is currently allowed. Changing this forces a new resource to be created.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">keyData</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">keyData</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Public SSH Key used to access the cluster. Changing this forces a new resource to be created.</p></li>
 </ul>
 </li>
 </ul>
 <p>The <strong>network_profile</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">dnsServiceIp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">dockerBridgeCidr</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">loadBalancerProfile</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">dnsServiceIp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - IP address within the Kubernetes service address range that will be used by cluster service discovery (kube-dns). This is required when <code class="docutils literal notranslate"><span class="pre">network_plugin</span></code> is set to <code class="docutils literal notranslate"><span class="pre">azure</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dockerBridgeCidr</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - IP address (in CIDR notation) used as the Docker bridge IP address on nodes. This is required when <code class="docutils literal notranslate"><span class="pre">network_plugin</span></code> is set to <code class="docutils literal notranslate"><span class="pre">azure</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">loadBalancerProfile</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">load_balancer_profile</span></code> block. This can only be specified when <code class="docutils literal notranslate"><span class="pre">load_balancer_sku</span></code> is set to <code class="docutils literal notranslate"><span class="pre">Standard</span></code>.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">effectiveOutboundIps</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The outcome (resource IDs) of the specified arguments.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">managedOutboundIpCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">outboundIpAddressIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">outboundIpPrefixIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">managedOutboundIpCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Count of desired managed outbound IPs for the cluster load balancer. Must be in the range of [1, 100].</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">outboundIpAddressIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The ID of the Public IP Addresses which should be used for outbound communication for the cluster load balancer.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">outboundIpPrefixIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The ID of the outbound Public IP Address Prefixes which should be used for the cluster load balancer.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">loadBalancerSku</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">networkPlugin</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">networkPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">podCidr</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">serviceCidr</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">loadBalancerSku</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the SKU of the Load Balancer used for this Kubernetes Cluster. Possible values are <code class="docutils literal notranslate"><span class="pre">Basic</span></code> and <code class="docutils literal notranslate"><span class="pre">Standard</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Standard</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">networkPlugin</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Network plugin to use for networking. Currently supported values are <code class="docutils literal notranslate"><span class="pre">azure</span></code> and <code class="docutils literal notranslate"><span class="pre">kubenet</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">networkPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Sets up network policy to be used with Azure CNI. <a class="reference external" href="https://docs.microsoft.com/en-us/azure/aks/use-network-policies">Network policy allows us to control the traffic flow between pods</a>. Currently supported values are <code class="docutils literal notranslate"><span class="pre">calico</span></code> and <code class="docutils literal notranslate"><span class="pre">azure</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">podCidr</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The CIDR to use for pod IP addresses. This field can only be set when <code class="docutils literal notranslate"><span class="pre">network_plugin</span></code> is set to <code class="docutils literal notranslate"><span class="pre">kubenet</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serviceCidr</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Network Range used by the Kubernetes service. This is required when <code class="docutils literal notranslate"><span class="pre">network_plugin</span></code> is set to <code class="docutils literal notranslate"><span class="pre">azure</span></code>. Changing this forces a new resource to be created.</p></li>
 </ul>
 <p>The <strong>role_based_access_control</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">azure_active_directory</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">azure_active_directory</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - An <code class="docutils literal notranslate"><span class="pre">azure_active_directory</span></code> block.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">clientAppId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">serverAppId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">serverAppSecret</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tenant_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The tenant id of the system assigned identity which is used by master components.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clientAppId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Client ID of an Azure Active Directory Application.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serverAppId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Server ID of an Azure Active Directory Application.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serverAppSecret</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Server Secret of an Azure Active Directory Application.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tenant_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Tenant ID used for Azure Active Directory Application. If this isn’t specified the Tenant ID of the current Subscription is used.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is Role Based Access Control Enabled? Changing this forces a new resource to be created.</p></li>
 </ul>
 <p>The <strong>service_principal</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">client_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">client_secret</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">client_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Client ID for the Service Principal.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">client_secret</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Client Secret for the Service Principal.</p></li>
 </ul>
 <p>The <strong>windows_profile</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">admin_password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">admin_username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">admin_password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Admin Password for Windows VMs.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">admin_username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Admin Username for Windows VMs.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_azure.containerservice.KubernetesCluster.addon_profile">
 <code class="sig-name descname">addon_profile</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster.addon_profile" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">addon_profile</span></code> block as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">aciConnectorLinux</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">aciConnectorLinux</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A <code class="docutils literal notranslate"><span class="pre">aci_connector_linux</span></code> block. For more details, please visit <a class="reference external" href="https://docs.microsoft.com/en-us/azure/aks/virtual-nodes-portal">Create and configure an AKS cluster to use virtual nodes</a>.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnetName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Is the virtual node addon enabled?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnetName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The subnet name for the virtual nodes to run. This is required when <code class="docutils literal notranslate"><span class="pre">aci_connector_linux</span></code> <code class="docutils literal notranslate"><span class="pre">enabled</span></code> argument is set to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">azurePolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">azurePolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A <code class="docutils literal notranslate"><span class="pre">azure_policy</span></code> block as defined below. For more details please visit <a class="reference external" href="https://docs.microsoft.com/en-ie/azure/governance/policy/concepts/rego-for-aks">Understand Azure Policy for Azure Kubernetes Service</a></p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Is the Azure Policy for Kubernetes Add On enabled?</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">httpApplicationRouting</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A <code class="docutils literal notranslate"><span class="pre">http_application_routing</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Is HTTP Application Routing Enabled? Changing this forces a new resource to be created.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">httpApplicationRoutingZoneName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Zone Name of the HTTP Application Routing.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">kubeDashboard</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">kubeDashboard</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A <code class="docutils literal notranslate"><span class="pre">kube_dashboard</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Is the Kubernetes Dashboard enabled?</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">omsAgent</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">omsAgent</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A <code class="docutils literal notranslate"><span class="pre">oms_agent</span></code> block as defined below. For more details, please visit <a class="reference external" href="https://docs.microsoft.com/en-us/azure/monitoring/monitoring-container-insights-onboard">How to onboard Azure Monitor for containers</a>.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">log_analytics_workspace_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Is the OMS Agent Enabled?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">log_analytics_workspace_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the Log Analytics Workspace which the OMS Agent should send data to. Must be present if <code class="docutils literal notranslate"><span class="pre">enabled</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 </ul>
 </li>
 </ul>
@@ -884,21 +883,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">default_node_pool</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster.default_node_pool" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">default_node_pool</span></code> block as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">availability_zones</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enable_auto_scaling</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enable_node_public_ip</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">max_count</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">max_pods</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">min_count</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the Managed Kubernetes Cluster to create. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">node_count</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">node_labels</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">node_taints</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">os_disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">availability_zones</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of Availability Zones across which the Node Pool should be spread.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enable_auto_scaling</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Should <a class="reference external" href="https://docs.microsoft.com/en-us/azure/aks/cluster-autoscaler">the Kubernetes Auto Scaler</a> be enabled for this Node Pool? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enable_node_public_ip</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Should nodes in this Node Pool have a Public IP Address? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">max_count</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The maximum number of nodes which should exist in this Node Pool. If specified this must be between <code class="docutils literal notranslate"><span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">100</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">max_pods</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The maximum number of pods that can run on each agent. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">min_count</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The minimum number of nodes which should exist in this Node Pool. If specified this must be between <code class="docutils literal notranslate"><span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">100</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name which should be used for the default Kubernetes Node Pool. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">node_count</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The initial number of nodes which should exist in this Node Pool. If specified this must be between <code class="docutils literal notranslate"><span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">100</span></code> and between <code class="docutils literal notranslate"><span class="pre">min_count</span></code> and <code class="docutils literal notranslate"><span class="pre">max_count</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">node_labels</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A map of Kubernetes labels which should be applied to nodes in the Default Node Pool.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">node_taints</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of Kubernetes taints which should be applied to nodes in the agent pool (e.g <code class="docutils literal notranslate"><span class="pre">key=value:NoSchedule</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">os_disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The size of the OS Disk which should be used for each agent in the Node Pool. Changing this forces a new resource to be created.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A mapping of tags to assign to the resource.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">vm_size</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">vnet_subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The type of Node Pool which should be created. Possible values are <code class="docutils literal notranslate"><span class="pre">AvailabilitySet</span></code> and <code class="docutils literal notranslate"><span class="pre">VirtualMachineScaleSets</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">VirtualMachineScaleSets</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vm_size</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The size of the Virtual Machine, such as <code class="docutils literal notranslate"><span class="pre">Standard_DS2_v2</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vnet_subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of a Subnet where the Kubernetes Node Pool should exist. Changing this forces a new resource to be created.</p></li>
 </ul>
 </dd></dl>
 
@@ -926,8 +925,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">identity</span></code> block as defined below. Changing this forces a new resource to be created.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">principal_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The principal id of the system assigned identity which is used by master components.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tenant_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The tenant id of the system assigned identity which is used by master components.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tenant_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Tenant ID used for Azure Active Directory Application. If this isn’t specified the Tenant ID of the current Subscription is used.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The type of identity used for the managed cluster. At this time the only supported value is <code class="docutils literal notranslate"><span class="pre">SystemAssigned</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -982,10 +981,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">linux_profile</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster.linux_profile" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">linux_profile</span></code> block as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">admin_username</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ssh_key</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">admin_username</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Admin Username for the Cluster. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ssh_key</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - An <code class="docutils literal notranslate"><span class="pre">ssh_key</span></code> block. Only one is currently allowed. Changing this forces a new resource to be created.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">keyData</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">keyData</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Public SSH Key used to access the cluster. Changing this forces a new resource to be created.</p></li>
 </ul>
 </li>
 </ul>
@@ -1008,21 +1007,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">network_profile</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster.network_profile" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">network_profile</span></code> block as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">dnsServiceIp</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">dockerBridgeCidr</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">loadBalancerProfile</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">dnsServiceIp</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - IP address within the Kubernetes service address range that will be used by cluster service discovery (kube-dns). This is required when <code class="docutils literal notranslate"><span class="pre">network_plugin</span></code> is set to <code class="docutils literal notranslate"><span class="pre">azure</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dockerBridgeCidr</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - IP address (in CIDR notation) used as the Docker bridge IP address on nodes. This is required when <code class="docutils literal notranslate"><span class="pre">network_plugin</span></code> is set to <code class="docutils literal notranslate"><span class="pre">azure</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">loadBalancerProfile</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A <code class="docutils literal notranslate"><span class="pre">load_balancer_profile</span></code> block. This can only be specified when <code class="docutils literal notranslate"><span class="pre">load_balancer_sku</span></code> is set to <code class="docutils literal notranslate"><span class="pre">Standard</span></code>.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">effectiveOutboundIps</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The outcome (resource IDs) of the specified arguments.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">managedOutboundIpCount</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">outboundIpAddressIds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">outboundIpPrefixIds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">managedOutboundIpCount</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Count of desired managed outbound IPs for the cluster load balancer. Must be in the range of [1, 100].</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">outboundIpAddressIds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The ID of the Public IP Addresses which should be used for outbound communication for the cluster load balancer.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">outboundIpPrefixIds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The ID of the outbound Public IP Address Prefixes which should be used for the cluster load balancer.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">loadBalancerSku</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">networkPlugin</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">networkPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">podCidr</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">serviceCidr</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">loadBalancerSku</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the SKU of the Load Balancer used for this Kubernetes Cluster. Possible values are <code class="docutils literal notranslate"><span class="pre">Basic</span></code> and <code class="docutils literal notranslate"><span class="pre">Standard</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Standard</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">networkPlugin</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Network plugin to use for networking. Currently supported values are <code class="docutils literal notranslate"><span class="pre">azure</span></code> and <code class="docutils literal notranslate"><span class="pre">kubenet</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">networkPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Sets up network policy to be used with Azure CNI. <a class="reference external" href="https://docs.microsoft.com/en-us/azure/aks/use-network-policies">Network policy allows us to control the traffic flow between pods</a>. Currently supported values are <code class="docutils literal notranslate"><span class="pre">calico</span></code> and <code class="docutils literal notranslate"><span class="pre">azure</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">podCidr</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The CIDR to use for pod IP addresses. This field can only be set when <code class="docutils literal notranslate"><span class="pre">network_plugin</span></code> is set to <code class="docutils literal notranslate"><span class="pre">kubenet</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serviceCidr</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Network Range used by the Kubernetes service. This is required when <code class="docutils literal notranslate"><span class="pre">network_plugin</span></code> is set to <code class="docutils literal notranslate"><span class="pre">azure</span></code>. Changing this forces a new resource to be created.</p></li>
 </ul>
 </dd></dl>
 
@@ -1049,15 +1048,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">role_based_access_control</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster.role_based_access_control" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">role_based_access_control</span></code> block.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">azure_active_directory</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">azure_active_directory</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - An <code class="docutils literal notranslate"><span class="pre">azure_active_directory</span></code> block.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">clientAppId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">serverAppId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">serverAppSecret</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tenant_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The tenant id of the system assigned identity which is used by master components.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clientAppId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Client ID of an Azure Active Directory Application.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serverAppId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Server ID of an Azure Active Directory Application.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serverAppSecret</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Server Secret of an Azure Active Directory Application.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tenant_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Tenant ID used for Azure Active Directory Application. If this isn’t specified the Tenant ID of the current Subscription is used.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Is Role Based Access Control Enabled? Changing this forces a new resource to be created.</p></li>
 </ul>
 </dd></dl>
 
@@ -1066,8 +1065,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">service_principal</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster.service_principal" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">service_principal</span></code> block as documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">client_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">client_secret</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">client_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Client ID for the Service Principal.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">client_secret</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Client Secret for the Service Principal.</p></li>
 </ul>
 </dd></dl>
 
@@ -1082,8 +1081,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">windows_profile</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesCluster.windows_profile" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">windows_profile</span></code> block as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">admin_password</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">admin_username</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">admin_password</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Admin Password for Windows VMs.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">admin_username</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Admin Username for Windows VMs.</p></li>
 </ul>
 </dd></dl>
 
@@ -1128,58 +1127,58 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>addon_profile</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">aciConnectorLinux</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">aciConnectorLinux</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">aci_connector_linux</span></code> block. For more details, please visit <a class="reference external" href="https://docs.microsoft.com/en-us/azure/aks/virtual-nodes-portal">Create and configure an AKS cluster to use virtual nodes</a>.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnetName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is the virtual node addon enabled?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnetName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The subnet name for the virtual nodes to run. This is required when <code class="docutils literal notranslate"><span class="pre">aci_connector_linux</span></code> <code class="docutils literal notranslate"><span class="pre">enabled</span></code> argument is set to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">azurePolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">azurePolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">azure_policy</span></code> block as defined below. For more details please visit <a class="reference external" href="https://docs.microsoft.com/en-ie/azure/governance/policy/concepts/rego-for-aks">Understand Azure Policy for Azure Kubernetes Service</a></p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is the Azure Policy for Kubernetes Add On enabled?</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">httpApplicationRouting</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">http_application_routing</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is HTTP Application Routing Enabled? Changing this forces a new resource to be created.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">httpApplicationRoutingZoneName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Zone Name of the HTTP Application Routing.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">kubeDashboard</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">kubeDashboard</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">kube_dashboard</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is the Kubernetes Dashboard enabled?</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">omsAgent</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">omsAgent</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">oms_agent</span></code> block as defined below. For more details, please visit <a class="reference external" href="https://docs.microsoft.com/en-us/azure/monitoring/monitoring-container-insights-onboard">How to onboard Azure Monitor for containers</a>.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">log_analytics_workspace_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is the OMS Agent Enabled?</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">log_analytics_workspace_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Log Analytics Workspace which the OMS Agent should send data to. Must be present if <code class="docutils literal notranslate"><span class="pre">enabled</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 </ul>
 </li>
 </ul>
 <p>The <strong>default_node_pool</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">availability_zones</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enable_auto_scaling</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enable_node_public_ip</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">max_count</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">max_pods</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">min_count</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Managed Kubernetes Cluster to create. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">node_count</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">node_labels</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">node_taints</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">os_disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">availability_zones</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of Availability Zones across which the Node Pool should be spread.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enable_auto_scaling</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should <a class="reference external" href="https://docs.microsoft.com/en-us/azure/aks/cluster-autoscaler">the Kubernetes Auto Scaler</a> be enabled for this Node Pool? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enable_node_public_ip</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Should nodes in this Node Pool have a Public IP Address? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">max_count</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum number of nodes which should exist in this Node Pool. If specified this must be between <code class="docutils literal notranslate"><span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">100</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">max_pods</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum number of pods that can run on each agent. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">min_count</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The minimum number of nodes which should exist in this Node Pool. If specified this must be between <code class="docutils literal notranslate"><span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">100</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name which should be used for the default Kubernetes Node Pool. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">node_count</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The initial number of nodes which should exist in this Node Pool. If specified this must be between <code class="docutils literal notranslate"><span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">100</span></code> and between <code class="docutils literal notranslate"><span class="pre">min_count</span></code> and <code class="docutils literal notranslate"><span class="pre">max_count</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">node_labels</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A map of Kubernetes labels which should be applied to nodes in the Default Node Pool.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">node_taints</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of Kubernetes taints which should be applied to nodes in the agent pool (e.g <code class="docutils literal notranslate"><span class="pre">key=value:NoSchedule</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">os_disk_size_gb</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size of the OS Disk which should be used for each agent in the Node Pool. Changing this forces a new resource to be created.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A mapping of tags to assign to the resource.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">vm_size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">vnet_subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of Node Pool which should be created. Possible values are <code class="docutils literal notranslate"><span class="pre">AvailabilitySet</span></code> and <code class="docutils literal notranslate"><span class="pre">VirtualMachineScaleSets</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">VirtualMachineScaleSets</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vm_size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The size of the Virtual Machine, such as <code class="docutils literal notranslate"><span class="pre">Standard_DS2_v2</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vnet_subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of a Subnet where the Kubernetes Node Pool should exist. Changing this forces a new resource to be created.</p></li>
 </ul>
 <p>The <strong>identity</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">principal_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The principal id of the system assigned identity which is used by master components.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tenant_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The tenant id of the system assigned identity which is used by master components.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tenant_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Tenant ID used for Azure Active Directory Application. If this isn’t specified the Tenant ID of the current Subscription is used.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of identity used for the managed cluster. At this time the only supported value is <code class="docutils literal notranslate"><span class="pre">SystemAssigned</span></code>.</p></li>
 </ul>
 <p>The <strong>kube_admin_configs</strong> object supports the following:</p>
 <ul class="simple">
@@ -1201,52 +1200,52 @@ properties used to qualify the lookup.</p>
 </ul>
 <p>The <strong>linux_profile</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">admin_username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ssh_key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">admin_username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Admin Username for the Cluster. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ssh_key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - An <code class="docutils literal notranslate"><span class="pre">ssh_key</span></code> block. Only one is currently allowed. Changing this forces a new resource to be created.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">keyData</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">keyData</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Public SSH Key used to access the cluster. Changing this forces a new resource to be created.</p></li>
 </ul>
 </li>
 </ul>
 <p>The <strong>network_profile</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">dnsServiceIp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">dockerBridgeCidr</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">loadBalancerProfile</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">dnsServiceIp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - IP address within the Kubernetes service address range that will be used by cluster service discovery (kube-dns). This is required when <code class="docutils literal notranslate"><span class="pre">network_plugin</span></code> is set to <code class="docutils literal notranslate"><span class="pre">azure</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dockerBridgeCidr</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - IP address (in CIDR notation) used as the Docker bridge IP address on nodes. This is required when <code class="docutils literal notranslate"><span class="pre">network_plugin</span></code> is set to <code class="docutils literal notranslate"><span class="pre">azure</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">loadBalancerProfile</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">load_balancer_profile</span></code> block. This can only be specified when <code class="docutils literal notranslate"><span class="pre">load_balancer_sku</span></code> is set to <code class="docutils literal notranslate"><span class="pre">Standard</span></code>.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">effectiveOutboundIps</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The outcome (resource IDs) of the specified arguments.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">managedOutboundIpCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">outboundIpAddressIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">outboundIpPrefixIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">managedOutboundIpCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Count of desired managed outbound IPs for the cluster load balancer. Must be in the range of [1, 100].</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">outboundIpAddressIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The ID of the Public IP Addresses which should be used for outbound communication for the cluster load balancer.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">outboundIpPrefixIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The ID of the outbound Public IP Address Prefixes which should be used for the cluster load balancer.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">loadBalancerSku</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">networkPlugin</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">networkPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">podCidr</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">serviceCidr</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">loadBalancerSku</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the SKU of the Load Balancer used for this Kubernetes Cluster. Possible values are <code class="docutils literal notranslate"><span class="pre">Basic</span></code> and <code class="docutils literal notranslate"><span class="pre">Standard</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">Standard</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">networkPlugin</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Network plugin to use for networking. Currently supported values are <code class="docutils literal notranslate"><span class="pre">azure</span></code> and <code class="docutils literal notranslate"><span class="pre">kubenet</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">networkPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Sets up network policy to be used with Azure CNI. <a class="reference external" href="https://docs.microsoft.com/en-us/azure/aks/use-network-policies">Network policy allows us to control the traffic flow between pods</a>. Currently supported values are <code class="docutils literal notranslate"><span class="pre">calico</span></code> and <code class="docutils literal notranslate"><span class="pre">azure</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">podCidr</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The CIDR to use for pod IP addresses. This field can only be set when <code class="docutils literal notranslate"><span class="pre">network_plugin</span></code> is set to <code class="docutils literal notranslate"><span class="pre">kubenet</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serviceCidr</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Network Range used by the Kubernetes service. This is required when <code class="docutils literal notranslate"><span class="pre">network_plugin</span></code> is set to <code class="docutils literal notranslate"><span class="pre">azure</span></code>. Changing this forces a new resource to be created.</p></li>
 </ul>
 <p>The <strong>role_based_access_control</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">azure_active_directory</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">azure_active_directory</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - An <code class="docutils literal notranslate"><span class="pre">azure_active_directory</span></code> block.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">clientAppId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">serverAppId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">serverAppSecret</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tenant_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The tenant id of the system assigned identity which is used by master components.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clientAppId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Client ID of an Azure Active Directory Application.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serverAppId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Server ID of an Azure Active Directory Application.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serverAppSecret</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Server Secret of an Azure Active Directory Application.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tenant_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Tenant ID used for Azure Active Directory Application. If this isn’t specified the Tenant ID of the current Subscription is used.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is Role Based Access Control Enabled? Changing this forces a new resource to be created.</p></li>
 </ul>
 <p>The <strong>service_principal</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">client_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">client_secret</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">client_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Client ID for the Service Principal.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">client_secret</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Client Secret for the Service Principal.</p></li>
 </ul>
 <p>The <strong>windows_profile</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">admin_password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">admin_username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">admin_password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Admin Password for Windows VMs.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">admin_username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Admin Username for Windows VMs.</p></li>
 </ul>
 </dd></dl>
 
@@ -1309,7 +1308,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>max_pods</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum number of pods that can run on each agent. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>min_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The minimum number of nodes which should exist within this Node Pool. Valid values are between <code class="docutils literal notranslate"><span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">100</span></code> and must be less than or equal to <code class="docutils literal notranslate"><span class="pre">max_count</span></code>.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Node Pool which should be created within the Kubernetes Cluster. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>node_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of nodes which should exist within this Node Pool. Valid values are between <code class="docutils literal notranslate"><span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">100</span></code>.</p></li>
+<li><p><strong>node_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The initial number of nodes which should exist within this Node Pool. Valid values are between <code class="docutils literal notranslate"><span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">100</span></code> and must be a value in the range <code class="docutils literal notranslate"><span class="pre">min_count</span></code> - <code class="docutils literal notranslate"><span class="pre">max_count</span></code>.</p></li>
 <li><p><strong>node_labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of Kubernetes labels which should be applied to nodes in this Node Pool.</p></li>
 <li><p><strong>node_taints</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of Kubernetes taints which should be applied to nodes in the agent pool (e.g <code class="docutils literal notranslate"><span class="pre">key=value:NoSchedule</span></code>).</p></li>
 <li><p><strong>os_disk_size_gb</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The Agent Operating System disk size in GB. Changing this forces a new resource to be created.</p></li>
@@ -1371,7 +1370,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_azure.containerservice.KubernetesClusterNodePool.node_count">
 <code class="sig-name descname">node_count</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.KubernetesClusterNodePool.node_count" title="Permalink to this definition">¶</a></dt>
-<dd><p>The number of nodes which should exist within this Node Pool. Valid values are between <code class="docutils literal notranslate"><span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">100</span></code>.</p>
+<dd><p>The initial number of nodes which should exist within this Node Pool. Valid values are between <code class="docutils literal notranslate"><span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">100</span></code> and must be a value in the range <code class="docutils literal notranslate"><span class="pre">min_count</span></code> - <code class="docutils literal notranslate"><span class="pre">max_count</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1436,7 +1435,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>max_pods</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum number of pods that can run on each agent. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>min_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The minimum number of nodes which should exist within this Node Pool. Valid values are between <code class="docutils literal notranslate"><span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">100</span></code> and must be less than or equal to <code class="docutils literal notranslate"><span class="pre">max_count</span></code>.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Node Pool which should be created within the Kubernetes Cluster. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>node_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of nodes which should exist within this Node Pool. Valid values are between <code class="docutils literal notranslate"><span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">100</span></code>.</p></li>
+<li><p><strong>node_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The initial number of nodes which should exist within this Node Pool. Valid values are between <code class="docutils literal notranslate"><span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">100</span></code> and must be a value in the range <code class="docutils literal notranslate"><span class="pre">min_count</span></code> - <code class="docutils literal notranslate"><span class="pre">max_count</span></code>.</p></li>
 <li><p><strong>node_labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of Kubernetes labels which should be applied to nodes in this Node Pool.</p></li>
 <li><p><strong>node_taints</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of Kubernetes taints which should be applied to nodes in the agent pool (e.g <code class="docutils literal notranslate"><span class="pre">key=value:NoSchedule</span></code>).</p></li>
 <li><p><strong>os_disk_size_gb</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The Agent Operating System disk size in GB. Changing this forces a new resource to be created.</p></li>
@@ -1492,9 +1491,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.containerservice.</code><code class="sig-name descname">Registry</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">admin_enabled=None</em>, <em class="sig-param">georeplication_locations=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_rule_set=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">storage_account_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.Registry" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Azure Container Registry.</p>
 <blockquote>
-<div><p><strong>Note:</strong> All arguments including the access key will be stored in the raw state as plain-text.
-<a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/container_registry.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/container_registry.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/container_registry.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/container_registry.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1699,6 +1696,147 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_azure.containerservice.RegistryWebhook">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.containerservice.</code><code class="sig-name descname">RegistryWebhook</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">actions=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">registry_name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">scope=None</em>, <em class="sig-param">service_uri=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.RegistryWebhook" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages an Azure Container Registry Webhook.</p>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/container_registry_webhook.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/container_registry_webhook.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>actions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of actions that trigger the Webhook to post notifications. At least one action needs to be specified. Valid values are: <code class="docutils literal notranslate"><span class="pre">push</span></code>, <code class="docutils literal notranslate"><span class="pre">delete</span></code>, <code class="docutils literal notranslate"><span class="pre">quarantine</span></code>, <code class="docutils literal notranslate"><span class="pre">chart_push</span></code>, <code class="docutils literal notranslate"><span class="pre">chart_delete</span></code></p></li>
+<li><p><strong>custom_headers</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Custom headers that will be added to the webhook notifications request.</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Container Registry Webhook. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>registry_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Name of Container registry this Webhook belongs to. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the Container Registry Webhook. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>scope</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the scope of repositories that can trigger an event. For example, <code class="docutils literal notranslate"><span class="pre">foo:*</span></code> means events for all tags under repository <code class="docutils literal notranslate"><span class="pre">foo</span></code>. <code class="docutils literal notranslate"><span class="pre">foo:bar</span></code> means events for ‘foo:bar’ only. <code class="docutils literal notranslate"><span class="pre">foo</span></code> is equivalent to <code class="docutils literal notranslate"><span class="pre">foo:latest</span></code>. Empty means all events.</p></li>
+<li><p><strong>service_uri</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the service URI for the Webhook to post notifications.</p></li>
+<li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies if this Webhook triggers notifications or not. Valid values: <code class="docutils literal notranslate"><span class="pre">enabled</span></code> and <code class="docutils literal notranslate"><span class="pre">disabled</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">enabled</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="pulumi_azure.containerservice.RegistryWebhook.actions">
+<code class="sig-name descname">actions</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.RegistryWebhook.actions" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of actions that trigger the Webhook to post notifications. At least one action needs to be specified. Valid values are: <code class="docutils literal notranslate"><span class="pre">push</span></code>, <code class="docutils literal notranslate"><span class="pre">delete</span></code>, <code class="docutils literal notranslate"><span class="pre">quarantine</span></code>, <code class="docutils literal notranslate"><span class="pre">chart_push</span></code>, <code class="docutils literal notranslate"><span class="pre">chart_delete</span></code></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.containerservice.RegistryWebhook.custom_headers">
+<code class="sig-name descname">custom_headers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.RegistryWebhook.custom_headers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Custom headers that will be added to the webhook notifications request.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.containerservice.RegistryWebhook.location">
+<code class="sig-name descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.RegistryWebhook.location" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.containerservice.RegistryWebhook.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.RegistryWebhook.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the name of the Container Registry Webhook. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.containerservice.RegistryWebhook.registry_name">
+<code class="sig-name descname">registry_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.RegistryWebhook.registry_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Name of Container registry this Webhook belongs to. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.containerservice.RegistryWebhook.resource_group_name">
+<code class="sig-name descname">resource_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.RegistryWebhook.resource_group_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the resource group in which to create the Container Registry Webhook. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.containerservice.RegistryWebhook.scope">
+<code class="sig-name descname">scope</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.RegistryWebhook.scope" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the scope of repositories that can trigger an event. For example, <code class="docutils literal notranslate"><span class="pre">foo:*</span></code> means events for all tags under repository <code class="docutils literal notranslate"><span class="pre">foo</span></code>. <code class="docutils literal notranslate"><span class="pre">foo:bar</span></code> means events for ‘foo:bar’ only. <code class="docutils literal notranslate"><span class="pre">foo</span></code> is equivalent to <code class="docutils literal notranslate"><span class="pre">foo:latest</span></code>. Empty means all events.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.containerservice.RegistryWebhook.service_uri">
+<code class="sig-name descname">service_uri</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.RegistryWebhook.service_uri" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the service URI for the Webhook to post notifications.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.containerservice.RegistryWebhook.status">
+<code class="sig-name descname">status</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.containerservice.RegistryWebhook.status" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies if this Webhook triggers notifications or not. Valid values: <code class="docutils literal notranslate"><span class="pre">enabled</span></code> and <code class="docutils literal notranslate"><span class="pre">disabled</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">enabled</span></code>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.containerservice.RegistryWebhook.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">actions=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">registry_name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">scope=None</em>, <em class="sig-param">service_uri=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.RegistryWebhook.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing RegistryWebhook resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>actions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of actions that trigger the Webhook to post notifications. At least one action needs to be specified. Valid values are: <code class="docutils literal notranslate"><span class="pre">push</span></code>, <code class="docutils literal notranslate"><span class="pre">delete</span></code>, <code class="docutils literal notranslate"><span class="pre">quarantine</span></code>, <code class="docutils literal notranslate"><span class="pre">chart_push</span></code>, <code class="docutils literal notranslate"><span class="pre">chart_delete</span></code></p></li>
+<li><p><strong>custom_headers</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Custom headers that will be added to the webhook notifications request.</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Container Registry Webhook. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>registry_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Name of Container registry this Webhook belongs to. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the Container Registry Webhook. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>scope</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the scope of repositories that can trigger an event. For example, <code class="docutils literal notranslate"><span class="pre">foo:*</span></code> means events for all tags under repository <code class="docutils literal notranslate"><span class="pre">foo</span></code>. <code class="docutils literal notranslate"><span class="pre">foo:bar</span></code> means events for ‘foo:bar’ only. <code class="docutils literal notranslate"><span class="pre">foo</span></code> is equivalent to <code class="docutils literal notranslate"><span class="pre">foo:latest</span></code>. Empty means all events.</p></li>
+<li><p><strong>service_uri</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the service URI for the Webhook to post notifications.</p></li>
+<li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies if this Webhook triggers notifications or not. Valid values: <code class="docutils literal notranslate"><span class="pre">enabled</span></code> and <code class="docutils literal notranslate"><span class="pre">disabled</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">enabled</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.containerservice.RegistryWebhook.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.RegistryWebhook.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.containerservice.RegistryWebhook.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.RegistryWebhook.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_azure.containerservice.RegistryWebook">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.containerservice.</code><code class="sig-name descname">RegistryWebook</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">actions=None</em>, <em class="sig-param">custom_headers=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">registry_name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">scope=None</em>, <em class="sig-param">service_uri=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.RegistryWebook" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Azure Container Registry Webhook.</p>
@@ -1844,9 +1982,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-prename descclassname">pulumi_azure.containerservice.</code><code class="sig-name descname">get_kubernetes_cluster</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.containerservice.get_kubernetes_cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Managed Kubernetes Cluster (AKS).</p>
 <blockquote>
-<div><p><strong>Note:</strong> All arguments including the client secret will be stored in the raw state as plain-text.
-<a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/kubernetes_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/kubernetes_cluster.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/kubernetes_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/kubernetes_cluster.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

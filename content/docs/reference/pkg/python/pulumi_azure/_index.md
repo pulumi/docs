@@ -19,6 +19,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li class="toctree-l1"><a class="reference internal" href="apimanagement/">apimanagement</a></li>
 <li class="toctree-l1"><a class="reference internal" href="appconfiguration/">appconfiguration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="appinsights/">appinsights</a></li>
+<li class="toctree-l1"><a class="reference internal" href="appplatform/">appplatform</a></li>
 <li class="toctree-l1"><a class="reference internal" href="appservice/">appservice</a></li>
 <li class="toctree-l1"><a class="reference internal" href="authorization/">authorization</a></li>
 <li class="toctree-l1"><a class="reference internal" href="automation/">automation</a></li>
@@ -31,6 +32,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li class="toctree-l1"><a class="reference internal" href="containerservice/">containerservice</a></li>
 <li class="toctree-l1"><a class="reference internal" href="core/">core</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cosmosdb/">cosmosdb</a></li>
+<li class="toctree-l1"><a class="reference internal" href="costmanagement/">costmanagement</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dashboard/">dashboard</a></li>
 <li class="toctree-l1"><a class="reference internal" href="databasemigration/">databasemigration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="databricks/">databricks</a></li>
@@ -52,6 +54,8 @@ anything, please consult the source <a class="reference external" href="https://
 <li class="toctree-l1"><a class="reference internal" href="lb/">lb</a></li>
 <li class="toctree-l1"><a class="reference internal" href="loganalytics/">loganalytics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="logicapps/">logicapps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="machinelearning/">machinelearning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="managedapplication/">managedapplication</a></li>
 <li class="toctree-l1"><a class="reference internal" href="management/">management</a></li>
 <li class="toctree-l1"><a class="reference internal" href="managementgroups/">managementgroups</a></li>
 <li class="toctree-l1"><a class="reference internal" href="managementresource/">managementresource</a></li>
@@ -70,6 +74,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li class="toctree-l1"><a class="reference internal" href="operationalinsights/">operationalinsights</a></li>
 <li class="toctree-l1"><a class="reference internal" href="policy/">policy</a></li>
 <li class="toctree-l1"><a class="reference internal" href="postgresql/">postgresql</a></li>
+<li class="toctree-l1"><a class="reference internal" href="powerbi/">powerbi</a></li>
 <li class="toctree-l1"><a class="reference internal" href="privatedns/">privatedns</a></li>
 <li class="toctree-l1"><a class="reference internal" href="privatelink/">privatelink</a></li>
 <li class="toctree-l1"><a class="reference internal" href="proximity/">proximity</a></li>

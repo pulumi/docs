@@ -1,0 +1,409 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class LoadBalancerPoolState
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class LoadBalancerPoolState
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Cloudflare.LoadBalancerPoolState">
+  
+  <h1 id="Pulumi_Cloudflare_LoadBalancerPoolState" data-uid="Pulumi.Cloudflare.LoadBalancerPoolState" class="text-break">Class LoadBalancerPoolState
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">LoadBalancerPoolState</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Cloudflare.html">Pulumi.Cloudflare</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.Cloudflare.dll</h6>
+  <h5 id="Pulumi_Cloudflare_LoadBalancerPoolState_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class LoadBalancerPoolState : ResourceArgs</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/LoadBalancerPool.cs/#L263">View Source</a>
+  </span>
+  <a id="Pulumi_Cloudflare_LoadBalancerPoolState__ctor_" data-uid="Pulumi.Cloudflare.LoadBalancerPoolState.#ctor*"></a>
+  <h4 id="Pulumi_Cloudflare_LoadBalancerPoolState__ctor" data-uid="Pulumi.Cloudflare.LoadBalancerPoolState.#ctor">LoadBalancerPoolState()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LoadBalancerPoolState()</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/LoadBalancerPool.cs/#L197">View Source</a>
+  </span>
+  <a id="Pulumi_Cloudflare_LoadBalancerPoolState_CheckRegions_" data-uid="Pulumi.Cloudflare.LoadBalancerPoolState.CheckRegions*"></a>
+  <h4 id="Pulumi_Cloudflare_LoadBalancerPoolState_CheckRegions" data-uid="Pulumi.Cloudflare.LoadBalancerPoolState.CheckRegions">CheckRegions</h4>
+  <div class="markdown level1 summary"><p>A list of regions (specified by region code) from which to run health checks. Empty means every Cloudflare data center (the default), but requires an Enterprise plan. Region codes can be found <a href="https://support.cloudflare.com/hc/en-us/articles/115000540888-Load-Balancing-Geographic-Regions">here</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputList&lt;string&gt; CheckRegions { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/LoadBalancerPool.cs/#L206">View Source</a>
+  </span>
+  <a id="Pulumi_Cloudflare_LoadBalancerPoolState_CreatedOn_" data-uid="Pulumi.Cloudflare.LoadBalancerPoolState.CreatedOn*"></a>
+  <h4 id="Pulumi_Cloudflare_LoadBalancerPoolState_CreatedOn" data-uid="Pulumi.Cloudflare.LoadBalancerPoolState.CreatedOn">CreatedOn</h4>
+  <div class="markdown level1 summary"><p>The RFC3339 timestamp of when the load balancer was created.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? CreatedOn { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/LoadBalancerPool.cs/#L212">View Source</a>
+  </span>
+  <a id="Pulumi_Cloudflare_LoadBalancerPoolState_Description_" data-uid="Pulumi.Cloudflare.LoadBalancerPoolState.Description*"></a>
+  <h4 id="Pulumi_Cloudflare_LoadBalancerPoolState_Description" data-uid="Pulumi.Cloudflare.LoadBalancerPoolState.Description">Description</h4>
+  <div class="markdown level1 summary"><p>Free text description.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Description { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/LoadBalancerPool.cs/#L218">View Source</a>
+  </span>
+  <a id="Pulumi_Cloudflare_LoadBalancerPoolState_Enabled_" data-uid="Pulumi.Cloudflare.LoadBalancerPoolState.Enabled*"></a>
+  <h4 id="Pulumi_Cloudflare_LoadBalancerPoolState_Enabled" data-uid="Pulumi.Cloudflare.LoadBalancerPoolState.Enabled">Enabled</h4>
+  <div class="markdown level1 summary"><p>Whether to enable (the default) this origin within the Pool. Disabled origins will not receive traffic and are excluded from health checks. The origin will only be disabled for the current pool.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? Enabled { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/LoadBalancerPool.cs/#L224">View Source</a>
+  </span>
+  <a id="Pulumi_Cloudflare_LoadBalancerPoolState_MinimumOrigins_" data-uid="Pulumi.Cloudflare.LoadBalancerPoolState.MinimumOrigins*"></a>
+  <h4 id="Pulumi_Cloudflare_LoadBalancerPoolState_MinimumOrigins" data-uid="Pulumi.Cloudflare.LoadBalancerPoolState.MinimumOrigins">MinimumOrigins</h4>
+  <div class="markdown level1 summary"><p>The minimum number of origins that must be healthy for this pool to serve traffic. If the number of healthy origins falls below this number, the pool will be marked unhealthy and we will failover to the next available pool. Default: 1.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? MinimumOrigins { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/LoadBalancerPool.cs/#L230">View Source</a>
+  </span>
+  <a id="Pulumi_Cloudflare_LoadBalancerPoolState_ModifiedOn_" data-uid="Pulumi.Cloudflare.LoadBalancerPoolState.ModifiedOn*"></a>
+  <h4 id="Pulumi_Cloudflare_LoadBalancerPoolState_ModifiedOn" data-uid="Pulumi.Cloudflare.LoadBalancerPoolState.ModifiedOn">ModifiedOn</h4>
+  <div class="markdown level1 summary"><p>The RFC3339 timestamp of when the load balancer was last modified.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ModifiedOn { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/LoadBalancerPool.cs/#L236">View Source</a>
+  </span>
+  <a id="Pulumi_Cloudflare_LoadBalancerPoolState_Monitor_" data-uid="Pulumi.Cloudflare.LoadBalancerPoolState.Monitor*"></a>
+  <h4 id="Pulumi_Cloudflare_LoadBalancerPoolState_Monitor" data-uid="Pulumi.Cloudflare.LoadBalancerPoolState.Monitor">Monitor</h4>
+  <div class="markdown level1 summary"><p>The ID of the Monitor to use for health checking origins within this pool.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Monitor { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/LoadBalancerPool.cs/#L242">View Source</a>
+  </span>
+  <a id="Pulumi_Cloudflare_LoadBalancerPoolState_Name_" data-uid="Pulumi.Cloudflare.LoadBalancerPoolState.Name*"></a>
+  <h4 id="Pulumi_Cloudflare_LoadBalancerPoolState_Name" data-uid="Pulumi.Cloudflare.LoadBalancerPoolState.Name">Name</h4>
+  <div class="markdown level1 summary"><p>A human-identifiable name for the origin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Name { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/LoadBalancerPool.cs/#L248">View Source</a>
+  </span>
+  <a id="Pulumi_Cloudflare_LoadBalancerPoolState_NotificationEmail_" data-uid="Pulumi.Cloudflare.LoadBalancerPoolState.NotificationEmail*"></a>
+  <h4 id="Pulumi_Cloudflare_LoadBalancerPoolState_NotificationEmail" data-uid="Pulumi.Cloudflare.LoadBalancerPoolState.NotificationEmail">NotificationEmail</h4>
+  <div class="markdown level1 summary"><p>The email address to send health status notifications to. This can be an individual mailbox or a mailing list.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? NotificationEmail { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/LoadBalancerPool.cs/#L257">View Source</a>
+  </span>
+  <a id="Pulumi_Cloudflare_LoadBalancerPoolState_Origins_" data-uid="Pulumi.Cloudflare.LoadBalancerPoolState.Origins*"></a>
+  <h4 id="Pulumi_Cloudflare_LoadBalancerPoolState_Origins" data-uid="Pulumi.Cloudflare.LoadBalancerPoolState.Origins">Origins</h4>
+  <div class="markdown level1 summary"><p>The list of origins within this pool. Traffic directed at this pool is balanced across all currently healthy origins, provided the pool itself is healthy. It's a complex value. See description below.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputList&lt;LoadBalancerPoolOriginsGetArgs&gt; Origins { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.Cloudflare.Inputs.LoadBalancerPoolOriginsGetArgs.html">LoadBalancerPoolOriginsGetArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/master/sdk/dotnet/LoadBalancerPool.cs/#L189" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

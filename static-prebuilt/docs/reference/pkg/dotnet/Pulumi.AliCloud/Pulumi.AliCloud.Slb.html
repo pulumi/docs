@@ -1,0 +1,580 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Namespace Pulumi.AliCloud.Slb
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Namespace Pulumi.AliCloud.Slb
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.AliCloud.Slb">
+  
+  <h1 id="Pulumi_AliCloud_Slb" data-uid="Pulumi.AliCloud.Slb" class="text-break">Namespace Pulumi.AliCloud.Slb
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+    <h3 id="classes">Classes
+  </h3>
+      <h4><a class="xref" href="Pulumi.AliCloud.Slb.Acl.html">Acl</a></h4>
+      <section><p>An access control list contains multiple IP addresses or CIDR blocks.
+The access control list can help you to define multiple instance listening dimension,
+and to meet the multiple usage for single access control list.</p>
+<p>Server Load Balancer allows you to configure access control for listeners.
+You can configure different whitelists or blacklists for different listeners.</p>
+<p>You can configure access control
+when you create a listener or change access control configuration after a listener is created.</p>
+<blockquote>
+<p><strong>NOTE:</strong> One access control list can be attached to many Listeners in different load balancer as whitelists or blacklists.</p>
+</blockquote>
+<blockquote>
+<p><strong>NOTE:</strong> The maximum number of access control lists per region  is 50.</p>
+</blockquote>
+<blockquote>
+<p><strong>NOTE:</strong> The maximum number of IP addresses added each time is 50.</p>
+</blockquote>
+<blockquote>
+<p><strong>NOTE:</strong> The maximum number of entries per access control list is 300.</p>
+</blockquote>
+<blockquote>
+<p><strong>NOTE:</strong> The maximum number of listeners that an access control list can be added to is 50.</p>
+</blockquote>
+<p>For information about slb and how to use it, see <a href="https://www.alibabacloud.com/help/doc-detail/27539.htm">What is Server Load Balancer</a>.</p>
+<p>For information about acl and how to use it, see <a href="https://www.alibabacloud.com/help/doc-detail/85978.htm">Configure an access control list</a>.</p>
+<h2 id="entry-block">Entry Block</h2>
+<p>The entry mapping supports the following:</p>
+<ul>
+<li><code>entry</code> - (Required) An IP addresses or CIDR blocks.</li>
+<li><code>comment</code> - (Optional) the comment of the entry.</li>
+</ul>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_acl.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_acl.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Slb.AclArgs.html">AclArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Slb.AclState.html">AclState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Slb.Attachment.html">Attachment</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Slb.AttachmentArgs.html">AttachmentArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Slb.AttachmentState.html">AttachmentState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Slb.BackendServer.html">BackendServer</a></h4>
+      <section><p>Add a group of backend servers (ECS or ENI instance) to the Server Load Balancer or remove them from it.</p>
+<blockquote>
+<p><strong>NOTE:</strong> Available in 1.53.0+</p>
+</blockquote>
+<h2 id="block-servers">Block servers</h2>
+<p>The servers mapping supports the following:</p>
+<ul>
+<li><code>server_id</code> - (Required) A list backend server ID (ECS instance ID).</li>
+<li><code>weight</code> - (Optional) Weight of the backend server. Valid value range: [0-100].</li>
+<li><code>type</code> - (Optional) Type of the backend server. Valid value ecs, eni. Default to eni.</li>
+</ul>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_backend_server.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_backend_server.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Slb.BackendServerArgs.html">BackendServerArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Slb.BackendServerState.html">BackendServerState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Slb.CaCertificate.html">CaCertificate</a></h4>
+      <section><p>A Load Balancer CA Certificate is used by the listener of the protocol https.</p>
+<p>For information about slb and how to use it, see <a href="https://www.alibabacloud.com/help/doc-detail/27539.htm">What is Server Load Balancer</a>.</p>
+<p>For information about CA Certificate and how to use it, see <a href="https://www.alibabacloud.com/help/doc-detail/85968.htm">Configure CA Certificate</a>.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_ca_certificate.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_ca_certificate.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Slb.CaCertificateArgs.html">CaCertificateArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Slb.CaCertificateState.html">CaCertificateState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Slb.DomainExtension.html">DomainExtension</a></h4>
+      <section><p>HTTPS listeners of guaranteed-performance SLB support configuring multiple certificates, allowing you to forward requests with different domain names to different backend servers.
+Please refer to the <a href="https://www.alibabacloud.com/help/doc-detail/85956.htm?spm=a2c63.p38356.b99.40.1c881563Co8p6w">documentation</a> for details.</p>
+<blockquote>
+<p><strong>NOTE:</strong> Available in 1.60.0+</p>
+</blockquote>
+<blockquote>
+<p><strong>NOTE:</strong> The instance with shared loadBalancerSpec doesn't support domainExtension.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_domain_extension.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_domain_extension.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Slb.DomainExtensionArgs.html">DomainExtensionArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Slb.DomainExtensionState.html">DomainExtensionState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Slb.GetAclsArgs.html">GetAclsArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Slb.GetAclsResult.html">GetAclsResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Slb.GetAttachmentsArgs.html">GetAttachmentsArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Slb.GetAttachmentsResult.html">GetAttachmentsResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Slb.GetBackendServersArgs.html">GetBackendServersArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Slb.GetBackendServersResult.html">GetBackendServersResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Slb.GetCaCertificatesArgs.html">GetCaCertificatesArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Slb.GetCaCertificatesResult.html">GetCaCertificatesResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Slb.GetDomainExtensionsArgs.html">GetDomainExtensionsArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Slb.GetDomainExtensionsResult.html">GetDomainExtensionsResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Slb.GetListenersArgs.html">GetListenersArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Slb.GetListenersResult.html">GetListenersResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Slb.GetLoadBalancersArgs.html">GetLoadBalancersArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Slb.GetLoadBalancersResult.html">GetLoadBalancersResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Slb.GetMasterSlaveServerGroupsArgs.html">GetMasterSlaveServerGroupsArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Slb.GetMasterSlaveServerGroupsResult.html">GetMasterSlaveServerGroupsResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Slb.GetRulesArgs.html">GetRulesArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Slb.GetRulesResult.html">GetRulesResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Slb.GetServerCertificatesArgs.html">GetServerCertificatesArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Slb.GetServerCertificatesResult.html">GetServerCertificatesResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Slb.GetServerGroupsArgs.html">GetServerGroupsArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Slb.GetServerGroupsResult.html">GetServerGroupsResult</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Slb.Invokes.html">Invokes</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Slb.Listener.html">Listener</a></h4>
+      <section><p>Provides an Application Load Balancer Listener resource.</p>
+<p>For information about slb and how to use it, see <a href="https://www.alibabacloud.com/help/doc-detail/27539.htm">What is Server Load Balancer</a>.</p>
+<p>For information about listener and how to use it, to see the following:</p>
+<ul>
+<li><a href="https://www.alibabacloud.com/help/doc-detail/27592.htm">Configure a HTTP Listener</a>.</li>
+<li><a href="https://www.alibabacloud.com/help/doc-detail/27593.htm">Configure a HTTPS Listener</a>.</li>
+<li><a href="https://www.alibabacloud.com/help/doc-detail/27594.htm">Configure a TCP Listener</a>.</li>
+<li><a href="https://www.alibabacloud.com/help/doc-detail/27595.htm">Configure a UDP Listener</a>.</li>
+</ul>
+<h2 id="listener-fields-and-protocol-mapping">Listener fields and protocol mapping</h2>
+<p>load balance support 4 protocal to listen on, they are <code>http</code>,<code>https</code>,<code>tcp</code>,<code>udp</code>, the every listener support which portocal following:</p>
+<table>
+<thead>
+<tr>
+<th>listener parameter</th>
+<th>support protocol</th>
+<th>value range</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>backend_port</td>
+<td>http &amp; https &amp; tcp &amp; udp</td>
+<td>1-65535</td>
+</tr>
+<tr>
+<td>frontend_port</td>
+<td>http &amp; https &amp; tcp &amp; udp</td>
+<td>1-65535</td>
+</tr>
+<tr>
+<td>protocol</td>
+<td>http &amp; https &amp; tcp &amp; udp</td>
+<td></td>
+</tr>
+<tr>
+<td>bandwidth</td>
+<td>http &amp; https &amp; tcp &amp; udp</td>
+<td>-1 / 1-1000</td>
+</tr>
+<tr>
+<td>scheduler</td>
+<td>http &amp; https &amp; tcp &amp; udp</td>
+<td>wrr rr or wlc</td>
+</tr>
+<tr>
+<td>sticky_session</td>
+<td>http &amp; https</td>
+<td>on or off</td>
+</tr>
+<tr>
+<td>sticky_session_type</td>
+<td>http &amp; https</td>
+<td>insert or server</td>
+</tr>
+<tr>
+<td>cookie_timeout</td>
+<td>http &amp; https</td>
+<td>1-86400</td>
+</tr>
+<tr>
+<td>cookie</td>
+<td>http &amp; https</td>
+<td></td>
+</tr>
+<tr>
+<td>persistence_timeout</td>
+<td>tcp &amp; udp</td>
+<td>0-3600</td>
+</tr>
+<tr>
+<td>health_check</td>
+<td>http &amp; https</td>
+<td>on or off</td>
+</tr>
+<tr>
+<td>health_check_type</td>
+<td>tcp</td>
+<td>tcp or http</td>
+</tr>
+<tr>
+<td>health_check_domain</td>
+<td>http &amp; https &amp; tcp</td>
+<td></td>
+</tr>
+<tr>
+<td>health_check_method</td>
+<td>http &amp; https &amp; tcp</td>
+<td></td>
+</tr>
+<tr>
+<td>health_check_uri</td>
+<td>http &amp; https &amp; tcp</td>
+<td></td>
+</tr>
+<tr>
+<td>health_check_connect_port</td>
+<td>http &amp; https &amp; tcp &amp; udp</td>
+<td>1-65535 or -520</td>
+</tr>
+<tr>
+<td>healthy_threshold</td>
+<td>http &amp; https &amp; tcp &amp; udp</td>
+<td>1-10</td>
+</tr>
+<tr>
+<td>unhealthy_threshold</td>
+<td>http &amp; https &amp; tcp &amp; udp</td>
+<td>1-10</td>
+</tr>
+<tr>
+<td>health_check_timeout</td>
+<td>http &amp; https &amp; tcp &amp; udp</td>
+<td>1-300</td>
+</tr>
+<tr>
+<td>health_check_interval</td>
+<td>http &amp; https &amp; tcp &amp; udp</td>
+<td>1-50</td>
+</tr>
+<tr>
+<td>health_check_http_code</td>
+<td>http &amp; https &amp; tcp</td>
+<td>http_2xx,http_3xx,http_4xx,http_5xx</td>
+</tr>
+<tr>
+<td>server_certificate_id</td>
+<td>https</td>
+<td></td>
+</tr>
+<tr>
+<td>gzip</td>
+<td>http &amp; https</td>
+<td>true or false</td>
+</tr>
+<tr>
+<td>x_forwarded_for</td>
+<td>http &amp; https</td>
+<td></td>
+</tr>
+<tr>
+<td>acl_status</td>
+<td>http &amp; https &amp; tcp &amp; udp</td>
+<td>on or off</td>
+</tr>
+<tr>
+<td>acl_type</td>
+<td>http &amp; https &amp; tcp &amp; udp</td>
+<td>white or black</td>
+</tr>
+<tr>
+<td>acl_id</td>
+<td>http &amp; https &amp; tcp &amp; udp</td>
+<td>the id of resource alicloud_slb_acl</td>
+</tr>
+<tr>
+<td>established_timeout</td>
+<td>tcp</td>
+<td>10-900</td>
+</tr>
+<tr>
+<td>idle_timeout</td>
+<td>http &amp; https</td>
+<td>1-60</td>
+</tr>
+<tr>
+<td>request_timeout</td>
+<td>http &amp; https</td>
+<td>1-180</td>
+</tr>
+<tr>
+<td>enable_http2</td>
+<td>https</td>
+<td>on or off</td>
+</tr>
+<tr>
+<td>tls_cipher_policy</td>
+<td>https</td>
+<td>tls_cipher_policy_1_0, tls_cipher_policy_1_1, tls_cipher_policy_1_2, tls_cipher_policy_1_2_strict</td>
+</tr>
+<tr>
+<td>server_group_id</td>
+<td>http &amp; https &amp; tcp &amp; udp</td>
+<td>the id of resource alicloud.slb.ServerGroup</td>
+</tr>
+</tbody>
+</table>
+<p>The listener mapping supports the following:</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_listener.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_listener.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Slb.ListenerArgs.html">ListenerArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Slb.ListenerState.html">ListenerState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Slb.LoadBalancer.html">LoadBalancer</a></h4>
+      <section><p>Provides an Application Load Balancer resource.</p>
+<blockquote>
+<p><strong>NOTE:</strong> At present, to avoid some unnecessary regulation confusion, SLB can not support alicloud international account to create &quot;paybybandwidth&quot; instance.</p>
+</blockquote>
+<blockquote>
+<p><strong>NOTE:</strong> The supported specifications vary by region. Currently not all regions support guaranteed-performance instances.
+For more details about guaranteed-performance instance, see <a href="https://www.alibabacloud.com/help/doc-detail/27657.htm">Guaranteed-performance instances</a>.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Slb.LoadBalancerArgs.html">LoadBalancerArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Slb.LoadBalancerState.html">LoadBalancerState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Slb.MasterSlaveServerGroup.html">MasterSlaveServerGroup</a></h4>
+      <section><p>A master slave server group contains two ECS instances. The master slave server group can help you to define multiple listening dimension.</p>
+<blockquote>
+<p><strong>NOTE:</strong> One ECS instance can be added into multiple master slave server groups.</p>
+</blockquote>
+<blockquote>
+<p><strong>NOTE:</strong> One master slave server group can only add two ECS instances, which are master server and slave server.</p>
+</blockquote>
+<blockquote>
+<p><strong>NOTE:</strong> One master slave server group can be attached with tcp/udp listeners in one load balancer.</p>
+</blockquote>
+<blockquote>
+<p><strong>NOTE:</strong> One Classic and Internet load balancer, its master slave server group can add Classic and VPC ECS instances.</p>
+</blockquote>
+<blockquote>
+<p><strong>NOTE:</strong> One Classic and Intranet load balancer, its master slave server group can only add Classic ECS instances.</p>
+</blockquote>
+<blockquote>
+<p><strong>NOTE:</strong> One VPC load balancer, its master slave server group can only add the same VPC ECS instances.</p>
+</blockquote>
+<blockquote>
+<p><strong>NOTE:</strong> Available in 1.54.0+</p>
+</blockquote>
+<h2 id="block-servers">Block servers</h2>
+<p>The servers mapping supports the following:</p>
+<ul>
+<li><code>server_ids</code> - (Required) A list backend server ID (ECS instance ID).</li>
+<li><code>port</code> - (Required) The port used by the backend server. Valid value range: [1-65535].</li>
+<li><code>weight</code> - (Optional) Weight of the backend server. Valid value range: [0-100]. Default to 100.</li>
+<li><code>type</code> - (Optional, Available in 1.51.0+) Type of the backend server. Valid value ecs, eni. Default to eni.</li>
+<li><code>server_type</code> - (Optional) The server type of the backend server. Valid value Master, Slave.</li>
+<li><code>is_backup</code> - (Removed from v1.63.0) Determine if the server is executing. Valid value 0, 1.</li>
+</ul>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_master_slave_server_group.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_master_slave_server_group.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Slb.MasterSlaveServerGroupArgs.html">MasterSlaveServerGroupArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Slb.MasterSlaveServerGroupState.html">MasterSlaveServerGroupState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Slb.Rule.html">Rule</a></h4>
+      <section><p>A forwarding rule is configured in <code>HTTP</code>/<code>HTTPS</code> listener and it used to listen a list of backend servers which in one specified virtual backend server group.
+You can add forwarding rules to a listener to forward requests based on the domain names or the URL in the request.</p>
+<blockquote>
+<p><strong>NOTE:</strong> One virtual backend server group can be attached in multiple forwarding rules.</p>
+</blockquote>
+<blockquote>
+<p><strong>NOTE:</strong> At least one &quot;Domain&quot; or &quot;Url&quot; must be specified when creating a new rule.</p>
+</blockquote>
+<blockquote>
+<p><strong>NOTE:</strong> Having the same 'Domain' and 'Url' rule can not be created repeatedly in the one listener.</p>
+</blockquote>
+<blockquote>
+<p><strong>NOTE:</strong> Rule only be created in the <code>HTTP</code> or <code>HTTPS</code> listener.</p>
+</blockquote>
+<blockquote>
+<p><strong>NOTE:</strong> Only rule's virtual server group can be modified.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_rule.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Slb.RuleArgs.html">RuleArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Slb.RuleState.html">RuleState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Slb.ServerCertificate.html">ServerCertificate</a></h4>
+      <section><p>A Load Balancer Server Certificate is an ssl Certificate used by the listener of the protocol https.</p>
+<p>For information about slb and how to use it, see <a href="https://www.alibabacloud.com/help/doc-detail/27539.htm">What is Server Load Balancer</a>.</p>
+<p>For information about Server Certificate and how to use it, see <a href="https://www.alibabacloud.com/help/doc-detail/85968.htm">Configure Server Certificate</a>.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_server_certificate.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_server_certificate.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Slb.ServerCertificateArgs.html">ServerCertificateArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Slb.ServerCertificateState.html">ServerCertificateState</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Slb.ServerGroup.html">ServerGroup</a></h4>
+      <section><p>A virtual server group contains several ECS instances. The virtual server group can help you to define multiple listening dimension,
+and to meet the personalized requirements of domain name and URL forwarding.</p>
+<blockquote>
+<p><strong>NOTE:</strong> One ECS instance can be added into multiple virtual server groups.</p>
+</blockquote>
+<blockquote>
+<p><strong>NOTE:</strong> One virtual server group can be attached with multiple listeners in one load balancer.</p>
+</blockquote>
+<blockquote>
+<p><strong>NOTE:</strong> One Classic and Internet load balancer, its virtual server group can add Classic and VPC ECS instances.</p>
+</blockquote>
+<blockquote>
+<p><strong>NOTE:</strong> One Classic and Intranet load balancer, its virtual server group can only add Classic ECS instances.</p>
+</blockquote>
+<blockquote>
+<p><strong>NOTE:</strong> One VPC load balancer, its virtual server group can only add the same VPC ECS instances.</p>
+</blockquote>
+<h2 id="block-servers">Block servers</h2>
+<p>The servers mapping supports the following:</p>
+<ul>
+<li><code>server_ids</code> - (Required) A list backend server ID (ECS instance ID).</li>
+<li><code>port</code> - (Required) The port used by the backend server. Valid value range: [1-65535].</li>
+<li><code>weight</code> - (Optional) Weight of the backend server. Valid value range: [0-100]. Default to 100.</li>
+<li><code>type</code> - (Optional, Available in 1.51.0+) Type of the backend server. Valid value ecs, eni. Default to eni.</li>
+</ul>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_server_group.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_server_group.html.markdown</a>.</p>
+</blockquote>
+</section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Slb.ServerGroupArgs.html">ServerGroupArgs</a></h4>
+      <section></section>
+      <h4><a class="xref" href="Pulumi.AliCloud.Slb.ServerGroupState.html">ServerGroupState</a></h4>
+      <section></section>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

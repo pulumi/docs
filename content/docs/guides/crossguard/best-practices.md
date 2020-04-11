@@ -8,7 +8,6 @@ menu:
   userguides:
     parent: crossguard
 ---
-{{% crossguard-preview %}}
 
 ## Naming Policies
 

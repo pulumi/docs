@@ -1,0 +1,646 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Topic
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Topic
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Azure.ServiceBus.Topic">
+  
+  <h1 id="Pulumi_Azure_ServiceBus_Topic" data-uid="Pulumi.Azure.ServiceBus.Topic" class="text-break">Class Topic
+  </h1>
+  <div class="markdown level0 summary"><p>Manages a ServiceBus Topic.</p>
+<p><strong>Note</strong> Topics can only be created in Namespaces with an SKU of <code>standard</code> or higher.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/servicebus_topic.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/servicebus_topic.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">Topic</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.ServiceBus.html">Pulumi.Azure.ServiceBus</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
+  <h5 id="Pulumi_Azure_ServiceBus_Topic_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Topic : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Servicebus/Topic.cs/#L123">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_ServiceBus_Topic__ctor_" data-uid="Pulumi.Azure.ServiceBus.Topic.#ctor*"></a>
+  <h4 id="Pulumi_Azure_ServiceBus_Topic__ctor_System_String_Pulumi_Azure_ServiceBus_TopicArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.ServiceBus.Topic.#ctor(System.String,Pulumi.Azure.ServiceBus.TopicArgs,Pulumi.CustomResourceOptions)">Topic(String, TopicArgs, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Create a Topic resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Topic(string name, TopicArgs args, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Azure.ServiceBus.TopicArgs.html">TopicArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Servicebus/Topic.cs/#L25">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_ServiceBus_Topic_AutoDeleteOnIdle_" data-uid="Pulumi.Azure.ServiceBus.Topic.AutoDeleteOnIdle*"></a>
+  <h4 id="Pulumi_Azure_ServiceBus_Topic_AutoDeleteOnIdle" data-uid="Pulumi.Azure.ServiceBus.Topic.AutoDeleteOnIdle">AutoDeleteOnIdle</h4>
+  <div class="markdown level1 summary"><p>The ISO 8601 timespan duration of the idle interval after which the
+Topic is automatically deleted, minimum of 5 minutes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; AutoDeleteOnIdle { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Servicebus/Topic.cs/#L32">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_ServiceBus_Topic_DefaultMessageTtl_" data-uid="Pulumi.Azure.ServiceBus.Topic.DefaultMessageTtl*"></a>
+  <h4 id="Pulumi_Azure_ServiceBus_Topic_DefaultMessageTtl" data-uid="Pulumi.Azure.ServiceBus.Topic.DefaultMessageTtl">DefaultMessageTtl</h4>
+  <div class="markdown level1 summary"><p>The ISO 8601 timespan duration of TTL of messages sent to this topic if no
+TTL value is set on the message itself.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; DefaultMessageTtl { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Servicebus/Topic.cs/#L39">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_ServiceBus_Topic_DuplicateDetectionHistoryTimeWindow_" data-uid="Pulumi.Azure.ServiceBus.Topic.DuplicateDetectionHistoryTimeWindow*"></a>
+  <h4 id="Pulumi_Azure_ServiceBus_Topic_DuplicateDetectionHistoryTimeWindow" data-uid="Pulumi.Azure.ServiceBus.Topic.DuplicateDetectionHistoryTimeWindow">DuplicateDetectionHistoryTimeWindow</h4>
+  <div class="markdown level1 summary"><p>The ISO 8601 timespan duration during which
+duplicates can be detected. Defaults to 10 minutes. (<code>PT10M</code>)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; DuplicateDetectionHistoryTimeWindow { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Servicebus/Topic.cs/#L46">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_ServiceBus_Topic_EnableBatchedOperations_" data-uid="Pulumi.Azure.ServiceBus.Topic.EnableBatchedOperations*"></a>
+  <h4 id="Pulumi_Azure_ServiceBus_Topic_EnableBatchedOperations" data-uid="Pulumi.Azure.ServiceBus.Topic.EnableBatchedOperations">EnableBatchedOperations</h4>
+  <div class="markdown level1 summary"><p>Boolean flag which controls if server-side
+batched operations are enabled. Defaults to false.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; EnableBatchedOperations { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Servicebus/Topic.cs/#L54">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_ServiceBus_Topic_EnableExpress_" data-uid="Pulumi.Azure.ServiceBus.Topic.EnableExpress*"></a>
+  <h4 id="Pulumi_Azure_ServiceBus_Topic_EnableExpress" data-uid="Pulumi.Azure.ServiceBus.Topic.EnableExpress">EnableExpress</h4>
+  <div class="markdown level1 summary"><p>Boolean flag which controls whether Express Entities
+are enabled. An express topic holds a message in memory temporarily before writing
+it to persistent storage. Defaults to false.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; EnableExpress { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Servicebus/Topic.cs/#L62">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_ServiceBus_Topic_EnablePartitioning_" data-uid="Pulumi.Azure.ServiceBus.Topic.EnablePartitioning*"></a>
+  <h4 id="Pulumi_Azure_ServiceBus_Topic_EnablePartitioning" data-uid="Pulumi.Azure.ServiceBus.Topic.EnablePartitioning">EnablePartitioning</h4>
+  <div class="markdown level1 summary"><p>Boolean flag which controls whether to enable
+the topic to be partitioned across multiple message brokers. Defaults to false.
+Changing this forces a new resource to be created.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; EnablePartitioning { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Servicebus/Topic.cs/#L70">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_ServiceBus_Topic_MaxSizeInMegabytes_" data-uid="Pulumi.Azure.ServiceBus.Topic.MaxSizeInMegabytes*"></a>
+  <h4 id="Pulumi_Azure_ServiceBus_Topic_MaxSizeInMegabytes" data-uid="Pulumi.Azure.ServiceBus.Topic.MaxSizeInMegabytes">MaxSizeInMegabytes</h4>
+  <div class="markdown level1 summary"><p>Integer value which controls the size of
+memory allocated for the topic. For supported values see the &quot;Queue/topic size&quot;
+section of <a href="https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-quotas">this document</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int&gt; MaxSizeInMegabytes { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Servicebus/Topic.cs/#L77">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_ServiceBus_Topic_Name_" data-uid="Pulumi.Azure.ServiceBus.Topic.Name*"></a>
+  <h4 id="Pulumi_Azure_ServiceBus_Topic_Name" data-uid="Pulumi.Azure.ServiceBus.Topic.Name">Name</h4>
+  <div class="markdown level1 summary"><p>Specifies the name of the ServiceBus Topic resource. Changing this forces a
+new resource to be created.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Servicebus/Topic.cs/#L84">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_ServiceBus_Topic_NamespaceName_" data-uid="Pulumi.Azure.ServiceBus.Topic.NamespaceName*"></a>
+  <h4 id="Pulumi_Azure_ServiceBus_Topic_NamespaceName" data-uid="Pulumi.Azure.ServiceBus.Topic.NamespaceName">NamespaceName</h4>
+  <div class="markdown level1 summary"><p>The name of the ServiceBus Namespace to create
+this topic in. Changing this forces a new resource to be created.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; NamespaceName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Servicebus/Topic.cs/#L92">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_ServiceBus_Topic_RequiresDuplicateDetection_" data-uid="Pulumi.Azure.ServiceBus.Topic.RequiresDuplicateDetection*"></a>
+  <h4 id="Pulumi_Azure_ServiceBus_Topic_RequiresDuplicateDetection" data-uid="Pulumi.Azure.ServiceBus.Topic.RequiresDuplicateDetection">RequiresDuplicateDetection</h4>
+  <div class="markdown level1 summary"><p>Boolean flag which controls whether
+the Topic requires duplicate detection. Defaults to false. Changing this forces
+a new resource to be created.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; RequiresDuplicateDetection { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Servicebus/Topic.cs/#L99">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_ServiceBus_Topic_ResourceGroupName_" data-uid="Pulumi.Azure.ServiceBus.Topic.ResourceGroupName*"></a>
+  <h4 id="Pulumi_Azure_ServiceBus_Topic_ResourceGroupName" data-uid="Pulumi.Azure.ServiceBus.Topic.ResourceGroupName">ResourceGroupName</h4>
+  <div class="markdown level1 summary"><p>The name of the resource group in which to
+create the namespace. Changing this forces a new resource to be created.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ResourceGroupName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Servicebus/Topic.cs/#L105">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_ServiceBus_Topic_Status_" data-uid="Pulumi.Azure.ServiceBus.Topic.Status*"></a>
+  <h4 id="Pulumi_Azure_ServiceBus_Topic_Status" data-uid="Pulumi.Azure.ServiceBus.Topic.Status">Status</h4>
+  <div class="markdown level1 summary"><p>The Status of the Service Bus Topic. Acceptable values are <code>Active</code> or <code>Disabled</code>. Defaults to <code>Active</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Status { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Servicebus/Topic.cs/#L112">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_ServiceBus_Topic_SupportOrdering_" data-uid="Pulumi.Azure.ServiceBus.Topic.SupportOrdering*"></a>
+  <h4 id="Pulumi_Azure_ServiceBus_Topic_SupportOrdering" data-uid="Pulumi.Azure.ServiceBus.Topic.SupportOrdering">SupportOrdering</h4>
+  <div class="markdown level1 summary"><p>Boolean flag which controls whether the Topic
+supports ordering. Defaults to false.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; SupportOrdering { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Servicebus/Topic.cs/#L153">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_ServiceBus_Topic_Get_" data-uid="Pulumi.Azure.ServiceBus.Topic.Get*"></a>
+  <h4 id="Pulumi_Azure_ServiceBus_Topic_Get_System_String_Pulumi_Input_System_String__Pulumi_Azure_ServiceBus_TopicState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.ServiceBus.Topic.Get(System.String,Pulumi.Input{System.String},Pulumi.Azure.ServiceBus.TopicState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, TopicState, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Get an existing Topic resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Topic Get(string name, Input&lt;string&gt; id, TopicState state = null, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Azure.ServiceBus.TopicState.html">TopicState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Azure.ServiceBus.Topic.html">Topic</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Servicebus/Topic.cs/#L19" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

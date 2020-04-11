@@ -1,0 +1,571 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class DetectorState
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class DetectorState
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.SignalFx.DetectorState">
+  
+  <h1 id="Pulumi_SignalFx_DetectorState" data-uid="Pulumi.SignalFx.DetectorState" class="text-break">Class DetectorState
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">DetectorState</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.SignalFx.html">Pulumi.SignalFx</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.SignalFx.dll</h6>
+  <h5 id="Pulumi_SignalFx_DetectorState_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class DetectorState : ResourceArgs</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Detector.cs/#L415">View Source</a>
+  </span>
+  <a id="Pulumi_SignalFx_DetectorState__ctor_" data-uid="Pulumi.SignalFx.DetectorState.#ctor*"></a>
+  <h4 id="Pulumi_SignalFx_DetectorState__ctor" data-uid="Pulumi.SignalFx.DetectorState.#ctor">DetectorState()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DetectorState()</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Detector.cs/#L295">View Source</a>
+  </span>
+  <a id="Pulumi_SignalFx_DetectorState_AuthorizedWriterTeams_" data-uid="Pulumi.SignalFx.DetectorState.AuthorizedWriterTeams*"></a>
+  <h4 id="Pulumi_SignalFx_DetectorState_AuthorizedWriterTeams" data-uid="Pulumi.SignalFx.DetectorState.AuthorizedWriterTeams">AuthorizedWriterTeams</h4>
+  <div class="markdown level1 summary"><p>Team IDs that have write access to this detector. Remember to use an admin's token if using this feature and to include that admin's team id (or user id in <code>authorized_writer_users</code>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputList&lt;string&gt; AuthorizedWriterTeams { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Detector.cs/#L307">View Source</a>
+  </span>
+  <a id="Pulumi_SignalFx_DetectorState_AuthorizedWriterUsers_" data-uid="Pulumi.SignalFx.DetectorState.AuthorizedWriterUsers*"></a>
+  <h4 id="Pulumi_SignalFx_DetectorState_AuthorizedWriterUsers" data-uid="Pulumi.SignalFx.DetectorState.AuthorizedWriterUsers">AuthorizedWriterUsers</h4>
+  <div class="markdown level1 summary"><p>User IDs that have write access to this detector. Remember to use an admin's token if using this feature and to include that admin's user id (or team id in <code>authorized_writer_teams</code>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputList&lt;string&gt; AuthorizedWriterUsers { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Detector.cs/#L316">View Source</a>
+  </span>
+  <a id="Pulumi_SignalFx_DetectorState_Description_" data-uid="Pulumi.SignalFx.DetectorState.Description*"></a>
+  <h4 id="Pulumi_SignalFx_DetectorState_Description" data-uid="Pulumi.SignalFx.DetectorState.Description">Description</h4>
+  <div class="markdown level1 summary"><p>Description for the rule. Displays as the alert condition in the Alert Rules tab of the detector editor in the web UI.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Description { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Detector.cs/#L322">View Source</a>
+  </span>
+  <a id="Pulumi_SignalFx_DetectorState_DisableSampling_" data-uid="Pulumi.SignalFx.DetectorState.DisableSampling*"></a>
+  <h4 id="Pulumi_SignalFx_DetectorState_DisableSampling" data-uid="Pulumi.SignalFx.DetectorState.DisableSampling">DisableSampling</h4>
+  <div class="markdown level1 summary"><p>When <code>false</code>, the visualization may sample the output timeseries rather than displaying them all. <code>false</code> by default.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? DisableSampling { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Detector.cs/#L328">View Source</a>
+  </span>
+  <a id="Pulumi_SignalFx_DetectorState_EndTime_" data-uid="Pulumi.SignalFx.DetectorState.EndTime*"></a>
+  <h4 id="Pulumi_SignalFx_DetectorState_EndTime" data-uid="Pulumi.SignalFx.DetectorState.EndTime">EndTime</h4>
+  <div class="markdown level1 summary"><p>Seconds since epoch. Used for visualization. Conflicts with <code>time_range</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? EndTime { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Detector.cs/#L334">View Source</a>
+  </span>
+  <a id="Pulumi_SignalFx_DetectorState_MaxDelay_" data-uid="Pulumi.SignalFx.DetectorState.MaxDelay*"></a>
+  <h4 id="Pulumi_SignalFx_DetectorState_MaxDelay" data-uid="Pulumi.SignalFx.DetectorState.MaxDelay">MaxDelay</h4>
+  <div class="markdown level1 summary"><p>How long (in seconds) to wait for late datapoints. See &lt;https://signalfx-product-docs.readthedocs-hosted.com/en/latest/charts/chart-builder.html#delayed-datapoints&gt; for more info. Max value is <code>900</code> seconds (15 minutes). <code>Auto</code> (as little as possible) by default.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? MaxDelay { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Detector.cs/#L340">View Source</a>
+  </span>
+  <a id="Pulumi_SignalFx_DetectorState_Name_" data-uid="Pulumi.SignalFx.DetectorState.Name*"></a>
+  <h4 id="Pulumi_SignalFx_DetectorState_Name" data-uid="Pulumi.SignalFx.DetectorState.Name">Name</h4>
+  <div class="markdown level1 summary"><p>Name of the detector.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Name { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Detector.cs/#L346">View Source</a>
+  </span>
+  <a id="Pulumi_SignalFx_DetectorState_ProgramText_" data-uid="Pulumi.SignalFx.DetectorState.ProgramText*"></a>
+  <h4 id="Pulumi_SignalFx_DetectorState_ProgramText" data-uid="Pulumi.SignalFx.DetectorState.ProgramText">ProgramText</h4>
+  <div class="markdown level1 summary"><p>Signalflow program text for the detector. More info at &lt;https://developers.signalfx.com/signalflow_analytics/signalflow_overview.html&gt;.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? ProgramText { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Detector.cs/#L355">View Source</a>
+  </span>
+  <a id="Pulumi_SignalFx_DetectorState_Rules_" data-uid="Pulumi.SignalFx.DetectorState.Rules*"></a>
+  <h4 id="Pulumi_SignalFx_DetectorState_Rules" data-uid="Pulumi.SignalFx.DetectorState.Rules">Rules</h4>
+  <div class="markdown level1 summary"><p>Set of rules used for alerting.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputList&lt;DetectorRulesGetArgs&gt; Rules { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.SignalFx.Inputs.DetectorRulesGetArgs.html">DetectorRulesGetArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Detector.cs/#L364">View Source</a>
+  </span>
+  <a id="Pulumi_SignalFx_DetectorState_ShowDataMarkers_" data-uid="Pulumi.SignalFx.DetectorState.ShowDataMarkers*"></a>
+  <h4 id="Pulumi_SignalFx_DetectorState_ShowDataMarkers" data-uid="Pulumi.SignalFx.DetectorState.ShowDataMarkers">ShowDataMarkers</h4>
+  <div class="markdown level1 summary"><p>When <code>true</code>, markers will be drawn for each datapoint within the visualization. <code>true</code> by default.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? ShowDataMarkers { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Detector.cs/#L370">View Source</a>
+  </span>
+  <a id="Pulumi_SignalFx_DetectorState_ShowEventLines_" data-uid="Pulumi.SignalFx.DetectorState.ShowEventLines*"></a>
+  <h4 id="Pulumi_SignalFx_DetectorState_ShowEventLines" data-uid="Pulumi.SignalFx.DetectorState.ShowEventLines">ShowEventLines</h4>
+  <div class="markdown level1 summary"><p>When <code>true</code>, the visualization will display a vertical line for each event trigger. <code>false</code> by default.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;bool&gt;? ShowEventLines { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Detector.cs/#L376">View Source</a>
+  </span>
+  <a id="Pulumi_SignalFx_DetectorState_StartTime_" data-uid="Pulumi.SignalFx.DetectorState.StartTime*"></a>
+  <h4 id="Pulumi_SignalFx_DetectorState_StartTime" data-uid="Pulumi.SignalFx.DetectorState.StartTime">StartTime</h4>
+  <div class="markdown level1 summary"><p>Seconds since epoch. Used for visualization. Conflicts with <code>time_range</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? StartTime { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Detector.cs/#L385">View Source</a>
+  </span>
+  <a id="Pulumi_SignalFx_DetectorState_Teams_" data-uid="Pulumi.SignalFx.DetectorState.Teams*"></a>
+  <h4 id="Pulumi_SignalFx_DetectorState_Teams" data-uid="Pulumi.SignalFx.DetectorState.Teams">Teams</h4>
+  <div class="markdown level1 summary"><p>Team IDs to associate the detector to.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputList&lt;string&gt; Teams { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">InputList</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Detector.cs/#L394">View Source</a>
+  </span>
+  <a id="Pulumi_SignalFx_DetectorState_TimeRange_" data-uid="Pulumi.SignalFx.DetectorState.TimeRange*"></a>
+  <h4 id="Pulumi_SignalFx_DetectorState_TimeRange" data-uid="Pulumi.SignalFx.DetectorState.TimeRange">TimeRange</h4>
+  <div class="markdown level1 summary"><p>Seconds to display in the visualization. This is a rolling range from the current time. Example: <code>3600</code> corresponds to <code>-1h</code> in web UI. <code>3600</code> by default.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;int&gt;? TimeRange { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Detector.cs/#L400">View Source</a>
+  </span>
+  <a id="Pulumi_SignalFx_DetectorState_Url_" data-uid="Pulumi.SignalFx.DetectorState.Url*"></a>
+  <h4 id="Pulumi_SignalFx_DetectorState_Url" data-uid="Pulumi.SignalFx.DetectorState.Url">Url</h4>
+  <div class="markdown level1 summary"><p>URL of the detector</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Input&lt;string&gt;? Url { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Detector.cs/#L409">View Source</a>
+  </span>
+  <a id="Pulumi_SignalFx_DetectorState_VizOptions_" data-uid="Pulumi.SignalFx.DetectorState.VizOptions*"></a>
+  <h4 id="Pulumi_SignalFx_DetectorState_VizOptions" data-uid="Pulumi.SignalFx.DetectorState.VizOptions">VizOptions</h4>
+  <div class="markdown level1 summary"><p>Plot-level customization options, associated with a publish statement.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public InputList&lt;DetectorVizOptionsGetArgs&gt; VizOptions { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">InputList</span>&lt;<a class="xref" href="Pulumi.SignalFx.Inputs.DetectorVizOptionsGetArgs.html">DetectorVizOptionsGetArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-signalfx/blob/master/sdk/dotnet/Detector.cs/#L287" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

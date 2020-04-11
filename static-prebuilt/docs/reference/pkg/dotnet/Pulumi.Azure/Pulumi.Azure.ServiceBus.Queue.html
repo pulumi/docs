@@ -1,0 +1,675 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Queue
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Queue
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Azure.ServiceBus.Queue">
+  
+  <h1 id="Pulumi_Azure_ServiceBus_Queue" data-uid="Pulumi.Azure.ServiceBus.Queue" class="text-break">Class Queue
+  </h1>
+  <div class="markdown level0 summary"><p>Manages a ServiceBus Queue.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/servicebus_queue.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/servicebus_queue.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="../Pulumi/Pulumi.Resource.html">Resource</a></div>
+    <div class="level2"><a class="xref" href="../Pulumi/Pulumi.CustomResource.html">CustomResource</a></div>
+    <div class="level3"><span class="xref">Queue</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.CustomResource.html#Pulumi_CustomResource_Id">CustomResource.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceType">Resource.GetResourceType()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_GetResourceName">Resource.GetResourceName()</a>
+    </div>
+    <div>
+      <a class="xref" href="../Pulumi/Pulumi.Resource.html#Pulumi_Resource_Urn">Resource.Urn</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Azure.ServiceBus.html">Pulumi.Azure.ServiceBus</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.Azure.dll</h6>
+  <h5 id="Pulumi_Azure_ServiceBus_Queue_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Queue : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Servicebus/Queue.cs/#L130">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_ServiceBus_Queue__ctor_" data-uid="Pulumi.Azure.ServiceBus.Queue.#ctor*"></a>
+  <h4 id="Pulumi_Azure_ServiceBus_Queue__ctor_System_String_Pulumi_Azure_ServiceBus_QueueArgs_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.ServiceBus.Queue.#ctor(System.String,Pulumi.Azure.ServiceBus.QueueArgs,Pulumi.CustomResourceOptions)">Queue(String, QueueArgs, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Create a Queue resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Queue(string name, QueueArgs args, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Azure.ServiceBus.QueueArgs.html">QueueArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Servicebus/Queue.cs/#L23">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_ServiceBus_Queue_AutoDeleteOnIdle_" data-uid="Pulumi.Azure.ServiceBus.Queue.AutoDeleteOnIdle*"></a>
+  <h4 id="Pulumi_Azure_ServiceBus_Queue_AutoDeleteOnIdle" data-uid="Pulumi.Azure.ServiceBus.Queue.AutoDeleteOnIdle">AutoDeleteOnIdle</h4>
+  <div class="markdown level1 summary"><p>The ISO 8601 timespan duration of the idle interval after which the
+Queue is automatically deleted, minimum of 5 minutes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; AutoDeleteOnIdle { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Servicebus/Queue.cs/#L29">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_ServiceBus_Queue_DeadLetteringOnMessageExpiration_" data-uid="Pulumi.Azure.ServiceBus.Queue.DeadLetteringOnMessageExpiration*"></a>
+  <h4 id="Pulumi_Azure_ServiceBus_Queue_DeadLetteringOnMessageExpiration" data-uid="Pulumi.Azure.ServiceBus.Queue.DeadLetteringOnMessageExpiration">DeadLetteringOnMessageExpiration</h4>
+  <div class="markdown level1 summary"><p>Boolean flag which controls whether the Queue has dead letter support when a message expires. Defaults to <code>false</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; DeadLetteringOnMessageExpiration { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Servicebus/Queue.cs/#L36">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_ServiceBus_Queue_DefaultMessageTtl_" data-uid="Pulumi.Azure.ServiceBus.Queue.DefaultMessageTtl*"></a>
+  <h4 id="Pulumi_Azure_ServiceBus_Queue_DefaultMessageTtl" data-uid="Pulumi.Azure.ServiceBus.Queue.DefaultMessageTtl">DefaultMessageTtl</h4>
+  <div class="markdown level1 summary"><p>The ISO 8601 timespan duration of the TTL of messages sent to this
+queue. This is the default value used when TTL is not set on message itself.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; DefaultMessageTtl { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Servicebus/Queue.cs/#L43">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_ServiceBus_Queue_DuplicateDetectionHistoryTimeWindow_" data-uid="Pulumi.Azure.ServiceBus.Queue.DuplicateDetectionHistoryTimeWindow*"></a>
+  <h4 id="Pulumi_Azure_ServiceBus_Queue_DuplicateDetectionHistoryTimeWindow" data-uid="Pulumi.Azure.ServiceBus.Queue.DuplicateDetectionHistoryTimeWindow">DuplicateDetectionHistoryTimeWindow</h4>
+  <div class="markdown level1 summary"><p>The ISO 8601 timespan duration during which
+duplicates can be detected. Default value is 10 minutes. (<code>PT10M</code>)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; DuplicateDetectionHistoryTimeWindow { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Servicebus/Queue.cs/#L52">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_ServiceBus_Queue_EnableExpress_" data-uid="Pulumi.Azure.ServiceBus.Queue.EnableExpress*"></a>
+  <h4 id="Pulumi_Azure_ServiceBus_Queue_EnableExpress" data-uid="Pulumi.Azure.ServiceBus.Queue.EnableExpress">EnableExpress</h4>
+  <div class="markdown level1 summary"><p>Boolean flag which controls whether Express Entities
+are enabled. An express queue holds a message in memory temporarily before writing
+it to persistent storage. Defaults to <code>false</code> for Basic and Standard. For Premium, it MUST
+be set to <code>false</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; EnableExpress { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Servicebus/Queue.cs/#L61">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_ServiceBus_Queue_EnablePartitioning_" data-uid="Pulumi.Azure.ServiceBus.Queue.EnablePartitioning*"></a>
+  <h4 id="Pulumi_Azure_ServiceBus_Queue_EnablePartitioning" data-uid="Pulumi.Azure.ServiceBus.Queue.EnablePartitioning">EnablePartitioning</h4>
+  <div class="markdown level1 summary"><p>Boolean flag which controls whether to enable
+the queue to be partitioned across multiple message brokers. Changing this forces
+a new resource to be created. Defaults to <code>false</code> for Basic and Standard. For Premium, it MUST
+be set to <code>true</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; EnablePartitioning { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Servicebus/Queue.cs/#L67">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_ServiceBus_Queue_LockDuration_" data-uid="Pulumi.Azure.ServiceBus.Queue.LockDuration*"></a>
+  <h4 id="Pulumi_Azure_ServiceBus_Queue_LockDuration" data-uid="Pulumi.Azure.ServiceBus.Queue.LockDuration">LockDuration</h4>
+  <div class="markdown level1 summary"><p>The ISO 8601 timespan duration of a peek-lock; that is, the amount of time that the message is locked for other receivers. Maximum value is 5 minutes. Defaults to 1 minute. (<code>PT1M</code>)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; LockDuration { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Servicebus/Queue.cs/#L73">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_ServiceBus_Queue_MaxDeliveryCount_" data-uid="Pulumi.Azure.ServiceBus.Queue.MaxDeliveryCount*"></a>
+  <h4 id="Pulumi_Azure_ServiceBus_Queue_MaxDeliveryCount" data-uid="Pulumi.Azure.ServiceBus.Queue.MaxDeliveryCount">MaxDeliveryCount</h4>
+  <div class="markdown level1 summary"><p>Integer value which controls when a message is automatically deadlettered. Defaults to <code>10</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; MaxDeliveryCount { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Servicebus/Queue.cs/#L81">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_ServiceBus_Queue_MaxSizeInMegabytes_" data-uid="Pulumi.Azure.ServiceBus.Queue.MaxSizeInMegabytes*"></a>
+  <h4 id="Pulumi_Azure_ServiceBus_Queue_MaxSizeInMegabytes" data-uid="Pulumi.Azure.ServiceBus.Queue.MaxSizeInMegabytes">MaxSizeInMegabytes</h4>
+  <div class="markdown level1 summary"><p>Integer value which controls the size of
+memory allocated for the queue. For supported values see the &quot;Queue/topic size&quot;
+section of <a href="https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-quotas">this document</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int&gt; MaxSizeInMegabytes { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Servicebus/Queue.cs/#L88">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_ServiceBus_Queue_Name_" data-uid="Pulumi.Azure.ServiceBus.Queue.Name*"></a>
+  <h4 id="Pulumi_Azure_ServiceBus_Queue_Name" data-uid="Pulumi.Azure.ServiceBus.Queue.Name">Name</h4>
+  <div class="markdown level1 summary"><p>Specifies the name of the ServiceBus Queue resource. Changing this forces a
+new resource to be created.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Servicebus/Queue.cs/#L95">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_ServiceBus_Queue_NamespaceName_" data-uid="Pulumi.Azure.ServiceBus.Queue.NamespaceName*"></a>
+  <h4 id="Pulumi_Azure_ServiceBus_Queue_NamespaceName" data-uid="Pulumi.Azure.ServiceBus.Queue.NamespaceName">NamespaceName</h4>
+  <div class="markdown level1 summary"><p>The name of the ServiceBus Namespace to create
+this queue in. Changing this forces a new resource to be created.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; NamespaceName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Servicebus/Queue.cs/#L103">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_ServiceBus_Queue_RequiresDuplicateDetection_" data-uid="Pulumi.Azure.ServiceBus.Queue.RequiresDuplicateDetection*"></a>
+  <h4 id="Pulumi_Azure_ServiceBus_Queue_RequiresDuplicateDetection" data-uid="Pulumi.Azure.ServiceBus.Queue.RequiresDuplicateDetection">RequiresDuplicateDetection</h4>
+  <div class="markdown level1 summary"><p>Boolean flag which controls whether
+the Queue requires duplicate detection. Changing this forces
+a new resource to be created. Defaults to <code>false</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; RequiresDuplicateDetection { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Servicebus/Queue.cs/#L112">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_ServiceBus_Queue_RequiresSession_" data-uid="Pulumi.Azure.ServiceBus.Queue.RequiresSession*"></a>
+  <h4 id="Pulumi_Azure_ServiceBus_Queue_RequiresSession" data-uid="Pulumi.Azure.ServiceBus.Queue.RequiresSession">RequiresSession</h4>
+  <div class="markdown level1 summary"><p>Boolean flag which controls whether the Queue requires sessions.
+This will allow ordered handling of unbounded sequences of related messages. With sessions enabled
+a queue can guarantee first-in-first-out delivery of messages.
+Changing this forces a new resource to be created. Defaults to <code>false</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; RequiresSession { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Servicebus/Queue.cs/#L119">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_ServiceBus_Queue_ResourceGroupName_" data-uid="Pulumi.Azure.ServiceBus.Queue.ResourceGroupName*"></a>
+  <h4 id="Pulumi_Azure_ServiceBus_Queue_ResourceGroupName" data-uid="Pulumi.Azure.ServiceBus.Queue.ResourceGroupName">ResourceGroupName</h4>
+  <div class="markdown level1 summary"><p>The name of the resource group in which to
+create the namespace. Changing this forces a new resource to be created.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ResourceGroupName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Output-1.html">Output</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Servicebus/Queue.cs/#L160">View Source</a>
+  </span>
+  <a id="Pulumi_Azure_ServiceBus_Queue_Get_" data-uid="Pulumi.Azure.ServiceBus.Queue.Get*"></a>
+  <h4 id="Pulumi_Azure_ServiceBus_Queue_Get_System_String_Pulumi_Input_System_String__Pulumi_Azure_ServiceBus_QueueState_Pulumi_CustomResourceOptions_" data-uid="Pulumi.Azure.ServiceBus.Queue.Get(System.String,Pulumi.Input{System.String},Pulumi.Azure.ServiceBus.QueueState,Pulumi.CustomResourceOptions)">Get(String, Input&lt;String&gt;, QueueState, CustomResourceOptions)</h4>
+  <div class="markdown level1 summary"><p>Get an existing Queue resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Queue Get(string name, Input&lt;string&gt; id, QueueState state = null, CustomResourceOptions options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.Input-1.html">Input</a>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Azure.ServiceBus.QueueState.html">QueueState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="../Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Azure.ServiceBus.Queue.html">Queue</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-azure/blob/master/sdk/dotnet/Servicebus/Queue.cs/#L17" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

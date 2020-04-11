@@ -1,0 +1,1239 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Oidc
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Oidc
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Okta.Idp.Oidc">
+  
+  <h1 id="Pulumi_Okta_Idp_Oidc" data-uid="Pulumi.Okta.Idp.Oidc" class="text-break">Class Oidc
+  </h1>
+  <div class="markdown level0 summary"><p>Creates an OIDC Identity Provider.</p>
+<p>This resource allows you to create and configure an OIDC Identity Provider.</p>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/idp_oidc.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/idp_oidc.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Oidc</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Okta.Idp.html">Pulumi.Okta.Idp</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.Okta.dll</h6>
+  <h5 id="Pulumi_Okta_Idp_Oidc_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Oidc : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Oidc.cs/#L247">View Source</a>
+  </span>
+  <a id="Pulumi_Okta_Idp_Oidc__ctor_" data-uid="Pulumi.Okta.Idp.Oidc.#ctor*"></a>
+  <h4 id="Pulumi_Okta_Idp_Oidc__ctor_System_String_Pulumi_Okta_Idp_OidcArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Okta.Idp.Oidc.#ctor(System.String,Pulumi.Okta.Idp.OidcArgs,System.Nullable{CustomResourceOptions})">Oidc(String, OidcArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Create a Oidc resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Oidc(string name, OidcArgs args, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Okta.Idp.OidcArgs.html">OidcArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Oidc.cs/#L23">View Source</a>
+  </span>
+  <a id="Pulumi_Okta_Idp_Oidc_AccountLinkAction_" data-uid="Pulumi.Okta.Idp.Oidc.AccountLinkAction*"></a>
+  <h4 id="Pulumi_Okta_Idp_Oidc_AccountLinkAction" data-uid="Pulumi.Okta.Idp.Oidc.AccountLinkAction">AccountLinkAction</h4>
+  <div class="markdown level1 summary"><p>Specifies the account linking action for an IdP user.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; AccountLinkAction { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Oidc.cs/#L29">View Source</a>
+  </span>
+  <a id="Pulumi_Okta_Idp_Oidc_AccountLinkGroupIncludes_" data-uid="Pulumi.Okta.Idp.Oidc.AccountLinkGroupIncludes*"></a>
+  <h4 id="Pulumi_Okta_Idp_Oidc_AccountLinkGroupIncludes" data-uid="Pulumi.Okta.Idp.Oidc.AccountLinkGroupIncludes">AccountLinkGroupIncludes</h4>
+  <div class="markdown level1 summary"><p>Group memberships to determine link candidates.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; AccountLinkGroupIncludes { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Oidc.cs/#L35">View Source</a>
+  </span>
+  <a id="Pulumi_Okta_Idp_Oidc_AcsBinding_" data-uid="Pulumi.Okta.Idp.Oidc.AcsBinding*"></a>
+  <h4 id="Pulumi_Okta_Idp_Oidc_AcsBinding" data-uid="Pulumi.Okta.Idp.Oidc.AcsBinding">AcsBinding</h4>
+  <div class="markdown level1 summary"><p>The method of making an ACS request. It can be set to <code>&amp;quot;HTTP-POST&amp;quot;</code> or <code>&amp;quot;HTTP-REDIRECT&amp;quot;</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; AcsBinding { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Oidc.cs/#L41">View Source</a>
+  </span>
+  <a id="Pulumi_Okta_Idp_Oidc_AcsType_" data-uid="Pulumi.Okta.Idp.Oidc.AcsType*"></a>
+  <h4 id="Pulumi_Okta_Idp_Oidc_AcsType" data-uid="Pulumi.Okta.Idp.Oidc.AcsType">AcsType</h4>
+  <div class="markdown level1 summary"><p>The type of ACS. Default is <code>&amp;quot;INSTANCE&amp;quot;</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; AcsType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Oidc.cs/#L47">View Source</a>
+  </span>
+  <a id="Pulumi_Okta_Idp_Oidc_AuthorizationBinding_" data-uid="Pulumi.Okta.Idp.Oidc.AuthorizationBinding*"></a>
+  <h4 id="Pulumi_Okta_Idp_Oidc_AuthorizationBinding" data-uid="Pulumi.Okta.Idp.Oidc.AuthorizationBinding">AuthorizationBinding</h4>
+  <div class="markdown level1 summary"><p>The method of making an authorization request. It can be set to <code>&amp;quot;HTTP-POST&amp;quot;</code> or <code>&amp;quot;HTTP-REDIRECT&amp;quot;</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; AuthorizationBinding { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Oidc.cs/#L53">View Source</a>
+  </span>
+  <a id="Pulumi_Okta_Idp_Oidc_AuthorizationUrl_" data-uid="Pulumi.Okta.Idp.Oidc.AuthorizationUrl*"></a>
+  <h4 id="Pulumi_Okta_Idp_Oidc_AuthorizationUrl" data-uid="Pulumi.Okta.Idp.Oidc.AuthorizationUrl">AuthorizationUrl</h4>
+  <div class="markdown level1 summary"><p>IdP Authorization Server (AS) endpoint to request consent from the user and obtain an authorization code grant.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; AuthorizationUrl { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Oidc.cs/#L59">View Source</a>
+  </span>
+  <a id="Pulumi_Okta_Idp_Oidc_ClientId_" data-uid="Pulumi.Okta.Idp.Oidc.ClientId*"></a>
+  <h4 id="Pulumi_Okta_Idp_Oidc_ClientId" data-uid="Pulumi.Okta.Idp.Oidc.ClientId">ClientId</h4>
+  <div class="markdown level1 summary"><p>Unique identifier issued by AS for the Okta IdP instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ClientId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Oidc.cs/#L65">View Source</a>
+  </span>
+  <a id="Pulumi_Okta_Idp_Oidc_ClientSecret_" data-uid="Pulumi.Okta.Idp.Oidc.ClientSecret*"></a>
+  <h4 id="Pulumi_Okta_Idp_Oidc_ClientSecret" data-uid="Pulumi.Okta.Idp.Oidc.ClientSecret">ClientSecret</h4>
+  <div class="markdown level1 summary"><p>Client secret issued by AS for the Okta IdP instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; ClientSecret { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Oidc.cs/#L71">View Source</a>
+  </span>
+  <a id="Pulumi_Okta_Idp_Oidc_DeprovisionedAction_" data-uid="Pulumi.Okta.Idp.Oidc.DeprovisionedAction*"></a>
+  <h4 id="Pulumi_Okta_Idp_Oidc_DeprovisionedAction" data-uid="Pulumi.Okta.Idp.Oidc.DeprovisionedAction">DeprovisionedAction</h4>
+  <div class="markdown level1 summary"><p>Action for a previously deprovisioned IdP user during authentication. Can be <code>&amp;quot;NONE&amp;quot;</code> or <code>&amp;quot;REACTIVATE&amp;quot;</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; DeprovisionedAction { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Oidc.cs/#L77">View Source</a>
+  </span>
+  <a id="Pulumi_Okta_Idp_Oidc_GroupsAction_" data-uid="Pulumi.Okta.Idp.Oidc.GroupsAction*"></a>
+  <h4 id="Pulumi_Okta_Idp_Oidc_GroupsAction" data-uid="Pulumi.Okta.Idp.Oidc.GroupsAction">GroupsAction</h4>
+  <div class="markdown level1 summary"><p>Provisioning action for IdP user's group memberships. It can be <code>&amp;quot;NONE&amp;quot;</code>, <code>&amp;quot;SYNC&amp;quot;</code>, <code>&amp;quot;APPEND&amp;quot;</code>, or <code>&amp;quot;ASSIGN&amp;quot;</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; GroupsAction { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Oidc.cs/#L83">View Source</a>
+  </span>
+  <a id="Pulumi_Okta_Idp_Oidc_GroupsAssignments_" data-uid="Pulumi.Okta.Idp.Oidc.GroupsAssignments*"></a>
+  <h4 id="Pulumi_Okta_Idp_Oidc_GroupsAssignments" data-uid="Pulumi.Okta.Idp.Oidc.GroupsAssignments">GroupsAssignments</h4>
+  <div class="markdown level1 summary"><p>List of Okta Group IDs to add an IdP user as a member with the <code>&amp;quot;ASSIGN&amp;quot;</code> <code>groups_action</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; GroupsAssignments { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Oidc.cs/#L89">View Source</a>
+  </span>
+  <a id="Pulumi_Okta_Idp_Oidc_GroupsAttribute_" data-uid="Pulumi.Okta.Idp.Oidc.GroupsAttribute*"></a>
+  <h4 id="Pulumi_Okta_Idp_Oidc_GroupsAttribute" data-uid="Pulumi.Okta.Idp.Oidc.GroupsAttribute">GroupsAttribute</h4>
+  <div class="markdown level1 summary"><p>IdP user profile attribute name (case-insensitive) for an array value that contains group memberships.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; GroupsAttribute { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Oidc.cs/#L95">View Source</a>
+  </span>
+  <a id="Pulumi_Okta_Idp_Oidc_GroupsFilters_" data-uid="Pulumi.Okta.Idp.Oidc.GroupsFilters*"></a>
+  <h4 id="Pulumi_Okta_Idp_Oidc_GroupsFilters" data-uid="Pulumi.Okta.Idp.Oidc.GroupsFilters">GroupsFilters</h4>
+  <div class="markdown level1 summary"><p>Whitelist of Okta Group identifiers that are allowed for the <code>&amp;quot;APPEND&amp;quot;</code> or <code>&amp;quot;SYNC&amp;quot;</code> <code>groups_action</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; GroupsFilters { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Oidc.cs/#L101">View Source</a>
+  </span>
+  <a id="Pulumi_Okta_Idp_Oidc_IssuerMode_" data-uid="Pulumi.Okta.Idp.Oidc.IssuerMode*"></a>
+  <h4 id="Pulumi_Okta_Idp_Oidc_IssuerMode" data-uid="Pulumi.Okta.Idp.Oidc.IssuerMode">IssuerMode</h4>
+  <div class="markdown level1 summary"><p>Indicates whether Okta uses the original Okta org domain URL, or a custom domain URL. It can be <code>&amp;quot;ORG_URL&amp;quot;</code> or <code>&amp;quot;CUSTOM_URL&amp;quot;</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; IssuerMode { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Oidc.cs/#L107">View Source</a>
+  </span>
+  <a id="Pulumi_Okta_Idp_Oidc_IssuerUrl_" data-uid="Pulumi.Okta.Idp.Oidc.IssuerUrl*"></a>
+  <h4 id="Pulumi_Okta_Idp_Oidc_IssuerUrl" data-uid="Pulumi.Okta.Idp.Oidc.IssuerUrl">IssuerUrl</h4>
+  <div class="markdown level1 summary"><p>URI that identifies the issuer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; IssuerUrl { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Oidc.cs/#L113">View Source</a>
+  </span>
+  <a id="Pulumi_Okta_Idp_Oidc_JwksBinding_" data-uid="Pulumi.Okta.Idp.Oidc.JwksBinding*"></a>
+  <h4 id="Pulumi_Okta_Idp_Oidc_JwksBinding" data-uid="Pulumi.Okta.Idp.Oidc.JwksBinding">JwksBinding</h4>
+  <div class="markdown level1 summary"><p>The method of making a request for the OIDC JWKS. It can be set to <code>&amp;quot;HTTP-POST&amp;quot;</code> or <code>&amp;quot;HTTP-REDIRECT&amp;quot;</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; JwksBinding { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Oidc.cs/#L119">View Source</a>
+  </span>
+  <a id="Pulumi_Okta_Idp_Oidc_JwksUrl_" data-uid="Pulumi.Okta.Idp.Oidc.JwksUrl*"></a>
+  <h4 id="Pulumi_Okta_Idp_Oidc_JwksUrl" data-uid="Pulumi.Okta.Idp.Oidc.JwksUrl">JwksUrl</h4>
+  <div class="markdown level1 summary"><p>Endpoint where the signer of the keys publishes its keys in a JWK Set.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; JwksUrl { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Oidc.cs/#L125">View Source</a>
+  </span>
+  <a id="Pulumi_Okta_Idp_Oidc_MaxClockSkew_" data-uid="Pulumi.Okta.Idp.Oidc.MaxClockSkew*"></a>
+  <h4 id="Pulumi_Okta_Idp_Oidc_MaxClockSkew" data-uid="Pulumi.Okta.Idp.Oidc.MaxClockSkew">MaxClockSkew</h4>
+  <div class="markdown level1 summary"><p>Maximum allowable clock-skew when processing messages from the IdP.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int?&gt; MaxClockSkew { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Oidc.cs/#L131">View Source</a>
+  </span>
+  <a id="Pulumi_Okta_Idp_Oidc_Name_" data-uid="Pulumi.Okta.Idp.Oidc.Name*"></a>
+  <h4 id="Pulumi_Okta_Idp_Oidc_Name" data-uid="Pulumi.Okta.Idp.Oidc.Name">Name</h4>
+  <div class="markdown level1 summary"><p>The Application's display name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Name { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Oidc.cs/#L137">View Source</a>
+  </span>
+  <a id="Pulumi_Okta_Idp_Oidc_ProfileMaster_" data-uid="Pulumi.Okta.Idp.Oidc.ProfileMaster*"></a>
+  <h4 id="Pulumi_Okta_Idp_Oidc_ProfileMaster" data-uid="Pulumi.Okta.Idp.Oidc.ProfileMaster">ProfileMaster</h4>
+  <div class="markdown level1 summary"><p>Determines if the IdP should act as a source of truth for user profile attributes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; ProfileMaster { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Oidc.cs/#L143">View Source</a>
+  </span>
+  <a id="Pulumi_Okta_Idp_Oidc_ProtocolType_" data-uid="Pulumi.Okta.Idp.Oidc.ProtocolType*"></a>
+  <h4 id="Pulumi_Okta_Idp_Oidc_ProtocolType" data-uid="Pulumi.Okta.Idp.Oidc.ProtocolType">ProtocolType</h4>
+  <div class="markdown level1 summary"><p>The type of protocol to use. It can be <code>&amp;quot;OIDC&amp;quot;</code> or <code>&amp;quot;OAUTH2&amp;quot;</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ProtocolType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Oidc.cs/#L149">View Source</a>
+  </span>
+  <a id="Pulumi_Okta_Idp_Oidc_ProvisioningAction_" data-uid="Pulumi.Okta.Idp.Oidc.ProvisioningAction*"></a>
+  <h4 id="Pulumi_Okta_Idp_Oidc_ProvisioningAction" data-uid="Pulumi.Okta.Idp.Oidc.ProvisioningAction">ProvisioningAction</h4>
+  <div class="markdown level1 summary"><p>Provisioning action for an IdP user during authentication.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ProvisioningAction { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Oidc.cs/#L155">View Source</a>
+  </span>
+  <a id="Pulumi_Okta_Idp_Oidc_RequestSignatureAlgorithm_" data-uid="Pulumi.Okta.Idp.Oidc.RequestSignatureAlgorithm*"></a>
+  <h4 id="Pulumi_Okta_Idp_Oidc_RequestSignatureAlgorithm" data-uid="Pulumi.Okta.Idp.Oidc.RequestSignatureAlgorithm">RequestSignatureAlgorithm</h4>
+  <div class="markdown level1 summary"><p>algorithm to use to sign requests</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; RequestSignatureAlgorithm { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Oidc.cs/#L161">View Source</a>
+  </span>
+  <a id="Pulumi_Okta_Idp_Oidc_RequestSignatureScope_" data-uid="Pulumi.Okta.Idp.Oidc.RequestSignatureScope*"></a>
+  <h4 id="Pulumi_Okta_Idp_Oidc_RequestSignatureScope" data-uid="Pulumi.Okta.Idp.Oidc.RequestSignatureScope">RequestSignatureScope</h4>
+  <div class="markdown level1 summary"><p>algorithm to use to sign response</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; RequestSignatureScope { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Oidc.cs/#L167">View Source</a>
+  </span>
+  <a id="Pulumi_Okta_Idp_Oidc_ResponseSignatureAlgorithm_" data-uid="Pulumi.Okta.Idp.Oidc.ResponseSignatureAlgorithm*"></a>
+  <h4 id="Pulumi_Okta_Idp_Oidc_ResponseSignatureAlgorithm" data-uid="Pulumi.Okta.Idp.Oidc.ResponseSignatureAlgorithm">ResponseSignatureAlgorithm</h4>
+  <div class="markdown level1 summary"><p>algorithm to use to sign requests</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ResponseSignatureAlgorithm { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Oidc.cs/#L173">View Source</a>
+  </span>
+  <a id="Pulumi_Okta_Idp_Oidc_ResponseSignatureScope_" data-uid="Pulumi.Okta.Idp.Oidc.ResponseSignatureScope*"></a>
+  <h4 id="Pulumi_Okta_Idp_Oidc_ResponseSignatureScope" data-uid="Pulumi.Okta.Idp.Oidc.ResponseSignatureScope">ResponseSignatureScope</h4>
+  <div class="markdown level1 summary"><p>algorithm to use to sign response</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; ResponseSignatureScope { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Oidc.cs/#L179">View Source</a>
+  </span>
+  <a id="Pulumi_Okta_Idp_Oidc_Scopes_" data-uid="Pulumi.Okta.Idp.Oidc.Scopes*"></a>
+  <h4 id="Pulumi_Okta_Idp_Oidc_Scopes" data-uid="Pulumi.Okta.Idp.Oidc.Scopes">Scopes</h4>
+  <div class="markdown level1 summary"><p>The scopes of the IdP.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; Scopes { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Oidc.cs/#L185">View Source</a>
+  </span>
+  <a id="Pulumi_Okta_Idp_Oidc_Status_" data-uid="Pulumi.Okta.Idp.Oidc.Status*"></a>
+  <h4 id="Pulumi_Okta_Idp_Oidc_Status" data-uid="Pulumi.Okta.Idp.Oidc.Status">Status</h4>
+  <div class="markdown level1 summary"><p>Status of the IdP.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; Status { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Oidc.cs/#L191">View Source</a>
+  </span>
+  <a id="Pulumi_Okta_Idp_Oidc_SubjectMatchAttribute_" data-uid="Pulumi.Okta.Idp.Oidc.SubjectMatchAttribute*"></a>
+  <h4 id="Pulumi_Okta_Idp_Oidc_SubjectMatchAttribute" data-uid="Pulumi.Okta.Idp.Oidc.SubjectMatchAttribute">SubjectMatchAttribute</h4>
+  <div class="markdown level1 summary"><p>Okta user profile attribute for matching transformed IdP username. Only for matchType <code>&amp;quot;CUSTOM_ATTRIBUTE&amp;quot;</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SubjectMatchAttribute { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Oidc.cs/#L197">View Source</a>
+  </span>
+  <a id="Pulumi_Okta_Idp_Oidc_SubjectMatchType_" data-uid="Pulumi.Okta.Idp.Oidc.SubjectMatchType*"></a>
+  <h4 id="Pulumi_Okta_Idp_Oidc_SubjectMatchType" data-uid="Pulumi.Okta.Idp.Oidc.SubjectMatchType">SubjectMatchType</h4>
+  <div class="markdown level1 summary"><p>Determines the Okta user profile attribute match conditions for account linking and authentication of the transformed IdP username. By default it is set to <code>&amp;quot;USERNAME&amp;quot;</code>. It can be set to <code>&amp;quot;USERNAME&amp;quot;</code>, <code>&amp;quot;EMAIL&amp;quot;</code>, <code>&amp;quot;USERNAME_OR_EMAIL&amp;quot;</code> or <code>&amp;quot;CUSTOM_ATTRIBUTE&amp;quot;</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SubjectMatchType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Oidc.cs/#L203">View Source</a>
+  </span>
+  <a id="Pulumi_Okta_Idp_Oidc_SuspendedAction_" data-uid="Pulumi.Okta.Idp.Oidc.SuspendedAction*"></a>
+  <h4 id="Pulumi_Okta_Idp_Oidc_SuspendedAction" data-uid="Pulumi.Okta.Idp.Oidc.SuspendedAction">SuspendedAction</h4>
+  <div class="markdown level1 summary"><p>Action for a previously suspended IdP user during authentication. Can be set to <code>&amp;quot;NONE&amp;quot;</code> or <code>&amp;quot;UNSUSPEND&amp;quot;</code></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; SuspendedAction { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Oidc.cs/#L209">View Source</a>
+  </span>
+  <a id="Pulumi_Okta_Idp_Oidc_TokenBinding_" data-uid="Pulumi.Okta.Idp.Oidc.TokenBinding*"></a>
+  <h4 id="Pulumi_Okta_Idp_Oidc_TokenBinding" data-uid="Pulumi.Okta.Idp.Oidc.TokenBinding">TokenBinding</h4>
+  <div class="markdown level1 summary"><p>The method of making a token request. It can be set to <code>&amp;quot;HTTP-POST&amp;quot;</code> or <code>&amp;quot;HTTP-REDIRECT&amp;quot;</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; TokenBinding { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Oidc.cs/#L215">View Source</a>
+  </span>
+  <a id="Pulumi_Okta_Idp_Oidc_TokenUrl_" data-uid="Pulumi.Okta.Idp.Oidc.TokenUrl*"></a>
+  <h4 id="Pulumi_Okta_Idp_Oidc_TokenUrl" data-uid="Pulumi.Okta.Idp.Oidc.TokenUrl">TokenUrl</h4>
+  <div class="markdown level1 summary"><p>IdP Authorization Server (AS) endpoint to exchange the authorization code grant for an access token.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; TokenUrl { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Oidc.cs/#L221">View Source</a>
+  </span>
+  <a id="Pulumi_Okta_Idp_Oidc_Type_" data-uid="Pulumi.Okta.Idp.Oidc.Type*"></a>
+  <h4 id="Pulumi_Okta_Idp_Oidc_Type" data-uid="Pulumi.Okta.Idp.Oidc.Type">Type</h4>
+  <div class="markdown level1 summary"><p>Type of OIDC IdP.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Type { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Oidc.cs/#L224">View Source</a>
+  </span>
+  <a id="Pulumi_Okta_Idp_Oidc_UserInfoBinding_" data-uid="Pulumi.Okta.Idp.Oidc.UserInfoBinding*"></a>
+  <h4 id="Pulumi_Okta_Idp_Oidc_UserInfoBinding" data-uid="Pulumi.Okta.Idp.Oidc.UserInfoBinding">UserInfoBinding</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; UserInfoBinding { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Oidc.cs/#L230">View Source</a>
+  </span>
+  <a id="Pulumi_Okta_Idp_Oidc_UserInfoUrl_" data-uid="Pulumi.Okta.Idp.Oidc.UserInfoUrl*"></a>
+  <h4 id="Pulumi_Okta_Idp_Oidc_UserInfoUrl" data-uid="Pulumi.Okta.Idp.Oidc.UserInfoUrl">UserInfoUrl</h4>
+  <div class="markdown level1 summary"><p>Protected resource endpoint that returns claims about the authenticated user.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; UserInfoUrl { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Oidc.cs/#L236">View Source</a>
+  </span>
+  <a id="Pulumi_Okta_Idp_Oidc_UsernameTemplate_" data-uid="Pulumi.Okta.Idp.Oidc.UsernameTemplate*"></a>
+  <h4 id="Pulumi_Okta_Idp_Oidc_UsernameTemplate" data-uid="Pulumi.Okta.Idp.Oidc.UsernameTemplate">UsernameTemplate</h4>
+  <div class="markdown level1 summary"><p>Okta EL Expression to generate or transform a unique username for the IdP user.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; UsernameTemplate { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Oidc.cs/#L277">View Source</a>
+  </span>
+  <a id="Pulumi_Okta_Idp_Oidc_Get_" data-uid="Pulumi.Okta.Idp.Oidc.Get*"></a>
+  <h4 id="Pulumi_Okta_Idp_Oidc_Get_System_String_Input_System_String__Pulumi_Okta_Idp_OidcState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Okta.Idp.Oidc.Get(System.String,Input{System.String},Pulumi.Okta.Idp.OidcState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, OidcState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Get an existing Oidc resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Oidc Get(string name, Input&lt;string&gt; id, OidcState state = null, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Okta.Idp.OidcState.html">OidcState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Okta.Idp.Oidc.html">Oidc</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-okta/blob/master/sdk/dotnet/Idp/Oidc.cs/#L18" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

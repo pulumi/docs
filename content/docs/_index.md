@@ -37,7 +37,7 @@ Pulumi is an <a href="https://github.com/pulumi/pulumi" target="_blank">open sou
 </div>
 
 <div class="my-4 md:flex py-8">
-    <div class="w-1/3">
+    <div class="md:w-1/3">
         <h3 class="no-anchor">Why Pulumi?</h3>
         <p class="text-sm text-gray-600">
             By using <a href="{{< relref "/docs/intro/languages" >}}">real languages</a>
@@ -46,7 +46,7 @@ Pulumi is an <a href="https://github.com/pulumi/pulumi" target="_blank">open sou
             with far less copy and paste, and it works the same way no matter which cloud you're targeting.
         </p>
     </div>
-    <div class="md:mx-8 w-1/3">
+    <div class="md:mx-8 md:w-1/3">
         <h3 class="no-anchor">Alternatives</h3>
         <p class="text-sm text-gray-600">
             <a href="{{< relref "/docs/intro/vs" >}}">Other approaches</a> use YAML,
@@ -56,7 +56,7 @@ Pulumi is an <a href="https://github.com/pulumi/pulumi" target="_blank">open sou
             ecosystems, and are often different for every cloud that you need to target.
         </p>
     </div>
-    <div class="w-1/3">
+    <div class="md:w-1/3">
         <h3 class="no-anchor">Community</h3>
         <p class="text-sm text-gray-600">
             Pulumi is <a href="https://github.com/pulumi/pulumi" target="_blank">open source</a>,

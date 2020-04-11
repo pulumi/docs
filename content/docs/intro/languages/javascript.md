@@ -12,7 +12,7 @@ aliases: ["/docs/reference/javascript/"]
 
 <img src="/logos/tech/logo-nodejs.png" align="right" width="150" style="padding:8px; margin-top: -64px">
 
-Pulumi supports JavaScript programs running on Node.js version 8 and later.
+Pulumi supports JavaScript programs running on Node.js using any of the [Current, Active and Maintenance LTS versions](https://nodejs.org/en/about/releases/).
 
 Because programs are just JavaScript, you may elect to write them in any manner you'd normally write Node.js programs.
 That includes TypeScript, CoffeeScript, or Babel, in addition to your favorite tools such as build systems, linters, or
@@ -56,7 +56,7 @@ is what tells Node.js and NPM what packages you depend on, where to find your co
     "name": "my-package",
     "version": "1.0.0",
     "devDependencies": {
-        "@types/node": "^8.0.26"
+        "@types/node": "^10.0.0"
     },
     "dependencies": {
         ... as before ...
@@ -125,8 +125,3 @@ runtime:
   options:
     typescript: false
 ```
-
-<!-- LINKS -->
-[`pulumi.Config`]: {{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi#Config" >}}
-[Using configuration values in JavaScript]: {{< relref "config#javascript" >}}
-<!-- END LINKS -->

@@ -335,11 +335,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 <p>The <strong>input_mapping_fields</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">dataVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the default data version of the EventGrid Event to associate with the domain. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dataVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the data version of the EventGrid Event to associate with the domain. Changing this forces a new resource to be created.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">eventTime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the event time of the EventGrid Event to associate with the domain. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">eventType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the default event type of the EventGrid Event to associate with the domain. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">eventType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the event type of the EventGrid Event to associate with the domain. Changing this forces a new resource to be created.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the id of the EventGrid Event to associate with the domain. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subject</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the default subject of the EventGrid Event to associate with the domain. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subject</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the subject of the EventGrid Event to associate with the domain. Changing this forces a new resource to be created.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">topic</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the topic of the EventGrid Event to associate with the domain. Changing this forces a new resource to be created.</p></li>
 </ul>
 <dl class="attribute">
@@ -364,11 +364,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">input_mapping_fields</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.eventhub.Domain.input_mapping_fields" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">input_mapping_fields</span></code> block as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">dataVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the default data version of the EventGrid Event to associate with the domain. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dataVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the data version of the EventGrid Event to associate with the domain. Changing this forces a new resource to be created.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">eventTime</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the event time of the EventGrid Event to associate with the domain. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">eventType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the default event type of the EventGrid Event to associate with the domain. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">eventType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the event type of the EventGrid Event to associate with the domain. Changing this forces a new resource to be created.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the id of the EventGrid Event to associate with the domain. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subject</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the default subject of the EventGrid Event to associate with the domain. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subject</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the subject of the EventGrid Event to associate with the domain. Changing this forces a new resource to be created.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">topic</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the topic of the EventGrid Event to associate with the domain. Changing this forces a new resource to be created.</p></li>
 </ul>
 </dd></dl>
@@ -447,11 +447,11 @@ properties used to qualify the lookup.</p>
 </ul>
 <p>The <strong>input_mapping_fields</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">dataVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the default data version of the EventGrid Event to associate with the domain. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dataVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the data version of the EventGrid Event to associate with the domain. Changing this forces a new resource to be created.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">eventTime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the event time of the EventGrid Event to associate with the domain. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">eventType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the default event type of the EventGrid Event to associate with the domain. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">eventType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the event type of the EventGrid Event to associate with the domain. Changing this forces a new resource to be created.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the id of the EventGrid Event to associate with the domain. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subject</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the default subject of the EventGrid Event to associate with the domain. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subject</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the subject of the EventGrid Event to associate with the domain. Changing this forces a new resource to be created.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">topic</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the topic of the EventGrid Event to associate with the domain. Changing this forces a new resource to be created.</p></li>
 </ul>
 </dd></dl>
@@ -640,38 +640,38 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <p>The <strong>capture_description</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">destination</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">destination</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">destination</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">archiveNameFormat</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">blobContainerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the EventHub Namespace resource. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">archiveNameFormat</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Blob naming convention for archiving. e.g. <code class="docutils literal notranslate"><span class="pre">{Namespace}/{EventHub}/{PartitionId}/{Year}/{Month}/{Day}/{Hour}/{Minute}/{Second}</span></code>. Here all the parameters (Namespace,EventHub .. etc) are mandatory irrespective of order</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">blobContainerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Container within the Blob Storage Account where messages should be archived.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of the Destination where the capture should take place. At this time the only supported value is <code class="docutils literal notranslate"><span class="pre">EventHubArchive.AzureBlockBlob</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Blob Storage Account where messages should be archived.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">encoding</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">interval_in_seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sizeLimitInBytes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">skipEmptyArchives</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specifies if the Capture Description is Enabled.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">encoding</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the Encoding used for the Capture Description. Possible values are <code class="docutils literal notranslate"><span class="pre">Avro</span></code> and <code class="docutils literal notranslate"><span class="pre">AvroDeflate</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">interval_in_seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the time interval in seconds at which the capture will happen. Values can be between <code class="docutils literal notranslate"><span class="pre">60</span></code> and <code class="docutils literal notranslate"><span class="pre">900</span></code> seconds. Defaults to <code class="docutils literal notranslate"><span class="pre">300</span></code> seconds.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sizeLimitInBytes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the amount of data built up in your EventHub before a Capture Operation occurs. Value should be between <code class="docutils literal notranslate"><span class="pre">10485760</span></code> and <code class="docutils literal notranslate"><span class="pre">524288000</span></code>  bytes. Defaults to <code class="docutils literal notranslate"><span class="pre">314572800</span></code> bytes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">skipEmptyArchives</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specifies if empty files should not be emitted if no events occur during the Capture time window.  Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_azure.eventhub.EventHub.capture_description">
 <code class="sig-name descname">capture_description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.eventhub.EventHub.capture_description" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">capture_description</span></code> block as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">destination</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">destination</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A <code class="docutils literal notranslate"><span class="pre">destination</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">archiveNameFormat</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">blobContainerName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the name of the EventHub Namespace resource. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">archiveNameFormat</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Blob naming convention for archiving. e.g. <code class="docutils literal notranslate"><span class="pre">{Namespace}/{EventHub}/{PartitionId}/{Year}/{Month}/{Day}/{Hour}/{Minute}/{Second}</span></code>. Here all the parameters (Namespace,EventHub .. etc) are mandatory irrespective of order</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">blobContainerName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the Container within the Blob Storage Account where messages should be archived.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Name of the Destination where the capture should take place. At this time the only supported value is <code class="docutils literal notranslate"><span class="pre">EventHubArchive.AzureBlockBlob</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the Blob Storage Account where messages should be archived.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">encoding</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">interval_in_seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sizeLimitInBytes</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">skipEmptyArchives</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Specifies if the Capture Description is Enabled.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">encoding</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the Encoding used for the Capture Description. Possible values are <code class="docutils literal notranslate"><span class="pre">Avro</span></code> and <code class="docutils literal notranslate"><span class="pre">AvroDeflate</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">interval_in_seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Specifies the time interval in seconds at which the capture will happen. Values can be between <code class="docutils literal notranslate"><span class="pre">60</span></code> and <code class="docutils literal notranslate"><span class="pre">900</span></code> seconds. Defaults to <code class="docutils literal notranslate"><span class="pre">300</span></code> seconds.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sizeLimitInBytes</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Specifies the amount of data built up in your EventHub before a Capture Operation occurs. Value should be between <code class="docutils literal notranslate"><span class="pre">10485760</span></code> and <code class="docutils literal notranslate"><span class="pre">524288000</span></code>  bytes. Defaults to <code class="docutils literal notranslate"><span class="pre">314572800</span></code> bytes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">skipEmptyArchives</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Specifies if empty files should not be emitted if no events occur during the Capture time window.  Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -734,19 +734,19 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>capture_description</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">destination</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">destination</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">destination</span></code> block as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">archiveNameFormat</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">blobContainerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the EventHub Namespace resource. Changing this forces a new resource to be created.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">archiveNameFormat</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Blob naming convention for archiving. e.g. <code class="docutils literal notranslate"><span class="pre">{Namespace}/{EventHub}/{PartitionId}/{Year}/{Month}/{Day}/{Hour}/{Minute}/{Second}</span></code>. Here all the parameters (Namespace,EventHub .. etc) are mandatory irrespective of order</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">blobContainerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Container within the Blob Storage Account where messages should be archived.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Name of the Destination where the capture should take place. At this time the only supported value is <code class="docutils literal notranslate"><span class="pre">EventHubArchive.AzureBlockBlob</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Blob Storage Account where messages should be archived.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">encoding</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">interval_in_seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">sizeLimitInBytes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">skipEmptyArchives</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specifies if the Capture Description is Enabled.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">encoding</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the Encoding used for the Capture Description. Possible values are <code class="docutils literal notranslate"><span class="pre">Avro</span></code> and <code class="docutils literal notranslate"><span class="pre">AvroDeflate</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">interval_in_seconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the time interval in seconds at which the capture will happen. Values can be between <code class="docutils literal notranslate"><span class="pre">60</span></code> and <code class="docutils literal notranslate"><span class="pre">900</span></code> seconds. Defaults to <code class="docutils literal notranslate"><span class="pre">300</span></code> seconds.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sizeLimitInBytes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the amount of data built up in your EventHub before a Capture Operation occurs. Value should be between <code class="docutils literal notranslate"><span class="pre">10485760</span></code> and <code class="docutils literal notranslate"><span class="pre">524288000</span></code>  bytes. Defaults to <code class="docutils literal notranslate"><span class="pre">314572800</span></code> bytes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">skipEmptyArchives</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specifies if empty files should not be emitted if no events occur during the Capture time window.  Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
 </dd></dl>
 
@@ -1076,17 +1076,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <p>The <strong>network_rulesets</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">default_action</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ip_rules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">default_action</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The default action to take when a rule is not matched. Possible values are <code class="docutils literal notranslate"><span class="pre">Allow</span></code> and <code class="docutils literal notranslate"><span class="pre">Deny</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ip_rules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">ip_rule</span></code> blocks as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">action</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ipMask</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">action</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The action to take when the rule is  matched. Possible values are <code class="docutils literal notranslate"><span class="pre">Allow</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipMask</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ip mask to match on.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">virtual_network_rules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtual_network_rules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">virtual_network_rule</span></code> blocks as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">ignoreMissingVirtualNetworkServiceEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ignoreMissingVirtualNetworkServiceEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Are missing virtual network service endpoints ignored? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The id of the subnet to match on.</p></li>
 </ul>
 </li>
 </ul>
@@ -1151,17 +1151,17 @@ authorization rule <code class="docutils literal notranslate"><span class="pre">
 <code class="sig-name descname">network_rulesets</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.eventhub.EventHubNamespace.network_rulesets" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">network_rulesets</span></code> block as defined below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">default_action</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ip_rules</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">default_action</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The default action to take when a rule is not matched. Possible values are <code class="docutils literal notranslate"><span class="pre">Allow</span></code> and <code class="docutils literal notranslate"><span class="pre">Deny</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ip_rules</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">ip_rule</span></code> blocks as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">action</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ipMask</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">action</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The action to take when the rule is  matched. Possible values are <code class="docutils literal notranslate"><span class="pre">Allow</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipMask</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ip mask to match on.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">virtual_network_rules</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtual_network_rules</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">virtual_network_rule</span></code> blocks as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">ignoreMissingVirtualNetworkServiceEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ignoreMissingVirtualNetworkServiceEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Are missing virtual network service endpoints ignored? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The id of the subnet to match on.</p></li>
 </ul>
 </li>
 </ul>
@@ -1216,17 +1216,17 @@ authorization rule <code class="docutils literal notranslate"><span class="pre">
 </dl>
 <p>The <strong>network_rulesets</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">default_action</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ip_rules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">default_action</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The default action to take when a rule is not matched. Possible values are <code class="docutils literal notranslate"><span class="pre">Allow</span></code> and <code class="docutils literal notranslate"><span class="pre">Deny</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ip_rules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">ip_rule</span></code> blocks as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">action</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ipMask</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">action</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The action to take when the rule is  matched. Possible values are <code class="docutils literal notranslate"><span class="pre">Allow</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipMask</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ip mask to match on.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">virtual_network_rules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtual_network_rules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - One or more <code class="docutils literal notranslate"><span class="pre">virtual_network_rule</span></code> blocks as defined below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">ignoreMissingVirtualNetworkServiceEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ignoreMissingVirtualNetworkServiceEndpoint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Are missing virtual network service endpoints ignored? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subnet_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The id of the subnet to match on.</p></li>
 </ul>
 </li>
 </ul>
@@ -1464,7 +1464,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>The <strong>storage_queue_endpoint</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">queue_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the storage queue where the Event Subscriptio will receive events.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the id of the storage account id where the storage blob is located.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the id of the storage account id where the storage queue is located.</p></li>
 </ul>
 <p>The <strong>subject_filter</strong> object supports the following:</p>
 <ul class="simple">
@@ -1550,7 +1550,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">storage_queue_endpoint</span></code> block as defined below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">queue_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the name of the storage queue where the Event Subscriptio will receive events.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the id of the storage account id where the storage blob is located.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the id of the storage account id where the storage queue is located.</p></li>
 </ul>
 </dd></dl>
 
@@ -1628,7 +1628,7 @@ properties used to qualify the lookup.</p>
 <p>The <strong>storage_queue_endpoint</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">queue_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the storage queue where the Event Subscriptio will receive events.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the id of the storage account id where the storage blob is located.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_account_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the id of the storage account id where the storage queue is located.</p></li>
 </ul>
 <p>The <strong>subject_filter</strong> object supports the following:</p>
 <ul class="simple">
@@ -2831,65 +2831,46 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>auto_delete_on_idle</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The idle interval after which the
-Subscription is automatically deleted, minimum of 5 minutes. Provided in the
-TimeSpan format.</p></li>
-<li><p><strong>dead_lettering_on_message_expiration</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean flag which controls
-whether the Subscription has dead letter support when a message expires. Defaults
-to false.</p></li>
-<li><p><strong>default_message_ttl</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The TTL of messages sent to this Subscription
-if no TTL value is set on the message itself. Provided in the TimeSpan
-format.</p></li>
-<li><p><strong>enable_batched_operations</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean flag which controls whether the
-Subscription supports batched operations. Defaults to false.</p></li>
+<li><p><strong>auto_delete_on_idle</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The idle interval after which the topic is automatically deleted as an <a class="reference external" href="https://en.wikipedia.org/wiki/ISO_8601#Durations">ISO 8601 duration</a>. The minimum duration is <code class="docutils literal notranslate"><span class="pre">5</span></code> minutes or <code class="docutils literal notranslate"><span class="pre">P5M</span></code>.</p></li>
+<li><p><strong>dead_lettering_on_message_expiration</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean flag which controls whether the Subscription has dead letter support when a message expires. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>default_message_ttl</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The Default message timespan to live as an <a class="reference external" href="https://en.wikipedia.org/wiki/ISO_8601#Durations">ISO 8601 duration</a>. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.</p>
+</p></li>
+<li><p><strong>enable_batched_operations</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean flag which controls whether the Subscription supports batched operations. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>forward_dead_lettered_messages_to</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of a Queue or Topic to automatically forward Dead Letter messages to.</p></li>
 <li><p><strong>forward_to</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of a Queue or Topic to automatically forward messages to.</p></li>
-<li><p><strong>lock_duration</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The lock duration for the subscription, maximum
-supported value is 5 minutes. Defaults to 1 minute.</p></li>
+<li><p><strong>lock_duration</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The lock duration for the subscription as an <a class="reference external" href="https://en.wikipedia.org/wiki/ISO_8601#Durations">ISO 8601 duration</a>. The default value is <code class="docutils literal notranslate"><span class="pre">1</span></code> minute or <code class="docutils literal notranslate"><span class="pre">P1M</span></code>.</p>
+</p></li>
 <li><p><strong>max_delivery_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum number of deliveries.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the ServiceBus Subscription resource.
-Changing this forces a new resource to be created.</p></li>
-<li><p><strong>namespace_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the ServiceBus Namespace to create
-this Subscription in. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>requires_session</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean flag which controls whether this Subscription
-supports the concept of a session. Defaults to false. Changing this forces a
-new resource to be created.</p></li>
-<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to
-create the namespace. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>topic_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the ServiceBus Topic to create
-this Subscription in. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the ServiceBus Subscription resource. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>namespace_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the ServiceBus Namespace to create this Subscription in. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>requires_session</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean flag which controls whether this Subscription supports the concept of a session. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the namespace. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>topic_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the ServiceBus Topic to create this Subscription in. Changing this forces a new resource to be created.</p></li>
 </ul>
 </dd>
 </dl>
 <dl class="attribute">
 <dt id="pulumi_azure.eventhub.Subscription.auto_delete_on_idle">
 <code class="sig-name descname">auto_delete_on_idle</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.eventhub.Subscription.auto_delete_on_idle" title="Permalink to this definition">¶</a></dt>
-<dd><p>The idle interval after which the
-Subscription is automatically deleted, minimum of 5 minutes. Provided in the
-TimeSpan format.</p>
+<dd><p>The idle interval after which the topic is automatically deleted as an <a class="reference external" href="https://en.wikipedia.org/wiki/ISO_8601#Durations">ISO 8601 duration</a>. The minimum duration is <code class="docutils literal notranslate"><span class="pre">5</span></code> minutes or <code class="docutils literal notranslate"><span class="pre">P5M</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_azure.eventhub.Subscription.dead_lettering_on_message_expiration">
 <code class="sig-name descname">dead_lettering_on_message_expiration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.eventhub.Subscription.dead_lettering_on_message_expiration" title="Permalink to this definition">¶</a></dt>
-<dd><p>Boolean flag which controls
-whether the Subscription has dead letter support when a message expires. Defaults
-to false.</p>
+<dd><p>Boolean flag which controls whether the Subscription has dead letter support when a message expires. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_azure.eventhub.Subscription.default_message_ttl">
 <code class="sig-name descname">default_message_ttl</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.eventhub.Subscription.default_message_ttl" title="Permalink to this definition">¶</a></dt>
-<dd><p>The TTL of messages sent to this Subscription
-if no TTL value is set on the message itself. Provided in the TimeSpan
-format.</p>
+<dd><p>The Default message timespan to live as an <a class="reference external" href="https://en.wikipedia.org/wiki/ISO_8601#Durations">ISO 8601 duration</a>. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_azure.eventhub.Subscription.enable_batched_operations">
 <code class="sig-name descname">enable_batched_operations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.eventhub.Subscription.enable_batched_operations" title="Permalink to this definition">¶</a></dt>
-<dd><p>Boolean flag which controls whether the
-Subscription supports batched operations. Defaults to false.</p>
+<dd><p>Boolean flag which controls whether the Subscription supports batched operations. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2907,8 +2888,7 @@ Subscription supports batched operations. Defaults to false.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.eventhub.Subscription.lock_duration">
 <code class="sig-name descname">lock_duration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.eventhub.Subscription.lock_duration" title="Permalink to this definition">¶</a></dt>
-<dd><p>The lock duration for the subscription, maximum
-supported value is 5 minutes. Defaults to 1 minute.</p>
+<dd><p>The lock duration for the subscription as an <a class="reference external" href="https://en.wikipedia.org/wiki/ISO_8601#Durations">ISO 8601 duration</a>. The default value is <code class="docutils literal notranslate"><span class="pre">1</span></code> minute or <code class="docutils literal notranslate"><span class="pre">P1M</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2920,37 +2900,31 @@ supported value is 5 minutes. Defaults to 1 minute.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.eventhub.Subscription.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.eventhub.Subscription.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies the name of the ServiceBus Subscription resource.
-Changing this forces a new resource to be created.</p>
+<dd><p>Specifies the name of the ServiceBus Subscription resource. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_azure.eventhub.Subscription.namespace_name">
 <code class="sig-name descname">namespace_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.eventhub.Subscription.namespace_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the ServiceBus Namespace to create
-this Subscription in. Changing this forces a new resource to be created.</p>
+<dd><p>The name of the ServiceBus Namespace to create this Subscription in. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_azure.eventhub.Subscription.requires_session">
 <code class="sig-name descname">requires_session</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.eventhub.Subscription.requires_session" title="Permalink to this definition">¶</a></dt>
-<dd><p>Boolean flag which controls whether this Subscription
-supports the concept of a session. Defaults to false. Changing this forces a
-new resource to be created.</p>
+<dd><p>Boolean flag which controls whether this Subscription supports the concept of a session. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_azure.eventhub.Subscription.resource_group_name">
 <code class="sig-name descname">resource_group_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.eventhub.Subscription.resource_group_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the resource group in which to
-create the namespace. Changing this forces a new resource to be created.</p>
+<dd><p>The name of the resource group in which to create the namespace. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_azure.eventhub.Subscription.topic_name">
 <code class="sig-name descname">topic_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.eventhub.Subscription.topic_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the ServiceBus Topic to create
-this Subscription in. Changing this forces a new resource to be created.</p>
+<dd><p>The name of the ServiceBus Topic to create this Subscription in. Changing this forces a new resource to be created.</p>
 </dd></dl>
 
 <dl class="method">
@@ -2964,33 +2938,22 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>auto_delete_on_idle</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The idle interval after which the
-Subscription is automatically deleted, minimum of 5 minutes. Provided in the
-TimeSpan format.</p></li>
-<li><p><strong>dead_lettering_on_message_expiration</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean flag which controls
-whether the Subscription has dead letter support when a message expires. Defaults
-to false.</p></li>
-<li><p><strong>default_message_ttl</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The TTL of messages sent to this Subscription
-if no TTL value is set on the message itself. Provided in the TimeSpan
-format.</p></li>
-<li><p><strong>enable_batched_operations</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean flag which controls whether the
-Subscription supports batched operations. Defaults to false.</p></li>
+<li><p><strong>auto_delete_on_idle</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The idle interval after which the topic is automatically deleted as an <a class="reference external" href="https://en.wikipedia.org/wiki/ISO_8601#Durations">ISO 8601 duration</a>. The minimum duration is <code class="docutils literal notranslate"><span class="pre">5</span></code> minutes or <code class="docutils literal notranslate"><span class="pre">P5M</span></code>.</p>
+</p></li>
+<li><p><strong>dead_lettering_on_message_expiration</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean flag which controls whether the Subscription has dead letter support when a message expires. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>default_message_ttl</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The Default message timespan to live as an <a class="reference external" href="https://en.wikipedia.org/wiki/ISO_8601#Durations">ISO 8601 duration</a>. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.</p>
+</p></li>
+<li><p><strong>enable_batched_operations</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean flag which controls whether the Subscription supports batched operations. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>forward_dead_lettered_messages_to</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of a Queue or Topic to automatically forward Dead Letter messages to.</p></li>
 <li><p><strong>forward_to</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of a Queue or Topic to automatically forward messages to.</p></li>
-<li><p><strong>lock_duration</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The lock duration for the subscription, maximum
-supported value is 5 minutes. Defaults to 1 minute.</p></li>
+<li><p><strong>lock_duration</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The lock duration for the subscription as an <a class="reference external" href="https://en.wikipedia.org/wiki/ISO_8601#Durations">ISO 8601 duration</a>. The default value is <code class="docutils literal notranslate"><span class="pre">1</span></code> minute or <code class="docutils literal notranslate"><span class="pre">P1M</span></code>.</p>
+</p></li>
 <li><p><strong>max_delivery_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The maximum number of deliveries.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the ServiceBus Subscription resource.
-Changing this forces a new resource to be created.</p></li>
-<li><p><strong>namespace_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the ServiceBus Namespace to create
-this Subscription in. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>requires_session</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean flag which controls whether this Subscription
-supports the concept of a session. Defaults to false. Changing this forces a
-new resource to be created.</p></li>
-<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to
-create the namespace. Changing this forces a new resource to be created.</p></li>
-<li><p><strong>topic_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the ServiceBus Topic to create
-this Subscription in. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the ServiceBus Subscription resource. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>namespace_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the ServiceBus Namespace to create this Subscription in. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>requires_session</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean flag which controls whether this Subscription supports the concept of a session. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the namespace. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>topic_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the ServiceBus Topic to create this Subscription in. Changing this forces a new resource to be created.</p></li>
 </ul>
 </dd>
 </dl>
@@ -3667,6 +3630,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> (<em>str</em>) – The name of the EventHub Authorization Rule resource.</p></li>
+<li><p><strong>namespace_name</strong> (<em>str</em>) – The name of the EventHub Namespace.</p></li>
 <li><p><strong>resource_group_name</strong> (<em>str</em>) – The name of the resource group in which the EventHub Namespace exists.</p></li>
 </ul>
 </dd>

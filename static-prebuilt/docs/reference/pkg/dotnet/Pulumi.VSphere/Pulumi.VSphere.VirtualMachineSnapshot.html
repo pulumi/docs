@@ -1,0 +1,451 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class VirtualMachineSnapshot
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class VirtualMachineSnapshot
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.VSphere.VirtualMachineSnapshot">
+  
+  <h1 id="Pulumi_VSphere_VirtualMachineSnapshot" data-uid="Pulumi.VSphere.VirtualMachineSnapshot" class="text-break">Class VirtualMachineSnapshot
+  </h1>
+  <div class="markdown level0 summary"><p>The <code>vsphere..VirtualMachineSnapshot</code> resource can be used to manage snapshots
+for a virtual machine.</p>
+<p>For more information on managing snapshots and how they work in VMware, see
+<a href="https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.vm_admin.doc/GUID-CA948C69-7F58-4519-AEB1-739545EA94E5.html">here</a>.</p>
+<blockquote>
+<p><strong>NOTE:</strong> A snapshot in VMware differs from traditional disk snapshots, and
+can contain the actual running state of the virtual machine, data for all disks
+that have not been set to be independent from the snapshot (including ones that
+have been attached via the <a href="/docs/providers/vsphere/r/virtual_machine.html#attach">attach</a>
+parameter to the <code>vsphere..VirtualMachine</code> <code>disk</code> block), and even the
+configuration of the virtual machine at the time of the snapshot. Virtual
+machine, disk activity, and configuration changes post-snapshot are not
+included in the original state. Use this resource with care! Neither VMware nor
+HashiCorp recommends retaining snapshots for a extended period of time and does
+NOT recommend using them as as backup feature. For more information on the
+limitation of virtual machine snapshots, see <a href="https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.vm_admin.doc/GUID-53F65726-A23B-4CF0-A7D5-48E584B88613.html">here</a>.</p>
+</blockquote>
+<blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/virtual_machine_snapshot.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/virtual_machine_snapshot.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">VirtualMachineSnapshot</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.VSphere.html">Pulumi.VSphere</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.VSphere.dll</h6>
+  <h5 id="Pulumi_VSphere_VirtualMachineSnapshot_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class VirtualMachineSnapshot : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachineSnapshot.cs/#L95">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachineSnapshot__ctor_" data-uid="Pulumi.VSphere.VirtualMachineSnapshot.#ctor*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachineSnapshot__ctor_System_String_Pulumi_VSphere_VirtualMachineSnapshotArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.VSphere.VirtualMachineSnapshot.#ctor(System.String,Pulumi.VSphere.VirtualMachineSnapshotArgs,System.Nullable{CustomResourceOptions})">VirtualMachineSnapshot(String, VirtualMachineSnapshotArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Create a VirtualMachineSnapshot resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public VirtualMachineSnapshot(string name, VirtualMachineSnapshotArgs args, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.VSphere.VirtualMachineSnapshotArgs.html">VirtualMachineSnapshotArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachineSnapshot.cs/#L44">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachineSnapshot_Consolidate_" data-uid="Pulumi.VSphere.VirtualMachineSnapshot.Consolidate*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachineSnapshot_Consolidate" data-uid="Pulumi.VSphere.VirtualMachineSnapshot.Consolidate">Consolidate</h4>
+  <div class="markdown level1 summary"><p>If set to <code>true</code>, the delta disks involved in this
+snapshot will be consolidated into the parent when this resource is
+destroyed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; Consolidate { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachineSnapshot.cs/#L50">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachineSnapshot_Description_" data-uid="Pulumi.VSphere.VirtualMachineSnapshot.Description*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachineSnapshot_Description" data-uid="Pulumi.VSphere.VirtualMachineSnapshot.Description">Description</h4>
+  <div class="markdown level1 summary"><p>A description for the snapshot.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachineSnapshot.cs/#L57">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachineSnapshot_Memory_" data-uid="Pulumi.VSphere.VirtualMachineSnapshot.Memory*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachineSnapshot_Memory" data-uid="Pulumi.VSphere.VirtualMachineSnapshot.Memory">Memory</h4>
+  <div class="markdown level1 summary"><p>If set to <code>true</code>, a dump of the internal state of the
+virtual machine is included in the snapshot.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool&gt; Memory { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachineSnapshot.cs/#L65">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachineSnapshot_Quiesce_" data-uid="Pulumi.VSphere.VirtualMachineSnapshot.Quiesce*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachineSnapshot_Quiesce" data-uid="Pulumi.VSphere.VirtualMachineSnapshot.Quiesce">Quiesce</h4>
+  <div class="markdown level1 summary"><p>If set to <code>true</code>, and the virtual machine is powered
+on when the snapshot is taken, VMware Tools is used to quiesce the file
+system in the virtual machine.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool&gt; Quiesce { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachineSnapshot.cs/#L72">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachineSnapshot_RemoveChildren_" data-uid="Pulumi.VSphere.VirtualMachineSnapshot.RemoveChildren*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachineSnapshot_RemoveChildren" data-uid="Pulumi.VSphere.VirtualMachineSnapshot.RemoveChildren">RemoveChildren</h4>
+  <div class="markdown level1 summary"><p>If set to <code>true</code>, the entire snapshot subtree
+is removed when this resource is destroyed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; RemoveChildren { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachineSnapshot.cs/#L78">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachineSnapshot_SnapshotName_" data-uid="Pulumi.VSphere.VirtualMachineSnapshot.SnapshotName*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachineSnapshot_SnapshotName" data-uid="Pulumi.VSphere.VirtualMachineSnapshot.SnapshotName">SnapshotName</h4>
+  <div class="markdown level1 summary"><p>The name of the snapshot.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; SnapshotName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachineSnapshot.cs/#L84">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachineSnapshot_VirtualMachineUuid_" data-uid="Pulumi.VSphere.VirtualMachineSnapshot.VirtualMachineUuid*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachineSnapshot_VirtualMachineUuid" data-uid="Pulumi.VSphere.VirtualMachineSnapshot.VirtualMachineUuid">VirtualMachineUuid</h4>
+  <div class="markdown level1 summary"><p>The virtual machine UUID.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; VirtualMachineUuid { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachineSnapshot.cs/#L125">View Source</a>
+  </span>
+  <a id="Pulumi_VSphere_VirtualMachineSnapshot_Get_" data-uid="Pulumi.VSphere.VirtualMachineSnapshot.Get*"></a>
+  <h4 id="Pulumi_VSphere_VirtualMachineSnapshot_Get_System_String_Input_System_String__Pulumi_VSphere_VirtualMachineSnapshotState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.VSphere.VirtualMachineSnapshot.Get(System.String,Input{System.String},Pulumi.VSphere.VirtualMachineSnapshotState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, VirtualMachineSnapshotState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Get an existing VirtualMachineSnapshot resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static VirtualMachineSnapshot Get(string name, Input&lt;string&gt; id, VirtualMachineSnapshotState state = null, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.VSphere.VirtualMachineSnapshotState.html">VirtualMachineSnapshotState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.VSphere.VirtualMachineSnapshot.html">VirtualMachineSnapshot</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-vsphere/blob/master/sdk/dotnet/VirtualMachineSnapshot.cs/#L37" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,591 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class StackScript
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class StackScript
+   ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/docs/reference/pkg/dotnet/" style="margin-top: 5px">
+                <img id="logo" class="svg" src="../logo.svg" alt="" style="height:40px">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Pulumi.Linode.StackScript">
+  
+  <h1 id="Pulumi_Linode_StackScript" data-uid="Pulumi.Linode.StackScript" class="text-break">Class StackScript
+  </h1>
+  <div class="markdown level0 summary"><blockquote>
+<p>This content is derived from <a href="https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/stackscript.html.markdown">https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/stackscript.html.markdown</a>.</p>
+</blockquote>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">StackScript</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Pulumi.Linode.html">Pulumi.Linode</a></h6>
+  <h6><strong>Assembly</strong>: Pulumi.Linode.dll</h6>
+  <h5 id="Pulumi_Linode_StackScript_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class StackScript : CustomResource</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/StackScript.cs/#L103">View Source</a>
+  </span>
+  <a id="Pulumi_Linode_StackScript__ctor_" data-uid="Pulumi.Linode.StackScript.#ctor*"></a>
+  <h4 id="Pulumi_Linode_StackScript__ctor_System_String_Pulumi_Linode_StackScriptArgs_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Linode.StackScript.#ctor(System.String,Pulumi.Linode.StackScriptArgs,System.Nullable{CustomResourceOptions})">StackScript(String, StackScriptArgs, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Create a StackScript resource with the given unique name, arguments, and options.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StackScript(string name, StackScriptArgs args, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resource</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Linode.StackScriptArgs.html">StackScriptArgs</a></td>
+        <td><span class="parametername">args</span></td>
+        <td><p>The arguments used to populate this resource's properties</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/StackScript.cs/#L19">View Source</a>
+  </span>
+  <a id="Pulumi_Linode_StackScript_Created_" data-uid="Pulumi.Linode.StackScript.Created*"></a>
+  <h4 id="Pulumi_Linode_StackScript_Created" data-uid="Pulumi.Linode.StackScript.Created">Created</h4>
+  <div class="markdown level1 summary"><p>The date this StackScript was created.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Created { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/StackScript.cs/#L25">View Source</a>
+  </span>
+  <a id="Pulumi_Linode_StackScript_DeploymentsActive_" data-uid="Pulumi.Linode.StackScript.DeploymentsActive*"></a>
+  <h4 id="Pulumi_Linode_StackScript_DeploymentsActive" data-uid="Pulumi.Linode.StackScript.DeploymentsActive">DeploymentsActive</h4>
+  <div class="markdown level1 summary"><p>Count of currently active, deployed Linodes created from this StackScript.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int&gt; DeploymentsActive { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/StackScript.cs/#L31">View Source</a>
+  </span>
+  <a id="Pulumi_Linode_StackScript_DeploymentsTotal_" data-uid="Pulumi.Linode.StackScript.DeploymentsTotal*"></a>
+  <h4 id="Pulumi_Linode_StackScript_DeploymentsTotal" data-uid="Pulumi.Linode.StackScript.DeploymentsTotal">DeploymentsTotal</h4>
+  <div class="markdown level1 summary"><p>The total number of times this StackScript has been deployed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;int&gt; DeploymentsTotal { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/StackScript.cs/#L37">View Source</a>
+  </span>
+  <a id="Pulumi_Linode_StackScript_Description_" data-uid="Pulumi.Linode.StackScript.Description*"></a>
+  <h4 id="Pulumi_Linode_StackScript_Description" data-uid="Pulumi.Linode.StackScript.Description">Description</h4>
+  <div class="markdown level1 summary"><p>A description for the StackScript.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Description { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/StackScript.cs/#L43">View Source</a>
+  </span>
+  <a id="Pulumi_Linode_StackScript_Images_" data-uid="Pulumi.Linode.StackScript.Images*"></a>
+  <h4 id="Pulumi_Linode_StackScript_Images" data-uid="Pulumi.Linode.StackScript.Images">Images</h4>
+  <div class="markdown level1 summary"><p>An array of Image IDs representing the Images that this StackScript is compatible for deploying with.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;string&gt;&gt; Images { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/StackScript.cs/#L49">View Source</a>
+  </span>
+  <a id="Pulumi_Linode_StackScript_IsPublic_" data-uid="Pulumi.Linode.StackScript.IsPublic*"></a>
+  <h4 id="Pulumi_Linode_StackScript_IsPublic" data-uid="Pulumi.Linode.StackScript.IsPublic">IsPublic</h4>
+  <div class="markdown level1 summary"><p>This determines whether other users can use your StackScript. Once a StackScript is made public, it cannot be made private. <em>Changing <code>is_public</code> forces the creation of a new StackScript</em></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;bool?&gt; IsPublic { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Boolean</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/StackScript.cs/#L55">View Source</a>
+  </span>
+  <a id="Pulumi_Linode_StackScript_Label_" data-uid="Pulumi.Linode.StackScript.Label*"></a>
+  <h4 id="Pulumi_Linode_StackScript_Label" data-uid="Pulumi.Linode.StackScript.Label">Label</h4>
+  <div class="markdown level1 summary"><p>The StackScript's label is for display purposes only.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Label { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/StackScript.cs/#L61">View Source</a>
+  </span>
+  <a id="Pulumi_Linode_StackScript_RevNote_" data-uid="Pulumi.Linode.StackScript.RevNote*"></a>
+  <h4 id="Pulumi_Linode_StackScript_RevNote" data-uid="Pulumi.Linode.StackScript.RevNote">RevNote</h4>
+  <div class="markdown level1 summary"><p>This field allows you to add notes for the set of revisions made to this StackScript.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string?&gt; RevNote { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/StackScript.cs/#L67">View Source</a>
+  </span>
+  <a id="Pulumi_Linode_StackScript_Script_" data-uid="Pulumi.Linode.StackScript.Script*"></a>
+  <h4 id="Pulumi_Linode_StackScript_Script" data-uid="Pulumi.Linode.StackScript.Script">Script</h4>
+  <div class="markdown level1 summary"><p>The script to execute when provisioning a new Linode with this StackScript.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Script { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/StackScript.cs/#L73">View Source</a>
+  </span>
+  <a id="Pulumi_Linode_StackScript_Updated_" data-uid="Pulumi.Linode.StackScript.Updated*"></a>
+  <h4 id="Pulumi_Linode_StackScript_Updated" data-uid="Pulumi.Linode.StackScript.Updated">Updated</h4>
+  <div class="markdown level1 summary"><p>The date this StackScript was updated.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Updated { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/StackScript.cs/#L80">View Source</a>
+  </span>
+  <a id="Pulumi_Linode_StackScript_UserDefinedFields_" data-uid="Pulumi.Linode.StackScript.UserDefinedFields*"></a>
+  <h4 id="Pulumi_Linode_StackScript_UserDefinedFields" data-uid="Pulumi.Linode.StackScript.UserDefinedFields">UserDefinedFields</h4>
+  <div class="markdown level1 summary"><p>This is a list of fields defined with a special syntax inside this StackScript that allow for supplying
+customized parameters during deployment.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;ImmutableArray&lt;StackScriptUserDefinedFields&gt;&gt; UserDefinedFields { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">ImmutableArray</span>&lt;<a class="xref" href="Pulumi.Linode.Outputs.StackScriptUserDefinedFields.html">StackScriptUserDefinedFields</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/StackScript.cs/#L86">View Source</a>
+  </span>
+  <a id="Pulumi_Linode_StackScript_UserGravatarId_" data-uid="Pulumi.Linode.StackScript.UserGravatarId*"></a>
+  <h4 id="Pulumi_Linode_StackScript_UserGravatarId" data-uid="Pulumi.Linode.StackScript.UserGravatarId">UserGravatarId</h4>
+  <div class="markdown level1 summary"><p>The Gravatar ID for the User who created the StackScript.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; UserGravatarId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/StackScript.cs/#L92">View Source</a>
+  </span>
+  <a id="Pulumi_Linode_StackScript_Username_" data-uid="Pulumi.Linode.StackScript.Username*"></a>
+  <h4 id="Pulumi_Linode_StackScript_Username" data-uid="Pulumi.Linode.StackScript.Username">Username</h4>
+  <div class="markdown level1 summary"><p>The User who created the StackScript.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Output&lt;string&gt; Username { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Output</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/StackScript.cs/#L133">View Source</a>
+  </span>
+  <a id="Pulumi_Linode_StackScript_Get_" data-uid="Pulumi.Linode.StackScript.Get*"></a>
+  <h4 id="Pulumi_Linode_StackScript_Get_System_String_Input_System_String__Pulumi_Linode_StackScriptState_System_Nullable_CustomResourceOptions__" data-uid="Pulumi.Linode.StackScript.Get(System.String,Input{System.String},Pulumi.Linode.StackScriptState,System.Nullable{CustomResourceOptions})">Get(String, Input&lt;String&gt;, StackScriptState, Nullable&lt;CustomResourceOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Get an existing StackScript resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static StackScript Get(string name, Input&lt;string&gt; id, StackScriptState state = null, CustomResourceOptions? options = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The unique name of the resulting resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Input</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The unique provider ID of the resource to lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Pulumi.Linode.StackScriptState.html">StackScriptState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>Any extra arguments used during the lookup.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">CustomResourceOptions</span>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>A bag of options that control this resource's behavior</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Pulumi.Linode.StackScript.html">StackScript</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/pulumi/pulumi-linode/blob/master/sdk/dotnet/StackScript.cs/#L14" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright 2016-2020, Pulumi Corporation.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
