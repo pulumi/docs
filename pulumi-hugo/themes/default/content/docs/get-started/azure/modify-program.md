@@ -90,8 +90,8 @@ pulumi.export('connection_string', account.primary_connection_string)
 package main
 
 import (
-	"github.com/pulumi/pulumi-azure/sdk/go/azure/core"
-	"github.com/pulumi/pulumi-azure/sdk/go/azure/storage"
+	"github.com/pulumi/pulumi-azure/sdk/v2/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v2/go/azure/storage"
 	"github.com/pulumi/pulumi/sdk/go/pulumi"
 )
 
@@ -127,34 +127,32 @@ func main() {
 {{% choosable language csharp %}}
 
 ```csharp
-using System.Collections.Generic;
-using System.Threading.Tasks;
 using Pulumi;
-using Azure = Pulumi.Azure;
+using Pulumi.Azure.Core;
+using Pulumi.Azure.Storage;
 
-class Program
+class MyStack : Stack
 {
-    static Task Main()
+    public MyStack()
     {
-        return Deployment.RunAsync(() => {
-            // Create an Azure Resource Group
-            var resourceGroup = new Azure.Core.ResourceGroup("resourceGroup");
+        // Create an Azure Resource Group
+        var resourceGroup = new ResourceGroup("resourceGroup");
 
-            // Create an Azure resource (Storage Account)
-            var account = new Azure.Storage.Account("storage", new Azure.Storage.AccountArgs
-            {
-                ResourceGroupName = resourceGroup.Name,
-                AccountTier = "Standard",
-                AccountReplicationType = "LRS",
-                EnableHttpsTrafficOnly = true,
-            });
-
-            // Export the connection string for the storage account
-            return new Dictionary<string, object> {
-                { "connectionString", account.PrimaryConnectionString },
-            };
+        // Create an Azure Storage Account
+        var storageAccount = new Account("storage", new AccountArgs
+        {
+            ResourceGroupName = resourceGroup.Name,
+            AccountReplicationType = "LRS",
+            AccountTier = "Standard",
+            EnableHttpsTrafficOnly = true
         });
+
+        // Export the connection string for the storage account
+        this.ConnectionString = storageAccount.PrimaryConnectionString;
     }
+
+    [Output]
+    public Output<string> ConnectionString { get; set; }
 }
 ```
 

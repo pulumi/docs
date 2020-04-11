@@ -16,6 +16,13 @@ Let's review some of the generated project files:
 
 - `Pulumi.yaml` defines the [project]({{< relref "/docs/intro/concepts/project" >}}).
 - `Pulumi.dev.yaml` contains [configuration]({{< relref "/docs/intro/concepts/config" >}}) values for the [stack]({{< relref "/docs/intro/concepts/stack" >}}) we initialized.
+
+{{% choosable language csharp %}}
+
+- `Program.cs` with a simple entry point.
+
+{{% /choosable %}}
+
 - {{< langfile >}} is the Pulumi program that defines our stack resources. Let's examine it.
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -69,7 +76,7 @@ pulumi.export('bucket_name',  bucket.url)
 package main
 
 import (
-	"github.com/pulumi/pulumi-gcp/sdk/go/gcp/storage"
+	"github.com/pulumi/pulumi-gcp/sdk/v2/go/gcp/storage"
 	"github.com/pulumi/pulumi/sdk/go/pulumi"
 )
 
@@ -92,26 +99,22 @@ func main() {
 {{% choosable language csharp %}}
 
 ```csharp
-using System.Collections.Generic;
-using System.Threading.Tasks;
 using Pulumi;
 using Pulumi.Gcp.Storage;
 
-class Program
+class MyStack : Stack
 {
-    static Task Main()
+    public MyStack()
     {
-        return Deployment.RunAsync(() =>
-        {
-            // Create a GCP resource (Storage Bucket)
-            var bucket = new Storage.Bucket("my-bucket");
+        // Create a GCP resource (Storage Bucket)
+        var bucket = new Bucket("my-bucket");
 
-            // Export the DNS name of the bucket
-            return new Dictionary<string, object> {
-                { "bucket_name", bucket.Url },
-            };
-        });
+        // Export the DNS name of the bucket
+        this.BucketName = bucket.Url;
     }
+
+    [Output]
+    public Output<string> BucketName { get; set; }
 }
 ```
 
@@ -122,15 +125,6 @@ This Pulumi program creates a storage bucket and exports the bucket URL.
 {{% choosable language python %}}
 
 {{< python-venv >}}
-
-{{% /choosable %}}
-
-{{% choosable language go %}}
-For Go, before we can deploy the stack, you will need to initialize your project's dependencies. Pulumi templates currently use `dep`:
-
-```bash
-$ dep ensure
-```
 
 {{% /choosable %}}
 

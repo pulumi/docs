@@ -12,6 +12,10 @@ pulumi-choosable {
     display: block;
 
     pre.chroma {
-        @apply mt-0;
+        @apply mt-0 bg-gray-100;
+    }
+
+    .highlight, .chroma {
+        // @apply border-transparent;
     }
 }

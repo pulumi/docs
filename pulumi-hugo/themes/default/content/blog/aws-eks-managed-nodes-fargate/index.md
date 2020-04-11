@@ -6,11 +6,21 @@ tags: ["Pulumi-News", "AWS", "Kubernetes", "EKS"]
 meta_desc: "Pulumi supports simplify the scaling your Elastic Kubernetes Service (EKS) clusters with Managed Node Groups and Fargate."
 date: "2019-12-05"
 meta_image: "pulumi-eks-fargate.png"
+
+summary: |
+    AWS Elastic Kubernetes Service (EKS) provides a range of performance and control for
+    dynamically scaling your Kubernetes clusters, including Managed Node Groups, Fargate, and
+    Manually-Managed Node Groups in EC2. In this post, we'll see how to use each of these
+    compute options, and when to prefer one over the other in order to maximize productivity,
+    flexibility, and control, based on your needs.
 ---
 
-AWS Elastic Kubernetes Service (EKS) provides a range of performance and control for dynamically scaling your Kubernetes clusters, including Managed Node Groups, Fargate, and Manually-Managed Node Groups in EC2. In this post, we'll see how to use each of these compute options, and when to prefer one over the other in order to maximize productivity, flexibility, and control, based on your needs.
+{{% notes %}}
+    Looking for information on how to deploy an EKS cluster? Checkout our
+    <a href="{{< relref "/docs/guides/crosswalk/aws/eks" >}}">AWS Elastic Kubernetes Service</a> documentation.
+{{% /notes %}}
 
-<!--more-->
+AWS Elastic Kubernetes Service (EKS) provides a range of performance and control for dynamically scaling your Kubernetes clusters, including Managed Node Groups, Fargate, and Manually-Managed Node Groups in EC2. In this post, we'll see how to use each of these compute options, and when to prefer one over the other in order to maximize productivity, flexibility, and control, based on your needs.
 
 ## Managing EKS Workers
 

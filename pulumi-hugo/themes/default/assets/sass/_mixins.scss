@@ -5,3 +5,12 @@
 @mixin bg-gradient($from-color, $to-color, $radius, $center-x: 50%, $center-y: 50%) {
     background-image: radial-gradient($radius at $center-x $center-y, $from-color, $to-color);
 }
+
+// https://fontawesome.com/
+@mixin fa-glyph($unicode, $collection: "Free") {
+    font-family: "Font Awesome 5 #{$collection}";
+
+    &:after {
+        content: "#{$unicode}";
+    }
+}

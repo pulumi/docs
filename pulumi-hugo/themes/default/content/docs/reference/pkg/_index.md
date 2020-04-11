@@ -7,36 +7,56 @@ menu:
     weight: 2
 ---
 
-Pulumi offers APIs for working with a wide variety of cloud platforms, as well
-as higher-level APIs that make it easier to deliver cloud applications and
-infrastructure.
+Pulumi offers APIs for working with a wide variety of cloud platforms, as well as
+higher-level APIs that make it easier to deliver cloud applications and infrastructure.
 
-These APIs are available as packages in your chosen language's package manager
----npm for TypeScript/JavaScript and PyPI for Python. There is a dedicated package for
-each cloud that includes access to its full capabilities. In addition, Pulumi
-offers many convenience packages that make common tasks easier, like setting
-up a network, creating a Kubernetes cluster, and building and publishing containers
-to private registries.
+These APIs are available as packages in your chosen language's package manager --- npm for
+TypeScript/JavaScript, PyPI for Python, and the like. There is a dedicated package for
+each cloud that includes access to its full capabilities. In addition, Pulumi offers many
+convenience packages that make common tasks easier, like setting up a network, creating a
+Kubernetes cluster, and building and publishing containers to private registries.
 
-### Choose Your Language
+## Resources by Cloud Provider
 
-{{% chooser language "javascript,typescript,python,go" / %}}
+Reference documentation and examples for major cloud providers.
+
+<div class="tiles">
+    <a class="tile flex-1 p-8" href="{{< relref "/docs/reference/pkg/aws" >}}">
+        <img class="h-10 mx-auto" src="/logos/tech/aws.svg" alt="AWS">
+    </a>
+    <a class="tile flex-1 p-8 md:mx-4 my-4 md:my-0" href="{{< relref "/docs/reference/pkg/azure" >}}">
+        <img class="h-10 mx-auto" src="/logos/tech/azure.svg" alt="Azure">
+    </a>
+    <a class="tile flex-1 p-8" href="{{< relref "/docs/reference/pkg/gcp" >}}">
+        <img class="h-10 mx-auto" src="/logos/tech/gcp.svg" alt="Google Cloud">
+    </a>
+</div>
+
+<hr class="mt-12 mb-8 border-b border-gray-200">
+
+## All Packages by Language
+
+Detailed documentation for general-purpose and cloud-provider packages, organized by language.
+
+{{% chooser language "javascript,typescript,python,go,csharp" / %}}
 
 ### General Purpose Packages
 
-The Pulumi SDK package is used for accessing the core programming model around resources, configuration, and other components
-directly. Additional general purpose packages can be used across all cloud platforms:
+The Pulumi SDK package is used for accessing the core programming model around resources,
+configuration, and other components directly. Additional general-purpose packages can be
+used across all cloud platforms:
 
 {{% choosable language "javascript,typescript" %}}
 * [**Pulumi SDK** (`@pulumi/pulumi`)]({{< relref "nodejs/pulumi/pulumi" >}})
 * [**Docker** (`@pulumi/docker`)]({{< relref "nodejs/pulumi/docker" >}})
-* [**Policy** (`@pulumi/policy`) <span class="badge badge-preview">PREVIEW</span>]({{< relref "nodejs/pulumi/policy" >}})
+* [**Policy** (`@pulumi/policy`)]({{< relref "nodejs/pulumi/policy" >}})
 * [**Random** (`@pulumi/random`)]({{< relref "nodejs/pulumi/random" >}})
 {{% /choosable %}}
 
 {{% choosable language python %}}
 * [**Pulumi SDK** (`pulumi`)]({{< relref "python/pulumi" >}})
 * [**Docker** (`pulumi_docker`)]({{< relref "python/pulumi_docker" >}})
+* [**Policy** (`pulumi_policy`) <span class="badge badge-preview">PREVIEW</span>]({{< relref "python/pulumi_policy" >}})
 * [**Random** (`pulumi_random`)]({{< relref "python/pulumi_random" >}})
 {{% /choosable %}}
 
@@ -45,11 +65,13 @@ directly. Additional general purpose packages can be used across all cloud platf
 * [**Random** (`random`)](https://pkg.go.dev/github.com/pulumi/pulumi-random/sdk/go/random)
 {{% /choosable %}}
 
-{{% lang csharp %}}
-* [**Pulumi SDK** (`pulumi`)]({{< relref "dotnet/pulumi" >}})
-{{% /lang %}}
+{{% choosable language csharp %}}
+* [**Pulumi SDK** (`Pulumi`)](/docs/reference/pkg/dotnet/Pulumi/Pulumi.html)
+* [**Docker** (`Pulumi.Docker`)](/docs/reference/pkg/dotnet/Pulumi.Docker/Pulumi.Docker.html)
+* [**Random** (`Pulumi.Random`)](/docs/reference/pkg/dotnet/Pulumi.Random/Pulumi.Random.html)
+{{% /choosable %}}
 
-### Cloud Providers
+### Cloud Provider Packages
 
 Each cloud vendor has a dedicated package for deploying resources to it:
 
@@ -134,10 +156,10 @@ Each cloud vendor has a dedicated package for deploying resources to it:
 
 {{% choosable language go %}}
 * [**AWS** (`aws`)](https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws)
-* [**Azure** (`azure`)](https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure)
+* [**Azure** (`azure`)](https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v2/go/azure)
     * [**Azure Active Directory** (`pulumi_azuread`)](https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/go/azuread)
-* [**Google Cloud** (`gcp`)](https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp)
-* **Kubernetes** (`kubernetes`): Coming soon!
+* [**Google Cloud** (`gcp`)](https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v2/go/gcp)
+* [**Kubernetes** (`kubernetes`)](https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes)
 * [**Aiven** (`aiven`)](https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/go/aiven)
 * [**Alibaba Cloud** (`alicloud`)](https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud)
 * [**CloudAMQP** (`cloudamqp`)](https://pkg.go.dev/github.com/pulumi/pulumi-cloudamqp/sdk/go/cloudamqp)
@@ -169,23 +191,53 @@ Each cloud vendor has a dedicated package for deploying resources to it:
 * [**vSphere** (`vsphere`)](https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/go/vsphere)
 {{% /choosable %}}
 
-{{% lang csharp %}}
-Coming soon!
-{{% /lang %}}
+{{% choosable language csharp %}}
+* [**AWS** (`Pulumi.Aws`)](/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.html)
+* [**Microsoft Azure** (`Pulumi.Azure`)](/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.html)
+* [**Google Cloud** (`Pulumi.Gcp`)](/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.html)
+* [**Kubernetes** (`Pulumi.Kubernetes`)](/docs/reference/pkg/dotnet/Pulumi.Kubernetes/Pulumi.Kubernetes.html)
+
+* [**Aiven** (`Pulumi.Aiven`)](/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.html)
+* [**Alibaba Cloud** (`Pulumi.AliCloud`)](/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.html)
+* [**CloudAMQP** (`Pulumi.CloudAmqp`)](/docs/reference/pkg/dotnet/Pulumi.CloudAmqp/Pulumi.CloudAmqp.html)
+* [**Cloudflare** (`Pulumi.Cloudflare`)](/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare.html)
+* [**HashiCorp Consul** (`Pulumi.Consul`)](/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul.html)
+* [**Datadog** (`Pulumi.Datadog`)](/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.html)
+* [**DigitalOcean** (`Pulumi.DigitalOcean`)](/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.html)
+* [**DNSimple** (`Pulumi.DNSimple`)](/docs/reference/pkg/dotnet/Pulumi.DNSimple/Pulumi.DNSimple.html)
+* [**Fastly** (`Pulumi.Fastly`)](/docs/reference/pkg/dotnet/Pulumi.Fastly/Pulumi.Fastly.html)
+* [**F5 BigIP** (`Pulumi.F5BigIP`)](/docs/reference/pkg/dotnet/Pulumi.F5BigIP/Pulumi.F5BigIP.html)
+* [**GitLab** (`Pulumi.GitLab`)](/docs/reference/pkg/dotnet/Pulumi.GitLab/Pulumi.GitLab.html)
+* [**Kafka** (`Pulumi.Kafka`)](/docs/reference/pkg/dotnet/Pulumi.Kafka/Pulumi.Kafka.html)
+* [**Keycloak** (`Pulumi.Keycloak`)](/docs/reference/pkg/dotnet/Pulumi.Keycloak/Pulumi.Keycloak.html)
+* [**Linode** (`Pulumi.Linode`)](/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.html)
+* [**Mailgun** (`Pulumi.Mailgun`)](/docs/reference/pkg/dotnet/Pulumi.Mailgun/Pulumi.Mailgun.html)
+* [**MySQL** (`Pulumi.MySql`)](/docs/reference/pkg/dotnet/Pulumi.MySql/Pulumi.MySql.html)
+* [**New Relic** (`Pulumi.NewRelic`)](/docs/reference/pkg/dotnet/Pulumi.NewRelic/Pulumi.NewRelic.html)
+* [**Okta** (`Pulumi.Okta`)](/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.html)
+* [**OpenStack** (`Pulumi.OpenStack`)](/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.html)
+* [**Packet** (`Pulumi.Packet`)](/docs/reference/pkg/dotnet/Pulumi.Packet/Pulumi.Packet.html)
+* [**PostgreSQL** (`Pulumi.PostgreSql`)](/docs/reference/pkg/dotnet/Pulumi.PostgreSql/Pulumi.PostgreSql.html)
+* [**RabbitMQ** (`Pulumi.RabbitMQ`)](/docs/reference/pkg/dotnet/Pulumi.RabbitMQ/Pulumi.RabbitMQ.html)
+* [**Rancher2** (`Pulumi.Rancher2`)](/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.html)
+* [**SignalFX** (`Pulumi.SignalFX`)](/docs/reference/pkg/dotnet/Pulumi.SignalFX/Pulumi.SignalFX.html)
+* [**SpotInst** (`Pulumi.SpotInst`)](/docs/reference/pkg/dotnet/Pulumi.SpotInst/Pulumi.SpotInst.html)
+* [**Terraform** (`Pulumi.Terraform`)](/docs/reference/pkg/dotnet/Pulumi.Terraform/Pulumi.Terraform.html)
+* [**TLS** (`Pulumi.Tls`)](/docs/reference/pkg/dotnet/Pulumi.Tls/Pulumi.Tls.html)
+* [**Hashicorp Vault** (`Pulumi.Vault`)](/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.html)
+* [**vSphere** (`Pulumi.VSphere`)](/docs/reference/pkg/dotnet/Pulumi.VSphere/Pulumi.VSphere.html)
+{{% /choosable %}}
 
 ### Cloud-Agnostic Packages
 
 {{% choosable language "javascript,typescript" %}}
-Pulumi offers a highly productive, cloud-agnostic package for container and serverless programming in the
-`@pulumi/cloud` package which currently allows writing applications once and deploying to either AWS or Azure.
+Pulumi offers a highly productive, cloud-agnostic package for container and serverless
+programming in the `@pulumi/cloud` package which currently allows writing applications
+once and deploying to either AWS or Azure.
 
 * [**Pulumi Cloud Framework** (`@pulumi/cloud`) <span class="badge badge-preview">PREVIEW</span>]({{< relref "nodejs/pulumi/cloud" >}})
 {{% /choosable %}}
 
-{{% choosable language python %}}
-Coming soon!
-{{% /choosable %}}
-
-{{% choosable language go %}}
+{{% choosable language "python,go,csharp" %}}
 Coming soon!
 {{% /choosable %}}

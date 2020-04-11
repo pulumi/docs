@@ -85,7 +85,7 @@ Deployment" part of CI/CD workflows, and with the release of CircleCIs
 Orbs, it's just that much easier.
 
 Having trouble? Questions? Join our [community Slack](https://slack.pulumi.com/)
-or [drop us a line]({{< relref "/contact" >}}).
+or [drop us a line]({{< relref "/contact.md" >}}).
 
 Links:
 

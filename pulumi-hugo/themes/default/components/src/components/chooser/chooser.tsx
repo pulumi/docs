@@ -135,6 +135,11 @@ export class Chooser {
         this.mode = "global";
         this.optionStyle = "tabbed";
 
+        // As this callback may be invoked before the component's first lifecycle method,
+        // we parse the set of options provided just to be sure we have a default option
+        // to select if we need to.
+        this.parseOptions();
+
         // Map internal methods to actions defined on the store.
         this.store.mapDispatchToProps(this, { setLanguage, setK8sLanguage, setOS, setCloud });
 
@@ -319,25 +324,25 @@ export class Chooser {
             key: "go",
             name: "Go",
             extension: "go",
-            preview: true,
+            preview: false,
         },
         {
             key: "csharp",
             name: "C#",
             extension: "cs",
-            preview: true,
+            preview: false,
         },
         {
             key: "fsharp",
             name: "F#",
             extension: "fs",
-            preview: true,
+            preview: false,
         },
         {
             key: "visualbasic",
             name: "VB",
             extension: "vb",
-            preview: true,
+            preview: false,
         }
     ];
 

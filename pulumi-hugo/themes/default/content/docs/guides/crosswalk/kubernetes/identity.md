@@ -5,7 +5,7 @@ no_on_this_page: true
 linktitle: Identity
 ---
 
-{{< chooser cloud "aws,azure,gcp" >}}
+{{< chooser cloud "aws,azure,gcp" / >}}
 
 {{% choosable cloud aws %}}
 

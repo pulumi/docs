@@ -83,15 +83,20 @@ contentBucket, _ := s3.NewBucket(ctx, "content-bucket", nil)
 ```csharp
 using System.Threading.Tasks;
 using Pulumi;
-using Pulumi.Aws;
+using Aws = Pulumi.Aws;
 
 class Program
 {
-    static Task Main() =>
-        Deployment.Run(() => {
-            var mediaBucket = new Aws.S3.Bucket("media-bucket");
-            var contentBucket = new Aws.S3.Bucket("content-bucket");
-        });
+    static Task<int> Main() => Deployment.RunAsync<MyStack>();
+}
+
+public MyStack : Stack
+{
+    public MyStack()
+    {
+        var mediaBucket = new Aws.S3.Bucket("media-bucket");
+        var contentBucket = new Aws.S3.Bucket("content-bucket");
+    }
 }
 ```
 
@@ -107,7 +112,7 @@ In this case, since the last deployed state has no resources, the engine determi
 
 As the engine was creating the `media-bucket` bucket, the language host continued to execute the Pulumi program. This caused another resource registration to be generated (for `content-bucket`). Since there is no dependency between these two buckets, the engine is able to process that request in parallel with the creation of `media-bucket`.
 
-After both operations have completed, the language host exists as the program has finished running. Then the engine and resource providers shutdown. The state for mystack now looks like the following:
+After both operations have completed, the language host exits as the program has finished running. Then the engine and resource providers shutdown. The state for mystack now looks like the following:
 
 ```
 stack mystack
@@ -162,18 +167,23 @@ contentBucket, _ := s3.NewBucket(ctx, "content-bucket", nil)
 ```csharp
 using System.Threading.Tasks;
 using Pulumi;
-using Pulumi.Aws;
+using Aws = Pulumi.Aws;
 
 class Program
 {
-    static Task Main() =>
-        Deployment.Run(() => {
-            var mediaBucket = new Aws.S3.Bucket("media-bucket", new Aws.S3.BucketArgs
-            {
-                Acl = "public-read",   // add acl
-            });
-            var contentBucket = new Aws.S3.Bucket("content-bucket");
+    static Task<int> Main() => Deployment.RunAsync<MyStack>();
+}
+
+public MyStack : Stack
+{
+    public MyStack()
+    {
+        var mediaBucket = new Aws.S3.Bucket("media-bucket", new Aws.S3.BucketArgs
+        {
+            Acl = "public-read",   // add acl
         });
+        var contentBucket = new Aws.S3.Bucket("content-bucket");
+    }
 }
 ```
 
@@ -230,18 +240,23 @@ appBucket, _ := s3.NewBucket(ctx, "app-bucket", nil)
 ```csharp
 using System.Threading.Tasks;
 using Pulumi;
-using Pulumi.Aws;
+using Aws = Pulumi.Aws;
 
 class Program
 {
-    static Task Main() =>
-        Deployment.Run(() => {
-            var mediaBucket = new Aws.S3.Bucket("media-bucket", new Aws.S3.BucketArgs
-            {
-                Acl = "public-read",   // add acl
-            });
-            var appBucket = new Aws.S3.Bucket("app-bucket");
+    static Task<int> Main() => Deployment.RunAsync<MyStack>();
+}
+
+public MyStack : Stack
+{
+    public MyStack()
+    {
+        var mediaBucket = new Aws.S3.Bucket("media-bucket", new Aws.S3.BucketArgs
+        {
+            Acl = "public-read",   // add acl
         });
+        var contentBucket = new Aws.S3.Bucket("app-bucket");
+    }
 }
 ```
 

@@ -158,9 +158,9 @@ function publicReadPolicyForBucket(bucketName) {
 
 // Set the access policy for the bucket so all objects are readable
 let bucketPolicy = new aws.s3.BucketPolicy("bucketPolicy", {
-› bucket: siteBucket.bucket, // depends on siteBucket -- see explanation below
-› policy: siteBucket.bucket.apply(publicReadPolicyForBucket)•
-› › › › › // transform the siteBucket.bucket output property -- see explanation below
+  bucket: siteBucket.bucket, // depends on siteBucket -- see explanation below
+  policy: siteBucket.bucket.apply(publicReadPolicyForBucket)
+          // transform the siteBucket.bucket output property -- see explanation below
 });
 
 exports.websiteUrl = siteBucket.websiteEndpoint; // output the endpoint as a stack output

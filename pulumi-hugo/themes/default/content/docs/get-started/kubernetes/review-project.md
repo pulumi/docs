@@ -16,6 +16,13 @@ Let's review some of the generated project files:
 
 - `Pulumi.yaml` defines the [project]({{< relref "/docs/intro/concepts/project" >}}).
 - `Pulumi.dev.yaml` contains [configuration]({{< relref "/docs/intro/concepts/config" >}}) values for the [stack]({{< relref "/docs/intro/concepts/stack" >}}) we initialized.
+
+{{% choosable language csharp %}}
+
+- `Program.cs` with a simple entry point.
+
+{{% /choosable %}}
+
 - {{< langfile >}} is the Pulumi program that defines our stack resources. Let's examine it.
 
 {{< chooser language "javascript,typescript,python,csharp" / >}}
@@ -87,69 +94,63 @@ pulumi.export("name", deployment.metadata["name"])
 {{% choosable language csharp %}}
 
 ```csharp
-using System.Collections.Generic;
-using System.Threading.Tasks;
-
 using Pulumi;
-using Pulumi.Kubernetes.Core.V1;
 using Pulumi.Kubernetes.Apps.V1;
 using Pulumi.Kubernetes.Types.Inputs.Core.V1;
 using Pulumi.Kubernetes.Types.Inputs.Apps.V1;
 using Pulumi.Kubernetes.Types.Inputs.Meta.V1;
 
-class Program
+class MyStack : Stack
 {
-    static Task<int> Main()
+    public MyStack()
     {
-        return Pulumi.Deployment.RunAsync(() =>
+        var appLabels = new InputMap<string>
         {
-            var appLabels = new InputMap<string>{
-                { "app", "nginx" },
-            };
+            { "app", "nginx" }
+        };
 
-            var deployment = new Pulumi.Kubernetes.Apps.V1.Deployment("nginx", new DeploymentArgs
+        var deployment = new Pulumi.Kubernetes.Apps.V1.Deployment("nginx", new DeploymentArgs
+        {
+            Spec = new DeploymentSpecArgs
             {
-                Spec = new DeploymentSpecArgs
+                Selector = new LabelSelectorArgs
                 {
-                    Selector = new LabelSelectorArgs
-                    {
-                        MatchLabels = appLabels,
-                    },
-                    Replicas = 1,
-                    Template = new PodTemplateSpecArgs
-                    {
-                        Metadata = new ObjectMetaArgs
-                        {
-                            Labels = appLabels,
-                        },
-                        Spec = new PodSpecArgs
-                        {
-                            Containers =
-                            {
-                                new ContainerArgs
-                                {
-                                    Name = "nginx",
-                                    Image = "nginx",
-                                    Ports =
-                                    {
-                                        new ContainerPortArgs
-                                        {
-                                            ContainerPortValue = 80
-                                        },
-                                    },
-                                },
-                            },
-                        },
-                    },
+                    MatchLabels = appLabels
                 },
-            });
-
-            return new Dictionary<string, object?>
-            {
-                { "name", deployment.Metadata.Apply(m => m.Name) },
-            };
+                Replicas = 1,
+                Template = new PodTemplateSpecArgs
+                {
+                    Metadata = new ObjectMetaArgs
+                    {
+                        Labels = appLabels
+                    },
+                    Spec = new PodSpecArgs
+                    {
+                        Containers =
+                        {
+                            new ContainerArgs
+                            {
+                                Name = "nginx",
+                                Image = "nginx",
+                                Ports =
+                                {
+                                    new ContainerPortArgs
+                                    {
+                                        ContainerPortValue = 80
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         });
+
+        this.Name = deployment.Metadata.Apply(m => m.Name);
     }
+
+    [Output]
+    public Output<string> Name { get; set; }
 }
 ```
 
