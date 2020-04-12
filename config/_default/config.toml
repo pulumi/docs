@@ -13,7 +13,7 @@ enableRobotsTXT = true
 # Some of our API docs pages are very large with many shortcodes, which can take
 # a while to generate (especially in CI), so we raise the limit from the default
 # 10 seconds to avoid timeouts when generating the site.
-timeout = 120000
+timeout = 300000
 
 [outputFormats.RSS]
     baseName = "rss"
