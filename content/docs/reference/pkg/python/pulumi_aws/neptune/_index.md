@@ -34,6 +34,7 @@ phase because a modification has not yet taken place. You can use the
 <li><p><strong>backup_retention_period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The days to retain backups for. Default <code class="docutils literal notranslate"><span class="pre">1</span></code></p></li>
 <li><p><strong>cluster_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The cluster identifier. If omitted, this provider will assign a random, unique identifier.</p></li>
 <li><p><strong>cluster_identifier_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique cluster identifier beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">cluster_identifier</span></code>.</p></li>
+<li><p><strong>deletion_protection</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A value that indicates whether the DB cluster has deletion protection enabled.The database can’t be deleted when deletion protection is enabled. By default, deletion protection is disabled.</p></li>
 <li><p><strong>enable_cloudwatch_logs_exports</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of the log types this DB cluster is configured to export to Cloudwatch Logs. Currently only supports <code class="docutils literal notranslate"><span class="pre">audit</span></code>.</p></li>
 <li><p><strong>engine</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the database engine to be used for this Neptune cluster. Defaults to <code class="docutils literal notranslate"><span class="pre">neptune</span></code>.</p></li>
 <li><p><strong>engine_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The database engine version.</p></li>
@@ -101,6 +102,12 @@ phase because a modification has not yet taken place. You can use the
 <dt id="pulumi_aws.neptune.Cluster.cluster_resource_id">
 <code class="sig-name descname">cluster_resource_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.neptune.Cluster.cluster_resource_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Neptune Cluster Resource ID</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.neptune.Cluster.deletion_protection">
+<code class="sig-name descname">deletion_protection</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.neptune.Cluster.deletion_protection" title="Permalink to this definition">¶</a></dt>
+<dd><p>A value that indicates whether the DB cluster has deletion protection enabled.The database can’t be deleted when deletion protection is enabled. By default, deletion protection is disabled.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -248,6 +255,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>cluster_identifier_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a unique cluster identifier beginning with the specified prefix. Conflicts with <code class="docutils literal notranslate"><span class="pre">cluster_identifier</span></code>.</p></li>
 <li><p><strong>cluster_members</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of Neptune Instances that are a part of this cluster</p></li>
 <li><p><strong>cluster_resource_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Neptune Cluster Resource ID</p></li>
+<li><p><strong>deletion_protection</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A value that indicates whether the DB cluster has deletion protection enabled.The database can’t be deleted when deletion protection is enabled. By default, deletion protection is disabled.</p></li>
 <li><p><strong>enable_cloudwatch_logs_exports</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of the log types this DB cluster is configured to export to Cloudwatch Logs. Currently only supports <code class="docutils literal notranslate"><span class="pre">audit</span></code>.</p></li>
 <li><p><strong>endpoint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DNS address of the Neptune instance</p></li>
 <li><p><strong>engine</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the database engine to be used for this Neptune cluster. Defaults to <code class="docutils literal notranslate"><span class="pre">neptune</span></code>.</p></li>

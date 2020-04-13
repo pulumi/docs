@@ -14,6 +14,11 @@ notitle: true
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/issues">terraform-providers/terraform-provider-aws repo</a>.</p>
 </div></blockquote>
 <span class="target" id="module-pulumi_aws.cloudfront"></span><dl class="class">
+<dt id="pulumi_aws.cloudfront.AwaitableGetDistributionResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.cloudfront.</code><code class="sig-name descname">AwaitableGetDistributionResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">domain_name=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">etag=None</em>, <em class="sig-param">hosted_zone_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">in_progress_validation_batches=None</em>, <em class="sig-param">last_modified_time=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudfront.AwaitableGetDistributionResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_aws.cloudfront.Distribution">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.cloudfront.</code><code class="sig-name descname">Distribution</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">aliases=None</em>, <em class="sig-param">comment=None</em>, <em class="sig-param">custom_error_responses=None</em>, <em class="sig-param">default_cache_behavior=None</em>, <em class="sig-param">default_root_object=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">http_version=None</em>, <em class="sig-param">is_ipv6_enabled=None</em>, <em class="sig-param">logging_config=None</em>, <em class="sig-param">ordered_cache_behaviors=None</em>, <em class="sig-param">origin_groups=None</em>, <em class="sig-param">origins=None</em>, <em class="sig-param">price_class=None</em>, <em class="sig-param">restrictions=None</em>, <em class="sig-param">retain_on_delete=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">viewer_certificate=None</em>, <em class="sig-param">wait_for_deployment=None</em>, <em class="sig-param">web_acl_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudfront.Distribution" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an Amazon CloudFront web distribution.</p>
@@ -1160,6 +1165,67 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_aws.cloudfront.GetDistributionResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.cloudfront.</code><code class="sig-name descname">GetDistributionResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">domain_name=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">etag=None</em>, <em class="sig-param">hosted_zone_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">in_progress_validation_batches=None</em>, <em class="sig-param">last_modified_time=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudfront.GetDistributionResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getDistribution.</p>
+<dl class="attribute">
+<dt id="pulumi_aws.cloudfront.GetDistributionResult.arn">
+<code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudfront.GetDistributionResult.arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ARN (Amazon Resource Name) for the distribution. For example: arn:aws:cloudfront::123456789012:distribution/EDFDVBD632BHDS5, where 123456789012 is your AWS account ID.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.cloudfront.GetDistributionResult.domain_name">
+<code class="sig-name descname">domain_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudfront.GetDistributionResult.domain_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The domain name corresponding to the distribution. For
+example: <code class="docutils literal notranslate"><span class="pre">d604721fxaaqy9.cloudfront.net</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.cloudfront.GetDistributionResult.etag">
+<code class="sig-name descname">etag</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudfront.GetDistributionResult.etag" title="Permalink to this definition">¶</a></dt>
+<dd><p>The current version of the distribution’s information. For example:
+<code class="docutils literal notranslate"><span class="pre">E2QWRUHAPOMQZL</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.cloudfront.GetDistributionResult.hosted_zone_id">
+<code class="sig-name descname">hosted_zone_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudfront.GetDistributionResult.hosted_zone_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The CloudFront Route 53 zone ID that can be used to
+route an [Alias Resource Record Set][7] to. This attribute is simply an
+alias for the zone ID <code class="docutils literal notranslate"><span class="pre">Z2FDTNDATAQYW2</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.cloudfront.GetDistributionResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudfront.GetDistributionResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The identifier for the distribution. For example: <code class="docutils literal notranslate"><span class="pre">EDFDVBD632BHDS5</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.cloudfront.GetDistributionResult.in_progress_validation_batches">
+<code class="sig-name descname">in_progress_validation_batches</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudfront.GetDistributionResult.in_progress_validation_batches" title="Permalink to this definition">¶</a></dt>
+<dd><p>The number of invalidation batches
+currently in progress.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.cloudfront.GetDistributionResult.last_modified_time">
+<code class="sig-name descname">last_modified_time</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudfront.GetDistributionResult.last_modified_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>The date and time the distribution was last modified.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.cloudfront.GetDistributionResult.status">
+<code class="sig-name descname">status</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudfront.GetDistributionResult.status" title="Permalink to this definition">¶</a></dt>
+<dd><p>The current status of the distribution. <code class="docutils literal notranslate"><span class="pre">Deployed</span></code> if the
+distribution’s information is fully propagated throughout the Amazon
+CloudFront system.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_aws.cloudfront.OriginAccessIdentity">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.cloudfront.</code><code class="sig-name descname">OriginAccessIdentity</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">comment=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudfront.OriginAccessIdentity" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an Amazon CloudFront origin access identity.</p>
@@ -1395,6 +1461,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 </dd></dl>
 
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_aws.cloudfront.get_distribution">
+<code class="sig-prename descclassname">pulumi_aws.cloudfront.</code><code class="sig-name descname">get_distribution</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudfront.get_distribution" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to retrieve information about a CloudFront distribution.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>id</strong> (<em>str</em>) – The identifier for the distribution. For example: <code class="docutils literal notranslate"><span class="pre">EDFDVBD632BHDS5</span></code>.</p>
+</dd>
+</dl>
 </dd></dl>
 
 </div>
