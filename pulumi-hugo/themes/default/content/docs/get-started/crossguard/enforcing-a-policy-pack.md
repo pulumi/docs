@@ -28,8 +28,10 @@ Once you’ve validated the behavior of your policies, an organization administr
     Compressing policy pack
     Uploading policy pack to Pulumi service
     Publishing my-policy-pack to myorg
-    Published as version 1
+    Published as version 1.0.0
     ```
+
+    The Policy Pack version is specified in the `package.json` file for TypeScript/JavaScript (Node.js) packs. A version can only be used one time and once published the version can never be used by that Policy Pack again.
 
 <!-- markdownlint-disable ul -->
 1. You can enable this Policy Pack to your organization’s default Policy Group by running:
