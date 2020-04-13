@@ -14,7 +14,7 @@ NetworkPolicy describes what network traffic is allowed for a set of Pods
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/networking/v1/#NetworkPolicy">NetworkPolicy</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/networking/v1/#NetworkPolicyArgs">NetworkPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/networking/v1/#NetworkPolicy">NetworkPolicy</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#NetworkPolicy">NetworkPolicy</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -26,7 +26,7 @@ NetworkPolicy describes what network traffic is allowed for a set of Pods
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Kubernetes/Pulumi.Kubernetes.Networking.V1.NetworkPolicy.html">NetworkPolicy</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Kubernetes/Pulumi.Kubernetes.Networking.k8s.io/v1.NetworkPolicyArgs.html">NetworkPolicyArgs</a></span>? <span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Kubernetes/Pulumi.Kubernetes.Networking.V1.NetworkPolicy.html">NetworkPolicy</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Kubernetes/Pulumi.Kubernetes.Types.Inputs.Networking.k8s.io/v1.NetworkPolicyArgs.html">NetworkPolicyArgs</a></span>? <span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -315,7 +315,7 @@ NetworkPolicy describes what network traffic is allowed for a set of Pods
 
     <dt class="property-optional"
             title="Optional">
-        <span>except</span>
+        <span>except_</span>
         <span class="property-indicator"></span>
         <span class="property-type">List[str]</span>
     </dt>
@@ -732,7 +732,7 @@ NetworkPolicy describes what network traffic is allowed for a set of Pods
 
     <dt class="property-optional"
             title="Optional">
-        <span>fields<wbr>Type</span>
+        <span>fields_<wbr>type</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -740,7 +740,7 @@ NetworkPolicy describes what network traffic is allowed for a set of Pods
 
     <dt class="property-optional"
             title="Optional">
-        <span>fields<wbr>V1</span>
+        <span>fields_<wbr>v1</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -970,7 +970,7 @@ NetworkPolicy describes what network traffic is allowed for a set of Pods
 
     <dt class="property-optional"
             title="Optional">
-        <span>from</span>
+        <span>from_</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#networkpolicypeer">List[Network<wbr>Policy<wbr>Peer]</a></span>
     </dt>
@@ -1113,7 +1113,7 @@ If NamespaceSelector is also set, then the NetworkPolicyPeer as a whole selects 
 
     <dt class="property-optional"
             title="Optional">
-        <span>ip<wbr>Block</span>
+        <span>ip_<wbr>block</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ipblock">Dict[IPBlock]</a></span>
     </dt>
@@ -1121,7 +1121,7 @@ If NamespaceSelector is also set, then the NetworkPolicyPeer as a whole selects 
 
     <dt class="property-optional"
             title="Optional">
-        <span>namespace<wbr>Selector</span>
+        <span>namespace_<wbr>selector</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#labelselector">Dict[Label<wbr>Selector]</a></span>
     </dt>
@@ -2177,7 +2177,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>block<wbr>Owner<wbr>Deletion</span>
+        <span>block_<wbr>owner_<wbr>deletion</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>

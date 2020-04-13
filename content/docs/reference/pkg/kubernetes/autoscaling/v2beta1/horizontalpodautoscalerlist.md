@@ -14,7 +14,7 @@ HorizontalPodAutoscaler is a list of horizontal pod autoscaler objects.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/autoscaling/v2beta1/#HorizontalPodAutoscalerList">HorizontalPodAutoscalerList</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/autoscaling/v2beta1/#HorizontalPodAutoscalerListArgs">HorizontalPodAutoscalerListArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/autoscaling/v2beta1/#HorizontalPodAutoscalerList">HorizontalPodAutoscalerList</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#HorizontalPodAutoscalerList">HorizontalPodAutoscalerList</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -26,7 +26,7 @@ HorizontalPodAutoscaler is a list of horizontal pod autoscaler objects.
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Kubernetes/Pulumi.Kubernetes.Autoscaling.V2Beta1.HorizontalPodAutoscalerList.html">HorizontalPodAutoscalerList</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Kubernetes/Pulumi.Kubernetes.Autoscaling.V2Beta1.HorizontalPodAutoscalerListArgs.html">HorizontalPodAutoscalerListArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Kubernetes/Pulumi.Kubernetes.Autoscaling.V2Beta1.HorizontalPodAutoscalerList.html">HorizontalPodAutoscalerList</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Kubernetes/Pulumi.Kubernetes.Types.Inputs.Autoscaling.V2Beta1.HorizontalPodAutoscalerListArgs.html">HorizontalPodAutoscalerListArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -430,7 +430,7 @@ HorizontalPodAutoscaler is a list of horizontal pod autoscaler objects.
 
     <dt class="property-optional"
             title="Optional">
-        <span>metric<wbr>Name</span>
+        <span>metric_<wbr>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -438,7 +438,7 @@ HorizontalPodAutoscaler is a list of horizontal pod autoscaler objects.
 
     <dt class="property-optional"
             title="Optional">
-        <span>metric<wbr>Selector</span>
+        <span>metric_<wbr>selector</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#labelselector">Dict[Label<wbr>Selector]</a></span>
     </dt>
@@ -446,7 +446,7 @@ HorizontalPodAutoscaler is a list of horizontal pod autoscaler objects.
 
     <dt class="property-optional"
             title="Optional">
-        <span>target<wbr>Average<wbr>Value</span>
+        <span>target_<wbr>average_<wbr>value</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -454,7 +454,7 @@ HorizontalPodAutoscaler is a list of horizontal pod autoscaler objects.
 
     <dt class="property-optional"
             title="Optional">
-        <span>target<wbr>Value</span>
+        <span>target_<wbr>value</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -601,7 +601,7 @@ HorizontalPodAutoscaler is a list of horizontal pod autoscaler objects.
 
     <dt class="property-optional"
             title="Optional">
-        <span>current<wbr>Average<wbr>Value</span>
+        <span>current_<wbr>average_<wbr>value</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -609,7 +609,7 @@ HorizontalPodAutoscaler is a list of horizontal pod autoscaler objects.
 
     <dt class="property-optional"
             title="Optional">
-        <span>current<wbr>Value</span>
+        <span>current_<wbr>value</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -617,7 +617,7 @@ HorizontalPodAutoscaler is a list of horizontal pod autoscaler objects.
 
     <dt class="property-optional"
             title="Optional">
-        <span>metric<wbr>Name</span>
+        <span>metric_<wbr>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -625,7 +625,7 @@ HorizontalPodAutoscaler is a list of horizontal pod autoscaler objects.
 
     <dt class="property-optional"
             title="Optional">
-        <span>metric<wbr>Selector</span>
+        <span>metric_<wbr>selector</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#labelselector">Dict[Label<wbr>Selector]</a></span>
     </dt>
@@ -935,7 +935,7 @@ HorizontalPodAutoscaler is a list of horizontal pod autoscaler objects.
 
     <dt class="property-optional"
             title="Optional">
-        <span>last<wbr>Transition<wbr>Time</span>
+        <span>last_<wbr>transition_<wbr>time</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -1969,7 +1969,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>fields<wbr>Type</span>
+        <span>fields_<wbr>type</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -1977,7 +1977,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>fields<wbr>V1</span>
+        <span>fields_<wbr>v1</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -3197,7 +3197,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>average<wbr>Value</span>
+        <span>average_<wbr>value</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -3205,7 +3205,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>metric<wbr>Name</span>
+        <span>metric_<wbr>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -3229,7 +3229,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>target<wbr>Value</span>
+        <span>target_<wbr>value</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -3400,7 +3400,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>average<wbr>Value</span>
+        <span>average_<wbr>value</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -3408,7 +3408,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>current<wbr>Value</span>
+        <span>current_<wbr>value</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -3416,7 +3416,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>metric<wbr>Name</span>
+        <span>metric_<wbr>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -3579,7 +3579,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>block<wbr>Owner<wbr>Deletion</span>
+        <span>block_<wbr>owner_<wbr>deletion</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
@@ -3726,7 +3726,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>metric<wbr>Name</span>
+        <span>metric_<wbr>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -3742,7 +3742,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>target<wbr>Average<wbr>Value</span>
+        <span>target_<wbr>average_<wbr>value</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -3865,7 +3865,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>current<wbr>Average<wbr>Value</span>
+        <span>current_<wbr>average_<wbr>value</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -3873,7 +3873,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>metric<wbr>Name</span>
+        <span>metric_<wbr>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -4012,7 +4012,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>target<wbr>Average<wbr>Utilization</span>
+        <span>target_<wbr>average_<wbr>utilization</span>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
@@ -4020,7 +4020,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>target<wbr>Average<wbr>Value</span>
+        <span>target_<wbr>average_<wbr>value</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -4143,7 +4143,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>current<wbr>Average<wbr>Utilization</span>
+        <span>current_<wbr>average_<wbr>utilization</span>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
@@ -4151,7 +4151,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>current<wbr>Average<wbr>Value</span>
+        <span>current_<wbr>average_<wbr>value</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>

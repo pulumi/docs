@@ -14,7 +14,7 @@ HorizontalPodAutoscalerList is a list of horizontal pod autoscaler objects.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/autoscaling/v2beta2/#HorizontalPodAutoscalerList">HorizontalPodAutoscalerList</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/autoscaling/v2beta2/#HorizontalPodAutoscalerListArgs">HorizontalPodAutoscalerListArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/autoscaling/v2beta2/#HorizontalPodAutoscalerList">HorizontalPodAutoscalerList</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#HorizontalPodAutoscalerList">HorizontalPodAutoscalerList</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -26,7 +26,7 @@ HorizontalPodAutoscalerList is a list of horizontal pod autoscaler objects.
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Kubernetes/Pulumi.Kubernetes.Autoscaling.V2Beta2.HorizontalPodAutoscalerList.html">HorizontalPodAutoscalerList</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Kubernetes/Pulumi.Kubernetes.Autoscaling.V2Beta2.HorizontalPodAutoscalerListArgs.html">HorizontalPodAutoscalerListArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Kubernetes/Pulumi.Kubernetes.Autoscaling.V2Beta2.HorizontalPodAutoscalerList.html">HorizontalPodAutoscalerList</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Kubernetes/Pulumi.Kubernetes.Types.Inputs.Autoscaling.V2Beta2.HorizontalPodAutoscalerListArgs.html">HorizontalPodAutoscalerListArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -620,7 +620,7 @@ HorizontalPodAutoscalerList is a list of horizontal pod autoscaler objects.
 
     <dt class="property-optional"
             title="Optional">
-        <span>period<wbr>Seconds</span>
+        <span>period_<wbr>seconds</span>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
@@ -1204,7 +1204,7 @@ No stabilization is used.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>last<wbr>Transition<wbr>Time</span>
+        <span>last_<wbr>transition_<wbr>time</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -2270,7 +2270,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>fields<wbr>Type</span>
+        <span>fields_<wbr>type</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -2278,7 +2278,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>fields<wbr>V1</span>
+        <span>fields_<wbr>v1</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -2962,7 +2962,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>average<wbr>Utilization</span>
+        <span>average_<wbr>utilization</span>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
@@ -2970,7 +2970,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>average<wbr>Value</span>
+        <span>average_<wbr>value</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -3109,7 +3109,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>average<wbr>Utilization</span>
+        <span>average_<wbr>utilization</span>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
@@ -3117,7 +3117,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>average<wbr>Value</span>
+        <span>average_<wbr>value</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -3867,7 +3867,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>described<wbr>Object</span>
+        <span>described_<wbr>object</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#crossversionobjectreference">Dict[Cross<wbr>Version<wbr>Object<wbr>Reference]</a></span>
     </dt>
@@ -4014,7 +4014,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>described<wbr>Object</span>
+        <span>described_<wbr>object</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#crossversionobjectreference">Dict[Cross<wbr>Version<wbr>Object<wbr>Reference]</a></span>
     </dt>
@@ -4169,7 +4169,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>block<wbr>Owner<wbr>Deletion</span>
+        <span>block_<wbr>owner_<wbr>deletion</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>

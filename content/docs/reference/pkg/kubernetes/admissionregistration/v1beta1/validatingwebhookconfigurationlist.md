@@ -14,7 +14,7 @@ ValidatingWebhookConfigurationList is a list of ValidatingWebhookConfiguration.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/admissionregistration/v1beta1/#ValidatingWebhookConfigurationList">ValidatingWebhookConfigurationList</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/admissionregistration/v1beta1/#ValidatingWebhookConfigurationListArgs">ValidatingWebhookConfigurationListArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/admissionregistration/v1beta1/#ValidatingWebhookConfigurationList">ValidatingWebhookConfigurationList</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ValidatingWebhookConfigurationList">ValidatingWebhookConfigurationList</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -26,7 +26,7 @@ ValidatingWebhookConfigurationList is a list of ValidatingWebhookConfiguration.
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Kubernetes/Pulumi.Kubernetes.AdmissionRegistration.V1Beta1.ValidatingWebhookConfigurationList.html">ValidatingWebhookConfigurationList</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Kubernetes/Pulumi.Kubernetes.Admissionregistration.k8s.io/v1beta1.ValidatingWebhookConfigurationListArgs.html">ValidatingWebhookConfigurationListArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Kubernetes/Pulumi.Kubernetes.AdmissionRegistration.V1Beta1.ValidatingWebhookConfigurationList.html">ValidatingWebhookConfigurationList</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Kubernetes/Pulumi.Kubernetes.Types.Inputs.Admissionregistration.k8s.io/v1beta1.ValidatingWebhookConfigurationListArgs.html">ValidatingWebhookConfigurationListArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -804,7 +804,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>fields<wbr>Type</span>
+        <span>fields_<wbr>type</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -812,7 +812,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>fields<wbr>V1</span>
+        <span>fields_<wbr>v1</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -1602,7 +1602,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>block<wbr>Owner<wbr>Deletion</span>
+        <span>block_<wbr>owner_<wbr>deletion</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
@@ -1815,7 +1815,7 @@ Depending on the enclosing object, subresources might not be allowed. Required.{
 
     <dt class="property-optional"
             title="Optional">
-        <span>api<wbr>Groups</span>
+        <span>api_<wbr>groups</span>
         <span class="property-indicator"></span>
         <span class="property-type">List[str]</span>
     </dt>
@@ -1823,7 +1823,7 @@ Depending on the enclosing object, subresources might not be allowed. Required.{
 
     <dt class="property-optional"
             title="Optional">
-        <span>api<wbr>Versions</span>
+        <span>api_<wbr>versions</span>
         <span class="property-indicator"></span>
         <span class="property-type">List[str]</span>
     </dt>
@@ -2423,7 +2423,7 @@ Default to the empty LabelSelector, which matches everything.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>admission<wbr>Review<wbr>Versions</span>
+        <span>admission_<wbr>review_<wbr>versions</span>
         <span class="property-indicator"></span>
         <span class="property-type">List[str]</span>
     </dt>
@@ -2439,7 +2439,7 @@ Default to the empty LabelSelector, which matches everything.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>failure<wbr>Policy</span>
+        <span>failure_<wbr>policy</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -2447,7 +2447,7 @@ Default to the empty LabelSelector, which matches everything.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>match<wbr>Policy</span>
+        <span>match_<wbr>policy</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -2469,7 +2469,7 @@ Defaults to "Exact"{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>namespace<wbr>Selector</span>
+        <span>namespace_<wbr>selector</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#labelselector">Dict[Label<wbr>Selector]</a></span>
     </dt>
@@ -2507,7 +2507,7 @@ Default to the empty LabelSelector, which matches everything.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>object<wbr>Selector</span>
+        <span>object_<wbr>selector</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#labelselector">Dict[Label<wbr>Selector]</a></span>
     </dt>
@@ -2523,7 +2523,7 @@ Default to the empty LabelSelector, which matches everything.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>side<wbr>Effects</span>
+        <span>side_<wbr>effects</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>

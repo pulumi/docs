@@ -14,7 +14,7 @@ PodPresetList is a list of PodPreset objects.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/settings/v1alpha1/#PodPresetList">PodPresetList</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/settings/v1alpha1/#PodPresetListArgs">PodPresetListArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/settings/v1alpha1/#PodPresetList">PodPresetList</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#PodPresetList">PodPresetList</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -26,7 +26,7 @@ PodPresetList is a list of PodPreset objects.
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Kubernetes/Pulumi.Kubernetes.Settings.V1Alpha1.PodPresetList.html">PodPresetList</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Kubernetes/Pulumi.Kubernetes.Settings.k8s.io/v1alpha1.PodPresetListArgs.html">PodPresetListArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Kubernetes/Pulumi.Kubernetes.Settings.V1Alpha1.PodPresetList.html">PodPresetList</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Kubernetes/Pulumi.Kubernetes.Types.Inputs.Settings.k8s.io/v1alpha1.PodPresetListArgs.html">PodPresetListArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1862,7 +1862,7 @@ PodPresetList is a list of PodPreset objects.
 
     <dt class="property-optional"
             title="Optional">
-        <span>default<wbr>Mode</span>
+        <span>default_<wbr>mode</span>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
@@ -2108,7 +2108,7 @@ PodPresetList is a list of PodPreset objects.
 
     <dt class="property-optional"
             title="Optional">
-        <span>field<wbr>Ref</span>
+        <span>field_<wbr>ref</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#objectfieldselector">Dict[Object<wbr>Field<wbr>Selector]</a></span>
     </dt>
@@ -2132,7 +2132,7 @@ PodPresetList is a list of PodPreset objects.
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource<wbr>Field<wbr>Ref</span>
+        <span>resource_<wbr>field_<wbr>ref</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcefieldselector">Dict[Resource<wbr>Field<wbr>Selector]</a></span>
     </dt>
@@ -2231,7 +2231,7 @@ PodPresetList is a list of PodPreset objects.
 
     <dt class="property-optional"
             title="Optional">
-        <span>default<wbr>Mode</span>
+        <span>default_<wbr>mode</span>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
@@ -2346,7 +2346,7 @@ PodPresetList is a list of PodPreset objects.
 
     <dt class="property-optional"
             title="Optional">
-        <span>size<wbr>Limit</span>
+        <span>size_<wbr>limit</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -2469,7 +2469,7 @@ PodPresetList is a list of PodPreset objects.
 
     <dt class="property-optional"
             title="Optional">
-        <span>config<wbr>Map<wbr>Ref</span>
+        <span>config_<wbr>map_<wbr>ref</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configmapenvsource">Dict[Config<wbr>Map<wbr>Env<wbr>Source]</a></span>
     </dt>
@@ -2624,7 +2624,7 @@ PodPresetList is a list of PodPreset objects.
 
     <dt class="property-optional"
             title="Optional">
-        <span>value<wbr>From</span>
+        <span>value_<wbr>from</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#envvarsource">Dict[Env<wbr>Var<wbr>Source]</a></span>
     </dt>
@@ -2771,7 +2771,7 @@ PodPresetList is a list of PodPreset objects.
 
     <dt class="property-optional"
             title="Optional">
-        <span>config<wbr>Map<wbr>Key<wbr>Ref</span>
+        <span>config_<wbr>map_<wbr>key_<wbr>ref</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#configmapkeyselector">Dict[Config<wbr>Map<wbr>Key<wbr>Selector]</a></span>
     </dt>
@@ -2779,7 +2779,7 @@ PodPresetList is a list of PodPreset objects.
 
     <dt class="property-optional"
             title="Optional">
-        <span>field<wbr>Ref</span>
+        <span>field_<wbr>ref</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#objectfieldselector">Dict[Object<wbr>Field<wbr>Selector]</a></span>
     </dt>
@@ -2787,7 +2787,7 @@ PodPresetList is a list of PodPreset objects.
 
     <dt class="property-optional"
             title="Optional">
-        <span>resource<wbr>Field<wbr>Ref</span>
+        <span>resource_<wbr>field_<wbr>ref</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#resourcefieldselector">Dict[Resource<wbr>Field<wbr>Selector]</a></span>
     </dt>
@@ -2795,7 +2795,7 @@ PodPresetList is a list of PodPreset objects.
 
     <dt class="property-optional"
             title="Optional">
-        <span>secret<wbr>Key<wbr>Ref</span>
+        <span>secret_<wbr>key_<wbr>ref</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretkeyselector">Dict[Secret<wbr>Key<wbr>Selector]</a></span>
     </dt>
@@ -5069,7 +5069,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>fields<wbr>Type</span>
+        <span>fields_<wbr>type</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -5077,7 +5077,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>fields<wbr>V1</span>
+        <span>fields_<wbr>v1</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
@@ -6081,7 +6081,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>block<wbr>Owner<wbr>Deletion</span>
+        <span>block_<wbr>owner_<wbr>deletion</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
@@ -6204,7 +6204,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>claim<wbr>Name</span>
+        <span>claim_<wbr>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -6867,7 +6867,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>default<wbr>Mode</span>
+        <span>default_<wbr>mode</span>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
@@ -7532,7 +7532,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>container<wbr>Name</span>
+        <span>container_<wbr>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -8443,7 +8443,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>default<wbr>Mode</span>
+        <span>default_<wbr>mode</span>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
@@ -9612,7 +9612,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>downward<wbr>API</span>
+        <span>downward_<wbr>api</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#downwardapivolumesource">Dict[Downward<wbr>APIVolume<wbr>Source]</a></span>
     </dt>
@@ -9620,7 +9620,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>empty<wbr>Dir</span>
+        <span>empty_<wbr>dir</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#emptydirvolumesource">Dict[Empty<wbr>Dir<wbr>Volume<wbr>Source]</a></span>
     </dt>
@@ -9660,7 +9660,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>git<wbr>Repo</span>
+        <span>git_<wbr>repo</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gitrepovolumesource">Dict[Git<wbr>Repo<wbr>Volume<wbr>Source]</a></span>
     </dt>
@@ -9708,7 +9708,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>persistent<wbr>Volume<wbr>Claim</span>
+        <span>persistent_<wbr>volume_<wbr>claim</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#persistentvolumeclaimvolumesource">Dict[Persistent<wbr>Volume<wbr>Claim<wbr>Volume<wbr>Source]</a></span>
     </dt>
@@ -9975,7 +9975,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>mount<wbr>Path</span>
+        <span>mount_<wbr>path</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -9983,7 +9983,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>mount<wbr>Propagation</span>
+        <span>mount_<wbr>propagation</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -10007,7 +10007,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>sub<wbr>Path</span>
+        <span>sub_<wbr>path</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -10015,7 +10015,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>sub<wbr>Path<wbr>Expr</span>
+        <span>sub_<wbr>path_<wbr>expr</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -10170,7 +10170,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>downward<wbr>API</span>
+        <span>downward_<wbr>api</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#downwardapiprojection">Dict[Downward<wbr>APIProjection]</a></span>
     </dt>
@@ -10186,7 +10186,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
     <dt class="property-optional"
             title="Optional">
-        <span>service<wbr>Account<wbr>Token</span>
+        <span>service_<wbr>account_<wbr>token</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceaccounttokenprojection">Dict[Service<wbr>Account<wbr>Token<wbr>Projection]</a></span>
     </dt>
