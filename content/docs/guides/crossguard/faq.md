@@ -42,3 +42,17 @@ During `pulumi refresh`, no resources are modified. This command simply updates 
 The next preview or update of the stack with fail due to the policy violation. The stack will need to be fixed before it can be updated.
 
 A stack with out-of-compliance resources can be destroyed.
+
+## How do I version a Policy Pack?
+
+Policy Packs that are published to the service require a version. The Policy Pack version is specified in the `package.json` file for TypeScript/JavaScript (Node.js) packs. The example below shows a Policy Pack version specified as `0.1.0`.
+
+```json
+{
+    ...
+    "version": "0.1.0",
+    ...
+}
+```
+
+A version can only be used one time and once published the version can never be used by that Policy Pack again.
