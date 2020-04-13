@@ -1905,7 +1905,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>database_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name for an automatically created database on cluster creation.</p></li>
 <li><p><strong>deletion_protection</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If the Global Cluster should have deletion protection enabled. The database can’t be deleted when this value is set to <code class="docutils literal notranslate"><span class="pre">true</span></code>. The default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
-<li><p><strong>engine</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the database engine to be used for this DB cluster. Valid values: <code class="docutils literal notranslate"><span class="pre">aurora</span></code>, <code class="docutils literal notranslate"><span class="pre">aurora-mysql</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">aurora</span></code>.</p></li>
+<li><p><strong>engine</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the database engine to be used for this DB cluster. Valid values: <code class="docutils literal notranslate"><span class="pre">aurora</span></code>, <code class="docutils literal notranslate"><span class="pre">aurora-mysql</span></code>, <code class="docutils literal notranslate"><span class="pre">aurora-postgresql</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">aurora</span></code>.</p></li>
 <li><p><strong>engine_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Engine version of the Aurora global database.</p></li>
 </ul>
 </dd>
@@ -1942,7 +1942,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_aws.rds.GlobalCluster.engine">
 <code class="sig-name descname">engine</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.GlobalCluster.engine" title="Permalink to this definition">¶</a></dt>
-<dd><p>Name of the database engine to be used for this DB cluster. Valid values: <code class="docutils literal notranslate"><span class="pre">aurora</span></code>, <code class="docutils literal notranslate"><span class="pre">aurora-mysql</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">aurora</span></code>.</p>
+<dd><p>Name of the database engine to be used for this DB cluster. Valid values: <code class="docutils literal notranslate"><span class="pre">aurora</span></code>, <code class="docutils literal notranslate"><span class="pre">aurora-mysql</span></code>, <code class="docutils literal notranslate"><span class="pre">aurora-postgresql</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">aurora</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1986,7 +1986,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – RDS Global Cluster Amazon Resource Name (ARN)</p></li>
 <li><p><strong>database_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name for an automatically created database on cluster creation.</p></li>
 <li><p><strong>deletion_protection</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If the Global Cluster should have deletion protection enabled. The database can’t be deleted when this value is set to <code class="docutils literal notranslate"><span class="pre">true</span></code>. The default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
-<li><p><strong>engine</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the database engine to be used for this DB cluster. Valid values: <code class="docutils literal notranslate"><span class="pre">aurora</span></code>, <code class="docutils literal notranslate"><span class="pre">aurora-mysql</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">aurora</span></code>.</p></li>
+<li><p><strong>engine</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the database engine to be used for this DB cluster. Valid values: <code class="docutils literal notranslate"><span class="pre">aurora</span></code>, <code class="docutils literal notranslate"><span class="pre">aurora-mysql</span></code>, <code class="docutils literal notranslate"><span class="pre">aurora-postgresql</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">aurora</span></code>.</p></li>
 <li><p><strong>engine_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Engine version of the Aurora global database.</p></li>
 </ul>
 </dd>

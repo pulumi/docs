@@ -2463,7 +2463,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.EgressOnlyInternetGateway">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">EgressOnlyInternetGateway</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.EgressOnlyInternetGateway" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">EgressOnlyInternetGateway</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.EgressOnlyInternetGateway" title="Permalink to this definition">¶</a></dt>
 <dd><p>[IPv6 only] Creates an egress-only Internet gateway for your VPC.
 An egress-only Internet gateway is used to enable outbound communication
 over IPv6 from instances in your VPC to the Internet, and prevents hosts
@@ -2473,10 +2473,17 @@ outside of your VPC from initiating an IPv6 connection with your instance.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 <li><p><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The VPC ID to create in.</p></li>
 </ul>
 </dd>
 </dl>
+<dl class="attribute">
+<dt id="pulumi_aws.ec2.EgressOnlyInternetGateway.tags">
+<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.EgressOnlyInternetGateway.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of tags to assign to the resource.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.EgressOnlyInternetGateway.vpc_id">
 <code class="sig-name descname">vpc_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.EgressOnlyInternetGateway.vpc_id" title="Permalink to this definition">¶</a></dt>
@@ -2485,7 +2492,7 @@ outside of your VPC from initiating an IPv6 connection with your instance.</p>
 
 <dl class="method">
 <dt id="pulumi_aws.ec2.EgressOnlyInternetGateway.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.EgressOnlyInternetGateway.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.EgressOnlyInternetGateway.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing EgressOnlyInternetGateway resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -2494,6 +2501,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 <li><p><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The VPC ID to create in.</p></li>
 </ul>
 </dd>
@@ -5779,7 +5787,7 @@ on the volume (Default: <code class="docutils literal notranslate"><span class="
 <li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The amount of provisioned
 <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html">IOPS</a>.
 This must be set with a <code class="docutils literal notranslate"><span class="pre">volume_type</span></code> of <code class="docutils literal notranslate"><span class="pre">&quot;io1&quot;</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - AWS Key Management Service (AWS KMS) customer master key (CMK) to use when creating the encrypted volume.
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the AWS Key Management Service (AWS KMS) customer master key (CMK) to use when creating the encrypted volume.
 <code class="docutils literal notranslate"><span class="pre">encrypted</span></code> must be set to <code class="docutils literal notranslate"><span class="pre">true</span></code> when this is set.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">snapshot_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Snapshot ID to mount.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">volume_size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size of the volume in gigabytes.</p></li>
@@ -5905,7 +5913,7 @@ on the volume (Default: <code class="docutils literal notranslate"><span class="
 <li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The amount of provisioned
 <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html">IOPS</a>.
 This must be set with a <code class="docutils literal notranslate"><span class="pre">volume_type</span></code> of <code class="docutils literal notranslate"><span class="pre">&quot;io1&quot;</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - AWS Key Management Service (AWS KMS) customer master key (CMK) to use when creating the encrypted volume.
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ARN of the AWS Key Management Service (AWS KMS) customer master key (CMK) to use when creating the encrypted volume.
 <code class="docutils literal notranslate"><span class="pre">encrypted</span></code> must be set to <code class="docutils literal notranslate"><span class="pre">true</span></code> when this is set.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">snapshot_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Snapshot ID to mount.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">volume_size</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The size of the volume in gigabytes.</p></li>
@@ -6260,7 +6268,7 @@ on the volume (Default: <code class="docutils literal notranslate"><span class="
 <li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The amount of provisioned
 <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html">IOPS</a>.
 This must be set with a <code class="docutils literal notranslate"><span class="pre">volume_type</span></code> of <code class="docutils literal notranslate"><span class="pre">&quot;io1&quot;</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - AWS Key Management Service (AWS KMS) customer master key (CMK) to use when creating the encrypted volume.
+<li><p><code class="docutils literal notranslate"><span class="pre">kms_key_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the AWS Key Management Service (AWS KMS) customer master key (CMK) to use when creating the encrypted volume.
 <code class="docutils literal notranslate"><span class="pre">encrypted</span></code> must be set to <code class="docutils literal notranslate"><span class="pre">true</span></code> when this is set.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">snapshot_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Snapshot ID to mount.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">volume_size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size of the volume in gigabytes.</p></li>
@@ -8723,7 +8731,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ec2.SpotFleetRequest">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">SpotFleetRequest</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allocation_strategy=None</em>, <em class="sig-param">excess_capacity_termination_policy=None</em>, <em class="sig-param">fleet_type=None</em>, <em class="sig-param">iam_fleet_role=None</em>, <em class="sig-param">instance_interruption_behaviour=None</em>, <em class="sig-param">instance_pools_to_use_count=None</em>, <em class="sig-param">launch_specifications=None</em>, <em class="sig-param">load_balancers=None</em>, <em class="sig-param">replace_unhealthy_instances=None</em>, <em class="sig-param">spot_price=None</em>, <em class="sig-param">target_capacity=None</em>, <em class="sig-param">target_group_arns=None</em>, <em class="sig-param">terminate_instances_with_expiration=None</em>, <em class="sig-param">valid_from=None</em>, <em class="sig-param">valid_until=None</em>, <em class="sig-param">wait_for_fulfillment=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.SpotFleetRequest" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ec2.</code><code class="sig-name descname">SpotFleetRequest</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allocation_strategy=None</em>, <em class="sig-param">excess_capacity_termination_policy=None</em>, <em class="sig-param">fleet_type=None</em>, <em class="sig-param">iam_fleet_role=None</em>, <em class="sig-param">instance_interruption_behaviour=None</em>, <em class="sig-param">instance_pools_to_use_count=None</em>, <em class="sig-param">launch_specifications=None</em>, <em class="sig-param">load_balancers=None</em>, <em class="sig-param">replace_unhealthy_instances=None</em>, <em class="sig-param">spot_price=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">target_capacity=None</em>, <em class="sig-param">target_group_arns=None</em>, <em class="sig-param">terminate_instances_with_expiration=None</em>, <em class="sig-param">valid_from=None</em>, <em class="sig-param">valid_until=None</em>, <em class="sig-param">wait_for_fulfillment=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.SpotFleetRequest" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an EC2 Spot Fleet Request resource. This allows a fleet of Spot
 instances to be requested on the Spot market.</p>
 <dl class="field-list simple">
@@ -8756,6 +8764,7 @@ across different markets and instance types.</p></li>
 <li><p><strong>load_balancers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of elastic load balancer names to add to the Spot fleet.</p></li>
 <li><p><strong>replace_unhealthy_instances</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether Spot fleet should replace unhealthy instances. Default <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>spot_price</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The maximum bid price per unit hour.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 <li><p><strong>target_capacity</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of units to request. You can choose to set the
 target capacity in terms of instances or a performance characteristic that is
 important to your application workload, such as vCPUs, memory, or I/O.</p></li>
@@ -8948,6 +8957,12 @@ across different markets and instance types.</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.ec2.SpotFleetRequest.tags">
+<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.SpotFleetRequest.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of tags to assign to the resource.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.ec2.SpotFleetRequest.target_capacity">
 <code class="sig-name descname">target_capacity</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.SpotFleetRequest.target_capacity" title="Permalink to this definition">¶</a></dt>
 <dd><p>The number of units to request. You can choose to set the
@@ -8990,7 +9005,7 @@ timeout of 10m is reached.</p>
 
 <dl class="method">
 <dt id="pulumi_aws.ec2.SpotFleetRequest.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allocation_strategy=None</em>, <em class="sig-param">client_token=None</em>, <em class="sig-param">excess_capacity_termination_policy=None</em>, <em class="sig-param">fleet_type=None</em>, <em class="sig-param">iam_fleet_role=None</em>, <em class="sig-param">instance_interruption_behaviour=None</em>, <em class="sig-param">instance_pools_to_use_count=None</em>, <em class="sig-param">launch_specifications=None</em>, <em class="sig-param">load_balancers=None</em>, <em class="sig-param">replace_unhealthy_instances=None</em>, <em class="sig-param">spot_price=None</em>, <em class="sig-param">spot_request_state=None</em>, <em class="sig-param">target_capacity=None</em>, <em class="sig-param">target_group_arns=None</em>, <em class="sig-param">terminate_instances_with_expiration=None</em>, <em class="sig-param">valid_from=None</em>, <em class="sig-param">valid_until=None</em>, <em class="sig-param">wait_for_fulfillment=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.SpotFleetRequest.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allocation_strategy=None</em>, <em class="sig-param">client_token=None</em>, <em class="sig-param">excess_capacity_termination_policy=None</em>, <em class="sig-param">fleet_type=None</em>, <em class="sig-param">iam_fleet_role=None</em>, <em class="sig-param">instance_interruption_behaviour=None</em>, <em class="sig-param">instance_pools_to_use_count=None</em>, <em class="sig-param">launch_specifications=None</em>, <em class="sig-param">load_balancers=None</em>, <em class="sig-param">replace_unhealthy_instances=None</em>, <em class="sig-param">spot_price=None</em>, <em class="sig-param">spot_request_state=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">target_capacity=None</em>, <em class="sig-param">target_group_arns=None</em>, <em class="sig-param">terminate_instances_with_expiration=None</em>, <em class="sig-param">valid_from=None</em>, <em class="sig-param">valid_until=None</em>, <em class="sig-param">wait_for_fulfillment=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ec2.SpotFleetRequest.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing SpotFleetRequest resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -9025,6 +9040,7 @@ across different markets and instance types.</p></li>
 <li><p><strong>replace_unhealthy_instances</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether Spot fleet should replace unhealthy instances. Default <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>spot_price</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The maximum bid price per unit hour.</p></li>
 <li><p><strong>spot_request_state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The state of the Spot fleet request.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 <li><p><strong>target_capacity</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of units to request. You can choose to set the
 target capacity in terms of instances or a performance characteristic that is
 important to your application workload, such as vCPUs, memory, or I/O.</p></li>
