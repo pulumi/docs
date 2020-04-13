@@ -41,10 +41,26 @@ Using configurable Policy Packs, you can write flexible policies that can be re-
 
 If you're looking for some example Policy Packs, take a look at these:
 
-* [AWS](https://github.com/pulumi/examples/tree/master/policy-packs/aws)
-* [Azure](https://github.com/pulumi/examples/tree/master/policy-packs/azure)
-* [GCP](https://github.com/pulumi/examples/tree/master/policy-packs/gcp)
-* [Kubernetes](https://github.com/pulumi/examples/tree/master/policy-packs/kubernetes)
+{{< chooser language "typescript,python" >}}
+
+{{% choosable language typescript %}}
+
+* [AWS](https://github.com/pulumi/examples/tree/master/policy-packs/aws-ts)
+* [Azure](https://github.com/pulumi/examples/tree/master/policy-packs/azure-ts)
+* [Google Cloud](https://github.com/pulumi/examples/tree/master/policy-packs/gcp-ts)
+* [Kubernetes](https://github.com/pulumi/examples/tree/master/policy-packs/kubernetes-ts)
+
+{{% /choosable %}}
+{{% choosable language python %}}
+
+* [AWS](https://github.com/pulumi/examples/tree/master/policy-packs/aws-python)
+* [Azure](https://github.com/pulumi/examples/tree/master/policy-packs/azure-python)
+* [Google Cloud](https://github.com/pulumi/examples/tree/master/policy-packs/gcp-python)
+* [Kubernetes](https://github.com/pulumi/examples/tree/master/policy-packs/kubernetes-python)
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 ## FAQs
 
