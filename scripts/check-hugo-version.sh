@@ -9,6 +9,11 @@
 
 set -o nounset -o errexit -o pipefail
 
+>/dev/null 2>/dev/null which hugo || {
+    echo "ERROR: Can't find hugo. Do you have hugo installed?"
+    exit 1
+}
+
 readonly REQUIRED_HUGO_VERSION="v0.55.4"
 
 HUGO_VERSION=$(hugo version)
