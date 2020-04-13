@@ -18,6 +18,7 @@ banner:
 ensure:
 	yarn install
 	yarn --cwd components install
+	./scripts/check-hugo-version.sh
 
 .PHONY: ensure_tools
 ensure_tools:
