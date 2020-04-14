@@ -15,12 +15,12 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_gcp.cloudfunctions"></span><dl class="class">
 <dt id="pulumi_gcp.cloudfunctions.AwaitableGetFunctionResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.cloudfunctions.</code><code class="sig-name descname">AwaitableGetFunctionResult</code><span class="sig-paren">(</span><em class="sig-param">available_memory_mb=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">entry_point=None</em>, <em class="sig-param">environment_variables=None</em>, <em class="sig-param">event_triggers=None</em>, <em class="sig-param">https_trigger_url=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">max_instances=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">runtime=None</em>, <em class="sig-param">service_account_email=None</em>, <em class="sig-param">source_archive_bucket=None</em>, <em class="sig-param">source_archive_object=None</em>, <em class="sig-param">source_repositories=None</em>, <em class="sig-param">timeout=None</em>, <em class="sig-param">trigger_http=None</em>, <em class="sig-param">vpc_connector=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.cloudfunctions.AwaitableGetFunctionResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.cloudfunctions.</code><code class="sig-name descname">AwaitableGetFunctionResult</code><span class="sig-paren">(</span><em class="sig-param">available_memory_mb=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">entry_point=None</em>, <em class="sig-param">environment_variables=None</em>, <em class="sig-param">event_triggers=None</em>, <em class="sig-param">https_trigger_url=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ingress_settings=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">max_instances=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">runtime=None</em>, <em class="sig-param">service_account_email=None</em>, <em class="sig-param">source_archive_bucket=None</em>, <em class="sig-param">source_archive_object=None</em>, <em class="sig-param">source_repositories=None</em>, <em class="sig-param">timeout=None</em>, <em class="sig-param">trigger_http=None</em>, <em class="sig-param">vpc_connector=None</em>, <em class="sig-param">vpc_connector_egress_settings=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.cloudfunctions.AwaitableGetFunctionResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_gcp.cloudfunctions.Function">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.cloudfunctions.</code><code class="sig-name descname">Function</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">available_memory_mb=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">entry_point=None</em>, <em class="sig-param">environment_variables=None</em>, <em class="sig-param">event_trigger=None</em>, <em class="sig-param">https_trigger_url=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">max_instances=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">runtime=None</em>, <em class="sig-param">service_account_email=None</em>, <em class="sig-param">source_archive_bucket=None</em>, <em class="sig-param">source_archive_object=None</em>, <em class="sig-param">source_repository=None</em>, <em class="sig-param">timeout=None</em>, <em class="sig-param">trigger_http=None</em>, <em class="sig-param">vpc_connector=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.cloudfunctions.Function" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.cloudfunctions.</code><code class="sig-name descname">Function</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">available_memory_mb=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">entry_point=None</em>, <em class="sig-param">environment_variables=None</em>, <em class="sig-param">event_trigger=None</em>, <em class="sig-param">https_trigger_url=None</em>, <em class="sig-param">ingress_settings=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">max_instances=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">runtime=None</em>, <em class="sig-param">service_account_email=None</em>, <em class="sig-param">source_archive_bucket=None</em>, <em class="sig-param">source_archive_object=None</em>, <em class="sig-param">source_repository=None</em>, <em class="sig-param">timeout=None</em>, <em class="sig-param">trigger_http=None</em>, <em class="sig-param">vpc_connector=None</em>, <em class="sig-param">vpc_connector_egress_settings=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.cloudfunctions.Function" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a new Cloud Function. For more information see
 <a class="reference external" href="https://cloud.google.com/functions/docs/">the official documentation</a>
 and
@@ -44,6 +44,7 @@ for Cloud Functions.</p>
 <li><p><strong>environment_variables</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A set of key/value environment variable pairs to assign to the function.</p></li>
 <li><p><strong>event_trigger</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A source that fires events in response to a condition in another service. Structure is documented below. Cannot be used with <code class="docutils literal notranslate"><span class="pre">trigger_http</span></code>.</p></li>
 <li><p><strong>https_trigger_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URL which triggers function execution. Returned only if <code class="docutils literal notranslate"><span class="pre">trigger_http</span></code> is used.</p></li>
+<li><p><strong>ingress_settings</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – String value that controls what traffic can reach the function. Allowed values are ALLOW_ALL and ALLOW_INTERNAL_ONLY. Changes to this field will recreate the cloud function.</p></li>
 <li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A set of key/value label pairs to assign to the function.</p></li>
 <li><p><strong>max_instances</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The limit on the maximum number of function instances that may coexist at a given time.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A user-defined name of the function. Function names must be unique globally.</p></li>
@@ -59,23 +60,27 @@ Cannot be set alongside <code class="docutils literal notranslate"><span class="
 <li><p><strong>timeout</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Timeout (in seconds) for the function. Default value is 60 seconds. Cannot be more than 540 seconds.</p></li>
 <li><p><strong>trigger_http</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean variable. Any HTTP request (of a supported type) to the endpoint will trigger function execution. Supported HTTP request types are: POST, PUT, GET, DELETE, and OPTIONS. Endpoint is returned as <code class="docutils literal notranslate"><span class="pre">https_trigger_url</span></code>. Cannot be used with <code class="docutils literal notranslate"><span class="pre">trigger_bucket</span></code> and <code class="docutils literal notranslate"><span class="pre">trigger_topic</span></code>.</p></li>
 <li><p><strong>vpc_connector</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The VPC Network Connector that this cloud function can connect to. It can be either the fully-qualified URI, or the short name of the network connector resource. The format of this field is <code class="docutils literal notranslate"><span class="pre">projects/*/locations/*/connectors/*</span></code>.</p></li>
+<li><p><strong>vpc_connector_egress_settings</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The egress settings for the connector, controlling what traffic is diverted through it. Allowed values are <code class="docutils literal notranslate"><span class="pre">ALL_TRAFFIC</span></code> and <code class="docutils literal notranslate"><span class="pre">PRIVATE_RANGES_ONLY</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">PRIVATE_RANGES_ONLY</span></code>. If unset, this field preserves the previously set value.</p></li>
 </ul>
 </dd>
 </dl>
 <p>The <strong>event_trigger</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">eventType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">failurePolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">eventType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of event to observe. For example: <code class="docutils literal notranslate"><span class="pre">&quot;google.storage.object.finalize&quot;</span></code>.
+See the documentation on <a class="reference external" href="https://cloud.google.com/functions/docs/calling/">calling Cloud Functions</a> for a
+full reference of accepted triggers.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">failurePolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies policy for failed executions. Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">retry</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">retry</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether the function should be retried on failure. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">resource</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resource</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Required. The name or partial URI of the resource from
+which to observe events. For example, <code class="docutils literal notranslate"><span class="pre">&quot;myBucket&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;projects/my-project/topics/my-topic&quot;</span></code></p></li>
 </ul>
 <p>The <strong>source_repository</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">deployedUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The URL pointing to the hosted repository where the function is defined. There are supported Cloud Source Repository URLs in the following formats:</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_gcp.cloudfunctions.Function.available_memory_mb">
@@ -106,13 +111,16 @@ Cannot be set alongside <code class="docutils literal notranslate"><span class="
 <code class="sig-name descname">event_trigger</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudfunctions.Function.event_trigger" title="Permalink to this definition">¶</a></dt>
 <dd><p>A source that fires events in response to a condition in another service. Structure is documented below. Cannot be used with <code class="docutils literal notranslate"><span class="pre">trigger_http</span></code>.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">eventType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">failurePolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">eventType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The type of event to observe. For example: <code class="docutils literal notranslate"><span class="pre">&quot;google.storage.object.finalize&quot;</span></code>.
+See the documentation on <a class="reference external" href="https://cloud.google.com/functions/docs/calling/">calling Cloud Functions</a> for a
+full reference of accepted triggers.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">failurePolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Specifies policy for failed executions. Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">retry</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">retry</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether the function should be retried on failure. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">resource</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resource</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Required. The name or partial URI of the resource from
+which to observe events. For example, <code class="docutils literal notranslate"><span class="pre">&quot;myBucket&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;projects/my-project/topics/my-topic&quot;</span></code></p></li>
 </ul>
 </dd></dl>
 
@@ -120,6 +128,12 @@ Cannot be set alongside <code class="docutils literal notranslate"><span class="
 <dt id="pulumi_gcp.cloudfunctions.Function.https_trigger_url">
 <code class="sig-name descname">https_trigger_url</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudfunctions.Function.https_trigger_url" title="Permalink to this definition">¶</a></dt>
 <dd><p>URL which triggers function execution. Returned only if <code class="docutils literal notranslate"><span class="pre">trigger_http</span></code> is used.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.cloudfunctions.Function.ingress_settings">
+<code class="sig-name descname">ingress_settings</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudfunctions.Function.ingress_settings" title="Permalink to this definition">¶</a></dt>
+<dd><p>String value that controls what traffic can reach the function. Allowed values are ALLOW_ALL and ALLOW_INTERNAL_ONLY. Changes to this field will recreate the cloud function.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -184,7 +198,7 @@ Eg. <code class="docutils literal notranslate"><span class="pre">&quot;nodejs8&q
 Cannot be set alongside <code class="docutils literal notranslate"><span class="pre">source_archive_bucket</span></code> or <code class="docutils literal notranslate"><span class="pre">source_archive_object</span></code>. Structure is documented below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">deployedUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The URL pointing to the hosted repository where the function is defined. There are supported Cloud Source Repository URLs in the following formats:</p></li>
 </ul>
 </dd></dl>
 
@@ -206,9 +220,15 @@ Cannot be set alongside <code class="docutils literal notranslate"><span class="
 <dd><p>The VPC Network Connector that this cloud function can connect to. It can be either the fully-qualified URI, or the short name of the network connector resource. The format of this field is <code class="docutils literal notranslate"><span class="pre">projects/*/locations/*/connectors/*</span></code>.</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pulumi_gcp.cloudfunctions.Function.vpc_connector_egress_settings">
+<code class="sig-name descname">vpc_connector_egress_settings</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudfunctions.Function.vpc_connector_egress_settings" title="Permalink to this definition">¶</a></dt>
+<dd><p>The egress settings for the connector, controlling what traffic is diverted through it. Allowed values are <code class="docutils literal notranslate"><span class="pre">ALL_TRAFFIC</span></code> and <code class="docutils literal notranslate"><span class="pre">PRIVATE_RANGES_ONLY</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">PRIVATE_RANGES_ONLY</span></code>. If unset, this field preserves the previously set value.</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_gcp.cloudfunctions.Function.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">available_memory_mb=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">entry_point=None</em>, <em class="sig-param">environment_variables=None</em>, <em class="sig-param">event_trigger=None</em>, <em class="sig-param">https_trigger_url=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">max_instances=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">runtime=None</em>, <em class="sig-param">service_account_email=None</em>, <em class="sig-param">source_archive_bucket=None</em>, <em class="sig-param">source_archive_object=None</em>, <em class="sig-param">source_repository=None</em>, <em class="sig-param">timeout=None</em>, <em class="sig-param">trigger_http=None</em>, <em class="sig-param">vpc_connector=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.cloudfunctions.Function.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">available_memory_mb=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">entry_point=None</em>, <em class="sig-param">environment_variables=None</em>, <em class="sig-param">event_trigger=None</em>, <em class="sig-param">https_trigger_url=None</em>, <em class="sig-param">ingress_settings=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">max_instances=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">runtime=None</em>, <em class="sig-param">service_account_email=None</em>, <em class="sig-param">source_archive_bucket=None</em>, <em class="sig-param">source_archive_object=None</em>, <em class="sig-param">source_repository=None</em>, <em class="sig-param">timeout=None</em>, <em class="sig-param">trigger_http=None</em>, <em class="sig-param">vpc_connector=None</em>, <em class="sig-param">vpc_connector_egress_settings=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.cloudfunctions.Function.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Function resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -223,6 +243,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>environment_variables</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A set of key/value environment variable pairs to assign to the function.</p></li>
 <li><p><strong>event_trigger</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A source that fires events in response to a condition in another service. Structure is documented below. Cannot be used with <code class="docutils literal notranslate"><span class="pre">trigger_http</span></code>.</p></li>
 <li><p><strong>https_trigger_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URL which triggers function execution. Returned only if <code class="docutils literal notranslate"><span class="pre">trigger_http</span></code> is used.</p></li>
+<li><p><strong>ingress_settings</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – String value that controls what traffic can reach the function. Allowed values are ALLOW_ALL and ALLOW_INTERNAL_ONLY. Changes to this field will recreate the cloud function.</p></li>
 <li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A set of key/value label pairs to assign to the function.</p></li>
 <li><p><strong>max_instances</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The limit on the maximum number of function instances that may coexist at a given time.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A user-defined name of the function. Function names must be unique globally.</p></li>
@@ -238,23 +259,27 @@ Cannot be set alongside <code class="docutils literal notranslate"><span class="
 <li><p><strong>timeout</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Timeout (in seconds) for the function. Default value is 60 seconds. Cannot be more than 540 seconds.</p></li>
 <li><p><strong>trigger_http</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean variable. Any HTTP request (of a supported type) to the endpoint will trigger function execution. Supported HTTP request types are: POST, PUT, GET, DELETE, and OPTIONS. Endpoint is returned as <code class="docutils literal notranslate"><span class="pre">https_trigger_url</span></code>. Cannot be used with <code class="docutils literal notranslate"><span class="pre">trigger_bucket</span></code> and <code class="docutils literal notranslate"><span class="pre">trigger_topic</span></code>.</p></li>
 <li><p><strong>vpc_connector</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The VPC Network Connector that this cloud function can connect to. It can be either the fully-qualified URI, or the short name of the network connector resource. The format of this field is <code class="docutils literal notranslate"><span class="pre">projects/*/locations/*/connectors/*</span></code>.</p></li>
+<li><p><strong>vpc_connector_egress_settings</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The egress settings for the connector, controlling what traffic is diverted through it. Allowed values are <code class="docutils literal notranslate"><span class="pre">ALL_TRAFFIC</span></code> and <code class="docutils literal notranslate"><span class="pre">PRIVATE_RANGES_ONLY</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">PRIVATE_RANGES_ONLY</span></code>. If unset, this field preserves the previously set value.</p></li>
 </ul>
 </dd>
 </dl>
 <p>The <strong>event_trigger</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">eventType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">failurePolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">eventType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of event to observe. For example: <code class="docutils literal notranslate"><span class="pre">&quot;google.storage.object.finalize&quot;</span></code>.
+See the documentation on <a class="reference external" href="https://cloud.google.com/functions/docs/calling/">calling Cloud Functions</a> for a
+full reference of accepted triggers.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">failurePolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies policy for failed executions. Structure is documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">retry</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">retry</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether the function should be retried on failure. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">resource</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resource</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Required. The name or partial URI of the resource from
+which to observe events. For example, <code class="docutils literal notranslate"><span class="pre">&quot;myBucket&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;projects/my-project/topics/my-topic&quot;</span></code></p></li>
 </ul>
 <p>The <strong>source_repository</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">deployedUrl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">url</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The URL pointing to the hosted repository where the function is defined. There are supported Cloud Source Repository URLs in the following formats:</p></li>
 </ul>
 </dd></dl>
 
@@ -709,7 +734,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_gcp.cloudfunctions.GetFunctionResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.cloudfunctions.</code><code class="sig-name descname">GetFunctionResult</code><span class="sig-paren">(</span><em class="sig-param">available_memory_mb=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">entry_point=None</em>, <em class="sig-param">environment_variables=None</em>, <em class="sig-param">event_triggers=None</em>, <em class="sig-param">https_trigger_url=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">max_instances=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">runtime=None</em>, <em class="sig-param">service_account_email=None</em>, <em class="sig-param">source_archive_bucket=None</em>, <em class="sig-param">source_archive_object=None</em>, <em class="sig-param">source_repositories=None</em>, <em class="sig-param">timeout=None</em>, <em class="sig-param">trigger_http=None</em>, <em class="sig-param">vpc_connector=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.cloudfunctions.GetFunctionResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.cloudfunctions.</code><code class="sig-name descname">GetFunctionResult</code><span class="sig-paren">(</span><em class="sig-param">available_memory_mb=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">entry_point=None</em>, <em class="sig-param">environment_variables=None</em>, <em class="sig-param">event_triggers=None</em>, <em class="sig-param">https_trigger_url=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ingress_settings=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">max_instances=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">runtime=None</em>, <em class="sig-param">service_account_email=None</em>, <em class="sig-param">source_archive_bucket=None</em>, <em class="sig-param">source_archive_object=None</em>, <em class="sig-param">source_repositories=None</em>, <em class="sig-param">timeout=None</em>, <em class="sig-param">trigger_http=None</em>, <em class="sig-param">vpc_connector=None</em>, <em class="sig-param">vpc_connector_egress_settings=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.cloudfunctions.GetFunctionResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getFunction.</p>
 <dl class="attribute">
 <dt id="pulumi_gcp.cloudfunctions.GetFunctionResult.available_memory_mb">
@@ -745,6 +770,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_gcp.cloudfunctions.GetFunctionResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudfunctions.GetFunctionResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.cloudfunctions.GetFunctionResult.ingress_settings">
+<code class="sig-name descname">ingress_settings</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudfunctions.GetFunctionResult.ingress_settings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Controls what traffic can reach the function.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -793,6 +824,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_gcp.cloudfunctions.GetFunctionResult.trigger_http">
 <code class="sig-name descname">trigger_http</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudfunctions.GetFunctionResult.trigger_http" title="Permalink to this definition">¶</a></dt>
 <dd><p>If function is triggered by HTTP, this boolean is set.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.cloudfunctions.GetFunctionResult.vpc_connector">
+<code class="sig-name descname">vpc_connector</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudfunctions.GetFunctionResult.vpc_connector" title="Permalink to this definition">¶</a></dt>
+<dd><p>The VPC Network Connector that this cloud function can connect to.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.cloudfunctions.GetFunctionResult.vpc_connector_egress_settings">
+<code class="sig-name descname">vpc_connector_egress_settings</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.cloudfunctions.GetFunctionResult.vpc_connector_egress_settings" title="Permalink to this definition">¶</a></dt>
+<dd><p>The egress settings for the connector, controlling what traffic is diverted through it.</p>
 </dd></dl>
 
 </dd></dl>
